@@ -5,326 +5,326 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDbInstanceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDbInstanceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#allocated_storage TfDbInstance#allocated_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#allocated_storage AwsDbInstance#allocated_storage}
   */
   readonly allocatedStorage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#allow_major_version_upgrade TfDbInstance#allow_major_version_upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#allow_major_version_upgrade AwsDbInstance#allow_major_version_upgrade}
   */
   readonly allowMajorVersionUpgrade?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#apply_immediately TfDbInstance#apply_immediately}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#apply_immediately AwsDbInstance#apply_immediately}
   */
   readonly applyImmediately?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#auto_minor_version_upgrade TfDbInstance#auto_minor_version_upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#auto_minor_version_upgrade AwsDbInstance#auto_minor_version_upgrade}
   */
   readonly autoMinorVersionUpgrade?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#availability_zone TfDbInstance#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#availability_zone AwsDbInstance#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#backup_retention_period TfDbInstance#backup_retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#backup_retention_period AwsDbInstance#backup_retention_period}
   */
   readonly backupRetentionPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#backup_target TfDbInstance#backup_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#backup_target AwsDbInstance#backup_target}
   */
   readonly backupTarget?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#backup_window TfDbInstance#backup_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#backup_window AwsDbInstance#backup_window}
   */
   readonly backupWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#ca_cert_identifier TfDbInstance#ca_cert_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#ca_cert_identifier AwsDbInstance#ca_cert_identifier}
   */
   readonly caCertIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#character_set_name TfDbInstance#character_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#character_set_name AwsDbInstance#character_set_name}
   */
   readonly characterSetName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#copy_tags_to_snapshot TfDbInstance#copy_tags_to_snapshot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#copy_tags_to_snapshot AwsDbInstance#copy_tags_to_snapshot}
   */
   readonly copyTagsToSnapshot?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#custom_iam_instance_profile TfDbInstance#custom_iam_instance_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#custom_iam_instance_profile AwsDbInstance#custom_iam_instance_profile}
   */
   readonly customIamInstanceProfile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#customer_owned_ip_enabled TfDbInstance#customer_owned_ip_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#customer_owned_ip_enabled AwsDbInstance#customer_owned_ip_enabled}
   */
   readonly customerOwnedIpEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#database_insights_mode TfDbInstance#database_insights_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#database_insights_mode AwsDbInstance#database_insights_mode}
   */
   readonly databaseInsightsMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#db_name TfDbInstance#db_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#db_name AwsDbInstance#db_name}
   */
   readonly dbName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#db_subnet_group_name TfDbInstance#db_subnet_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#db_subnet_group_name AwsDbInstance#db_subnet_group_name}
   */
   readonly dbSubnetGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#dedicated_log_volume TfDbInstance#dedicated_log_volume}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#dedicated_log_volume AwsDbInstance#dedicated_log_volume}
   */
   readonly dedicatedLogVolume?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#delete_automated_backups TfDbInstance#delete_automated_backups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#delete_automated_backups AwsDbInstance#delete_automated_backups}
   */
   readonly deleteAutomatedBackups?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#deletion_protection TfDbInstance#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#deletion_protection AwsDbInstance#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#domain TfDbInstance#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#domain AwsDbInstance#domain}
   */
   readonly domain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#domain_auth_secret_arn TfDbInstance#domain_auth_secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#domain_auth_secret_arn AwsDbInstance#domain_auth_secret_arn}
   */
   readonly domainAuthSecretArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#domain_dns_ips TfDbInstance#domain_dns_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#domain_dns_ips AwsDbInstance#domain_dns_ips}
   */
   readonly domainDnsIps?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#domain_fqdn TfDbInstance#domain_fqdn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#domain_fqdn AwsDbInstance#domain_fqdn}
   */
   readonly domainFqdn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#domain_iam_role_name TfDbInstance#domain_iam_role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#domain_iam_role_name AwsDbInstance#domain_iam_role_name}
   */
   readonly domainIamRoleName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#domain_ou TfDbInstance#domain_ou}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#domain_ou AwsDbInstance#domain_ou}
   */
   readonly domainOu?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#enabled_cloudwatch_logs_exports TfDbInstance#enabled_cloudwatch_logs_exports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#enabled_cloudwatch_logs_exports AwsDbInstance#enabled_cloudwatch_logs_exports}
   */
   readonly enabledCloudwatchLogsExports?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#engine TfDbInstance#engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#engine AwsDbInstance#engine}
   */
   readonly engine?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#engine_lifecycle_support TfDbInstance#engine_lifecycle_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#engine_lifecycle_support AwsDbInstance#engine_lifecycle_support}
   */
   readonly engineLifecycleSupport?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#engine_version TfDbInstance#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#engine_version AwsDbInstance#engine_version}
   */
   readonly engineVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#final_snapshot_identifier TfDbInstance#final_snapshot_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#final_snapshot_identifier AwsDbInstance#final_snapshot_identifier}
   */
   readonly finalSnapshotIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#iam_database_authentication_enabled TfDbInstance#iam_database_authentication_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#iam_database_authentication_enabled AwsDbInstance#iam_database_authentication_enabled}
   */
   readonly iamDatabaseAuthenticationEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#id TfDbInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#id AwsDbInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#identifier TfDbInstance#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#identifier AwsDbInstance#identifier}
   */
   readonly identifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#identifier_prefix TfDbInstance#identifier_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#identifier_prefix AwsDbInstance#identifier_prefix}
   */
   readonly identifierPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#instance_class TfDbInstance#instance_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#instance_class AwsDbInstance#instance_class}
   */
   readonly instanceClass: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#iops TfDbInstance#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#iops AwsDbInstance#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#kms_key_id TfDbInstance#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#kms_key_id AwsDbInstance#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#license_model TfDbInstance#license_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#license_model AwsDbInstance#license_model}
   */
   readonly licenseModel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#maintenance_window TfDbInstance#maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#maintenance_window AwsDbInstance#maintenance_window}
   */
   readonly maintenanceWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#manage_master_user_password TfDbInstance#manage_master_user_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#manage_master_user_password AwsDbInstance#manage_master_user_password}
   */
   readonly manageMasterUserPassword?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#master_user_secret_kms_key_id TfDbInstance#master_user_secret_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#master_user_secret_kms_key_id AwsDbInstance#master_user_secret_kms_key_id}
   */
   readonly masterUserSecretKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#max_allocated_storage TfDbInstance#max_allocated_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#max_allocated_storage AwsDbInstance#max_allocated_storage}
   */
   readonly maxAllocatedStorage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#monitoring_interval TfDbInstance#monitoring_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#monitoring_interval AwsDbInstance#monitoring_interval}
   */
   readonly monitoringInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#monitoring_role_arn TfDbInstance#monitoring_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#monitoring_role_arn AwsDbInstance#monitoring_role_arn}
   */
   readonly monitoringRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#multi_az TfDbInstance#multi_az}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#multi_az AwsDbInstance#multi_az}
   */
   readonly multiAz?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#nchar_character_set_name TfDbInstance#nchar_character_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#nchar_character_set_name AwsDbInstance#nchar_character_set_name}
   */
   readonly ncharCharacterSetName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#network_type TfDbInstance#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#network_type AwsDbInstance#network_type}
   */
   readonly networkType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#option_group_name TfDbInstance#option_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#option_group_name AwsDbInstance#option_group_name}
   */
   readonly optionGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#parameter_group_name TfDbInstance#parameter_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#parameter_group_name AwsDbInstance#parameter_group_name}
   */
   readonly parameterGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#password TfDbInstance#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#password AwsDbInstance#password}
   */
   readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#password_wo TfDbInstance#password_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#password_wo AwsDbInstance#password_wo}
   */
   readonly passwordWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#password_wo_version TfDbInstance#password_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#password_wo_version AwsDbInstance#password_wo_version}
   */
   readonly passwordWoVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#performance_insights_enabled TfDbInstance#performance_insights_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#performance_insights_enabled AwsDbInstance#performance_insights_enabled}
   */
   readonly performanceInsightsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#performance_insights_kms_key_id TfDbInstance#performance_insights_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#performance_insights_kms_key_id AwsDbInstance#performance_insights_kms_key_id}
   */
   readonly performanceInsightsKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#performance_insights_retention_period TfDbInstance#performance_insights_retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#performance_insights_retention_period AwsDbInstance#performance_insights_retention_period}
   */
   readonly performanceInsightsRetentionPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#port TfDbInstance#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#port AwsDbInstance#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#publicly_accessible TfDbInstance#publicly_accessible}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#publicly_accessible AwsDbInstance#publicly_accessible}
   */
   readonly publiclyAccessible?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#region TfDbInstance#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#region AwsDbInstance#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#replica_mode TfDbInstance#replica_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#replica_mode AwsDbInstance#replica_mode}
   */
   readonly replicaMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#replicate_source_db TfDbInstance#replicate_source_db}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#replicate_source_db AwsDbInstance#replicate_source_db}
   */
   readonly replicateSourceDb?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#skip_final_snapshot TfDbInstance#skip_final_snapshot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#skip_final_snapshot AwsDbInstance#skip_final_snapshot}
   */
   readonly skipFinalSnapshot?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#snapshot_identifier TfDbInstance#snapshot_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#snapshot_identifier AwsDbInstance#snapshot_identifier}
   */
   readonly snapshotIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#storage_encrypted TfDbInstance#storage_encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#storage_encrypted AwsDbInstance#storage_encrypted}
   */
   readonly storageEncrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#storage_throughput TfDbInstance#storage_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#storage_throughput AwsDbInstance#storage_throughput}
   */
   readonly storageThroughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#storage_type TfDbInstance#storage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#storage_type AwsDbInstance#storage_type}
   */
   readonly storageType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#tags TfDbInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#tags AwsDbInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#tags_all TfDbInstance#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#tags_all AwsDbInstance#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#timezone TfDbInstance#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#timezone AwsDbInstance#timezone}
   */
   readonly timezone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#upgrade_storage_config TfDbInstance#upgrade_storage_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#upgrade_storage_config AwsDbInstance#upgrade_storage_config}
   */
   readonly upgradeStorageConfig?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#username TfDbInstance#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#username AwsDbInstance#username}
   */
   readonly username?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#vpc_security_group_ids TfDbInstance#vpc_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#vpc_security_group_ids AwsDbInstance#vpc_security_group_ids}
   */
   readonly vpcSecurityGroupIds?: string[];
   /**
   * blue_green_update block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#blue_green_update TfDbInstance#blue_green_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#blue_green_update AwsDbInstance#blue_green_update}
   */
-  readonly blueGreenUpdate?: TfDbInstance.BlueGreenUpdateProperty;
+  readonly blueGreenUpdate?: AwsDbInstance.BlueGreenUpdateProperty;
   /**
   * restore_to_point_in_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#restore_to_point_in_time TfDbInstance#restore_to_point_in_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#restore_to_point_in_time AwsDbInstance#restore_to_point_in_time}
   */
-  readonly restoreToPointInTime?: TfDbInstance.RestoreToPointInTimeProperty;
+  readonly restoreToPointInTime?: AwsDbInstance.RestoreToPointInTimeProperty;
   /**
   * s3_import block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#s3_import TfDbInstance#s3_import}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#s3_import AwsDbInstance#s3_import}
   */
-  readonly s3Import?: TfDbInstance.S3ImportProperty;
+  readonly s3Import?: AwsDbInstance.S3ImportProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#timeouts TfDbInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#timeouts AwsDbInstance#timeouts}
   */
-  readonly timeouts?: TfDbInstance.TimeoutsProperty;
+  readonly timeouts?: AwsDbInstance.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance aws_db_instance}
 */
-export class TfDbInstance extends cdktn.TerraformResource {
+export class AwsDbInstance extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -335,11 +335,11 @@ export class TfDbInstance extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDbInstance resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDbInstance resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDbInstance to import
-  * @param importFromId The id of the existing TfDbInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDbInstance to import is found
+  * @param importToId The construct id used in the generated config for the AwsDbInstance to import
+  * @param importFromId The id of the existing AwsDbInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDbInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_db_instance", importId: importFromId, provider });
@@ -354,9 +354,9 @@ export class TfDbInstance extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDbInstanceConfig
+  * @param options AwsDbInstanceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDbInstanceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDbInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_db_instance',
       terraformGeneratorMetadata: {
@@ -1089,7 +1089,7 @@ export class TfDbInstance extends cdktn.TerraformResource {
   }
 
   // listener_endpoint - computed: true, optional: false, required: false
-  private _listenerEndpoint = new TfDbInstance.ListenerEndpointPropertyList(this, "listener_endpoint", false);
+  private _listenerEndpoint = new AwsDbInstance.ListenerEndpointPropertyList(this, "listener_endpoint", false);
   public get listenerEndpoint() {
     return this._listenerEndpoint;
   }
@@ -1127,7 +1127,7 @@ export class TfDbInstance extends cdktn.TerraformResource {
   }
 
   // master_user_secret - computed: true, optional: false, required: false
-  private _masterUserSecret = new TfDbInstance.MasterUserSecretPropertyList(this, "master_user_secret", false);
+  private _masterUserSecret = new AwsDbInstance.MasterUserSecretPropertyList(this, "master_user_secret", false);
   public get masterUserSecret() {
     return this._masterUserSecret;
   }
@@ -1652,11 +1652,11 @@ export class TfDbInstance extends cdktn.TerraformResource {
   }
 
   // blue_green_update - computed: false, optional: true, required: false
-  private _blueGreenUpdate = new TfDbInstance.BlueGreenUpdatePropertyOutputReference(this, "blue_green_update");
+  private _blueGreenUpdate = new AwsDbInstance.BlueGreenUpdatePropertyOutputReference(this, "blue_green_update");
   public get blueGreenUpdate() {
     return this._blueGreenUpdate;
   }
-  public putBlueGreenUpdate(value: TfDbInstance.BlueGreenUpdateProperty) {
+  public putBlueGreenUpdate(value: AwsDbInstance.BlueGreenUpdateProperty) {
     this._blueGreenUpdate.internalValue = value;
   }
   public resetBlueGreenUpdate() {
@@ -1668,11 +1668,11 @@ export class TfDbInstance extends cdktn.TerraformResource {
   }
 
   // restore_to_point_in_time - computed: false, optional: true, required: false
-  private _restoreToPointInTime = new TfDbInstance.RestoreToPointInTimePropertyOutputReference(this, "restore_to_point_in_time");
+  private _restoreToPointInTime = new AwsDbInstance.RestoreToPointInTimePropertyOutputReference(this, "restore_to_point_in_time");
   public get restoreToPointInTime() {
     return this._restoreToPointInTime;
   }
-  public putRestoreToPointInTime(value: TfDbInstance.RestoreToPointInTimeProperty) {
+  public putRestoreToPointInTime(value: AwsDbInstance.RestoreToPointInTimeProperty) {
     this._restoreToPointInTime.internalValue = value;
   }
   public resetRestoreToPointInTime() {
@@ -1684,11 +1684,11 @@ export class TfDbInstance extends cdktn.TerraformResource {
   }
 
   // s3_import - computed: false, optional: true, required: false
-  private _s3Import = new TfDbInstance.S3ImportPropertyOutputReference(this, "s3_import");
+  private _s3Import = new AwsDbInstance.S3ImportPropertyOutputReference(this, "s3_import");
   public get s3Import() {
     return this._s3Import;
   }
-  public putS3Import(value: TfDbInstance.S3ImportProperty) {
+  public putS3Import(value: AwsDbInstance.S3ImportProperty) {
     this._s3Import.internalValue = value;
   }
   public resetS3Import() {
@@ -1700,11 +1700,11 @@ export class TfDbInstance extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDbInstance.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDbInstance.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDbInstance.TimeoutsProperty) {
+  public putTimeouts(value: AwsDbInstance.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -1792,10 +1792,10 @@ export class TfDbInstance extends cdktn.TerraformResource {
       upgrade_storage_config: cdktn.booleanToTerraform(this._upgradeStorageConfig),
       username: cdktn.stringToTerraform(this._username),
       vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
-      blue_green_update: tfDbInstanceBlueGreenUpdatePropertyToTerraform(this._blueGreenUpdate.internalValue),
-      restore_to_point_in_time: tfDbInstanceRestoreToPointInTimePropertyToTerraform(this._restoreToPointInTime.internalValue),
-      s3_import: tfDbInstanceS3ImportPropertyToTerraform(this._s3Import.internalValue),
-      timeouts: tfDbInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      blue_green_update: awsDbInstanceBlueGreenUpdatePropertyToTerraform(this._blueGreenUpdate.internalValue),
+      restore_to_point_in_time: awsDbInstanceRestoreToPointInTimePropertyToTerraform(this._restoreToPointInTime.internalValue),
+      s3_import: awsDbInstanceS3ImportPropertyToTerraform(this._s3Import.internalValue),
+      timeouts: awsDbInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -2228,28 +2228,28 @@ export class TfDbInstance extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       blue_green_update: {
-        value: tfDbInstanceBlueGreenUpdatePropertyToHclTerraform(this._blueGreenUpdate.internalValue),
+        value: awsDbInstanceBlueGreenUpdatePropertyToHclTerraform(this._blueGreenUpdate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDbInstance.BlueGreenUpdatePropertyList",
+        storageClassType: "AwsDbInstance.BlueGreenUpdatePropertyList",
       },
       restore_to_point_in_time: {
-        value: tfDbInstanceRestoreToPointInTimePropertyToHclTerraform(this._restoreToPointInTime.internalValue),
+        value: awsDbInstanceRestoreToPointInTimePropertyToHclTerraform(this._restoreToPointInTime.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDbInstance.RestoreToPointInTimePropertyList",
+        storageClassType: "AwsDbInstance.RestoreToPointInTimePropertyList",
       },
       s3_import: {
-        value: tfDbInstanceS3ImportPropertyToHclTerraform(this._s3Import.internalValue),
+        value: awsDbInstanceS3ImportPropertyToHclTerraform(this._s3Import.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDbInstance.S3ImportPropertyList",
+        storageClassType: "AwsDbInstance.S3ImportPropertyList",
       },
       timeouts: {
-        value: tfDbInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDbInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDbInstance.TimeoutsProperty",
+        storageClassType: "AwsDbInstance.TimeoutsProperty",
       },
     };
 
@@ -2258,7 +2258,7 @@ export class TfDbInstance extends cdktn.TerraformResource {
   }
 }
 
-export function tfDbInstanceListenerEndpointPropertyToTerraform(struct?: TfDbInstance.ListenerEndpointProperty): any {
+export function awsDbInstanceListenerEndpointPropertyToTerraform(struct?: AwsDbInstance.ListenerEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2268,7 +2268,7 @@ export function tfDbInstanceListenerEndpointPropertyToTerraform(struct?: TfDbIns
 }
 
 
-export function tfDbInstanceListenerEndpointPropertyToHclTerraform(struct?: TfDbInstance.ListenerEndpointProperty): any {
+export function awsDbInstanceListenerEndpointPropertyToHclTerraform(struct?: AwsDbInstance.ListenerEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2279,7 +2279,7 @@ export function tfDbInstanceListenerEndpointPropertyToHclTerraform(struct?: TfDb
 }
 
 
-export function tfDbInstanceMasterUserSecretPropertyToTerraform(struct?: TfDbInstance.MasterUserSecretProperty): any {
+export function awsDbInstanceMasterUserSecretPropertyToTerraform(struct?: AwsDbInstance.MasterUserSecretProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2289,7 +2289,7 @@ export function tfDbInstanceMasterUserSecretPropertyToTerraform(struct?: TfDbIns
 }
 
 
-export function tfDbInstanceMasterUserSecretPropertyToHclTerraform(struct?: TfDbInstance.MasterUserSecretProperty): any {
+export function awsDbInstanceMasterUserSecretPropertyToHclTerraform(struct?: AwsDbInstance.MasterUserSecretProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2300,7 +2300,7 @@ export function tfDbInstanceMasterUserSecretPropertyToHclTerraform(struct?: TfDb
 }
 
 
-export function tfDbInstanceBlueGreenUpdatePropertyToTerraform(struct?: TfDbInstance.BlueGreenUpdatePropertyOutputReference | TfDbInstance.BlueGreenUpdateProperty): any {
+export function awsDbInstanceBlueGreenUpdatePropertyToTerraform(struct?: AwsDbInstance.BlueGreenUpdatePropertyOutputReference | AwsDbInstance.BlueGreenUpdateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2311,7 +2311,7 @@ export function tfDbInstanceBlueGreenUpdatePropertyToTerraform(struct?: TfDbInst
 }
 
 
-export function tfDbInstanceBlueGreenUpdatePropertyToHclTerraform(struct?: TfDbInstance.BlueGreenUpdatePropertyOutputReference | TfDbInstance.BlueGreenUpdateProperty): any {
+export function awsDbInstanceBlueGreenUpdatePropertyToHclTerraform(struct?: AwsDbInstance.BlueGreenUpdatePropertyOutputReference | AwsDbInstance.BlueGreenUpdateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2330,7 +2330,7 @@ export function tfDbInstanceBlueGreenUpdatePropertyToHclTerraform(struct?: TfDbI
 }
 
 
-export function tfDbInstanceRestoreToPointInTimePropertyToTerraform(struct?: TfDbInstance.RestoreToPointInTimePropertyOutputReference | TfDbInstance.RestoreToPointInTimeProperty): any {
+export function awsDbInstanceRestoreToPointInTimePropertyToTerraform(struct?: AwsDbInstance.RestoreToPointInTimePropertyOutputReference | AwsDbInstance.RestoreToPointInTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2345,7 +2345,7 @@ export function tfDbInstanceRestoreToPointInTimePropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDbInstanceRestoreToPointInTimePropertyToHclTerraform(struct?: TfDbInstance.RestoreToPointInTimePropertyOutputReference | TfDbInstance.RestoreToPointInTimeProperty): any {
+export function awsDbInstanceRestoreToPointInTimePropertyToHclTerraform(struct?: AwsDbInstance.RestoreToPointInTimePropertyOutputReference | AwsDbInstance.RestoreToPointInTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2388,7 +2388,7 @@ export function tfDbInstanceRestoreToPointInTimePropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDbInstanceS3ImportPropertyToTerraform(struct?: TfDbInstance.S3ImportPropertyOutputReference | TfDbInstance.S3ImportProperty): any {
+export function awsDbInstanceS3ImportPropertyToTerraform(struct?: AwsDbInstance.S3ImportPropertyOutputReference | AwsDbInstance.S3ImportProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2403,7 +2403,7 @@ export function tfDbInstanceS3ImportPropertyToTerraform(struct?: TfDbInstance.S3
 }
 
 
-export function tfDbInstanceS3ImportPropertyToHclTerraform(struct?: TfDbInstance.S3ImportPropertyOutputReference | TfDbInstance.S3ImportProperty): any {
+export function awsDbInstanceS3ImportPropertyToHclTerraform(struct?: AwsDbInstance.S3ImportPropertyOutputReference | AwsDbInstance.S3ImportProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2446,7 +2446,7 @@ export function tfDbInstanceS3ImportPropertyToHclTerraform(struct?: TfDbInstance
 }
 
 
-export function tfDbInstanceTimeoutsPropertyToTerraform(struct?: TfDbInstance.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDbInstanceTimeoutsPropertyToTerraform(struct?: AwsDbInstance.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2459,7 +2459,7 @@ export function tfDbInstanceTimeoutsPropertyToTerraform(struct?: TfDbInstance.Ti
 }
 
 
-export function tfDbInstanceTimeoutsPropertyToHclTerraform(struct?: TfDbInstance.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDbInstanceTimeoutsPropertyToHclTerraform(struct?: AwsDbInstance.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2490,7 +2490,7 @@ export function tfDbInstanceTimeoutsPropertyToHclTerraform(struct?: TfDbInstance
 }
 
 
-export namespace TfDbInstance {
+export namespace AwsDbInstance {
 export interface ListenerEndpointProperty {
 }
 export class ListenerEndpointPropertyOutputReference extends cdktn.ComplexObject {
@@ -2621,7 +2621,7 @@ export class MasterUserSecretPropertyList extends cdktn.ComplexList {
 }
 export interface BlueGreenUpdateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#enabled TfDbInstance#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#enabled AwsDbInstance#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -2675,23 +2675,23 @@ export class BlueGreenUpdatePropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface RestoreToPointInTimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#restore_time TfDbInstance#restore_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#restore_time AwsDbInstance#restore_time}
   */
   readonly restoreTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#source_db_instance_automated_backups_arn TfDbInstance#source_db_instance_automated_backups_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#source_db_instance_automated_backups_arn AwsDbInstance#source_db_instance_automated_backups_arn}
   */
   readonly sourceDbInstanceAutomatedBackupsArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#source_db_instance_identifier TfDbInstance#source_db_instance_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#source_db_instance_identifier AwsDbInstance#source_db_instance_identifier}
   */
   readonly sourceDbInstanceIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#source_dbi_resource_id TfDbInstance#source_dbi_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#source_dbi_resource_id AwsDbInstance#source_dbi_resource_id}
   */
   readonly sourceDbiResourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#use_latest_restorable_time TfDbInstance#use_latest_restorable_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#use_latest_restorable_time AwsDbInstance#use_latest_restorable_time}
   */
   readonly useLatestRestorableTime?: boolean | cdktn.IResolvable;
 }
@@ -2833,23 +2833,23 @@ export class RestoreToPointInTimePropertyOutputReference extends cdktn.ComplexOb
 }
 export interface S3ImportProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#bucket_name TfDbInstance#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#bucket_name AwsDbInstance#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#bucket_prefix TfDbInstance#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#bucket_prefix AwsDbInstance#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#ingestion_role TfDbInstance#ingestion_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#ingestion_role AwsDbInstance#ingestion_role}
   */
   readonly ingestionRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#source_engine TfDbInstance#source_engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#source_engine AwsDbInstance#source_engine}
   */
   readonly sourceEngine: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#source_engine_version TfDbInstance#source_engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#source_engine_version AwsDbInstance#source_engine_version}
   */
   readonly sourceEngineVersion: string;
 }
@@ -2979,15 +2979,15 @@ export class S3ImportPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#create TfDbInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#create AwsDbInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#delete TfDbInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#delete AwsDbInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#update TfDbInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_instance#update AwsDbInstance#update}
   */
   readonly update?: string;
 }

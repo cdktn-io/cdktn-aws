@@ -5,55 +5,55 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLifecyclePolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLifecyclePolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#description TfLifecyclePolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#description AwsLifecyclePolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#execution_role TfLifecyclePolicy#execution_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#execution_role AwsLifecyclePolicy#execution_role}
   */
   readonly executionRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#name TfLifecyclePolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#name AwsLifecyclePolicy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#region TfLifecyclePolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#region AwsLifecyclePolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#resource_type TfLifecyclePolicy#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#resource_type AwsLifecyclePolicy#resource_type}
   */
   readonly resourceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#status TfLifecyclePolicy#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#status AwsLifecyclePolicy#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#tags TfLifecyclePolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#tags AwsLifecyclePolicy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * policy_detail block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#policy_detail TfLifecyclePolicy#policy_detail}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#policy_detail AwsLifecyclePolicy#policy_detail}
   */
-  readonly policyDetail?: TfLifecyclePolicy.PolicyDetailProperty[] | cdktn.IResolvable;
+  readonly policyDetail?: AwsLifecyclePolicy.PolicyDetailProperty[] | cdktn.IResolvable;
   /**
   * resource_selection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#resource_selection TfLifecyclePolicy#resource_selection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#resource_selection AwsLifecyclePolicy#resource_selection}
   */
-  readonly resourceSelection?: TfLifecyclePolicy.ResourceSelectionProperty[] | cdktn.IResolvable;
+  readonly resourceSelection?: AwsLifecyclePolicy.ResourceSelectionProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy aws_imagebuilder_lifecycle_policy}
 */
-export class TfLifecyclePolicy extends cdktn.TerraformResource {
+export class AwsLifecyclePolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -64,11 +64,11 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLifecyclePolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLifecyclePolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLifecyclePolicy to import
-  * @param importFromId The id of the existing TfLifecyclePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLifecyclePolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsLifecyclePolicy to import
+  * @param importFromId The id of the existing AwsLifecyclePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLifecyclePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_lifecycle_policy", importId: importFromId, provider });
@@ -83,9 +83,9 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLifecyclePolicyConfig
+  * @param options AwsLifecyclePolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLifecyclePolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLifecyclePolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_lifecycle_policy',
       terraformGeneratorMetadata: {
@@ -236,11 +236,11 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
   }
 
   // policy_detail - computed: false, optional: true, required: false
-  private _policyDetail = new TfLifecyclePolicy.PolicyDetailPropertyList(this, "policy_detail", true);
+  private _policyDetail = new AwsLifecyclePolicy.PolicyDetailPropertyList(this, "policy_detail", true);
   public get policyDetail() {
     return this._policyDetail;
   }
-  public putPolicyDetail(value: TfLifecyclePolicy.PolicyDetailProperty[] | cdktn.IResolvable) {
+  public putPolicyDetail(value: AwsLifecyclePolicy.PolicyDetailProperty[] | cdktn.IResolvable) {
     this._policyDetail.internalValue = value;
   }
   public resetPolicyDetail() {
@@ -252,11 +252,11 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
   }
 
   // resource_selection - computed: false, optional: true, required: false
-  private _resourceSelection = new TfLifecyclePolicy.ResourceSelectionPropertyList(this, "resource_selection", false);
+  private _resourceSelection = new AwsLifecyclePolicy.ResourceSelectionPropertyList(this, "resource_selection", false);
   public get resourceSelection() {
     return this._resourceSelection;
   }
-  public putResourceSelection(value: TfLifecyclePolicy.ResourceSelectionProperty[] | cdktn.IResolvable) {
+  public putResourceSelection(value: AwsLifecyclePolicy.ResourceSelectionProperty[] | cdktn.IResolvable) {
     this._resourceSelection.internalValue = value;
   }
   public resetResourceSelection() {
@@ -280,8 +280,8 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
       resource_type: cdktn.stringToTerraform(this._resourceType),
       status: cdktn.stringToTerraform(this._status),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      policy_detail: cdktn.listMapper(tfLifecyclePolicyPolicyDetailPropertyToTerraform, true)(this._policyDetail.internalValue),
-      resource_selection: cdktn.listMapper(tfLifecyclePolicyResourceSelectionPropertyToTerraform, true)(this._resourceSelection.internalValue),
+      policy_detail: cdktn.listMapper(awsLifecyclePolicyPolicyDetailPropertyToTerraform, true)(this._policyDetail.internalValue),
+      resource_selection: cdktn.listMapper(awsLifecyclePolicyResourceSelectionPropertyToTerraform, true)(this._resourceSelection.internalValue),
     };
   }
 
@@ -330,16 +330,16 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       policy_detail: {
-        value: cdktn.listMapperHcl(tfLifecyclePolicyPolicyDetailPropertyToHclTerraform, true)(this._policyDetail.internalValue),
+        value: cdktn.listMapperHcl(awsLifecyclePolicyPolicyDetailPropertyToHclTerraform, true)(this._policyDetail.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfLifecyclePolicy.PolicyDetailPropertyList",
+        storageClassType: "AwsLifecyclePolicy.PolicyDetailPropertyList",
       },
       resource_selection: {
-        value: cdktn.listMapperHcl(tfLifecyclePolicyResourceSelectionPropertyToHclTerraform, true)(this._resourceSelection.internalValue),
+        value: cdktn.listMapperHcl(awsLifecyclePolicyResourceSelectionPropertyToHclTerraform, true)(this._resourceSelection.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLifecyclePolicy.ResourceSelectionPropertyList",
+        storageClassType: "AwsLifecyclePolicy.ResourceSelectionPropertyList",
       },
     };
 
@@ -348,7 +348,7 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfLifecyclePolicyIncludeResourcesPropertyToTerraform(struct?: TfLifecyclePolicy.IncludeResourcesProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyIncludeResourcesPropertyToTerraform(struct?: AwsLifecyclePolicy.IncludeResourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function tfLifecyclePolicyIncludeResourcesPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfLifecyclePolicyIncludeResourcesPropertyToHclTerraform(struct?: TfLifecyclePolicy.IncludeResourcesProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyIncludeResourcesPropertyToHclTerraform(struct?: AwsLifecyclePolicy.IncludeResourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,19 +392,19 @@ export function tfLifecyclePolicyIncludeResourcesPropertyToHclTerraform(struct?:
 }
 
 
-export function tfLifecyclePolicyActionPropertyToTerraform(struct?: TfLifecyclePolicy.ActionProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyActionPropertyToTerraform(struct?: AwsLifecyclePolicy.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    include_resources: cdktn.listMapper(tfLifecyclePolicyIncludeResourcesPropertyToTerraform, true)(struct!.includeResources),
+    include_resources: cdktn.listMapper(awsLifecyclePolicyIncludeResourcesPropertyToTerraform, true)(struct!.includeResources),
   }
 }
 
 
-export function tfLifecyclePolicyActionPropertyToHclTerraform(struct?: TfLifecyclePolicy.ActionProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyActionPropertyToHclTerraform(struct?: AwsLifecyclePolicy.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function tfLifecyclePolicyActionPropertyToHclTerraform(struct?: TfLifecyc
       storageClassType: "string",
     },
     include_resources: {
-      value: cdktn.listMapperHcl(tfLifecyclePolicyIncludeResourcesPropertyToHclTerraform, true)(struct!.includeResources),
+      value: cdktn.listMapperHcl(awsLifecyclePolicyIncludeResourcesPropertyToHclTerraform, true)(struct!.includeResources),
       isBlock: true,
       type: "list",
       storageClassType: "IncludeResourcesPropertyList",
@@ -429,7 +429,7 @@ export function tfLifecyclePolicyActionPropertyToHclTerraform(struct?: TfLifecyc
 }
 
 
-export function tfLifecyclePolicyLastLaunchedPropertyToTerraform(struct?: TfLifecyclePolicy.LastLaunchedProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyLastLaunchedPropertyToTerraform(struct?: AwsLifecyclePolicy.LastLaunchedProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,7 +441,7 @@ export function tfLifecyclePolicyLastLaunchedPropertyToTerraform(struct?: TfLife
 }
 
 
-export function tfLifecyclePolicyLastLaunchedPropertyToHclTerraform(struct?: TfLifecyclePolicy.LastLaunchedProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyLastLaunchedPropertyToHclTerraform(struct?: AwsLifecyclePolicy.LastLaunchedProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function tfLifecyclePolicyLastLaunchedPropertyToHclTerraform(struct?: TfL
 }
 
 
-export function tfLifecyclePolicyAmisPropertyToTerraform(struct?: TfLifecyclePolicy.AmisProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyAmisPropertyToTerraform(struct?: AwsLifecyclePolicy.AmisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,12 +476,12 @@ export function tfLifecyclePolicyAmisPropertyToTerraform(struct?: TfLifecyclePol
     regions: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.regions),
     shared_accounts: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.sharedAccounts),
     tag_map: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tagMap),
-    last_launched: cdktn.listMapper(tfLifecyclePolicyLastLaunchedPropertyToTerraform, true)(struct!.lastLaunched),
+    last_launched: cdktn.listMapper(awsLifecyclePolicyLastLaunchedPropertyToTerraform, true)(struct!.lastLaunched),
   }
 }
 
 
-export function tfLifecyclePolicyAmisPropertyToHclTerraform(struct?: TfLifecyclePolicy.AmisProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyAmisPropertyToHclTerraform(struct?: AwsLifecyclePolicy.AmisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -512,7 +512,7 @@ export function tfLifecyclePolicyAmisPropertyToHclTerraform(struct?: TfLifecycle
       storageClassType: "stringMap",
     },
     last_launched: {
-      value: cdktn.listMapperHcl(tfLifecyclePolicyLastLaunchedPropertyToHclTerraform, true)(struct!.lastLaunched),
+      value: cdktn.listMapperHcl(awsLifecyclePolicyLastLaunchedPropertyToHclTerraform, true)(struct!.lastLaunched),
       isBlock: true,
       type: "list",
       storageClassType: "LastLaunchedPropertyList",
@@ -524,19 +524,19 @@ export function tfLifecyclePolicyAmisPropertyToHclTerraform(struct?: TfLifecycle
 }
 
 
-export function tfLifecyclePolicyExclusionRulesPropertyToTerraform(struct?: TfLifecyclePolicy.ExclusionRulesProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyExclusionRulesPropertyToTerraform(struct?: AwsLifecyclePolicy.ExclusionRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     tag_map: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tagMap),
-    amis: cdktn.listMapper(tfLifecyclePolicyAmisPropertyToTerraform, true)(struct!.amis),
+    amis: cdktn.listMapper(awsLifecyclePolicyAmisPropertyToTerraform, true)(struct!.amis),
   }
 }
 
 
-export function tfLifecyclePolicyExclusionRulesPropertyToHclTerraform(struct?: TfLifecyclePolicy.ExclusionRulesProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyExclusionRulesPropertyToHclTerraform(struct?: AwsLifecyclePolicy.ExclusionRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -549,7 +549,7 @@ export function tfLifecyclePolicyExclusionRulesPropertyToHclTerraform(struct?: T
       storageClassType: "stringMap",
     },
     amis: {
-      value: cdktn.listMapperHcl(tfLifecyclePolicyAmisPropertyToHclTerraform, true)(struct!.amis),
+      value: cdktn.listMapperHcl(awsLifecyclePolicyAmisPropertyToHclTerraform, true)(struct!.amis),
       isBlock: true,
       type: "list",
       storageClassType: "AmisPropertyList",
@@ -561,7 +561,7 @@ export function tfLifecyclePolicyExclusionRulesPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfLifecyclePolicyFilterPropertyToTerraform(struct?: TfLifecyclePolicy.FilterProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyFilterPropertyToTerraform(struct?: AwsLifecyclePolicy.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -575,7 +575,7 @@ export function tfLifecyclePolicyFilterPropertyToTerraform(struct?: TfLifecycleP
 }
 
 
-export function tfLifecyclePolicyFilterPropertyToHclTerraform(struct?: TfLifecyclePolicy.FilterProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyFilterPropertyToHclTerraform(struct?: AwsLifecyclePolicy.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,39 +612,39 @@ export function tfLifecyclePolicyFilterPropertyToHclTerraform(struct?: TfLifecyc
 }
 
 
-export function tfLifecyclePolicyPolicyDetailPropertyToTerraform(struct?: TfLifecyclePolicy.PolicyDetailProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyPolicyDetailPropertyToTerraform(struct?: AwsLifecyclePolicy.PolicyDetailProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    action: cdktn.listMapper(tfLifecyclePolicyActionPropertyToTerraform, true)(struct!.action),
-    exclusion_rules: cdktn.listMapper(tfLifecyclePolicyExclusionRulesPropertyToTerraform, true)(struct!.exclusionRules),
-    filter: cdktn.listMapper(tfLifecyclePolicyFilterPropertyToTerraform, true)(struct!.filter),
+    action: cdktn.listMapper(awsLifecyclePolicyActionPropertyToTerraform, true)(struct!.action),
+    exclusion_rules: cdktn.listMapper(awsLifecyclePolicyExclusionRulesPropertyToTerraform, true)(struct!.exclusionRules),
+    filter: cdktn.listMapper(awsLifecyclePolicyFilterPropertyToTerraform, true)(struct!.filter),
   }
 }
 
 
-export function tfLifecyclePolicyPolicyDetailPropertyToHclTerraform(struct?: TfLifecyclePolicy.PolicyDetailProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyPolicyDetailPropertyToHclTerraform(struct?: AwsLifecyclePolicy.PolicyDetailProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     action: {
-      value: cdktn.listMapperHcl(tfLifecyclePolicyActionPropertyToHclTerraform, true)(struct!.action),
+      value: cdktn.listMapperHcl(awsLifecyclePolicyActionPropertyToHclTerraform, true)(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "ActionPropertyList",
     },
     exclusion_rules: {
-      value: cdktn.listMapperHcl(tfLifecyclePolicyExclusionRulesPropertyToHclTerraform, true)(struct!.exclusionRules),
+      value: cdktn.listMapperHcl(awsLifecyclePolicyExclusionRulesPropertyToHclTerraform, true)(struct!.exclusionRules),
       isBlock: true,
       type: "list",
       storageClassType: "ExclusionRulesPropertyList",
     },
     filter: {
-      value: cdktn.listMapperHcl(tfLifecyclePolicyFilterPropertyToHclTerraform, true)(struct!.filter),
+      value: cdktn.listMapperHcl(awsLifecyclePolicyFilterPropertyToHclTerraform, true)(struct!.filter),
       isBlock: true,
       type: "list",
       storageClassType: "FilterPropertyList",
@@ -656,7 +656,7 @@ export function tfLifecyclePolicyPolicyDetailPropertyToHclTerraform(struct?: TfL
 }
 
 
-export function tfLifecyclePolicyRecipePropertyToTerraform(struct?: TfLifecyclePolicy.RecipeProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyRecipePropertyToTerraform(struct?: AwsLifecyclePolicy.RecipeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function tfLifecyclePolicyRecipePropertyToTerraform(struct?: TfLifecycleP
 }
 
 
-export function tfLifecyclePolicyRecipePropertyToHclTerraform(struct?: TfLifecyclePolicy.RecipeProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyRecipePropertyToHclTerraform(struct?: AwsLifecyclePolicy.RecipeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -693,19 +693,19 @@ export function tfLifecyclePolicyRecipePropertyToHclTerraform(struct?: TfLifecyc
 }
 
 
-export function tfLifecyclePolicyResourceSelectionPropertyToTerraform(struct?: TfLifecyclePolicy.ResourceSelectionProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyResourceSelectionPropertyToTerraform(struct?: AwsLifecyclePolicy.ResourceSelectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     tag_map: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tagMap),
-    recipe: cdktn.listMapper(tfLifecyclePolicyRecipePropertyToTerraform, true)(struct!.recipe),
+    recipe: cdktn.listMapper(awsLifecyclePolicyRecipePropertyToTerraform, true)(struct!.recipe),
   }
 }
 
 
-export function tfLifecyclePolicyResourceSelectionPropertyToHclTerraform(struct?: TfLifecyclePolicy.ResourceSelectionProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyResourceSelectionPropertyToHclTerraform(struct?: AwsLifecyclePolicy.ResourceSelectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -718,7 +718,7 @@ export function tfLifecyclePolicyResourceSelectionPropertyToHclTerraform(struct?
       storageClassType: "stringMap",
     },
     recipe: {
-      value: cdktn.listMapperHcl(tfLifecyclePolicyRecipePropertyToHclTerraform, true)(struct!.recipe),
+      value: cdktn.listMapperHcl(awsLifecyclePolicyRecipePropertyToHclTerraform, true)(struct!.recipe),
       isBlock: true,
       type: "set",
       storageClassType: "RecipePropertyList",
@@ -730,18 +730,18 @@ export function tfLifecyclePolicyResourceSelectionPropertyToHclTerraform(struct?
 }
 
 
-export namespace TfLifecyclePolicy {
+export namespace AwsLifecyclePolicy {
 export interface IncludeResourcesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#amis TfLifecyclePolicy#amis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#amis AwsLifecyclePolicy#amis}
   */
   readonly amis?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#containers TfLifecyclePolicy#containers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#containers AwsLifecyclePolicy#containers}
   */
   readonly containers?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#snapshots TfLifecyclePolicy#snapshots}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#snapshots AwsLifecyclePolicy#snapshots}
   */
   readonly snapshots?: boolean | cdktn.IResolvable;
 }
@@ -871,13 +871,13 @@ export class IncludeResourcesPropertyList extends cdktn.ComplexList {
 }
 export interface ActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#type TfLifecyclePolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#type AwsLifecyclePolicy#type}
   */
   readonly type: string;
   /**
   * include_resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#include_resources TfLifecyclePolicy#include_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#include_resources AwsLifecyclePolicy#include_resources}
   */
   readonly includeResources?: IncludeResourcesProperty[] | cdktn.IResolvable;
 }
@@ -982,11 +982,11 @@ export class ActionPropertyList extends cdktn.ComplexList {
 }
 export interface LastLaunchedProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#unit TfLifecyclePolicy#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#unit AwsLifecyclePolicy#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#value TfLifecyclePolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#value AwsLifecyclePolicy#value}
   */
   readonly value: number;
 }
@@ -1088,25 +1088,25 @@ export class LastLaunchedPropertyList extends cdktn.ComplexList {
 }
 export interface AmisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#is_public TfLifecyclePolicy#is_public}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#is_public AwsLifecyclePolicy#is_public}
   */
   readonly isPublic?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#regions TfLifecyclePolicy#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#regions AwsLifecyclePolicy#regions}
   */
   readonly regions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#shared_accounts TfLifecyclePolicy#shared_accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#shared_accounts AwsLifecyclePolicy#shared_accounts}
   */
   readonly sharedAccounts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#tag_map TfLifecyclePolicy#tag_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#tag_map AwsLifecyclePolicy#tag_map}
   */
   readonly tagMap?: { [key: string]: string };
   /**
   * last_launched block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#last_launched TfLifecyclePolicy#last_launched}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#last_launched AwsLifecyclePolicy#last_launched}
   */
   readonly lastLaunched?: LastLaunchedProperty[] | cdktn.IResolvable;
 }
@@ -1280,13 +1280,13 @@ export class AmisPropertyList extends cdktn.ComplexList {
 }
 export interface ExclusionRulesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#tag_map TfLifecyclePolicy#tag_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#tag_map AwsLifecyclePolicy#tag_map}
   */
   readonly tagMap?: { [key: string]: string };
   /**
   * amis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#amis TfLifecyclePolicy#amis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#amis AwsLifecyclePolicy#amis}
   */
   readonly amis?: AmisProperty[] | cdktn.IResolvable;
 }
@@ -1394,19 +1394,19 @@ export class ExclusionRulesPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#retain_at_least TfLifecyclePolicy#retain_at_least}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#retain_at_least AwsLifecyclePolicy#retain_at_least}
   */
   readonly retainAtLeast?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#type TfLifecyclePolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#type AwsLifecyclePolicy#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#unit TfLifecyclePolicy#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#unit AwsLifecyclePolicy#unit}
   */
   readonly unit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#value TfLifecyclePolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#value AwsLifecyclePolicy#value}
   */
   readonly value: number;
 }
@@ -1554,19 +1554,19 @@ export interface PolicyDetailProperty {
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#action TfLifecyclePolicy#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#action AwsLifecyclePolicy#action}
   */
   readonly action?: ActionProperty[] | cdktn.IResolvable;
   /**
   * exclusion_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#exclusion_rules TfLifecyclePolicy#exclusion_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#exclusion_rules AwsLifecyclePolicy#exclusion_rules}
   */
   readonly exclusionRules?: ExclusionRulesProperty[] | cdktn.IResolvable;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#filter TfLifecyclePolicy#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#filter AwsLifecyclePolicy#filter}
   */
   readonly filter?: FilterProperty[] | cdktn.IResolvable;
 }
@@ -1696,11 +1696,11 @@ export class PolicyDetailPropertyList extends cdktn.ComplexList {
 }
 export interface RecipeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#name TfLifecyclePolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#name AwsLifecyclePolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#semantic_version TfLifecyclePolicy#semantic_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#semantic_version AwsLifecyclePolicy#semantic_version}
   */
   readonly semanticVersion: string;
 }
@@ -1802,13 +1802,13 @@ export class RecipePropertyList extends cdktn.ComplexList {
 }
 export interface ResourceSelectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#tag_map TfLifecyclePolicy#tag_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#tag_map AwsLifecyclePolicy#tag_map}
   */
   readonly tagMap?: { [key: string]: string };
   /**
   * recipe block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#recipe TfLifecyclePolicy#recipe}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_lifecycle_policy#recipe AwsLifecyclePolicy#recipe}
   */
   readonly recipe?: RecipeProperty[] | cdktn.IResolvable;
 }

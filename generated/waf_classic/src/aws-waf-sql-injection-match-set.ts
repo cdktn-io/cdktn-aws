@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSqlInjectionMatchSetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSqlInjectionMatchSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#id TfSqlInjectionMatchSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#id AwsSqlInjectionMatchSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#name TfSqlInjectionMatchSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#name AwsSqlInjectionMatchSet#name}
   */
   readonly name: string;
   /**
   * sql_injection_match_tuples block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#sql_injection_match_tuples TfSqlInjectionMatchSet#sql_injection_match_tuples}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#sql_injection_match_tuples AwsSqlInjectionMatchSet#sql_injection_match_tuples}
   */
-  readonly sqlInjectionMatchTuples?: TfSqlInjectionMatchSet.SqlInjectionMatchTuplesProperty[] | cdktn.IResolvable;
+  readonly sqlInjectionMatchTuples?: AwsSqlInjectionMatchSet.SqlInjectionMatchTuplesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set aws_waf_sql_injection_match_set}
 */
-export class TfSqlInjectionMatchSet extends cdktn.TerraformResource {
+export class AwsSqlInjectionMatchSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfSqlInjectionMatchSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSqlInjectionMatchSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSqlInjectionMatchSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSqlInjectionMatchSet to import
-  * @param importFromId The id of the existing TfSqlInjectionMatchSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSqlInjectionMatchSet to import is found
+  * @param importToId The construct id used in the generated config for the AwsSqlInjectionMatchSet to import
+  * @param importFromId The id of the existing AwsSqlInjectionMatchSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSqlInjectionMatchSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_waf_sql_injection_match_set", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfSqlInjectionMatchSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSqlInjectionMatchSetConfig
+  * @param options AwsSqlInjectionMatchSetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSqlInjectionMatchSetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSqlInjectionMatchSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_waf_sql_injection_match_set',
       terraformGeneratorMetadata: {
@@ -120,11 +120,11 @@ export class TfSqlInjectionMatchSet extends cdktn.TerraformResource {
   }
 
   // sql_injection_match_tuples - computed: false, optional: true, required: false
-  private _sqlInjectionMatchTuples = new TfSqlInjectionMatchSet.SqlInjectionMatchTuplesPropertyList(this, "sql_injection_match_tuples", true);
+  private _sqlInjectionMatchTuples = new AwsSqlInjectionMatchSet.SqlInjectionMatchTuplesPropertyList(this, "sql_injection_match_tuples", true);
   public get sqlInjectionMatchTuples() {
     return this._sqlInjectionMatchTuples;
   }
-  public putSqlInjectionMatchTuples(value: TfSqlInjectionMatchSet.SqlInjectionMatchTuplesProperty[] | cdktn.IResolvable) {
+  public putSqlInjectionMatchTuples(value: AwsSqlInjectionMatchSet.SqlInjectionMatchTuplesProperty[] | cdktn.IResolvable) {
     this._sqlInjectionMatchTuples.internalValue = value;
   }
   public resetSqlInjectionMatchTuples() {
@@ -143,7 +143,7 @@ export class TfSqlInjectionMatchSet extends cdktn.TerraformResource {
     return {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
-      sql_injection_match_tuples: cdktn.listMapper(tfSqlInjectionMatchSetSqlInjectionMatchTuplesPropertyToTerraform, true)(this._sqlInjectionMatchTuples.internalValue),
+      sql_injection_match_tuples: cdktn.listMapper(awsSqlInjectionMatchSetSqlInjectionMatchTuplesPropertyToTerraform, true)(this._sqlInjectionMatchTuples.internalValue),
     };
   }
 
@@ -162,10 +162,10 @@ export class TfSqlInjectionMatchSet extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       sql_injection_match_tuples: {
-        value: cdktn.listMapperHcl(tfSqlInjectionMatchSetSqlInjectionMatchTuplesPropertyToHclTerraform, true)(this._sqlInjectionMatchTuples.internalValue),
+        value: cdktn.listMapperHcl(awsSqlInjectionMatchSetSqlInjectionMatchTuplesPropertyToHclTerraform, true)(this._sqlInjectionMatchTuples.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfSqlInjectionMatchSet.SqlInjectionMatchTuplesPropertyList",
+        storageClassType: "AwsSqlInjectionMatchSet.SqlInjectionMatchTuplesPropertyList",
       },
     };
 
@@ -174,7 +174,7 @@ export class TfSqlInjectionMatchSet extends cdktn.TerraformResource {
   }
 }
 
-export function tfSqlInjectionMatchSetFieldToMatchPropertyToTerraform(struct?: TfSqlInjectionMatchSet.FieldToMatchPropertyOutputReference | TfSqlInjectionMatchSet.FieldToMatchProperty): any {
+export function awsSqlInjectionMatchSetFieldToMatchPropertyToTerraform(struct?: AwsSqlInjectionMatchSet.FieldToMatchPropertyOutputReference | AwsSqlInjectionMatchSet.FieldToMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -186,7 +186,7 @@ export function tfSqlInjectionMatchSetFieldToMatchPropertyToTerraform(struct?: T
 }
 
 
-export function tfSqlInjectionMatchSetFieldToMatchPropertyToHclTerraform(struct?: TfSqlInjectionMatchSet.FieldToMatchPropertyOutputReference | TfSqlInjectionMatchSet.FieldToMatchProperty): any {
+export function awsSqlInjectionMatchSetFieldToMatchPropertyToHclTerraform(struct?: AwsSqlInjectionMatchSet.FieldToMatchPropertyOutputReference | AwsSqlInjectionMatchSet.FieldToMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,19 +211,19 @@ export function tfSqlInjectionMatchSetFieldToMatchPropertyToHclTerraform(struct?
 }
 
 
-export function tfSqlInjectionMatchSetSqlInjectionMatchTuplesPropertyToTerraform(struct?: TfSqlInjectionMatchSet.SqlInjectionMatchTuplesProperty | cdktn.IResolvable): any {
+export function awsSqlInjectionMatchSetSqlInjectionMatchTuplesPropertyToTerraform(struct?: AwsSqlInjectionMatchSet.SqlInjectionMatchTuplesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     text_transformation: cdktn.stringToTerraform(struct!.textTransformation),
-    field_to_match: tfSqlInjectionMatchSetFieldToMatchPropertyToTerraform(struct!.fieldToMatch),
+    field_to_match: awsSqlInjectionMatchSetFieldToMatchPropertyToTerraform(struct!.fieldToMatch),
   }
 }
 
 
-export function tfSqlInjectionMatchSetSqlInjectionMatchTuplesPropertyToHclTerraform(struct?: TfSqlInjectionMatchSet.SqlInjectionMatchTuplesProperty | cdktn.IResolvable): any {
+export function awsSqlInjectionMatchSetSqlInjectionMatchTuplesPropertyToHclTerraform(struct?: AwsSqlInjectionMatchSet.SqlInjectionMatchTuplesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function tfSqlInjectionMatchSetSqlInjectionMatchTuplesPropertyToHclTerraf
       storageClassType: "string",
     },
     field_to_match: {
-      value: tfSqlInjectionMatchSetFieldToMatchPropertyToHclTerraform(struct!.fieldToMatch),
+      value: awsSqlInjectionMatchSetFieldToMatchPropertyToHclTerraform(struct!.fieldToMatch),
       isBlock: true,
       type: "list",
       storageClassType: "FieldToMatchPropertyList",
@@ -248,14 +248,14 @@ export function tfSqlInjectionMatchSetSqlInjectionMatchTuplesPropertyToHclTerraf
 }
 
 
-export namespace TfSqlInjectionMatchSet {
+export namespace AwsSqlInjectionMatchSet {
 export interface FieldToMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#data TfSqlInjectionMatchSet#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#data AwsSqlInjectionMatchSet#data}
   */
   readonly data?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#type TfSqlInjectionMatchSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#type AwsSqlInjectionMatchSet#type}
   */
   readonly type: string;
 }
@@ -328,13 +328,13 @@ export class FieldToMatchPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SqlInjectionMatchTuplesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#text_transformation TfSqlInjectionMatchSet#text_transformation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#text_transformation AwsSqlInjectionMatchSet#text_transformation}
   */
   readonly textTransformation: string;
   /**
   * field_to_match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#field_to_match TfSqlInjectionMatchSet#field_to_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_sql_injection_match_set#field_to_match AwsSqlInjectionMatchSet#field_to_match}
   */
   readonly fieldToMatch: FieldToMatchProperty;
 }

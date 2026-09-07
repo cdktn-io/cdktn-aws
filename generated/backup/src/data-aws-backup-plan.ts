@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfPlanConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsPlanConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_plan#id DataTfPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_plan#id DataAwsPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_plan#plan_id DataTfPlan#plan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_plan#plan_id DataAwsPlan#plan_id}
   */
   readonly planId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_plan#region DataTfPlan#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_plan#region DataAwsPlan#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_plan#tags DataTfPlan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_plan#tags DataAwsPlan#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataTfPlanConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_plan aws_backup_plan}
 */
-export class DataTfPlan extends cdktn.TerraformDataSource {
+export class DataAwsPlan extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfPlan extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfPlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsPlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfPlan to import
-  * @param importFromId The id of the existing DataTfPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfPlan to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsPlan to import
+  * @param importFromId The id of the existing DataAwsPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_plan", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfPlan extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfPlanConfig
+  * @param options DataAwsPlanConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfPlanConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsPlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_plan',
       terraformGeneratorMetadata: {
@@ -146,13 +146,13 @@ export class DataTfPlan extends cdktn.TerraformDataSource {
   }
 
   // rule - computed: true, optional: false, required: false
-  private _rule = new DataTfPlan.RulePropertyList(this, "rule", true);
+  private _rule = new DataAwsPlan.RulePropertyList(this, "rule", true);
   public get rule() {
     return this._rule;
   }
 
   // scan_setting - computed: true, optional: false, required: false
-  private _scanSetting = new DataTfPlan.ScanSettingPropertyList(this, "scan_setting", true);
+  private _scanSetting = new DataAwsPlan.ScanSettingPropertyList(this, "scan_setting", true);
   public get scanSetting() {
     return this._scanSetting;
   }
@@ -224,7 +224,7 @@ export class DataTfPlan extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfPlanRuleCopyActionLifecyclePropertyToTerraform(struct?: DataTfPlan.RuleCopyActionLifecycleProperty): any {
+export function dataAwsPlanRuleCopyActionLifecyclePropertyToTerraform(struct?: DataAwsPlan.RuleCopyActionLifecycleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -234,7 +234,7 @@ export function dataTfPlanRuleCopyActionLifecyclePropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfPlanRuleCopyActionLifecyclePropertyToHclTerraform(struct?: DataTfPlan.RuleCopyActionLifecycleProperty): any {
+export function dataAwsPlanRuleCopyActionLifecyclePropertyToHclTerraform(struct?: DataAwsPlan.RuleCopyActionLifecycleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -245,7 +245,7 @@ export function dataTfPlanRuleCopyActionLifecyclePropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfPlanCopyActionPropertyToTerraform(struct?: DataTfPlan.CopyActionProperty): any {
+export function dataAwsPlanCopyActionPropertyToTerraform(struct?: DataAwsPlan.CopyActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -255,7 +255,7 @@ export function dataTfPlanCopyActionPropertyToTerraform(struct?: DataTfPlan.Copy
 }
 
 
-export function dataTfPlanCopyActionPropertyToHclTerraform(struct?: DataTfPlan.CopyActionProperty): any {
+export function dataAwsPlanCopyActionPropertyToHclTerraform(struct?: DataAwsPlan.CopyActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function dataTfPlanCopyActionPropertyToHclTerraform(struct?: DataTfPlan.C
 }
 
 
-export function dataTfPlanRuleLifecyclePropertyToTerraform(struct?: DataTfPlan.RuleLifecycleProperty): any {
+export function dataAwsPlanRuleLifecyclePropertyToTerraform(struct?: DataAwsPlan.RuleLifecycleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,7 +276,7 @@ export function dataTfPlanRuleLifecyclePropertyToTerraform(struct?: DataTfPlan.R
 }
 
 
-export function dataTfPlanRuleLifecyclePropertyToHclTerraform(struct?: DataTfPlan.RuleLifecycleProperty): any {
+export function dataAwsPlanRuleLifecyclePropertyToHclTerraform(struct?: DataAwsPlan.RuleLifecycleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function dataTfPlanRuleLifecyclePropertyToHclTerraform(struct?: DataTfPla
 }
 
 
-export function dataTfPlanScanActionPropertyToTerraform(struct?: DataTfPlan.ScanActionProperty): any {
+export function dataAwsPlanScanActionPropertyToTerraform(struct?: DataAwsPlan.ScanActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function dataTfPlanScanActionPropertyToTerraform(struct?: DataTfPlan.Scan
 }
 
 
-export function dataTfPlanScanActionPropertyToHclTerraform(struct?: DataTfPlan.ScanActionProperty): any {
+export function dataAwsPlanScanActionPropertyToHclTerraform(struct?: DataAwsPlan.ScanActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function dataTfPlanScanActionPropertyToHclTerraform(struct?: DataTfPlan.S
 }
 
 
-export function dataTfPlanRulePropertyToTerraform(struct?: DataTfPlan.RuleProperty): any {
+export function dataAwsPlanRulePropertyToTerraform(struct?: DataAwsPlan.RuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function dataTfPlanRulePropertyToTerraform(struct?: DataTfPlan.RuleProper
 }
 
 
-export function dataTfPlanRulePropertyToHclTerraform(struct?: DataTfPlan.RuleProperty): any {
+export function dataAwsPlanRulePropertyToHclTerraform(struct?: DataAwsPlan.RuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function dataTfPlanRulePropertyToHclTerraform(struct?: DataTfPlan.RulePro
 }
 
 
-export function dataTfPlanScanSettingPropertyToTerraform(struct?: DataTfPlan.ScanSettingProperty): any {
+export function dataAwsPlanScanSettingPropertyToTerraform(struct?: DataAwsPlan.ScanSettingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function dataTfPlanScanSettingPropertyToTerraform(struct?: DataTfPlan.Sca
 }
 
 
-export function dataTfPlanScanSettingPropertyToHclTerraform(struct?: DataTfPlan.ScanSettingProperty): any {
+export function dataAwsPlanScanSettingPropertyToHclTerraform(struct?: DataAwsPlan.ScanSettingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function dataTfPlanScanSettingPropertyToHclTerraform(struct?: DataTfPlan.
 }
 
 
-export namespace DataTfPlan {
+export namespace DataAwsPlan {
 export interface RuleCopyActionLifecycleProperty {
 }
 export class RuleCopyActionLifecyclePropertyOutputReference extends cdktn.ComplexObject {

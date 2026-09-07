@@ -5,43 +5,43 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConfigurationManagerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConfigurationManagerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#description TfConfigurationManager#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#description AwsConfigurationManager#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#name TfConfigurationManager#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#name AwsConfigurationManager#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#region TfConfigurationManager#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#region AwsConfigurationManager#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#tags TfConfigurationManager#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#tags AwsConfigurationManager#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * configuration_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#configuration_definition TfConfigurationManager#configuration_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#configuration_definition AwsConfigurationManager#configuration_definition}
   */
-  readonly configurationDefinition?: TfConfigurationManager.ConfigurationDefinitionProperty[] | cdktn.IResolvable;
+  readonly configurationDefinition?: AwsConfigurationManager.ConfigurationDefinitionProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#timeouts TfConfigurationManager#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#timeouts AwsConfigurationManager#timeouts}
   */
-  readonly timeouts?: TfConfigurationManager.TimeoutsProperty;
+  readonly timeouts?: AwsConfigurationManager.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager aws_ssmquicksetup_configuration_manager}
 */
-export class TfConfigurationManager extends cdktn.TerraformResource {
+export class AwsConfigurationManager extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class TfConfigurationManager extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConfigurationManager resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConfigurationManager resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConfigurationManager to import
-  * @param importFromId The id of the existing TfConfigurationManager that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConfigurationManager to import is found
+  * @param importToId The construct id used in the generated config for the AwsConfigurationManager to import
+  * @param importFromId The id of the existing AwsConfigurationManager that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConfigurationManager to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssmquicksetup_configuration_manager", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class TfConfigurationManager extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConfigurationManagerConfig
+  * @param options AwsConfigurationManagerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConfigurationManagerConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConfigurationManagerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssmquicksetup_configuration_manager',
       terraformGeneratorMetadata: {
@@ -152,7 +152,7 @@ export class TfConfigurationManager extends cdktn.TerraformResource {
   }
 
   // status_summaries - computed: true, optional: false, required: false
-  private _statusSummaries = new TfConfigurationManager.StatusSummariesPropertyList(this, "status_summaries", false);
+  private _statusSummaries = new AwsConfigurationManager.StatusSummariesPropertyList(this, "status_summaries", false);
   public get statusSummaries() {
     return this._statusSummaries;
   }
@@ -180,11 +180,11 @@ export class TfConfigurationManager extends cdktn.TerraformResource {
   }
 
   // configuration_definition - computed: false, optional: true, required: false
-  private _configurationDefinition = new TfConfigurationManager.ConfigurationDefinitionPropertyList(this, "configuration_definition", false);
+  private _configurationDefinition = new AwsConfigurationManager.ConfigurationDefinitionPropertyList(this, "configuration_definition", false);
   public get configurationDefinition() {
     return this._configurationDefinition;
   }
-  public putConfigurationDefinition(value: TfConfigurationManager.ConfigurationDefinitionProperty[] | cdktn.IResolvable) {
+  public putConfigurationDefinition(value: AwsConfigurationManager.ConfigurationDefinitionProperty[] | cdktn.IResolvable) {
     this._configurationDefinition.internalValue = value;
   }
   public resetConfigurationDefinition() {
@@ -196,11 +196,11 @@ export class TfConfigurationManager extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfConfigurationManager.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsConfigurationManager.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfConfigurationManager.TimeoutsProperty) {
+  public putTimeouts(value: AwsConfigurationManager.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -221,8 +221,8 @@ export class TfConfigurationManager extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      configuration_definition: cdktn.listMapper(tfConfigurationManagerConfigurationDefinitionPropertyToTerraform, true)(this._configurationDefinition.internalValue),
-      timeouts: tfConfigurationManagerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      configuration_definition: cdktn.listMapper(awsConfigurationManagerConfigurationDefinitionPropertyToTerraform, true)(this._configurationDefinition.internalValue),
+      timeouts: awsConfigurationManagerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -253,16 +253,16 @@ export class TfConfigurationManager extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       configuration_definition: {
-        value: cdktn.listMapperHcl(tfConfigurationManagerConfigurationDefinitionPropertyToHclTerraform, true)(this._configurationDefinition.internalValue),
+        value: cdktn.listMapperHcl(awsConfigurationManagerConfigurationDefinitionPropertyToHclTerraform, true)(this._configurationDefinition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConfigurationManager.ConfigurationDefinitionPropertyList",
+        storageClassType: "AwsConfigurationManager.ConfigurationDefinitionPropertyList",
       },
       timeouts: {
-        value: tfConfigurationManagerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsConfigurationManagerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfConfigurationManager.TimeoutsProperty",
+        storageClassType: "AwsConfigurationManager.TimeoutsProperty",
       },
     };
 
@@ -271,7 +271,7 @@ export class TfConfigurationManager extends cdktn.TerraformResource {
   }
 }
 
-export function tfConfigurationManagerStatusSummariesPropertyToTerraform(struct?: TfConfigurationManager.StatusSummariesProperty): any {
+export function awsConfigurationManagerStatusSummariesPropertyToTerraform(struct?: AwsConfigurationManager.StatusSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -281,7 +281,7 @@ export function tfConfigurationManagerStatusSummariesPropertyToTerraform(struct?
 }
 
 
-export function tfConfigurationManagerStatusSummariesPropertyToHclTerraform(struct?: TfConfigurationManager.StatusSummariesProperty): any {
+export function awsConfigurationManagerStatusSummariesPropertyToHclTerraform(struct?: AwsConfigurationManager.StatusSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -292,7 +292,7 @@ export function tfConfigurationManagerStatusSummariesPropertyToHclTerraform(stru
 }
 
 
-export function tfConfigurationManagerConfigurationDefinitionPropertyToTerraform(struct?: TfConfigurationManager.ConfigurationDefinitionProperty | cdktn.IResolvable): any {
+export function awsConfigurationManagerConfigurationDefinitionPropertyToTerraform(struct?: AwsConfigurationManager.ConfigurationDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function tfConfigurationManagerConfigurationDefinitionPropertyToTerraform
 }
 
 
-export function tfConfigurationManagerConfigurationDefinitionPropertyToHclTerraform(struct?: TfConfigurationManager.ConfigurationDefinitionProperty | cdktn.IResolvable): any {
+export function awsConfigurationManagerConfigurationDefinitionPropertyToHclTerraform(struct?: AwsConfigurationManager.ConfigurationDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function tfConfigurationManagerConfigurationDefinitionPropertyToHclTerraf
 }
 
 
-export function tfConfigurationManagerTimeoutsPropertyToTerraform(struct?: TfConfigurationManager.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsConfigurationManagerTimeoutsPropertyToTerraform(struct?: AwsConfigurationManager.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -363,7 +363,7 @@ export function tfConfigurationManagerTimeoutsPropertyToTerraform(struct?: TfCon
 }
 
 
-export function tfConfigurationManagerTimeoutsPropertyToHclTerraform(struct?: TfConfigurationManager.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsConfigurationManagerTimeoutsPropertyToHclTerraform(struct?: AwsConfigurationManager.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,7 +394,7 @@ export function tfConfigurationManagerTimeoutsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfConfigurationManager {
+export namespace AwsConfigurationManager {
 export interface StatusSummariesProperty {
 }
 export class StatusSummariesPropertyOutputReference extends cdktn.ComplexObject {
@@ -461,23 +461,23 @@ export class StatusSummariesPropertyList extends cdktn.ComplexList {
 }
 export interface ConfigurationDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#local_deployment_administration_role_arn TfConfigurationManager#local_deployment_administration_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#local_deployment_administration_role_arn AwsConfigurationManager#local_deployment_administration_role_arn}
   */
   readonly localDeploymentAdministrationRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#local_deployment_execution_role_name TfConfigurationManager#local_deployment_execution_role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#local_deployment_execution_role_name AwsConfigurationManager#local_deployment_execution_role_name}
   */
   readonly localDeploymentExecutionRoleName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#parameters TfConfigurationManager#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#parameters AwsConfigurationManager#parameters}
   */
   readonly parameters: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#type TfConfigurationManager#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#type AwsConfigurationManager#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#type_version TfConfigurationManager#type_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#type_version AwsConfigurationManager#type_version}
   */
   readonly typeVersion?: string;
 }
@@ -652,19 +652,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#create TfConfigurationManager#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#create AwsConfigurationManager#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#delete TfConfigurationManager#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#delete AwsConfigurationManager#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#update TfConfigurationManager#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmquicksetup_configuration_manager#update AwsConfigurationManager#update}
   */
   readonly update?: string;
 }

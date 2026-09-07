@@ -5,114 +5,114 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfOntapFileSystemConfig extends cdktn.TerraformMetaArguments {
+export interface AwsOntapFileSystemConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#automatic_backup_retention_days TfOntapFileSystem#automatic_backup_retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#automatic_backup_retention_days AwsOntapFileSystem#automatic_backup_retention_days}
   */
   readonly automaticBackupRetentionDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#daily_automatic_backup_start_time TfOntapFileSystem#daily_automatic_backup_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#daily_automatic_backup_start_time AwsOntapFileSystem#daily_automatic_backup_start_time}
   */
   readonly dailyAutomaticBackupStartTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#deployment_type TfOntapFileSystem#deployment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#deployment_type AwsOntapFileSystem#deployment_type}
   */
   readonly deploymentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#endpoint_ip_address_range TfOntapFileSystem#endpoint_ip_address_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#endpoint_ip_address_range AwsOntapFileSystem#endpoint_ip_address_range}
   */
   readonly endpointIpAddressRange?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#fsx_admin_password TfOntapFileSystem#fsx_admin_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#fsx_admin_password AwsOntapFileSystem#fsx_admin_password}
   */
   readonly fsxAdminPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#ha_pairs TfOntapFileSystem#ha_pairs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#ha_pairs AwsOntapFileSystem#ha_pairs}
   */
   readonly haPairs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#id TfOntapFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#id AwsOntapFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#kms_key_id TfOntapFileSystem#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#kms_key_id AwsOntapFileSystem#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#network_type TfOntapFileSystem#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#network_type AwsOntapFileSystem#network_type}
   */
   readonly networkType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#preferred_subnet_id TfOntapFileSystem#preferred_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#preferred_subnet_id AwsOntapFileSystem#preferred_subnet_id}
   */
   readonly preferredSubnetId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#region TfOntapFileSystem#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#region AwsOntapFileSystem#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#route_table_ids TfOntapFileSystem#route_table_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#route_table_ids AwsOntapFileSystem#route_table_ids}
   */
   readonly routeTableIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#security_group_ids TfOntapFileSystem#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#security_group_ids AwsOntapFileSystem#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#storage_capacity TfOntapFileSystem#storage_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#storage_capacity AwsOntapFileSystem#storage_capacity}
   */
   readonly storageCapacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#storage_type TfOntapFileSystem#storage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#storage_type AwsOntapFileSystem#storage_type}
   */
   readonly storageType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#subnet_ids TfOntapFileSystem#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#subnet_ids AwsOntapFileSystem#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#tags TfOntapFileSystem#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#tags AwsOntapFileSystem#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#tags_all TfOntapFileSystem#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#tags_all AwsOntapFileSystem#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#throughput_capacity TfOntapFileSystem#throughput_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#throughput_capacity AwsOntapFileSystem#throughput_capacity}
   */
   readonly throughputCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#throughput_capacity_per_ha_pair TfOntapFileSystem#throughput_capacity_per_ha_pair}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#throughput_capacity_per_ha_pair AwsOntapFileSystem#throughput_capacity_per_ha_pair}
   */
   readonly throughputCapacityPerHaPair?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#weekly_maintenance_start_time TfOntapFileSystem#weekly_maintenance_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#weekly_maintenance_start_time AwsOntapFileSystem#weekly_maintenance_start_time}
   */
   readonly weeklyMaintenanceStartTime?: string;
   /**
   * disk_iops_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#disk_iops_configuration TfOntapFileSystem#disk_iops_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#disk_iops_configuration AwsOntapFileSystem#disk_iops_configuration}
   */
-  readonly diskIopsConfiguration?: TfOntapFileSystem.DiskIopsConfigurationProperty;
+  readonly diskIopsConfiguration?: AwsOntapFileSystem.DiskIopsConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#timeouts TfOntapFileSystem#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#timeouts AwsOntapFileSystem#timeouts}
   */
-  readonly timeouts?: TfOntapFileSystem.TimeoutsProperty;
+  readonly timeouts?: AwsOntapFileSystem.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system aws_fsx_ontap_file_system}
 */
-export class TfOntapFileSystem extends cdktn.TerraformResource {
+export class AwsOntapFileSystem extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -123,11 +123,11 @@ export class TfOntapFileSystem extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfOntapFileSystem resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsOntapFileSystem resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfOntapFileSystem to import
-  * @param importFromId The id of the existing TfOntapFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfOntapFileSystem to import is found
+  * @param importToId The construct id used in the generated config for the AwsOntapFileSystem to import
+  * @param importFromId The id of the existing AwsOntapFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOntapFileSystem to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_ontap_file_system", importId: importFromId, provider });
@@ -142,9 +142,9 @@ export class TfOntapFileSystem extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfOntapFileSystemConfig
+  * @param options AwsOntapFileSystemConfig
   */
-  public constructor(scope: Construct, id: string, config: TfOntapFileSystemConfig) {
+  public constructor(scope: Construct, id: string, config: AwsOntapFileSystemConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_ontap_file_system',
       terraformGeneratorMetadata: {
@@ -261,7 +261,7 @@ export class TfOntapFileSystem extends cdktn.TerraformResource {
   }
 
   // endpoints - computed: true, optional: false, required: false
-  private _endpoints = new TfOntapFileSystem.EndpointsPropertyList(this, "endpoints", false);
+  private _endpoints = new AwsOntapFileSystem.EndpointsPropertyList(this, "endpoints", false);
   public get endpoints() {
     return this._endpoints;
   }
@@ -545,11 +545,11 @@ export class TfOntapFileSystem extends cdktn.TerraformResource {
   }
 
   // disk_iops_configuration - computed: false, optional: true, required: false
-  private _diskIopsConfiguration = new TfOntapFileSystem.DiskIopsConfigurationPropertyOutputReference(this, "disk_iops_configuration");
+  private _diskIopsConfiguration = new AwsOntapFileSystem.DiskIopsConfigurationPropertyOutputReference(this, "disk_iops_configuration");
   public get diskIopsConfiguration() {
     return this._diskIopsConfiguration;
   }
-  public putDiskIopsConfiguration(value: TfOntapFileSystem.DiskIopsConfigurationProperty) {
+  public putDiskIopsConfiguration(value: AwsOntapFileSystem.DiskIopsConfigurationProperty) {
     this._diskIopsConfiguration.internalValue = value;
   }
   public resetDiskIopsConfiguration() {
@@ -561,11 +561,11 @@ export class TfOntapFileSystem extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfOntapFileSystem.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsOntapFileSystem.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfOntapFileSystem.TimeoutsProperty) {
+  public putTimeouts(value: AwsOntapFileSystem.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -603,8 +603,8 @@ export class TfOntapFileSystem extends cdktn.TerraformResource {
       throughput_capacity: cdktn.numberToTerraform(this._throughputCapacity),
       throughput_capacity_per_ha_pair: cdktn.numberToTerraform(this._throughputCapacityPerHaPair),
       weekly_maintenance_start_time: cdktn.stringToTerraform(this._weeklyMaintenanceStartTime),
-      disk_iops_configuration: tfOntapFileSystemDiskIopsConfigurationPropertyToTerraform(this._diskIopsConfiguration.internalValue),
-      timeouts: tfOntapFileSystemTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      disk_iops_configuration: awsOntapFileSystemDiskIopsConfigurationPropertyToTerraform(this._diskIopsConfiguration.internalValue),
+      timeouts: awsOntapFileSystemTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -737,16 +737,16 @@ export class TfOntapFileSystem extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       disk_iops_configuration: {
-        value: tfOntapFileSystemDiskIopsConfigurationPropertyToHclTerraform(this._diskIopsConfiguration.internalValue),
+        value: awsOntapFileSystemDiskIopsConfigurationPropertyToHclTerraform(this._diskIopsConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfOntapFileSystem.DiskIopsConfigurationPropertyList",
+        storageClassType: "AwsOntapFileSystem.DiskIopsConfigurationPropertyList",
       },
       timeouts: {
-        value: tfOntapFileSystemTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsOntapFileSystemTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfOntapFileSystem.TimeoutsProperty",
+        storageClassType: "AwsOntapFileSystem.TimeoutsProperty",
       },
     };
 
@@ -755,7 +755,7 @@ export class TfOntapFileSystem extends cdktn.TerraformResource {
   }
 }
 
-export function tfOntapFileSystemInterclusterPropertyToTerraform(struct?: TfOntapFileSystem.InterclusterProperty): any {
+export function awsOntapFileSystemInterclusterPropertyToTerraform(struct?: AwsOntapFileSystem.InterclusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,7 +765,7 @@ export function tfOntapFileSystemInterclusterPropertyToTerraform(struct?: TfOnta
 }
 
 
-export function tfOntapFileSystemInterclusterPropertyToHclTerraform(struct?: TfOntapFileSystem.InterclusterProperty): any {
+export function awsOntapFileSystemInterclusterPropertyToHclTerraform(struct?: AwsOntapFileSystem.InterclusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -776,7 +776,7 @@ export function tfOntapFileSystemInterclusterPropertyToHclTerraform(struct?: TfO
 }
 
 
-export function tfOntapFileSystemManagementPropertyToTerraform(struct?: TfOntapFileSystem.ManagementProperty): any {
+export function awsOntapFileSystemManagementPropertyToTerraform(struct?: AwsOntapFileSystem.ManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -786,7 +786,7 @@ export function tfOntapFileSystemManagementPropertyToTerraform(struct?: TfOntapF
 }
 
 
-export function tfOntapFileSystemManagementPropertyToHclTerraform(struct?: TfOntapFileSystem.ManagementProperty): any {
+export function awsOntapFileSystemManagementPropertyToHclTerraform(struct?: AwsOntapFileSystem.ManagementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -797,7 +797,7 @@ export function tfOntapFileSystemManagementPropertyToHclTerraform(struct?: TfOnt
 }
 
 
-export function tfOntapFileSystemEndpointsPropertyToTerraform(struct?: TfOntapFileSystem.EndpointsProperty): any {
+export function awsOntapFileSystemEndpointsPropertyToTerraform(struct?: AwsOntapFileSystem.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -807,7 +807,7 @@ export function tfOntapFileSystemEndpointsPropertyToTerraform(struct?: TfOntapFi
 }
 
 
-export function tfOntapFileSystemEndpointsPropertyToHclTerraform(struct?: TfOntapFileSystem.EndpointsProperty): any {
+export function awsOntapFileSystemEndpointsPropertyToHclTerraform(struct?: AwsOntapFileSystem.EndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -818,7 +818,7 @@ export function tfOntapFileSystemEndpointsPropertyToHclTerraform(struct?: TfOnta
 }
 
 
-export function tfOntapFileSystemDiskIopsConfigurationPropertyToTerraform(struct?: TfOntapFileSystem.DiskIopsConfigurationPropertyOutputReference | TfOntapFileSystem.DiskIopsConfigurationProperty): any {
+export function awsOntapFileSystemDiskIopsConfigurationPropertyToTerraform(struct?: AwsOntapFileSystem.DiskIopsConfigurationPropertyOutputReference | AwsOntapFileSystem.DiskIopsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -830,7 +830,7 @@ export function tfOntapFileSystemDiskIopsConfigurationPropertyToTerraform(struct
 }
 
 
-export function tfOntapFileSystemDiskIopsConfigurationPropertyToHclTerraform(struct?: TfOntapFileSystem.DiskIopsConfigurationPropertyOutputReference | TfOntapFileSystem.DiskIopsConfigurationProperty): any {
+export function awsOntapFileSystemDiskIopsConfigurationPropertyToHclTerraform(struct?: AwsOntapFileSystem.DiskIopsConfigurationPropertyOutputReference | AwsOntapFileSystem.DiskIopsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -855,7 +855,7 @@ export function tfOntapFileSystemDiskIopsConfigurationPropertyToHclTerraform(str
 }
 
 
-export function tfOntapFileSystemTimeoutsPropertyToTerraform(struct?: TfOntapFileSystem.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsOntapFileSystemTimeoutsPropertyToTerraform(struct?: AwsOntapFileSystem.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -868,7 +868,7 @@ export function tfOntapFileSystemTimeoutsPropertyToTerraform(struct?: TfOntapFil
 }
 
 
-export function tfOntapFileSystemTimeoutsPropertyToHclTerraform(struct?: TfOntapFileSystem.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsOntapFileSystemTimeoutsPropertyToHclTerraform(struct?: AwsOntapFileSystem.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -899,7 +899,7 @@ export function tfOntapFileSystemTimeoutsPropertyToHclTerraform(struct?: TfOntap
 }
 
 
-export namespace TfOntapFileSystem {
+export namespace AwsOntapFileSystem {
 export interface InterclusterProperty {
 }
 export class InterclusterPropertyOutputReference extends cdktn.ComplexObject {
@@ -1081,11 +1081,11 @@ export class EndpointsPropertyList extends cdktn.ComplexList {
 }
 export interface DiskIopsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#iops TfOntapFileSystem#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#iops AwsOntapFileSystem#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#mode TfOntapFileSystem#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#mode AwsOntapFileSystem#mode}
   */
   readonly mode?: string;
 }
@@ -1161,15 +1161,15 @@ export class DiskIopsConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#create TfOntapFileSystem#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#create AwsOntapFileSystem#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#delete TfOntapFileSystem#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#delete AwsOntapFileSystem#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#update TfOntapFileSystem#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_ontap_file_system#update AwsOntapFileSystem#update}
   */
   readonly update?: string;
 }

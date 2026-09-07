@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConnectionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConnectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#athena_properties TfConnection#athena_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#athena_properties AwsConnection#athena_properties}
   */
   readonly athenaProperties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#catalog_id TfConnection#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#catalog_id AwsConnection#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#connection_properties TfConnection#connection_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#connection_properties AwsConnection#connection_properties}
   */
   readonly connectionProperties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#connection_type TfConnection#connection_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#connection_type AwsConnection#connection_type}
   */
   readonly connectionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#description TfConnection#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#description AwsConnection#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#id TfConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#id AwsConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#match_criteria TfConnection#match_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#match_criteria AwsConnection#match_criteria}
   */
   readonly matchCriteria?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#name TfConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#name AwsConnection#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#region TfConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#region AwsConnection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#tags TfConnection#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#tags AwsConnection#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#tags_all TfConnection#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#tags_all AwsConnection#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * authentication_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#authentication_configuration TfConnection#authentication_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#authentication_configuration AwsConnection#authentication_configuration}
   */
-  readonly authenticationConfiguration?: TfConnection.AuthenticationConfigurationProperty;
+  readonly authenticationConfiguration?: AwsConnection.AuthenticationConfigurationProperty;
   /**
   * physical_connection_requirements block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#physical_connection_requirements TfConnection#physical_connection_requirements}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#physical_connection_requirements AwsConnection#physical_connection_requirements}
   */
-  readonly physicalConnectionRequirements?: TfConnection.PhysicalConnectionRequirementsProperty;
+  readonly physicalConnectionRequirements?: AwsConnection.PhysicalConnectionRequirementsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection aws_glue_connection}
 */
-export class TfConnection extends cdktn.TerraformResource {
+export class AwsConnection extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class TfConnection extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConnection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConnection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConnection to import
-  * @param importFromId The id of the existing TfConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConnection to import is found
+  * @param importToId The construct id used in the generated config for the AwsConnection to import
+  * @param importFromId The id of the existing AwsConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_connection", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class TfConnection extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConnectionConfig
+  * @param options AwsConnectionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConnectionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_connection',
       terraformGeneratorMetadata: {
@@ -318,11 +318,11 @@ export class TfConnection extends cdktn.TerraformResource {
   }
 
   // authentication_configuration - computed: false, optional: true, required: false
-  private _authenticationConfiguration = new TfConnection.AuthenticationConfigurationPropertyOutputReference(this, "authentication_configuration");
+  private _authenticationConfiguration = new AwsConnection.AuthenticationConfigurationPropertyOutputReference(this, "authentication_configuration");
   public get authenticationConfiguration() {
     return this._authenticationConfiguration;
   }
-  public putAuthenticationConfiguration(value: TfConnection.AuthenticationConfigurationProperty) {
+  public putAuthenticationConfiguration(value: AwsConnection.AuthenticationConfigurationProperty) {
     this._authenticationConfiguration.internalValue = value;
   }
   public resetAuthenticationConfiguration() {
@@ -334,11 +334,11 @@ export class TfConnection extends cdktn.TerraformResource {
   }
 
   // physical_connection_requirements - computed: false, optional: true, required: false
-  private _physicalConnectionRequirements = new TfConnection.PhysicalConnectionRequirementsPropertyOutputReference(this, "physical_connection_requirements");
+  private _physicalConnectionRequirements = new AwsConnection.PhysicalConnectionRequirementsPropertyOutputReference(this, "physical_connection_requirements");
   public get physicalConnectionRequirements() {
     return this._physicalConnectionRequirements;
   }
-  public putPhysicalConnectionRequirements(value: TfConnection.PhysicalConnectionRequirementsProperty) {
+  public putPhysicalConnectionRequirements(value: AwsConnection.PhysicalConnectionRequirementsProperty) {
     this._physicalConnectionRequirements.internalValue = value;
   }
   public resetPhysicalConnectionRequirements() {
@@ -366,8 +366,8 @@ export class TfConnection extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      authentication_configuration: tfConnectionAuthenticationConfigurationPropertyToTerraform(this._authenticationConfiguration.internalValue),
-      physical_connection_requirements: tfConnectionPhysicalConnectionRequirementsPropertyToTerraform(this._physicalConnectionRequirements.internalValue),
+      authentication_configuration: awsConnectionAuthenticationConfigurationPropertyToTerraform(this._authenticationConfiguration.internalValue),
+      physical_connection_requirements: awsConnectionPhysicalConnectionRequirementsPropertyToTerraform(this._physicalConnectionRequirements.internalValue),
     };
   }
 
@@ -440,16 +440,16 @@ export class TfConnection extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       authentication_configuration: {
-        value: tfConnectionAuthenticationConfigurationPropertyToHclTerraform(this._authenticationConfiguration.internalValue),
+        value: awsConnectionAuthenticationConfigurationPropertyToHclTerraform(this._authenticationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConnection.AuthenticationConfigurationPropertyList",
+        storageClassType: "AwsConnection.AuthenticationConfigurationPropertyList",
       },
       physical_connection_requirements: {
-        value: tfConnectionPhysicalConnectionRequirementsPropertyToHclTerraform(this._physicalConnectionRequirements.internalValue),
+        value: awsConnectionPhysicalConnectionRequirementsPropertyToHclTerraform(this._physicalConnectionRequirements.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConnection.PhysicalConnectionRequirementsPropertyList",
+        storageClassType: "AwsConnection.PhysicalConnectionRequirementsPropertyList",
       },
     };
 
@@ -458,7 +458,7 @@ export class TfConnection extends cdktn.TerraformResource {
   }
 }
 
-export function tfConnectionBasicAuthenticationCredentialsPropertyToTerraform(struct?: TfConnection.BasicAuthenticationCredentialsPropertyOutputReference | TfConnection.BasicAuthenticationCredentialsProperty): any {
+export function awsConnectionBasicAuthenticationCredentialsPropertyToTerraform(struct?: AwsConnection.BasicAuthenticationCredentialsPropertyOutputReference | AwsConnection.BasicAuthenticationCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function tfConnectionBasicAuthenticationCredentialsPropertyToTerraform(st
 }
 
 
-export function tfConnectionBasicAuthenticationCredentialsPropertyToHclTerraform(struct?: TfConnection.BasicAuthenticationCredentialsPropertyOutputReference | TfConnection.BasicAuthenticationCredentialsProperty): any {
+export function awsConnectionBasicAuthenticationCredentialsPropertyToHclTerraform(struct?: AwsConnection.BasicAuthenticationCredentialsPropertyOutputReference | AwsConnection.BasicAuthenticationCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function tfConnectionBasicAuthenticationCredentialsPropertyToHclTerraform
 }
 
 
-export function tfConnectionAuthorizationCodePropertiesPropertyToTerraform(struct?: TfConnection.AuthorizationCodePropertiesPropertyOutputReference | TfConnection.AuthorizationCodePropertiesProperty): any {
+export function awsConnectionAuthorizationCodePropertiesPropertyToTerraform(struct?: AwsConnection.AuthorizationCodePropertiesPropertyOutputReference | AwsConnection.AuthorizationCodePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function tfConnectionAuthorizationCodePropertiesPropertyToTerraform(struc
 }
 
 
-export function tfConnectionAuthorizationCodePropertiesPropertyToHclTerraform(struct?: TfConnection.AuthorizationCodePropertiesPropertyOutputReference | TfConnection.AuthorizationCodePropertiesProperty): any {
+export function awsConnectionAuthorizationCodePropertiesPropertyToHclTerraform(struct?: AwsConnection.AuthorizationCodePropertiesPropertyOutputReference | AwsConnection.AuthorizationCodePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,7 +532,7 @@ export function tfConnectionAuthorizationCodePropertiesPropertyToHclTerraform(st
 }
 
 
-export function tfConnectionOauth2ClientApplicationPropertyToTerraform(struct?: TfConnection.Oauth2ClientApplicationPropertyOutputReference | TfConnection.Oauth2ClientApplicationProperty): any {
+export function awsConnectionOauth2ClientApplicationPropertyToTerraform(struct?: AwsConnection.Oauth2ClientApplicationPropertyOutputReference | AwsConnection.Oauth2ClientApplicationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -544,7 +544,7 @@ export function tfConnectionOauth2ClientApplicationPropertyToTerraform(struct?: 
 }
 
 
-export function tfConnectionOauth2ClientApplicationPropertyToHclTerraform(struct?: TfConnection.Oauth2ClientApplicationPropertyOutputReference | TfConnection.Oauth2ClientApplicationProperty): any {
+export function awsConnectionOauth2ClientApplicationPropertyToHclTerraform(struct?: AwsConnection.Oauth2ClientApplicationPropertyOutputReference | AwsConnection.Oauth2ClientApplicationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -569,7 +569,7 @@ export function tfConnectionOauth2ClientApplicationPropertyToHclTerraform(struct
 }
 
 
-export function tfConnectionOauth2CredentialsPropertyToTerraform(struct?: TfConnection.Oauth2CredentialsPropertyOutputReference | TfConnection.Oauth2CredentialsProperty): any {
+export function awsConnectionOauth2CredentialsPropertyToTerraform(struct?: AwsConnection.Oauth2CredentialsPropertyOutputReference | AwsConnection.Oauth2CredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,7 +583,7 @@ export function tfConnectionOauth2CredentialsPropertyToTerraform(struct?: TfConn
 }
 
 
-export function tfConnectionOauth2CredentialsPropertyToHclTerraform(struct?: TfConnection.Oauth2CredentialsPropertyOutputReference | TfConnection.Oauth2CredentialsProperty): any {
+export function awsConnectionOauth2CredentialsPropertyToHclTerraform(struct?: AwsConnection.Oauth2CredentialsPropertyOutputReference | AwsConnection.Oauth2CredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -620,7 +620,7 @@ export function tfConnectionOauth2CredentialsPropertyToHclTerraform(struct?: TfC
 }
 
 
-export function tfConnectionOauth2PropertiesPropertyToTerraform(struct?: TfConnection.Oauth2PropertiesPropertyOutputReference | TfConnection.Oauth2PropertiesProperty): any {
+export function awsConnectionOauth2PropertiesPropertyToTerraform(struct?: AwsConnection.Oauth2PropertiesPropertyOutputReference | AwsConnection.Oauth2PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -629,14 +629,14 @@ export function tfConnectionOauth2PropertiesPropertyToTerraform(struct?: TfConne
     oauth2_grant_type: cdktn.stringToTerraform(struct!.oauth2GrantType),
     token_url: cdktn.stringToTerraform(struct!.tokenUrl),
     token_url_parameters_map: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tokenUrlParametersMap),
-    authorization_code_properties: tfConnectionAuthorizationCodePropertiesPropertyToTerraform(struct!.authorizationCodeProperties),
-    oauth2_client_application: tfConnectionOauth2ClientApplicationPropertyToTerraform(struct!.oauth2ClientApplication),
-    oauth2_credentials: tfConnectionOauth2CredentialsPropertyToTerraform(struct!.oauth2Credentials),
+    authorization_code_properties: awsConnectionAuthorizationCodePropertiesPropertyToTerraform(struct!.authorizationCodeProperties),
+    oauth2_client_application: awsConnectionOauth2ClientApplicationPropertyToTerraform(struct!.oauth2ClientApplication),
+    oauth2_credentials: awsConnectionOauth2CredentialsPropertyToTerraform(struct!.oauth2Credentials),
   }
 }
 
 
-export function tfConnectionOauth2PropertiesPropertyToHclTerraform(struct?: TfConnection.Oauth2PropertiesPropertyOutputReference | TfConnection.Oauth2PropertiesProperty): any {
+export function awsConnectionOauth2PropertiesPropertyToHclTerraform(struct?: AwsConnection.Oauth2PropertiesPropertyOutputReference | AwsConnection.Oauth2PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -661,19 +661,19 @@ export function tfConnectionOauth2PropertiesPropertyToHclTerraform(struct?: TfCo
       storageClassType: "stringMap",
     },
     authorization_code_properties: {
-      value: tfConnectionAuthorizationCodePropertiesPropertyToHclTerraform(struct!.authorizationCodeProperties),
+      value: awsConnectionAuthorizationCodePropertiesPropertyToHclTerraform(struct!.authorizationCodeProperties),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizationCodePropertiesPropertyList",
     },
     oauth2_client_application: {
-      value: tfConnectionOauth2ClientApplicationPropertyToHclTerraform(struct!.oauth2ClientApplication),
+      value: awsConnectionOauth2ClientApplicationPropertyToHclTerraform(struct!.oauth2ClientApplication),
       isBlock: true,
       type: "list",
       storageClassType: "Oauth2ClientApplicationPropertyList",
     },
     oauth2_credentials: {
-      value: tfConnectionOauth2CredentialsPropertyToHclTerraform(struct!.oauth2Credentials),
+      value: awsConnectionOauth2CredentialsPropertyToHclTerraform(struct!.oauth2Credentials),
       isBlock: true,
       type: "list",
       storageClassType: "Oauth2CredentialsPropertyList",
@@ -685,7 +685,7 @@ export function tfConnectionOauth2PropertiesPropertyToHclTerraform(struct?: TfCo
 }
 
 
-export function tfConnectionAuthenticationConfigurationPropertyToTerraform(struct?: TfConnection.AuthenticationConfigurationPropertyOutputReference | TfConnection.AuthenticationConfigurationProperty): any {
+export function awsConnectionAuthenticationConfigurationPropertyToTerraform(struct?: AwsConnection.AuthenticationConfigurationPropertyOutputReference | AwsConnection.AuthenticationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -695,13 +695,13 @@ export function tfConnectionAuthenticationConfigurationPropertyToTerraform(struc
     custom_authentication_credentials: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.customAuthenticationCredentials),
     kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
     secret_arn: cdktn.stringToTerraform(struct!.secretArn),
-    basic_authentication_credentials: tfConnectionBasicAuthenticationCredentialsPropertyToTerraform(struct!.basicAuthenticationCredentials),
-    oauth2_properties: tfConnectionOauth2PropertiesPropertyToTerraform(struct!.oauth2Properties),
+    basic_authentication_credentials: awsConnectionBasicAuthenticationCredentialsPropertyToTerraform(struct!.basicAuthenticationCredentials),
+    oauth2_properties: awsConnectionOauth2PropertiesPropertyToTerraform(struct!.oauth2Properties),
   }
 }
 
 
-export function tfConnectionAuthenticationConfigurationPropertyToHclTerraform(struct?: TfConnection.AuthenticationConfigurationPropertyOutputReference | TfConnection.AuthenticationConfigurationProperty): any {
+export function awsConnectionAuthenticationConfigurationPropertyToHclTerraform(struct?: AwsConnection.AuthenticationConfigurationPropertyOutputReference | AwsConnection.AuthenticationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -732,13 +732,13 @@ export function tfConnectionAuthenticationConfigurationPropertyToHclTerraform(st
       storageClassType: "string",
     },
     basic_authentication_credentials: {
-      value: tfConnectionBasicAuthenticationCredentialsPropertyToHclTerraform(struct!.basicAuthenticationCredentials),
+      value: awsConnectionBasicAuthenticationCredentialsPropertyToHclTerraform(struct!.basicAuthenticationCredentials),
       isBlock: true,
       type: "list",
       storageClassType: "BasicAuthenticationCredentialsPropertyList",
     },
     oauth2_properties: {
-      value: tfConnectionOauth2PropertiesPropertyToHclTerraform(struct!.oauth2Properties),
+      value: awsConnectionOauth2PropertiesPropertyToHclTerraform(struct!.oauth2Properties),
       isBlock: true,
       type: "list",
       storageClassType: "Oauth2PropertiesPropertyList",
@@ -750,7 +750,7 @@ export function tfConnectionAuthenticationConfigurationPropertyToHclTerraform(st
 }
 
 
-export function tfConnectionPhysicalConnectionRequirementsPropertyToTerraform(struct?: TfConnection.PhysicalConnectionRequirementsPropertyOutputReference | TfConnection.PhysicalConnectionRequirementsProperty): any {
+export function awsConnectionPhysicalConnectionRequirementsPropertyToTerraform(struct?: AwsConnection.PhysicalConnectionRequirementsPropertyOutputReference | AwsConnection.PhysicalConnectionRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -763,7 +763,7 @@ export function tfConnectionPhysicalConnectionRequirementsPropertyToTerraform(st
 }
 
 
-export function tfConnectionPhysicalConnectionRequirementsPropertyToHclTerraform(struct?: TfConnection.PhysicalConnectionRequirementsPropertyOutputReference | TfConnection.PhysicalConnectionRequirementsProperty): any {
+export function awsConnectionPhysicalConnectionRequirementsPropertyToHclTerraform(struct?: AwsConnection.PhysicalConnectionRequirementsPropertyOutputReference | AwsConnection.PhysicalConnectionRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -794,14 +794,14 @@ export function tfConnectionPhysicalConnectionRequirementsPropertyToHclTerraform
 }
 
 
-export namespace TfConnection {
+export namespace AwsConnection {
 export interface BasicAuthenticationCredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#password TfConnection#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#password AwsConnection#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#username TfConnection#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#username AwsConnection#username}
   */
   readonly username: string;
 }
@@ -871,11 +871,11 @@ export class BasicAuthenticationCredentialsPropertyOutputReference extends cdktn
 }
 export interface AuthorizationCodePropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#authorization_code TfConnection#authorization_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#authorization_code AwsConnection#authorization_code}
   */
   readonly authorizationCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#redirect_uri TfConnection#redirect_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#redirect_uri AwsConnection#redirect_uri}
   */
   readonly redirectUri: string;
 }
@@ -945,11 +945,11 @@ export class AuthorizationCodePropertiesPropertyOutputReference extends cdktn.Co
 }
 export interface Oauth2ClientApplicationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#aws_managed_client_application_reference TfConnection#aws_managed_client_application_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#aws_managed_client_application_reference AwsConnection#aws_managed_client_application_reference}
   */
   readonly awsManagedClientApplicationReference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#user_managed_client_application_client_id TfConnection#user_managed_client_application_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#user_managed_client_application_client_id AwsConnection#user_managed_client_application_client_id}
   */
   readonly userManagedClientApplicationClientId?: string;
 }
@@ -1025,19 +1025,19 @@ export class Oauth2ClientApplicationPropertyOutputReference extends cdktn.Comple
 }
 export interface Oauth2CredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#access_token TfConnection#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#access_token AwsConnection#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#jwt_token TfConnection#jwt_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#jwt_token AwsConnection#jwt_token}
   */
   readonly jwtToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#refresh_token TfConnection#refresh_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#refresh_token AwsConnection#refresh_token}
   */
   readonly refreshToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#user_managed_client_application_client_secret TfConnection#user_managed_client_application_client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#user_managed_client_application_client_secret AwsConnection#user_managed_client_application_client_secret}
   */
   readonly userManagedClientApplicationClientSecret?: string;
 }
@@ -1157,33 +1157,33 @@ export class Oauth2CredentialsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface Oauth2PropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#oauth2_grant_type TfConnection#oauth2_grant_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#oauth2_grant_type AwsConnection#oauth2_grant_type}
   */
   readonly oauth2GrantType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#token_url TfConnection#token_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#token_url AwsConnection#token_url}
   */
   readonly tokenUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#token_url_parameters_map TfConnection#token_url_parameters_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#token_url_parameters_map AwsConnection#token_url_parameters_map}
   */
   readonly tokenUrlParametersMap?: { [key: string]: string };
   /**
   * authorization_code_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#authorization_code_properties TfConnection#authorization_code_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#authorization_code_properties AwsConnection#authorization_code_properties}
   */
   readonly authorizationCodeProperties?: AuthorizationCodePropertiesProperty;
   /**
   * oauth2_client_application block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#oauth2_client_application TfConnection#oauth2_client_application}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#oauth2_client_application AwsConnection#oauth2_client_application}
   */
   readonly oauth2ClientApplication?: Oauth2ClientApplicationProperty;
   /**
   * oauth2_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#oauth2_credentials TfConnection#oauth2_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#oauth2_credentials AwsConnection#oauth2_credentials}
   */
   readonly oauth2Credentials?: Oauth2CredentialsProperty;
 }
@@ -1347,31 +1347,31 @@ export class Oauth2PropertiesPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface AuthenticationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#authentication_type TfConnection#authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#authentication_type AwsConnection#authentication_type}
   */
   readonly authenticationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#custom_authentication_credentials TfConnection#custom_authentication_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#custom_authentication_credentials AwsConnection#custom_authentication_credentials}
   */
   readonly customAuthenticationCredentials?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#kms_key_arn TfConnection#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#kms_key_arn AwsConnection#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#secret_arn TfConnection#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#secret_arn AwsConnection#secret_arn}
   */
   readonly secretArn?: string;
   /**
   * basic_authentication_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#basic_authentication_credentials TfConnection#basic_authentication_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#basic_authentication_credentials AwsConnection#basic_authentication_credentials}
   */
   readonly basicAuthenticationCredentials?: BasicAuthenticationCredentialsProperty;
   /**
   * oauth2_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#oauth2_properties TfConnection#oauth2_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#oauth2_properties AwsConnection#oauth2_properties}
   */
   readonly oauth2Properties?: Oauth2PropertiesProperty;
 }
@@ -1532,15 +1532,15 @@ export class AuthenticationConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface PhysicalConnectionRequirementsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#availability_zone TfConnection#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#availability_zone AwsConnection#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#security_group_id_list TfConnection#security_group_id_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#security_group_id_list AwsConnection#security_group_id_list}
   */
   readonly securityGroupIdList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#subnet_id TfConnection#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_connection#subnet_id AwsConnection#subnet_id}
   */
   readonly subnetId?: string;
 }

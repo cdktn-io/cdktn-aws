@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPipelineConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPipelineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#description TfPipeline#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#description AwsPipeline#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#id TfPipeline#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#id AwsPipeline#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#name TfPipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#name AwsPipeline#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#region TfPipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#region AwsPipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#tags TfPipeline#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#tags AwsPipeline#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#tags_all TfPipeline#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#tags_all AwsPipeline#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface TfPipelineConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline aws_datapipeline_pipeline}
 */
-export class TfPipeline extends cdktn.TerraformResource {
+export class AwsPipeline extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPipeline resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPipeline resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPipeline to import
-  * @param importFromId The id of the existing TfPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPipeline to import is found
+  * @param importToId The construct id used in the generated config for the AwsPipeline to import
+  * @param importFromId The id of the existing AwsPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPipeline to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datapipeline_pipeline", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfPipeline extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPipelineConfig
+  * @param options AwsPipelineConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPipelineConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPipelineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datapipeline_pipeline',
       terraformGeneratorMetadata: {

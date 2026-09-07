@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPlacementGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPlacementGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#id TfPlacementGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#id AwsPlacementGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#name TfPlacementGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#name AwsPlacementGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#partition_count TfPlacementGroup#partition_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#partition_count AwsPlacementGroup#partition_count}
   */
   readonly partitionCount?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#region TfPlacementGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#region AwsPlacementGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#spread_level TfPlacementGroup#spread_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#spread_level AwsPlacementGroup#spread_level}
   */
   readonly spreadLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#strategy TfPlacementGroup#strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#strategy AwsPlacementGroup#strategy}
   */
   readonly strategy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#tags TfPlacementGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#tags AwsPlacementGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#tags_all TfPlacementGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#tags_all AwsPlacementGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -48,7 +48,7 @@ export interface TfPlacementGroupConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group aws_placement_group}
 */
-export class TfPlacementGroup extends cdktn.TerraformResource {
+export class AwsPlacementGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfPlacementGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPlacementGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPlacementGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPlacementGroup to import
-  * @param importFromId The id of the existing TfPlacementGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPlacementGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsPlacementGroup to import
+  * @param importFromId The id of the existing AwsPlacementGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/placement_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPlacementGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_placement_group", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfPlacementGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPlacementGroupConfig
+  * @param options AwsPlacementGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPlacementGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPlacementGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_placement_group',
       terraformGeneratorMetadata: {

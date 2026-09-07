@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfInstanceStorageConfigConfig extends cdktn.TerraformMetaArguments {
+export interface AwsInstanceStorageConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#id TfInstanceStorageConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#id AwsInstanceStorageConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#instance_id TfInstanceStorageConfig#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#instance_id AwsInstanceStorageConfig#instance_id}
   */
   readonly instanceId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#region TfInstanceStorageConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#region AwsInstanceStorageConfig#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#resource_type TfInstanceStorageConfig#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#resource_type AwsInstanceStorageConfig#resource_type}
   */
   readonly resourceType: string;
   /**
   * storage_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#storage_config TfInstanceStorageConfig#storage_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#storage_config AwsInstanceStorageConfig#storage_config}
   */
-  readonly storageConfig: TfInstanceStorageConfig.StorageConfigProperty;
+  readonly storageConfig: AwsInstanceStorageConfig.StorageConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config aws_connect_instance_storage_config}
 */
-export class TfInstanceStorageConfig extends cdktn.TerraformResource {
+export class AwsInstanceStorageConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfInstanceStorageConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfInstanceStorageConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsInstanceStorageConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfInstanceStorageConfig to import
-  * @param importFromId The id of the existing TfInstanceStorageConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfInstanceStorageConfig to import is found
+  * @param importToId The construct id used in the generated config for the AwsInstanceStorageConfig to import
+  * @param importFromId The id of the existing AwsInstanceStorageConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsInstanceStorageConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_instance_storage_config", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfInstanceStorageConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfInstanceStorageConfigConfig
+  * @param options AwsInstanceStorageConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: TfInstanceStorageConfigConfig) {
+  public constructor(scope: Construct, id: string, config: AwsInstanceStorageConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_instance_storage_config',
       terraformGeneratorMetadata: {
@@ -161,11 +161,11 @@ export class TfInstanceStorageConfig extends cdktn.TerraformResource {
   }
 
   // storage_config - computed: false, optional: false, required: true
-  private _storageConfig = new TfInstanceStorageConfig.StorageConfigPropertyOutputReference(this, "storage_config");
+  private _storageConfig = new AwsInstanceStorageConfig.StorageConfigPropertyOutputReference(this, "storage_config");
   public get storageConfig() {
     return this._storageConfig;
   }
-  public putStorageConfig(value: TfInstanceStorageConfig.StorageConfigProperty) {
+  public putStorageConfig(value: AwsInstanceStorageConfig.StorageConfigProperty) {
     this._storageConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -183,7 +183,7 @@ export class TfInstanceStorageConfig extends cdktn.TerraformResource {
       instance_id: cdktn.stringToTerraform(this._instanceId),
       region: cdktn.stringToTerraform(this._region),
       resource_type: cdktn.stringToTerraform(this._resourceType),
-      storage_config: tfInstanceStorageConfigStorageConfigPropertyToTerraform(this._storageConfig.internalValue),
+      storage_config: awsInstanceStorageConfigStorageConfigPropertyToTerraform(this._storageConfig.internalValue),
     };
   }
 
@@ -214,10 +214,10 @@ export class TfInstanceStorageConfig extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       storage_config: {
-        value: tfInstanceStorageConfigStorageConfigPropertyToHclTerraform(this._storageConfig.internalValue),
+        value: awsInstanceStorageConfigStorageConfigPropertyToHclTerraform(this._storageConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfInstanceStorageConfig.StorageConfigPropertyList",
+        storageClassType: "AwsInstanceStorageConfig.StorageConfigPropertyList",
       },
     };
 
@@ -226,7 +226,7 @@ export class TfInstanceStorageConfig extends cdktn.TerraformResource {
   }
 }
 
-export function tfInstanceStorageConfigKinesisFirehoseConfigPropertyToTerraform(struct?: TfInstanceStorageConfig.KinesisFirehoseConfigPropertyOutputReference | TfInstanceStorageConfig.KinesisFirehoseConfigProperty): any {
+export function awsInstanceStorageConfigKinesisFirehoseConfigPropertyToTerraform(struct?: AwsInstanceStorageConfig.KinesisFirehoseConfigPropertyOutputReference | AwsInstanceStorageConfig.KinesisFirehoseConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -237,7 +237,7 @@ export function tfInstanceStorageConfigKinesisFirehoseConfigPropertyToTerraform(
 }
 
 
-export function tfInstanceStorageConfigKinesisFirehoseConfigPropertyToHclTerraform(struct?: TfInstanceStorageConfig.KinesisFirehoseConfigPropertyOutputReference | TfInstanceStorageConfig.KinesisFirehoseConfigProperty): any {
+export function awsInstanceStorageConfigKinesisFirehoseConfigPropertyToHclTerraform(struct?: AwsInstanceStorageConfig.KinesisFirehoseConfigPropertyOutputReference | AwsInstanceStorageConfig.KinesisFirehoseConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function tfInstanceStorageConfigKinesisFirehoseConfigPropertyToHclTerrafo
 }
 
 
-export function tfInstanceStorageConfigKinesisStreamConfigPropertyToTerraform(struct?: TfInstanceStorageConfig.KinesisStreamConfigPropertyOutputReference | TfInstanceStorageConfig.KinesisStreamConfigProperty): any {
+export function awsInstanceStorageConfigKinesisStreamConfigPropertyToTerraform(struct?: AwsInstanceStorageConfig.KinesisStreamConfigPropertyOutputReference | AwsInstanceStorageConfig.KinesisStreamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,7 +267,7 @@ export function tfInstanceStorageConfigKinesisStreamConfigPropertyToTerraform(st
 }
 
 
-export function tfInstanceStorageConfigKinesisStreamConfigPropertyToHclTerraform(struct?: TfInstanceStorageConfig.KinesisStreamConfigPropertyOutputReference | TfInstanceStorageConfig.KinesisStreamConfigProperty): any {
+export function awsInstanceStorageConfigKinesisStreamConfigPropertyToHclTerraform(struct?: AwsInstanceStorageConfig.KinesisStreamConfigPropertyOutputReference | AwsInstanceStorageConfig.KinesisStreamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function tfInstanceStorageConfigKinesisStreamConfigPropertyToHclTerraform
 }
 
 
-export function tfInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyToTerraform(struct?: TfInstanceStorageConfig.StorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyOutputReference | TfInstanceStorageConfig.StorageConfigKinesisVideoStreamConfigEncryptionConfigProperty): any {
+export function awsInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyToTerraform(struct?: AwsInstanceStorageConfig.StorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyOutputReference | AwsInstanceStorageConfig.StorageConfigKinesisVideoStreamConfigEncryptionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function tfInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncr
 }
 
 
-export function tfInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyToHclTerraform(struct?: TfInstanceStorageConfig.StorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyOutputReference | TfInstanceStorageConfig.StorageConfigKinesisVideoStreamConfigEncryptionConfigProperty): any {
+export function awsInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyToHclTerraform(struct?: AwsInstanceStorageConfig.StorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyOutputReference | AwsInstanceStorageConfig.StorageConfigKinesisVideoStreamConfigEncryptionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -323,7 +323,7 @@ export function tfInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncr
 }
 
 
-export function tfInstanceStorageConfigKinesisVideoStreamConfigPropertyToTerraform(struct?: TfInstanceStorageConfig.KinesisVideoStreamConfigPropertyOutputReference | TfInstanceStorageConfig.KinesisVideoStreamConfigProperty): any {
+export function awsInstanceStorageConfigKinesisVideoStreamConfigPropertyToTerraform(struct?: AwsInstanceStorageConfig.KinesisVideoStreamConfigPropertyOutputReference | AwsInstanceStorageConfig.KinesisVideoStreamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,12 +331,12 @@ export function tfInstanceStorageConfigKinesisVideoStreamConfigPropertyToTerrafo
   return {
     prefix: cdktn.stringToTerraform(struct!.prefix),
     retention_period_hours: cdktn.numberToTerraform(struct!.retentionPeriodHours),
-    encryption_config: tfInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyToTerraform(struct!.encryptionConfig),
+    encryption_config: awsInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyToTerraform(struct!.encryptionConfig),
   }
 }
 
 
-export function tfInstanceStorageConfigKinesisVideoStreamConfigPropertyToHclTerraform(struct?: TfInstanceStorageConfig.KinesisVideoStreamConfigPropertyOutputReference | TfInstanceStorageConfig.KinesisVideoStreamConfigProperty): any {
+export function awsInstanceStorageConfigKinesisVideoStreamConfigPropertyToHclTerraform(struct?: AwsInstanceStorageConfig.KinesisVideoStreamConfigPropertyOutputReference | AwsInstanceStorageConfig.KinesisVideoStreamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,7 +355,7 @@ export function tfInstanceStorageConfigKinesisVideoStreamConfigPropertyToHclTerr
       storageClassType: "number",
     },
     encryption_config: {
-      value: tfInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyToHclTerraform(struct!.encryptionConfig),
+      value: awsInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyToHclTerraform(struct!.encryptionConfig),
       isBlock: true,
       type: "list",
       storageClassType: "StorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyList",
@@ -367,7 +367,7 @@ export function tfInstanceStorageConfigKinesisVideoStreamConfigPropertyToHclTerr
 }
 
 
-export function tfInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigPropertyToTerraform(struct?: TfInstanceStorageConfig.StorageConfigS3ConfigEncryptionConfigPropertyOutputReference | TfInstanceStorageConfig.StorageConfigS3ConfigEncryptionConfigProperty): any {
+export function awsInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigPropertyToTerraform(struct?: AwsInstanceStorageConfig.StorageConfigS3ConfigEncryptionConfigPropertyOutputReference | AwsInstanceStorageConfig.StorageConfigS3ConfigEncryptionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function tfInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigProp
 }
 
 
-export function tfInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigPropertyToHclTerraform(struct?: TfInstanceStorageConfig.StorageConfigS3ConfigEncryptionConfigPropertyOutputReference | TfInstanceStorageConfig.StorageConfigS3ConfigEncryptionConfigProperty): any {
+export function awsInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigPropertyToHclTerraform(struct?: AwsInstanceStorageConfig.StorageConfigS3ConfigEncryptionConfigPropertyOutputReference | AwsInstanceStorageConfig.StorageConfigS3ConfigEncryptionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function tfInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigProp
 }
 
 
-export function tfInstanceStorageConfigS3ConfigPropertyToTerraform(struct?: TfInstanceStorageConfig.S3ConfigPropertyOutputReference | TfInstanceStorageConfig.S3ConfigProperty): any {
+export function awsInstanceStorageConfigS3ConfigPropertyToTerraform(struct?: AwsInstanceStorageConfig.S3ConfigPropertyOutputReference | AwsInstanceStorageConfig.S3ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,12 +412,12 @@ export function tfInstanceStorageConfigS3ConfigPropertyToTerraform(struct?: TfIn
   return {
     bucket_name: cdktn.stringToTerraform(struct!.bucketName),
     bucket_prefix: cdktn.stringToTerraform(struct!.bucketPrefix),
-    encryption_config: tfInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigPropertyToTerraform(struct!.encryptionConfig),
+    encryption_config: awsInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigPropertyToTerraform(struct!.encryptionConfig),
   }
 }
 
 
-export function tfInstanceStorageConfigS3ConfigPropertyToHclTerraform(struct?: TfInstanceStorageConfig.S3ConfigPropertyOutputReference | TfInstanceStorageConfig.S3ConfigProperty): any {
+export function awsInstanceStorageConfigS3ConfigPropertyToHclTerraform(struct?: AwsInstanceStorageConfig.S3ConfigPropertyOutputReference | AwsInstanceStorageConfig.S3ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function tfInstanceStorageConfigS3ConfigPropertyToHclTerraform(struct?: T
       storageClassType: "string",
     },
     encryption_config: {
-      value: tfInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigPropertyToHclTerraform(struct!.encryptionConfig),
+      value: awsInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigPropertyToHclTerraform(struct!.encryptionConfig),
       isBlock: true,
       type: "list",
       storageClassType: "StorageConfigS3ConfigEncryptionConfigPropertyList",
@@ -448,22 +448,22 @@ export function tfInstanceStorageConfigS3ConfigPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfInstanceStorageConfigStorageConfigPropertyToTerraform(struct?: TfInstanceStorageConfig.StorageConfigPropertyOutputReference | TfInstanceStorageConfig.StorageConfigProperty): any {
+export function awsInstanceStorageConfigStorageConfigPropertyToTerraform(struct?: AwsInstanceStorageConfig.StorageConfigPropertyOutputReference | AwsInstanceStorageConfig.StorageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     storage_type: cdktn.stringToTerraform(struct!.storageType),
-    kinesis_firehose_config: tfInstanceStorageConfigKinesisFirehoseConfigPropertyToTerraform(struct!.kinesisFirehoseConfig),
-    kinesis_stream_config: tfInstanceStorageConfigKinesisStreamConfigPropertyToTerraform(struct!.kinesisStreamConfig),
-    kinesis_video_stream_config: tfInstanceStorageConfigKinesisVideoStreamConfigPropertyToTerraform(struct!.kinesisVideoStreamConfig),
-    s3_config: tfInstanceStorageConfigS3ConfigPropertyToTerraform(struct!.s3Config),
+    kinesis_firehose_config: awsInstanceStorageConfigKinesisFirehoseConfigPropertyToTerraform(struct!.kinesisFirehoseConfig),
+    kinesis_stream_config: awsInstanceStorageConfigKinesisStreamConfigPropertyToTerraform(struct!.kinesisStreamConfig),
+    kinesis_video_stream_config: awsInstanceStorageConfigKinesisVideoStreamConfigPropertyToTerraform(struct!.kinesisVideoStreamConfig),
+    s3_config: awsInstanceStorageConfigS3ConfigPropertyToTerraform(struct!.s3Config),
   }
 }
 
 
-export function tfInstanceStorageConfigStorageConfigPropertyToHclTerraform(struct?: TfInstanceStorageConfig.StorageConfigPropertyOutputReference | TfInstanceStorageConfig.StorageConfigProperty): any {
+export function awsInstanceStorageConfigStorageConfigPropertyToHclTerraform(struct?: AwsInstanceStorageConfig.StorageConfigPropertyOutputReference | AwsInstanceStorageConfig.StorageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,25 +476,25 @@ export function tfInstanceStorageConfigStorageConfigPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     kinesis_firehose_config: {
-      value: tfInstanceStorageConfigKinesisFirehoseConfigPropertyToHclTerraform(struct!.kinesisFirehoseConfig),
+      value: awsInstanceStorageConfigKinesisFirehoseConfigPropertyToHclTerraform(struct!.kinesisFirehoseConfig),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisFirehoseConfigPropertyList",
     },
     kinesis_stream_config: {
-      value: tfInstanceStorageConfigKinesisStreamConfigPropertyToHclTerraform(struct!.kinesisStreamConfig),
+      value: awsInstanceStorageConfigKinesisStreamConfigPropertyToHclTerraform(struct!.kinesisStreamConfig),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisStreamConfigPropertyList",
     },
     kinesis_video_stream_config: {
-      value: tfInstanceStorageConfigKinesisVideoStreamConfigPropertyToHclTerraform(struct!.kinesisVideoStreamConfig),
+      value: awsInstanceStorageConfigKinesisVideoStreamConfigPropertyToHclTerraform(struct!.kinesisVideoStreamConfig),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisVideoStreamConfigPropertyList",
     },
     s3_config: {
-      value: tfInstanceStorageConfigS3ConfigPropertyToHclTerraform(struct!.s3Config),
+      value: awsInstanceStorageConfigS3ConfigPropertyToHclTerraform(struct!.s3Config),
       isBlock: true,
       type: "list",
       storageClassType: "S3ConfigPropertyList",
@@ -506,10 +506,10 @@ export function tfInstanceStorageConfigStorageConfigPropertyToHclTerraform(struc
 }
 
 
-export namespace TfInstanceStorageConfig {
+export namespace AwsInstanceStorageConfig {
 export interface KinesisFirehoseConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#firehose_arn TfInstanceStorageConfig#firehose_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#firehose_arn AwsInstanceStorageConfig#firehose_arn}
   */
   readonly firehoseArn: string;
 }
@@ -560,7 +560,7 @@ export class KinesisFirehoseConfigPropertyOutputReference extends cdktn.ComplexO
 }
 export interface KinesisStreamConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#stream_arn TfInstanceStorageConfig#stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#stream_arn AwsInstanceStorageConfig#stream_arn}
   */
   readonly streamArn: string;
 }
@@ -611,11 +611,11 @@ export class KinesisStreamConfigPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface StorageConfigKinesisVideoStreamConfigEncryptionConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#encryption_type TfInstanceStorageConfig#encryption_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#encryption_type AwsInstanceStorageConfig#encryption_type}
   */
   readonly encryptionType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#key_id TfInstanceStorageConfig#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#key_id AwsInstanceStorageConfig#key_id}
   */
   readonly keyId: string;
 }
@@ -685,17 +685,17 @@ export class StorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyOutput
 }
 export interface KinesisVideoStreamConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#prefix TfInstanceStorageConfig#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#prefix AwsInstanceStorageConfig#prefix}
   */
   readonly prefix: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#retention_period_hours TfInstanceStorageConfig#retention_period_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#retention_period_hours AwsInstanceStorageConfig#retention_period_hours}
   */
   readonly retentionPeriodHours: number;
   /**
   * encryption_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#encryption_config TfInstanceStorageConfig#encryption_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#encryption_config AwsInstanceStorageConfig#encryption_config}
   */
   readonly encryptionConfig: StorageConfigKinesisVideoStreamConfigEncryptionConfigProperty;
 }
@@ -784,11 +784,11 @@ export class KinesisVideoStreamConfigPropertyOutputReference extends cdktn.Compl
 }
 export interface StorageConfigS3ConfigEncryptionConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#encryption_type TfInstanceStorageConfig#encryption_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#encryption_type AwsInstanceStorageConfig#encryption_type}
   */
   readonly encryptionType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#key_id TfInstanceStorageConfig#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#key_id AwsInstanceStorageConfig#key_id}
   */
   readonly keyId: string;
 }
@@ -858,17 +858,17 @@ export class StorageConfigS3ConfigEncryptionConfigPropertyOutputReference extend
 }
 export interface S3ConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#bucket_name TfInstanceStorageConfig#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#bucket_name AwsInstanceStorageConfig#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#bucket_prefix TfInstanceStorageConfig#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#bucket_prefix AwsInstanceStorageConfig#bucket_prefix}
   */
   readonly bucketPrefix: string;
   /**
   * encryption_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#encryption_config TfInstanceStorageConfig#encryption_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#encryption_config AwsInstanceStorageConfig#encryption_config}
   */
   readonly encryptionConfig?: StorageConfigS3ConfigEncryptionConfigProperty;
 }
@@ -960,31 +960,31 @@ export class S3ConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StorageConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#storage_type TfInstanceStorageConfig#storage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#storage_type AwsInstanceStorageConfig#storage_type}
   */
   readonly storageType: string;
   /**
   * kinesis_firehose_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#kinesis_firehose_config TfInstanceStorageConfig#kinesis_firehose_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#kinesis_firehose_config AwsInstanceStorageConfig#kinesis_firehose_config}
   */
   readonly kinesisFirehoseConfig?: KinesisFirehoseConfigProperty;
   /**
   * kinesis_stream_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#kinesis_stream_config TfInstanceStorageConfig#kinesis_stream_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#kinesis_stream_config AwsInstanceStorageConfig#kinesis_stream_config}
   */
   readonly kinesisStreamConfig?: KinesisStreamConfigProperty;
   /**
   * kinesis_video_stream_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#kinesis_video_stream_config TfInstanceStorageConfig#kinesis_video_stream_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#kinesis_video_stream_config AwsInstanceStorageConfig#kinesis_video_stream_config}
   */
   readonly kinesisVideoStreamConfig?: KinesisVideoStreamConfigProperty;
   /**
   * s3_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#s3_config TfInstanceStorageConfig#s3_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_instance_storage_config#s3_config AwsInstanceStorageConfig#s3_config}
   */
   readonly s3Config?: S3ConfigProperty;
 }

@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRequiredTagsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRequiredTagsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_required_tags#region DataTfRequiredTags#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_required_tags#region DataAwsRequiredTags#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface DataTfRequiredTagsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_required_tags aws_resourcegroupstaggingapi_required_tags}
 */
-export class DataTfRequiredTags extends cdktn.TerraformDataSource {
+export class DataAwsRequiredTags extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class DataTfRequiredTags extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRequiredTags resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRequiredTags resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRequiredTags to import
-  * @param importFromId The id of the existing DataTfRequiredTags that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_required_tags#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRequiredTags to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRequiredTags to import
+  * @param importFromId The id of the existing DataAwsRequiredTags that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resourcegroupstaggingapi_required_tags#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRequiredTags to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resourcegroupstaggingapi_required_tags", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class DataTfRequiredTags extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRequiredTagsConfig = {}
+  * @param options DataAwsRequiredTagsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfRequiredTagsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsRequiredTagsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_resourcegroupstaggingapi_required_tags',
       terraformGeneratorMetadata: {
@@ -89,7 +89,7 @@ export class DataTfRequiredTags extends cdktn.TerraformDataSource {
   }
 
   // required_tags - computed: true, optional: false, required: false
-  private _requiredTags = new DataTfRequiredTags.RequiredTagsPropertyList(this, "required_tags", false);
+  private _requiredTags = new DataAwsRequiredTags.RequiredTagsPropertyList(this, "required_tags", false);
   public get requiredTags() {
     return this._requiredTags;
   }
@@ -119,7 +119,7 @@ export class DataTfRequiredTags extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfRequiredTagsRequiredTagsPropertyToTerraform(struct?: DataTfRequiredTags.RequiredTagsProperty): any {
+export function dataAwsRequiredTagsRequiredTagsPropertyToTerraform(struct?: DataAwsRequiredTags.RequiredTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -129,7 +129,7 @@ export function dataTfRequiredTagsRequiredTagsPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfRequiredTagsRequiredTagsPropertyToHclTerraform(struct?: DataTfRequiredTags.RequiredTagsProperty): any {
+export function dataAwsRequiredTagsRequiredTagsPropertyToHclTerraform(struct?: DataAwsRequiredTags.RequiredTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -140,7 +140,7 @@ export function dataTfRequiredTagsRequiredTagsPropertyToHclTerraform(struct?: Da
 }
 
 
-export namespace DataTfRequiredTags {
+export namespace DataAwsRequiredTags {
 export interface RequiredTagsProperty {
 }
 export class RequiredTagsPropertyOutputReference extends cdktn.ComplexObject {

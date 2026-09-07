@@ -5,73 +5,73 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSlotTypeConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSlotTypeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#bot_id TfSlotType#bot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#bot_id AwsSlotType#bot_id}
   */
   readonly botId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#bot_version TfSlotType#bot_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#bot_version AwsSlotType#bot_version}
   */
   readonly botVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#description TfSlotType#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#description AwsSlotType#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#locale_id TfSlotType#locale_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#locale_id AwsSlotType#locale_id}
   */
   readonly localeId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#name TfSlotType#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#name AwsSlotType#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#parent_slot_type_signature TfSlotType#parent_slot_type_signature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#parent_slot_type_signature AwsSlotType#parent_slot_type_signature}
   */
   readonly parentSlotTypeSignature?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#region TfSlotType#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#region AwsSlotType#region}
   */
   readonly region?: string;
   /**
   * composite_slot_type_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#composite_slot_type_setting TfSlotType#composite_slot_type_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#composite_slot_type_setting AwsSlotType#composite_slot_type_setting}
   */
-  readonly compositeSlotTypeSetting?: TfSlotType.CompositeSlotTypeSettingProperty[] | cdktn.IResolvable;
+  readonly compositeSlotTypeSetting?: AwsSlotType.CompositeSlotTypeSettingProperty[] | cdktn.IResolvable;
   /**
   * external_source_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#external_source_setting TfSlotType#external_source_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#external_source_setting AwsSlotType#external_source_setting}
   */
-  readonly externalSourceSetting?: TfSlotType.ExternalSourceSettingProperty[] | cdktn.IResolvable;
+  readonly externalSourceSetting?: AwsSlotType.ExternalSourceSettingProperty[] | cdktn.IResolvable;
   /**
   * slot_type_values block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#slot_type_values TfSlotType#slot_type_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#slot_type_values AwsSlotType#slot_type_values}
   */
-  readonly slotTypeValues?: TfSlotType.SlotTypeValuesProperty[] | cdktn.IResolvable;
+  readonly slotTypeValues?: AwsSlotType.SlotTypeValuesProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#timeouts TfSlotType#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#timeouts AwsSlotType#timeouts}
   */
-  readonly timeouts?: TfSlotType.TimeoutsProperty;
+  readonly timeouts?: AwsSlotType.TimeoutsProperty;
   /**
   * value_selection_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#value_selection_setting TfSlotType#value_selection_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#value_selection_setting AwsSlotType#value_selection_setting}
   */
-  readonly valueSelectionSetting?: TfSlotType.ValueSelectionSettingProperty[] | cdktn.IResolvable;
+  readonly valueSelectionSetting?: AwsSlotType.ValueSelectionSettingProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type aws_lexv2models_slot_type}
 */
-export class TfSlotType extends cdktn.TerraformResource {
+export class AwsSlotType extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -82,11 +82,11 @@ export class TfSlotType extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSlotType resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSlotType resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSlotType to import
-  * @param importFromId The id of the existing TfSlotType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSlotType to import is found
+  * @param importToId The construct id used in the generated config for the AwsSlotType to import
+  * @param importFromId The id of the existing AwsSlotType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSlotType to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lexv2models_slot_type", importId: importFromId, provider });
@@ -101,9 +101,9 @@ export class TfSlotType extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSlotTypeConfig
+  * @param options AwsSlotTypeConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSlotTypeConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSlotTypeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lexv2models_slot_type',
       terraformGeneratorMetadata: {
@@ -248,11 +248,11 @@ export class TfSlotType extends cdktn.TerraformResource {
   }
 
   // composite_slot_type_setting - computed: false, optional: true, required: false
-  private _compositeSlotTypeSetting = new TfSlotType.CompositeSlotTypeSettingPropertyList(this, "composite_slot_type_setting", false);
+  private _compositeSlotTypeSetting = new AwsSlotType.CompositeSlotTypeSettingPropertyList(this, "composite_slot_type_setting", false);
   public get compositeSlotTypeSetting() {
     return this._compositeSlotTypeSetting;
   }
-  public putCompositeSlotTypeSetting(value: TfSlotType.CompositeSlotTypeSettingProperty[] | cdktn.IResolvable) {
+  public putCompositeSlotTypeSetting(value: AwsSlotType.CompositeSlotTypeSettingProperty[] | cdktn.IResolvable) {
     this._compositeSlotTypeSetting.internalValue = value;
   }
   public resetCompositeSlotTypeSetting() {
@@ -264,11 +264,11 @@ export class TfSlotType extends cdktn.TerraformResource {
   }
 
   // external_source_setting - computed: false, optional: true, required: false
-  private _externalSourceSetting = new TfSlotType.ExternalSourceSettingPropertyList(this, "external_source_setting", false);
+  private _externalSourceSetting = new AwsSlotType.ExternalSourceSettingPropertyList(this, "external_source_setting", false);
   public get externalSourceSetting() {
     return this._externalSourceSetting;
   }
-  public putExternalSourceSetting(value: TfSlotType.ExternalSourceSettingProperty[] | cdktn.IResolvable) {
+  public putExternalSourceSetting(value: AwsSlotType.ExternalSourceSettingProperty[] | cdktn.IResolvable) {
     this._externalSourceSetting.internalValue = value;
   }
   public resetExternalSourceSetting() {
@@ -280,11 +280,11 @@ export class TfSlotType extends cdktn.TerraformResource {
   }
 
   // slot_type_values - computed: false, optional: true, required: false
-  private _slotTypeValues = new TfSlotType.SlotTypeValuesPropertyList(this, "slot_type_values", false);
+  private _slotTypeValues = new AwsSlotType.SlotTypeValuesPropertyList(this, "slot_type_values", false);
   public get slotTypeValues() {
     return this._slotTypeValues;
   }
-  public putSlotTypeValues(value: TfSlotType.SlotTypeValuesProperty[] | cdktn.IResolvable) {
+  public putSlotTypeValues(value: AwsSlotType.SlotTypeValuesProperty[] | cdktn.IResolvable) {
     this._slotTypeValues.internalValue = value;
   }
   public resetSlotTypeValues() {
@@ -296,11 +296,11 @@ export class TfSlotType extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfSlotType.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsSlotType.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfSlotType.TimeoutsProperty) {
+  public putTimeouts(value: AwsSlotType.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -312,11 +312,11 @@ export class TfSlotType extends cdktn.TerraformResource {
   }
 
   // value_selection_setting - computed: false, optional: true, required: false
-  private _valueSelectionSetting = new TfSlotType.ValueSelectionSettingPropertyList(this, "value_selection_setting", false);
+  private _valueSelectionSetting = new AwsSlotType.ValueSelectionSettingPropertyList(this, "value_selection_setting", false);
   public get valueSelectionSetting() {
     return this._valueSelectionSetting;
   }
-  public putValueSelectionSetting(value: TfSlotType.ValueSelectionSettingProperty[] | cdktn.IResolvable) {
+  public putValueSelectionSetting(value: AwsSlotType.ValueSelectionSettingProperty[] | cdktn.IResolvable) {
     this._valueSelectionSetting.internalValue = value;
   }
   public resetValueSelectionSetting() {
@@ -340,11 +340,11 @@ export class TfSlotType extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       parent_slot_type_signature: cdktn.stringToTerraform(this._parentSlotTypeSignature),
       region: cdktn.stringToTerraform(this._region),
-      composite_slot_type_setting: cdktn.listMapper(tfSlotTypeCompositeSlotTypeSettingPropertyToTerraform, true)(this._compositeSlotTypeSetting.internalValue),
-      external_source_setting: cdktn.listMapper(tfSlotTypeExternalSourceSettingPropertyToTerraform, true)(this._externalSourceSetting.internalValue),
-      slot_type_values: cdktn.listMapper(tfSlotTypeSlotTypeValuesPropertyToTerraform, true)(this._slotTypeValues.internalValue),
-      timeouts: tfSlotTypeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      value_selection_setting: cdktn.listMapper(tfSlotTypeValueSelectionSettingPropertyToTerraform, true)(this._valueSelectionSetting.internalValue),
+      composite_slot_type_setting: cdktn.listMapper(awsSlotTypeCompositeSlotTypeSettingPropertyToTerraform, true)(this._compositeSlotTypeSetting.internalValue),
+      external_source_setting: cdktn.listMapper(awsSlotTypeExternalSourceSettingPropertyToTerraform, true)(this._externalSourceSetting.internalValue),
+      slot_type_values: cdktn.listMapper(awsSlotTypeSlotTypeValuesPropertyToTerraform, true)(this._slotTypeValues.internalValue),
+      timeouts: awsSlotTypeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      value_selection_setting: cdktn.listMapper(awsSlotTypeValueSelectionSettingPropertyToTerraform, true)(this._valueSelectionSetting.internalValue),
     };
   }
 
@@ -393,34 +393,34 @@ export class TfSlotType extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       composite_slot_type_setting: {
-        value: cdktn.listMapperHcl(tfSlotTypeCompositeSlotTypeSettingPropertyToHclTerraform, true)(this._compositeSlotTypeSetting.internalValue),
+        value: cdktn.listMapperHcl(awsSlotTypeCompositeSlotTypeSettingPropertyToHclTerraform, true)(this._compositeSlotTypeSetting.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSlotType.CompositeSlotTypeSettingPropertyList",
+        storageClassType: "AwsSlotType.CompositeSlotTypeSettingPropertyList",
       },
       external_source_setting: {
-        value: cdktn.listMapperHcl(tfSlotTypeExternalSourceSettingPropertyToHclTerraform, true)(this._externalSourceSetting.internalValue),
+        value: cdktn.listMapperHcl(awsSlotTypeExternalSourceSettingPropertyToHclTerraform, true)(this._externalSourceSetting.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSlotType.ExternalSourceSettingPropertyList",
+        storageClassType: "AwsSlotType.ExternalSourceSettingPropertyList",
       },
       slot_type_values: {
-        value: cdktn.listMapperHcl(tfSlotTypeSlotTypeValuesPropertyToHclTerraform, true)(this._slotTypeValues.internalValue),
+        value: cdktn.listMapperHcl(awsSlotTypeSlotTypeValuesPropertyToHclTerraform, true)(this._slotTypeValues.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSlotType.SlotTypeValuesPropertyList",
+        storageClassType: "AwsSlotType.SlotTypeValuesPropertyList",
       },
       timeouts: {
-        value: tfSlotTypeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsSlotTypeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfSlotType.TimeoutsProperty",
+        storageClassType: "AwsSlotType.TimeoutsProperty",
       },
       value_selection_setting: {
-        value: cdktn.listMapperHcl(tfSlotTypeValueSelectionSettingPropertyToHclTerraform, true)(this._valueSelectionSetting.internalValue),
+        value: cdktn.listMapperHcl(awsSlotTypeValueSelectionSettingPropertyToHclTerraform, true)(this._valueSelectionSetting.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSlotType.ValueSelectionSettingPropertyList",
+        storageClassType: "AwsSlotType.ValueSelectionSettingPropertyList",
       },
     };
 
@@ -429,7 +429,7 @@ export class TfSlotType extends cdktn.TerraformResource {
   }
 }
 
-export function tfSlotTypeSubSlotsPropertyToTerraform(struct?: TfSlotType.SubSlotsProperty | cdktn.IResolvable): any {
+export function awsSlotTypeSubSlotsPropertyToTerraform(struct?: AwsSlotType.SubSlotsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,7 +441,7 @@ export function tfSlotTypeSubSlotsPropertyToTerraform(struct?: TfSlotType.SubSlo
 }
 
 
-export function tfSlotTypeSubSlotsPropertyToHclTerraform(struct?: TfSlotType.SubSlotsProperty | cdktn.IResolvable): any {
+export function awsSlotTypeSubSlotsPropertyToHclTerraform(struct?: AwsSlotType.SubSlotsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,25 +466,25 @@ export function tfSlotTypeSubSlotsPropertyToHclTerraform(struct?: TfSlotType.Sub
 }
 
 
-export function tfSlotTypeCompositeSlotTypeSettingPropertyToTerraform(struct?: TfSlotType.CompositeSlotTypeSettingProperty | cdktn.IResolvable): any {
+export function awsSlotTypeCompositeSlotTypeSettingPropertyToTerraform(struct?: AwsSlotType.CompositeSlotTypeSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    sub_slots: cdktn.listMapper(tfSlotTypeSubSlotsPropertyToTerraform, true)(struct!.subSlots),
+    sub_slots: cdktn.listMapper(awsSlotTypeSubSlotsPropertyToTerraform, true)(struct!.subSlots),
   }
 }
 
 
-export function tfSlotTypeCompositeSlotTypeSettingPropertyToHclTerraform(struct?: TfSlotType.CompositeSlotTypeSettingProperty | cdktn.IResolvable): any {
+export function awsSlotTypeCompositeSlotTypeSettingPropertyToHclTerraform(struct?: AwsSlotType.CompositeSlotTypeSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     sub_slots: {
-      value: cdktn.listMapperHcl(tfSlotTypeSubSlotsPropertyToHclTerraform, true)(struct!.subSlots),
+      value: cdktn.listMapperHcl(awsSlotTypeSubSlotsPropertyToHclTerraform, true)(struct!.subSlots),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotsPropertyList",
@@ -496,7 +496,7 @@ export function tfSlotTypeCompositeSlotTypeSettingPropertyToHclTerraform(struct?
 }
 
 
-export function tfSlotTypeSourcePropertyToTerraform(struct?: TfSlotType.SourceProperty | cdktn.IResolvable): any {
+export function awsSlotTypeSourcePropertyToTerraform(struct?: AwsSlotType.SourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -509,7 +509,7 @@ export function tfSlotTypeSourcePropertyToTerraform(struct?: TfSlotType.SourcePr
 }
 
 
-export function tfSlotTypeSourcePropertyToHclTerraform(struct?: TfSlotType.SourceProperty | cdktn.IResolvable): any {
+export function awsSlotTypeSourcePropertyToHclTerraform(struct?: AwsSlotType.SourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -540,25 +540,25 @@ export function tfSlotTypeSourcePropertyToHclTerraform(struct?: TfSlotType.Sourc
 }
 
 
-export function tfSlotTypeGrammarSlotTypeSettingPropertyToTerraform(struct?: TfSlotType.GrammarSlotTypeSettingProperty | cdktn.IResolvable): any {
+export function awsSlotTypeGrammarSlotTypeSettingPropertyToTerraform(struct?: AwsSlotType.GrammarSlotTypeSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    source: cdktn.listMapper(tfSlotTypeSourcePropertyToTerraform, true)(struct!.source),
+    source: cdktn.listMapper(awsSlotTypeSourcePropertyToTerraform, true)(struct!.source),
   }
 }
 
 
-export function tfSlotTypeGrammarSlotTypeSettingPropertyToHclTerraform(struct?: TfSlotType.GrammarSlotTypeSettingProperty | cdktn.IResolvable): any {
+export function awsSlotTypeGrammarSlotTypeSettingPropertyToHclTerraform(struct?: AwsSlotType.GrammarSlotTypeSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     source: {
-      value: cdktn.listMapperHcl(tfSlotTypeSourcePropertyToHclTerraform, true)(struct!.source),
+      value: cdktn.listMapperHcl(awsSlotTypeSourcePropertyToHclTerraform, true)(struct!.source),
       isBlock: true,
       type: "list",
       storageClassType: "SourcePropertyList",
@@ -570,25 +570,25 @@ export function tfSlotTypeGrammarSlotTypeSettingPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfSlotTypeExternalSourceSettingPropertyToTerraform(struct?: TfSlotType.ExternalSourceSettingProperty | cdktn.IResolvable): any {
+export function awsSlotTypeExternalSourceSettingPropertyToTerraform(struct?: AwsSlotType.ExternalSourceSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    grammar_slot_type_setting: cdktn.listMapper(tfSlotTypeGrammarSlotTypeSettingPropertyToTerraform, true)(struct!.grammarSlotTypeSetting),
+    grammar_slot_type_setting: cdktn.listMapper(awsSlotTypeGrammarSlotTypeSettingPropertyToTerraform, true)(struct!.grammarSlotTypeSetting),
   }
 }
 
 
-export function tfSlotTypeExternalSourceSettingPropertyToHclTerraform(struct?: TfSlotType.ExternalSourceSettingProperty | cdktn.IResolvable): any {
+export function awsSlotTypeExternalSourceSettingPropertyToHclTerraform(struct?: AwsSlotType.ExternalSourceSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     grammar_slot_type_setting: {
-      value: cdktn.listMapperHcl(tfSlotTypeGrammarSlotTypeSettingPropertyToHclTerraform, true)(struct!.grammarSlotTypeSetting),
+      value: cdktn.listMapperHcl(awsSlotTypeGrammarSlotTypeSettingPropertyToHclTerraform, true)(struct!.grammarSlotTypeSetting),
       isBlock: true,
       type: "list",
       storageClassType: "GrammarSlotTypeSettingPropertyList",
@@ -600,7 +600,7 @@ export function tfSlotTypeExternalSourceSettingPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfSlotTypeSampleValuePropertyToTerraform(struct?: TfSlotType.SampleValueProperty | cdktn.IResolvable): any {
+export function awsSlotTypeSampleValuePropertyToTerraform(struct?: AwsSlotType.SampleValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,7 +611,7 @@ export function tfSlotTypeSampleValuePropertyToTerraform(struct?: TfSlotType.Sam
 }
 
 
-export function tfSlotTypeSampleValuePropertyToHclTerraform(struct?: TfSlotType.SampleValueProperty | cdktn.IResolvable): any {
+export function awsSlotTypeSampleValuePropertyToHclTerraform(struct?: AwsSlotType.SampleValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -630,7 +630,7 @@ export function tfSlotTypeSampleValuePropertyToHclTerraform(struct?: TfSlotType.
 }
 
 
-export function tfSlotTypeSynonymsPropertyToTerraform(struct?: TfSlotType.SynonymsProperty | cdktn.IResolvable): any {
+export function awsSlotTypeSynonymsPropertyToTerraform(struct?: AwsSlotType.SynonymsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -641,7 +641,7 @@ export function tfSlotTypeSynonymsPropertyToTerraform(struct?: TfSlotType.Synony
 }
 
 
-export function tfSlotTypeSynonymsPropertyToHclTerraform(struct?: TfSlotType.SynonymsProperty | cdktn.IResolvable): any {
+export function awsSlotTypeSynonymsPropertyToHclTerraform(struct?: AwsSlotType.SynonymsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,32 +660,32 @@ export function tfSlotTypeSynonymsPropertyToHclTerraform(struct?: TfSlotType.Syn
 }
 
 
-export function tfSlotTypeSlotTypeValuesPropertyToTerraform(struct?: TfSlotType.SlotTypeValuesProperty | cdktn.IResolvable): any {
+export function awsSlotTypeSlotTypeValuesPropertyToTerraform(struct?: AwsSlotType.SlotTypeValuesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    sample_value: cdktn.listMapper(tfSlotTypeSampleValuePropertyToTerraform, true)(struct!.sampleValue),
-    synonyms: cdktn.listMapper(tfSlotTypeSynonymsPropertyToTerraform, true)(struct!.synonyms),
+    sample_value: cdktn.listMapper(awsSlotTypeSampleValuePropertyToTerraform, true)(struct!.sampleValue),
+    synonyms: cdktn.listMapper(awsSlotTypeSynonymsPropertyToTerraform, true)(struct!.synonyms),
   }
 }
 
 
-export function tfSlotTypeSlotTypeValuesPropertyToHclTerraform(struct?: TfSlotType.SlotTypeValuesProperty | cdktn.IResolvable): any {
+export function awsSlotTypeSlotTypeValuesPropertyToHclTerraform(struct?: AwsSlotType.SlotTypeValuesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     sample_value: {
-      value: cdktn.listMapperHcl(tfSlotTypeSampleValuePropertyToHclTerraform, true)(struct!.sampleValue),
+      value: cdktn.listMapperHcl(awsSlotTypeSampleValuePropertyToHclTerraform, true)(struct!.sampleValue),
       isBlock: true,
       type: "list",
       storageClassType: "SampleValuePropertyList",
     },
     synonyms: {
-      value: cdktn.listMapperHcl(tfSlotTypeSynonymsPropertyToHclTerraform, true)(struct!.synonyms),
+      value: cdktn.listMapperHcl(awsSlotTypeSynonymsPropertyToHclTerraform, true)(struct!.synonyms),
       isBlock: true,
       type: "list",
       storageClassType: "SynonymsPropertyList",
@@ -697,7 +697,7 @@ export function tfSlotTypeSlotTypeValuesPropertyToHclTerraform(struct?: TfSlotTy
 }
 
 
-export function tfSlotTypeTimeoutsPropertyToTerraform(struct?: TfSlotType.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSlotTypeTimeoutsPropertyToTerraform(struct?: AwsSlotType.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -710,7 +710,7 @@ export function tfSlotTypeTimeoutsPropertyToTerraform(struct?: TfSlotType.Timeou
 }
 
 
-export function tfSlotTypeTimeoutsPropertyToHclTerraform(struct?: TfSlotType.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSlotTypeTimeoutsPropertyToHclTerraform(struct?: AwsSlotType.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -741,7 +741,7 @@ export function tfSlotTypeTimeoutsPropertyToHclTerraform(struct?: TfSlotType.Tim
 }
 
 
-export function tfSlotTypeAdvancedRecognitionSettingPropertyToTerraform(struct?: TfSlotType.AdvancedRecognitionSettingProperty | cdktn.IResolvable): any {
+export function awsSlotTypeAdvancedRecognitionSettingPropertyToTerraform(struct?: AwsSlotType.AdvancedRecognitionSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,7 +752,7 @@ export function tfSlotTypeAdvancedRecognitionSettingPropertyToTerraform(struct?:
 }
 
 
-export function tfSlotTypeAdvancedRecognitionSettingPropertyToHclTerraform(struct?: TfSlotType.AdvancedRecognitionSettingProperty | cdktn.IResolvable): any {
+export function awsSlotTypeAdvancedRecognitionSettingPropertyToHclTerraform(struct?: AwsSlotType.AdvancedRecognitionSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -771,7 +771,7 @@ export function tfSlotTypeAdvancedRecognitionSettingPropertyToHclTerraform(struc
 }
 
 
-export function tfSlotTypeRegexFilterPropertyToTerraform(struct?: TfSlotType.RegexFilterProperty | cdktn.IResolvable): any {
+export function awsSlotTypeRegexFilterPropertyToTerraform(struct?: AwsSlotType.RegexFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -782,7 +782,7 @@ export function tfSlotTypeRegexFilterPropertyToTerraform(struct?: TfSlotType.Reg
 }
 
 
-export function tfSlotTypeRegexFilterPropertyToHclTerraform(struct?: TfSlotType.RegexFilterProperty | cdktn.IResolvable): any {
+export function awsSlotTypeRegexFilterPropertyToHclTerraform(struct?: AwsSlotType.RegexFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -801,20 +801,20 @@ export function tfSlotTypeRegexFilterPropertyToHclTerraform(struct?: TfSlotType.
 }
 
 
-export function tfSlotTypeValueSelectionSettingPropertyToTerraform(struct?: TfSlotType.ValueSelectionSettingProperty | cdktn.IResolvable): any {
+export function awsSlotTypeValueSelectionSettingPropertyToTerraform(struct?: AwsSlotType.ValueSelectionSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     resolution_strategy: cdktn.stringToTerraform(struct!.resolutionStrategy),
-    advanced_recognition_setting: cdktn.listMapper(tfSlotTypeAdvancedRecognitionSettingPropertyToTerraform, true)(struct!.advancedRecognitionSetting),
-    regex_filter: cdktn.listMapper(tfSlotTypeRegexFilterPropertyToTerraform, true)(struct!.regexFilter),
+    advanced_recognition_setting: cdktn.listMapper(awsSlotTypeAdvancedRecognitionSettingPropertyToTerraform, true)(struct!.advancedRecognitionSetting),
+    regex_filter: cdktn.listMapper(awsSlotTypeRegexFilterPropertyToTerraform, true)(struct!.regexFilter),
   }
 }
 
 
-export function tfSlotTypeValueSelectionSettingPropertyToHclTerraform(struct?: TfSlotType.ValueSelectionSettingProperty | cdktn.IResolvable): any {
+export function awsSlotTypeValueSelectionSettingPropertyToHclTerraform(struct?: AwsSlotType.ValueSelectionSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -827,13 +827,13 @@ export function tfSlotTypeValueSelectionSettingPropertyToHclTerraform(struct?: T
       storageClassType: "string",
     },
     advanced_recognition_setting: {
-      value: cdktn.listMapperHcl(tfSlotTypeAdvancedRecognitionSettingPropertyToHclTerraform, true)(struct!.advancedRecognitionSetting),
+      value: cdktn.listMapperHcl(awsSlotTypeAdvancedRecognitionSettingPropertyToHclTerraform, true)(struct!.advancedRecognitionSetting),
       isBlock: true,
       type: "list",
       storageClassType: "AdvancedRecognitionSettingPropertyList",
     },
     regex_filter: {
-      value: cdktn.listMapperHcl(tfSlotTypeRegexFilterPropertyToHclTerraform, true)(struct!.regexFilter),
+      value: cdktn.listMapperHcl(awsSlotTypeRegexFilterPropertyToHclTerraform, true)(struct!.regexFilter),
       isBlock: true,
       type: "list",
       storageClassType: "RegexFilterPropertyList",
@@ -845,14 +845,14 @@ export function tfSlotTypeValueSelectionSettingPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfSlotType {
+export namespace AwsSlotType {
 export interface SubSlotsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#name TfSlotType#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#name AwsSlotType#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#slot_type_id TfSlotType#slot_type_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#slot_type_id AwsSlotType#slot_type_id}
   */
   readonly slotTypeId: string;
 }
@@ -956,7 +956,7 @@ export interface CompositeSlotTypeSettingProperty {
   /**
   * sub_slots block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#sub_slots TfSlotType#sub_slots}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#sub_slots AwsSlotType#sub_slots}
   */
   readonly subSlots?: SubSlotsProperty[] | cdktn.IResolvable;
 }
@@ -1042,15 +1042,15 @@ export class CompositeSlotTypeSettingPropertyList extends cdktn.ComplexList {
 }
 export interface SourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#kms_key_arn TfSlotType#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#kms_key_arn AwsSlotType#kms_key_arn}
   */
   readonly kmsKeyArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#s3_bucket_name TfSlotType#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#s3_bucket_name AwsSlotType#s3_bucket_name}
   */
   readonly s3BucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#s3_object_key TfSlotType#s3_object_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#s3_object_key AwsSlotType#s3_object_key}
   */
   readonly s3ObjectKey: string;
 }
@@ -1173,7 +1173,7 @@ export interface GrammarSlotTypeSettingProperty {
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#source TfSlotType#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#source AwsSlotType#source}
   */
   readonly source?: SourceProperty[] | cdktn.IResolvable;
 }
@@ -1261,7 +1261,7 @@ export interface ExternalSourceSettingProperty {
   /**
   * grammar_slot_type_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#grammar_slot_type_setting TfSlotType#grammar_slot_type_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#grammar_slot_type_setting AwsSlotType#grammar_slot_type_setting}
   */
   readonly grammarSlotTypeSetting?: GrammarSlotTypeSettingProperty[] | cdktn.IResolvable;
 }
@@ -1347,7 +1347,7 @@ export class ExternalSourceSettingPropertyList extends cdktn.ComplexList {
 }
 export interface SampleValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#value TfSlotType#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#value AwsSlotType#value}
   */
   readonly value: string;
 }
@@ -1430,7 +1430,7 @@ export class SampleValuePropertyList extends cdktn.ComplexList {
 }
 export interface SynonymsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#value TfSlotType#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#value AwsSlotType#value}
   */
   readonly value: string;
 }
@@ -1515,13 +1515,13 @@ export interface SlotTypeValuesProperty {
   /**
   * sample_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#sample_value TfSlotType#sample_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#sample_value AwsSlotType#sample_value}
   */
   readonly sampleValue?: SampleValueProperty[] | cdktn.IResolvable;
   /**
   * synonyms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#synonyms TfSlotType#synonyms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#synonyms AwsSlotType#synonyms}
   */
   readonly synonyms?: SynonymsProperty[] | cdktn.IResolvable;
 }
@@ -1631,19 +1631,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#create TfSlotType#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#create AwsSlotType#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#delete TfSlotType#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#delete AwsSlotType#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#update TfSlotType#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#update AwsSlotType#update}
   */
   readonly update?: string;
 }
@@ -1751,7 +1751,7 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AdvancedRecognitionSettingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#audio_recognition_strategy TfSlotType#audio_recognition_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#audio_recognition_strategy AwsSlotType#audio_recognition_strategy}
   */
   readonly audioRecognitionStrategy?: string;
 }
@@ -1837,7 +1837,7 @@ export class AdvancedRecognitionSettingPropertyList extends cdktn.ComplexList {
 }
 export interface RegexFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#pattern TfSlotType#pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#pattern AwsSlotType#pattern}
   */
   readonly pattern: string;
 }
@@ -1920,19 +1920,19 @@ export class RegexFilterPropertyList extends cdktn.ComplexList {
 }
 export interface ValueSelectionSettingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#resolution_strategy TfSlotType#resolution_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#resolution_strategy AwsSlotType#resolution_strategy}
   */
   readonly resolutionStrategy: string;
   /**
   * advanced_recognition_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#advanced_recognition_setting TfSlotType#advanced_recognition_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#advanced_recognition_setting AwsSlotType#advanced_recognition_setting}
   */
   readonly advancedRecognitionSetting?: AdvancedRecognitionSettingProperty[] | cdktn.IResolvable;
   /**
   * regex_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#regex_filter TfSlotType#regex_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot_type#regex_filter AwsSlotType#regex_filter}
   */
   readonly regexFilter?: RegexFilterProperty[] | cdktn.IResolvable;
 }

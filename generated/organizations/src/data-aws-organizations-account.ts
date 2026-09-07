@@ -5,20 +5,20 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfAccountConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsAccountConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_account#account_id DataTfAccount#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_account#account_id DataAwsAccount#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_account#id DataTfAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_account#id DataAwsAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_account#tags DataTfAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_account#tags DataAwsAccount#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -26,7 +26,7 @@ export interface DataTfAccountConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_account aws_organizations_account}
 */
-export class DataTfAccount extends cdktn.TerraformDataSource {
+export class DataAwsAccount extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class DataTfAccount extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfAccount resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsAccount resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfAccount to import
-  * @param importFromId The id of the existing DataTfAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_account#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfAccount to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsAccount to import
+  * @param importFromId The id of the existing DataAwsAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_account#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_organizations_account", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class DataTfAccount extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfAccountConfig
+  * @param options DataAwsAccountConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfAccountConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_organizations_account',
       terraformGeneratorMetadata: {

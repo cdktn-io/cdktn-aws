@@ -5,64 +5,64 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfInstanceGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsInstanceGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#autoscaling_policy TfInstanceGroup#autoscaling_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#autoscaling_policy AwsInstanceGroup#autoscaling_policy}
   */
   readonly autoscalingPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#bid_price TfInstanceGroup#bid_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#bid_price AwsInstanceGroup#bid_price}
   */
   readonly bidPrice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#cluster_id TfInstanceGroup#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#cluster_id AwsInstanceGroup#cluster_id}
   */
   readonly clusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#configurations_json TfInstanceGroup#configurations_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#configurations_json AwsInstanceGroup#configurations_json}
   */
   readonly configurationsJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#ebs_optimized TfInstanceGroup#ebs_optimized}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#ebs_optimized AwsInstanceGroup#ebs_optimized}
   */
   readonly ebsOptimized?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#id TfInstanceGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#id AwsInstanceGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#instance_count TfInstanceGroup#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#instance_count AwsInstanceGroup#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#instance_type TfInstanceGroup#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#instance_type AwsInstanceGroup#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#name TfInstanceGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#name AwsInstanceGroup#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#region TfInstanceGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#region AwsInstanceGroup#region}
   */
   readonly region?: string;
   /**
   * ebs_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#ebs_config TfInstanceGroup#ebs_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#ebs_config AwsInstanceGroup#ebs_config}
   */
-  readonly ebsConfig?: TfInstanceGroup.EbsConfigProperty[] | cdktn.IResolvable;
+  readonly ebsConfig?: AwsInstanceGroup.EbsConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group aws_emr_instance_group}
 */
-export class TfInstanceGroup extends cdktn.TerraformResource {
+export class AwsInstanceGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -73,11 +73,11 @@ export class TfInstanceGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfInstanceGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsInstanceGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfInstanceGroup to import
-  * @param importFromId The id of the existing TfInstanceGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfInstanceGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsInstanceGroup to import
+  * @param importFromId The id of the existing AwsInstanceGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsInstanceGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_emr_instance_group", importId: importFromId, provider });
@@ -92,9 +92,9 @@ export class TfInstanceGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfInstanceGroupConfig
+  * @param options AwsInstanceGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfInstanceGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsInstanceGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_emr_instance_group',
       terraformGeneratorMetadata: {
@@ -292,11 +292,11 @@ export class TfInstanceGroup extends cdktn.TerraformResource {
   }
 
   // ebs_config - computed: false, optional: true, required: false
-  private _ebsConfig = new TfInstanceGroup.EbsConfigPropertyList(this, "ebs_config", true);
+  private _ebsConfig = new AwsInstanceGroup.EbsConfigPropertyList(this, "ebs_config", true);
   public get ebsConfig() {
     return this._ebsConfig;
   }
-  public putEbsConfig(value: TfInstanceGroup.EbsConfigProperty[] | cdktn.IResolvable) {
+  public putEbsConfig(value: AwsInstanceGroup.EbsConfigProperty[] | cdktn.IResolvable) {
     this._ebsConfig.internalValue = value;
   }
   public resetEbsConfig() {
@@ -323,7 +323,7 @@ export class TfInstanceGroup extends cdktn.TerraformResource {
       instance_type: cdktn.stringToTerraform(this._instanceType),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      ebs_config: cdktn.listMapper(tfInstanceGroupEbsConfigPropertyToTerraform, true)(this._ebsConfig.internalValue),
+      ebs_config: cdktn.listMapper(awsInstanceGroupEbsConfigPropertyToTerraform, true)(this._ebsConfig.internalValue),
     };
   }
 
@@ -390,10 +390,10 @@ export class TfInstanceGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       ebs_config: {
-        value: cdktn.listMapperHcl(tfInstanceGroupEbsConfigPropertyToHclTerraform, true)(this._ebsConfig.internalValue),
+        value: cdktn.listMapperHcl(awsInstanceGroupEbsConfigPropertyToHclTerraform, true)(this._ebsConfig.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfInstanceGroup.EbsConfigPropertyList",
+        storageClassType: "AwsInstanceGroup.EbsConfigPropertyList",
       },
     };
 
@@ -402,7 +402,7 @@ export class TfInstanceGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfInstanceGroupEbsConfigPropertyToTerraform(struct?: TfInstanceGroup.EbsConfigProperty | cdktn.IResolvable): any {
+export function awsInstanceGroupEbsConfigPropertyToTerraform(struct?: AwsInstanceGroup.EbsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function tfInstanceGroupEbsConfigPropertyToTerraform(struct?: TfInstanceG
 }
 
 
-export function tfInstanceGroupEbsConfigPropertyToHclTerraform(struct?: TfInstanceGroup.EbsConfigProperty | cdktn.IResolvable): any {
+export function awsInstanceGroupEbsConfigPropertyToHclTerraform(struct?: AwsInstanceGroup.EbsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -453,22 +453,22 @@ export function tfInstanceGroupEbsConfigPropertyToHclTerraform(struct?: TfInstan
 }
 
 
-export namespace TfInstanceGroup {
+export namespace AwsInstanceGroup {
 export interface EbsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#iops TfInstanceGroup#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#iops AwsInstanceGroup#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#size TfInstanceGroup#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#size AwsInstanceGroup#size}
   */
   readonly size: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#type TfInstanceGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#type AwsInstanceGroup#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#volumes_per_instance TfInstanceGroup#volumes_per_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_instance_group#volumes_per_instance AwsInstanceGroup#volumes_per_instance}
   */
   readonly volumesPerInstance?: number;
 }

@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPermissionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPermissionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#action TfPermission#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#action AwsPermission#action}
   */
   readonly action?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#event_bus_name TfPermission#event_bus_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#event_bus_name AwsPermission#event_bus_name}
   */
   readonly eventBusName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#id TfPermission#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#id AwsPermission#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#principal TfPermission#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#principal AwsPermission#principal}
   */
   readonly principal: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#region TfPermission#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#region AwsPermission#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#statement_id TfPermission#statement_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#statement_id AwsPermission#statement_id}
   */
   readonly statementId: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#condition TfPermission#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#condition AwsPermission#condition}
   */
-  readonly condition?: TfPermission.ConditionProperty;
+  readonly condition?: AwsPermission.ConditionProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission aws_cloudwatch_event_permission}
 */
-export class TfPermission extends cdktn.TerraformResource {
+export class AwsPermission extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfPermission extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPermission resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPermission resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPermission to import
-  * @param importFromId The id of the existing TfPermission that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPermission to import is found
+  * @param importToId The construct id used in the generated config for the AwsPermission to import
+  * @param importFromId The id of the existing AwsPermission that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPermission to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_event_permission", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfPermission extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPermissionConfig
+  * @param options AwsPermissionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPermissionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPermissionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_event_permission',
       terraformGeneratorMetadata: {
@@ -198,11 +198,11 @@ export class TfPermission extends cdktn.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new TfPermission.ConditionPropertyOutputReference(this, "condition");
+  private _condition = new AwsPermission.ConditionPropertyOutputReference(this, "condition");
   public get condition() {
     return this._condition;
   }
-  public putCondition(value: TfPermission.ConditionProperty) {
+  public putCondition(value: AwsPermission.ConditionProperty) {
     this._condition.internalValue = value;
   }
   public resetCondition() {
@@ -225,7 +225,7 @@ export class TfPermission extends cdktn.TerraformResource {
       principal: cdktn.stringToTerraform(this._principal),
       region: cdktn.stringToTerraform(this._region),
       statement_id: cdktn.stringToTerraform(this._statementId),
-      condition: tfPermissionConditionPropertyToTerraform(this._condition.internalValue),
+      condition: awsPermissionConditionPropertyToTerraform(this._condition.internalValue),
     };
   }
 
@@ -268,10 +268,10 @@ export class TfPermission extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       condition: {
-        value: tfPermissionConditionPropertyToHclTerraform(this._condition.internalValue),
+        value: awsPermissionConditionPropertyToHclTerraform(this._condition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPermission.ConditionPropertyList",
+        storageClassType: "AwsPermission.ConditionPropertyList",
       },
     };
 
@@ -280,7 +280,7 @@ export class TfPermission extends cdktn.TerraformResource {
   }
 }
 
-export function tfPermissionConditionPropertyToTerraform(struct?: TfPermission.ConditionPropertyOutputReference | TfPermission.ConditionProperty): any {
+export function awsPermissionConditionPropertyToTerraform(struct?: AwsPermission.ConditionPropertyOutputReference | AwsPermission.ConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function tfPermissionConditionPropertyToTerraform(struct?: TfPermission.C
 }
 
 
-export function tfPermissionConditionPropertyToHclTerraform(struct?: TfPermission.ConditionPropertyOutputReference | TfPermission.ConditionProperty): any {
+export function awsPermissionConditionPropertyToHclTerraform(struct?: AwsPermission.ConditionPropertyOutputReference | AwsPermission.ConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,18 +324,18 @@ export function tfPermissionConditionPropertyToHclTerraform(struct?: TfPermissio
 }
 
 
-export namespace TfPermission {
+export namespace AwsPermission {
 export interface ConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#key TfPermission#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#key AwsPermission#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#type TfPermission#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#type AwsPermission#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#value TfPermission#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_permission#value AwsPermission#value}
   */
   readonly value: string;
 }

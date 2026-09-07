@@ -5,83 +5,83 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfServerlessCacheConfig extends cdktn.TerraformMetaArguments {
+export interface AwsServerlessCacheConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#daily_snapshot_time TfServerlessCache#daily_snapshot_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#daily_snapshot_time AwsServerlessCache#daily_snapshot_time}
   */
   readonly dailySnapshotTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#description TfServerlessCache#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#description AwsServerlessCache#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#engine TfServerlessCache#engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#engine AwsServerlessCache#engine}
   */
   readonly engine: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#kms_key_id TfServerlessCache#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#kms_key_id AwsServerlessCache#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#major_engine_version TfServerlessCache#major_engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#major_engine_version AwsServerlessCache#major_engine_version}
   */
   readonly majorEngineVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#name TfServerlessCache#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#name AwsServerlessCache#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#network_type TfServerlessCache#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#network_type AwsServerlessCache#network_type}
   */
   readonly networkType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#region TfServerlessCache#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#region AwsServerlessCache#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#security_group_ids TfServerlessCache#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#security_group_ids AwsServerlessCache#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#snapshot_arns_to_restore TfServerlessCache#snapshot_arns_to_restore}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#snapshot_arns_to_restore AwsServerlessCache#snapshot_arns_to_restore}
   */
   readonly snapshotArnsToRestore?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#snapshot_retention_limit TfServerlessCache#snapshot_retention_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#snapshot_retention_limit AwsServerlessCache#snapshot_retention_limit}
   */
   readonly snapshotRetentionLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#subnet_ids TfServerlessCache#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#subnet_ids AwsServerlessCache#subnet_ids}
   */
   readonly subnetIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#tags TfServerlessCache#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#tags AwsServerlessCache#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#user_group_id TfServerlessCache#user_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#user_group_id AwsServerlessCache#user_group_id}
   */
   readonly userGroupId?: string;
   /**
   * cache_usage_limits block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#cache_usage_limits TfServerlessCache#cache_usage_limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#cache_usage_limits AwsServerlessCache#cache_usage_limits}
   */
-  readonly cacheUsageLimits?: TfServerlessCache.CacheUsageLimitsProperty[] | cdktn.IResolvable;
+  readonly cacheUsageLimits?: AwsServerlessCache.CacheUsageLimitsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#timeouts TfServerlessCache#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#timeouts AwsServerlessCache#timeouts}
   */
-  readonly timeouts?: TfServerlessCache.TimeoutsProperty;
+  readonly timeouts?: AwsServerlessCache.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache aws_elasticache_serverless_cache}
 */
-export class TfServerlessCache extends cdktn.TerraformResource {
+export class AwsServerlessCache extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -92,11 +92,11 @@ export class TfServerlessCache extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfServerlessCache resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsServerlessCache resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfServerlessCache to import
-  * @param importFromId The id of the existing TfServerlessCache that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfServerlessCache to import is found
+  * @param importToId The construct id used in the generated config for the AwsServerlessCache to import
+  * @param importFromId The id of the existing AwsServerlessCache that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsServerlessCache to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_serverless_cache", importId: importFromId, provider });
@@ -111,9 +111,9 @@ export class TfServerlessCache extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfServerlessCacheConfig
+  * @param options AwsServerlessCacheConfig
   */
-  public constructor(scope: Construct, id: string, config: TfServerlessCacheConfig) {
+  public constructor(scope: Construct, id: string, config: AwsServerlessCacheConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticache_serverless_cache',
       terraformGeneratorMetadata: {
@@ -194,7 +194,7 @@ export class TfServerlessCache extends cdktn.TerraformResource {
   }
 
   // endpoint - computed: true, optional: false, required: false
-  private _endpoint = new TfServerlessCache.EndpointPropertyList(this, "endpoint", false);
+  private _endpoint = new AwsServerlessCache.EndpointPropertyList(this, "endpoint", false);
   public get endpoint() {
     return this._endpoint;
   }
@@ -284,7 +284,7 @@ export class TfServerlessCache extends cdktn.TerraformResource {
   }
 
   // reader_endpoint - computed: true, optional: false, required: false
-  private _readerEndpoint = new TfServerlessCache.ReaderEndpointPropertyList(this, "reader_endpoint", false);
+  private _readerEndpoint = new AwsServerlessCache.ReaderEndpointPropertyList(this, "reader_endpoint", false);
   public get readerEndpoint() {
     return this._readerEndpoint;
   }
@@ -413,11 +413,11 @@ export class TfServerlessCache extends cdktn.TerraformResource {
   }
 
   // cache_usage_limits - computed: false, optional: true, required: false
-  private _cacheUsageLimits = new TfServerlessCache.CacheUsageLimitsPropertyList(this, "cache_usage_limits", false);
+  private _cacheUsageLimits = new AwsServerlessCache.CacheUsageLimitsPropertyList(this, "cache_usage_limits", false);
   public get cacheUsageLimits() {
     return this._cacheUsageLimits;
   }
-  public putCacheUsageLimits(value: TfServerlessCache.CacheUsageLimitsProperty[] | cdktn.IResolvable) {
+  public putCacheUsageLimits(value: AwsServerlessCache.CacheUsageLimitsProperty[] | cdktn.IResolvable) {
     this._cacheUsageLimits.internalValue = value;
   }
   public resetCacheUsageLimits() {
@@ -429,11 +429,11 @@ export class TfServerlessCache extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfServerlessCache.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsServerlessCache.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfServerlessCache.TimeoutsProperty) {
+  public putTimeouts(value: AwsServerlessCache.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -464,8 +464,8 @@ export class TfServerlessCache extends cdktn.TerraformResource {
       subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       user_group_id: cdktn.stringToTerraform(this._userGroupId),
-      cache_usage_limits: cdktn.listMapper(tfServerlessCacheCacheUsageLimitsPropertyToTerraform, true)(this._cacheUsageLimits.internalValue),
-      timeouts: tfServerlessCacheTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      cache_usage_limits: cdktn.listMapper(awsServerlessCacheCacheUsageLimitsPropertyToTerraform, true)(this._cacheUsageLimits.internalValue),
+      timeouts: awsServerlessCacheTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -556,16 +556,16 @@ export class TfServerlessCache extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cache_usage_limits: {
-        value: cdktn.listMapperHcl(tfServerlessCacheCacheUsageLimitsPropertyToHclTerraform, true)(this._cacheUsageLimits.internalValue),
+        value: cdktn.listMapperHcl(awsServerlessCacheCacheUsageLimitsPropertyToHclTerraform, true)(this._cacheUsageLimits.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfServerlessCache.CacheUsageLimitsPropertyList",
+        storageClassType: "AwsServerlessCache.CacheUsageLimitsPropertyList",
       },
       timeouts: {
-        value: tfServerlessCacheTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsServerlessCacheTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfServerlessCache.TimeoutsProperty",
+        storageClassType: "AwsServerlessCache.TimeoutsProperty",
       },
     };
 
@@ -574,7 +574,7 @@ export class TfServerlessCache extends cdktn.TerraformResource {
   }
 }
 
-export function tfServerlessCacheEndpointPropertyToTerraform(struct?: TfServerlessCache.EndpointProperty): any {
+export function awsServerlessCacheEndpointPropertyToTerraform(struct?: AwsServerlessCache.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -584,7 +584,7 @@ export function tfServerlessCacheEndpointPropertyToTerraform(struct?: TfServerle
 }
 
 
-export function tfServerlessCacheEndpointPropertyToHclTerraform(struct?: TfServerlessCache.EndpointProperty): any {
+export function awsServerlessCacheEndpointPropertyToHclTerraform(struct?: AwsServerlessCache.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -595,7 +595,7 @@ export function tfServerlessCacheEndpointPropertyToHclTerraform(struct?: TfServe
 }
 
 
-export function tfServerlessCacheReaderEndpointPropertyToTerraform(struct?: TfServerlessCache.ReaderEndpointProperty): any {
+export function awsServerlessCacheReaderEndpointPropertyToTerraform(struct?: AwsServerlessCache.ReaderEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,7 +605,7 @@ export function tfServerlessCacheReaderEndpointPropertyToTerraform(struct?: TfSe
 }
 
 
-export function tfServerlessCacheReaderEndpointPropertyToHclTerraform(struct?: TfServerlessCache.ReaderEndpointProperty): any {
+export function awsServerlessCacheReaderEndpointPropertyToHclTerraform(struct?: AwsServerlessCache.ReaderEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,7 +616,7 @@ export function tfServerlessCacheReaderEndpointPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfServerlessCacheDataStoragePropertyToTerraform(struct?: TfServerlessCache.DataStorageProperty | cdktn.IResolvable): any {
+export function awsServerlessCacheDataStoragePropertyToTerraform(struct?: AwsServerlessCache.DataStorageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -629,7 +629,7 @@ export function tfServerlessCacheDataStoragePropertyToTerraform(struct?: TfServe
 }
 
 
-export function tfServerlessCacheDataStoragePropertyToHclTerraform(struct?: TfServerlessCache.DataStorageProperty | cdktn.IResolvable): any {
+export function awsServerlessCacheDataStoragePropertyToHclTerraform(struct?: AwsServerlessCache.DataStorageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,7 +660,7 @@ export function tfServerlessCacheDataStoragePropertyToHclTerraform(struct?: TfSe
 }
 
 
-export function tfServerlessCacheEcpuPerSecondPropertyToTerraform(struct?: TfServerlessCache.EcpuPerSecondProperty | cdktn.IResolvable): any {
+export function awsServerlessCacheEcpuPerSecondPropertyToTerraform(struct?: AwsServerlessCache.EcpuPerSecondProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -672,7 +672,7 @@ export function tfServerlessCacheEcpuPerSecondPropertyToTerraform(struct?: TfSer
 }
 
 
-export function tfServerlessCacheEcpuPerSecondPropertyToHclTerraform(struct?: TfServerlessCache.EcpuPerSecondProperty | cdktn.IResolvable): any {
+export function awsServerlessCacheEcpuPerSecondPropertyToHclTerraform(struct?: AwsServerlessCache.EcpuPerSecondProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -697,32 +697,32 @@ export function tfServerlessCacheEcpuPerSecondPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfServerlessCacheCacheUsageLimitsPropertyToTerraform(struct?: TfServerlessCache.CacheUsageLimitsProperty | cdktn.IResolvable): any {
+export function awsServerlessCacheCacheUsageLimitsPropertyToTerraform(struct?: AwsServerlessCache.CacheUsageLimitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    data_storage: cdktn.listMapper(tfServerlessCacheDataStoragePropertyToTerraform, true)(struct!.dataStorage),
-    ecpu_per_second: cdktn.listMapper(tfServerlessCacheEcpuPerSecondPropertyToTerraform, true)(struct!.ecpuPerSecond),
+    data_storage: cdktn.listMapper(awsServerlessCacheDataStoragePropertyToTerraform, true)(struct!.dataStorage),
+    ecpu_per_second: cdktn.listMapper(awsServerlessCacheEcpuPerSecondPropertyToTerraform, true)(struct!.ecpuPerSecond),
   }
 }
 
 
-export function tfServerlessCacheCacheUsageLimitsPropertyToHclTerraform(struct?: TfServerlessCache.CacheUsageLimitsProperty | cdktn.IResolvable): any {
+export function awsServerlessCacheCacheUsageLimitsPropertyToHclTerraform(struct?: AwsServerlessCache.CacheUsageLimitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     data_storage: {
-      value: cdktn.listMapperHcl(tfServerlessCacheDataStoragePropertyToHclTerraform, true)(struct!.dataStorage),
+      value: cdktn.listMapperHcl(awsServerlessCacheDataStoragePropertyToHclTerraform, true)(struct!.dataStorage),
       isBlock: true,
       type: "list",
       storageClassType: "DataStoragePropertyList",
     },
     ecpu_per_second: {
-      value: cdktn.listMapperHcl(tfServerlessCacheEcpuPerSecondPropertyToHclTerraform, true)(struct!.ecpuPerSecond),
+      value: cdktn.listMapperHcl(awsServerlessCacheEcpuPerSecondPropertyToHclTerraform, true)(struct!.ecpuPerSecond),
       isBlock: true,
       type: "list",
       storageClassType: "EcpuPerSecondPropertyList",
@@ -734,7 +734,7 @@ export function tfServerlessCacheCacheUsageLimitsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfServerlessCacheTimeoutsPropertyToTerraform(struct?: TfServerlessCache.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsServerlessCacheTimeoutsPropertyToTerraform(struct?: AwsServerlessCache.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -747,7 +747,7 @@ export function tfServerlessCacheTimeoutsPropertyToTerraform(struct?: TfServerle
 }
 
 
-export function tfServerlessCacheTimeoutsPropertyToHclTerraform(struct?: TfServerlessCache.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsServerlessCacheTimeoutsPropertyToHclTerraform(struct?: AwsServerlessCache.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -778,7 +778,7 @@ export function tfServerlessCacheTimeoutsPropertyToHclTerraform(struct?: TfServe
 }
 
 
-export namespace TfServerlessCache {
+export namespace AwsServerlessCache {
 export interface EndpointProperty {
 }
 export class EndpointPropertyOutputReference extends cdktn.ComplexObject {
@@ -899,15 +899,15 @@ export class ReaderEndpointPropertyList extends cdktn.ComplexList {
 }
 export interface DataStorageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#maximum TfServerlessCache#maximum}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#maximum AwsServerlessCache#maximum}
   */
   readonly maximum?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#minimum TfServerlessCache#minimum}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#minimum AwsServerlessCache#minimum}
   */
   readonly minimum?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#unit TfServerlessCache#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#unit AwsServerlessCache#unit}
   */
   readonly unit: string;
 }
@@ -1034,11 +1034,11 @@ export class DataStoragePropertyList extends cdktn.ComplexList {
 }
 export interface EcpuPerSecondProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#maximum TfServerlessCache#maximum}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#maximum AwsServerlessCache#maximum}
   */
   readonly maximum?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#minimum TfServerlessCache#minimum}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#minimum AwsServerlessCache#minimum}
   */
   readonly minimum?: number;
 }
@@ -1148,13 +1148,13 @@ export interface CacheUsageLimitsProperty {
   /**
   * data_storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#data_storage TfServerlessCache#data_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#data_storage AwsServerlessCache#data_storage}
   */
   readonly dataStorage?: DataStorageProperty[] | cdktn.IResolvable;
   /**
   * ecpu_per_second block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#ecpu_per_second TfServerlessCache#ecpu_per_second}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#ecpu_per_second AwsServerlessCache#ecpu_per_second}
   */
   readonly ecpuPerSecond?: EcpuPerSecondProperty[] | cdktn.IResolvable;
 }
@@ -1264,19 +1264,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#create TfServerlessCache#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#create AwsServerlessCache#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#delete TfServerlessCache#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#delete AwsServerlessCache#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#update TfServerlessCache#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#update AwsServerlessCache#update}
   */
   readonly update?: string;
 }

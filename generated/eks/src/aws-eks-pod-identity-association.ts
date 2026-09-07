@@ -5,43 +5,43 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPodIdentityAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPodIdentityAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#cluster_name TfPodIdentityAssociation#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#cluster_name AwsPodIdentityAssociation#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#disable_session_tags TfPodIdentityAssociation#disable_session_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#disable_session_tags AwsPodIdentityAssociation#disable_session_tags}
   */
   readonly disableSessionTags?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#namespace TfPodIdentityAssociation#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#namespace AwsPodIdentityAssociation#namespace}
   */
   readonly namespace: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#policy TfPodIdentityAssociation#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#policy AwsPodIdentityAssociation#policy}
   */
   readonly policy?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#region TfPodIdentityAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#region AwsPodIdentityAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#role_arn TfPodIdentityAssociation#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#role_arn AwsPodIdentityAssociation#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#service_account TfPodIdentityAssociation#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#service_account AwsPodIdentityAssociation#service_account}
   */
   readonly serviceAccount: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#tags TfPodIdentityAssociation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#tags AwsPodIdentityAssociation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#target_role_arn TfPodIdentityAssociation#target_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#target_role_arn AwsPodIdentityAssociation#target_role_arn}
   */
   readonly targetRoleArn?: string;
 }
@@ -49,7 +49,7 @@ export interface TfPodIdentityAssociationConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association aws_eks_pod_identity_association}
 */
-export class TfPodIdentityAssociation extends cdktn.TerraformResource {
+export class AwsPodIdentityAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -60,11 +60,11 @@ export class TfPodIdentityAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPodIdentityAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPodIdentityAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPodIdentityAssociation to import
-  * @param importFromId The id of the existing TfPodIdentityAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPodIdentityAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsPodIdentityAssociation to import
+  * @param importFromId The id of the existing AwsPodIdentityAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_pod_identity_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPodIdentityAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_pod_identity_association", importId: importFromId, provider });
@@ -79,9 +79,9 @@ export class TfPodIdentityAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPodIdentityAssociationConfig
+  * @param options AwsPodIdentityAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPodIdentityAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPodIdentityAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_pod_identity_association',
       terraformGeneratorMetadata: {

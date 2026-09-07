@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfChannelConfig extends cdktn.TerraformMetaArguments {
+export interface AwsChannelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#channel_id TfChannel#channel_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#channel_id AwsChannel#channel_id}
   */
   readonly channelId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#description TfChannel#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#description AwsChannel#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#id TfChannel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#id AwsChannel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,15 +24,15 @@ export interface TfChannelConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#region TfChannel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#region AwsChannel#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#tags TfChannel#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#tags AwsChannel#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#tags_all TfChannel#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#tags_all AwsChannel#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface TfChannelConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel aws_media_package_channel}
 */
-export class TfChannel extends cdktn.TerraformResource {
+export class AwsChannel extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfChannel extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfChannel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsChannel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfChannel to import
-  * @param importFromId The id of the existing TfChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfChannel to import is found
+  * @param importToId The construct id used in the generated config for the AwsChannel to import
+  * @param importFromId The id of the existing AwsChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/media_package_channel#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsChannel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_media_package_channel", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfChannel extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfChannelConfig
+  * @param options AwsChannelConfig
   */
-  public constructor(scope: Construct, id: string, config: TfChannelConfig) {
+  public constructor(scope: Construct, id: string, config: AwsChannelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_media_package_channel',
       terraformGeneratorMetadata: {
@@ -135,7 +135,7 @@ export class TfChannel extends cdktn.TerraformResource {
   }
 
   // hls_ingest - computed: true, optional: false, required: false
-  private _hlsIngest = new TfChannel.HlsIngestPropertyList(this, "hls_ingest", false);
+  private _hlsIngest = new AwsChannel.HlsIngestPropertyList(this, "hls_ingest", false);
   public get hlsIngest() {
     return this._hlsIngest;
   }
@@ -264,7 +264,7 @@ export class TfChannel extends cdktn.TerraformResource {
   }
 }
 
-export function tfChannelIngestEndpointsPropertyToTerraform(struct?: TfChannel.IngestEndpointsProperty): any {
+export function awsChannelIngestEndpointsPropertyToTerraform(struct?: AwsChannel.IngestEndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function tfChannelIngestEndpointsPropertyToTerraform(struct?: TfChannel.I
 }
 
 
-export function tfChannelIngestEndpointsPropertyToHclTerraform(struct?: TfChannel.IngestEndpointsProperty): any {
+export function awsChannelIngestEndpointsPropertyToHclTerraform(struct?: AwsChannel.IngestEndpointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -285,7 +285,7 @@ export function tfChannelIngestEndpointsPropertyToHclTerraform(struct?: TfChanne
 }
 
 
-export function tfChannelHlsIngestPropertyToTerraform(struct?: TfChannel.HlsIngestProperty): any {
+export function awsChannelHlsIngestPropertyToTerraform(struct?: AwsChannel.HlsIngestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function tfChannelHlsIngestPropertyToTerraform(struct?: TfChannel.HlsInge
 }
 
 
-export function tfChannelHlsIngestPropertyToHclTerraform(struct?: TfChannel.HlsIngestProperty): any {
+export function awsChannelHlsIngestPropertyToHclTerraform(struct?: AwsChannel.HlsIngestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function tfChannelHlsIngestPropertyToHclTerraform(struct?: TfChannel.HlsI
 }
 
 
-export namespace TfChannel {
+export namespace AwsChannel {
 export interface IngestEndpointsProperty {
 }
 export class IngestEndpointsPropertyOutputReference extends cdktn.ComplexObject {

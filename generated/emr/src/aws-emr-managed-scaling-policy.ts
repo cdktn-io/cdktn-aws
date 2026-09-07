@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfManagedScalingPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsManagedScalingPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#cluster_id TfManagedScalingPolicy#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#cluster_id AwsManagedScalingPolicy#cluster_id}
   */
   readonly clusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#id TfManagedScalingPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#id AwsManagedScalingPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,29 +20,29 @@ export interface TfManagedScalingPolicyConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#region TfManagedScalingPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#region AwsManagedScalingPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#scaling_strategy TfManagedScalingPolicy#scaling_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#scaling_strategy AwsManagedScalingPolicy#scaling_strategy}
   */
   readonly scalingStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#utilization_performance_index TfManagedScalingPolicy#utilization_performance_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#utilization_performance_index AwsManagedScalingPolicy#utilization_performance_index}
   */
   readonly utilizationPerformanceIndex?: number;
   /**
   * compute_limits block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#compute_limits TfManagedScalingPolicy#compute_limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#compute_limits AwsManagedScalingPolicy#compute_limits}
   */
-  readonly computeLimits: TfManagedScalingPolicy.ComputeLimitsProperty[] | cdktn.IResolvable;
+  readonly computeLimits: AwsManagedScalingPolicy.ComputeLimitsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy aws_emr_managed_scaling_policy}
 */
-export class TfManagedScalingPolicy extends cdktn.TerraformResource {
+export class AwsManagedScalingPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfManagedScalingPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfManagedScalingPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsManagedScalingPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfManagedScalingPolicy to import
-  * @param importFromId The id of the existing TfManagedScalingPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfManagedScalingPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsManagedScalingPolicy to import
+  * @param importFromId The id of the existing AwsManagedScalingPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsManagedScalingPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_emr_managed_scaling_policy", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfManagedScalingPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfManagedScalingPolicyConfig
+  * @param options AwsManagedScalingPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfManagedScalingPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsManagedScalingPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_emr_managed_scaling_policy',
       terraformGeneratorMetadata: {
@@ -180,11 +180,11 @@ export class TfManagedScalingPolicy extends cdktn.TerraformResource {
   }
 
   // compute_limits - computed: false, optional: false, required: true
-  private _computeLimits = new TfManagedScalingPolicy.ComputeLimitsPropertyList(this, "compute_limits", true);
+  private _computeLimits = new AwsManagedScalingPolicy.ComputeLimitsPropertyList(this, "compute_limits", true);
   public get computeLimits() {
     return this._computeLimits;
   }
-  public putComputeLimits(value: TfManagedScalingPolicy.ComputeLimitsProperty[] | cdktn.IResolvable) {
+  public putComputeLimits(value: AwsManagedScalingPolicy.ComputeLimitsProperty[] | cdktn.IResolvable) {
     this._computeLimits.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -203,7 +203,7 @@ export class TfManagedScalingPolicy extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       scaling_strategy: cdktn.stringToTerraform(this._scalingStrategy),
       utilization_performance_index: cdktn.numberToTerraform(this._utilizationPerformanceIndex),
-      compute_limits: cdktn.listMapper(tfManagedScalingPolicyComputeLimitsPropertyToTerraform, true)(this._computeLimits.internalValue),
+      compute_limits: cdktn.listMapper(awsManagedScalingPolicyComputeLimitsPropertyToTerraform, true)(this._computeLimits.internalValue),
     };
   }
 
@@ -240,10 +240,10 @@ export class TfManagedScalingPolicy extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       compute_limits: {
-        value: cdktn.listMapperHcl(tfManagedScalingPolicyComputeLimitsPropertyToHclTerraform, true)(this._computeLimits.internalValue),
+        value: cdktn.listMapperHcl(awsManagedScalingPolicyComputeLimitsPropertyToHclTerraform, true)(this._computeLimits.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfManagedScalingPolicy.ComputeLimitsPropertyList",
+        storageClassType: "AwsManagedScalingPolicy.ComputeLimitsPropertyList",
       },
     };
 
@@ -252,7 +252,7 @@ export class TfManagedScalingPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfManagedScalingPolicyComputeLimitsPropertyToTerraform(struct?: TfManagedScalingPolicy.ComputeLimitsProperty | cdktn.IResolvable): any {
+export function awsManagedScalingPolicyComputeLimitsPropertyToTerraform(struct?: AwsManagedScalingPolicy.ComputeLimitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,7 +267,7 @@ export function tfManagedScalingPolicyComputeLimitsPropertyToTerraform(struct?: 
 }
 
 
-export function tfManagedScalingPolicyComputeLimitsPropertyToHclTerraform(struct?: TfManagedScalingPolicy.ComputeLimitsProperty | cdktn.IResolvable): any {
+export function awsManagedScalingPolicyComputeLimitsPropertyToHclTerraform(struct?: AwsManagedScalingPolicy.ComputeLimitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,26 +310,26 @@ export function tfManagedScalingPolicyComputeLimitsPropertyToHclTerraform(struct
 }
 
 
-export namespace TfManagedScalingPolicy {
+export namespace AwsManagedScalingPolicy {
 export interface ComputeLimitsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#maximum_capacity_units TfManagedScalingPolicy#maximum_capacity_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#maximum_capacity_units AwsManagedScalingPolicy#maximum_capacity_units}
   */
   readonly maximumCapacityUnits: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#maximum_core_capacity_units TfManagedScalingPolicy#maximum_core_capacity_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#maximum_core_capacity_units AwsManagedScalingPolicy#maximum_core_capacity_units}
   */
   readonly maximumCoreCapacityUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#maximum_ondemand_capacity_units TfManagedScalingPolicy#maximum_ondemand_capacity_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#maximum_ondemand_capacity_units AwsManagedScalingPolicy#maximum_ondemand_capacity_units}
   */
   readonly maximumOndemandCapacityUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#minimum_capacity_units TfManagedScalingPolicy#minimum_capacity_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#minimum_capacity_units AwsManagedScalingPolicy#minimum_capacity_units}
   */
   readonly minimumCapacityUnits: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#unit_type TfManagedScalingPolicy#unit_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_managed_scaling_policy#unit_type AwsManagedScalingPolicy#unit_type}
   */
   readonly unitType: string;
 }

@@ -5,84 +5,84 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#adjustment_type TfPolicy#adjustment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#adjustment_type AwsPolicy#adjustment_type}
   */
   readonly adjustmentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#autoscaling_group_name TfPolicy#autoscaling_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#autoscaling_group_name AwsPolicy#autoscaling_group_name}
   */
   readonly autoscalingGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#cooldown TfPolicy#cooldown}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#cooldown AwsPolicy#cooldown}
   */
   readonly cooldown?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#enabled TfPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#enabled AwsPolicy#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#estimated_instance_warmup TfPolicy#estimated_instance_warmup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#estimated_instance_warmup AwsPolicy#estimated_instance_warmup}
   */
   readonly estimatedInstanceWarmup?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#id TfPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#id AwsPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_aggregation_type TfPolicy#metric_aggregation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_aggregation_type AwsPolicy#metric_aggregation_type}
   */
   readonly metricAggregationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#min_adjustment_magnitude TfPolicy#min_adjustment_magnitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#min_adjustment_magnitude AwsPolicy#min_adjustment_magnitude}
   */
   readonly minAdjustmentMagnitude?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#name TfPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#name AwsPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#policy_type TfPolicy#policy_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#policy_type AwsPolicy#policy_type}
   */
   readonly policyType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#region TfPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#region AwsPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#scaling_adjustment TfPolicy#scaling_adjustment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#scaling_adjustment AwsPolicy#scaling_adjustment}
   */
   readonly scalingAdjustment?: number;
   /**
   * predictive_scaling_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predictive_scaling_configuration TfPolicy#predictive_scaling_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predictive_scaling_configuration AwsPolicy#predictive_scaling_configuration}
   */
-  readonly predictiveScalingConfiguration?: TfPolicy.PredictiveScalingConfigurationProperty;
+  readonly predictiveScalingConfiguration?: AwsPolicy.PredictiveScalingConfigurationProperty;
   /**
   * step_adjustment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#step_adjustment TfPolicy#step_adjustment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#step_adjustment AwsPolicy#step_adjustment}
   */
-  readonly stepAdjustment?: TfPolicy.StepAdjustmentProperty[] | cdktn.IResolvable;
+  readonly stepAdjustment?: AwsPolicy.StepAdjustmentProperty[] | cdktn.IResolvable;
   /**
   * target_tracking_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#target_tracking_configuration TfPolicy#target_tracking_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#target_tracking_configuration AwsPolicy#target_tracking_configuration}
   */
-  readonly targetTrackingConfiguration?: TfPolicy.TargetTrackingConfigurationProperty;
+  readonly targetTrackingConfiguration?: AwsPolicy.TargetTrackingConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy aws_autoscaling_policy}
 */
-export class TfPolicy extends cdktn.TerraformResource {
+export class AwsPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -93,11 +93,11 @@ export class TfPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPolicy to import
-  * @param importFromId The id of the existing TfPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsPolicy to import
+  * @param importFromId The id of the existing AwsPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_autoscaling_policy", importId: importFromId, provider });
@@ -112,9 +112,9 @@ export class TfPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPolicyConfig
+  * @param options AwsPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_autoscaling_policy',
       terraformGeneratorMetadata: {
@@ -343,11 +343,11 @@ export class TfPolicy extends cdktn.TerraformResource {
   }
 
   // predictive_scaling_configuration - computed: false, optional: true, required: false
-  private _predictiveScalingConfiguration = new TfPolicy.PredictiveScalingConfigurationPropertyOutputReference(this, "predictive_scaling_configuration");
+  private _predictiveScalingConfiguration = new AwsPolicy.PredictiveScalingConfigurationPropertyOutputReference(this, "predictive_scaling_configuration");
   public get predictiveScalingConfiguration() {
     return this._predictiveScalingConfiguration;
   }
-  public putPredictiveScalingConfiguration(value: TfPolicy.PredictiveScalingConfigurationProperty) {
+  public putPredictiveScalingConfiguration(value: AwsPolicy.PredictiveScalingConfigurationProperty) {
     this._predictiveScalingConfiguration.internalValue = value;
   }
   public resetPredictiveScalingConfiguration() {
@@ -359,11 +359,11 @@ export class TfPolicy extends cdktn.TerraformResource {
   }
 
   // step_adjustment - computed: false, optional: true, required: false
-  private _stepAdjustment = new TfPolicy.StepAdjustmentPropertyList(this, "step_adjustment", true);
+  private _stepAdjustment = new AwsPolicy.StepAdjustmentPropertyList(this, "step_adjustment", true);
   public get stepAdjustment() {
     return this._stepAdjustment;
   }
-  public putStepAdjustment(value: TfPolicy.StepAdjustmentProperty[] | cdktn.IResolvable) {
+  public putStepAdjustment(value: AwsPolicy.StepAdjustmentProperty[] | cdktn.IResolvable) {
     this._stepAdjustment.internalValue = value;
   }
   public resetStepAdjustment() {
@@ -375,11 +375,11 @@ export class TfPolicy extends cdktn.TerraformResource {
   }
 
   // target_tracking_configuration - computed: false, optional: true, required: false
-  private _targetTrackingConfiguration = new TfPolicy.TargetTrackingConfigurationPropertyOutputReference(this, "target_tracking_configuration");
+  private _targetTrackingConfiguration = new AwsPolicy.TargetTrackingConfigurationPropertyOutputReference(this, "target_tracking_configuration");
   public get targetTrackingConfiguration() {
     return this._targetTrackingConfiguration;
   }
-  public putTargetTrackingConfiguration(value: TfPolicy.TargetTrackingConfigurationProperty) {
+  public putTargetTrackingConfiguration(value: AwsPolicy.TargetTrackingConfigurationProperty) {
     this._targetTrackingConfiguration.internalValue = value;
   }
   public resetTargetTrackingConfiguration() {
@@ -408,9 +408,9 @@ export class TfPolicy extends cdktn.TerraformResource {
       policy_type: cdktn.stringToTerraform(this._policyType),
       region: cdktn.stringToTerraform(this._region),
       scaling_adjustment: cdktn.numberToTerraform(this._scalingAdjustment),
-      predictive_scaling_configuration: tfPolicyPredictiveScalingConfigurationPropertyToTerraform(this._predictiveScalingConfiguration.internalValue),
-      step_adjustment: cdktn.listMapper(tfPolicyStepAdjustmentPropertyToTerraform, true)(this._stepAdjustment.internalValue),
-      target_tracking_configuration: tfPolicyTargetTrackingConfigurationPropertyToTerraform(this._targetTrackingConfiguration.internalValue),
+      predictive_scaling_configuration: awsPolicyPredictiveScalingConfigurationPropertyToTerraform(this._predictiveScalingConfiguration.internalValue),
+      step_adjustment: cdktn.listMapper(awsPolicyStepAdjustmentPropertyToTerraform, true)(this._stepAdjustment.internalValue),
+      target_tracking_configuration: awsPolicyTargetTrackingConfigurationPropertyToTerraform(this._targetTrackingConfiguration.internalValue),
     };
   }
 
@@ -489,22 +489,22 @@ export class TfPolicy extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       predictive_scaling_configuration: {
-        value: tfPolicyPredictiveScalingConfigurationPropertyToHclTerraform(this._predictiveScalingConfiguration.internalValue),
+        value: awsPolicyPredictiveScalingConfigurationPropertyToHclTerraform(this._predictiveScalingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPolicy.PredictiveScalingConfigurationPropertyList",
+        storageClassType: "AwsPolicy.PredictiveScalingConfigurationPropertyList",
       },
       step_adjustment: {
-        value: cdktn.listMapperHcl(tfPolicyStepAdjustmentPropertyToHclTerraform, true)(this._stepAdjustment.internalValue),
+        value: cdktn.listMapperHcl(awsPolicyStepAdjustmentPropertyToHclTerraform, true)(this._stepAdjustment.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfPolicy.StepAdjustmentPropertyList",
+        storageClassType: "AwsPolicy.StepAdjustmentPropertyList",
       },
       target_tracking_configuration: {
-        value: tfPolicyTargetTrackingConfigurationPropertyToHclTerraform(this._targetTrackingConfiguration.internalValue),
+        value: awsPolicyTargetTrackingConfigurationPropertyToHclTerraform(this._targetTrackingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPolicy.TargetTrackingConfigurationPropertyList",
+        storageClassType: "AwsPolicy.TargetTrackingConfigurationPropertyList",
       },
     };
 
@@ -513,7 +513,7 @@ export class TfPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -525,7 +525,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -550,7 +550,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricProperty): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -558,12 +558,12 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
   return {
     metric_name: cdktn.stringToTerraform(struct!.metricName),
     namespace: cdktn.stringToTerraform(struct!.namespace),
-    dimensions: cdktn.listMapper(tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToTerraform, true)(struct!.dimensions),
+    dimensions: cdktn.listMapper(awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToTerraform, true)(struct!.dimensions),
   }
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricProperty): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,7 +582,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
       storageClassType: "string",
     },
     dimensions: {
-      value: cdktn.listMapperHcl(tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToHclTerraform, true)(struct!.dimensions),
+      value: cdktn.listMapperHcl(awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToHclTerraform, true)(struct!.dimensions),
       isBlock: true,
       type: "set",
       storageClassType: "PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyList",
@@ -594,7 +594,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatProperty): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,12 +602,12 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
   return {
     stat: cdktn.stringToTerraform(struct!.stat),
     unit: cdktn.stringToTerraform(struct!.unit),
-    metric: tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToTerraform(struct!.metric),
+    metric: awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToTerraform(struct!.metric),
   }
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatProperty): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -626,7 +626,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
       storageClassType: "string",
     },
     metric: {
-      value: tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToHclTerraform(struct!.metric),
+      value: awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToHclTerraform(struct!.metric),
       isBlock: true,
       type: "list",
       storageClassType: "PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricPropertyList",
@@ -638,7 +638,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesProperty | cdktn.IResolvable): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -648,12 +648,12 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
     id: cdktn.stringToTerraform(struct!.id),
     label: cdktn.stringToTerraform(struct!.label),
     return_data: cdktn.booleanToTerraform(struct!.returnData),
-    metric_stat: tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyToTerraform(struct!.metricStat),
+    metric_stat: awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyToTerraform(struct!.metricStat),
   }
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesProperty | cdktn.IResolvable): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -684,7 +684,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
       storageClassType: "boolean",
     },
     metric_stat: {
-      value: tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyToHclTerraform(struct!.metricStat),
+      value: awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyToHclTerraform(struct!.metricStat),
       isBlock: true,
       type: "list",
       storageClassType: "PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatPropertyList",
@@ -696,25 +696,25 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyCustomizedCapacityMetricSpecificationPropertyToTerraform(struct?: TfPolicy.CustomizedCapacityMetricSpecificationPropertyOutputReference | TfPolicy.CustomizedCapacityMetricSpecificationProperty): any {
+export function awsPolicyCustomizedCapacityMetricSpecificationPropertyToTerraform(struct?: AwsPolicy.CustomizedCapacityMetricSpecificationPropertyOutputReference | AwsPolicy.CustomizedCapacityMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    metric_data_queries: cdktn.listMapper(tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesPropertyToTerraform, true)(struct!.metricDataQueries),
+    metric_data_queries: cdktn.listMapper(awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesPropertyToTerraform, true)(struct!.metricDataQueries),
   }
 }
 
 
-export function tfPolicyCustomizedCapacityMetricSpecificationPropertyToHclTerraform(struct?: TfPolicy.CustomizedCapacityMetricSpecificationPropertyOutputReference | TfPolicy.CustomizedCapacityMetricSpecificationProperty): any {
+export function awsPolicyCustomizedCapacityMetricSpecificationPropertyToHclTerraform(struct?: AwsPolicy.CustomizedCapacityMetricSpecificationPropertyOutputReference | AwsPolicy.CustomizedCapacityMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     metric_data_queries: {
-      value: cdktn.listMapperHcl(tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesPropertyToHclTerraform, true)(struct!.metricDataQueries),
+      value: cdktn.listMapperHcl(awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesPropertyToHclTerraform, true)(struct!.metricDataQueries),
       isBlock: true,
       type: "list",
       storageClassType: "PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesPropertyList",
@@ -726,7 +726,7 @@ export function tfPolicyCustomizedCapacityMetricSpecificationPropertyToHclTerraf
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -738,7 +738,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -763,7 +763,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricProperty): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -771,12 +771,12 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
   return {
     metric_name: cdktn.stringToTerraform(struct!.metricName),
     namespace: cdktn.stringToTerraform(struct!.namespace),
-    dimensions: cdktn.listMapper(tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToTerraform, true)(struct!.dimensions),
+    dimensions: cdktn.listMapper(awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToTerraform, true)(struct!.dimensions),
   }
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricProperty): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -795,7 +795,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
       storageClassType: "string",
     },
     dimensions: {
-      value: cdktn.listMapperHcl(tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToHclTerraform, true)(struct!.dimensions),
+      value: cdktn.listMapperHcl(awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToHclTerraform, true)(struct!.dimensions),
       isBlock: true,
       type: "set",
       storageClassType: "PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyList",
@@ -807,7 +807,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatProperty): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -815,12 +815,12 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
   return {
     stat: cdktn.stringToTerraform(struct!.stat),
     unit: cdktn.stringToTerraform(struct!.unit),
-    metric: tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToTerraform(struct!.metric),
+    metric: awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToTerraform(struct!.metric),
   }
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatProperty): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -839,7 +839,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
       storageClassType: "string",
     },
     metric: {
-      value: tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToHclTerraform(struct!.metric),
+      value: awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToHclTerraform(struct!.metric),
       isBlock: true,
       type: "list",
       storageClassType: "PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricPropertyList",
@@ -851,7 +851,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesProperty | cdktn.IResolvable): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -861,12 +861,12 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
     id: cdktn.stringToTerraform(struct!.id),
     label: cdktn.stringToTerraform(struct!.label),
     return_data: cdktn.booleanToTerraform(struct!.returnData),
-    metric_stat: tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyToTerraform(struct!.metricStat),
+    metric_stat: awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyToTerraform(struct!.metricStat),
   }
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesProperty | cdktn.IResolvable): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -897,7 +897,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
       storageClassType: "boolean",
     },
     metric_stat: {
-      value: tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyToHclTerraform(struct!.metricStat),
+      value: awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyToHclTerraform(struct!.metricStat),
       isBlock: true,
       type: "list",
       storageClassType: "PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatPropertyList",
@@ -909,25 +909,25 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyCustomizedLoadMetricSpecificationPropertyToTerraform(struct?: TfPolicy.CustomizedLoadMetricSpecificationPropertyOutputReference | TfPolicy.CustomizedLoadMetricSpecificationProperty): any {
+export function awsPolicyCustomizedLoadMetricSpecificationPropertyToTerraform(struct?: AwsPolicy.CustomizedLoadMetricSpecificationPropertyOutputReference | AwsPolicy.CustomizedLoadMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    metric_data_queries: cdktn.listMapper(tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesPropertyToTerraform, true)(struct!.metricDataQueries),
+    metric_data_queries: cdktn.listMapper(awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesPropertyToTerraform, true)(struct!.metricDataQueries),
   }
 }
 
 
-export function tfPolicyCustomizedLoadMetricSpecificationPropertyToHclTerraform(struct?: TfPolicy.CustomizedLoadMetricSpecificationPropertyOutputReference | TfPolicy.CustomizedLoadMetricSpecificationProperty): any {
+export function awsPolicyCustomizedLoadMetricSpecificationPropertyToHclTerraform(struct?: AwsPolicy.CustomizedLoadMetricSpecificationPropertyOutputReference | AwsPolicy.CustomizedLoadMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     metric_data_queries: {
-      value: cdktn.listMapperHcl(tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesPropertyToHclTerraform, true)(struct!.metricDataQueries),
+      value: cdktn.listMapperHcl(awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesPropertyToHclTerraform, true)(struct!.metricDataQueries),
       isBlock: true,
       type: "list",
       storageClassType: "PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesPropertyList",
@@ -939,7 +939,7 @@ export function tfPolicyCustomizedLoadMetricSpecificationPropertyToHclTerraform(
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -951,7 +951,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -976,7 +976,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricProperty): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -984,12 +984,12 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
   return {
     metric_name: cdktn.stringToTerraform(struct!.metricName),
     namespace: cdktn.stringToTerraform(struct!.namespace),
-    dimensions: cdktn.listMapper(tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToTerraform, true)(struct!.dimensions),
+    dimensions: cdktn.listMapper(awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToTerraform, true)(struct!.dimensions),
   }
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricProperty): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1008,7 +1008,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
       storageClassType: "string",
     },
     dimensions: {
-      value: cdktn.listMapperHcl(tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToHclTerraform, true)(struct!.dimensions),
+      value: cdktn.listMapperHcl(awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyToHclTerraform, true)(struct!.dimensions),
       isBlock: true,
       type: "set",
       storageClassType: "PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsPropertyList",
@@ -1020,7 +1020,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatProperty): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1028,12 +1028,12 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
   return {
     stat: cdktn.stringToTerraform(struct!.stat),
     unit: cdktn.stringToTerraform(struct!.unit),
-    metric: tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToTerraform(struct!.metric),
+    metric: awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToTerraform(struct!.metric),
   }
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatProperty): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1052,7 +1052,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
       storageClassType: "string",
     },
     metric: {
-      value: tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToHclTerraform(struct!.metric),
+      value: awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyToHclTerraform(struct!.metric),
       isBlock: true,
       type: "list",
       storageClassType: "PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricPropertyList",
@@ -1064,7 +1064,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesProperty | cdktn.IResolvable): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1074,12 +1074,12 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
     id: cdktn.stringToTerraform(struct!.id),
     label: cdktn.stringToTerraform(struct!.label),
     return_data: cdktn.booleanToTerraform(struct!.returnData),
-    metric_stat: tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyToTerraform(struct!.metricStat),
+    metric_stat: awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyToTerraform(struct!.metricStat),
   }
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesProperty | cdktn.IResolvable): any {
+export function awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1110,7 +1110,7 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
       storageClassType: "boolean",
     },
     metric_stat: {
-      value: tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyToHclTerraform(struct!.metricStat),
+      value: awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyToHclTerraform(struct!.metricStat),
       isBlock: true,
       type: "list",
       storageClassType: "PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatPropertyList",
@@ -1122,25 +1122,25 @@ export function tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomi
 }
 
 
-export function tfPolicyCustomizedScalingMetricSpecificationPropertyToTerraform(struct?: TfPolicy.CustomizedScalingMetricSpecificationPropertyOutputReference | TfPolicy.CustomizedScalingMetricSpecificationProperty): any {
+export function awsPolicyCustomizedScalingMetricSpecificationPropertyToTerraform(struct?: AwsPolicy.CustomizedScalingMetricSpecificationPropertyOutputReference | AwsPolicy.CustomizedScalingMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    metric_data_queries: cdktn.listMapper(tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesPropertyToTerraform, true)(struct!.metricDataQueries),
+    metric_data_queries: cdktn.listMapper(awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesPropertyToTerraform, true)(struct!.metricDataQueries),
   }
 }
 
 
-export function tfPolicyCustomizedScalingMetricSpecificationPropertyToHclTerraform(struct?: TfPolicy.CustomizedScalingMetricSpecificationPropertyOutputReference | TfPolicy.CustomizedScalingMetricSpecificationProperty): any {
+export function awsPolicyCustomizedScalingMetricSpecificationPropertyToHclTerraform(struct?: AwsPolicy.CustomizedScalingMetricSpecificationPropertyOutputReference | AwsPolicy.CustomizedScalingMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     metric_data_queries: {
-      value: cdktn.listMapperHcl(tfPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesPropertyToHclTerraform, true)(struct!.metricDataQueries),
+      value: cdktn.listMapperHcl(awsPolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesPropertyToHclTerraform, true)(struct!.metricDataQueries),
       isBlock: true,
       type: "list",
       storageClassType: "PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesPropertyList",
@@ -1152,7 +1152,7 @@ export function tfPolicyCustomizedScalingMetricSpecificationPropertyToHclTerrafo
 }
 
 
-export function tfPolicyPredefinedLoadMetricSpecificationPropertyToTerraform(struct?: TfPolicy.PredefinedLoadMetricSpecificationPropertyOutputReference | TfPolicy.PredefinedLoadMetricSpecificationProperty): any {
+export function awsPolicyPredefinedLoadMetricSpecificationPropertyToTerraform(struct?: AwsPolicy.PredefinedLoadMetricSpecificationPropertyOutputReference | AwsPolicy.PredefinedLoadMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1164,7 +1164,7 @@ export function tfPolicyPredefinedLoadMetricSpecificationPropertyToTerraform(str
 }
 
 
-export function tfPolicyPredefinedLoadMetricSpecificationPropertyToHclTerraform(struct?: TfPolicy.PredefinedLoadMetricSpecificationPropertyOutputReference | TfPolicy.PredefinedLoadMetricSpecificationProperty): any {
+export function awsPolicyPredefinedLoadMetricSpecificationPropertyToHclTerraform(struct?: AwsPolicy.PredefinedLoadMetricSpecificationPropertyOutputReference | AwsPolicy.PredefinedLoadMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1189,7 +1189,7 @@ export function tfPolicyPredefinedLoadMetricSpecificationPropertyToHclTerraform(
 }
 
 
-export function tfPolicyPredefinedMetricPairSpecificationPropertyToTerraform(struct?: TfPolicy.PredefinedMetricPairSpecificationPropertyOutputReference | TfPolicy.PredefinedMetricPairSpecificationProperty): any {
+export function awsPolicyPredefinedMetricPairSpecificationPropertyToTerraform(struct?: AwsPolicy.PredefinedMetricPairSpecificationPropertyOutputReference | AwsPolicy.PredefinedMetricPairSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1201,7 +1201,7 @@ export function tfPolicyPredefinedMetricPairSpecificationPropertyToTerraform(str
 }
 
 
-export function tfPolicyPredefinedMetricPairSpecificationPropertyToHclTerraform(struct?: TfPolicy.PredefinedMetricPairSpecificationPropertyOutputReference | TfPolicy.PredefinedMetricPairSpecificationProperty): any {
+export function awsPolicyPredefinedMetricPairSpecificationPropertyToHclTerraform(struct?: AwsPolicy.PredefinedMetricPairSpecificationPropertyOutputReference | AwsPolicy.PredefinedMetricPairSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1226,7 +1226,7 @@ export function tfPolicyPredefinedMetricPairSpecificationPropertyToHclTerraform(
 }
 
 
-export function tfPolicyPredefinedScalingMetricSpecificationPropertyToTerraform(struct?: TfPolicy.PredefinedScalingMetricSpecificationPropertyOutputReference | TfPolicy.PredefinedScalingMetricSpecificationProperty): any {
+export function awsPolicyPredefinedScalingMetricSpecificationPropertyToTerraform(struct?: AwsPolicy.PredefinedScalingMetricSpecificationPropertyOutputReference | AwsPolicy.PredefinedScalingMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1238,7 +1238,7 @@ export function tfPolicyPredefinedScalingMetricSpecificationPropertyToTerraform(
 }
 
 
-export function tfPolicyPredefinedScalingMetricSpecificationPropertyToHclTerraform(struct?: TfPolicy.PredefinedScalingMetricSpecificationPropertyOutputReference | TfPolicy.PredefinedScalingMetricSpecificationProperty): any {
+export function awsPolicyPredefinedScalingMetricSpecificationPropertyToHclTerraform(struct?: AwsPolicy.PredefinedScalingMetricSpecificationPropertyOutputReference | AwsPolicy.PredefinedScalingMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1263,24 +1263,24 @@ export function tfPolicyPredefinedScalingMetricSpecificationPropertyToHclTerrafo
 }
 
 
-export function tfPolicyMetricSpecificationPropertyToTerraform(struct?: TfPolicy.MetricSpecificationPropertyOutputReference | TfPolicy.MetricSpecificationProperty): any {
+export function awsPolicyMetricSpecificationPropertyToTerraform(struct?: AwsPolicy.MetricSpecificationPropertyOutputReference | AwsPolicy.MetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     target_value: cdktn.numberToTerraform(struct!.targetValue),
-    customized_capacity_metric_specification: tfPolicyCustomizedCapacityMetricSpecificationPropertyToTerraform(struct!.customizedCapacityMetricSpecification),
-    customized_load_metric_specification: tfPolicyCustomizedLoadMetricSpecificationPropertyToTerraform(struct!.customizedLoadMetricSpecification),
-    customized_scaling_metric_specification: tfPolicyCustomizedScalingMetricSpecificationPropertyToTerraform(struct!.customizedScalingMetricSpecification),
-    predefined_load_metric_specification: tfPolicyPredefinedLoadMetricSpecificationPropertyToTerraform(struct!.predefinedLoadMetricSpecification),
-    predefined_metric_pair_specification: tfPolicyPredefinedMetricPairSpecificationPropertyToTerraform(struct!.predefinedMetricPairSpecification),
-    predefined_scaling_metric_specification: tfPolicyPredefinedScalingMetricSpecificationPropertyToTerraform(struct!.predefinedScalingMetricSpecification),
+    customized_capacity_metric_specification: awsPolicyCustomizedCapacityMetricSpecificationPropertyToTerraform(struct!.customizedCapacityMetricSpecification),
+    customized_load_metric_specification: awsPolicyCustomizedLoadMetricSpecificationPropertyToTerraform(struct!.customizedLoadMetricSpecification),
+    customized_scaling_metric_specification: awsPolicyCustomizedScalingMetricSpecificationPropertyToTerraform(struct!.customizedScalingMetricSpecification),
+    predefined_load_metric_specification: awsPolicyPredefinedLoadMetricSpecificationPropertyToTerraform(struct!.predefinedLoadMetricSpecification),
+    predefined_metric_pair_specification: awsPolicyPredefinedMetricPairSpecificationPropertyToTerraform(struct!.predefinedMetricPairSpecification),
+    predefined_scaling_metric_specification: awsPolicyPredefinedScalingMetricSpecificationPropertyToTerraform(struct!.predefinedScalingMetricSpecification),
   }
 }
 
 
-export function tfPolicyMetricSpecificationPropertyToHclTerraform(struct?: TfPolicy.MetricSpecificationPropertyOutputReference | TfPolicy.MetricSpecificationProperty): any {
+export function awsPolicyMetricSpecificationPropertyToHclTerraform(struct?: AwsPolicy.MetricSpecificationPropertyOutputReference | AwsPolicy.MetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1293,37 +1293,37 @@ export function tfPolicyMetricSpecificationPropertyToHclTerraform(struct?: TfPol
       storageClassType: "number",
     },
     customized_capacity_metric_specification: {
-      value: tfPolicyCustomizedCapacityMetricSpecificationPropertyToHclTerraform(struct!.customizedCapacityMetricSpecification),
+      value: awsPolicyCustomizedCapacityMetricSpecificationPropertyToHclTerraform(struct!.customizedCapacityMetricSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "CustomizedCapacityMetricSpecificationPropertyList",
     },
     customized_load_metric_specification: {
-      value: tfPolicyCustomizedLoadMetricSpecificationPropertyToHclTerraform(struct!.customizedLoadMetricSpecification),
+      value: awsPolicyCustomizedLoadMetricSpecificationPropertyToHclTerraform(struct!.customizedLoadMetricSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "CustomizedLoadMetricSpecificationPropertyList",
     },
     customized_scaling_metric_specification: {
-      value: tfPolicyCustomizedScalingMetricSpecificationPropertyToHclTerraform(struct!.customizedScalingMetricSpecification),
+      value: awsPolicyCustomizedScalingMetricSpecificationPropertyToHclTerraform(struct!.customizedScalingMetricSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "CustomizedScalingMetricSpecificationPropertyList",
     },
     predefined_load_metric_specification: {
-      value: tfPolicyPredefinedLoadMetricSpecificationPropertyToHclTerraform(struct!.predefinedLoadMetricSpecification),
+      value: awsPolicyPredefinedLoadMetricSpecificationPropertyToHclTerraform(struct!.predefinedLoadMetricSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "PredefinedLoadMetricSpecificationPropertyList",
     },
     predefined_metric_pair_specification: {
-      value: tfPolicyPredefinedMetricPairSpecificationPropertyToHclTerraform(struct!.predefinedMetricPairSpecification),
+      value: awsPolicyPredefinedMetricPairSpecificationPropertyToHclTerraform(struct!.predefinedMetricPairSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "PredefinedMetricPairSpecificationPropertyList",
     },
     predefined_scaling_metric_specification: {
-      value: tfPolicyPredefinedScalingMetricSpecificationPropertyToHclTerraform(struct!.predefinedScalingMetricSpecification),
+      value: awsPolicyPredefinedScalingMetricSpecificationPropertyToHclTerraform(struct!.predefinedScalingMetricSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "PredefinedScalingMetricSpecificationPropertyList",
@@ -1335,7 +1335,7 @@ export function tfPolicyMetricSpecificationPropertyToHclTerraform(struct?: TfPol
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationPropertyToTerraform(struct?: TfPolicy.PredictiveScalingConfigurationPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationProperty): any {
+export function awsPolicyPredictiveScalingConfigurationPropertyToTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1345,12 +1345,12 @@ export function tfPolicyPredictiveScalingConfigurationPropertyToTerraform(struct
     max_capacity_buffer: cdktn.stringToTerraform(struct!.maxCapacityBuffer),
     mode: cdktn.stringToTerraform(struct!.mode),
     scheduling_buffer_time: cdktn.stringToTerraform(struct!.schedulingBufferTime),
-    metric_specification: tfPolicyMetricSpecificationPropertyToTerraform(struct!.metricSpecification),
+    metric_specification: awsPolicyMetricSpecificationPropertyToTerraform(struct!.metricSpecification),
   }
 }
 
 
-export function tfPolicyPredictiveScalingConfigurationPropertyToHclTerraform(struct?: TfPolicy.PredictiveScalingConfigurationPropertyOutputReference | TfPolicy.PredictiveScalingConfigurationProperty): any {
+export function awsPolicyPredictiveScalingConfigurationPropertyToHclTerraform(struct?: AwsPolicy.PredictiveScalingConfigurationPropertyOutputReference | AwsPolicy.PredictiveScalingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1381,7 +1381,7 @@ export function tfPolicyPredictiveScalingConfigurationPropertyToHclTerraform(str
       storageClassType: "string",
     },
     metric_specification: {
-      value: tfPolicyMetricSpecificationPropertyToHclTerraform(struct!.metricSpecification),
+      value: awsPolicyMetricSpecificationPropertyToHclTerraform(struct!.metricSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "MetricSpecificationPropertyList",
@@ -1393,7 +1393,7 @@ export function tfPolicyPredictiveScalingConfigurationPropertyToHclTerraform(str
 }
 
 
-export function tfPolicyStepAdjustmentPropertyToTerraform(struct?: TfPolicy.StepAdjustmentProperty | cdktn.IResolvable): any {
+export function awsPolicyStepAdjustmentPropertyToTerraform(struct?: AwsPolicy.StepAdjustmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1406,7 +1406,7 @@ export function tfPolicyStepAdjustmentPropertyToTerraform(struct?: TfPolicy.Step
 }
 
 
-export function tfPolicyStepAdjustmentPropertyToHclTerraform(struct?: TfPolicy.StepAdjustmentProperty | cdktn.IResolvable): any {
+export function awsPolicyStepAdjustmentPropertyToHclTerraform(struct?: AwsPolicy.StepAdjustmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1437,7 +1437,7 @@ export function tfPolicyStepAdjustmentPropertyToHclTerraform(struct?: TfPolicy.S
 }
 
 
-export function tfPolicyMetricDimensionPropertyToTerraform(struct?: TfPolicy.MetricDimensionProperty | cdktn.IResolvable): any {
+export function awsPolicyMetricDimensionPropertyToTerraform(struct?: AwsPolicy.MetricDimensionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1449,7 +1449,7 @@ export function tfPolicyMetricDimensionPropertyToTerraform(struct?: TfPolicy.Met
 }
 
 
-export function tfPolicyMetricDimensionPropertyToHclTerraform(struct?: TfPolicy.MetricDimensionProperty | cdktn.IResolvable): any {
+export function awsPolicyMetricDimensionPropertyToHclTerraform(struct?: AwsPolicy.MetricDimensionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1474,7 +1474,7 @@ export function tfPolicyMetricDimensionPropertyToHclTerraform(struct?: TfPolicy.
 }
 
 
-export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsPropertyToTerraform(struct?: TfPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
+export function awsPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsPropertyToTerraform(struct?: AwsPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1486,7 +1486,7 @@ export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecification
 }
 
 
-export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsPropertyToHclTerraform(struct?: TfPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
+export function awsPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsPropertyToHclTerraform(struct?: AwsPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1511,7 +1511,7 @@ export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecification
 }
 
 
-export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyToTerraform(struct?: TfPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyOutputReference | TfPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricProperty): any {
+export function awsPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyToTerraform(struct?: AwsPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyOutputReference | AwsPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1519,12 +1519,12 @@ export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecification
   return {
     metric_name: cdktn.stringToTerraform(struct!.metricName),
     namespace: cdktn.stringToTerraform(struct!.namespace),
-    dimensions: cdktn.listMapper(tfPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsPropertyToTerraform, true)(struct!.dimensions),
+    dimensions: cdktn.listMapper(awsPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsPropertyToTerraform, true)(struct!.dimensions),
   }
 }
 
 
-export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyToHclTerraform(struct?: TfPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyOutputReference | TfPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricProperty): any {
+export function awsPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyToHclTerraform(struct?: AwsPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyOutputReference | AwsPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1543,7 +1543,7 @@ export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecification
       storageClassType: "string",
     },
     dimensions: {
-      value: cdktn.listMapperHcl(tfPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsPropertyToHclTerraform, true)(struct!.dimensions),
+      value: cdktn.listMapperHcl(awsPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsPropertyToHclTerraform, true)(struct!.dimensions),
       isBlock: true,
       type: "set",
       storageClassType: "TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsPropertyList",
@@ -1555,7 +1555,7 @@ export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecification
 }
 
 
-export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyToTerraform(struct?: TfPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyOutputReference | TfPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatProperty): any {
+export function awsPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyToTerraform(struct?: AwsPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyOutputReference | AwsPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1564,12 +1564,12 @@ export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecification
     period: cdktn.numberToTerraform(struct!.period),
     stat: cdktn.stringToTerraform(struct!.stat),
     unit: cdktn.stringToTerraform(struct!.unit),
-    metric: tfPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyToTerraform(struct!.metric),
+    metric: awsPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyToTerraform(struct!.metric),
   }
 }
 
 
-export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyToHclTerraform(struct?: TfPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyOutputReference | TfPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatProperty): any {
+export function awsPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyToHclTerraform(struct?: AwsPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyOutputReference | AwsPolicy.TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1594,7 +1594,7 @@ export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecification
       storageClassType: "string",
     },
     metric: {
-      value: tfPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyToHclTerraform(struct!.metric),
+      value: awsPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyToHclTerraform(struct!.metric),
       isBlock: true,
       type: "list",
       storageClassType: "TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricPropertyList",
@@ -1606,7 +1606,7 @@ export function tfPolicyTargetTrackingConfigurationCustomizedMetricSpecification
 }
 
 
-export function tfPolicyMetricsPropertyToTerraform(struct?: TfPolicy.MetricsProperty | cdktn.IResolvable): any {
+export function awsPolicyMetricsPropertyToTerraform(struct?: AwsPolicy.MetricsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1616,12 +1616,12 @@ export function tfPolicyMetricsPropertyToTerraform(struct?: TfPolicy.MetricsProp
     id: cdktn.stringToTerraform(struct!.id),
     label: cdktn.stringToTerraform(struct!.label),
     return_data: cdktn.booleanToTerraform(struct!.returnData),
-    metric_stat: tfPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyToTerraform(struct!.metricStat),
+    metric_stat: awsPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyToTerraform(struct!.metricStat),
   }
 }
 
 
-export function tfPolicyMetricsPropertyToHclTerraform(struct?: TfPolicy.MetricsProperty | cdktn.IResolvable): any {
+export function awsPolicyMetricsPropertyToHclTerraform(struct?: AwsPolicy.MetricsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1652,7 +1652,7 @@ export function tfPolicyMetricsPropertyToHclTerraform(struct?: TfPolicy.MetricsP
       storageClassType: "boolean",
     },
     metric_stat: {
-      value: tfPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyToHclTerraform(struct!.metricStat),
+      value: awsPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyToHclTerraform(struct!.metricStat),
       isBlock: true,
       type: "list",
       storageClassType: "TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatPropertyList",
@@ -1664,7 +1664,7 @@ export function tfPolicyMetricsPropertyToHclTerraform(struct?: TfPolicy.MetricsP
 }
 
 
-export function tfPolicyCustomizedMetricSpecificationPropertyToTerraform(struct?: TfPolicy.CustomizedMetricSpecificationPropertyOutputReference | TfPolicy.CustomizedMetricSpecificationProperty): any {
+export function awsPolicyCustomizedMetricSpecificationPropertyToTerraform(struct?: AwsPolicy.CustomizedMetricSpecificationPropertyOutputReference | AwsPolicy.CustomizedMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1675,13 +1675,13 @@ export function tfPolicyCustomizedMetricSpecificationPropertyToTerraform(struct?
     period: cdktn.numberToTerraform(struct!.period),
     statistic: cdktn.stringToTerraform(struct!.statistic),
     unit: cdktn.stringToTerraform(struct!.unit),
-    metric_dimension: cdktn.listMapper(tfPolicyMetricDimensionPropertyToTerraform, true)(struct!.metricDimension),
-    metrics: cdktn.listMapper(tfPolicyMetricsPropertyToTerraform, true)(struct!.metrics),
+    metric_dimension: cdktn.listMapper(awsPolicyMetricDimensionPropertyToTerraform, true)(struct!.metricDimension),
+    metrics: cdktn.listMapper(awsPolicyMetricsPropertyToTerraform, true)(struct!.metrics),
   }
 }
 
 
-export function tfPolicyCustomizedMetricSpecificationPropertyToHclTerraform(struct?: TfPolicy.CustomizedMetricSpecificationPropertyOutputReference | TfPolicy.CustomizedMetricSpecificationProperty): any {
+export function awsPolicyCustomizedMetricSpecificationPropertyToHclTerraform(struct?: AwsPolicy.CustomizedMetricSpecificationPropertyOutputReference | AwsPolicy.CustomizedMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1718,13 +1718,13 @@ export function tfPolicyCustomizedMetricSpecificationPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     metric_dimension: {
-      value: cdktn.listMapperHcl(tfPolicyMetricDimensionPropertyToHclTerraform, true)(struct!.metricDimension),
+      value: cdktn.listMapperHcl(awsPolicyMetricDimensionPropertyToHclTerraform, true)(struct!.metricDimension),
       isBlock: true,
       type: "list",
       storageClassType: "MetricDimensionPropertyList",
     },
     metrics: {
-      value: cdktn.listMapperHcl(tfPolicyMetricsPropertyToHclTerraform, true)(struct!.metrics),
+      value: cdktn.listMapperHcl(awsPolicyMetricsPropertyToHclTerraform, true)(struct!.metrics),
       isBlock: true,
       type: "set",
       storageClassType: "MetricsPropertyList",
@@ -1736,7 +1736,7 @@ export function tfPolicyCustomizedMetricSpecificationPropertyToHclTerraform(stru
 }
 
 
-export function tfPolicyPredefinedMetricSpecificationPropertyToTerraform(struct?: TfPolicy.PredefinedMetricSpecificationPropertyOutputReference | TfPolicy.PredefinedMetricSpecificationProperty): any {
+export function awsPolicyPredefinedMetricSpecificationPropertyToTerraform(struct?: AwsPolicy.PredefinedMetricSpecificationPropertyOutputReference | AwsPolicy.PredefinedMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1748,7 +1748,7 @@ export function tfPolicyPredefinedMetricSpecificationPropertyToTerraform(struct?
 }
 
 
-export function tfPolicyPredefinedMetricSpecificationPropertyToHclTerraform(struct?: TfPolicy.PredefinedMetricSpecificationPropertyOutputReference | TfPolicy.PredefinedMetricSpecificationProperty): any {
+export function awsPolicyPredefinedMetricSpecificationPropertyToHclTerraform(struct?: AwsPolicy.PredefinedMetricSpecificationPropertyOutputReference | AwsPolicy.PredefinedMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1773,7 +1773,7 @@ export function tfPolicyPredefinedMetricSpecificationPropertyToHclTerraform(stru
 }
 
 
-export function tfPolicyTargetTrackingConfigurationPropertyToTerraform(struct?: TfPolicy.TargetTrackingConfigurationPropertyOutputReference | TfPolicy.TargetTrackingConfigurationProperty): any {
+export function awsPolicyTargetTrackingConfigurationPropertyToTerraform(struct?: AwsPolicy.TargetTrackingConfigurationPropertyOutputReference | AwsPolicy.TargetTrackingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1781,13 +1781,13 @@ export function tfPolicyTargetTrackingConfigurationPropertyToTerraform(struct?: 
   return {
     disable_scale_in: cdktn.booleanToTerraform(struct!.disableScaleIn),
     target_value: cdktn.numberToTerraform(struct!.targetValue),
-    customized_metric_specification: tfPolicyCustomizedMetricSpecificationPropertyToTerraform(struct!.customizedMetricSpecification),
-    predefined_metric_specification: tfPolicyPredefinedMetricSpecificationPropertyToTerraform(struct!.predefinedMetricSpecification),
+    customized_metric_specification: awsPolicyCustomizedMetricSpecificationPropertyToTerraform(struct!.customizedMetricSpecification),
+    predefined_metric_specification: awsPolicyPredefinedMetricSpecificationPropertyToTerraform(struct!.predefinedMetricSpecification),
   }
 }
 
 
-export function tfPolicyTargetTrackingConfigurationPropertyToHclTerraform(struct?: TfPolicy.TargetTrackingConfigurationPropertyOutputReference | TfPolicy.TargetTrackingConfigurationProperty): any {
+export function awsPolicyTargetTrackingConfigurationPropertyToHclTerraform(struct?: AwsPolicy.TargetTrackingConfigurationPropertyOutputReference | AwsPolicy.TargetTrackingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1806,13 +1806,13 @@ export function tfPolicyTargetTrackingConfigurationPropertyToHclTerraform(struct
       storageClassType: "number",
     },
     customized_metric_specification: {
-      value: tfPolicyCustomizedMetricSpecificationPropertyToHclTerraform(struct!.customizedMetricSpecification),
+      value: awsPolicyCustomizedMetricSpecificationPropertyToHclTerraform(struct!.customizedMetricSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "CustomizedMetricSpecificationPropertyList",
     },
     predefined_metric_specification: {
-      value: tfPolicyPredefinedMetricSpecificationPropertyToHclTerraform(struct!.predefinedMetricSpecification),
+      value: awsPolicyPredefinedMetricSpecificationPropertyToHclTerraform(struct!.predefinedMetricSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "PredefinedMetricSpecificationPropertyList",
@@ -1824,14 +1824,14 @@ export function tfPolicyTargetTrackingConfigurationPropertyToHclTerraform(struct
 }
 
 
-export namespace TfPolicy {
+export namespace AwsPolicy {
 export interface PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#name TfPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#name AwsPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#value TfPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#value AwsPolicy#value}
   */
   readonly value: string;
 }
@@ -1933,17 +1933,17 @@ export class PredictiveScalingConfigurationMetricSpecificationCustomizedCapacity
 }
 export interface PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_name TfPolicy#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_name AwsPolicy#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#namespace TfPolicy#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#namespace AwsPolicy#namespace}
   */
   readonly namespace: string;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#dimensions TfPolicy#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#dimensions AwsPolicy#dimensions}
   */
   readonly dimensions?: PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty[] | cdktn.IResolvable;
 }
@@ -2035,17 +2035,17 @@ export class PredictiveScalingConfigurationMetricSpecificationCustomizedCapacity
 }
 export interface PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#stat TfPolicy#stat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#stat AwsPolicy#stat}
   */
   readonly stat: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#unit TfPolicy#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#unit AwsPolicy#unit}
   */
   readonly unit?: string;
   /**
   * metric block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric TfPolicy#metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric AwsPolicy#metric}
   */
   readonly metric: PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricProperty;
 }
@@ -2137,28 +2137,28 @@ export class PredictiveScalingConfigurationMetricSpecificationCustomizedCapacity
 }
 export interface PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#expression TfPolicy#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#expression AwsPolicy#expression}
   */
   readonly expression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#id TfPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#id AwsPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#label TfPolicy#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#label AwsPolicy#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#return_data TfPolicy#return_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#return_data AwsPolicy#return_data}
   */
   readonly returnData?: boolean | cdktn.IResolvable;
   /**
   * metric_stat block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_stat TfPolicy#metric_stat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_stat AwsPolicy#metric_stat}
   */
   readonly metricStat?: PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatProperty;
 }
@@ -2331,7 +2331,7 @@ export interface CustomizedCapacityMetricSpecificationProperty {
   /**
   * metric_data_queries block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_data_queries TfPolicy#metric_data_queries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_data_queries AwsPolicy#metric_data_queries}
   */
   readonly metricDataQueries: PredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesProperty[] | cdktn.IResolvable;
 }
@@ -2382,11 +2382,11 @@ export class CustomizedCapacityMetricSpecificationPropertyOutputReference extend
 }
 export interface PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#name TfPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#name AwsPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#value TfPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#value AwsPolicy#value}
   */
   readonly value: string;
 }
@@ -2488,17 +2488,17 @@ export class PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetr
 }
 export interface PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_name TfPolicy#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_name AwsPolicy#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#namespace TfPolicy#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#namespace AwsPolicy#namespace}
   */
   readonly namespace: string;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#dimensions TfPolicy#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#dimensions AwsPolicy#dimensions}
   */
   readonly dimensions?: PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty[] | cdktn.IResolvable;
 }
@@ -2590,17 +2590,17 @@ export class PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetr
 }
 export interface PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#stat TfPolicy#stat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#stat AwsPolicy#stat}
   */
   readonly stat: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#unit TfPolicy#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#unit AwsPolicy#unit}
   */
   readonly unit?: string;
   /**
   * metric block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric TfPolicy#metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric AwsPolicy#metric}
   */
   readonly metric: PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatMetricProperty;
 }
@@ -2692,28 +2692,28 @@ export class PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetr
 }
 export interface PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#expression TfPolicy#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#expression AwsPolicy#expression}
   */
   readonly expression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#id TfPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#id AwsPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#label TfPolicy#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#label AwsPolicy#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#return_data TfPolicy#return_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#return_data AwsPolicy#return_data}
   */
   readonly returnData?: boolean | cdktn.IResolvable;
   /**
   * metric_stat block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_stat TfPolicy#metric_stat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_stat AwsPolicy#metric_stat}
   */
   readonly metricStat?: PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatProperty;
 }
@@ -2886,7 +2886,7 @@ export interface CustomizedLoadMetricSpecificationProperty {
   /**
   * metric_data_queries block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_data_queries TfPolicy#metric_data_queries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_data_queries AwsPolicy#metric_data_queries}
   */
   readonly metricDataQueries: PredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesProperty[] | cdktn.IResolvable;
 }
@@ -2937,11 +2937,11 @@ export class CustomizedLoadMetricSpecificationPropertyOutputReference extends cd
 }
 export interface PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#name TfPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#name AwsPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#value TfPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#value AwsPolicy#value}
   */
   readonly value: string;
 }
@@ -3043,17 +3043,17 @@ export class PredictiveScalingConfigurationMetricSpecificationCustomizedScalingM
 }
 export interface PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_name TfPolicy#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_name AwsPolicy#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#namespace TfPolicy#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#namespace AwsPolicy#namespace}
   */
   readonly namespace: string;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#dimensions TfPolicy#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#dimensions AwsPolicy#dimensions}
   */
   readonly dimensions?: PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensionsProperty[] | cdktn.IResolvable;
 }
@@ -3145,17 +3145,17 @@ export class PredictiveScalingConfigurationMetricSpecificationCustomizedScalingM
 }
 export interface PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#stat TfPolicy#stat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#stat AwsPolicy#stat}
   */
   readonly stat: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#unit TfPolicy#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#unit AwsPolicy#unit}
   */
   readonly unit?: string;
   /**
   * metric block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric TfPolicy#metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric AwsPolicy#metric}
   */
   readonly metric: PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricProperty;
 }
@@ -3247,28 +3247,28 @@ export class PredictiveScalingConfigurationMetricSpecificationCustomizedScalingM
 }
 export interface PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#expression TfPolicy#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#expression AwsPolicy#expression}
   */
   readonly expression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#id TfPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#id AwsPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#label TfPolicy#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#label AwsPolicy#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#return_data TfPolicy#return_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#return_data AwsPolicy#return_data}
   */
   readonly returnData?: boolean | cdktn.IResolvable;
   /**
   * metric_stat block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_stat TfPolicy#metric_stat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_stat AwsPolicy#metric_stat}
   */
   readonly metricStat?: PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatProperty;
 }
@@ -3441,7 +3441,7 @@ export interface CustomizedScalingMetricSpecificationProperty {
   /**
   * metric_data_queries block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_data_queries TfPolicy#metric_data_queries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_data_queries AwsPolicy#metric_data_queries}
   */
   readonly metricDataQueries: PredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesProperty[] | cdktn.IResolvable;
 }
@@ -3492,11 +3492,11 @@ export class CustomizedScalingMetricSpecificationPropertyOutputReference extends
 }
 export interface PredefinedLoadMetricSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_metric_type TfPolicy#predefined_metric_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_metric_type AwsPolicy#predefined_metric_type}
   */
   readonly predefinedMetricType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#resource_label TfPolicy#resource_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#resource_label AwsPolicy#resource_label}
   */
   readonly resourceLabel?: string;
 }
@@ -3569,11 +3569,11 @@ export class PredefinedLoadMetricSpecificationPropertyOutputReference extends cd
 }
 export interface PredefinedMetricPairSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_metric_type TfPolicy#predefined_metric_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_metric_type AwsPolicy#predefined_metric_type}
   */
   readonly predefinedMetricType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#resource_label TfPolicy#resource_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#resource_label AwsPolicy#resource_label}
   */
   readonly resourceLabel?: string;
 }
@@ -3646,11 +3646,11 @@ export class PredefinedMetricPairSpecificationPropertyOutputReference extends cd
 }
 export interface PredefinedScalingMetricSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_metric_type TfPolicy#predefined_metric_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_metric_type AwsPolicy#predefined_metric_type}
   */
   readonly predefinedMetricType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#resource_label TfPolicy#resource_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#resource_label AwsPolicy#resource_label}
   */
   readonly resourceLabel?: string;
 }
@@ -3723,43 +3723,43 @@ export class PredefinedScalingMetricSpecificationPropertyOutputReference extends
 }
 export interface MetricSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#target_value TfPolicy#target_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#target_value AwsPolicy#target_value}
   */
   readonly targetValue: number;
   /**
   * customized_capacity_metric_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#customized_capacity_metric_specification TfPolicy#customized_capacity_metric_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#customized_capacity_metric_specification AwsPolicy#customized_capacity_metric_specification}
   */
   readonly customizedCapacityMetricSpecification?: CustomizedCapacityMetricSpecificationProperty;
   /**
   * customized_load_metric_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#customized_load_metric_specification TfPolicy#customized_load_metric_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#customized_load_metric_specification AwsPolicy#customized_load_metric_specification}
   */
   readonly customizedLoadMetricSpecification?: CustomizedLoadMetricSpecificationProperty;
   /**
   * customized_scaling_metric_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#customized_scaling_metric_specification TfPolicy#customized_scaling_metric_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#customized_scaling_metric_specification AwsPolicy#customized_scaling_metric_specification}
   */
   readonly customizedScalingMetricSpecification?: CustomizedScalingMetricSpecificationProperty;
   /**
   * predefined_load_metric_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_load_metric_specification TfPolicy#predefined_load_metric_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_load_metric_specification AwsPolicy#predefined_load_metric_specification}
   */
   readonly predefinedLoadMetricSpecification?: PredefinedLoadMetricSpecificationProperty;
   /**
   * predefined_metric_pair_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_metric_pair_specification TfPolicy#predefined_metric_pair_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_metric_pair_specification AwsPolicy#predefined_metric_pair_specification}
   */
   readonly predefinedMetricPairSpecification?: PredefinedMetricPairSpecificationProperty;
   /**
   * predefined_scaling_metric_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_scaling_metric_specification TfPolicy#predefined_scaling_metric_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_scaling_metric_specification AwsPolicy#predefined_scaling_metric_specification}
   */
   readonly predefinedScalingMetricSpecification?: PredefinedScalingMetricSpecificationProperty;
 }
@@ -3942,25 +3942,25 @@ export class MetricSpecificationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface PredictiveScalingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#max_capacity_breach_behavior TfPolicy#max_capacity_breach_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#max_capacity_breach_behavior AwsPolicy#max_capacity_breach_behavior}
   */
   readonly maxCapacityBreachBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#max_capacity_buffer TfPolicy#max_capacity_buffer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#max_capacity_buffer AwsPolicy#max_capacity_buffer}
   */
   readonly maxCapacityBuffer?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#mode TfPolicy#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#mode AwsPolicy#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#scheduling_buffer_time TfPolicy#scheduling_buffer_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#scheduling_buffer_time AwsPolicy#scheduling_buffer_time}
   */
   readonly schedulingBufferTime?: string;
   /**
   * metric_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_specification TfPolicy#metric_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_specification AwsPolicy#metric_specification}
   */
   readonly metricSpecification: MetricSpecificationProperty;
 }
@@ -4099,15 +4099,15 @@ export class PredictiveScalingConfigurationPropertyOutputReference extends cdktn
 }
 export interface StepAdjustmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_interval_lower_bound TfPolicy#metric_interval_lower_bound}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_interval_lower_bound AwsPolicy#metric_interval_lower_bound}
   */
   readonly metricIntervalLowerBound?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_interval_upper_bound TfPolicy#metric_interval_upper_bound}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_interval_upper_bound AwsPolicy#metric_interval_upper_bound}
   */
   readonly metricIntervalUpperBound?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#scaling_adjustment TfPolicy#scaling_adjustment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#scaling_adjustment AwsPolicy#scaling_adjustment}
   */
   readonly scalingAdjustment: number;
 }
@@ -4234,11 +4234,11 @@ export class StepAdjustmentPropertyList extends cdktn.ComplexList {
 }
 export interface MetricDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#name TfPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#name AwsPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#value TfPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#value AwsPolicy#value}
   */
   readonly value: string;
 }
@@ -4340,11 +4340,11 @@ export class MetricDimensionPropertyList extends cdktn.ComplexList {
 }
 export interface TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#name TfPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#name AwsPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#value TfPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#value AwsPolicy#value}
   */
   readonly value: string;
 }
@@ -4446,17 +4446,17 @@ export class TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetr
 }
 export interface TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_name TfPolicy#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_name AwsPolicy#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#namespace TfPolicy#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#namespace AwsPolicy#namespace}
   */
   readonly namespace: string;
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#dimensions TfPolicy#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#dimensions AwsPolicy#dimensions}
   */
   readonly dimensions?: TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensionsProperty[] | cdktn.IResolvable;
 }
@@ -4548,21 +4548,21 @@ export class TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetr
 }
 export interface TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#period TfPolicy#period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#period AwsPolicy#period}
   */
   readonly period?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#stat TfPolicy#stat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#stat AwsPolicy#stat}
   */
   readonly stat: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#unit TfPolicy#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#unit AwsPolicy#unit}
   */
   readonly unit?: string;
   /**
   * metric block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric TfPolicy#metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric AwsPolicy#metric}
   */
   readonly metric: TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricProperty;
 }
@@ -4676,28 +4676,28 @@ export class TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetr
 }
 export interface MetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#expression TfPolicy#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#expression AwsPolicy#expression}
   */
   readonly expression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#id TfPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#id AwsPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#label TfPolicy#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#label AwsPolicy#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#return_data TfPolicy#return_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#return_data AwsPolicy#return_data}
   */
   readonly returnData?: boolean | cdktn.IResolvable;
   /**
   * metric_stat block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_stat TfPolicy#metric_stat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_stat AwsPolicy#metric_stat}
   */
   readonly metricStat?: TargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatProperty;
 }
@@ -4868,35 +4868,35 @@ export class MetricsPropertyList extends cdktn.ComplexList {
 }
 export interface CustomizedMetricSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_name TfPolicy#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_name AwsPolicy#metric_name}
   */
   readonly metricName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#namespace TfPolicy#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#namespace AwsPolicy#namespace}
   */
   readonly namespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#period TfPolicy#period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#period AwsPolicy#period}
   */
   readonly period?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#statistic TfPolicy#statistic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#statistic AwsPolicy#statistic}
   */
   readonly statistic?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#unit TfPolicy#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#unit AwsPolicy#unit}
   */
   readonly unit?: string;
   /**
   * metric_dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_dimension TfPolicy#metric_dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metric_dimension AwsPolicy#metric_dimension}
   */
   readonly metricDimension?: MetricDimensionProperty[] | cdktn.IResolvable;
   /**
   * metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metrics TfPolicy#metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#metrics AwsPolicy#metrics}
   */
   readonly metrics?: MetricsProperty[] | cdktn.IResolvable;
 }
@@ -5082,11 +5082,11 @@ export class CustomizedMetricSpecificationPropertyOutputReference extends cdktn.
 }
 export interface PredefinedMetricSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_metric_type TfPolicy#predefined_metric_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_metric_type AwsPolicy#predefined_metric_type}
   */
   readonly predefinedMetricType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#resource_label TfPolicy#resource_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#resource_label AwsPolicy#resource_label}
   */
   readonly resourceLabel?: string;
 }
@@ -5159,23 +5159,23 @@ export class PredefinedMetricSpecificationPropertyOutputReference extends cdktn.
 }
 export interface TargetTrackingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#disable_scale_in TfPolicy#disable_scale_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#disable_scale_in AwsPolicy#disable_scale_in}
   */
   readonly disableScaleIn?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#target_value TfPolicy#target_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#target_value AwsPolicy#target_value}
   */
   readonly targetValue: number;
   /**
   * customized_metric_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#customized_metric_specification TfPolicy#customized_metric_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#customized_metric_specification AwsPolicy#customized_metric_specification}
   */
   readonly customizedMetricSpecification?: CustomizedMetricSpecificationProperty;
   /**
   * predefined_metric_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_metric_specification TfPolicy#predefined_metric_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_policy#predefined_metric_specification AwsPolicy#predefined_metric_specification}
   */
   readonly predefinedMetricSpecification?: PredefinedMetricSpecificationProperty;
 }

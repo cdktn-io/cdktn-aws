@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConfigurationSetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConfigurationSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#id TfConfigurationSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#id AwsConfigurationSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#name TfConfigurationSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#name AwsConfigurationSet#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#region TfConfigurationSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#region AwsConfigurationSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#reputation_metrics_enabled TfConfigurationSet#reputation_metrics_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#reputation_metrics_enabled AwsConfigurationSet#reputation_metrics_enabled}
   */
   readonly reputationMetricsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#sending_enabled TfConfigurationSet#sending_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#sending_enabled AwsConfigurationSet#sending_enabled}
   */
   readonly sendingEnabled?: boolean | cdktn.IResolvable;
   /**
   * delivery_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#delivery_options TfConfigurationSet#delivery_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#delivery_options AwsConfigurationSet#delivery_options}
   */
-  readonly deliveryOptions?: TfConfigurationSet.DeliveryOptionsProperty;
+  readonly deliveryOptions?: AwsConfigurationSet.DeliveryOptionsProperty;
   /**
   * tracking_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#tracking_options TfConfigurationSet#tracking_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#tracking_options AwsConfigurationSet#tracking_options}
   */
-  readonly trackingOptions?: TfConfigurationSet.TrackingOptionsProperty;
+  readonly trackingOptions?: AwsConfigurationSet.TrackingOptionsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set aws_ses_configuration_set}
 */
-export class TfConfigurationSet extends cdktn.TerraformResource {
+export class AwsConfigurationSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfConfigurationSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConfigurationSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConfigurationSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConfigurationSet to import
-  * @param importFromId The id of the existing TfConfigurationSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConfigurationSet to import is found
+  * @param importToId The construct id used in the generated config for the AwsConfigurationSet to import
+  * @param importFromId The id of the existing AwsConfigurationSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConfigurationSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ses_configuration_set", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfConfigurationSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConfigurationSetConfig
+  * @param options AwsConfigurationSetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConfigurationSetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConfigurationSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ses_configuration_set',
       terraformGeneratorMetadata: {
@@ -197,11 +197,11 @@ export class TfConfigurationSet extends cdktn.TerraformResource {
   }
 
   // delivery_options - computed: false, optional: true, required: false
-  private _deliveryOptions = new TfConfigurationSet.DeliveryOptionsPropertyOutputReference(this, "delivery_options");
+  private _deliveryOptions = new AwsConfigurationSet.DeliveryOptionsPropertyOutputReference(this, "delivery_options");
   public get deliveryOptions() {
     return this._deliveryOptions;
   }
-  public putDeliveryOptions(value: TfConfigurationSet.DeliveryOptionsProperty) {
+  public putDeliveryOptions(value: AwsConfigurationSet.DeliveryOptionsProperty) {
     this._deliveryOptions.internalValue = value;
   }
   public resetDeliveryOptions() {
@@ -213,11 +213,11 @@ export class TfConfigurationSet extends cdktn.TerraformResource {
   }
 
   // tracking_options - computed: false, optional: true, required: false
-  private _trackingOptions = new TfConfigurationSet.TrackingOptionsPropertyOutputReference(this, "tracking_options");
+  private _trackingOptions = new AwsConfigurationSet.TrackingOptionsPropertyOutputReference(this, "tracking_options");
   public get trackingOptions() {
     return this._trackingOptions;
   }
-  public putTrackingOptions(value: TfConfigurationSet.TrackingOptionsProperty) {
+  public putTrackingOptions(value: AwsConfigurationSet.TrackingOptionsProperty) {
     this._trackingOptions.internalValue = value;
   }
   public resetTrackingOptions() {
@@ -239,8 +239,8 @@ export class TfConfigurationSet extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       reputation_metrics_enabled: cdktn.booleanToTerraform(this._reputationMetricsEnabled),
       sending_enabled: cdktn.booleanToTerraform(this._sendingEnabled),
-      delivery_options: tfConfigurationSetDeliveryOptionsPropertyToTerraform(this._deliveryOptions.internalValue),
-      tracking_options: tfConfigurationSetTrackingOptionsPropertyToTerraform(this._trackingOptions.internalValue),
+      delivery_options: awsConfigurationSetDeliveryOptionsPropertyToTerraform(this._deliveryOptions.internalValue),
+      tracking_options: awsConfigurationSetTrackingOptionsPropertyToTerraform(this._trackingOptions.internalValue),
     };
   }
 
@@ -277,16 +277,16 @@ export class TfConfigurationSet extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       delivery_options: {
-        value: tfConfigurationSetDeliveryOptionsPropertyToHclTerraform(this._deliveryOptions.internalValue),
+        value: awsConfigurationSetDeliveryOptionsPropertyToHclTerraform(this._deliveryOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConfigurationSet.DeliveryOptionsPropertyList",
+        storageClassType: "AwsConfigurationSet.DeliveryOptionsPropertyList",
       },
       tracking_options: {
-        value: tfConfigurationSetTrackingOptionsPropertyToHclTerraform(this._trackingOptions.internalValue),
+        value: awsConfigurationSetTrackingOptionsPropertyToHclTerraform(this._trackingOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConfigurationSet.TrackingOptionsPropertyList",
+        storageClassType: "AwsConfigurationSet.TrackingOptionsPropertyList",
       },
     };
 
@@ -295,7 +295,7 @@ export class TfConfigurationSet extends cdktn.TerraformResource {
   }
 }
 
-export function tfConfigurationSetDeliveryOptionsPropertyToTerraform(struct?: TfConfigurationSet.DeliveryOptionsPropertyOutputReference | TfConfigurationSet.DeliveryOptionsProperty): any {
+export function awsConfigurationSetDeliveryOptionsPropertyToTerraform(struct?: AwsConfigurationSet.DeliveryOptionsPropertyOutputReference | AwsConfigurationSet.DeliveryOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function tfConfigurationSetDeliveryOptionsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfConfigurationSetDeliveryOptionsPropertyToHclTerraform(struct?: TfConfigurationSet.DeliveryOptionsPropertyOutputReference | TfConfigurationSet.DeliveryOptionsProperty): any {
+export function awsConfigurationSetDeliveryOptionsPropertyToHclTerraform(struct?: AwsConfigurationSet.DeliveryOptionsPropertyOutputReference | AwsConfigurationSet.DeliveryOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function tfConfigurationSetDeliveryOptionsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfConfigurationSetTrackingOptionsPropertyToTerraform(struct?: TfConfigurationSet.TrackingOptionsPropertyOutputReference | TfConfigurationSet.TrackingOptionsProperty): any {
+export function awsConfigurationSetTrackingOptionsPropertyToTerraform(struct?: AwsConfigurationSet.TrackingOptionsPropertyOutputReference | AwsConfigurationSet.TrackingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function tfConfigurationSetTrackingOptionsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfConfigurationSetTrackingOptionsPropertyToHclTerraform(struct?: TfConfigurationSet.TrackingOptionsPropertyOutputReference | TfConfigurationSet.TrackingOptionsProperty): any {
+export function awsConfigurationSetTrackingOptionsPropertyToHclTerraform(struct?: AwsConfigurationSet.TrackingOptionsPropertyOutputReference | AwsConfigurationSet.TrackingOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,10 +355,10 @@ export function tfConfigurationSetTrackingOptionsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfConfigurationSet {
+export namespace AwsConfigurationSet {
 export interface DeliveryOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#tls_policy TfConfigurationSet#tls_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#tls_policy AwsConfigurationSet#tls_policy}
   */
   readonly tlsPolicy?: string;
 }
@@ -412,7 +412,7 @@ export class DeliveryOptionsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TrackingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#custom_redirect_domain TfConfigurationSet#custom_redirect_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_configuration_set#custom_redirect_domain AwsConfigurationSet#custom_redirect_domain}
   */
   readonly customRedirectDomain?: string;
 }

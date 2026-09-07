@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClusterParameterGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsClusterParameterGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#description TfClusterParameterGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#description AwsClusterParameterGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#family TfClusterParameterGroup#family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#family AwsClusterParameterGroup#family}
   */
   readonly family: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#id TfClusterParameterGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#id AwsClusterParameterGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#name TfClusterParameterGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#name AwsClusterParameterGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#name_prefix TfClusterParameterGroup#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#name_prefix AwsClusterParameterGroup#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#region TfClusterParameterGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#region AwsClusterParameterGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#tags TfClusterParameterGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#tags AwsClusterParameterGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#tags_all TfClusterParameterGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#tags_all AwsClusterParameterGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#parameter TfClusterParameterGroup#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#parameter AwsClusterParameterGroup#parameter}
   */
-  readonly parameter?: TfClusterParameterGroup.ParameterProperty[] | cdktn.IResolvable;
+  readonly parameter?: AwsClusterParameterGroup.ParameterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group aws_neptune_cluster_parameter_group}
 */
-export class TfClusterParameterGroup extends cdktn.TerraformResource {
+export class AwsClusterParameterGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfClusterParameterGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfClusterParameterGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsClusterParameterGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfClusterParameterGroup to import
-  * @param importFromId The id of the existing TfClusterParameterGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfClusterParameterGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsClusterParameterGroup to import
+  * @param importFromId The id of the existing AwsClusterParameterGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsClusterParameterGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_neptune_cluster_parameter_group", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfClusterParameterGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClusterParameterGroupConfig
+  * @param options AwsClusterParameterGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfClusterParameterGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsClusterParameterGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_neptune_cluster_parameter_group',
       terraformGeneratorMetadata: {
@@ -248,11 +248,11 @@ export class TfClusterParameterGroup extends cdktn.TerraformResource {
   }
 
   // parameter - computed: false, optional: true, required: false
-  private _parameter = new TfClusterParameterGroup.ParameterPropertyList(this, "parameter", true);
+  private _parameter = new AwsClusterParameterGroup.ParameterPropertyList(this, "parameter", true);
   public get parameter() {
     return this._parameter;
   }
-  public putParameter(value: TfClusterParameterGroup.ParameterProperty[] | cdktn.IResolvable) {
+  public putParameter(value: AwsClusterParameterGroup.ParameterProperty[] | cdktn.IResolvable) {
     this._parameter.internalValue = value;
   }
   public resetParameter() {
@@ -277,7 +277,7 @@ export class TfClusterParameterGroup extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      parameter: cdktn.listMapper(tfClusterParameterGroupParameterPropertyToTerraform, true)(this._parameter.internalValue),
+      parameter: cdktn.listMapper(awsClusterParameterGroupParameterPropertyToTerraform, true)(this._parameter.internalValue),
     };
   }
 
@@ -332,10 +332,10 @@ export class TfClusterParameterGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       parameter: {
-        value: cdktn.listMapperHcl(tfClusterParameterGroupParameterPropertyToHclTerraform, true)(this._parameter.internalValue),
+        value: cdktn.listMapperHcl(awsClusterParameterGroupParameterPropertyToHclTerraform, true)(this._parameter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfClusterParameterGroup.ParameterPropertyList",
+        storageClassType: "AwsClusterParameterGroup.ParameterPropertyList",
       },
     };
 
@@ -344,7 +344,7 @@ export class TfClusterParameterGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfClusterParameterGroupParameterPropertyToTerraform(struct?: TfClusterParameterGroup.ParameterProperty | cdktn.IResolvable): any {
+export function awsClusterParameterGroupParameterPropertyToTerraform(struct?: AwsClusterParameterGroup.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function tfClusterParameterGroupParameterPropertyToTerraform(struct?: TfC
 }
 
 
-export function tfClusterParameterGroupParameterPropertyToHclTerraform(struct?: TfClusterParameterGroup.ParameterProperty | cdktn.IResolvable): any {
+export function awsClusterParameterGroupParameterPropertyToHclTerraform(struct?: AwsClusterParameterGroup.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,18 +388,18 @@ export function tfClusterParameterGroupParameterPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfClusterParameterGroup {
+export namespace AwsClusterParameterGroup {
 export interface ParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#apply_method TfClusterParameterGroup#apply_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#apply_method AwsClusterParameterGroup#apply_method}
   */
   readonly applyMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#name TfClusterParameterGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#name AwsClusterParameterGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#value TfClusterParameterGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_cluster_parameter_group#value AwsClusterParameterGroup#value}
   */
   readonly value: string;
 }

@@ -5,82 +5,82 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfKxDataviewConfig extends cdktn.TerraformMetaArguments {
+export interface AwsKxDataviewConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#auto_update TfKxDataview#auto_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#auto_update AwsKxDataview#auto_update}
   */
   readonly autoUpdate: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#availability_zone_id TfKxDataview#availability_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#availability_zone_id AwsKxDataview#availability_zone_id}
   */
   readonly availabilityZoneId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#az_mode TfKxDataview#az_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#az_mode AwsKxDataview#az_mode}
   */
   readonly azMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#changeset_id TfKxDataview#changeset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#changeset_id AwsKxDataview#changeset_id}
   */
   readonly changesetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#database_name TfKxDataview#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#database_name AwsKxDataview#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#description TfKxDataview#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#description AwsKxDataview#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#environment_id TfKxDataview#environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#environment_id AwsKxDataview#environment_id}
   */
   readonly environmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#id TfKxDataview#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#id AwsKxDataview#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#name TfKxDataview#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#name AwsKxDataview#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#read_write TfKxDataview#read_write}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#read_write AwsKxDataview#read_write}
   */
   readonly readWrite?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#region TfKxDataview#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#region AwsKxDataview#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#tags TfKxDataview#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#tags AwsKxDataview#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#tags_all TfKxDataview#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#tags_all AwsKxDataview#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * segment_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#segment_configurations TfKxDataview#segment_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#segment_configurations AwsKxDataview#segment_configurations}
   */
-  readonly segmentConfigurations?: TfKxDataview.SegmentConfigurationsProperty[] | cdktn.IResolvable;
+  readonly segmentConfigurations?: AwsKxDataview.SegmentConfigurationsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#timeouts TfKxDataview#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#timeouts AwsKxDataview#timeouts}
   */
-  readonly timeouts?: TfKxDataview.TimeoutsProperty;
+  readonly timeouts?: AwsKxDataview.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview aws_finspace_kx_dataview}
 */
-export class TfKxDataview extends cdktn.TerraformResource {
+export class AwsKxDataview extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -91,11 +91,11 @@ export class TfKxDataview extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfKxDataview resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsKxDataview resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfKxDataview to import
-  * @param importFromId The id of the existing TfKxDataview that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfKxDataview to import is found
+  * @param importToId The construct id used in the generated config for the AwsKxDataview to import
+  * @param importFromId The id of the existing AwsKxDataview that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsKxDataview to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_finspace_kx_dataview", importId: importFromId, provider });
@@ -110,9 +110,9 @@ export class TfKxDataview extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfKxDataviewConfig
+  * @param options AwsKxDataviewConfig
   */
-  public constructor(scope: Construct, id: string, config: TfKxDataviewConfig) {
+  public constructor(scope: Construct, id: string, config: AwsKxDataviewConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_finspace_kx_dataview',
       terraformGeneratorMetadata: {
@@ -363,11 +363,11 @@ export class TfKxDataview extends cdktn.TerraformResource {
   }
 
   // segment_configurations - computed: false, optional: true, required: false
-  private _segmentConfigurations = new TfKxDataview.SegmentConfigurationsPropertyList(this, "segment_configurations", false);
+  private _segmentConfigurations = new AwsKxDataview.SegmentConfigurationsPropertyList(this, "segment_configurations", false);
   public get segmentConfigurations() {
     return this._segmentConfigurations;
   }
-  public putSegmentConfigurations(value: TfKxDataview.SegmentConfigurationsProperty[] | cdktn.IResolvable) {
+  public putSegmentConfigurations(value: AwsKxDataview.SegmentConfigurationsProperty[] | cdktn.IResolvable) {
     this._segmentConfigurations.internalValue = value;
   }
   public resetSegmentConfigurations() {
@@ -379,11 +379,11 @@ export class TfKxDataview extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfKxDataview.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsKxDataview.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfKxDataview.TimeoutsProperty) {
+  public putTimeouts(value: AwsKxDataview.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -413,8 +413,8 @@ export class TfKxDataview extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      segment_configurations: cdktn.listMapper(tfKxDataviewSegmentConfigurationsPropertyToTerraform, true)(this._segmentConfigurations.internalValue),
-      timeouts: tfKxDataviewTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      segment_configurations: cdktn.listMapper(awsKxDataviewSegmentConfigurationsPropertyToTerraform, true)(this._segmentConfigurations.internalValue),
+      timeouts: awsKxDataviewTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -499,16 +499,16 @@ export class TfKxDataview extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       segment_configurations: {
-        value: cdktn.listMapperHcl(tfKxDataviewSegmentConfigurationsPropertyToHclTerraform, true)(this._segmentConfigurations.internalValue),
+        value: cdktn.listMapperHcl(awsKxDataviewSegmentConfigurationsPropertyToHclTerraform, true)(this._segmentConfigurations.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfKxDataview.SegmentConfigurationsPropertyList",
+        storageClassType: "AwsKxDataview.SegmentConfigurationsPropertyList",
       },
       timeouts: {
-        value: tfKxDataviewTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsKxDataviewTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfKxDataview.TimeoutsProperty",
+        storageClassType: "AwsKxDataview.TimeoutsProperty",
       },
     };
 
@@ -517,7 +517,7 @@ export class TfKxDataview extends cdktn.TerraformResource {
   }
 }
 
-export function tfKxDataviewSegmentConfigurationsPropertyToTerraform(struct?: TfKxDataview.SegmentConfigurationsProperty | cdktn.IResolvable): any {
+export function awsKxDataviewSegmentConfigurationsPropertyToTerraform(struct?: AwsKxDataview.SegmentConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -530,7 +530,7 @@ export function tfKxDataviewSegmentConfigurationsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfKxDataviewSegmentConfigurationsPropertyToHclTerraform(struct?: TfKxDataview.SegmentConfigurationsProperty | cdktn.IResolvable): any {
+export function awsKxDataviewSegmentConfigurationsPropertyToHclTerraform(struct?: AwsKxDataview.SegmentConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -561,7 +561,7 @@ export function tfKxDataviewSegmentConfigurationsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfKxDataviewTimeoutsPropertyToTerraform(struct?: TfKxDataview.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsKxDataviewTimeoutsPropertyToTerraform(struct?: AwsKxDataview.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function tfKxDataviewTimeoutsPropertyToTerraform(struct?: TfKxDataview.Ti
 }
 
 
-export function tfKxDataviewTimeoutsPropertyToHclTerraform(struct?: TfKxDataview.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsKxDataviewTimeoutsPropertyToHclTerraform(struct?: AwsKxDataview.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,18 +605,18 @@ export function tfKxDataviewTimeoutsPropertyToHclTerraform(struct?: TfKxDataview
 }
 
 
-export namespace TfKxDataview {
+export namespace AwsKxDataview {
 export interface SegmentConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#db_paths TfKxDataview#db_paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#db_paths AwsKxDataview#db_paths}
   */
   readonly dbPaths: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#on_demand TfKxDataview#on_demand}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#on_demand AwsKxDataview#on_demand}
   */
   readonly onDemand?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#volume_name TfKxDataview#volume_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#volume_name AwsKxDataview#volume_name}
   */
   readonly volumeName: string;
 }
@@ -740,15 +740,15 @@ export class SegmentConfigurationsPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#create TfKxDataview#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#create AwsKxDataview#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#delete TfKxDataview#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#delete AwsKxDataview#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#update TfKxDataview#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#update AwsKxDataview#update}
   */
   readonly update?: string;
 }

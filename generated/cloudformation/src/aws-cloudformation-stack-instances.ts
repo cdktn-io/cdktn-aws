@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfStackInstancesConfig extends cdktn.TerraformMetaArguments {
+export interface AwsStackInstancesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#accounts TfStackInstances#accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#accounts AwsStackInstances#accounts}
   */
   readonly accounts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#call_as TfStackInstances#call_as}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#call_as AwsStackInstances#call_as}
   */
   readonly callAs?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#id TfStackInstances#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#id AwsStackInstances#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#parameter_overrides TfStackInstances#parameter_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#parameter_overrides AwsStackInstances#parameter_overrides}
   */
   readonly parameterOverrides?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#region TfStackInstances#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#region AwsStackInstances#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#regions TfStackInstances#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#regions AwsStackInstances#regions}
   */
   readonly regions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#retain_stacks TfStackInstances#retain_stacks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#retain_stacks AwsStackInstances#retain_stacks}
   */
   readonly retainStacks?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#stack_set_name TfStackInstances#stack_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#stack_set_name AwsStackInstances#stack_set_name}
   */
   readonly stackSetName: string;
   /**
   * deployment_targets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#deployment_targets TfStackInstances#deployment_targets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#deployment_targets AwsStackInstances#deployment_targets}
   */
-  readonly deploymentTargets?: TfStackInstances.DeploymentTargetsProperty;
+  readonly deploymentTargets?: AwsStackInstances.DeploymentTargetsProperty;
   /**
   * operation_preferences block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#operation_preferences TfStackInstances#operation_preferences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#operation_preferences AwsStackInstances#operation_preferences}
   */
-  readonly operationPreferences?: TfStackInstances.OperationPreferencesProperty;
+  readonly operationPreferences?: AwsStackInstances.OperationPreferencesProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#timeouts TfStackInstances#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#timeouts AwsStackInstances#timeouts}
   */
-  readonly timeouts?: TfStackInstances.TimeoutsProperty;
+  readonly timeouts?: AwsStackInstances.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances aws_cloudformation_stack_instances}
 */
-export class TfStackInstances extends cdktn.TerraformResource {
+export class AwsStackInstances extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class TfStackInstances extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfStackInstances resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsStackInstances resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfStackInstances to import
-  * @param importFromId The id of the existing TfStackInstances that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfStackInstances to import is found
+  * @param importToId The construct id used in the generated config for the AwsStackInstances to import
+  * @param importFromId The id of the existing AwsStackInstances that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStackInstances to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudformation_stack_instances", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class TfStackInstances extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfStackInstancesConfig
+  * @param options AwsStackInstancesConfig
   */
-  public constructor(scope: Construct, id: string, config: TfStackInstancesConfig) {
+  public constructor(scope: Construct, id: string, config: AwsStackInstancesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudformation_stack_instances',
       terraformGeneratorMetadata: {
@@ -244,7 +244,7 @@ export class TfStackInstances extends cdktn.TerraformResource {
   }
 
   // stack_instance_summaries - computed: true, optional: false, required: false
-  private _stackInstanceSummaries = new TfStackInstances.StackInstanceSummariesPropertyList(this, "stack_instance_summaries", false);
+  private _stackInstanceSummaries = new AwsStackInstances.StackInstanceSummariesPropertyList(this, "stack_instance_summaries", false);
   public get stackInstanceSummaries() {
     return this._stackInstanceSummaries;
   }
@@ -268,11 +268,11 @@ export class TfStackInstances extends cdktn.TerraformResource {
   }
 
   // deployment_targets - computed: false, optional: true, required: false
-  private _deploymentTargets = new TfStackInstances.DeploymentTargetsPropertyOutputReference(this, "deployment_targets");
+  private _deploymentTargets = new AwsStackInstances.DeploymentTargetsPropertyOutputReference(this, "deployment_targets");
   public get deploymentTargets() {
     return this._deploymentTargets;
   }
-  public putDeploymentTargets(value: TfStackInstances.DeploymentTargetsProperty) {
+  public putDeploymentTargets(value: AwsStackInstances.DeploymentTargetsProperty) {
     this._deploymentTargets.internalValue = value;
   }
   public resetDeploymentTargets() {
@@ -284,11 +284,11 @@ export class TfStackInstances extends cdktn.TerraformResource {
   }
 
   // operation_preferences - computed: false, optional: true, required: false
-  private _operationPreferences = new TfStackInstances.OperationPreferencesPropertyOutputReference(this, "operation_preferences");
+  private _operationPreferences = new AwsStackInstances.OperationPreferencesPropertyOutputReference(this, "operation_preferences");
   public get operationPreferences() {
     return this._operationPreferences;
   }
-  public putOperationPreferences(value: TfStackInstances.OperationPreferencesProperty) {
+  public putOperationPreferences(value: AwsStackInstances.OperationPreferencesProperty) {
     this._operationPreferences.internalValue = value;
   }
   public resetOperationPreferences() {
@@ -300,11 +300,11 @@ export class TfStackInstances extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfStackInstances.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsStackInstances.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfStackInstances.TimeoutsProperty) {
+  public putTimeouts(value: AwsStackInstances.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -329,9 +329,9 @@ export class TfStackInstances extends cdktn.TerraformResource {
       regions: cdktn.listMapper(cdktn.stringToTerraform, false)(this._regions),
       retain_stacks: cdktn.booleanToTerraform(this._retainStacks),
       stack_set_name: cdktn.stringToTerraform(this._stackSetName),
-      deployment_targets: tfStackInstancesDeploymentTargetsPropertyToTerraform(this._deploymentTargets.internalValue),
-      operation_preferences: tfStackInstancesOperationPreferencesPropertyToTerraform(this._operationPreferences.internalValue),
-      timeouts: tfStackInstancesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      deployment_targets: awsStackInstancesDeploymentTargetsPropertyToTerraform(this._deploymentTargets.internalValue),
+      operation_preferences: awsStackInstancesOperationPreferencesPropertyToTerraform(this._operationPreferences.internalValue),
+      timeouts: awsStackInstancesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -386,22 +386,22 @@ export class TfStackInstances extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       deployment_targets: {
-        value: tfStackInstancesDeploymentTargetsPropertyToHclTerraform(this._deploymentTargets.internalValue),
+        value: awsStackInstancesDeploymentTargetsPropertyToHclTerraform(this._deploymentTargets.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStackInstances.DeploymentTargetsPropertyList",
+        storageClassType: "AwsStackInstances.DeploymentTargetsPropertyList",
       },
       operation_preferences: {
-        value: tfStackInstancesOperationPreferencesPropertyToHclTerraform(this._operationPreferences.internalValue),
+        value: awsStackInstancesOperationPreferencesPropertyToHclTerraform(this._operationPreferences.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStackInstances.OperationPreferencesPropertyList",
+        storageClassType: "AwsStackInstances.OperationPreferencesPropertyList",
       },
       timeouts: {
-        value: tfStackInstancesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsStackInstancesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfStackInstances.TimeoutsProperty",
+        storageClassType: "AwsStackInstances.TimeoutsProperty",
       },
     };
 
@@ -410,7 +410,7 @@ export class TfStackInstances extends cdktn.TerraformResource {
   }
 }
 
-export function tfStackInstancesStackInstanceSummariesPropertyToTerraform(struct?: TfStackInstances.StackInstanceSummariesProperty): any {
+export function awsStackInstancesStackInstanceSummariesPropertyToTerraform(struct?: AwsStackInstances.StackInstanceSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function tfStackInstancesStackInstanceSummariesPropertyToTerraform(struct
 }
 
 
-export function tfStackInstancesStackInstanceSummariesPropertyToHclTerraform(struct?: TfStackInstances.StackInstanceSummariesProperty): any {
+export function awsStackInstancesStackInstanceSummariesPropertyToHclTerraform(struct?: AwsStackInstances.StackInstanceSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function tfStackInstancesStackInstanceSummariesPropertyToHclTerraform(str
 }
 
 
-export function tfStackInstancesDeploymentTargetsPropertyToTerraform(struct?: TfStackInstances.DeploymentTargetsPropertyOutputReference | TfStackInstances.DeploymentTargetsProperty): any {
+export function awsStackInstancesDeploymentTargetsPropertyToTerraform(struct?: AwsStackInstances.DeploymentTargetsPropertyOutputReference | AwsStackInstances.DeploymentTargetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function tfStackInstancesDeploymentTargetsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfStackInstancesDeploymentTargetsPropertyToHclTerraform(struct?: TfStackInstances.DeploymentTargetsPropertyOutputReference | TfStackInstances.DeploymentTargetsProperty): any {
+export function awsStackInstancesDeploymentTargetsPropertyToHclTerraform(struct?: AwsStackInstances.DeploymentTargetsPropertyOutputReference | AwsStackInstances.DeploymentTargetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,7 +482,7 @@ export function tfStackInstancesDeploymentTargetsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfStackInstancesOperationPreferencesPropertyToTerraform(struct?: TfStackInstances.OperationPreferencesPropertyOutputReference | TfStackInstances.OperationPreferencesProperty): any {
+export function awsStackInstancesOperationPreferencesPropertyToTerraform(struct?: AwsStackInstances.OperationPreferencesPropertyOutputReference | AwsStackInstances.OperationPreferencesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -499,7 +499,7 @@ export function tfStackInstancesOperationPreferencesPropertyToTerraform(struct?:
 }
 
 
-export function tfStackInstancesOperationPreferencesPropertyToHclTerraform(struct?: TfStackInstances.OperationPreferencesPropertyOutputReference | TfStackInstances.OperationPreferencesProperty): any {
+export function awsStackInstancesOperationPreferencesPropertyToHclTerraform(struct?: AwsStackInstances.OperationPreferencesPropertyOutputReference | AwsStackInstances.OperationPreferencesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -554,7 +554,7 @@ export function tfStackInstancesOperationPreferencesPropertyToHclTerraform(struc
 }
 
 
-export function tfStackInstancesTimeoutsPropertyToTerraform(struct?: TfStackInstances.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsStackInstancesTimeoutsPropertyToTerraform(struct?: AwsStackInstances.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -567,7 +567,7 @@ export function tfStackInstancesTimeoutsPropertyToTerraform(struct?: TfStackInst
 }
 
 
-export function tfStackInstancesTimeoutsPropertyToHclTerraform(struct?: TfStackInstances.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsStackInstancesTimeoutsPropertyToHclTerraform(struct?: AwsStackInstances.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -598,7 +598,7 @@ export function tfStackInstancesTimeoutsPropertyToHclTerraform(struct?: TfStackI
 }
 
 
-export namespace TfStackInstances {
+export namespace AwsStackInstances {
 export interface StackInstanceSummariesProperty {
 }
 export class StackInstanceSummariesPropertyOutputReference extends cdktn.ComplexObject {
@@ -695,19 +695,19 @@ export class StackInstanceSummariesPropertyList extends cdktn.ComplexList {
 }
 export interface DeploymentTargetsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#account_filter_type TfStackInstances#account_filter_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#account_filter_type AwsStackInstances#account_filter_type}
   */
   readonly accountFilterType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#accounts TfStackInstances#accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#accounts AwsStackInstances#accounts}
   */
   readonly accounts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#accounts_url TfStackInstances#accounts_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#accounts_url AwsStackInstances#accounts_url}
   */
   readonly accountsUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#organizational_unit_ids TfStackInstances#organizational_unit_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#organizational_unit_ids AwsStackInstances#organizational_unit_ids}
   */
   readonly organizationalUnitIds?: string[];
 }
@@ -827,31 +827,31 @@ export class DeploymentTargetsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface OperationPreferencesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#concurrency_mode TfStackInstances#concurrency_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#concurrency_mode AwsStackInstances#concurrency_mode}
   */
   readonly concurrencyMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#failure_tolerance_count TfStackInstances#failure_tolerance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#failure_tolerance_count AwsStackInstances#failure_tolerance_count}
   */
   readonly failureToleranceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#failure_tolerance_percentage TfStackInstances#failure_tolerance_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#failure_tolerance_percentage AwsStackInstances#failure_tolerance_percentage}
   */
   readonly failureTolerancePercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#max_concurrent_count TfStackInstances#max_concurrent_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#max_concurrent_count AwsStackInstances#max_concurrent_count}
   */
   readonly maxConcurrentCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#max_concurrent_percentage TfStackInstances#max_concurrent_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#max_concurrent_percentage AwsStackInstances#max_concurrent_percentage}
   */
   readonly maxConcurrentPercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#region_concurrency_type TfStackInstances#region_concurrency_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#region_concurrency_type AwsStackInstances#region_concurrency_type}
   */
   readonly regionConcurrencyType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#region_order TfStackInstances#region_order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#region_order AwsStackInstances#region_order}
   */
   readonly regionOrder?: string[];
 }
@@ -1037,15 +1037,15 @@ export class OperationPreferencesPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#create TfStackInstances#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#create AwsStackInstances#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#delete TfStackInstances#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#delete AwsStackInstances#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#update TfStackInstances#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudformation_stack_instances#update AwsStackInstances#update}
   */
   readonly update?: string;
 }

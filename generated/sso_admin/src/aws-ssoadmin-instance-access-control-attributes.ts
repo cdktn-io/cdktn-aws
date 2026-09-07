@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfInstanceAccessControlAttributesConfig extends cdktn.TerraformMetaArguments {
+export interface AwsInstanceAccessControlAttributesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#id TfInstanceAccessControlAttributes#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#id AwsInstanceAccessControlAttributes#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#instance_arn TfInstanceAccessControlAttributes#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#instance_arn AwsInstanceAccessControlAttributes#instance_arn}
   */
   readonly instanceArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#region TfInstanceAccessControlAttributes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#region AwsInstanceAccessControlAttributes#region}
   */
   readonly region?: string;
   /**
   * attribute block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#attribute TfInstanceAccessControlAttributes#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#attribute AwsInstanceAccessControlAttributes#attribute}
   */
-  readonly attribute: TfInstanceAccessControlAttributes.AttributeProperty[] | cdktn.IResolvable;
+  readonly attribute: AwsInstanceAccessControlAttributes.AttributeProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes aws_ssoadmin_instance_access_control_attributes}
 */
-export class TfInstanceAccessControlAttributes extends cdktn.TerraformResource {
+export class AwsInstanceAccessControlAttributes extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfInstanceAccessControlAttributes extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfInstanceAccessControlAttributes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsInstanceAccessControlAttributes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfInstanceAccessControlAttributes to import
-  * @param importFromId The id of the existing TfInstanceAccessControlAttributes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfInstanceAccessControlAttributes to import is found
+  * @param importToId The construct id used in the generated config for the AwsInstanceAccessControlAttributes to import
+  * @param importFromId The id of the existing AwsInstanceAccessControlAttributes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsInstanceAccessControlAttributes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_instance_access_control_attributes", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfInstanceAccessControlAttributes extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfInstanceAccessControlAttributesConfig
+  * @param options AwsInstanceAccessControlAttributesConfig
   */
-  public constructor(scope: Construct, id: string, config: TfInstanceAccessControlAttributesConfig) {
+  public constructor(scope: Construct, id: string, config: AwsInstanceAccessControlAttributesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_instance_access_control_attributes',
       terraformGeneratorMetadata: {
@@ -148,11 +148,11 @@ export class TfInstanceAccessControlAttributes extends cdktn.TerraformResource {
   }
 
   // attribute - computed: false, optional: false, required: true
-  private _attribute = new TfInstanceAccessControlAttributes.AttributePropertyList(this, "attribute", true);
+  private _attribute = new AwsInstanceAccessControlAttributes.AttributePropertyList(this, "attribute", true);
   public get attribute() {
     return this._attribute;
   }
-  public putAttribute(value: TfInstanceAccessControlAttributes.AttributeProperty[] | cdktn.IResolvable) {
+  public putAttribute(value: AwsInstanceAccessControlAttributes.AttributeProperty[] | cdktn.IResolvable) {
     this._attribute.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -169,7 +169,7 @@ export class TfInstanceAccessControlAttributes extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       instance_arn: cdktn.stringToTerraform(this._instanceArn),
       region: cdktn.stringToTerraform(this._region),
-      attribute: cdktn.listMapper(tfInstanceAccessControlAttributesAttributePropertyToTerraform, true)(this._attribute.internalValue),
+      attribute: cdktn.listMapper(awsInstanceAccessControlAttributesAttributePropertyToTerraform, true)(this._attribute.internalValue),
     };
   }
 
@@ -194,10 +194,10 @@ export class TfInstanceAccessControlAttributes extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       attribute: {
-        value: cdktn.listMapperHcl(tfInstanceAccessControlAttributesAttributePropertyToHclTerraform, true)(this._attribute.internalValue),
+        value: cdktn.listMapperHcl(awsInstanceAccessControlAttributesAttributePropertyToHclTerraform, true)(this._attribute.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfInstanceAccessControlAttributes.AttributePropertyList",
+        storageClassType: "AwsInstanceAccessControlAttributes.AttributePropertyList",
       },
     };
 
@@ -206,7 +206,7 @@ export class TfInstanceAccessControlAttributes extends cdktn.TerraformResource {
   }
 }
 
-export function tfInstanceAccessControlAttributesValuePropertyToTerraform(struct?: TfInstanceAccessControlAttributes.ValueProperty | cdktn.IResolvable): any {
+export function awsInstanceAccessControlAttributesValuePropertyToTerraform(struct?: AwsInstanceAccessControlAttributes.ValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -217,7 +217,7 @@ export function tfInstanceAccessControlAttributesValuePropertyToTerraform(struct
 }
 
 
-export function tfInstanceAccessControlAttributesValuePropertyToHclTerraform(struct?: TfInstanceAccessControlAttributes.ValueProperty | cdktn.IResolvable): any {
+export function awsInstanceAccessControlAttributesValuePropertyToHclTerraform(struct?: AwsInstanceAccessControlAttributes.ValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,19 +236,19 @@ export function tfInstanceAccessControlAttributesValuePropertyToHclTerraform(str
 }
 
 
-export function tfInstanceAccessControlAttributesAttributePropertyToTerraform(struct?: TfInstanceAccessControlAttributes.AttributeProperty | cdktn.IResolvable): any {
+export function awsInstanceAccessControlAttributesAttributePropertyToTerraform(struct?: AwsInstanceAccessControlAttributes.AttributeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     key: cdktn.stringToTerraform(struct!.key),
-    value: cdktn.listMapper(tfInstanceAccessControlAttributesValuePropertyToTerraform, true)(struct!.value),
+    value: cdktn.listMapper(awsInstanceAccessControlAttributesValuePropertyToTerraform, true)(struct!.value),
   }
 }
 
 
-export function tfInstanceAccessControlAttributesAttributePropertyToHclTerraform(struct?: TfInstanceAccessControlAttributes.AttributeProperty | cdktn.IResolvable): any {
+export function awsInstanceAccessControlAttributesAttributePropertyToHclTerraform(struct?: AwsInstanceAccessControlAttributes.AttributeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function tfInstanceAccessControlAttributesAttributePropertyToHclTerraform
       storageClassType: "string",
     },
     value: {
-      value: cdktn.listMapperHcl(tfInstanceAccessControlAttributesValuePropertyToHclTerraform, true)(struct!.value),
+      value: cdktn.listMapperHcl(awsInstanceAccessControlAttributesValuePropertyToHclTerraform, true)(struct!.value),
       isBlock: true,
       type: "set",
       storageClassType: "ValuePropertyList",
@@ -273,10 +273,10 @@ export function tfInstanceAccessControlAttributesAttributePropertyToHclTerraform
 }
 
 
-export namespace TfInstanceAccessControlAttributes {
+export namespace AwsInstanceAccessControlAttributes {
 export interface ValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#source TfInstanceAccessControlAttributes#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#source AwsInstanceAccessControlAttributes#source}
   */
   readonly source: string[];
 }
@@ -359,13 +359,13 @@ export class ValuePropertyList extends cdktn.ComplexList {
 }
 export interface AttributeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#key TfInstanceAccessControlAttributes#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#key AwsInstanceAccessControlAttributes#key}
   */
   readonly key: string;
   /**
   * value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#value TfInstanceAccessControlAttributes#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_instance_access_control_attributes#value AwsInstanceAccessControlAttributes#value}
   */
   readonly value: ValueProperty[] | cdktn.IResolvable;
 }

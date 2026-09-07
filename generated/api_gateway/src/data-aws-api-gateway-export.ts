@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfExportConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsExportConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#accepts DataTfExport#accepts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#accepts DataAwsExport#accepts}
   */
   readonly accepts?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#export_type DataTfExport#export_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#export_type DataAwsExport#export_type}
   */
   readonly exportType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#id DataTfExport#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#id DataAwsExport#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#parameters DataTfExport#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#parameters DataAwsExport#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#region DataTfExport#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#region DataAwsExport#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#rest_api_id DataTfExport#rest_api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#rest_api_id DataAwsExport#rest_api_id}
   */
   readonly restApiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#stage_name DataTfExport#stage_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#stage_name DataAwsExport#stage_name}
   */
   readonly stageName: string;
 }
@@ -44,7 +44,7 @@ export interface DataTfExportConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export aws_api_gateway_export}
 */
-export class DataTfExport extends cdktn.TerraformDataSource {
+export class DataAwsExport extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class DataTfExport extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfExport resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsExport resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfExport to import
-  * @param importFromId The id of the existing DataTfExport that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfExport to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsExport to import
+  * @param importFromId The id of the existing DataAwsExport that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_export#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsExport to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_export", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class DataTfExport extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfExportConfig
+  * @param options DataAwsExportConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfExportConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsExportConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_export',
       terraformGeneratorMetadata: {

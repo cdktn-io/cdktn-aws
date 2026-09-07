@@ -5,88 +5,88 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCapacityReservationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCapacityReservationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#availability_zone TfCapacityReservation#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#availability_zone AwsCapacityReservation#availability_zone}
   */
   readonly availabilityZone: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#ebs_optimized TfCapacityReservation#ebs_optimized}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#ebs_optimized AwsCapacityReservation#ebs_optimized}
   */
   readonly ebsOptimized?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#end_date TfCapacityReservation#end_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#end_date AwsCapacityReservation#end_date}
   */
   readonly endDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#end_date_type TfCapacityReservation#end_date_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#end_date_type AwsCapacityReservation#end_date_type}
   */
   readonly endDateType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#ephemeral_storage TfCapacityReservation#ephemeral_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#ephemeral_storage AwsCapacityReservation#ephemeral_storage}
   */
   readonly ephemeralStorage?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#id TfCapacityReservation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#id AwsCapacityReservation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#instance_count TfCapacityReservation#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#instance_count AwsCapacityReservation#instance_count}
   */
   readonly instanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#instance_match_criteria TfCapacityReservation#instance_match_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#instance_match_criteria AwsCapacityReservation#instance_match_criteria}
   */
   readonly instanceMatchCriteria?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#instance_platform TfCapacityReservation#instance_platform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#instance_platform AwsCapacityReservation#instance_platform}
   */
   readonly instancePlatform: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#instance_type TfCapacityReservation#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#instance_type AwsCapacityReservation#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#outpost_arn TfCapacityReservation#outpost_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#outpost_arn AwsCapacityReservation#outpost_arn}
   */
   readonly outpostArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#placement_group_arn TfCapacityReservation#placement_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#placement_group_arn AwsCapacityReservation#placement_group_arn}
   */
   readonly placementGroupArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#region TfCapacityReservation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#region AwsCapacityReservation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#tags TfCapacityReservation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#tags AwsCapacityReservation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#tags_all TfCapacityReservation#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#tags_all AwsCapacityReservation#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#tenancy TfCapacityReservation#tenancy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#tenancy AwsCapacityReservation#tenancy}
   */
   readonly tenancy?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#timeouts TfCapacityReservation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#timeouts AwsCapacityReservation#timeouts}
   */
-  readonly timeouts?: TfCapacityReservation.TimeoutsProperty;
+  readonly timeouts?: AwsCapacityReservation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation aws_ec2_capacity_reservation}
 */
-export class TfCapacityReservation extends cdktn.TerraformResource {
+export class AwsCapacityReservation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -97,11 +97,11 @@ export class TfCapacityReservation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCapacityReservation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCapacityReservation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCapacityReservation to import
-  * @param importFromId The id of the existing TfCapacityReservation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCapacityReservation to import is found
+  * @param importToId The construct id used in the generated config for the AwsCapacityReservation to import
+  * @param importFromId The id of the existing AwsCapacityReservation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCapacityReservation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_capacity_reservation", importId: importFromId, provider });
@@ -116,9 +116,9 @@ export class TfCapacityReservation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCapacityReservationConfig
+  * @param options AwsCapacityReservationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCapacityReservationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCapacityReservationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_capacity_reservation',
       terraformGeneratorMetadata: {
@@ -412,11 +412,11 @@ export class TfCapacityReservation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCapacityReservation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCapacityReservation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCapacityReservation.TimeoutsProperty) {
+  public putTimeouts(value: AwsCapacityReservation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -449,7 +449,7 @@ export class TfCapacityReservation extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       tenancy: cdktn.stringToTerraform(this._tenancy),
-      timeouts: tfCapacityReservationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsCapacityReservationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -552,10 +552,10 @@ export class TfCapacityReservation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfCapacityReservationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCapacityReservationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCapacityReservation.TimeoutsProperty",
+        storageClassType: "AwsCapacityReservation.TimeoutsProperty",
       },
     };
 
@@ -564,7 +564,7 @@ export class TfCapacityReservation extends cdktn.TerraformResource {
   }
 }
 
-export function tfCapacityReservationTimeoutsPropertyToTerraform(struct?: TfCapacityReservation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCapacityReservationTimeoutsPropertyToTerraform(struct?: AwsCapacityReservation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -577,7 +577,7 @@ export function tfCapacityReservationTimeoutsPropertyToTerraform(struct?: TfCapa
 }
 
 
-export function tfCapacityReservationTimeoutsPropertyToHclTerraform(struct?: TfCapacityReservation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCapacityReservationTimeoutsPropertyToHclTerraform(struct?: AwsCapacityReservation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,18 +608,18 @@ export function tfCapacityReservationTimeoutsPropertyToHclTerraform(struct?: TfC
 }
 
 
-export namespace TfCapacityReservation {
+export namespace AwsCapacityReservation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#create TfCapacityReservation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#create AwsCapacityReservation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#delete TfCapacityReservation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#delete AwsCapacityReservation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#update TfCapacityReservation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_capacity_reservation#update AwsCapacityReservation#update}
   */
   readonly update?: string;
 }

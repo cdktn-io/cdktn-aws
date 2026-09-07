@@ -5,71 +5,71 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEvaluationJobConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEvaluationJobConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#application_type TfEvaluationJob#application_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#application_type AwsEvaluationJob#application_type}
   */
   readonly applicationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#customer_encryption_key_id TfEvaluationJob#customer_encryption_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#customer_encryption_key_id AwsEvaluationJob#customer_encryption_key_id}
   */
   readonly customerEncryptionKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#job_description TfEvaluationJob#job_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#job_description AwsEvaluationJob#job_description}
   */
   readonly jobDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#job_name TfEvaluationJob#job_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#job_name AwsEvaluationJob#job_name}
   */
   readonly jobName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#region TfEvaluationJob#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#region AwsEvaluationJob#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#role_arn TfEvaluationJob#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#role_arn AwsEvaluationJob#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#skip_destroy TfEvaluationJob#skip_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#skip_destroy AwsEvaluationJob#skip_destroy}
   */
   readonly skipDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#tags TfEvaluationJob#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#tags AwsEvaluationJob#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * evaluation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#evaluation_config TfEvaluationJob#evaluation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#evaluation_config AwsEvaluationJob#evaluation_config}
   */
-  readonly evaluationConfig?: TfEvaluationJob.EvaluationConfigProperty[] | cdktn.IResolvable;
+  readonly evaluationConfig?: AwsEvaluationJob.EvaluationConfigProperty[] | cdktn.IResolvable;
   /**
   * inference_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#inference_config TfEvaluationJob#inference_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#inference_config AwsEvaluationJob#inference_config}
   */
-  readonly inferenceConfig?: TfEvaluationJob.InferenceConfigProperty[] | cdktn.IResolvable;
+  readonly inferenceConfig?: AwsEvaluationJob.InferenceConfigProperty[] | cdktn.IResolvable;
   /**
   * output_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#output_data_config TfEvaluationJob#output_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#output_data_config AwsEvaluationJob#output_data_config}
   */
-  readonly outputDataConfig?: TfEvaluationJob.OutputDataConfigProperty[] | cdktn.IResolvable;
+  readonly outputDataConfig?: AwsEvaluationJob.OutputDataConfigProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#timeouts TfEvaluationJob#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#timeouts AwsEvaluationJob#timeouts}
   */
-  readonly timeouts?: TfEvaluationJob.TimeoutsProperty;
+  readonly timeouts?: AwsEvaluationJob.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job aws_bedrock_evaluation_job}
 */
-export class TfEvaluationJob extends cdktn.TerraformResource {
+export class AwsEvaluationJob extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -80,11 +80,11 @@ export class TfEvaluationJob extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEvaluationJob resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEvaluationJob resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEvaluationJob to import
-  * @param importFromId The id of the existing TfEvaluationJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEvaluationJob to import is found
+  * @param importToId The construct id used in the generated config for the AwsEvaluationJob to import
+  * @param importFromId The id of the existing AwsEvaluationJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEvaluationJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_evaluation_job", importId: importFromId, provider });
@@ -99,9 +99,9 @@ export class TfEvaluationJob extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEvaluationJobConfig
+  * @param options AwsEvaluationJobConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEvaluationJobConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEvaluationJobConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_evaluation_job',
       terraformGeneratorMetadata: {
@@ -294,11 +294,11 @@ export class TfEvaluationJob extends cdktn.TerraformResource {
   }
 
   // evaluation_config - computed: false, optional: true, required: false
-  private _evaluationConfig = new TfEvaluationJob.EvaluationConfigPropertyList(this, "evaluation_config", false);
+  private _evaluationConfig = new AwsEvaluationJob.EvaluationConfigPropertyList(this, "evaluation_config", false);
   public get evaluationConfig() {
     return this._evaluationConfig;
   }
-  public putEvaluationConfig(value: TfEvaluationJob.EvaluationConfigProperty[] | cdktn.IResolvable) {
+  public putEvaluationConfig(value: AwsEvaluationJob.EvaluationConfigProperty[] | cdktn.IResolvable) {
     this._evaluationConfig.internalValue = value;
   }
   public resetEvaluationConfig() {
@@ -310,11 +310,11 @@ export class TfEvaluationJob extends cdktn.TerraformResource {
   }
 
   // inference_config - computed: false, optional: true, required: false
-  private _inferenceConfig = new TfEvaluationJob.InferenceConfigPropertyList(this, "inference_config", false);
+  private _inferenceConfig = new AwsEvaluationJob.InferenceConfigPropertyList(this, "inference_config", false);
   public get inferenceConfig() {
     return this._inferenceConfig;
   }
-  public putInferenceConfig(value: TfEvaluationJob.InferenceConfigProperty[] | cdktn.IResolvable) {
+  public putInferenceConfig(value: AwsEvaluationJob.InferenceConfigProperty[] | cdktn.IResolvable) {
     this._inferenceConfig.internalValue = value;
   }
   public resetInferenceConfig() {
@@ -326,11 +326,11 @@ export class TfEvaluationJob extends cdktn.TerraformResource {
   }
 
   // output_data_config - computed: false, optional: true, required: false
-  private _outputDataConfig = new TfEvaluationJob.OutputDataConfigPropertyList(this, "output_data_config", false);
+  private _outputDataConfig = new AwsEvaluationJob.OutputDataConfigPropertyList(this, "output_data_config", false);
   public get outputDataConfig() {
     return this._outputDataConfig;
   }
-  public putOutputDataConfig(value: TfEvaluationJob.OutputDataConfigProperty[] | cdktn.IResolvable) {
+  public putOutputDataConfig(value: AwsEvaluationJob.OutputDataConfigProperty[] | cdktn.IResolvable) {
     this._outputDataConfig.internalValue = value;
   }
   public resetOutputDataConfig() {
@@ -342,11 +342,11 @@ export class TfEvaluationJob extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfEvaluationJob.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsEvaluationJob.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfEvaluationJob.TimeoutsProperty) {
+  public putTimeouts(value: AwsEvaluationJob.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -371,10 +371,10 @@ export class TfEvaluationJob extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       skip_destroy: cdktn.booleanToTerraform(this._skipDestroy),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      evaluation_config: cdktn.listMapper(tfEvaluationJobEvaluationConfigPropertyToTerraform, true)(this._evaluationConfig.internalValue),
-      inference_config: cdktn.listMapper(tfEvaluationJobInferenceConfigPropertyToTerraform, true)(this._inferenceConfig.internalValue),
-      output_data_config: cdktn.listMapper(tfEvaluationJobOutputDataConfigPropertyToTerraform, true)(this._outputDataConfig.internalValue),
-      timeouts: tfEvaluationJobTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      evaluation_config: cdktn.listMapper(awsEvaluationJobEvaluationConfigPropertyToTerraform, true)(this._evaluationConfig.internalValue),
+      inference_config: cdktn.listMapper(awsEvaluationJobInferenceConfigPropertyToTerraform, true)(this._inferenceConfig.internalValue),
+      output_data_config: cdktn.listMapper(awsEvaluationJobOutputDataConfigPropertyToTerraform, true)(this._outputDataConfig.internalValue),
+      timeouts: awsEvaluationJobTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -429,28 +429,28 @@ export class TfEvaluationJob extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       evaluation_config: {
-        value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigPropertyToHclTerraform, true)(this._evaluationConfig.internalValue),
+        value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigPropertyToHclTerraform, true)(this._evaluationConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEvaluationJob.EvaluationConfigPropertyList",
+        storageClassType: "AwsEvaluationJob.EvaluationConfigPropertyList",
       },
       inference_config: {
-        value: cdktn.listMapperHcl(tfEvaluationJobInferenceConfigPropertyToHclTerraform, true)(this._inferenceConfig.internalValue),
+        value: cdktn.listMapperHcl(awsEvaluationJobInferenceConfigPropertyToHclTerraform, true)(this._inferenceConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEvaluationJob.InferenceConfigPropertyList",
+        storageClassType: "AwsEvaluationJob.InferenceConfigPropertyList",
       },
       output_data_config: {
-        value: cdktn.listMapperHcl(tfEvaluationJobOutputDataConfigPropertyToHclTerraform, true)(this._outputDataConfig.internalValue),
+        value: cdktn.listMapperHcl(awsEvaluationJobOutputDataConfigPropertyToHclTerraform, true)(this._outputDataConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEvaluationJob.OutputDataConfigPropertyList",
+        storageClassType: "AwsEvaluationJob.OutputDataConfigPropertyList",
       },
       timeouts: {
-        value: tfEvaluationJobTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsEvaluationJobTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfEvaluationJob.TimeoutsProperty",
+        storageClassType: "AwsEvaluationJob.TimeoutsProperty",
       },
     };
 
@@ -459,7 +459,7 @@ export class TfEvaluationJob extends cdktn.TerraformResource {
   }
 }
 
-export function tfEvaluationJobValuePropertyToTerraform(struct?: TfEvaluationJob.ValueProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobValuePropertyToTerraform(struct?: AwsEvaluationJob.ValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,7 +471,7 @@ export function tfEvaluationJobValuePropertyToTerraform(struct?: TfEvaluationJob
 }
 
 
-export function tfEvaluationJobValuePropertyToHclTerraform(struct?: TfEvaluationJob.ValueProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobValuePropertyToHclTerraform(struct?: AwsEvaluationJob.ValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,19 +496,19 @@ export function tfEvaluationJobValuePropertyToHclTerraform(struct?: TfEvaluation
 }
 
 
-export function tfEvaluationJobRatingScalePropertyToTerraform(struct?: TfEvaluationJob.RatingScaleProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRatingScalePropertyToTerraform(struct?: AwsEvaluationJob.RatingScaleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     definition: cdktn.stringToTerraform(struct!.definition),
-    value: cdktn.listMapper(tfEvaluationJobValuePropertyToTerraform, true)(struct!.value),
+    value: cdktn.listMapper(awsEvaluationJobValuePropertyToTerraform, true)(struct!.value),
   }
 }
 
 
-export function tfEvaluationJobRatingScalePropertyToHclTerraform(struct?: TfEvaluationJob.RatingScaleProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRatingScalePropertyToHclTerraform(struct?: AwsEvaluationJob.RatingScaleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function tfEvaluationJobRatingScalePropertyToHclTerraform(struct?: TfEval
       storageClassType: "string",
     },
     value: {
-      value: cdktn.listMapperHcl(tfEvaluationJobValuePropertyToHclTerraform, true)(struct!.value),
+      value: cdktn.listMapperHcl(awsEvaluationJobValuePropertyToHclTerraform, true)(struct!.value),
       isBlock: true,
       type: "list",
       storageClassType: "ValuePropertyList",
@@ -533,7 +533,7 @@ export function tfEvaluationJobRatingScalePropertyToHclTerraform(struct?: TfEval
 }
 
 
-export function tfEvaluationJobCustomMetricDefinitionPropertyToTerraform(struct?: TfEvaluationJob.CustomMetricDefinitionProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobCustomMetricDefinitionPropertyToTerraform(struct?: AwsEvaluationJob.CustomMetricDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -541,12 +541,12 @@ export function tfEvaluationJobCustomMetricDefinitionPropertyToTerraform(struct?
   return {
     instructions: cdktn.stringToTerraform(struct!.instructions),
     name: cdktn.stringToTerraform(struct!.name),
-    rating_scale: cdktn.listMapper(tfEvaluationJobRatingScalePropertyToTerraform, true)(struct!.ratingScale),
+    rating_scale: cdktn.listMapper(awsEvaluationJobRatingScalePropertyToTerraform, true)(struct!.ratingScale),
   }
 }
 
 
-export function tfEvaluationJobCustomMetricDefinitionPropertyToHclTerraform(struct?: TfEvaluationJob.CustomMetricDefinitionProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobCustomMetricDefinitionPropertyToHclTerraform(struct?: AwsEvaluationJob.CustomMetricDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -565,7 +565,7 @@ export function tfEvaluationJobCustomMetricDefinitionPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     rating_scale: {
-      value: cdktn.listMapperHcl(tfEvaluationJobRatingScalePropertyToHclTerraform, true)(struct!.ratingScale),
+      value: cdktn.listMapperHcl(awsEvaluationJobRatingScalePropertyToHclTerraform, true)(struct!.ratingScale),
       isBlock: true,
       type: "list",
       storageClassType: "RatingScalePropertyList",
@@ -577,25 +577,25 @@ export function tfEvaluationJobCustomMetricDefinitionPropertyToHclTerraform(stru
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigCustomMetricPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedCustomMetricConfigCustomMetricProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedCustomMetricConfigCustomMetricPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedCustomMetricConfigCustomMetricProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_metric_definition: cdktn.listMapper(tfEvaluationJobCustomMetricDefinitionPropertyToTerraform, true)(struct!.customMetricDefinition),
+    custom_metric_definition: cdktn.listMapper(awsEvaluationJobCustomMetricDefinitionPropertyToTerraform, true)(struct!.customMetricDefinition),
   }
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigCustomMetricPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedCustomMetricConfigCustomMetricProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedCustomMetricConfigCustomMetricPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedCustomMetricConfigCustomMetricProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_metric_definition: {
-      value: cdktn.listMapperHcl(tfEvaluationJobCustomMetricDefinitionPropertyToHclTerraform, true)(struct!.customMetricDefinition),
+      value: cdktn.listMapperHcl(awsEvaluationJobCustomMetricDefinitionPropertyToHclTerraform, true)(struct!.customMetricDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "CustomMetricDefinitionPropertyList",
@@ -607,7 +607,7 @@ export function tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigCustom
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -618,7 +618,7 @@ export function tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvalua
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,25 +637,25 @@ export function tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvalua
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    bedrock_evaluator_model: cdktn.listMapper(tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelPropertyToTerraform, true)(struct!.bedrockEvaluatorModel),
+    bedrock_evaluator_model: cdktn.listMapper(awsEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelPropertyToTerraform, true)(struct!.bedrockEvaluatorModel),
   }
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     bedrock_evaluator_model: {
-      value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelPropertyToHclTerraform, true)(struct!.bedrockEvaluatorModel),
+      value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelPropertyToHclTerraform, true)(struct!.bedrockEvaluatorModel),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelPropertyList",
@@ -667,32 +667,32 @@ export function tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvalua
 }
 
 
-export function tfEvaluationJobCustomMetricConfigPropertyToTerraform(struct?: TfEvaluationJob.CustomMetricConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobCustomMetricConfigPropertyToTerraform(struct?: AwsEvaluationJob.CustomMetricConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_metric: cdktn.listMapper(tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigCustomMetricPropertyToTerraform, true)(struct!.customMetric),
-    evaluator_model_config: cdktn.listMapper(tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigPropertyToTerraform, true)(struct!.evaluatorModelConfig),
+    custom_metric: cdktn.listMapper(awsEvaluationJobEvaluationConfigAutomatedCustomMetricConfigCustomMetricPropertyToTerraform, true)(struct!.customMetric),
+    evaluator_model_config: cdktn.listMapper(awsEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigPropertyToTerraform, true)(struct!.evaluatorModelConfig),
   }
 }
 
 
-export function tfEvaluationJobCustomMetricConfigPropertyToHclTerraform(struct?: TfEvaluationJob.CustomMetricConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobCustomMetricConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.CustomMetricConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_metric: {
-      value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigCustomMetricPropertyToHclTerraform, true)(struct!.customMetric),
+      value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigAutomatedCustomMetricConfigCustomMetricPropertyToHclTerraform, true)(struct!.customMetric),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluationConfigAutomatedCustomMetricConfigCustomMetricPropertyList",
     },
     evaluator_model_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigPropertyToHclTerraform, true)(struct!.evaluatorModelConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigPropertyToHclTerraform, true)(struct!.evaluatorModelConfig),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigPropertyList",
@@ -704,7 +704,7 @@ export function tfEvaluationJobCustomMetricConfigPropertyToHclTerraform(struct?:
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -715,7 +715,7 @@ export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatas
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -734,19 +734,19 @@ export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatas
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedDatasetMetricConfigDatasetProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedDatasetMetricConfigDatasetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    dataset_location: cdktn.listMapper(tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationPropertyToTerraform, true)(struct!.datasetLocation),
+    dataset_location: cdktn.listMapper(awsEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationPropertyToTerraform, true)(struct!.datasetLocation),
   }
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedDatasetMetricConfigDatasetProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedDatasetMetricConfigDatasetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -759,7 +759,7 @@ export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatas
       storageClassType: "string",
     },
     dataset_location: {
-      value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationPropertyToHclTerraform, true)(struct!.datasetLocation),
+      value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationPropertyToHclTerraform, true)(struct!.datasetLocation),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationPropertyList",
@@ -771,7 +771,7 @@ export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatas
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedDatasetMetricConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedDatasetMetricConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -779,12 +779,12 @@ export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigPrope
   return {
     metric_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.metricNames),
     task_type: cdktn.stringToTerraform(struct!.taskType),
-    dataset: cdktn.listMapper(tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetPropertyToTerraform, true)(struct!.dataset),
+    dataset: cdktn.listMapper(awsEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetPropertyToTerraform, true)(struct!.dataset),
   }
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedDatasetMetricConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedDatasetMetricConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -803,7 +803,7 @@ export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigPrope
       storageClassType: "string",
     },
     dataset: {
-      value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetPropertyToHclTerraform, true)(struct!.dataset),
+      value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigDatasetPropertyToHclTerraform, true)(struct!.dataset),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluationConfigAutomatedDatasetMetricConfigDatasetPropertyList",
@@ -815,7 +815,7 @@ export function tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigPrope
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -826,7 +826,7 @@ export function tfEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigBedr
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -845,25 +845,25 @@ export function tfEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigBedr
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedEvaluatorModelConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedEvaluatorModelConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    bedrock_evaluator_model: cdktn.listMapper(tfEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelPropertyToTerraform, true)(struct!.bedrockEvaluatorModel),
+    bedrock_evaluator_model: cdktn.listMapper(awsEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelPropertyToTerraform, true)(struct!.bedrockEvaluatorModel),
   }
 }
 
 
-export function tfEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigAutomatedEvaluatorModelConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigAutomatedEvaluatorModelConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     bedrock_evaluator_model: {
-      value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelPropertyToHclTerraform, true)(struct!.bedrockEvaluatorModel),
+      value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelPropertyToHclTerraform, true)(struct!.bedrockEvaluatorModel),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelPropertyList",
@@ -875,39 +875,39 @@ export function tfEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigProp
 }
 
 
-export function tfEvaluationJobAutomatedPropertyToTerraform(struct?: TfEvaluationJob.AutomatedProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobAutomatedPropertyToTerraform(struct?: AwsEvaluationJob.AutomatedProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_metric_config: cdktn.listMapper(tfEvaluationJobCustomMetricConfigPropertyToTerraform, true)(struct!.customMetricConfig),
-    dataset_metric_config: cdktn.listMapper(tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigPropertyToTerraform, true)(struct!.datasetMetricConfig),
-    evaluator_model_config: cdktn.listMapper(tfEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigPropertyToTerraform, true)(struct!.evaluatorModelConfig),
+    custom_metric_config: cdktn.listMapper(awsEvaluationJobCustomMetricConfigPropertyToTerraform, true)(struct!.customMetricConfig),
+    dataset_metric_config: cdktn.listMapper(awsEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigPropertyToTerraform, true)(struct!.datasetMetricConfig),
+    evaluator_model_config: cdktn.listMapper(awsEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigPropertyToTerraform, true)(struct!.evaluatorModelConfig),
   }
 }
 
 
-export function tfEvaluationJobAutomatedPropertyToHclTerraform(struct?: TfEvaluationJob.AutomatedProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobAutomatedPropertyToHclTerraform(struct?: AwsEvaluationJob.AutomatedProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_metric_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobCustomMetricConfigPropertyToHclTerraform, true)(struct!.customMetricConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobCustomMetricConfigPropertyToHclTerraform, true)(struct!.customMetricConfig),
       isBlock: true,
       type: "list",
       storageClassType: "CustomMetricConfigPropertyList",
     },
     dataset_metric_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigPropertyToHclTerraform, true)(struct!.datasetMetricConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigAutomatedDatasetMetricConfigPropertyToHclTerraform, true)(struct!.datasetMetricConfig),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluationConfigAutomatedDatasetMetricConfigPropertyList",
     },
     evaluator_model_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigPropertyToHclTerraform, true)(struct!.evaluatorModelConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigAutomatedEvaluatorModelConfigPropertyToHclTerraform, true)(struct!.evaluatorModelConfig),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluationConfigAutomatedEvaluatorModelConfigPropertyList",
@@ -919,7 +919,7 @@ export function tfEvaluationJobAutomatedPropertyToHclTerraform(struct?: TfEvalua
 }
 
 
-export function tfEvaluationJobEvaluationConfigHumanCustomMetricPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigHumanCustomMetricProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigHumanCustomMetricPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigHumanCustomMetricProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -932,7 +932,7 @@ export function tfEvaluationJobEvaluationConfigHumanCustomMetricPropertyToTerraf
 }
 
 
-export function tfEvaluationJobEvaluationConfigHumanCustomMetricPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigHumanCustomMetricProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigHumanCustomMetricPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigHumanCustomMetricProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -963,7 +963,7 @@ export function tfEvaluationJobEvaluationConfigHumanCustomMetricPropertyToHclTer
 }
 
 
-export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -974,7 +974,7 @@ export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetDa
 }
 
 
-export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -993,19 +993,19 @@ export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetDa
 }
 
 
-export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigHumanDatasetMetricConfigDatasetProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigHumanDatasetMetricConfigDatasetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    dataset_location: cdktn.listMapper(tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationPropertyToTerraform, true)(struct!.datasetLocation),
+    dataset_location: cdktn.listMapper(awsEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationPropertyToTerraform, true)(struct!.datasetLocation),
   }
 }
 
 
-export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigHumanDatasetMetricConfigDatasetProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigHumanDatasetMetricConfigDatasetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1018,7 +1018,7 @@ export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetPr
       storageClassType: "string",
     },
     dataset_location: {
-      value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationPropertyToHclTerraform, true)(struct!.datasetLocation),
+      value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationPropertyToHclTerraform, true)(struct!.datasetLocation),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationPropertyList",
@@ -1030,7 +1030,7 @@ export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetPr
 }
 
 
-export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigHumanDatasetMetricConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigHumanDatasetMetricConfigPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigHumanDatasetMetricConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1038,12 +1038,12 @@ export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigPropertyT
   return {
     metric_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.metricNames),
     task_type: cdktn.stringToTerraform(struct!.taskType),
-    dataset: cdktn.listMapper(tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetPropertyToTerraform, true)(struct!.dataset),
+    dataset: cdktn.listMapper(awsEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetPropertyToTerraform, true)(struct!.dataset),
   }
 }
 
 
-export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigHumanDatasetMetricConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigHumanDatasetMetricConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigHumanDatasetMetricConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1062,7 +1062,7 @@ export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigPropertyT
       storageClassType: "string",
     },
     dataset: {
-      value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetPropertyToHclTerraform, true)(struct!.dataset),
+      value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigHumanDatasetMetricConfigDatasetPropertyToHclTerraform, true)(struct!.dataset),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluationConfigHumanDatasetMetricConfigDatasetPropertyList",
@@ -1074,7 +1074,7 @@ export function tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigPropertyT
 }
 
 
-export function tfEvaluationJobHumanWorkflowConfigPropertyToTerraform(struct?: TfEvaluationJob.HumanWorkflowConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobHumanWorkflowConfigPropertyToTerraform(struct?: AwsEvaluationJob.HumanWorkflowConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1086,7 +1086,7 @@ export function tfEvaluationJobHumanWorkflowConfigPropertyToTerraform(struct?: T
 }
 
 
-export function tfEvaluationJobHumanWorkflowConfigPropertyToHclTerraform(struct?: TfEvaluationJob.HumanWorkflowConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobHumanWorkflowConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.HumanWorkflowConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1111,39 +1111,39 @@ export function tfEvaluationJobHumanWorkflowConfigPropertyToHclTerraform(struct?
 }
 
 
-export function tfEvaluationJobHumanPropertyToTerraform(struct?: TfEvaluationJob.HumanProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobHumanPropertyToTerraform(struct?: AwsEvaluationJob.HumanProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_metric: cdktn.listMapper(tfEvaluationJobEvaluationConfigHumanCustomMetricPropertyToTerraform, true)(struct!.customMetric),
-    dataset_metric_config: cdktn.listMapper(tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigPropertyToTerraform, true)(struct!.datasetMetricConfig),
-    human_workflow_config: cdktn.listMapper(tfEvaluationJobHumanWorkflowConfigPropertyToTerraform, true)(struct!.humanWorkflowConfig),
+    custom_metric: cdktn.listMapper(awsEvaluationJobEvaluationConfigHumanCustomMetricPropertyToTerraform, true)(struct!.customMetric),
+    dataset_metric_config: cdktn.listMapper(awsEvaluationJobEvaluationConfigHumanDatasetMetricConfigPropertyToTerraform, true)(struct!.datasetMetricConfig),
+    human_workflow_config: cdktn.listMapper(awsEvaluationJobHumanWorkflowConfigPropertyToTerraform, true)(struct!.humanWorkflowConfig),
   }
 }
 
 
-export function tfEvaluationJobHumanPropertyToHclTerraform(struct?: TfEvaluationJob.HumanProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobHumanPropertyToHclTerraform(struct?: AwsEvaluationJob.HumanProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_metric: {
-      value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigHumanCustomMetricPropertyToHclTerraform, true)(struct!.customMetric),
+      value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigHumanCustomMetricPropertyToHclTerraform, true)(struct!.customMetric),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluationConfigHumanCustomMetricPropertyList",
     },
     dataset_metric_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobEvaluationConfigHumanDatasetMetricConfigPropertyToHclTerraform, true)(struct!.datasetMetricConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobEvaluationConfigHumanDatasetMetricConfigPropertyToHclTerraform, true)(struct!.datasetMetricConfig),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluationConfigHumanDatasetMetricConfigPropertyList",
     },
     human_workflow_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobHumanWorkflowConfigPropertyToHclTerraform, true)(struct!.humanWorkflowConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobHumanWorkflowConfigPropertyToHclTerraform, true)(struct!.humanWorkflowConfig),
       isBlock: true,
       type: "list",
       storageClassType: "HumanWorkflowConfigPropertyList",
@@ -1155,32 +1155,32 @@ export function tfEvaluationJobHumanPropertyToHclTerraform(struct?: TfEvaluation
 }
 
 
-export function tfEvaluationJobEvaluationConfigPropertyToTerraform(struct?: TfEvaluationJob.EvaluationConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigPropertyToTerraform(struct?: AwsEvaluationJob.EvaluationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    automated: cdktn.listMapper(tfEvaluationJobAutomatedPropertyToTerraform, true)(struct!.automated),
-    human: cdktn.listMapper(tfEvaluationJobHumanPropertyToTerraform, true)(struct!.human),
+    automated: cdktn.listMapper(awsEvaluationJobAutomatedPropertyToTerraform, true)(struct!.automated),
+    human: cdktn.listMapper(awsEvaluationJobHumanPropertyToTerraform, true)(struct!.human),
   }
 }
 
 
-export function tfEvaluationJobEvaluationConfigPropertyToHclTerraform(struct?: TfEvaluationJob.EvaluationConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobEvaluationConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.EvaluationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     automated: {
-      value: cdktn.listMapperHcl(tfEvaluationJobAutomatedPropertyToHclTerraform, true)(struct!.automated),
+      value: cdktn.listMapperHcl(awsEvaluationJobAutomatedPropertyToHclTerraform, true)(struct!.automated),
       isBlock: true,
       type: "list",
       storageClassType: "AutomatedPropertyList",
     },
     human: {
-      value: cdktn.listMapperHcl(tfEvaluationJobHumanPropertyToHclTerraform, true)(struct!.human),
+      value: cdktn.listMapperHcl(awsEvaluationJobHumanPropertyToHclTerraform, true)(struct!.human),
       isBlock: true,
       type: "list",
       storageClassType: "HumanPropertyList",
@@ -1192,7 +1192,7 @@ export function tfEvaluationJobEvaluationConfigPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfEvaluationJobPerformanceConfigPropertyToTerraform(struct?: TfEvaluationJob.PerformanceConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobPerformanceConfigPropertyToTerraform(struct?: AwsEvaluationJob.PerformanceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1203,7 +1203,7 @@ export function tfEvaluationJobPerformanceConfigPropertyToTerraform(struct?: TfE
 }
 
 
-export function tfEvaluationJobPerformanceConfigPropertyToHclTerraform(struct?: TfEvaluationJob.PerformanceConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobPerformanceConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.PerformanceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1222,7 +1222,7 @@ export function tfEvaluationJobPerformanceConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfEvaluationJobBedrockModelPropertyToTerraform(struct?: TfEvaluationJob.BedrockModelProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobBedrockModelPropertyToTerraform(struct?: AwsEvaluationJob.BedrockModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1230,12 +1230,12 @@ export function tfEvaluationJobBedrockModelPropertyToTerraform(struct?: TfEvalua
   return {
     inference_params: cdktn.stringToTerraform(struct!.inferenceParams),
     model_identifier: cdktn.stringToTerraform(struct!.modelIdentifier),
-    performance_config: cdktn.listMapper(tfEvaluationJobPerformanceConfigPropertyToTerraform, true)(struct!.performanceConfig),
+    performance_config: cdktn.listMapper(awsEvaluationJobPerformanceConfigPropertyToTerraform, true)(struct!.performanceConfig),
   }
 }
 
 
-export function tfEvaluationJobBedrockModelPropertyToHclTerraform(struct?: TfEvaluationJob.BedrockModelProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobBedrockModelPropertyToHclTerraform(struct?: AwsEvaluationJob.BedrockModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1254,7 +1254,7 @@ export function tfEvaluationJobBedrockModelPropertyToHclTerraform(struct?: TfEva
       storageClassType: "string",
     },
     performance_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobPerformanceConfigPropertyToHclTerraform, true)(struct!.performanceConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobPerformanceConfigPropertyToHclTerraform, true)(struct!.performanceConfig),
       isBlock: true,
       type: "list",
       storageClassType: "PerformanceConfigPropertyList",
@@ -1266,7 +1266,7 @@ export function tfEvaluationJobBedrockModelPropertyToHclTerraform(struct?: TfEva
 }
 
 
-export function tfEvaluationJobPrecomputedInferenceSourcePropertyToTerraform(struct?: TfEvaluationJob.PrecomputedInferenceSourceProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobPrecomputedInferenceSourcePropertyToTerraform(struct?: AwsEvaluationJob.PrecomputedInferenceSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1277,7 +1277,7 @@ export function tfEvaluationJobPrecomputedInferenceSourcePropertyToTerraform(str
 }
 
 
-export function tfEvaluationJobPrecomputedInferenceSourcePropertyToHclTerraform(struct?: TfEvaluationJob.PrecomputedInferenceSourceProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobPrecomputedInferenceSourcePropertyToHclTerraform(struct?: AwsEvaluationJob.PrecomputedInferenceSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1296,32 +1296,32 @@ export function tfEvaluationJobPrecomputedInferenceSourcePropertyToHclTerraform(
 }
 
 
-export function tfEvaluationJobModelPropertyToTerraform(struct?: TfEvaluationJob.ModelProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobModelPropertyToTerraform(struct?: AwsEvaluationJob.ModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    bedrock_model: cdktn.listMapper(tfEvaluationJobBedrockModelPropertyToTerraform, true)(struct!.bedrockModel),
-    precomputed_inference_source: cdktn.listMapper(tfEvaluationJobPrecomputedInferenceSourcePropertyToTerraform, true)(struct!.precomputedInferenceSource),
+    bedrock_model: cdktn.listMapper(awsEvaluationJobBedrockModelPropertyToTerraform, true)(struct!.bedrockModel),
+    precomputed_inference_source: cdktn.listMapper(awsEvaluationJobPrecomputedInferenceSourcePropertyToTerraform, true)(struct!.precomputedInferenceSource),
   }
 }
 
 
-export function tfEvaluationJobModelPropertyToHclTerraform(struct?: TfEvaluationJob.ModelProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobModelPropertyToHclTerraform(struct?: AwsEvaluationJob.ModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     bedrock_model: {
-      value: cdktn.listMapperHcl(tfEvaluationJobBedrockModelPropertyToHclTerraform, true)(struct!.bedrockModel),
+      value: cdktn.listMapperHcl(awsEvaluationJobBedrockModelPropertyToHclTerraform, true)(struct!.bedrockModel),
       isBlock: true,
       type: "list",
       storageClassType: "BedrockModelPropertyList",
     },
     precomputed_inference_source: {
-      value: cdktn.listMapperHcl(tfEvaluationJobPrecomputedInferenceSourcePropertyToHclTerraform, true)(struct!.precomputedInferenceSource),
+      value: cdktn.listMapperHcl(awsEvaluationJobPrecomputedInferenceSourcePropertyToHclTerraform, true)(struct!.precomputedInferenceSource),
       isBlock: true,
       type: "list",
       storageClassType: "PrecomputedInferenceSourcePropertyList",
@@ -1333,7 +1333,7 @@ export function tfEvaluationJobModelPropertyToHclTerraform(struct?: TfEvaluation
 }
 
 
-export function tfEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationPropertyToTerraform(struct?: TfEvaluationJob.InferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationPropertyToTerraform(struct?: AwsEvaluationJob.InferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1344,7 +1344,7 @@ export function tfEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrie
 }
 
 
-export function tfEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationPropertyToHclTerraform(struct?: TfEvaluationJob.InferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationPropertyToHclTerraform(struct?: AwsEvaluationJob.InferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1363,25 +1363,25 @@ export function tfEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrie
 }
 
 
-export function tfEvaluationJobRetrievalConfigurationPropertyToTerraform(struct?: TfEvaluationJob.RetrievalConfigurationProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRetrievalConfigurationPropertyToTerraform(struct?: AwsEvaluationJob.RetrievalConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    vector_search_configuration: cdktn.listMapper(tfEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationPropertyToTerraform, true)(struct!.vectorSearchConfiguration),
+    vector_search_configuration: cdktn.listMapper(awsEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationPropertyToTerraform, true)(struct!.vectorSearchConfiguration),
   }
 }
 
 
-export function tfEvaluationJobRetrievalConfigurationPropertyToHclTerraform(struct?: TfEvaluationJob.RetrievalConfigurationProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRetrievalConfigurationPropertyToHclTerraform(struct?: AwsEvaluationJob.RetrievalConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     vector_search_configuration: {
-      value: cdktn.listMapperHcl(tfEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationPropertyToHclTerraform, true)(struct!.vectorSearchConfiguration),
+      value: cdktn.listMapperHcl(awsEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationPropertyToHclTerraform, true)(struct!.vectorSearchConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "InferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationPropertyList",
@@ -1393,7 +1393,7 @@ export function tfEvaluationJobRetrievalConfigurationPropertyToHclTerraform(stru
 }
 
 
-export function tfEvaluationJobRetrieveAndGenerateConfigPropertyToTerraform(struct?: TfEvaluationJob.RetrieveAndGenerateConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRetrieveAndGenerateConfigPropertyToTerraform(struct?: AwsEvaluationJob.RetrieveAndGenerateConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1401,12 +1401,12 @@ export function tfEvaluationJobRetrieveAndGenerateConfigPropertyToTerraform(stru
   return {
     knowledge_base_id: cdktn.stringToTerraform(struct!.knowledgeBaseId),
     model_arn: cdktn.stringToTerraform(struct!.modelArn),
-    retrieval_configuration: cdktn.listMapper(tfEvaluationJobRetrievalConfigurationPropertyToTerraform, true)(struct!.retrievalConfiguration),
+    retrieval_configuration: cdktn.listMapper(awsEvaluationJobRetrievalConfigurationPropertyToTerraform, true)(struct!.retrievalConfiguration),
   }
 }
 
 
-export function tfEvaluationJobRetrieveAndGenerateConfigPropertyToHclTerraform(struct?: TfEvaluationJob.RetrieveAndGenerateConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRetrieveAndGenerateConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.RetrieveAndGenerateConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1425,7 +1425,7 @@ export function tfEvaluationJobRetrieveAndGenerateConfigPropertyToHclTerraform(s
       storageClassType: "string",
     },
     retrieval_configuration: {
-      value: cdktn.listMapperHcl(tfEvaluationJobRetrievalConfigurationPropertyToHclTerraform, true)(struct!.retrievalConfiguration),
+      value: cdktn.listMapperHcl(awsEvaluationJobRetrievalConfigurationPropertyToHclTerraform, true)(struct!.retrievalConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "RetrievalConfigurationPropertyList",
@@ -1437,7 +1437,7 @@ export function tfEvaluationJobRetrieveAndGenerateConfigPropertyToHclTerraform(s
 }
 
 
-export function tfEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationPropertyToTerraform(struct?: TfEvaluationJob.InferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationPropertyToTerraform(struct?: AwsEvaluationJob.InferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1448,7 +1448,7 @@ export function tfEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrie
 }
 
 
-export function tfEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationPropertyToHclTerraform(struct?: TfEvaluationJob.InferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationPropertyToHclTerraform(struct?: AwsEvaluationJob.InferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1467,25 +1467,25 @@ export function tfEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrie
 }
 
 
-export function tfEvaluationJobKnowledgeBaseRetrievalConfigurationPropertyToTerraform(struct?: TfEvaluationJob.KnowledgeBaseRetrievalConfigurationProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobKnowledgeBaseRetrievalConfigurationPropertyToTerraform(struct?: AwsEvaluationJob.KnowledgeBaseRetrievalConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    vector_search_configuration: cdktn.listMapper(tfEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationPropertyToTerraform, true)(struct!.vectorSearchConfiguration),
+    vector_search_configuration: cdktn.listMapper(awsEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationPropertyToTerraform, true)(struct!.vectorSearchConfiguration),
   }
 }
 
 
-export function tfEvaluationJobKnowledgeBaseRetrievalConfigurationPropertyToHclTerraform(struct?: TfEvaluationJob.KnowledgeBaseRetrievalConfigurationProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobKnowledgeBaseRetrievalConfigurationPropertyToHclTerraform(struct?: AwsEvaluationJob.KnowledgeBaseRetrievalConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     vector_search_configuration: {
-      value: cdktn.listMapperHcl(tfEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationPropertyToHclTerraform, true)(struct!.vectorSearchConfiguration),
+      value: cdktn.listMapperHcl(awsEvaluationJobInferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationPropertyToHclTerraform, true)(struct!.vectorSearchConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "InferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationPropertyList",
@@ -1497,19 +1497,19 @@ export function tfEvaluationJobKnowledgeBaseRetrievalConfigurationPropertyToHclT
 }
 
 
-export function tfEvaluationJobRetrieveConfigPropertyToTerraform(struct?: TfEvaluationJob.RetrieveConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRetrieveConfigPropertyToTerraform(struct?: AwsEvaluationJob.RetrieveConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     knowledge_base_id: cdktn.stringToTerraform(struct!.knowledgeBaseId),
-    knowledge_base_retrieval_configuration: cdktn.listMapper(tfEvaluationJobKnowledgeBaseRetrievalConfigurationPropertyToTerraform, true)(struct!.knowledgeBaseRetrievalConfiguration),
+    knowledge_base_retrieval_configuration: cdktn.listMapper(awsEvaluationJobKnowledgeBaseRetrievalConfigurationPropertyToTerraform, true)(struct!.knowledgeBaseRetrievalConfiguration),
   }
 }
 
 
-export function tfEvaluationJobRetrieveConfigPropertyToHclTerraform(struct?: TfEvaluationJob.RetrieveConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRetrieveConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.RetrieveConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1522,7 +1522,7 @@ export function tfEvaluationJobRetrieveConfigPropertyToHclTerraform(struct?: TfE
       storageClassType: "string",
     },
     knowledge_base_retrieval_configuration: {
-      value: cdktn.listMapperHcl(tfEvaluationJobKnowledgeBaseRetrievalConfigurationPropertyToHclTerraform, true)(struct!.knowledgeBaseRetrievalConfiguration),
+      value: cdktn.listMapperHcl(awsEvaluationJobKnowledgeBaseRetrievalConfigurationPropertyToHclTerraform, true)(struct!.knowledgeBaseRetrievalConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "KnowledgeBaseRetrievalConfigurationPropertyList",
@@ -1534,32 +1534,32 @@ export function tfEvaluationJobRetrieveConfigPropertyToHclTerraform(struct?: TfE
 }
 
 
-export function tfEvaluationJobKnowledgeBaseConfigPropertyToTerraform(struct?: TfEvaluationJob.KnowledgeBaseConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobKnowledgeBaseConfigPropertyToTerraform(struct?: AwsEvaluationJob.KnowledgeBaseConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    retrieve_and_generate_config: cdktn.listMapper(tfEvaluationJobRetrieveAndGenerateConfigPropertyToTerraform, true)(struct!.retrieveAndGenerateConfig),
-    retrieve_config: cdktn.listMapper(tfEvaluationJobRetrieveConfigPropertyToTerraform, true)(struct!.retrieveConfig),
+    retrieve_and_generate_config: cdktn.listMapper(awsEvaluationJobRetrieveAndGenerateConfigPropertyToTerraform, true)(struct!.retrieveAndGenerateConfig),
+    retrieve_config: cdktn.listMapper(awsEvaluationJobRetrieveConfigPropertyToTerraform, true)(struct!.retrieveConfig),
   }
 }
 
 
-export function tfEvaluationJobKnowledgeBaseConfigPropertyToHclTerraform(struct?: TfEvaluationJob.KnowledgeBaseConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobKnowledgeBaseConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.KnowledgeBaseConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     retrieve_and_generate_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobRetrieveAndGenerateConfigPropertyToHclTerraform, true)(struct!.retrieveAndGenerateConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobRetrieveAndGenerateConfigPropertyToHclTerraform, true)(struct!.retrieveAndGenerateConfig),
       isBlock: true,
       type: "list",
       storageClassType: "RetrieveAndGenerateConfigPropertyList",
     },
     retrieve_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobRetrieveConfigPropertyToHclTerraform, true)(struct!.retrieveConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobRetrieveConfigPropertyToHclTerraform, true)(struct!.retrieveConfig),
       isBlock: true,
       type: "list",
       storageClassType: "RetrieveConfigPropertyList",
@@ -1571,7 +1571,7 @@ export function tfEvaluationJobKnowledgeBaseConfigPropertyToHclTerraform(struct?
 }
 
 
-export function tfEvaluationJobRetrieveAndGenerateSourceConfigPropertyToTerraform(struct?: TfEvaluationJob.RetrieveAndGenerateSourceConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRetrieveAndGenerateSourceConfigPropertyToTerraform(struct?: AwsEvaluationJob.RetrieveAndGenerateSourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1582,7 +1582,7 @@ export function tfEvaluationJobRetrieveAndGenerateSourceConfigPropertyToTerrafor
 }
 
 
-export function tfEvaluationJobRetrieveAndGenerateSourceConfigPropertyToHclTerraform(struct?: TfEvaluationJob.RetrieveAndGenerateSourceConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRetrieveAndGenerateSourceConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.RetrieveAndGenerateSourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1601,7 +1601,7 @@ export function tfEvaluationJobRetrieveAndGenerateSourceConfigPropertyToHclTerra
 }
 
 
-export function tfEvaluationJobRetrieveSourceConfigPropertyToTerraform(struct?: TfEvaluationJob.RetrieveSourceConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRetrieveSourceConfigPropertyToTerraform(struct?: AwsEvaluationJob.RetrieveSourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1612,7 +1612,7 @@ export function tfEvaluationJobRetrieveSourceConfigPropertyToTerraform(struct?: 
 }
 
 
-export function tfEvaluationJobRetrieveSourceConfigPropertyToHclTerraform(struct?: TfEvaluationJob.RetrieveSourceConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRetrieveSourceConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.RetrieveSourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1631,32 +1631,32 @@ export function tfEvaluationJobRetrieveSourceConfigPropertyToHclTerraform(struct
 }
 
 
-export function tfEvaluationJobPrecomputedRagSourceConfigPropertyToTerraform(struct?: TfEvaluationJob.PrecomputedRagSourceConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobPrecomputedRagSourceConfigPropertyToTerraform(struct?: AwsEvaluationJob.PrecomputedRagSourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    retrieve_and_generate_source_config: cdktn.listMapper(tfEvaluationJobRetrieveAndGenerateSourceConfigPropertyToTerraform, true)(struct!.retrieveAndGenerateSourceConfig),
-    retrieve_source_config: cdktn.listMapper(tfEvaluationJobRetrieveSourceConfigPropertyToTerraform, true)(struct!.retrieveSourceConfig),
+    retrieve_and_generate_source_config: cdktn.listMapper(awsEvaluationJobRetrieveAndGenerateSourceConfigPropertyToTerraform, true)(struct!.retrieveAndGenerateSourceConfig),
+    retrieve_source_config: cdktn.listMapper(awsEvaluationJobRetrieveSourceConfigPropertyToTerraform, true)(struct!.retrieveSourceConfig),
   }
 }
 
 
-export function tfEvaluationJobPrecomputedRagSourceConfigPropertyToHclTerraform(struct?: TfEvaluationJob.PrecomputedRagSourceConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobPrecomputedRagSourceConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.PrecomputedRagSourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     retrieve_and_generate_source_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobRetrieveAndGenerateSourceConfigPropertyToHclTerraform, true)(struct!.retrieveAndGenerateSourceConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobRetrieveAndGenerateSourceConfigPropertyToHclTerraform, true)(struct!.retrieveAndGenerateSourceConfig),
       isBlock: true,
       type: "list",
       storageClassType: "RetrieveAndGenerateSourceConfigPropertyList",
     },
     retrieve_source_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobRetrieveSourceConfigPropertyToHclTerraform, true)(struct!.retrieveSourceConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobRetrieveSourceConfigPropertyToHclTerraform, true)(struct!.retrieveSourceConfig),
       isBlock: true,
       type: "list",
       storageClassType: "RetrieveSourceConfigPropertyList",
@@ -1668,32 +1668,32 @@ export function tfEvaluationJobPrecomputedRagSourceConfigPropertyToHclTerraform(
 }
 
 
-export function tfEvaluationJobRagConfigPropertyToTerraform(struct?: TfEvaluationJob.RagConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRagConfigPropertyToTerraform(struct?: AwsEvaluationJob.RagConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    knowledge_base_config: cdktn.listMapper(tfEvaluationJobKnowledgeBaseConfigPropertyToTerraform, true)(struct!.knowledgeBaseConfig),
-    precomputed_rag_source_config: cdktn.listMapper(tfEvaluationJobPrecomputedRagSourceConfigPropertyToTerraform, true)(struct!.precomputedRagSourceConfig),
+    knowledge_base_config: cdktn.listMapper(awsEvaluationJobKnowledgeBaseConfigPropertyToTerraform, true)(struct!.knowledgeBaseConfig),
+    precomputed_rag_source_config: cdktn.listMapper(awsEvaluationJobPrecomputedRagSourceConfigPropertyToTerraform, true)(struct!.precomputedRagSourceConfig),
   }
 }
 
 
-export function tfEvaluationJobRagConfigPropertyToHclTerraform(struct?: TfEvaluationJob.RagConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobRagConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.RagConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     knowledge_base_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobKnowledgeBaseConfigPropertyToHclTerraform, true)(struct!.knowledgeBaseConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobKnowledgeBaseConfigPropertyToHclTerraform, true)(struct!.knowledgeBaseConfig),
       isBlock: true,
       type: "list",
       storageClassType: "KnowledgeBaseConfigPropertyList",
     },
     precomputed_rag_source_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobPrecomputedRagSourceConfigPropertyToHclTerraform, true)(struct!.precomputedRagSourceConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobPrecomputedRagSourceConfigPropertyToHclTerraform, true)(struct!.precomputedRagSourceConfig),
       isBlock: true,
       type: "list",
       storageClassType: "PrecomputedRagSourceConfigPropertyList",
@@ -1705,32 +1705,32 @@ export function tfEvaluationJobRagConfigPropertyToHclTerraform(struct?: TfEvalua
 }
 
 
-export function tfEvaluationJobInferenceConfigPropertyToTerraform(struct?: TfEvaluationJob.InferenceConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobInferenceConfigPropertyToTerraform(struct?: AwsEvaluationJob.InferenceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    model: cdktn.listMapper(tfEvaluationJobModelPropertyToTerraform, true)(struct!.model),
-    rag_config: cdktn.listMapper(tfEvaluationJobRagConfigPropertyToTerraform, true)(struct!.ragConfig),
+    model: cdktn.listMapper(awsEvaluationJobModelPropertyToTerraform, true)(struct!.model),
+    rag_config: cdktn.listMapper(awsEvaluationJobRagConfigPropertyToTerraform, true)(struct!.ragConfig),
   }
 }
 
 
-export function tfEvaluationJobInferenceConfigPropertyToHclTerraform(struct?: TfEvaluationJob.InferenceConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobInferenceConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.InferenceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     model: {
-      value: cdktn.listMapperHcl(tfEvaluationJobModelPropertyToHclTerraform, true)(struct!.model),
+      value: cdktn.listMapperHcl(awsEvaluationJobModelPropertyToHclTerraform, true)(struct!.model),
       isBlock: true,
       type: "list",
       storageClassType: "ModelPropertyList",
     },
     rag_config: {
-      value: cdktn.listMapperHcl(tfEvaluationJobRagConfigPropertyToHclTerraform, true)(struct!.ragConfig),
+      value: cdktn.listMapperHcl(awsEvaluationJobRagConfigPropertyToHclTerraform, true)(struct!.ragConfig),
       isBlock: true,
       type: "list",
       storageClassType: "RagConfigPropertyList",
@@ -1742,7 +1742,7 @@ export function tfEvaluationJobInferenceConfigPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfEvaluationJobOutputDataConfigPropertyToTerraform(struct?: TfEvaluationJob.OutputDataConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobOutputDataConfigPropertyToTerraform(struct?: AwsEvaluationJob.OutputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1753,7 +1753,7 @@ export function tfEvaluationJobOutputDataConfigPropertyToTerraform(struct?: TfEv
 }
 
 
-export function tfEvaluationJobOutputDataConfigPropertyToHclTerraform(struct?: TfEvaluationJob.OutputDataConfigProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobOutputDataConfigPropertyToHclTerraform(struct?: AwsEvaluationJob.OutputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1772,7 +1772,7 @@ export function tfEvaluationJobOutputDataConfigPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfEvaluationJobTimeoutsPropertyToTerraform(struct?: TfEvaluationJob.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobTimeoutsPropertyToTerraform(struct?: AwsEvaluationJob.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1784,7 +1784,7 @@ export function tfEvaluationJobTimeoutsPropertyToTerraform(struct?: TfEvaluation
 }
 
 
-export function tfEvaluationJobTimeoutsPropertyToHclTerraform(struct?: TfEvaluationJob.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsEvaluationJobTimeoutsPropertyToHclTerraform(struct?: AwsEvaluationJob.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1809,14 +1809,14 @@ export function tfEvaluationJobTimeoutsPropertyToHclTerraform(struct?: TfEvaluat
 }
 
 
-export namespace TfEvaluationJob {
+export namespace AwsEvaluationJob {
 export interface ValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#float_value TfEvaluationJob#float_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#float_value AwsEvaluationJob#float_value}
   */
   readonly floatValue?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#string_value TfEvaluationJob#string_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#string_value AwsEvaluationJob#string_value}
   */
   readonly stringValue?: string;
 }
@@ -1924,13 +1924,13 @@ export class ValuePropertyList extends cdktn.ComplexList {
 }
 export interface RatingScaleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#definition TfEvaluationJob#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#definition AwsEvaluationJob#definition}
   */
   readonly definition: string;
   /**
   * value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#value TfEvaluationJob#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#value AwsEvaluationJob#value}
   */
   readonly value?: ValueProperty[] | cdktn.IResolvable;
 }
@@ -2035,17 +2035,17 @@ export class RatingScalePropertyList extends cdktn.ComplexList {
 }
 export interface CustomMetricDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#instructions TfEvaluationJob#instructions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#instructions AwsEvaluationJob#instructions}
   */
   readonly instructions: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#name TfEvaluationJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#name AwsEvaluationJob#name}
   */
   readonly name: string;
   /**
   * rating_scale block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#rating_scale TfEvaluationJob#rating_scale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#rating_scale AwsEvaluationJob#rating_scale}
   */
   readonly ratingScale?: RatingScaleProperty[] | cdktn.IResolvable;
 }
@@ -2171,7 +2171,7 @@ export interface EvaluationConfigAutomatedCustomMetricConfigCustomMetricProperty
   /**
   * custom_metric_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#custom_metric_definition TfEvaluationJob#custom_metric_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#custom_metric_definition AwsEvaluationJob#custom_metric_definition}
   */
   readonly customMetricDefinition?: CustomMetricDefinitionProperty[] | cdktn.IResolvable;
 }
@@ -2257,7 +2257,7 @@ export class EvaluationConfigAutomatedCustomMetricConfigCustomMetricPropertyList
 }
 export interface EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#model_identifier TfEvaluationJob#model_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#model_identifier AwsEvaluationJob#model_identifier}
   */
   readonly modelIdentifier: string;
 }
@@ -2342,7 +2342,7 @@ export interface EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfig
   /**
   * bedrock_evaluator_model block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#bedrock_evaluator_model TfEvaluationJob#bedrock_evaluator_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#bedrock_evaluator_model AwsEvaluationJob#bedrock_evaluator_model}
   */
   readonly bedrockEvaluatorModel?: EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigBedrockEvaluatorModelProperty[] | cdktn.IResolvable;
 }
@@ -2430,13 +2430,13 @@ export interface CustomMetricConfigProperty {
   /**
   * custom_metric block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#custom_metric TfEvaluationJob#custom_metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#custom_metric AwsEvaluationJob#custom_metric}
   */
   readonly customMetric?: EvaluationConfigAutomatedCustomMetricConfigCustomMetricProperty[] | cdktn.IResolvable;
   /**
   * evaluator_model_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#evaluator_model_config TfEvaluationJob#evaluator_model_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#evaluator_model_config AwsEvaluationJob#evaluator_model_config}
   */
   readonly evaluatorModelConfig?: EvaluationConfigAutomatedCustomMetricConfigEvaluatorModelConfigProperty[] | cdktn.IResolvable;
 }
@@ -2544,7 +2544,7 @@ export class CustomMetricConfigPropertyList extends cdktn.ComplexList {
 }
 export interface EvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#s3_uri TfEvaluationJob#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#s3_uri AwsEvaluationJob#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -2627,13 +2627,13 @@ export class EvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationP
 }
 export interface EvaluationConfigAutomatedDatasetMetricConfigDatasetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#name TfEvaluationJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#name AwsEvaluationJob#name}
   */
   readonly name: string;
   /**
   * dataset_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#dataset_location TfEvaluationJob#dataset_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#dataset_location AwsEvaluationJob#dataset_location}
   */
   readonly datasetLocation?: EvaluationConfigAutomatedDatasetMetricConfigDatasetDatasetLocationProperty[] | cdktn.IResolvable;
 }
@@ -2738,17 +2738,17 @@ export class EvaluationConfigAutomatedDatasetMetricConfigDatasetPropertyList ext
 }
 export interface EvaluationConfigAutomatedDatasetMetricConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#metric_names TfEvaluationJob#metric_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#metric_names AwsEvaluationJob#metric_names}
   */
   readonly metricNames: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#task_type TfEvaluationJob#task_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#task_type AwsEvaluationJob#task_type}
   */
   readonly taskType: string;
   /**
   * dataset block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#dataset TfEvaluationJob#dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#dataset AwsEvaluationJob#dataset}
   */
   readonly dataset?: EvaluationConfigAutomatedDatasetMetricConfigDatasetProperty[] | cdktn.IResolvable;
 }
@@ -2872,7 +2872,7 @@ export class EvaluationConfigAutomatedDatasetMetricConfigPropertyList extends cd
 }
 export interface EvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#model_identifier TfEvaluationJob#model_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#model_identifier AwsEvaluationJob#model_identifier}
   */
   readonly modelIdentifier: string;
 }
@@ -2957,7 +2957,7 @@ export interface EvaluationConfigAutomatedEvaluatorModelConfigProperty {
   /**
   * bedrock_evaluator_model block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#bedrock_evaluator_model TfEvaluationJob#bedrock_evaluator_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#bedrock_evaluator_model AwsEvaluationJob#bedrock_evaluator_model}
   */
   readonly bedrockEvaluatorModel?: EvaluationConfigAutomatedEvaluatorModelConfigBedrockEvaluatorModelProperty[] | cdktn.IResolvable;
 }
@@ -3045,19 +3045,19 @@ export interface AutomatedProperty {
   /**
   * custom_metric_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#custom_metric_config TfEvaluationJob#custom_metric_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#custom_metric_config AwsEvaluationJob#custom_metric_config}
   */
   readonly customMetricConfig?: CustomMetricConfigProperty[] | cdktn.IResolvable;
   /**
   * dataset_metric_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#dataset_metric_config TfEvaluationJob#dataset_metric_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#dataset_metric_config AwsEvaluationJob#dataset_metric_config}
   */
   readonly datasetMetricConfig?: EvaluationConfigAutomatedDatasetMetricConfigProperty[] | cdktn.IResolvable;
   /**
   * evaluator_model_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#evaluator_model_config TfEvaluationJob#evaluator_model_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#evaluator_model_config AwsEvaluationJob#evaluator_model_config}
   */
   readonly evaluatorModelConfig?: EvaluationConfigAutomatedEvaluatorModelConfigProperty[] | cdktn.IResolvable;
 }
@@ -3187,15 +3187,15 @@ export class AutomatedPropertyList extends cdktn.ComplexList {
 }
 export interface EvaluationConfigHumanCustomMetricProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#description TfEvaluationJob#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#description AwsEvaluationJob#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#name TfEvaluationJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#name AwsEvaluationJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#rating_method TfEvaluationJob#rating_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#rating_method AwsEvaluationJob#rating_method}
   */
   readonly ratingMethod: string;
 }
@@ -3319,7 +3319,7 @@ export class EvaluationConfigHumanCustomMetricPropertyList extends cdktn.Complex
 }
 export interface EvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#s3_uri TfEvaluationJob#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#s3_uri AwsEvaluationJob#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -3402,13 +3402,13 @@ export class EvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationPrope
 }
 export interface EvaluationConfigHumanDatasetMetricConfigDatasetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#name TfEvaluationJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#name AwsEvaluationJob#name}
   */
   readonly name: string;
   /**
   * dataset_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#dataset_location TfEvaluationJob#dataset_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#dataset_location AwsEvaluationJob#dataset_location}
   */
   readonly datasetLocation?: EvaluationConfigHumanDatasetMetricConfigDatasetDatasetLocationProperty[] | cdktn.IResolvable;
 }
@@ -3513,17 +3513,17 @@ export class EvaluationConfigHumanDatasetMetricConfigDatasetPropertyList extends
 }
 export interface EvaluationConfigHumanDatasetMetricConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#metric_names TfEvaluationJob#metric_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#metric_names AwsEvaluationJob#metric_names}
   */
   readonly metricNames: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#task_type TfEvaluationJob#task_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#task_type AwsEvaluationJob#task_type}
   */
   readonly taskType: string;
   /**
   * dataset block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#dataset TfEvaluationJob#dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#dataset AwsEvaluationJob#dataset}
   */
   readonly dataset?: EvaluationConfigHumanDatasetMetricConfigDatasetProperty[] | cdktn.IResolvable;
 }
@@ -3647,11 +3647,11 @@ export class EvaluationConfigHumanDatasetMetricConfigPropertyList extends cdktn.
 }
 export interface HumanWorkflowConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#flow_definition_arn TfEvaluationJob#flow_definition_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#flow_definition_arn AwsEvaluationJob#flow_definition_arn}
   */
   readonly flowDefinitionArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#instructions TfEvaluationJob#instructions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#instructions AwsEvaluationJob#instructions}
   */
   readonly instructions?: string;
 }
@@ -3758,19 +3758,19 @@ export interface HumanProperty {
   /**
   * custom_metric block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#custom_metric TfEvaluationJob#custom_metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#custom_metric AwsEvaluationJob#custom_metric}
   */
   readonly customMetric?: EvaluationConfigHumanCustomMetricProperty[] | cdktn.IResolvable;
   /**
   * dataset_metric_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#dataset_metric_config TfEvaluationJob#dataset_metric_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#dataset_metric_config AwsEvaluationJob#dataset_metric_config}
   */
   readonly datasetMetricConfig?: EvaluationConfigHumanDatasetMetricConfigProperty[] | cdktn.IResolvable;
   /**
   * human_workflow_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#human_workflow_config TfEvaluationJob#human_workflow_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#human_workflow_config AwsEvaluationJob#human_workflow_config}
   */
   readonly humanWorkflowConfig?: HumanWorkflowConfigProperty[] | cdktn.IResolvable;
 }
@@ -3902,13 +3902,13 @@ export interface EvaluationConfigProperty {
   /**
   * automated block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#automated TfEvaluationJob#automated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#automated AwsEvaluationJob#automated}
   */
   readonly automated?: AutomatedProperty[] | cdktn.IResolvable;
   /**
   * human block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#human TfEvaluationJob#human}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#human AwsEvaluationJob#human}
   */
   readonly human?: HumanProperty[] | cdktn.IResolvable;
 }
@@ -4016,7 +4016,7 @@ export class EvaluationConfigPropertyList extends cdktn.ComplexList {
 }
 export interface PerformanceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#latency TfEvaluationJob#latency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#latency AwsEvaluationJob#latency}
   */
   readonly latency?: string;
 }
@@ -4102,17 +4102,17 @@ export class PerformanceConfigPropertyList extends cdktn.ComplexList {
 }
 export interface BedrockModelProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#inference_params TfEvaluationJob#inference_params}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#inference_params AwsEvaluationJob#inference_params}
   */
   readonly inferenceParams?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#model_identifier TfEvaluationJob#model_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#model_identifier AwsEvaluationJob#model_identifier}
   */
   readonly modelIdentifier: string;
   /**
   * performance_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#performance_config TfEvaluationJob#performance_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#performance_config AwsEvaluationJob#performance_config}
   */
   readonly performanceConfig?: PerformanceConfigProperty[] | cdktn.IResolvable;
 }
@@ -4239,7 +4239,7 @@ export class BedrockModelPropertyList extends cdktn.ComplexList {
 }
 export interface PrecomputedInferenceSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#inference_source_identifier TfEvaluationJob#inference_source_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#inference_source_identifier AwsEvaluationJob#inference_source_identifier}
   */
   readonly inferenceSourceIdentifier: string;
 }
@@ -4324,13 +4324,13 @@ export interface ModelProperty {
   /**
   * bedrock_model block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#bedrock_model TfEvaluationJob#bedrock_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#bedrock_model AwsEvaluationJob#bedrock_model}
   */
   readonly bedrockModel?: BedrockModelProperty[] | cdktn.IResolvable;
   /**
   * precomputed_inference_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#precomputed_inference_source TfEvaluationJob#precomputed_inference_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#precomputed_inference_source AwsEvaluationJob#precomputed_inference_source}
   */
   readonly precomputedInferenceSource?: PrecomputedInferenceSourceProperty[] | cdktn.IResolvable;
 }
@@ -4438,7 +4438,7 @@ export class ModelPropertyList extends cdktn.ComplexList {
 }
 export interface InferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#number_of_results TfEvaluationJob#number_of_results}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#number_of_results AwsEvaluationJob#number_of_results}
   */
   readonly numberOfResults?: number;
 }
@@ -4526,7 +4526,7 @@ export interface RetrievalConfigurationProperty {
   /**
   * vector_search_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#vector_search_configuration TfEvaluationJob#vector_search_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#vector_search_configuration AwsEvaluationJob#vector_search_configuration}
   */
   readonly vectorSearchConfiguration?: InferenceConfigRagConfigKnowledgeBaseConfigRetrieveAndGenerateConfigRetrievalConfigurationVectorSearchConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -4612,17 +4612,17 @@ export class RetrievalConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface RetrieveAndGenerateConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#knowledge_base_id TfEvaluationJob#knowledge_base_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#knowledge_base_id AwsEvaluationJob#knowledge_base_id}
   */
   readonly knowledgeBaseId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#model_arn TfEvaluationJob#model_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#model_arn AwsEvaluationJob#model_arn}
   */
   readonly modelArn: string;
   /**
   * retrieval_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#retrieval_configuration TfEvaluationJob#retrieval_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#retrieval_configuration AwsEvaluationJob#retrieval_configuration}
   */
   readonly retrievalConfiguration?: RetrievalConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -4746,7 +4746,7 @@ export class RetrieveAndGenerateConfigPropertyList extends cdktn.ComplexList {
 }
 export interface InferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#number_of_results TfEvaluationJob#number_of_results}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#number_of_results AwsEvaluationJob#number_of_results}
   */
   readonly numberOfResults?: number;
 }
@@ -4834,7 +4834,7 @@ export interface KnowledgeBaseRetrievalConfigurationProperty {
   /**
   * vector_search_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#vector_search_configuration TfEvaluationJob#vector_search_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#vector_search_configuration AwsEvaluationJob#vector_search_configuration}
   */
   readonly vectorSearchConfiguration?: InferenceConfigRagConfigKnowledgeBaseConfigRetrieveConfigKnowledgeBaseRetrievalConfigurationVectorSearchConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -4920,13 +4920,13 @@ export class KnowledgeBaseRetrievalConfigurationPropertyList extends cdktn.Compl
 }
 export interface RetrieveConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#knowledge_base_id TfEvaluationJob#knowledge_base_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#knowledge_base_id AwsEvaluationJob#knowledge_base_id}
   */
   readonly knowledgeBaseId: string;
   /**
   * knowledge_base_retrieval_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#knowledge_base_retrieval_configuration TfEvaluationJob#knowledge_base_retrieval_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#knowledge_base_retrieval_configuration AwsEvaluationJob#knowledge_base_retrieval_configuration}
   */
   readonly knowledgeBaseRetrievalConfiguration?: KnowledgeBaseRetrievalConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -5033,13 +5033,13 @@ export interface KnowledgeBaseConfigProperty {
   /**
   * retrieve_and_generate_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#retrieve_and_generate_config TfEvaluationJob#retrieve_and_generate_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#retrieve_and_generate_config AwsEvaluationJob#retrieve_and_generate_config}
   */
   readonly retrieveAndGenerateConfig?: RetrieveAndGenerateConfigProperty[] | cdktn.IResolvable;
   /**
   * retrieve_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#retrieve_config TfEvaluationJob#retrieve_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#retrieve_config AwsEvaluationJob#retrieve_config}
   */
   readonly retrieveConfig?: RetrieveConfigProperty[] | cdktn.IResolvable;
 }
@@ -5147,7 +5147,7 @@ export class KnowledgeBaseConfigPropertyList extends cdktn.ComplexList {
 }
 export interface RetrieveAndGenerateSourceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#rag_source_identifier TfEvaluationJob#rag_source_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#rag_source_identifier AwsEvaluationJob#rag_source_identifier}
   */
   readonly ragSourceIdentifier: string;
 }
@@ -5230,7 +5230,7 @@ export class RetrieveAndGenerateSourceConfigPropertyList extends cdktn.ComplexLi
 }
 export interface RetrieveSourceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#rag_source_identifier TfEvaluationJob#rag_source_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#rag_source_identifier AwsEvaluationJob#rag_source_identifier}
   */
   readonly ragSourceIdentifier: string;
 }
@@ -5315,13 +5315,13 @@ export interface PrecomputedRagSourceConfigProperty {
   /**
   * retrieve_and_generate_source_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#retrieve_and_generate_source_config TfEvaluationJob#retrieve_and_generate_source_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#retrieve_and_generate_source_config AwsEvaluationJob#retrieve_and_generate_source_config}
   */
   readonly retrieveAndGenerateSourceConfig?: RetrieveAndGenerateSourceConfigProperty[] | cdktn.IResolvable;
   /**
   * retrieve_source_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#retrieve_source_config TfEvaluationJob#retrieve_source_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#retrieve_source_config AwsEvaluationJob#retrieve_source_config}
   */
   readonly retrieveSourceConfig?: RetrieveSourceConfigProperty[] | cdktn.IResolvable;
 }
@@ -5431,13 +5431,13 @@ export interface RagConfigProperty {
   /**
   * knowledge_base_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#knowledge_base_config TfEvaluationJob#knowledge_base_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#knowledge_base_config AwsEvaluationJob#knowledge_base_config}
   */
   readonly knowledgeBaseConfig?: KnowledgeBaseConfigProperty[] | cdktn.IResolvable;
   /**
   * precomputed_rag_source_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#precomputed_rag_source_config TfEvaluationJob#precomputed_rag_source_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#precomputed_rag_source_config AwsEvaluationJob#precomputed_rag_source_config}
   */
   readonly precomputedRagSourceConfig?: PrecomputedRagSourceConfigProperty[] | cdktn.IResolvable;
 }
@@ -5547,13 +5547,13 @@ export interface InferenceConfigProperty {
   /**
   * model block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#model TfEvaluationJob#model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#model AwsEvaluationJob#model}
   */
   readonly model?: ModelProperty[] | cdktn.IResolvable;
   /**
   * rag_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#rag_config TfEvaluationJob#rag_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#rag_config AwsEvaluationJob#rag_config}
   */
   readonly ragConfig?: RagConfigProperty[] | cdktn.IResolvable;
 }
@@ -5661,7 +5661,7 @@ export class InferenceConfigPropertyList extends cdktn.ComplexList {
 }
 export interface OutputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#s3_uri TfEvaluationJob#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#s3_uri AwsEvaluationJob#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -5746,13 +5746,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#create TfEvaluationJob#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#create AwsEvaluationJob#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#delete TfEvaluationJob#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_evaluation_job#delete AwsEvaluationJob#delete}
   */
   readonly delete?: string;
 }

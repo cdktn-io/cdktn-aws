@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfViewConfig extends cdktn.TerraformMetaArguments {
+export interface AwsViewConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#description TfView#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#description AwsView#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#name TfView#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#name AwsView#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#source_views TfView#source_views}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#source_views AwsView#source_views}
   */
   readonly sourceViews?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#tags TfView#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#tags AwsView#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * data_filter_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#data_filter_expression TfView#data_filter_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#data_filter_expression AwsView#data_filter_expression}
   */
-  readonly dataFilterExpression?: TfView.DataFilterExpressionProperty[] | cdktn.IResolvable;
+  readonly dataFilterExpression?: AwsView.DataFilterExpressionProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#timeouts TfView#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#timeouts AwsView#timeouts}
   */
-  readonly timeouts?: TfView.TimeoutsProperty;
+  readonly timeouts?: AwsView.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view aws_billing_view}
 */
-export class TfView extends cdktn.TerraformResource {
+export class AwsView extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class TfView extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfView resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsView resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfView to import
-  * @param importFromId The id of the existing TfView that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfView to import is found
+  * @param importToId The construct id used in the generated config for the AwsView to import
+  * @param importFromId The id of the existing AwsView that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsView to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_billing_view", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class TfView extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfViewConfig
+  * @param options AwsViewConfig
   */
-  public constructor(scope: Construct, id: string, config: TfViewConfig) {
+  public constructor(scope: Construct, id: string, config: AwsViewConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_billing_view',
       terraformGeneratorMetadata: {
@@ -212,11 +212,11 @@ export class TfView extends cdktn.TerraformResource {
   }
 
   // data_filter_expression - computed: false, optional: true, required: false
-  private _dataFilterExpression = new TfView.DataFilterExpressionPropertyList(this, "data_filter_expression", false);
+  private _dataFilterExpression = new AwsView.DataFilterExpressionPropertyList(this, "data_filter_expression", false);
   public get dataFilterExpression() {
     return this._dataFilterExpression;
   }
-  public putDataFilterExpression(value: TfView.DataFilterExpressionProperty[] | cdktn.IResolvable) {
+  public putDataFilterExpression(value: AwsView.DataFilterExpressionProperty[] | cdktn.IResolvable) {
     this._dataFilterExpression.internalValue = value;
   }
   public resetDataFilterExpression() {
@@ -228,11 +228,11 @@ export class TfView extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfView.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsView.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfView.TimeoutsProperty) {
+  public putTimeouts(value: AwsView.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -253,8 +253,8 @@ export class TfView extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       source_views: cdktn.listMapper(cdktn.stringToTerraform, false)(this._sourceViews),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      data_filter_expression: cdktn.listMapper(tfViewDataFilterExpressionPropertyToTerraform, true)(this._dataFilterExpression.internalValue),
-      timeouts: tfViewTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      data_filter_expression: cdktn.listMapper(awsViewDataFilterExpressionPropertyToTerraform, true)(this._dataFilterExpression.internalValue),
+      timeouts: awsViewTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -285,16 +285,16 @@ export class TfView extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       data_filter_expression: {
-        value: cdktn.listMapperHcl(tfViewDataFilterExpressionPropertyToHclTerraform, true)(this._dataFilterExpression.internalValue),
+        value: cdktn.listMapperHcl(awsViewDataFilterExpressionPropertyToHclTerraform, true)(this._dataFilterExpression.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfView.DataFilterExpressionPropertyList",
+        storageClassType: "AwsView.DataFilterExpressionPropertyList",
       },
       timeouts: {
-        value: tfViewTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsViewTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfView.TimeoutsProperty",
+        storageClassType: "AwsView.TimeoutsProperty",
       },
     };
 
@@ -303,7 +303,7 @@ export class TfView extends cdktn.TerraformResource {
   }
 }
 
-export function tfViewDimensionsPropertyToTerraform(struct?: TfView.DimensionsProperty | cdktn.IResolvable): any {
+export function awsViewDimensionsPropertyToTerraform(struct?: AwsView.DimensionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function tfViewDimensionsPropertyToTerraform(struct?: TfView.DimensionsPr
 }
 
 
-export function tfViewDimensionsPropertyToHclTerraform(struct?: TfView.DimensionsProperty | cdktn.IResolvable): any {
+export function awsViewDimensionsPropertyToHclTerraform(struct?: AwsView.DimensionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,7 +340,7 @@ export function tfViewDimensionsPropertyToHclTerraform(struct?: TfView.Dimension
 }
 
 
-export function tfViewTagsPropertyToTerraform(struct?: TfView.TagsProperty | cdktn.IResolvable): any {
+export function awsViewTagsPropertyToTerraform(struct?: AwsView.TagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -352,7 +352,7 @@ export function tfViewTagsPropertyToTerraform(struct?: TfView.TagsProperty | cdk
 }
 
 
-export function tfViewTagsPropertyToHclTerraform(struct?: TfView.TagsProperty | cdktn.IResolvable): any {
+export function awsViewTagsPropertyToHclTerraform(struct?: AwsView.TagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -377,7 +377,7 @@ export function tfViewTagsPropertyToHclTerraform(struct?: TfView.TagsProperty | 
 }
 
 
-export function tfViewTimeRangePropertyToTerraform(struct?: TfView.TimeRangeProperty | cdktn.IResolvable): any {
+export function awsViewTimeRangePropertyToTerraform(struct?: AwsView.TimeRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function tfViewTimeRangePropertyToTerraform(struct?: TfView.TimeRangeProp
 }
 
 
-export function tfViewTimeRangePropertyToHclTerraform(struct?: TfView.TimeRangeProperty | cdktn.IResolvable): any {
+export function awsViewTimeRangePropertyToHclTerraform(struct?: AwsView.TimeRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,39 +414,39 @@ export function tfViewTimeRangePropertyToHclTerraform(struct?: TfView.TimeRangeP
 }
 
 
-export function tfViewDataFilterExpressionPropertyToTerraform(struct?: TfView.DataFilterExpressionProperty | cdktn.IResolvable): any {
+export function awsViewDataFilterExpressionPropertyToTerraform(struct?: AwsView.DataFilterExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    dimensions: cdktn.listMapper(tfViewDimensionsPropertyToTerraform, true)(struct!.dimensions),
-    tags: cdktn.listMapper(tfViewTagsPropertyToTerraform, true)(struct!.tags),
-    time_range: cdktn.listMapper(tfViewTimeRangePropertyToTerraform, true)(struct!.timeRange),
+    dimensions: cdktn.listMapper(awsViewDimensionsPropertyToTerraform, true)(struct!.dimensions),
+    tags: cdktn.listMapper(awsViewTagsPropertyToTerraform, true)(struct!.tags),
+    time_range: cdktn.listMapper(awsViewTimeRangePropertyToTerraform, true)(struct!.timeRange),
   }
 }
 
 
-export function tfViewDataFilterExpressionPropertyToHclTerraform(struct?: TfView.DataFilterExpressionProperty | cdktn.IResolvable): any {
+export function awsViewDataFilterExpressionPropertyToHclTerraform(struct?: AwsView.DataFilterExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     dimensions: {
-      value: cdktn.listMapperHcl(tfViewDimensionsPropertyToHclTerraform, true)(struct!.dimensions),
+      value: cdktn.listMapperHcl(awsViewDimensionsPropertyToHclTerraform, true)(struct!.dimensions),
       isBlock: true,
       type: "list",
       storageClassType: "DimensionsPropertyList",
     },
     tags: {
-      value: cdktn.listMapperHcl(tfViewTagsPropertyToHclTerraform, true)(struct!.tags),
+      value: cdktn.listMapperHcl(awsViewTagsPropertyToHclTerraform, true)(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "TagsPropertyList",
     },
     time_range: {
-      value: cdktn.listMapperHcl(tfViewTimeRangePropertyToHclTerraform, true)(struct!.timeRange),
+      value: cdktn.listMapperHcl(awsViewTimeRangePropertyToHclTerraform, true)(struct!.timeRange),
       isBlock: true,
       type: "list",
       storageClassType: "TimeRangePropertyList",
@@ -458,7 +458,7 @@ export function tfViewDataFilterExpressionPropertyToHclTerraform(struct?: TfView
 }
 
 
-export function tfViewTimeoutsPropertyToTerraform(struct?: TfView.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsViewTimeoutsPropertyToTerraform(struct?: AwsView.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,7 +471,7 @@ export function tfViewTimeoutsPropertyToTerraform(struct?: TfView.TimeoutsProper
 }
 
 
-export function tfViewTimeoutsPropertyToHclTerraform(struct?: TfView.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsViewTimeoutsPropertyToHclTerraform(struct?: AwsView.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,14 +502,14 @@ export function tfViewTimeoutsPropertyToHclTerraform(struct?: TfView.TimeoutsPro
 }
 
 
-export namespace TfView {
+export namespace AwsView {
 export interface DimensionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#key TfView#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#key AwsView#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#values TfView#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#values AwsView#values}
   */
   readonly values: string[];
 }
@@ -611,11 +611,11 @@ export class DimensionsPropertyList extends cdktn.ComplexList {
 }
 export interface TagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#key TfView#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#key AwsView#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#values TfView#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#values AwsView#values}
   */
   readonly values: string[];
 }
@@ -717,11 +717,11 @@ export class TagsPropertyList extends cdktn.ComplexList {
 }
 export interface TimeRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#begin_date_inclusive TfView#begin_date_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#begin_date_inclusive AwsView#begin_date_inclusive}
   */
   readonly beginDateInclusive: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#end_date_inclusive TfView#end_date_inclusive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#end_date_inclusive AwsView#end_date_inclusive}
   */
   readonly endDateInclusive: string;
 }
@@ -825,19 +825,19 @@ export interface DataFilterExpressionProperty {
   /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#dimensions TfView#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#dimensions AwsView#dimensions}
   */
   readonly dimensions?: DimensionsProperty[] | cdktn.IResolvable;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#tags TfView#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#tags AwsView#tags}
   */
   readonly tags?: TagsProperty[] | cdktn.IResolvable;
   /**
   * time_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#time_range TfView#time_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#time_range AwsView#time_range}
   */
   readonly timeRange?: TimeRangeProperty[] | cdktn.IResolvable;
 }
@@ -969,19 +969,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#create TfView#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#create AwsView#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#delete TfView#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#delete AwsView#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#update TfView#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/billing_view#update AwsView#update}
   */
   readonly update?: string;
 }

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVoiceConnectorTerminationCredentialsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVoiceConnectorTerminationCredentialsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#id TfVoiceConnectorTerminationCredentials#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#id AwsVoiceConnectorTerminationCredentials#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface TfVoiceConnectorTerminationCredentialsConfig extends cdktn.Terr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#region TfVoiceConnectorTerminationCredentials#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#region AwsVoiceConnectorTerminationCredentials#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#voice_connector_id TfVoiceConnectorTerminationCredentials#voice_connector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#voice_connector_id AwsVoiceConnectorTerminationCredentials#voice_connector_id}
   */
   readonly voiceConnectorId: string;
   /**
   * credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#credentials TfVoiceConnectorTerminationCredentials#credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#credentials AwsVoiceConnectorTerminationCredentials#credentials}
   */
-  readonly credentials: TfVoiceConnectorTerminationCredentials.CredentialsProperty[] | cdktn.IResolvable;
+  readonly credentials: AwsVoiceConnectorTerminationCredentials.CredentialsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials aws_chime_voice_connector_termination_credentials}
 */
-export class TfVoiceConnectorTerminationCredentials extends cdktn.TerraformResource {
+export class AwsVoiceConnectorTerminationCredentials extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfVoiceConnectorTerminationCredentials extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVoiceConnectorTerminationCredentials resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVoiceConnectorTerminationCredentials resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVoiceConnectorTerminationCredentials to import
-  * @param importFromId The id of the existing TfVoiceConnectorTerminationCredentials that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVoiceConnectorTerminationCredentials to import is found
+  * @param importToId The construct id used in the generated config for the AwsVoiceConnectorTerminationCredentials to import
+  * @param importFromId The id of the existing AwsVoiceConnectorTerminationCredentials that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVoiceConnectorTerminationCredentials to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chime_voice_connector_termination_credentials", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfVoiceConnectorTerminationCredentials extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVoiceConnectorTerminationCredentialsConfig
+  * @param options AwsVoiceConnectorTerminationCredentialsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVoiceConnectorTerminationCredentialsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVoiceConnectorTerminationCredentialsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_chime_voice_connector_termination_credentials',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class TfVoiceConnectorTerminationCredentials extends cdktn.TerraformResou
   }
 
   // credentials - computed: false, optional: false, required: true
-  private _credentials = new TfVoiceConnectorTerminationCredentials.CredentialsPropertyList(this, "credentials", true);
+  private _credentials = new AwsVoiceConnectorTerminationCredentials.CredentialsPropertyList(this, "credentials", true);
   public get credentials() {
     return this._credentials;
   }
-  public putCredentials(value: TfVoiceConnectorTerminationCredentials.CredentialsProperty[] | cdktn.IResolvable) {
+  public putCredentials(value: AwsVoiceConnectorTerminationCredentials.CredentialsProperty[] | cdktn.IResolvable) {
     this._credentials.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -159,7 +159,7 @@ export class TfVoiceConnectorTerminationCredentials extends cdktn.TerraformResou
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       voice_connector_id: cdktn.stringToTerraform(this._voiceConnectorId),
-      credentials: cdktn.listMapper(tfVoiceConnectorTerminationCredentialsCredentialsPropertyToTerraform, true)(this._credentials.internalValue),
+      credentials: cdktn.listMapper(awsVoiceConnectorTerminationCredentialsCredentialsPropertyToTerraform, true)(this._credentials.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class TfVoiceConnectorTerminationCredentials extends cdktn.TerraformResou
         storageClassType: "string",
       },
       credentials: {
-        value: cdktn.listMapperHcl(tfVoiceConnectorTerminationCredentialsCredentialsPropertyToHclTerraform, true)(this._credentials.internalValue),
+        value: cdktn.listMapperHcl(awsVoiceConnectorTerminationCredentialsCredentialsPropertyToHclTerraform, true)(this._credentials.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfVoiceConnectorTerminationCredentials.CredentialsPropertyList",
+        storageClassType: "AwsVoiceConnectorTerminationCredentials.CredentialsPropertyList",
       },
     };
 
@@ -196,7 +196,7 @@ export class TfVoiceConnectorTerminationCredentials extends cdktn.TerraformResou
   }
 }
 
-export function tfVoiceConnectorTerminationCredentialsCredentialsPropertyToTerraform(struct?: TfVoiceConnectorTerminationCredentials.CredentialsProperty | cdktn.IResolvable): any {
+export function awsVoiceConnectorTerminationCredentialsCredentialsPropertyToTerraform(struct?: AwsVoiceConnectorTerminationCredentials.CredentialsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,7 +208,7 @@ export function tfVoiceConnectorTerminationCredentialsCredentialsPropertyToTerra
 }
 
 
-export function tfVoiceConnectorTerminationCredentialsCredentialsPropertyToHclTerraform(struct?: TfVoiceConnectorTerminationCredentials.CredentialsProperty | cdktn.IResolvable): any {
+export function awsVoiceConnectorTerminationCredentialsCredentialsPropertyToHclTerraform(struct?: AwsVoiceConnectorTerminationCredentials.CredentialsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,14 +233,14 @@ export function tfVoiceConnectorTerminationCredentialsCredentialsPropertyToHclTe
 }
 
 
-export namespace TfVoiceConnectorTerminationCredentials {
+export namespace AwsVoiceConnectorTerminationCredentials {
 export interface CredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#password TfVoiceConnectorTerminationCredentials#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#password AwsVoiceConnectorTerminationCredentials#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#username TfVoiceConnectorTerminationCredentials#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_termination_credentials#username AwsVoiceConnectorTerminationCredentials#username}
   */
   readonly username: string;
 }

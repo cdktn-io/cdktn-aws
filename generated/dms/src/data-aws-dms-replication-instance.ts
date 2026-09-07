@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfReplicationInstanceConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsReplicationInstanceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_replication_instance#id DataTfReplicationInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_replication_instance#id DataAwsReplicationInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,15 +16,15 @@ export interface DataTfReplicationInstanceConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_replication_instance#region DataTfReplicationInstance#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_replication_instance#region DataAwsReplicationInstance#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_replication_instance#replication_instance_id DataTfReplicationInstance#replication_instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_replication_instance#replication_instance_id DataAwsReplicationInstance#replication_instance_id}
   */
   readonly replicationInstanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_replication_instance#tags DataTfReplicationInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_replication_instance#tags DataAwsReplicationInstance#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataTfReplicationInstanceConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_replication_instance aws_dms_replication_instance}
 */
-export class DataTfReplicationInstance extends cdktn.TerraformDataSource {
+export class DataAwsReplicationInstance extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfReplicationInstance extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfReplicationInstance resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsReplicationInstance resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfReplicationInstance to import
-  * @param importFromId The id of the existing DataTfReplicationInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_replication_instance#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfReplicationInstance to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsReplicationInstance to import
+  * @param importFromId The id of the existing DataAwsReplicationInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dms_replication_instance#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsReplicationInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dms_replication_instance", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfReplicationInstance extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfReplicationInstanceConfig
+  * @param options DataAwsReplicationInstanceConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfReplicationInstanceConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsReplicationInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dms_replication_instance',
       terraformGeneratorMetadata: {

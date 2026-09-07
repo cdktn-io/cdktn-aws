@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGameSessionQueueConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGameSessionQueueConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#custom_event_data TfGameSessionQueue#custom_event_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#custom_event_data AwsGameSessionQueue#custom_event_data}
   */
   readonly customEventData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#destinations TfGameSessionQueue#destinations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#destinations AwsGameSessionQueue#destinations}
   */
   readonly destinations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#id TfGameSessionQueue#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#id AwsGameSessionQueue#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#name TfGameSessionQueue#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#name AwsGameSessionQueue#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#notification_target TfGameSessionQueue#notification_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#notification_target AwsGameSessionQueue#notification_target}
   */
   readonly notificationTarget?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#region TfGameSessionQueue#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#region AwsGameSessionQueue#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#tags TfGameSessionQueue#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#tags AwsGameSessionQueue#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#tags_all TfGameSessionQueue#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#tags_all AwsGameSessionQueue#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#timeout_in_seconds TfGameSessionQueue#timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#timeout_in_seconds AwsGameSessionQueue#timeout_in_seconds}
   */
   readonly timeoutInSeconds?: number;
   /**
   * player_latency_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#player_latency_policy TfGameSessionQueue#player_latency_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#player_latency_policy AwsGameSessionQueue#player_latency_policy}
   */
-  readonly playerLatencyPolicy?: TfGameSessionQueue.PlayerLatencyPolicyProperty[] | cdktn.IResolvable;
+  readonly playerLatencyPolicy?: AwsGameSessionQueue.PlayerLatencyPolicyProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue aws_gamelift_game_session_queue}
 */
-export class TfGameSessionQueue extends cdktn.TerraformResource {
+export class AwsGameSessionQueue extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfGameSessionQueue extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGameSessionQueue resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGameSessionQueue resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGameSessionQueue to import
-  * @param importFromId The id of the existing TfGameSessionQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGameSessionQueue to import is found
+  * @param importToId The construct id used in the generated config for the AwsGameSessionQueue to import
+  * @param importFromId The id of the existing AwsGameSessionQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGameSessionQueue to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_gamelift_game_session_queue", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfGameSessionQueue extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGameSessionQueueConfig
+  * @param options AwsGameSessionQueueConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGameSessionQueueConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGameSessionQueueConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_gamelift_game_session_queue',
       terraformGeneratorMetadata: {
@@ -269,11 +269,11 @@ export class TfGameSessionQueue extends cdktn.TerraformResource {
   }
 
   // player_latency_policy - computed: false, optional: true, required: false
-  private _playerLatencyPolicy = new TfGameSessionQueue.PlayerLatencyPolicyPropertyList(this, "player_latency_policy", false);
+  private _playerLatencyPolicy = new AwsGameSessionQueue.PlayerLatencyPolicyPropertyList(this, "player_latency_policy", false);
   public get playerLatencyPolicy() {
     return this._playerLatencyPolicy;
   }
-  public putPlayerLatencyPolicy(value: TfGameSessionQueue.PlayerLatencyPolicyProperty[] | cdktn.IResolvable) {
+  public putPlayerLatencyPolicy(value: AwsGameSessionQueue.PlayerLatencyPolicyProperty[] | cdktn.IResolvable) {
     this._playerLatencyPolicy.internalValue = value;
   }
   public resetPlayerLatencyPolicy() {
@@ -299,7 +299,7 @@ export class TfGameSessionQueue extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       timeout_in_seconds: cdktn.numberToTerraform(this._timeoutInSeconds),
-      player_latency_policy: cdktn.listMapper(tfGameSessionQueuePlayerLatencyPolicyPropertyToTerraform, true)(this._playerLatencyPolicy.internalValue),
+      player_latency_policy: cdktn.listMapper(awsGameSessionQueuePlayerLatencyPolicyPropertyToTerraform, true)(this._playerLatencyPolicy.internalValue),
     };
   }
 
@@ -360,10 +360,10 @@ export class TfGameSessionQueue extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       player_latency_policy: {
-        value: cdktn.listMapperHcl(tfGameSessionQueuePlayerLatencyPolicyPropertyToHclTerraform, true)(this._playerLatencyPolicy.internalValue),
+        value: cdktn.listMapperHcl(awsGameSessionQueuePlayerLatencyPolicyPropertyToHclTerraform, true)(this._playerLatencyPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGameSessionQueue.PlayerLatencyPolicyPropertyList",
+        storageClassType: "AwsGameSessionQueue.PlayerLatencyPolicyPropertyList",
       },
     };
 
@@ -372,7 +372,7 @@ export class TfGameSessionQueue extends cdktn.TerraformResource {
   }
 }
 
-export function tfGameSessionQueuePlayerLatencyPolicyPropertyToTerraform(struct?: TfGameSessionQueue.PlayerLatencyPolicyProperty | cdktn.IResolvable): any {
+export function awsGameSessionQueuePlayerLatencyPolicyPropertyToTerraform(struct?: AwsGameSessionQueue.PlayerLatencyPolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function tfGameSessionQueuePlayerLatencyPolicyPropertyToTerraform(struct?
 }
 
 
-export function tfGameSessionQueuePlayerLatencyPolicyPropertyToHclTerraform(struct?: TfGameSessionQueue.PlayerLatencyPolicyProperty | cdktn.IResolvable): any {
+export function awsGameSessionQueuePlayerLatencyPolicyPropertyToHclTerraform(struct?: AwsGameSessionQueue.PlayerLatencyPolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,14 +409,14 @@ export function tfGameSessionQueuePlayerLatencyPolicyPropertyToHclTerraform(stru
 }
 
 
-export namespace TfGameSessionQueue {
+export namespace AwsGameSessionQueue {
 export interface PlayerLatencyPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#maximum_individual_player_latency_milliseconds TfGameSessionQueue#maximum_individual_player_latency_milliseconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#maximum_individual_player_latency_milliseconds AwsGameSessionQueue#maximum_individual_player_latency_milliseconds}
   */
   readonly maximumIndividualPlayerLatencyMilliseconds: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#policy_duration_seconds TfGameSessionQueue#policy_duration_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_game_session_queue#policy_duration_seconds AwsGameSessionQueue#policy_duration_seconds}
   */
   readonly policyDurationSeconds?: number;
 }

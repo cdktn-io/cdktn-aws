@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfStandardsControlConfig extends cdktn.TerraformMetaArguments {
+export interface AwsStandardsControlConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control#control_status TfStandardsControl#control_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control#control_status AwsStandardsControl#control_status}
   */
   readonly controlStatus: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control#disabled_reason TfStandardsControl#disabled_reason}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control#disabled_reason AwsStandardsControl#disabled_reason}
   */
   readonly disabledReason?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control#id TfStandardsControl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control#id AwsStandardsControl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface TfStandardsControlConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control#region TfStandardsControl#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control#region AwsStandardsControl#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control#standards_control_arn TfStandardsControl#standards_control_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control#standards_control_arn AwsStandardsControl#standards_control_arn}
   */
   readonly standardsControlArn: string;
 }
@@ -36,7 +36,7 @@ export interface TfStandardsControlConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control aws_securityhub_standards_control}
 */
-export class TfStandardsControl extends cdktn.TerraformResource {
+export class AwsStandardsControl extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfStandardsControl extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfStandardsControl resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsStandardsControl resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfStandardsControl to import
-  * @param importFromId The id of the existing TfStandardsControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfStandardsControl to import is found
+  * @param importToId The construct id used in the generated config for the AwsStandardsControl to import
+  * @param importFromId The id of the existing AwsStandardsControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStandardsControl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_standards_control", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfStandardsControl extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfStandardsControlConfig
+  * @param options AwsStandardsControlConfig
   */
-  public constructor(scope: Construct, id: string, config: TfStandardsControlConfig) {
+  public constructor(scope: Construct, id: string, config: AwsStandardsControlConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_standards_control',
       terraformGeneratorMetadata: {

@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPrefixListAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPrefixListAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_prefix_list_association#core_network_id TfPrefixListAssociation#core_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_prefix_list_association#core_network_id AwsPrefixListAssociation#core_network_id}
   */
   readonly coreNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_prefix_list_association#prefix_list_alias TfPrefixListAssociation#prefix_list_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_prefix_list_association#prefix_list_alias AwsPrefixListAssociation#prefix_list_alias}
   */
   readonly prefixListAlias: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_prefix_list_association#prefix_list_arn TfPrefixListAssociation#prefix_list_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_prefix_list_association#prefix_list_arn AwsPrefixListAssociation#prefix_list_arn}
   */
   readonly prefixListArn: string;
 }
@@ -23,7 +23,7 @@ export interface TfPrefixListAssociationConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_prefix_list_association aws_networkmanager_prefix_list_association}
 */
-export class TfPrefixListAssociation extends cdktn.TerraformResource {
+export class AwsPrefixListAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class TfPrefixListAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPrefixListAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPrefixListAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPrefixListAssociation to import
-  * @param importFromId The id of the existing TfPrefixListAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_prefix_list_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPrefixListAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsPrefixListAssociation to import
+  * @param importFromId The id of the existing AwsPrefixListAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_prefix_list_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPrefixListAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_prefix_list_association", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class TfPrefixListAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPrefixListAssociationConfig
+  * @param options AwsPrefixListAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPrefixListAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPrefixListAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_prefix_list_association',
       terraformGeneratorMetadata: {

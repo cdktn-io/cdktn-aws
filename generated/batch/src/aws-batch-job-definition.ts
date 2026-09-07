@@ -5,92 +5,92 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfJobDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsJobDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#container_properties TfJobDefinition#container_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#container_properties AwsJobDefinition#container_properties}
   */
   readonly containerProperties?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#deregister_on_new_revision TfJobDefinition#deregister_on_new_revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#deregister_on_new_revision AwsJobDefinition#deregister_on_new_revision}
   */
   readonly deregisterOnNewRevision?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#ecs_properties TfJobDefinition#ecs_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#ecs_properties AwsJobDefinition#ecs_properties}
   */
   readonly ecsProperties?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#id TfJobDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#id AwsJobDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name TfJobDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name AwsJobDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#node_properties TfJobDefinition#node_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#node_properties AwsJobDefinition#node_properties}
   */
   readonly nodeProperties?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#parameters TfJobDefinition#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#parameters AwsJobDefinition#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#platform_capabilities TfJobDefinition#platform_capabilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#platform_capabilities AwsJobDefinition#platform_capabilities}
   */
   readonly platformCapabilities?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#propagate_tags TfJobDefinition#propagate_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#propagate_tags AwsJobDefinition#propagate_tags}
   */
   readonly propagateTags?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#region TfJobDefinition#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#region AwsJobDefinition#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#scheduling_priority TfJobDefinition#scheduling_priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#scheduling_priority AwsJobDefinition#scheduling_priority}
   */
   readonly schedulingPriority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#tags TfJobDefinition#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#tags AwsJobDefinition#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#tags_all TfJobDefinition#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#tags_all AwsJobDefinition#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#type TfJobDefinition#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#type AwsJobDefinition#type}
   */
   readonly type: string;
   /**
   * eks_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#eks_properties TfJobDefinition#eks_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#eks_properties AwsJobDefinition#eks_properties}
   */
-  readonly eksProperties?: TfJobDefinition.EksPropertiesProperty;
+  readonly eksProperties?: AwsJobDefinition.EksPropertiesProperty;
   /**
   * retry_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#retry_strategy TfJobDefinition#retry_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#retry_strategy AwsJobDefinition#retry_strategy}
   */
-  readonly retryStrategy?: TfJobDefinition.RetryStrategyProperty;
+  readonly retryStrategy?: AwsJobDefinition.RetryStrategyProperty;
   /**
   * timeout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#timeout TfJobDefinition#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#timeout AwsJobDefinition#timeout}
   */
-  readonly timeout?: TfJobDefinition.TimeoutProperty;
+  readonly timeout?: AwsJobDefinition.TimeoutProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition aws_batch_job_definition}
 */
-export class TfJobDefinition extends cdktn.TerraformResource {
+export class AwsJobDefinition extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -101,11 +101,11 @@ export class TfJobDefinition extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfJobDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsJobDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfJobDefinition to import
-  * @param importFromId The id of the existing TfJobDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfJobDefinition to import is found
+  * @param importToId The construct id used in the generated config for the AwsJobDefinition to import
+  * @param importFromId The id of the existing AwsJobDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsJobDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_batch_job_definition", importId: importFromId, provider });
@@ -120,9 +120,9 @@ export class TfJobDefinition extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfJobDefinitionConfig
+  * @param options AwsJobDefinitionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfJobDefinitionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsJobDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_batch_job_definition',
       terraformGeneratorMetadata: {
@@ -395,11 +395,11 @@ export class TfJobDefinition extends cdktn.TerraformResource {
   }
 
   // eks_properties - computed: false, optional: true, required: false
-  private _eksProperties = new TfJobDefinition.EksPropertiesPropertyOutputReference(this, "eks_properties");
+  private _eksProperties = new AwsJobDefinition.EksPropertiesPropertyOutputReference(this, "eks_properties");
   public get eksProperties() {
     return this._eksProperties;
   }
-  public putEksProperties(value: TfJobDefinition.EksPropertiesProperty) {
+  public putEksProperties(value: AwsJobDefinition.EksPropertiesProperty) {
     this._eksProperties.internalValue = value;
   }
   public resetEksProperties() {
@@ -411,11 +411,11 @@ export class TfJobDefinition extends cdktn.TerraformResource {
   }
 
   // retry_strategy - computed: false, optional: true, required: false
-  private _retryStrategy = new TfJobDefinition.RetryStrategyPropertyOutputReference(this, "retry_strategy");
+  private _retryStrategy = new AwsJobDefinition.RetryStrategyPropertyOutputReference(this, "retry_strategy");
   public get retryStrategy() {
     return this._retryStrategy;
   }
-  public putRetryStrategy(value: TfJobDefinition.RetryStrategyProperty) {
+  public putRetryStrategy(value: AwsJobDefinition.RetryStrategyProperty) {
     this._retryStrategy.internalValue = value;
   }
   public resetRetryStrategy() {
@@ -427,11 +427,11 @@ export class TfJobDefinition extends cdktn.TerraformResource {
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout = new TfJobDefinition.TimeoutPropertyOutputReference(this, "timeout");
+  private _timeout = new AwsJobDefinition.TimeoutPropertyOutputReference(this, "timeout");
   public get timeout() {
     return this._timeout;
   }
-  public putTimeout(value: TfJobDefinition.TimeoutProperty) {
+  public putTimeout(value: AwsJobDefinition.TimeoutProperty) {
     this._timeout.internalValue = value;
   }
   public resetTimeout() {
@@ -462,9 +462,9 @@ export class TfJobDefinition extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      eks_properties: tfJobDefinitionEksPropertiesPropertyToTerraform(this._eksProperties.internalValue),
-      retry_strategy: tfJobDefinitionRetryStrategyPropertyToTerraform(this._retryStrategy.internalValue),
-      timeout: tfJobDefinitionTimeoutPropertyToTerraform(this._timeout.internalValue),
+      eks_properties: awsJobDefinitionEksPropertiesPropertyToTerraform(this._eksProperties.internalValue),
+      retry_strategy: awsJobDefinitionRetryStrategyPropertyToTerraform(this._retryStrategy.internalValue),
+      timeout: awsJobDefinitionTimeoutPropertyToTerraform(this._timeout.internalValue),
     };
   }
 
@@ -555,22 +555,22 @@ export class TfJobDefinition extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       eks_properties: {
-        value: tfJobDefinitionEksPropertiesPropertyToHclTerraform(this._eksProperties.internalValue),
+        value: awsJobDefinitionEksPropertiesPropertyToHclTerraform(this._eksProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfJobDefinition.EksPropertiesPropertyList",
+        storageClassType: "AwsJobDefinition.EksPropertiesPropertyList",
       },
       retry_strategy: {
-        value: tfJobDefinitionRetryStrategyPropertyToHclTerraform(this._retryStrategy.internalValue),
+        value: awsJobDefinitionRetryStrategyPropertyToHclTerraform(this._retryStrategy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfJobDefinition.RetryStrategyPropertyList",
+        storageClassType: "AwsJobDefinition.RetryStrategyPropertyList",
       },
       timeout: {
-        value: tfJobDefinitionTimeoutPropertyToHclTerraform(this._timeout.internalValue),
+        value: awsJobDefinitionTimeoutPropertyToHclTerraform(this._timeout.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfJobDefinition.TimeoutPropertyList",
+        storageClassType: "AwsJobDefinition.TimeoutPropertyList",
       },
     };
 
@@ -579,7 +579,7 @@ export class TfJobDefinition extends cdktn.TerraformResource {
   }
 }
 
-export function tfJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyToTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesContainersEnvProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyToTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesContainersEnvProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -591,7 +591,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyTo
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyToHclTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesContainersEnvProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyToHclTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesContainersEnvProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,7 +616,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyTo
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesContainersResourcesPropertyToTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesContainersResourcesPropertyOutputReference | TfJobDefinition.EksPropertiesPodPropertiesContainersResourcesProperty): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesContainersResourcesPropertyToTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesContainersResourcesPropertyOutputReference | AwsJobDefinition.EksPropertiesPodPropertiesContainersResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -628,7 +628,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesContainersResourcesProp
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesContainersResourcesPropertyToHclTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesContainersResourcesPropertyOutputReference | TfJobDefinition.EksPropertiesPodPropertiesContainersResourcesProperty): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesContainersResourcesPropertyToHclTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesContainersResourcesPropertyOutputReference | AwsJobDefinition.EksPropertiesPodPropertiesContainersResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -653,7 +653,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesContainersResourcesProp
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextPropertyToTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesContainersSecurityContextPropertyOutputReference | TfJobDefinition.EksPropertiesPodPropertiesContainersSecurityContextProperty): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextPropertyToTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesContainersSecurityContextPropertyOutputReference | AwsJobDefinition.EksPropertiesPodPropertiesContainersSecurityContextProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -669,7 +669,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesContainersSecurityConte
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextPropertyToHclTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesContainersSecurityContextPropertyOutputReference | TfJobDefinition.EksPropertiesPodPropertiesContainersSecurityContextProperty): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextPropertyToHclTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesContainersSecurityContextPropertyOutputReference | AwsJobDefinition.EksPropertiesPodPropertiesContainersSecurityContextProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -718,7 +718,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesContainersSecurityConte
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsPropertyToTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesContainersVolumeMountsProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsPropertyToTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesContainersVolumeMountsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -731,7 +731,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsP
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsPropertyToHclTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesContainersVolumeMountsProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsPropertyToHclTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesContainersVolumeMountsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -762,7 +762,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsP
 }
 
 
-export function tfJobDefinitionContainersPropertyToTerraform(struct?: TfJobDefinition.ContainersProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionContainersPropertyToTerraform(struct?: AwsJobDefinition.ContainersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -773,15 +773,15 @@ export function tfJobDefinitionContainersPropertyToTerraform(struct?: TfJobDefin
     image: cdktn.stringToTerraform(struct!.image),
     image_pull_policy: cdktn.stringToTerraform(struct!.imagePullPolicy),
     name: cdktn.stringToTerraform(struct!.name),
-    env: cdktn.listMapper(tfJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyToTerraform, true)(struct!.env),
-    resources: tfJobDefinitionEksPropertiesPodPropertiesContainersResourcesPropertyToTerraform(struct!.resources),
-    security_context: tfJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextPropertyToTerraform(struct!.securityContext),
-    volume_mounts: cdktn.listMapper(tfJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsPropertyToTerraform, true)(struct!.volumeMounts),
+    env: cdktn.listMapper(awsJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyToTerraform, true)(struct!.env),
+    resources: awsJobDefinitionEksPropertiesPodPropertiesContainersResourcesPropertyToTerraform(struct!.resources),
+    security_context: awsJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextPropertyToTerraform(struct!.securityContext),
+    volume_mounts: cdktn.listMapper(awsJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsPropertyToTerraform, true)(struct!.volumeMounts),
   }
 }
 
 
-export function tfJobDefinitionContainersPropertyToHclTerraform(struct?: TfJobDefinition.ContainersProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionContainersPropertyToHclTerraform(struct?: AwsJobDefinition.ContainersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -818,25 +818,25 @@ export function tfJobDefinitionContainersPropertyToHclTerraform(struct?: TfJobDe
       storageClassType: "string",
     },
     env: {
-      value: cdktn.listMapperHcl(tfJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyToHclTerraform, true)(struct!.env),
+      value: cdktn.listMapperHcl(awsJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyToHclTerraform, true)(struct!.env),
       isBlock: true,
       type: "set",
       storageClassType: "EksPropertiesPodPropertiesContainersEnvPropertyList",
     },
     resources: {
-      value: tfJobDefinitionEksPropertiesPodPropertiesContainersResourcesPropertyToHclTerraform(struct!.resources),
+      value: awsJobDefinitionEksPropertiesPodPropertiesContainersResourcesPropertyToHclTerraform(struct!.resources),
       isBlock: true,
       type: "list",
       storageClassType: "EksPropertiesPodPropertiesContainersResourcesPropertyList",
     },
     security_context: {
-      value: tfJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextPropertyToHclTerraform(struct!.securityContext),
+      value: awsJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextPropertyToHclTerraform(struct!.securityContext),
       isBlock: true,
       type: "list",
       storageClassType: "EksPropertiesPodPropertiesContainersSecurityContextPropertyList",
     },
     volume_mounts: {
-      value: cdktn.listMapperHcl(tfJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsPropertyToHclTerraform, true)(struct!.volumeMounts),
+      value: cdktn.listMapperHcl(awsJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsPropertyToHclTerraform, true)(struct!.volumeMounts),
       isBlock: true,
       type: "list",
       storageClassType: "EksPropertiesPodPropertiesContainersVolumeMountsPropertyList",
@@ -848,7 +848,7 @@ export function tfJobDefinitionContainersPropertyToHclTerraform(struct?: TfJobDe
 }
 
 
-export function tfJobDefinitionImagePullSecretPropertyToTerraform(struct?: TfJobDefinition.ImagePullSecretProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionImagePullSecretPropertyToTerraform(struct?: AwsJobDefinition.ImagePullSecretProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -859,7 +859,7 @@ export function tfJobDefinitionImagePullSecretPropertyToTerraform(struct?: TfJob
 }
 
 
-export function tfJobDefinitionImagePullSecretPropertyToHclTerraform(struct?: TfJobDefinition.ImagePullSecretProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionImagePullSecretPropertyToHclTerraform(struct?: AwsJobDefinition.ImagePullSecretProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -878,7 +878,7 @@ export function tfJobDefinitionImagePullSecretPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPropertyToTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesInitContainersEnvProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPropertyToTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesInitContainersEnvProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -890,7 +890,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersEnvProper
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPropertyToHclTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesInitContainersEnvProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPropertyToHclTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesInitContainersEnvProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -915,7 +915,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersEnvProper
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersResourcesPropertyToTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesInitContainersResourcesPropertyOutputReference | TfJobDefinition.EksPropertiesPodPropertiesInitContainersResourcesProperty): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesInitContainersResourcesPropertyToTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesInitContainersResourcesPropertyOutputReference | AwsJobDefinition.EksPropertiesPodPropertiesInitContainersResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -927,7 +927,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersResources
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersResourcesPropertyToHclTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesInitContainersResourcesPropertyOutputReference | TfJobDefinition.EksPropertiesPodPropertiesInitContainersResourcesProperty): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesInitContainersResourcesPropertyToHclTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesInitContainersResourcesPropertyOutputReference | AwsJobDefinition.EksPropertiesPodPropertiesInitContainersResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -952,7 +952,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersResources
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityContextPropertyToTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesInitContainersSecurityContextPropertyOutputReference | TfJobDefinition.EksPropertiesPodPropertiesInitContainersSecurityContextProperty): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityContextPropertyToTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesInitContainersSecurityContextPropertyOutputReference | AwsJobDefinition.EksPropertiesPodPropertiesInitContainersSecurityContextProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -968,7 +968,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityC
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityContextPropertyToHclTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesInitContainersSecurityContextPropertyOutputReference | TfJobDefinition.EksPropertiesPodPropertiesInitContainersSecurityContextProperty): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityContextPropertyToHclTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesInitContainersSecurityContextPropertyOutputReference | AwsJobDefinition.EksPropertiesPodPropertiesInitContainersSecurityContextProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1017,7 +1017,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityC
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMountsPropertyToTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesInitContainersVolumeMountsProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMountsPropertyToTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesInitContainersVolumeMountsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1030,7 +1030,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMou
 }
 
 
-export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMountsPropertyToHclTerraform(struct?: TfJobDefinition.EksPropertiesPodPropertiesInitContainersVolumeMountsProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMountsPropertyToHclTerraform(struct?: AwsJobDefinition.EksPropertiesPodPropertiesInitContainersVolumeMountsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1061,7 +1061,7 @@ export function tfJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMou
 }
 
 
-export function tfJobDefinitionInitContainersPropertyToTerraform(struct?: TfJobDefinition.InitContainersProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionInitContainersPropertyToTerraform(struct?: AwsJobDefinition.InitContainersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1072,15 +1072,15 @@ export function tfJobDefinitionInitContainersPropertyToTerraform(struct?: TfJobD
     image: cdktn.stringToTerraform(struct!.image),
     image_pull_policy: cdktn.stringToTerraform(struct!.imagePullPolicy),
     name: cdktn.stringToTerraform(struct!.name),
-    env: cdktn.listMapper(tfJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPropertyToTerraform, true)(struct!.env),
-    resources: tfJobDefinitionEksPropertiesPodPropertiesInitContainersResourcesPropertyToTerraform(struct!.resources),
-    security_context: tfJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityContextPropertyToTerraform(struct!.securityContext),
-    volume_mounts: cdktn.listMapper(tfJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMountsPropertyToTerraform, true)(struct!.volumeMounts),
+    env: cdktn.listMapper(awsJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPropertyToTerraform, true)(struct!.env),
+    resources: awsJobDefinitionEksPropertiesPodPropertiesInitContainersResourcesPropertyToTerraform(struct!.resources),
+    security_context: awsJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityContextPropertyToTerraform(struct!.securityContext),
+    volume_mounts: cdktn.listMapper(awsJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMountsPropertyToTerraform, true)(struct!.volumeMounts),
   }
 }
 
 
-export function tfJobDefinitionInitContainersPropertyToHclTerraform(struct?: TfJobDefinition.InitContainersProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionInitContainersPropertyToHclTerraform(struct?: AwsJobDefinition.InitContainersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1117,25 +1117,25 @@ export function tfJobDefinitionInitContainersPropertyToHclTerraform(struct?: TfJ
       storageClassType: "string",
     },
     env: {
-      value: cdktn.listMapperHcl(tfJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPropertyToHclTerraform, true)(struct!.env),
+      value: cdktn.listMapperHcl(awsJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPropertyToHclTerraform, true)(struct!.env),
       isBlock: true,
       type: "set",
       storageClassType: "EksPropertiesPodPropertiesInitContainersEnvPropertyList",
     },
     resources: {
-      value: tfJobDefinitionEksPropertiesPodPropertiesInitContainersResourcesPropertyToHclTerraform(struct!.resources),
+      value: awsJobDefinitionEksPropertiesPodPropertiesInitContainersResourcesPropertyToHclTerraform(struct!.resources),
       isBlock: true,
       type: "list",
       storageClassType: "EksPropertiesPodPropertiesInitContainersResourcesPropertyList",
     },
     security_context: {
-      value: tfJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityContextPropertyToHclTerraform(struct!.securityContext),
+      value: awsJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityContextPropertyToHclTerraform(struct!.securityContext),
       isBlock: true,
       type: "list",
       storageClassType: "EksPropertiesPodPropertiesInitContainersSecurityContextPropertyList",
     },
     volume_mounts: {
-      value: cdktn.listMapperHcl(tfJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMountsPropertyToHclTerraform, true)(struct!.volumeMounts),
+      value: cdktn.listMapperHcl(awsJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMountsPropertyToHclTerraform, true)(struct!.volumeMounts),
       isBlock: true,
       type: "list",
       storageClassType: "EksPropertiesPodPropertiesInitContainersVolumeMountsPropertyList",
@@ -1147,7 +1147,7 @@ export function tfJobDefinitionInitContainersPropertyToHclTerraform(struct?: TfJ
 }
 
 
-export function tfJobDefinitionMetadataPropertyToTerraform(struct?: TfJobDefinition.MetadataPropertyOutputReference | TfJobDefinition.MetadataProperty): any {
+export function awsJobDefinitionMetadataPropertyToTerraform(struct?: AwsJobDefinition.MetadataPropertyOutputReference | AwsJobDefinition.MetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1158,7 +1158,7 @@ export function tfJobDefinitionMetadataPropertyToTerraform(struct?: TfJobDefinit
 }
 
 
-export function tfJobDefinitionMetadataPropertyToHclTerraform(struct?: TfJobDefinition.MetadataPropertyOutputReference | TfJobDefinition.MetadataProperty): any {
+export function awsJobDefinitionMetadataPropertyToHclTerraform(struct?: AwsJobDefinition.MetadataPropertyOutputReference | AwsJobDefinition.MetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1177,7 +1177,7 @@ export function tfJobDefinitionMetadataPropertyToHclTerraform(struct?: TfJobDefi
 }
 
 
-export function tfJobDefinitionEmptyDirPropertyToTerraform(struct?: TfJobDefinition.EmptyDirPropertyOutputReference | TfJobDefinition.EmptyDirProperty): any {
+export function awsJobDefinitionEmptyDirPropertyToTerraform(struct?: AwsJobDefinition.EmptyDirPropertyOutputReference | AwsJobDefinition.EmptyDirProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1189,7 +1189,7 @@ export function tfJobDefinitionEmptyDirPropertyToTerraform(struct?: TfJobDefinit
 }
 
 
-export function tfJobDefinitionEmptyDirPropertyToHclTerraform(struct?: TfJobDefinition.EmptyDirPropertyOutputReference | TfJobDefinition.EmptyDirProperty): any {
+export function awsJobDefinitionEmptyDirPropertyToHclTerraform(struct?: AwsJobDefinition.EmptyDirPropertyOutputReference | AwsJobDefinition.EmptyDirProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1214,7 +1214,7 @@ export function tfJobDefinitionEmptyDirPropertyToHclTerraform(struct?: TfJobDefi
 }
 
 
-export function tfJobDefinitionHostPathPropertyToTerraform(struct?: TfJobDefinition.HostPathPropertyOutputReference | TfJobDefinition.HostPathProperty): any {
+export function awsJobDefinitionHostPathPropertyToTerraform(struct?: AwsJobDefinition.HostPathPropertyOutputReference | AwsJobDefinition.HostPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1225,7 +1225,7 @@ export function tfJobDefinitionHostPathPropertyToTerraform(struct?: TfJobDefinit
 }
 
 
-export function tfJobDefinitionHostPathPropertyToHclTerraform(struct?: TfJobDefinition.HostPathPropertyOutputReference | TfJobDefinition.HostPathProperty): any {
+export function awsJobDefinitionHostPathPropertyToHclTerraform(struct?: AwsJobDefinition.HostPathPropertyOutputReference | AwsJobDefinition.HostPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1244,7 +1244,7 @@ export function tfJobDefinitionHostPathPropertyToHclTerraform(struct?: TfJobDefi
 }
 
 
-export function tfJobDefinitionSecretPropertyToTerraform(struct?: TfJobDefinition.SecretPropertyOutputReference | TfJobDefinition.SecretProperty): any {
+export function awsJobDefinitionSecretPropertyToTerraform(struct?: AwsJobDefinition.SecretPropertyOutputReference | AwsJobDefinition.SecretProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1256,7 +1256,7 @@ export function tfJobDefinitionSecretPropertyToTerraform(struct?: TfJobDefinitio
 }
 
 
-export function tfJobDefinitionSecretPropertyToHclTerraform(struct?: TfJobDefinition.SecretPropertyOutputReference | TfJobDefinition.SecretProperty): any {
+export function awsJobDefinitionSecretPropertyToHclTerraform(struct?: AwsJobDefinition.SecretPropertyOutputReference | AwsJobDefinition.SecretProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1281,21 +1281,21 @@ export function tfJobDefinitionSecretPropertyToHclTerraform(struct?: TfJobDefini
 }
 
 
-export function tfJobDefinitionVolumesPropertyToTerraform(struct?: TfJobDefinition.VolumesProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionVolumesPropertyToTerraform(struct?: AwsJobDefinition.VolumesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    empty_dir: tfJobDefinitionEmptyDirPropertyToTerraform(struct!.emptyDir),
-    host_path: tfJobDefinitionHostPathPropertyToTerraform(struct!.hostPath),
-    secret: tfJobDefinitionSecretPropertyToTerraform(struct!.secret),
+    empty_dir: awsJobDefinitionEmptyDirPropertyToTerraform(struct!.emptyDir),
+    host_path: awsJobDefinitionHostPathPropertyToTerraform(struct!.hostPath),
+    secret: awsJobDefinitionSecretPropertyToTerraform(struct!.secret),
   }
 }
 
 
-export function tfJobDefinitionVolumesPropertyToHclTerraform(struct?: TfJobDefinition.VolumesProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionVolumesPropertyToHclTerraform(struct?: AwsJobDefinition.VolumesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1308,19 +1308,19 @@ export function tfJobDefinitionVolumesPropertyToHclTerraform(struct?: TfJobDefin
       storageClassType: "string",
     },
     empty_dir: {
-      value: tfJobDefinitionEmptyDirPropertyToHclTerraform(struct!.emptyDir),
+      value: awsJobDefinitionEmptyDirPropertyToHclTerraform(struct!.emptyDir),
       isBlock: true,
       type: "list",
       storageClassType: "EmptyDirPropertyList",
     },
     host_path: {
-      value: tfJobDefinitionHostPathPropertyToHclTerraform(struct!.hostPath),
+      value: awsJobDefinitionHostPathPropertyToHclTerraform(struct!.hostPath),
       isBlock: true,
       type: "list",
       storageClassType: "HostPathPropertyList",
     },
     secret: {
-      value: tfJobDefinitionSecretPropertyToHclTerraform(struct!.secret),
+      value: awsJobDefinitionSecretPropertyToHclTerraform(struct!.secret),
       isBlock: true,
       type: "list",
       storageClassType: "SecretPropertyList",
@@ -1332,7 +1332,7 @@ export function tfJobDefinitionVolumesPropertyToHclTerraform(struct?: TfJobDefin
 }
 
 
-export function tfJobDefinitionPodPropertiesPropertyToTerraform(struct?: TfJobDefinition.PodPropertiesPropertyOutputReference | TfJobDefinition.PodPropertiesProperty): any {
+export function awsJobDefinitionPodPropertiesPropertyToTerraform(struct?: AwsJobDefinition.PodPropertiesPropertyOutputReference | AwsJobDefinition.PodPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1342,16 +1342,16 @@ export function tfJobDefinitionPodPropertiesPropertyToTerraform(struct?: TfJobDe
     host_network: cdktn.booleanToTerraform(struct!.hostNetwork),
     service_account_name: cdktn.stringToTerraform(struct!.serviceAccountName),
     share_process_namespace: cdktn.booleanToTerraform(struct!.shareProcessNamespace),
-    containers: cdktn.listMapper(tfJobDefinitionContainersPropertyToTerraform, true)(struct!.containers),
-    image_pull_secret: cdktn.listMapper(tfJobDefinitionImagePullSecretPropertyToTerraform, true)(struct!.imagePullSecret),
-    init_containers: cdktn.listMapper(tfJobDefinitionInitContainersPropertyToTerraform, true)(struct!.initContainers),
-    metadata: tfJobDefinitionMetadataPropertyToTerraform(struct!.metadata),
-    volumes: cdktn.listMapper(tfJobDefinitionVolumesPropertyToTerraform, true)(struct!.volumes),
+    containers: cdktn.listMapper(awsJobDefinitionContainersPropertyToTerraform, true)(struct!.containers),
+    image_pull_secret: cdktn.listMapper(awsJobDefinitionImagePullSecretPropertyToTerraform, true)(struct!.imagePullSecret),
+    init_containers: cdktn.listMapper(awsJobDefinitionInitContainersPropertyToTerraform, true)(struct!.initContainers),
+    metadata: awsJobDefinitionMetadataPropertyToTerraform(struct!.metadata),
+    volumes: cdktn.listMapper(awsJobDefinitionVolumesPropertyToTerraform, true)(struct!.volumes),
   }
 }
 
 
-export function tfJobDefinitionPodPropertiesPropertyToHclTerraform(struct?: TfJobDefinition.PodPropertiesPropertyOutputReference | TfJobDefinition.PodPropertiesProperty): any {
+export function awsJobDefinitionPodPropertiesPropertyToHclTerraform(struct?: AwsJobDefinition.PodPropertiesPropertyOutputReference | AwsJobDefinition.PodPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1382,31 +1382,31 @@ export function tfJobDefinitionPodPropertiesPropertyToHclTerraform(struct?: TfJo
       storageClassType: "boolean",
     },
     containers: {
-      value: cdktn.listMapperHcl(tfJobDefinitionContainersPropertyToHclTerraform, true)(struct!.containers),
+      value: cdktn.listMapperHcl(awsJobDefinitionContainersPropertyToHclTerraform, true)(struct!.containers),
       isBlock: true,
       type: "list",
       storageClassType: "ContainersPropertyList",
     },
     image_pull_secret: {
-      value: cdktn.listMapperHcl(tfJobDefinitionImagePullSecretPropertyToHclTerraform, true)(struct!.imagePullSecret),
+      value: cdktn.listMapperHcl(awsJobDefinitionImagePullSecretPropertyToHclTerraform, true)(struct!.imagePullSecret),
       isBlock: true,
       type: "list",
       storageClassType: "ImagePullSecretPropertyList",
     },
     init_containers: {
-      value: cdktn.listMapperHcl(tfJobDefinitionInitContainersPropertyToHclTerraform, true)(struct!.initContainers),
+      value: cdktn.listMapperHcl(awsJobDefinitionInitContainersPropertyToHclTerraform, true)(struct!.initContainers),
       isBlock: true,
       type: "list",
       storageClassType: "InitContainersPropertyList",
     },
     metadata: {
-      value: tfJobDefinitionMetadataPropertyToHclTerraform(struct!.metadata),
+      value: awsJobDefinitionMetadataPropertyToHclTerraform(struct!.metadata),
       isBlock: true,
       type: "list",
       storageClassType: "MetadataPropertyList",
     },
     volumes: {
-      value: cdktn.listMapperHcl(tfJobDefinitionVolumesPropertyToHclTerraform, true)(struct!.volumes),
+      value: cdktn.listMapperHcl(awsJobDefinitionVolumesPropertyToHclTerraform, true)(struct!.volumes),
       isBlock: true,
       type: "list",
       storageClassType: "VolumesPropertyList",
@@ -1418,25 +1418,25 @@ export function tfJobDefinitionPodPropertiesPropertyToHclTerraform(struct?: TfJo
 }
 
 
-export function tfJobDefinitionEksPropertiesPropertyToTerraform(struct?: TfJobDefinition.EksPropertiesPropertyOutputReference | TfJobDefinition.EksPropertiesProperty): any {
+export function awsJobDefinitionEksPropertiesPropertyToTerraform(struct?: AwsJobDefinition.EksPropertiesPropertyOutputReference | AwsJobDefinition.EksPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    pod_properties: tfJobDefinitionPodPropertiesPropertyToTerraform(struct!.podProperties),
+    pod_properties: awsJobDefinitionPodPropertiesPropertyToTerraform(struct!.podProperties),
   }
 }
 
 
-export function tfJobDefinitionEksPropertiesPropertyToHclTerraform(struct?: TfJobDefinition.EksPropertiesPropertyOutputReference | TfJobDefinition.EksPropertiesProperty): any {
+export function awsJobDefinitionEksPropertiesPropertyToHclTerraform(struct?: AwsJobDefinition.EksPropertiesPropertyOutputReference | AwsJobDefinition.EksPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     pod_properties: {
-      value: tfJobDefinitionPodPropertiesPropertyToHclTerraform(struct!.podProperties),
+      value: awsJobDefinitionPodPropertiesPropertyToHclTerraform(struct!.podProperties),
       isBlock: true,
       type: "list",
       storageClassType: "PodPropertiesPropertyList",
@@ -1448,7 +1448,7 @@ export function tfJobDefinitionEksPropertiesPropertyToHclTerraform(struct?: TfJo
 }
 
 
-export function tfJobDefinitionEvaluateOnExitPropertyToTerraform(struct?: TfJobDefinition.EvaluateOnExitProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionEvaluateOnExitPropertyToTerraform(struct?: AwsJobDefinition.EvaluateOnExitProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1462,7 +1462,7 @@ export function tfJobDefinitionEvaluateOnExitPropertyToTerraform(struct?: TfJobD
 }
 
 
-export function tfJobDefinitionEvaluateOnExitPropertyToHclTerraform(struct?: TfJobDefinition.EvaluateOnExitProperty | cdktn.IResolvable): any {
+export function awsJobDefinitionEvaluateOnExitPropertyToHclTerraform(struct?: AwsJobDefinition.EvaluateOnExitProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1499,19 +1499,19 @@ export function tfJobDefinitionEvaluateOnExitPropertyToHclTerraform(struct?: TfJ
 }
 
 
-export function tfJobDefinitionRetryStrategyPropertyToTerraform(struct?: TfJobDefinition.RetryStrategyPropertyOutputReference | TfJobDefinition.RetryStrategyProperty): any {
+export function awsJobDefinitionRetryStrategyPropertyToTerraform(struct?: AwsJobDefinition.RetryStrategyPropertyOutputReference | AwsJobDefinition.RetryStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     attempts: cdktn.numberToTerraform(struct!.attempts),
-    evaluate_on_exit: cdktn.listMapper(tfJobDefinitionEvaluateOnExitPropertyToTerraform, true)(struct!.evaluateOnExit),
+    evaluate_on_exit: cdktn.listMapper(awsJobDefinitionEvaluateOnExitPropertyToTerraform, true)(struct!.evaluateOnExit),
   }
 }
 
 
-export function tfJobDefinitionRetryStrategyPropertyToHclTerraform(struct?: TfJobDefinition.RetryStrategyPropertyOutputReference | TfJobDefinition.RetryStrategyProperty): any {
+export function awsJobDefinitionRetryStrategyPropertyToHclTerraform(struct?: AwsJobDefinition.RetryStrategyPropertyOutputReference | AwsJobDefinition.RetryStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1524,7 +1524,7 @@ export function tfJobDefinitionRetryStrategyPropertyToHclTerraform(struct?: TfJo
       storageClassType: "number",
     },
     evaluate_on_exit: {
-      value: cdktn.listMapperHcl(tfJobDefinitionEvaluateOnExitPropertyToHclTerraform, true)(struct!.evaluateOnExit),
+      value: cdktn.listMapperHcl(awsJobDefinitionEvaluateOnExitPropertyToHclTerraform, true)(struct!.evaluateOnExit),
       isBlock: true,
       type: "list",
       storageClassType: "EvaluateOnExitPropertyList",
@@ -1536,7 +1536,7 @@ export function tfJobDefinitionRetryStrategyPropertyToHclTerraform(struct?: TfJo
 }
 
 
-export function tfJobDefinitionTimeoutPropertyToTerraform(struct?: TfJobDefinition.TimeoutPropertyOutputReference | TfJobDefinition.TimeoutProperty): any {
+export function awsJobDefinitionTimeoutPropertyToTerraform(struct?: AwsJobDefinition.TimeoutPropertyOutputReference | AwsJobDefinition.TimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1547,7 +1547,7 @@ export function tfJobDefinitionTimeoutPropertyToTerraform(struct?: TfJobDefiniti
 }
 
 
-export function tfJobDefinitionTimeoutPropertyToHclTerraform(struct?: TfJobDefinition.TimeoutPropertyOutputReference | TfJobDefinition.TimeoutProperty): any {
+export function awsJobDefinitionTimeoutPropertyToHclTerraform(struct?: AwsJobDefinition.TimeoutPropertyOutputReference | AwsJobDefinition.TimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1566,14 +1566,14 @@ export function tfJobDefinitionTimeoutPropertyToHclTerraform(struct?: TfJobDefin
 }
 
 
-export namespace TfJobDefinition {
+export namespace AwsJobDefinition {
 export interface EksPropertiesPodPropertiesContainersEnvProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name TfJobDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name AwsJobDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#value TfJobDefinition#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#value AwsJobDefinition#value}
   */
   readonly value: string;
 }
@@ -1675,11 +1675,11 @@ export class EksPropertiesPodPropertiesContainersEnvPropertyList extends cdktn.C
 }
 export interface EksPropertiesPodPropertiesContainersResourcesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#limits TfJobDefinition#limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#limits AwsJobDefinition#limits}
   */
   readonly limits?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#requests TfJobDefinition#requests}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#requests AwsJobDefinition#requests}
   */
   readonly requests?: { [key: string]: string };
 }
@@ -1755,27 +1755,27 @@ export class EksPropertiesPodPropertiesContainersResourcesPropertyOutputReferenc
 }
 export interface EksPropertiesPodPropertiesContainersSecurityContextProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#allow_privilege_escalation TfJobDefinition#allow_privilege_escalation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#allow_privilege_escalation AwsJobDefinition#allow_privilege_escalation}
   */
   readonly allowPrivilegeEscalation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#privileged TfJobDefinition#privileged}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#privileged AwsJobDefinition#privileged}
   */
   readonly privileged?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#read_only_root_file_system TfJobDefinition#read_only_root_file_system}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#read_only_root_file_system AwsJobDefinition#read_only_root_file_system}
   */
   readonly readOnlyRootFileSystem?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#run_as_group TfJobDefinition#run_as_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#run_as_group AwsJobDefinition#run_as_group}
   */
   readonly runAsGroup?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#run_as_non_root TfJobDefinition#run_as_non_root}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#run_as_non_root AwsJobDefinition#run_as_non_root}
   */
   readonly runAsNonRoot?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#run_as_user TfJobDefinition#run_as_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#run_as_user AwsJobDefinition#run_as_user}
   */
   readonly runAsUser?: number;
 }
@@ -1939,15 +1939,15 @@ export class EksPropertiesPodPropertiesContainersSecurityContextPropertyOutputRe
 }
 export interface EksPropertiesPodPropertiesContainersVolumeMountsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#mount_path TfJobDefinition#mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#mount_path AwsJobDefinition#mount_path}
   */
   readonly mountPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name TfJobDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name AwsJobDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#read_only TfJobDefinition#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#read_only AwsJobDefinition#read_only}
   */
   readonly readOnly?: boolean | cdktn.IResolvable;
 }
@@ -2071,47 +2071,47 @@ export class EksPropertiesPodPropertiesContainersVolumeMountsPropertyList extend
 }
 export interface ContainersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#args TfJobDefinition#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#args AwsJobDefinition#args}
   */
   readonly args?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#command TfJobDefinition#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#command AwsJobDefinition#command}
   */
   readonly command?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#image TfJobDefinition#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#image AwsJobDefinition#image}
   */
   readonly image: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#image_pull_policy TfJobDefinition#image_pull_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#image_pull_policy AwsJobDefinition#image_pull_policy}
   */
   readonly imagePullPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name TfJobDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name AwsJobDefinition#name}
   */
   readonly name?: string;
   /**
   * env block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#env TfJobDefinition#env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#env AwsJobDefinition#env}
   */
   readonly env?: EksPropertiesPodPropertiesContainersEnvProperty[] | cdktn.IResolvable;
   /**
   * resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#resources TfJobDefinition#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#resources AwsJobDefinition#resources}
   */
   readonly resources?: EksPropertiesPodPropertiesContainersResourcesProperty;
   /**
   * security_context block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#security_context TfJobDefinition#security_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#security_context AwsJobDefinition#security_context}
   */
   readonly securityContext?: EksPropertiesPodPropertiesContainersSecurityContextProperty;
   /**
   * volume_mounts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#volume_mounts TfJobDefinition#volume_mounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#volume_mounts AwsJobDefinition#volume_mounts}
   */
   readonly volumeMounts?: EksPropertiesPodPropertiesContainersVolumeMountsProperty[] | cdktn.IResolvable;
 }
@@ -2370,7 +2370,7 @@ export class ContainersPropertyList extends cdktn.ComplexList {
 }
 export interface ImagePullSecretProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name TfJobDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name AwsJobDefinition#name}
   */
   readonly name: string;
 }
@@ -2453,11 +2453,11 @@ export class ImagePullSecretPropertyList extends cdktn.ComplexList {
 }
 export interface EksPropertiesPodPropertiesInitContainersEnvProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name TfJobDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name AwsJobDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#value TfJobDefinition#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#value AwsJobDefinition#value}
   */
   readonly value: string;
 }
@@ -2559,11 +2559,11 @@ export class EksPropertiesPodPropertiesInitContainersEnvPropertyList extends cdk
 }
 export interface EksPropertiesPodPropertiesInitContainersResourcesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#limits TfJobDefinition#limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#limits AwsJobDefinition#limits}
   */
   readonly limits?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#requests TfJobDefinition#requests}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#requests AwsJobDefinition#requests}
   */
   readonly requests?: { [key: string]: string };
 }
@@ -2639,27 +2639,27 @@ export class EksPropertiesPodPropertiesInitContainersResourcesPropertyOutputRefe
 }
 export interface EksPropertiesPodPropertiesInitContainersSecurityContextProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#allow_privilege_escalation TfJobDefinition#allow_privilege_escalation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#allow_privilege_escalation AwsJobDefinition#allow_privilege_escalation}
   */
   readonly allowPrivilegeEscalation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#privileged TfJobDefinition#privileged}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#privileged AwsJobDefinition#privileged}
   */
   readonly privileged?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#read_only_root_file_system TfJobDefinition#read_only_root_file_system}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#read_only_root_file_system AwsJobDefinition#read_only_root_file_system}
   */
   readonly readOnlyRootFileSystem?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#run_as_group TfJobDefinition#run_as_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#run_as_group AwsJobDefinition#run_as_group}
   */
   readonly runAsGroup?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#run_as_non_root TfJobDefinition#run_as_non_root}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#run_as_non_root AwsJobDefinition#run_as_non_root}
   */
   readonly runAsNonRoot?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#run_as_user TfJobDefinition#run_as_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#run_as_user AwsJobDefinition#run_as_user}
   */
   readonly runAsUser?: number;
 }
@@ -2823,15 +2823,15 @@ export class EksPropertiesPodPropertiesInitContainersSecurityContextPropertyOutp
 }
 export interface EksPropertiesPodPropertiesInitContainersVolumeMountsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#mount_path TfJobDefinition#mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#mount_path AwsJobDefinition#mount_path}
   */
   readonly mountPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name TfJobDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name AwsJobDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#read_only TfJobDefinition#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#read_only AwsJobDefinition#read_only}
   */
   readonly readOnly?: boolean | cdktn.IResolvable;
 }
@@ -2955,47 +2955,47 @@ export class EksPropertiesPodPropertiesInitContainersVolumeMountsPropertyList ex
 }
 export interface InitContainersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#args TfJobDefinition#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#args AwsJobDefinition#args}
   */
   readonly args?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#command TfJobDefinition#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#command AwsJobDefinition#command}
   */
   readonly command?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#image TfJobDefinition#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#image AwsJobDefinition#image}
   */
   readonly image: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#image_pull_policy TfJobDefinition#image_pull_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#image_pull_policy AwsJobDefinition#image_pull_policy}
   */
   readonly imagePullPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name TfJobDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name AwsJobDefinition#name}
   */
   readonly name?: string;
   /**
   * env block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#env TfJobDefinition#env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#env AwsJobDefinition#env}
   */
   readonly env?: EksPropertiesPodPropertiesInitContainersEnvProperty[] | cdktn.IResolvable;
   /**
   * resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#resources TfJobDefinition#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#resources AwsJobDefinition#resources}
   */
   readonly resources?: EksPropertiesPodPropertiesInitContainersResourcesProperty;
   /**
   * security_context block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#security_context TfJobDefinition#security_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#security_context AwsJobDefinition#security_context}
   */
   readonly securityContext?: EksPropertiesPodPropertiesInitContainersSecurityContextProperty;
   /**
   * volume_mounts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#volume_mounts TfJobDefinition#volume_mounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#volume_mounts AwsJobDefinition#volume_mounts}
   */
   readonly volumeMounts?: EksPropertiesPodPropertiesInitContainersVolumeMountsProperty[] | cdktn.IResolvable;
 }
@@ -3254,7 +3254,7 @@ export class InitContainersPropertyList extends cdktn.ComplexList {
 }
 export interface MetadataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#labels TfJobDefinition#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#labels AwsJobDefinition#labels}
   */
   readonly labels?: { [key: string]: string };
 }
@@ -3308,11 +3308,11 @@ export class MetadataPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EmptyDirProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#medium TfJobDefinition#medium}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#medium AwsJobDefinition#medium}
   */
   readonly medium?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#size_limit TfJobDefinition#size_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#size_limit AwsJobDefinition#size_limit}
   */
   readonly sizeLimit: string;
 }
@@ -3385,7 +3385,7 @@ export class EmptyDirPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HostPathProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#path TfJobDefinition#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#path AwsJobDefinition#path}
   */
   readonly path: string;
 }
@@ -3436,11 +3436,11 @@ export class HostPathPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SecretProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#optional TfJobDefinition#optional}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#optional AwsJobDefinition#optional}
   */
   readonly optional?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#secret_name TfJobDefinition#secret_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#secret_name AwsJobDefinition#secret_name}
   */
   readonly secretName: string;
 }
@@ -3513,25 +3513,25 @@ export class SecretPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VolumesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name TfJobDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#name AwsJobDefinition#name}
   */
   readonly name?: string;
   /**
   * empty_dir block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#empty_dir TfJobDefinition#empty_dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#empty_dir AwsJobDefinition#empty_dir}
   */
   readonly emptyDir?: EmptyDirProperty;
   /**
   * host_path block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#host_path TfJobDefinition#host_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#host_path AwsJobDefinition#host_path}
   */
   readonly hostPath?: HostPathProperty;
   /**
   * secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#secret TfJobDefinition#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#secret AwsJobDefinition#secret}
   */
   readonly secret?: SecretProperty;
 }
@@ -3683,49 +3683,49 @@ export class VolumesPropertyList extends cdktn.ComplexList {
 }
 export interface PodPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#dns_policy TfJobDefinition#dns_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#dns_policy AwsJobDefinition#dns_policy}
   */
   readonly dnsPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#host_network TfJobDefinition#host_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#host_network AwsJobDefinition#host_network}
   */
   readonly hostNetwork?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#service_account_name TfJobDefinition#service_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#service_account_name AwsJobDefinition#service_account_name}
   */
   readonly serviceAccountName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#share_process_namespace TfJobDefinition#share_process_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#share_process_namespace AwsJobDefinition#share_process_namespace}
   */
   readonly shareProcessNamespace?: boolean | cdktn.IResolvable;
   /**
   * containers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#containers TfJobDefinition#containers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#containers AwsJobDefinition#containers}
   */
   readonly containers: ContainersProperty[] | cdktn.IResolvable;
   /**
   * image_pull_secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#image_pull_secret TfJobDefinition#image_pull_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#image_pull_secret AwsJobDefinition#image_pull_secret}
   */
   readonly imagePullSecret?: ImagePullSecretProperty[] | cdktn.IResolvable;
   /**
   * init_containers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#init_containers TfJobDefinition#init_containers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#init_containers AwsJobDefinition#init_containers}
   */
   readonly initContainers?: InitContainersProperty[] | cdktn.IResolvable;
   /**
   * metadata block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#metadata TfJobDefinition#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#metadata AwsJobDefinition#metadata}
   */
   readonly metadata?: MetadataProperty;
   /**
   * volumes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#volumes TfJobDefinition#volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#volumes AwsJobDefinition#volumes}
   */
   readonly volumes?: VolumesProperty[] | cdktn.IResolvable;
 }
@@ -3954,7 +3954,7 @@ export interface EksPropertiesProperty {
   /**
   * pod_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#pod_properties TfJobDefinition#pod_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#pod_properties AwsJobDefinition#pod_properties}
   */
   readonly podProperties: PodPropertiesProperty;
 }
@@ -4005,19 +4005,19 @@ export class EksPropertiesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EvaluateOnExitProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#action TfJobDefinition#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#action AwsJobDefinition#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#on_exit_code TfJobDefinition#on_exit_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#on_exit_code AwsJobDefinition#on_exit_code}
   */
   readonly onExitCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#on_reason TfJobDefinition#on_reason}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#on_reason AwsJobDefinition#on_reason}
   */
   readonly onReason?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#on_status_reason TfJobDefinition#on_status_reason}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#on_status_reason AwsJobDefinition#on_status_reason}
   */
   readonly onStatusReason?: string;
 }
@@ -4166,13 +4166,13 @@ export class EvaluateOnExitPropertyList extends cdktn.ComplexList {
 }
 export interface RetryStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#attempts TfJobDefinition#attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#attempts AwsJobDefinition#attempts}
   */
   readonly attempts?: number;
   /**
   * evaluate_on_exit block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#evaluate_on_exit TfJobDefinition#evaluate_on_exit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#evaluate_on_exit AwsJobDefinition#evaluate_on_exit}
   */
   readonly evaluateOnExit?: EvaluateOnExitProperty[] | cdktn.IResolvable;
 }
@@ -4248,7 +4248,7 @@ export class RetryStrategyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#attempt_duration_seconds TfJobDefinition#attempt_duration_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_job_definition#attempt_duration_seconds AwsJobDefinition#attempt_duration_seconds}
   */
   readonly attemptDurationSeconds?: number;
 }

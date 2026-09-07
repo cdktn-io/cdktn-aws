@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfManagedNotificationAccountContactAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsManagedNotificationAccountContactAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_account_contact_association#contact_identifier TfManagedNotificationAccountContactAssociation#contact_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_account_contact_association#contact_identifier AwsManagedNotificationAccountContactAssociation#contact_identifier}
   */
   readonly contactIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_account_contact_association#managed_notification_configuration_arn TfManagedNotificationAccountContactAssociation#managed_notification_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_account_contact_association#managed_notification_configuration_arn AwsManagedNotificationAccountContactAssociation#managed_notification_configuration_arn}
   */
   readonly managedNotificationConfigurationArn: string;
 }
@@ -19,7 +19,7 @@ export interface TfManagedNotificationAccountContactAssociationConfig extends cd
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_account_contact_association aws_notifications_managed_notification_account_contact_association}
 */
-export class TfManagedNotificationAccountContactAssociation extends cdktn.TerraformResource {
+export class AwsManagedNotificationAccountContactAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class TfManagedNotificationAccountContactAssociation extends cdktn.Terraf
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfManagedNotificationAccountContactAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsManagedNotificationAccountContactAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfManagedNotificationAccountContactAssociation to import
-  * @param importFromId The id of the existing TfManagedNotificationAccountContactAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_account_contact_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfManagedNotificationAccountContactAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsManagedNotificationAccountContactAssociation to import
+  * @param importFromId The id of the existing AwsManagedNotificationAccountContactAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_managed_notification_account_contact_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsManagedNotificationAccountContactAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_notifications_managed_notification_account_contact_association", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class TfManagedNotificationAccountContactAssociation extends cdktn.Terraf
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfManagedNotificationAccountContactAssociationConfig
+  * @param options AwsManagedNotificationAccountContactAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfManagedNotificationAccountContactAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsManagedNotificationAccountContactAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_notifications_managed_notification_account_contact_association',
       terraformGeneratorMetadata: {

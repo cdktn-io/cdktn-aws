@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#enable_monitoring_dashboard TfLoggingConfiguration#enable_monitoring_dashboard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#enable_monitoring_dashboard AwsLoggingConfiguration#enable_monitoring_dashboard}
   */
   readonly enableMonitoringDashboard?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#firewall_arn TfLoggingConfiguration#firewall_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#firewall_arn AwsLoggingConfiguration#firewall_arn}
   */
   readonly firewallArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#id TfLoggingConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#id AwsLoggingConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,21 +24,21 @@ export interface TfLoggingConfigurationConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#region TfLoggingConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#region AwsLoggingConfiguration#region}
   */
   readonly region?: string;
   /**
   * logging_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#logging_configuration TfLoggingConfiguration#logging_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#logging_configuration AwsLoggingConfiguration#logging_configuration}
   */
-  readonly loggingConfiguration: TfLoggingConfiguration.LoggingConfigurationProperty;
+  readonly loggingConfiguration: AwsLoggingConfiguration.LoggingConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration aws_networkfirewall_logging_configuration}
 */
-export class TfLoggingConfiguration extends cdktn.TerraformResource {
+export class AwsLoggingConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLoggingConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLoggingConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLoggingConfiguration to import
-  * @param importFromId The id of the existing TfLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLoggingConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsLoggingConfiguration to import
+  * @param importFromId The id of the existing AwsLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLoggingConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkfirewall_logging_configuration", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLoggingConfigurationConfig
+  * @param options AwsLoggingConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLoggingConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLoggingConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkfirewall_logging_configuration',
       terraformGeneratorMetadata: {
@@ -159,11 +159,11 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
   }
 
   // logging_configuration - computed: false, optional: false, required: true
-  private _loggingConfiguration = new TfLoggingConfiguration.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
+  private _loggingConfiguration = new AwsLoggingConfiguration.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
   public get loggingConfiguration() {
     return this._loggingConfiguration;
   }
-  public putLoggingConfiguration(value: TfLoggingConfiguration.LoggingConfigurationProperty) {
+  public putLoggingConfiguration(value: AwsLoggingConfiguration.LoggingConfigurationProperty) {
     this._loggingConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -181,7 +181,7 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
       firewall_arn: cdktn.stringToTerraform(this._firewallArn),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      logging_configuration: tfLoggingConfigurationLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
+      logging_configuration: awsLoggingConfigurationLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       logging_configuration: {
-        value: tfLoggingConfigurationLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
+        value: awsLoggingConfigurationLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLoggingConfiguration.LoggingConfigurationPropertyList",
+        storageClassType: "AwsLoggingConfiguration.LoggingConfigurationPropertyList",
       },
     };
 
@@ -224,7 +224,7 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfLoggingConfigurationLogDestinationConfigPropertyToTerraform(struct?: TfLoggingConfiguration.LogDestinationConfigProperty | cdktn.IResolvable): any {
+export function awsLoggingConfigurationLogDestinationConfigPropertyToTerraform(struct?: AwsLoggingConfiguration.LogDestinationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -237,7 +237,7 @@ export function tfLoggingConfigurationLogDestinationConfigPropertyToTerraform(st
 }
 
 
-export function tfLoggingConfigurationLogDestinationConfigPropertyToHclTerraform(struct?: TfLoggingConfiguration.LogDestinationConfigProperty | cdktn.IResolvable): any {
+export function awsLoggingConfigurationLogDestinationConfigPropertyToHclTerraform(struct?: AwsLoggingConfiguration.LogDestinationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,25 +268,25 @@ export function tfLoggingConfigurationLogDestinationConfigPropertyToHclTerraform
 }
 
 
-export function tfLoggingConfigurationLoggingConfigurationPropertyToTerraform(struct?: TfLoggingConfiguration.LoggingConfigurationPropertyOutputReference | TfLoggingConfiguration.LoggingConfigurationProperty): any {
+export function awsLoggingConfigurationLoggingConfigurationPropertyToTerraform(struct?: AwsLoggingConfiguration.LoggingConfigurationPropertyOutputReference | AwsLoggingConfiguration.LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    log_destination_config: cdktn.listMapper(tfLoggingConfigurationLogDestinationConfigPropertyToTerraform, true)(struct!.logDestinationConfig),
+    log_destination_config: cdktn.listMapper(awsLoggingConfigurationLogDestinationConfigPropertyToTerraform, true)(struct!.logDestinationConfig),
   }
 }
 
 
-export function tfLoggingConfigurationLoggingConfigurationPropertyToHclTerraform(struct?: TfLoggingConfiguration.LoggingConfigurationPropertyOutputReference | TfLoggingConfiguration.LoggingConfigurationProperty): any {
+export function awsLoggingConfigurationLoggingConfigurationPropertyToHclTerraform(struct?: AwsLoggingConfiguration.LoggingConfigurationPropertyOutputReference | AwsLoggingConfiguration.LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     log_destination_config: {
-      value: cdktn.listMapperHcl(tfLoggingConfigurationLogDestinationConfigPropertyToHclTerraform, true)(struct!.logDestinationConfig),
+      value: cdktn.listMapperHcl(awsLoggingConfigurationLogDestinationConfigPropertyToHclTerraform, true)(struct!.logDestinationConfig),
       isBlock: true,
       type: "set",
       storageClassType: "LogDestinationConfigPropertyList",
@@ -298,18 +298,18 @@ export function tfLoggingConfigurationLoggingConfigurationPropertyToHclTerraform
 }
 
 
-export namespace TfLoggingConfiguration {
+export namespace AwsLoggingConfiguration {
 export interface LogDestinationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#log_destination TfLoggingConfiguration#log_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#log_destination AwsLoggingConfiguration#log_destination}
   */
   readonly logDestination: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#log_destination_type TfLoggingConfiguration#log_destination_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#log_destination_type AwsLoggingConfiguration#log_destination_type}
   */
   readonly logDestinationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#log_type TfLoggingConfiguration#log_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#log_type AwsLoggingConfiguration#log_type}
   */
   readonly logType: string;
 }
@@ -432,7 +432,7 @@ export interface LoggingConfigurationProperty {
   /**
   * log_destination_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#log_destination_config TfLoggingConfiguration#log_destination_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#log_destination_config AwsLoggingConfiguration#log_destination_config}
   */
   readonly logDestinationConfig: LogDestinationConfigProperty[] | cdktn.IResolvable;
 }

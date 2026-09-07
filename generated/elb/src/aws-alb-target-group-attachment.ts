@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAlbTargetGroupAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAlbTargetGroupAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#availability_zone TfAlbTargetGroupAttachment#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#availability_zone AwsAlbTargetGroupAttachment#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#id TfAlbTargetGroupAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#id AwsAlbTargetGroupAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#port TfAlbTargetGroupAttachment#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#port AwsAlbTargetGroupAttachment#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#quic_server_id TfAlbTargetGroupAttachment#quic_server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#quic_server_id AwsAlbTargetGroupAttachment#quic_server_id}
   */
   readonly quicServerId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#region TfAlbTargetGroupAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#region AwsAlbTargetGroupAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#target_group_arn TfAlbTargetGroupAttachment#target_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#target_group_arn AwsAlbTargetGroupAttachment#target_group_arn}
   */
   readonly targetGroupArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#target_id TfAlbTargetGroupAttachment#target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#target_id AwsAlbTargetGroupAttachment#target_id}
   */
   readonly targetId: string;
 }
@@ -44,7 +44,7 @@ export interface TfAlbTargetGroupAttachmentConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment aws_alb_target_group_attachment}
 */
-export class TfAlbTargetGroupAttachment extends cdktn.TerraformResource {
+export class AwsAlbTargetGroupAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfAlbTargetGroupAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAlbTargetGroupAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAlbTargetGroupAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAlbTargetGroupAttachment to import
-  * @param importFromId The id of the existing TfAlbTargetGroupAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAlbTargetGroupAttachment to import is found
+  * @param importToId The construct id used in the generated config for the AwsAlbTargetGroupAttachment to import
+  * @param importFromId The id of the existing AwsAlbTargetGroupAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_target_group_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAlbTargetGroupAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_alb_target_group_attachment", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfAlbTargetGroupAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAlbTargetGroupAttachmentConfig
+  * @param options AwsAlbTargetGroupAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAlbTargetGroupAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAlbTargetGroupAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_alb_target_group_attachment',
       terraformGeneratorMetadata: {

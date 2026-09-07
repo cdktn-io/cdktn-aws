@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRouteCalculatorConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRouteCalculatorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#calculator_name TfRouteCalculator#calculator_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#calculator_name AwsRouteCalculator#calculator_name}
   */
   readonly calculatorName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#data_source TfRouteCalculator#data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#data_source AwsRouteCalculator#data_source}
   */
   readonly dataSource: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#description TfRouteCalculator#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#description AwsRouteCalculator#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#id TfRouteCalculator#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#id AwsRouteCalculator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,29 +28,29 @@ export interface TfRouteCalculatorConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#region TfRouteCalculator#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#region AwsRouteCalculator#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#tags TfRouteCalculator#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#tags AwsRouteCalculator#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#tags_all TfRouteCalculator#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#tags_all AwsRouteCalculator#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#timeouts TfRouteCalculator#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#timeouts AwsRouteCalculator#timeouts}
   */
-  readonly timeouts?: TfRouteCalculator.TimeoutsProperty;
+  readonly timeouts?: AwsRouteCalculator.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator aws_location_route_calculator}
 */
-export class TfRouteCalculator extends cdktn.TerraformResource {
+export class AwsRouteCalculator extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfRouteCalculator extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRouteCalculator resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRouteCalculator resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRouteCalculator to import
-  * @param importFromId The id of the existing TfRouteCalculator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRouteCalculator to import is found
+  * @param importToId The construct id used in the generated config for the AwsRouteCalculator to import
+  * @param importFromId The id of the existing AwsRouteCalculator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRouteCalculator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_location_route_calculator", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfRouteCalculator extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRouteCalculatorConfig
+  * @param options AwsRouteCalculatorConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRouteCalculatorConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRouteCalculatorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_location_route_calculator',
       terraformGeneratorMetadata: {
@@ -234,11 +234,11 @@ export class TfRouteCalculator extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfRouteCalculator.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsRouteCalculator.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfRouteCalculator.TimeoutsProperty) {
+  public putTimeouts(value: AwsRouteCalculator.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -262,7 +262,7 @@ export class TfRouteCalculator extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfRouteCalculatorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsRouteCalculatorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -311,10 +311,10 @@ export class TfRouteCalculator extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfRouteCalculatorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsRouteCalculatorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfRouteCalculator.TimeoutsProperty",
+        storageClassType: "AwsRouteCalculator.TimeoutsProperty",
       },
     };
 
@@ -323,7 +323,7 @@ export class TfRouteCalculator extends cdktn.TerraformResource {
   }
 }
 
-export function tfRouteCalculatorTimeoutsPropertyToTerraform(struct?: TfRouteCalculator.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRouteCalculatorTimeoutsPropertyToTerraform(struct?: AwsRouteCalculator.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function tfRouteCalculatorTimeoutsPropertyToTerraform(struct?: TfRouteCal
 }
 
 
-export function tfRouteCalculatorTimeoutsPropertyToHclTerraform(struct?: TfRouteCalculator.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRouteCalculatorTimeoutsPropertyToHclTerraform(struct?: AwsRouteCalculator.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,18 +367,18 @@ export function tfRouteCalculatorTimeoutsPropertyToHclTerraform(struct?: TfRoute
 }
 
 
-export namespace TfRouteCalculator {
+export namespace AwsRouteCalculator {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#create TfRouteCalculator#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#create AwsRouteCalculator#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#delete TfRouteCalculator#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#delete AwsRouteCalculator#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#update TfRouteCalculator#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_route_calculator#update AwsRouteCalculator#update}
   */
   readonly update?: string;
 }

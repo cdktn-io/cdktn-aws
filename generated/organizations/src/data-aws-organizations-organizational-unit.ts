@@ -5,20 +5,20 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfOrganizationalUnitConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsOrganizationalUnitConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_unit#id DataTfOrganizationalUnit#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_unit#id DataAwsOrganizationalUnit#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_unit#name DataTfOrganizationalUnit#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_unit#name DataAwsOrganizationalUnit#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_unit#parent_id DataTfOrganizationalUnit#parent_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_unit#parent_id DataAwsOrganizationalUnit#parent_id}
   */
   readonly parentId: string;
 }
@@ -26,7 +26,7 @@ export interface DataTfOrganizationalUnitConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_unit aws_organizations_organizational_unit}
 */
-export class DataTfOrganizationalUnit extends cdktn.TerraformDataSource {
+export class DataAwsOrganizationalUnit extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class DataTfOrganizationalUnit extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfOrganizationalUnit resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsOrganizationalUnit resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfOrganizationalUnit to import
-  * @param importFromId The id of the existing DataTfOrganizationalUnit that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_unit#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfOrganizationalUnit to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsOrganizationalUnit to import
+  * @param importFromId The id of the existing DataAwsOrganizationalUnit that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/organizations_organizational_unit#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsOrganizationalUnit to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_organizations_organizational_unit", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class DataTfOrganizationalUnit extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfOrganizationalUnitConfig
+  * @param options DataAwsOrganizationalUnitConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfOrganizationalUnitConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsOrganizationalUnitConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_organizations_organizational_unit',
       terraformGeneratorMetadata: {

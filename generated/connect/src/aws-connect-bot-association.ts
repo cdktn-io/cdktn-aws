@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBotAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBotAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#id TfBotAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#id AwsBotAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#instance_id TfBotAssociation#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#instance_id AwsBotAssociation#instance_id}
   */
   readonly instanceId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#region TfBotAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#region AwsBotAssociation#region}
   */
   readonly region?: string;
   /**
   * lex_bot block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#lex_bot TfBotAssociation#lex_bot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#lex_bot AwsBotAssociation#lex_bot}
   */
-  readonly lexBot: TfBotAssociation.LexBotProperty;
+  readonly lexBot: AwsBotAssociation.LexBotProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association aws_connect_bot_association}
 */
-export class TfBotAssociation extends cdktn.TerraformResource {
+export class AwsBotAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfBotAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBotAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBotAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBotAssociation to import
-  * @param importFromId The id of the existing TfBotAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBotAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsBotAssociation to import
+  * @param importFromId The id of the existing AwsBotAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBotAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_bot_association", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfBotAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBotAssociationConfig
+  * @param options AwsBotAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBotAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBotAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_bot_association',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class TfBotAssociation extends cdktn.TerraformResource {
   }
 
   // lex_bot - computed: false, optional: false, required: true
-  private _lexBot = new TfBotAssociation.LexBotPropertyOutputReference(this, "lex_bot");
+  private _lexBot = new AwsBotAssociation.LexBotPropertyOutputReference(this, "lex_bot");
   public get lexBot() {
     return this._lexBot;
   }
-  public putLexBot(value: TfBotAssociation.LexBotProperty) {
+  public putLexBot(value: AwsBotAssociation.LexBotProperty) {
     this._lexBot.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -159,7 +159,7 @@ export class TfBotAssociation extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       instance_id: cdktn.stringToTerraform(this._instanceId),
       region: cdktn.stringToTerraform(this._region),
-      lex_bot: tfBotAssociationLexBotPropertyToTerraform(this._lexBot.internalValue),
+      lex_bot: awsBotAssociationLexBotPropertyToTerraform(this._lexBot.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class TfBotAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       lex_bot: {
-        value: tfBotAssociationLexBotPropertyToHclTerraform(this._lexBot.internalValue),
+        value: awsBotAssociationLexBotPropertyToHclTerraform(this._lexBot.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBotAssociation.LexBotPropertyList",
+        storageClassType: "AwsBotAssociation.LexBotPropertyList",
       },
     };
 
@@ -196,7 +196,7 @@ export class TfBotAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfBotAssociationLexBotPropertyToTerraform(struct?: TfBotAssociation.LexBotPropertyOutputReference | TfBotAssociation.LexBotProperty): any {
+export function awsBotAssociationLexBotPropertyToTerraform(struct?: AwsBotAssociation.LexBotPropertyOutputReference | AwsBotAssociation.LexBotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,7 +208,7 @@ export function tfBotAssociationLexBotPropertyToTerraform(struct?: TfBotAssociat
 }
 
 
-export function tfBotAssociationLexBotPropertyToHclTerraform(struct?: TfBotAssociation.LexBotPropertyOutputReference | TfBotAssociation.LexBotProperty): any {
+export function awsBotAssociationLexBotPropertyToHclTerraform(struct?: AwsBotAssociation.LexBotPropertyOutputReference | AwsBotAssociation.LexBotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,14 +233,14 @@ export function tfBotAssociationLexBotPropertyToHclTerraform(struct?: TfBotAssoc
 }
 
 
-export namespace TfBotAssociation {
+export namespace AwsBotAssociation {
 export interface LexBotProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#lex_region TfBotAssociation#lex_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#lex_region AwsBotAssociation#lex_region}
   */
   readonly lexRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#name TfBotAssociation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/connect_bot_association#name AwsBotAssociation#name}
   */
   readonly name: string;
 }

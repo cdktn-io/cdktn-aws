@@ -5,67 +5,67 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCollectionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCollectionConfig extends cdktn.TerraformMetaArguments {
   /**
   * Name of the collection group to associate with this collection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#collection_group_name TfCollection#collection_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#collection_group_name AwsCollection#collection_group_name}
   */
   readonly collectionGroupName?: string;
   /**
   * Description of the collection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#description TfCollection#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#description AwsCollection#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#encryption_config TfCollection#encryption_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#encryption_config AwsCollection#encryption_config}
   */
-  readonly encryptionConfig?: TfCollection.EncryptionConfigProperty[] | cdktn.IResolvable;
+  readonly encryptionConfig?: AwsCollection.EncryptionConfigProperty[] | cdktn.IResolvable;
   /**
   * Name of the collection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#name TfCollection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#name AwsCollection#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#region TfCollection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#region AwsCollection#region}
   */
   readonly region?: string;
   /**
   * Indicates whether standby replicas should be used for a collection. One of `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#standby_replicas TfCollection#standby_replicas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#standby_replicas AwsCollection#standby_replicas}
   */
   readonly standbyReplicas?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#tags TfCollection#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#tags AwsCollection#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * Type of collection. One of `SEARCH`, `TIMESERIES`, or `VECTORSEARCH`. Defaults to `TIMESERIES`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#type TfCollection#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#type AwsCollection#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#vector_options TfCollection#vector_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#vector_options AwsCollection#vector_options}
   */
-  readonly vectorOptions?: TfCollection.VectorOptionsProperty[] | cdktn.IResolvable;
+  readonly vectorOptions?: AwsCollection.VectorOptionsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#timeouts TfCollection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#timeouts AwsCollection#timeouts}
   */
-  readonly timeouts?: TfCollection.TimeoutsProperty;
+  readonly timeouts?: AwsCollection.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection aws_opensearchserverless_collection}
 */
-export class TfCollection extends cdktn.TerraformResource {
+export class AwsCollection extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -76,11 +76,11 @@ export class TfCollection extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCollection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCollection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCollection to import
-  * @param importFromId The id of the existing TfCollection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCollection to import is found
+  * @param importToId The construct id used in the generated config for the AwsCollection to import
+  * @param importFromId The id of the existing AwsCollection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCollection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearchserverless_collection", importId: importFromId, provider });
@@ -95,9 +95,9 @@ export class TfCollection extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCollectionConfig
+  * @param options AwsCollectionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCollectionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCollectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearchserverless_collection',
       terraformGeneratorMetadata: {
@@ -177,11 +177,11 @@ export class TfCollection extends cdktn.TerraformResource {
   }
 
   // encryption_config - computed: true, optional: true, required: false
-  private _encryptionConfig = new TfCollection.EncryptionConfigPropertyList(this, "encryption_config", false);
+  private _encryptionConfig = new AwsCollection.EncryptionConfigPropertyList(this, "encryption_config", false);
   public get encryptionConfig() {
     return this._encryptionConfig;
   }
-  public putEncryptionConfig(value: TfCollection.EncryptionConfigProperty[] | cdktn.IResolvable) {
+  public putEncryptionConfig(value: AwsCollection.EncryptionConfigProperty[] | cdktn.IResolvable) {
     this._encryptionConfig.internalValue = value;
   }
   public resetEncryptionConfig() {
@@ -286,11 +286,11 @@ export class TfCollection extends cdktn.TerraformResource {
   }
 
   // vector_options - computed: true, optional: true, required: false
-  private _vectorOptions = new TfCollection.VectorOptionsPropertyList(this, "vector_options", false);
+  private _vectorOptions = new AwsCollection.VectorOptionsPropertyList(this, "vector_options", false);
   public get vectorOptions() {
     return this._vectorOptions;
   }
-  public putVectorOptions(value: TfCollection.VectorOptionsProperty[] | cdktn.IResolvable) {
+  public putVectorOptions(value: AwsCollection.VectorOptionsProperty[] | cdktn.IResolvable) {
     this._vectorOptions.internalValue = value;
   }
   public resetVectorOptions() {
@@ -302,11 +302,11 @@ export class TfCollection extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCollection.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCollection.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCollection.TimeoutsProperty) {
+  public putTimeouts(value: AwsCollection.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -325,14 +325,14 @@ export class TfCollection extends cdktn.TerraformResource {
     return {
       collection_group_name: cdktn.stringToTerraform(this._collectionGroupName),
       description: cdktn.stringToTerraform(this._description),
-      encryption_config: cdktn.listMapper(tfCollectionEncryptionConfigPropertyToTerraform, false)(this._encryptionConfig.internalValue),
+      encryption_config: cdktn.listMapper(awsCollectionEncryptionConfigPropertyToTerraform, false)(this._encryptionConfig.internalValue),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       standby_replicas: cdktn.stringToTerraform(this._standbyReplicas),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       type: cdktn.stringToTerraform(this._type),
-      vector_options: cdktn.listMapper(tfCollectionVectorOptionsPropertyToTerraform, false)(this._vectorOptions.internalValue),
-      timeouts: tfCollectionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vector_options: cdktn.listMapper(awsCollectionVectorOptionsPropertyToTerraform, false)(this._vectorOptions.internalValue),
+      timeouts: awsCollectionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -351,10 +351,10 @@ export class TfCollection extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       encryption_config: {
-        value: cdktn.listMapperHcl(tfCollectionEncryptionConfigPropertyToHclTerraform, false)(this._encryptionConfig.internalValue),
+        value: cdktn.listMapperHcl(awsCollectionEncryptionConfigPropertyToHclTerraform, false)(this._encryptionConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCollection.EncryptionConfigPropertyList",
+        storageClassType: "AwsCollection.EncryptionConfigPropertyList",
       },
       name: {
         value: cdktn.stringToHclTerraform(this._name),
@@ -387,16 +387,16 @@ export class TfCollection extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       vector_options: {
-        value: cdktn.listMapperHcl(tfCollectionVectorOptionsPropertyToHclTerraform, false)(this._vectorOptions.internalValue),
+        value: cdktn.listMapperHcl(awsCollectionVectorOptionsPropertyToHclTerraform, false)(this._vectorOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCollection.VectorOptionsPropertyList",
+        storageClassType: "AwsCollection.VectorOptionsPropertyList",
       },
       timeouts: {
-        value: tfCollectionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCollectionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCollection.TimeoutsProperty",
+        storageClassType: "AwsCollection.TimeoutsProperty",
       },
     };
 
@@ -405,7 +405,7 @@ export class TfCollection extends cdktn.TerraformResource {
   }
 }
 
-export function tfCollectionEncryptionConfigPropertyToTerraform(struct?: TfCollection.EncryptionConfigProperty | cdktn.IResolvable): any {
+export function awsCollectionEncryptionConfigPropertyToTerraform(struct?: AwsCollection.EncryptionConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function tfCollectionEncryptionConfigPropertyToTerraform(struct?: TfColle
 }
 
 
-export function tfCollectionEncryptionConfigPropertyToHclTerraform(struct?: TfCollection.EncryptionConfigProperty | cdktn.IResolvable): any {
+export function awsCollectionEncryptionConfigPropertyToHclTerraform(struct?: AwsCollection.EncryptionConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function tfCollectionEncryptionConfigPropertyToHclTerraform(struct?: TfCo
 }
 
 
-export function tfCollectionVectorOptionsPropertyToTerraform(struct?: TfCollection.VectorOptionsProperty | cdktn.IResolvable): any {
+export function awsCollectionVectorOptionsPropertyToTerraform(struct?: AwsCollection.VectorOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -453,7 +453,7 @@ export function tfCollectionVectorOptionsPropertyToTerraform(struct?: TfCollecti
 }
 
 
-export function tfCollectionVectorOptionsPropertyToHclTerraform(struct?: TfCollection.VectorOptionsProperty | cdktn.IResolvable): any {
+export function awsCollectionVectorOptionsPropertyToHclTerraform(struct?: AwsCollection.VectorOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,7 +472,7 @@ export function tfCollectionVectorOptionsPropertyToHclTerraform(struct?: TfColle
 }
 
 
-export function tfCollectionTimeoutsPropertyToTerraform(struct?: TfCollection.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCollectionTimeoutsPropertyToTerraform(struct?: AwsCollection.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -484,7 +484,7 @@ export function tfCollectionTimeoutsPropertyToTerraform(struct?: TfCollection.Ti
 }
 
 
-export function tfCollectionTimeoutsPropertyToHclTerraform(struct?: TfCollection.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCollectionTimeoutsPropertyToHclTerraform(struct?: AwsCollection.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -509,14 +509,14 @@ export function tfCollectionTimeoutsPropertyToHclTerraform(struct?: TfCollection
 }
 
 
-export namespace TfCollection {
+export namespace AwsCollection {
 export interface EncryptionConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#aws_owned_key TfCollection#aws_owned_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#aws_owned_key AwsCollection#aws_owned_key}
   */
   readonly awsOwnedKey?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#kms_key_arn TfCollection#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#kms_key_arn AwsCollection#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
 }
@@ -624,7 +624,7 @@ export class EncryptionConfigPropertyList extends cdktn.ComplexList {
 }
 export interface VectorOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#serverless_vector_acceleration TfCollection#serverless_vector_acceleration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#serverless_vector_acceleration AwsCollection#serverless_vector_acceleration}
   */
   readonly serverlessVectorAcceleration?: string;
 }
@@ -712,13 +712,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#create TfCollection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#create AwsCollection#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#delete TfCollection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection#delete AwsCollection#delete}
   */
   readonly delete?: string;
 }

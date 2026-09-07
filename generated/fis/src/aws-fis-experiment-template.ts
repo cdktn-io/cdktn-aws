@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfExperimentTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface AwsExperimentTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#description TfExperimentTemplate#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#description AwsExperimentTemplate#description}
   */
   readonly description: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#id TfExperimentTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#id AwsExperimentTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,69 +20,69 @@ export interface TfExperimentTemplateConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#region TfExperimentTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#region AwsExperimentTemplate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#role_arn TfExperimentTemplate#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#role_arn AwsExperimentTemplate#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#tags TfExperimentTemplate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#tags AwsExperimentTemplate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#tags_all TfExperimentTemplate#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#tags_all AwsExperimentTemplate#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#action TfExperimentTemplate#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#action AwsExperimentTemplate#action}
   */
-  readonly action: TfExperimentTemplate.ActionProperty[] | cdktn.IResolvable;
+  readonly action: AwsExperimentTemplate.ActionProperty[] | cdktn.IResolvable;
   /**
   * experiment_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#experiment_options TfExperimentTemplate#experiment_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#experiment_options AwsExperimentTemplate#experiment_options}
   */
-  readonly experimentOptions?: TfExperimentTemplate.ExperimentOptionsProperty;
+  readonly experimentOptions?: AwsExperimentTemplate.ExperimentOptionsProperty;
   /**
   * experiment_report_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#experiment_report_configuration TfExperimentTemplate#experiment_report_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#experiment_report_configuration AwsExperimentTemplate#experiment_report_configuration}
   */
-  readonly experimentReportConfiguration?: TfExperimentTemplate.ExperimentReportConfigurationProperty;
+  readonly experimentReportConfiguration?: AwsExperimentTemplate.ExperimentReportConfigurationProperty;
   /**
   * log_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#log_configuration TfExperimentTemplate#log_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#log_configuration AwsExperimentTemplate#log_configuration}
   */
-  readonly logConfiguration?: TfExperimentTemplate.LogConfigurationProperty;
+  readonly logConfiguration?: AwsExperimentTemplate.LogConfigurationProperty;
   /**
   * stop_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#stop_condition TfExperimentTemplate#stop_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#stop_condition AwsExperimentTemplate#stop_condition}
   */
-  readonly stopCondition: TfExperimentTemplate.StopConditionProperty[] | cdktn.IResolvable;
+  readonly stopCondition: AwsExperimentTemplate.StopConditionProperty[] | cdktn.IResolvable;
   /**
   * target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#target TfExperimentTemplate#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#target AwsExperimentTemplate#target}
   */
-  readonly target?: TfExperimentTemplate.TargetProperty[] | cdktn.IResolvable;
+  readonly target?: AwsExperimentTemplate.TargetProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#timeouts TfExperimentTemplate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#timeouts AwsExperimentTemplate#timeouts}
   */
-  readonly timeouts?: TfExperimentTemplate.TimeoutsProperty;
+  readonly timeouts?: AwsExperimentTemplate.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template aws_fis_experiment_template}
 */
-export class TfExperimentTemplate extends cdktn.TerraformResource {
+export class AwsExperimentTemplate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -93,11 +93,11 @@ export class TfExperimentTemplate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfExperimentTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsExperimentTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfExperimentTemplate to import
-  * @param importFromId The id of the existing TfExperimentTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfExperimentTemplate to import is found
+  * @param importToId The construct id used in the generated config for the AwsExperimentTemplate to import
+  * @param importFromId The id of the existing AwsExperimentTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsExperimentTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fis_experiment_template", importId: importFromId, provider });
@@ -112,9 +112,9 @@ export class TfExperimentTemplate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfExperimentTemplateConfig
+  * @param options AwsExperimentTemplateConfig
   */
-  public constructor(scope: Construct, id: string, config: TfExperimentTemplateConfig) {
+  public constructor(scope: Construct, id: string, config: AwsExperimentTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fis_experiment_template',
       terraformGeneratorMetadata: {
@@ -240,11 +240,11 @@ export class TfExperimentTemplate extends cdktn.TerraformResource {
   }
 
   // action - computed: false, optional: false, required: true
-  private _action = new TfExperimentTemplate.ActionPropertyList(this, "action", true);
+  private _action = new AwsExperimentTemplate.ActionPropertyList(this, "action", true);
   public get action() {
     return this._action;
   }
-  public putAction(value: TfExperimentTemplate.ActionProperty[] | cdktn.IResolvable) {
+  public putAction(value: AwsExperimentTemplate.ActionProperty[] | cdktn.IResolvable) {
     this._action.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -253,11 +253,11 @@ export class TfExperimentTemplate extends cdktn.TerraformResource {
   }
 
   // experiment_options - computed: false, optional: true, required: false
-  private _experimentOptions = new TfExperimentTemplate.ExperimentOptionsPropertyOutputReference(this, "experiment_options");
+  private _experimentOptions = new AwsExperimentTemplate.ExperimentOptionsPropertyOutputReference(this, "experiment_options");
   public get experimentOptions() {
     return this._experimentOptions;
   }
-  public putExperimentOptions(value: TfExperimentTemplate.ExperimentOptionsProperty) {
+  public putExperimentOptions(value: AwsExperimentTemplate.ExperimentOptionsProperty) {
     this._experimentOptions.internalValue = value;
   }
   public resetExperimentOptions() {
@@ -269,11 +269,11 @@ export class TfExperimentTemplate extends cdktn.TerraformResource {
   }
 
   // experiment_report_configuration - computed: false, optional: true, required: false
-  private _experimentReportConfiguration = new TfExperimentTemplate.ExperimentReportConfigurationPropertyOutputReference(this, "experiment_report_configuration");
+  private _experimentReportConfiguration = new AwsExperimentTemplate.ExperimentReportConfigurationPropertyOutputReference(this, "experiment_report_configuration");
   public get experimentReportConfiguration() {
     return this._experimentReportConfiguration;
   }
-  public putExperimentReportConfiguration(value: TfExperimentTemplate.ExperimentReportConfigurationProperty) {
+  public putExperimentReportConfiguration(value: AwsExperimentTemplate.ExperimentReportConfigurationProperty) {
     this._experimentReportConfiguration.internalValue = value;
   }
   public resetExperimentReportConfiguration() {
@@ -285,11 +285,11 @@ export class TfExperimentTemplate extends cdktn.TerraformResource {
   }
 
   // log_configuration - computed: false, optional: true, required: false
-  private _logConfiguration = new TfExperimentTemplate.LogConfigurationPropertyOutputReference(this, "log_configuration");
+  private _logConfiguration = new AwsExperimentTemplate.LogConfigurationPropertyOutputReference(this, "log_configuration");
   public get logConfiguration() {
     return this._logConfiguration;
   }
-  public putLogConfiguration(value: TfExperimentTemplate.LogConfigurationProperty) {
+  public putLogConfiguration(value: AwsExperimentTemplate.LogConfigurationProperty) {
     this._logConfiguration.internalValue = value;
   }
   public resetLogConfiguration() {
@@ -301,11 +301,11 @@ export class TfExperimentTemplate extends cdktn.TerraformResource {
   }
 
   // stop_condition - computed: false, optional: false, required: true
-  private _stopCondition = new TfExperimentTemplate.StopConditionPropertyList(this, "stop_condition", true);
+  private _stopCondition = new AwsExperimentTemplate.StopConditionPropertyList(this, "stop_condition", true);
   public get stopCondition() {
     return this._stopCondition;
   }
-  public putStopCondition(value: TfExperimentTemplate.StopConditionProperty[] | cdktn.IResolvable) {
+  public putStopCondition(value: AwsExperimentTemplate.StopConditionProperty[] | cdktn.IResolvable) {
     this._stopCondition.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -314,11 +314,11 @@ export class TfExperimentTemplate extends cdktn.TerraformResource {
   }
 
   // target - computed: false, optional: true, required: false
-  private _target = new TfExperimentTemplate.TargetPropertyList(this, "target", true);
+  private _target = new AwsExperimentTemplate.TargetPropertyList(this, "target", true);
   public get target() {
     return this._target;
   }
-  public putTarget(value: TfExperimentTemplate.TargetProperty[] | cdktn.IResolvable) {
+  public putTarget(value: AwsExperimentTemplate.TargetProperty[] | cdktn.IResolvable) {
     this._target.internalValue = value;
   }
   public resetTarget() {
@@ -330,11 +330,11 @@ export class TfExperimentTemplate extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfExperimentTemplate.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsExperimentTemplate.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfExperimentTemplate.TimeoutsProperty) {
+  public putTimeouts(value: AwsExperimentTemplate.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -357,13 +357,13 @@ export class TfExperimentTemplate extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      action: cdktn.listMapper(tfExperimentTemplateActionPropertyToTerraform, true)(this._action.internalValue),
-      experiment_options: tfExperimentTemplateExperimentOptionsPropertyToTerraform(this._experimentOptions.internalValue),
-      experiment_report_configuration: tfExperimentTemplateExperimentReportConfigurationPropertyToTerraform(this._experimentReportConfiguration.internalValue),
-      log_configuration: tfExperimentTemplateLogConfigurationPropertyToTerraform(this._logConfiguration.internalValue),
-      stop_condition: cdktn.listMapper(tfExperimentTemplateStopConditionPropertyToTerraform, true)(this._stopCondition.internalValue),
-      target: cdktn.listMapper(tfExperimentTemplateTargetPropertyToTerraform, true)(this._target.internalValue),
-      timeouts: tfExperimentTemplateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      action: cdktn.listMapper(awsExperimentTemplateActionPropertyToTerraform, true)(this._action.internalValue),
+      experiment_options: awsExperimentTemplateExperimentOptionsPropertyToTerraform(this._experimentOptions.internalValue),
+      experiment_report_configuration: awsExperimentTemplateExperimentReportConfigurationPropertyToTerraform(this._experimentReportConfiguration.internalValue),
+      log_configuration: awsExperimentTemplateLogConfigurationPropertyToTerraform(this._logConfiguration.internalValue),
+      stop_condition: cdktn.listMapper(awsExperimentTemplateStopConditionPropertyToTerraform, true)(this._stopCondition.internalValue),
+      target: cdktn.listMapper(awsExperimentTemplateTargetPropertyToTerraform, true)(this._target.internalValue),
+      timeouts: awsExperimentTemplateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -406,46 +406,46 @@ export class TfExperimentTemplate extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       action: {
-        value: cdktn.listMapperHcl(tfExperimentTemplateActionPropertyToHclTerraform, true)(this._action.internalValue),
+        value: cdktn.listMapperHcl(awsExperimentTemplateActionPropertyToHclTerraform, true)(this._action.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfExperimentTemplate.ActionPropertyList",
+        storageClassType: "AwsExperimentTemplate.ActionPropertyList",
       },
       experiment_options: {
-        value: tfExperimentTemplateExperimentOptionsPropertyToHclTerraform(this._experimentOptions.internalValue),
+        value: awsExperimentTemplateExperimentOptionsPropertyToHclTerraform(this._experimentOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfExperimentTemplate.ExperimentOptionsPropertyList",
+        storageClassType: "AwsExperimentTemplate.ExperimentOptionsPropertyList",
       },
       experiment_report_configuration: {
-        value: tfExperimentTemplateExperimentReportConfigurationPropertyToHclTerraform(this._experimentReportConfiguration.internalValue),
+        value: awsExperimentTemplateExperimentReportConfigurationPropertyToHclTerraform(this._experimentReportConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfExperimentTemplate.ExperimentReportConfigurationPropertyList",
+        storageClassType: "AwsExperimentTemplate.ExperimentReportConfigurationPropertyList",
       },
       log_configuration: {
-        value: tfExperimentTemplateLogConfigurationPropertyToHclTerraform(this._logConfiguration.internalValue),
+        value: awsExperimentTemplateLogConfigurationPropertyToHclTerraform(this._logConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfExperimentTemplate.LogConfigurationPropertyList",
+        storageClassType: "AwsExperimentTemplate.LogConfigurationPropertyList",
       },
       stop_condition: {
-        value: cdktn.listMapperHcl(tfExperimentTemplateStopConditionPropertyToHclTerraform, true)(this._stopCondition.internalValue),
+        value: cdktn.listMapperHcl(awsExperimentTemplateStopConditionPropertyToHclTerraform, true)(this._stopCondition.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfExperimentTemplate.StopConditionPropertyList",
+        storageClassType: "AwsExperimentTemplate.StopConditionPropertyList",
       },
       target: {
-        value: cdktn.listMapperHcl(tfExperimentTemplateTargetPropertyToHclTerraform, true)(this._target.internalValue),
+        value: cdktn.listMapperHcl(awsExperimentTemplateTargetPropertyToHclTerraform, true)(this._target.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfExperimentTemplate.TargetPropertyList",
+        storageClassType: "AwsExperimentTemplate.TargetPropertyList",
       },
       timeouts: {
-        value: tfExperimentTemplateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsExperimentTemplateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfExperimentTemplate.TimeoutsProperty",
+        storageClassType: "AwsExperimentTemplate.TimeoutsProperty",
       },
     };
 
@@ -454,7 +454,7 @@ export class TfExperimentTemplate extends cdktn.TerraformResource {
   }
 }
 
-export function tfExperimentTemplateParameterPropertyToTerraform(struct?: TfExperimentTemplate.ParameterProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateParameterPropertyToTerraform(struct?: AwsExperimentTemplate.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function tfExperimentTemplateParameterPropertyToTerraform(struct?: TfExpe
 }
 
 
-export function tfExperimentTemplateParameterPropertyToHclTerraform(struct?: TfExperimentTemplate.ParameterProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateParameterPropertyToHclTerraform(struct?: AwsExperimentTemplate.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,7 +491,7 @@ export function tfExperimentTemplateParameterPropertyToHclTerraform(struct?: TfE
 }
 
 
-export function tfExperimentTemplateActionTargetPropertyToTerraform(struct?: TfExperimentTemplate.ActionTargetPropertyOutputReference | TfExperimentTemplate.ActionTargetProperty): any {
+export function awsExperimentTemplateActionTargetPropertyToTerraform(struct?: AwsExperimentTemplate.ActionTargetPropertyOutputReference | AwsExperimentTemplate.ActionTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,7 +503,7 @@ export function tfExperimentTemplateActionTargetPropertyToTerraform(struct?: TfE
 }
 
 
-export function tfExperimentTemplateActionTargetPropertyToHclTerraform(struct?: TfExperimentTemplate.ActionTargetPropertyOutputReference | TfExperimentTemplate.ActionTargetProperty): any {
+export function awsExperimentTemplateActionTargetPropertyToHclTerraform(struct?: AwsExperimentTemplate.ActionTargetPropertyOutputReference | AwsExperimentTemplate.ActionTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function tfExperimentTemplateActionTargetPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfExperimentTemplateActionPropertyToTerraform(struct?: TfExperimentTemplate.ActionProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateActionPropertyToTerraform(struct?: AwsExperimentTemplate.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -538,13 +538,13 @@ export function tfExperimentTemplateActionPropertyToTerraform(struct?: TfExperim
     description: cdktn.stringToTerraform(struct!.description),
     name: cdktn.stringToTerraform(struct!.name),
     start_after: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.startAfter),
-    parameter: cdktn.listMapper(tfExperimentTemplateParameterPropertyToTerraform, true)(struct!.parameter),
-    target: tfExperimentTemplateActionTargetPropertyToTerraform(struct!.target),
+    parameter: cdktn.listMapper(awsExperimentTemplateParameterPropertyToTerraform, true)(struct!.parameter),
+    target: awsExperimentTemplateActionTargetPropertyToTerraform(struct!.target),
   }
 }
 
 
-export function tfExperimentTemplateActionPropertyToHclTerraform(struct?: TfExperimentTemplate.ActionProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateActionPropertyToHclTerraform(struct?: AwsExperimentTemplate.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -575,13 +575,13 @@ export function tfExperimentTemplateActionPropertyToHclTerraform(struct?: TfExpe
       storageClassType: "stringList",
     },
     parameter: {
-      value: cdktn.listMapperHcl(tfExperimentTemplateParameterPropertyToHclTerraform, true)(struct!.parameter),
+      value: cdktn.listMapperHcl(awsExperimentTemplateParameterPropertyToHclTerraform, true)(struct!.parameter),
       isBlock: true,
       type: "set",
       storageClassType: "ParameterPropertyList",
     },
     target: {
-      value: tfExperimentTemplateActionTargetPropertyToHclTerraform(struct!.target),
+      value: awsExperimentTemplateActionTargetPropertyToHclTerraform(struct!.target),
       isBlock: true,
       type: "list",
       storageClassType: "ActionTargetPropertyList",
@@ -593,7 +593,7 @@ export function tfExperimentTemplateActionPropertyToHclTerraform(struct?: TfExpe
 }
 
 
-export function tfExperimentTemplateExperimentOptionsPropertyToTerraform(struct?: TfExperimentTemplate.ExperimentOptionsPropertyOutputReference | TfExperimentTemplate.ExperimentOptionsProperty): any {
+export function awsExperimentTemplateExperimentOptionsPropertyToTerraform(struct?: AwsExperimentTemplate.ExperimentOptionsPropertyOutputReference | AwsExperimentTemplate.ExperimentOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,7 +605,7 @@ export function tfExperimentTemplateExperimentOptionsPropertyToTerraform(struct?
 }
 
 
-export function tfExperimentTemplateExperimentOptionsPropertyToHclTerraform(struct?: TfExperimentTemplate.ExperimentOptionsPropertyOutputReference | TfExperimentTemplate.ExperimentOptionsProperty): any {
+export function awsExperimentTemplateExperimentOptionsPropertyToHclTerraform(struct?: AwsExperimentTemplate.ExperimentOptionsPropertyOutputReference | AwsExperimentTemplate.ExperimentOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -630,7 +630,7 @@ export function tfExperimentTemplateExperimentOptionsPropertyToHclTerraform(stru
 }
 
 
-export function tfExperimentTemplateCloudwatchDashboardPropertyToTerraform(struct?: TfExperimentTemplate.CloudwatchDashboardProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateCloudwatchDashboardPropertyToTerraform(struct?: AwsExperimentTemplate.CloudwatchDashboardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -641,7 +641,7 @@ export function tfExperimentTemplateCloudwatchDashboardPropertyToTerraform(struc
 }
 
 
-export function tfExperimentTemplateCloudwatchDashboardPropertyToHclTerraform(struct?: TfExperimentTemplate.CloudwatchDashboardProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateCloudwatchDashboardPropertyToHclTerraform(struct?: AwsExperimentTemplate.CloudwatchDashboardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,25 +660,25 @@ export function tfExperimentTemplateCloudwatchDashboardPropertyToHclTerraform(st
 }
 
 
-export function tfExperimentTemplateDataSourcesPropertyToTerraform(struct?: TfExperimentTemplate.DataSourcesPropertyOutputReference | TfExperimentTemplate.DataSourcesProperty): any {
+export function awsExperimentTemplateDataSourcesPropertyToTerraform(struct?: AwsExperimentTemplate.DataSourcesPropertyOutputReference | AwsExperimentTemplate.DataSourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_dashboard: cdktn.listMapper(tfExperimentTemplateCloudwatchDashboardPropertyToTerraform, true)(struct!.cloudwatchDashboard),
+    cloudwatch_dashboard: cdktn.listMapper(awsExperimentTemplateCloudwatchDashboardPropertyToTerraform, true)(struct!.cloudwatchDashboard),
   }
 }
 
 
-export function tfExperimentTemplateDataSourcesPropertyToHclTerraform(struct?: TfExperimentTemplate.DataSourcesPropertyOutputReference | TfExperimentTemplate.DataSourcesProperty): any {
+export function awsExperimentTemplateDataSourcesPropertyToHclTerraform(struct?: AwsExperimentTemplate.DataSourcesPropertyOutputReference | AwsExperimentTemplate.DataSourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_dashboard: {
-      value: cdktn.listMapperHcl(tfExperimentTemplateCloudwatchDashboardPropertyToHclTerraform, true)(struct!.cloudwatchDashboard),
+      value: cdktn.listMapperHcl(awsExperimentTemplateCloudwatchDashboardPropertyToHclTerraform, true)(struct!.cloudwatchDashboard),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchDashboardPropertyList",
@@ -690,7 +690,7 @@ export function tfExperimentTemplateDataSourcesPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfExperimentTemplateExperimentReportConfigurationOutputsS3ConfigurationPropertyToTerraform(struct?: TfExperimentTemplate.ExperimentReportConfigurationOutputsS3ConfigurationPropertyOutputReference | TfExperimentTemplate.ExperimentReportConfigurationOutputsS3ConfigurationProperty): any {
+export function awsExperimentTemplateExperimentReportConfigurationOutputsS3ConfigurationPropertyToTerraform(struct?: AwsExperimentTemplate.ExperimentReportConfigurationOutputsS3ConfigurationPropertyOutputReference | AwsExperimentTemplate.ExperimentReportConfigurationOutputsS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -702,7 +702,7 @@ export function tfExperimentTemplateExperimentReportConfigurationOutputsS3Config
 }
 
 
-export function tfExperimentTemplateExperimentReportConfigurationOutputsS3ConfigurationPropertyToHclTerraform(struct?: TfExperimentTemplate.ExperimentReportConfigurationOutputsS3ConfigurationPropertyOutputReference | TfExperimentTemplate.ExperimentReportConfigurationOutputsS3ConfigurationProperty): any {
+export function awsExperimentTemplateExperimentReportConfigurationOutputsS3ConfigurationPropertyToHclTerraform(struct?: AwsExperimentTemplate.ExperimentReportConfigurationOutputsS3ConfigurationPropertyOutputReference | AwsExperimentTemplate.ExperimentReportConfigurationOutputsS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -727,25 +727,25 @@ export function tfExperimentTemplateExperimentReportConfigurationOutputsS3Config
 }
 
 
-export function tfExperimentTemplateOutputsPropertyToTerraform(struct?: TfExperimentTemplate.OutputsPropertyOutputReference | TfExperimentTemplate.OutputsProperty): any {
+export function awsExperimentTemplateOutputsPropertyToTerraform(struct?: AwsExperimentTemplate.OutputsPropertyOutputReference | AwsExperimentTemplate.OutputsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_configuration: tfExperimentTemplateExperimentReportConfigurationOutputsS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
+    s3_configuration: awsExperimentTemplateExperimentReportConfigurationOutputsS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
   }
 }
 
 
-export function tfExperimentTemplateOutputsPropertyToHclTerraform(struct?: TfExperimentTemplate.OutputsPropertyOutputReference | TfExperimentTemplate.OutputsProperty): any {
+export function awsExperimentTemplateOutputsPropertyToHclTerraform(struct?: AwsExperimentTemplate.OutputsPropertyOutputReference | AwsExperimentTemplate.OutputsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_configuration: {
-      value: tfExperimentTemplateExperimentReportConfigurationOutputsS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
+      value: awsExperimentTemplateExperimentReportConfigurationOutputsS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "ExperimentReportConfigurationOutputsS3ConfigurationPropertyList",
@@ -757,7 +757,7 @@ export function tfExperimentTemplateOutputsPropertyToHclTerraform(struct?: TfExp
 }
 
 
-export function tfExperimentTemplateExperimentReportConfigurationPropertyToTerraform(struct?: TfExperimentTemplate.ExperimentReportConfigurationPropertyOutputReference | TfExperimentTemplate.ExperimentReportConfigurationProperty): any {
+export function awsExperimentTemplateExperimentReportConfigurationPropertyToTerraform(struct?: AwsExperimentTemplate.ExperimentReportConfigurationPropertyOutputReference | AwsExperimentTemplate.ExperimentReportConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,13 +765,13 @@ export function tfExperimentTemplateExperimentReportConfigurationPropertyToTerra
   return {
     post_experiment_duration: cdktn.stringToTerraform(struct!.postExperimentDuration),
     pre_experiment_duration: cdktn.stringToTerraform(struct!.preExperimentDuration),
-    data_sources: tfExperimentTemplateDataSourcesPropertyToTerraform(struct!.dataSources),
-    outputs: tfExperimentTemplateOutputsPropertyToTerraform(struct!.outputs),
+    data_sources: awsExperimentTemplateDataSourcesPropertyToTerraform(struct!.dataSources),
+    outputs: awsExperimentTemplateOutputsPropertyToTerraform(struct!.outputs),
   }
 }
 
 
-export function tfExperimentTemplateExperimentReportConfigurationPropertyToHclTerraform(struct?: TfExperimentTemplate.ExperimentReportConfigurationPropertyOutputReference | TfExperimentTemplate.ExperimentReportConfigurationProperty): any {
+export function awsExperimentTemplateExperimentReportConfigurationPropertyToHclTerraform(struct?: AwsExperimentTemplate.ExperimentReportConfigurationPropertyOutputReference | AwsExperimentTemplate.ExperimentReportConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -790,13 +790,13 @@ export function tfExperimentTemplateExperimentReportConfigurationPropertyToHclTe
       storageClassType: "string",
     },
     data_sources: {
-      value: tfExperimentTemplateDataSourcesPropertyToHclTerraform(struct!.dataSources),
+      value: awsExperimentTemplateDataSourcesPropertyToHclTerraform(struct!.dataSources),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourcesPropertyList",
     },
     outputs: {
-      value: tfExperimentTemplateOutputsPropertyToHclTerraform(struct!.outputs),
+      value: awsExperimentTemplateOutputsPropertyToHclTerraform(struct!.outputs),
       isBlock: true,
       type: "list",
       storageClassType: "OutputsPropertyList",
@@ -808,7 +808,7 @@ export function tfExperimentTemplateExperimentReportConfigurationPropertyToHclTe
 }
 
 
-export function tfExperimentTemplateCloudwatchLogsConfigurationPropertyToTerraform(struct?: TfExperimentTemplate.CloudwatchLogsConfigurationPropertyOutputReference | TfExperimentTemplate.CloudwatchLogsConfigurationProperty): any {
+export function awsExperimentTemplateCloudwatchLogsConfigurationPropertyToTerraform(struct?: AwsExperimentTemplate.CloudwatchLogsConfigurationPropertyOutputReference | AwsExperimentTemplate.CloudwatchLogsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -819,7 +819,7 @@ export function tfExperimentTemplateCloudwatchLogsConfigurationPropertyToTerrafo
 }
 
 
-export function tfExperimentTemplateCloudwatchLogsConfigurationPropertyToHclTerraform(struct?: TfExperimentTemplate.CloudwatchLogsConfigurationPropertyOutputReference | TfExperimentTemplate.CloudwatchLogsConfigurationProperty): any {
+export function awsExperimentTemplateCloudwatchLogsConfigurationPropertyToHclTerraform(struct?: AwsExperimentTemplate.CloudwatchLogsConfigurationPropertyOutputReference | AwsExperimentTemplate.CloudwatchLogsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -838,7 +838,7 @@ export function tfExperimentTemplateCloudwatchLogsConfigurationPropertyToHclTerr
 }
 
 
-export function tfExperimentTemplateLogConfigurationS3ConfigurationPropertyToTerraform(struct?: TfExperimentTemplate.LogConfigurationS3ConfigurationPropertyOutputReference | TfExperimentTemplate.LogConfigurationS3ConfigurationProperty): any {
+export function awsExperimentTemplateLogConfigurationS3ConfigurationPropertyToTerraform(struct?: AwsExperimentTemplate.LogConfigurationS3ConfigurationPropertyOutputReference | AwsExperimentTemplate.LogConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -850,7 +850,7 @@ export function tfExperimentTemplateLogConfigurationS3ConfigurationPropertyToTer
 }
 
 
-export function tfExperimentTemplateLogConfigurationS3ConfigurationPropertyToHclTerraform(struct?: TfExperimentTemplate.LogConfigurationS3ConfigurationPropertyOutputReference | TfExperimentTemplate.LogConfigurationS3ConfigurationProperty): any {
+export function awsExperimentTemplateLogConfigurationS3ConfigurationPropertyToHclTerraform(struct?: AwsExperimentTemplate.LogConfigurationS3ConfigurationPropertyOutputReference | AwsExperimentTemplate.LogConfigurationS3ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -875,20 +875,20 @@ export function tfExperimentTemplateLogConfigurationS3ConfigurationPropertyToHcl
 }
 
 
-export function tfExperimentTemplateLogConfigurationPropertyToTerraform(struct?: TfExperimentTemplate.LogConfigurationPropertyOutputReference | TfExperimentTemplate.LogConfigurationProperty): any {
+export function awsExperimentTemplateLogConfigurationPropertyToTerraform(struct?: AwsExperimentTemplate.LogConfigurationPropertyOutputReference | AwsExperimentTemplate.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     log_schema_version: cdktn.numberToTerraform(struct!.logSchemaVersion),
-    cloudwatch_logs_configuration: tfExperimentTemplateCloudwatchLogsConfigurationPropertyToTerraform(struct!.cloudwatchLogsConfiguration),
-    s3_configuration: tfExperimentTemplateLogConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
+    cloudwatch_logs_configuration: awsExperimentTemplateCloudwatchLogsConfigurationPropertyToTerraform(struct!.cloudwatchLogsConfiguration),
+    s3_configuration: awsExperimentTemplateLogConfigurationS3ConfigurationPropertyToTerraform(struct!.s3Configuration),
   }
 }
 
 
-export function tfExperimentTemplateLogConfigurationPropertyToHclTerraform(struct?: TfExperimentTemplate.LogConfigurationPropertyOutputReference | TfExperimentTemplate.LogConfigurationProperty): any {
+export function awsExperimentTemplateLogConfigurationPropertyToHclTerraform(struct?: AwsExperimentTemplate.LogConfigurationPropertyOutputReference | AwsExperimentTemplate.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -901,13 +901,13 @@ export function tfExperimentTemplateLogConfigurationPropertyToHclTerraform(struc
       storageClassType: "number",
     },
     cloudwatch_logs_configuration: {
-      value: tfExperimentTemplateCloudwatchLogsConfigurationPropertyToHclTerraform(struct!.cloudwatchLogsConfiguration),
+      value: awsExperimentTemplateCloudwatchLogsConfigurationPropertyToHclTerraform(struct!.cloudwatchLogsConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsConfigurationPropertyList",
     },
     s3_configuration: {
-      value: tfExperimentTemplateLogConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
+      value: awsExperimentTemplateLogConfigurationS3ConfigurationPropertyToHclTerraform(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "LogConfigurationS3ConfigurationPropertyList",
@@ -919,7 +919,7 @@ export function tfExperimentTemplateLogConfigurationPropertyToHclTerraform(struc
 }
 
 
-export function tfExperimentTemplateStopConditionPropertyToTerraform(struct?: TfExperimentTemplate.StopConditionProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateStopConditionPropertyToTerraform(struct?: AwsExperimentTemplate.StopConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -931,7 +931,7 @@ export function tfExperimentTemplateStopConditionPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfExperimentTemplateStopConditionPropertyToHclTerraform(struct?: TfExperimentTemplate.StopConditionProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateStopConditionPropertyToHclTerraform(struct?: AwsExperimentTemplate.StopConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -956,7 +956,7 @@ export function tfExperimentTemplateStopConditionPropertyToHclTerraform(struct?:
 }
 
 
-export function tfExperimentTemplateFilterPropertyToTerraform(struct?: TfExperimentTemplate.FilterProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateFilterPropertyToTerraform(struct?: AwsExperimentTemplate.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -968,7 +968,7 @@ export function tfExperimentTemplateFilterPropertyToTerraform(struct?: TfExperim
 }
 
 
-export function tfExperimentTemplateFilterPropertyToHclTerraform(struct?: TfExperimentTemplate.FilterProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateFilterPropertyToHclTerraform(struct?: AwsExperimentTemplate.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -993,7 +993,7 @@ export function tfExperimentTemplateFilterPropertyToHclTerraform(struct?: TfExpe
 }
 
 
-export function tfExperimentTemplateResourceTagPropertyToTerraform(struct?: TfExperimentTemplate.ResourceTagProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateResourceTagPropertyToTerraform(struct?: AwsExperimentTemplate.ResourceTagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1005,7 +1005,7 @@ export function tfExperimentTemplateResourceTagPropertyToTerraform(struct?: TfEx
 }
 
 
-export function tfExperimentTemplateResourceTagPropertyToHclTerraform(struct?: TfExperimentTemplate.ResourceTagProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateResourceTagPropertyToHclTerraform(struct?: AwsExperimentTemplate.ResourceTagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1030,7 +1030,7 @@ export function tfExperimentTemplateResourceTagPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfExperimentTemplateTargetPropertyToTerraform(struct?: TfExperimentTemplate.TargetProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateTargetPropertyToTerraform(struct?: AwsExperimentTemplate.TargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1041,13 +1041,13 @@ export function tfExperimentTemplateTargetPropertyToTerraform(struct?: TfExperim
     resource_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.resourceArns),
     resource_type: cdktn.stringToTerraform(struct!.resourceType),
     selection_mode: cdktn.stringToTerraform(struct!.selectionMode),
-    filter: cdktn.listMapper(tfExperimentTemplateFilterPropertyToTerraform, true)(struct!.filter),
-    resource_tag: cdktn.listMapper(tfExperimentTemplateResourceTagPropertyToTerraform, true)(struct!.resourceTag),
+    filter: cdktn.listMapper(awsExperimentTemplateFilterPropertyToTerraform, true)(struct!.filter),
+    resource_tag: cdktn.listMapper(awsExperimentTemplateResourceTagPropertyToTerraform, true)(struct!.resourceTag),
   }
 }
 
 
-export function tfExperimentTemplateTargetPropertyToHclTerraform(struct?: TfExperimentTemplate.TargetProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateTargetPropertyToHclTerraform(struct?: AwsExperimentTemplate.TargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1084,13 +1084,13 @@ export function tfExperimentTemplateTargetPropertyToHclTerraform(struct?: TfExpe
       storageClassType: "string",
     },
     filter: {
-      value: cdktn.listMapperHcl(tfExperimentTemplateFilterPropertyToHclTerraform, true)(struct!.filter),
+      value: cdktn.listMapperHcl(awsExperimentTemplateFilterPropertyToHclTerraform, true)(struct!.filter),
       isBlock: true,
       type: "list",
       storageClassType: "FilterPropertyList",
     },
     resource_tag: {
-      value: cdktn.listMapperHcl(tfExperimentTemplateResourceTagPropertyToHclTerraform, true)(struct!.resourceTag),
+      value: cdktn.listMapperHcl(awsExperimentTemplateResourceTagPropertyToHclTerraform, true)(struct!.resourceTag),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceTagPropertyList",
@@ -1102,7 +1102,7 @@ export function tfExperimentTemplateTargetPropertyToHclTerraform(struct?: TfExpe
 }
 
 
-export function tfExperimentTemplateTimeoutsPropertyToTerraform(struct?: TfExperimentTemplate.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateTimeoutsPropertyToTerraform(struct?: AwsExperimentTemplate.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1115,7 +1115,7 @@ export function tfExperimentTemplateTimeoutsPropertyToTerraform(struct?: TfExper
 }
 
 
-export function tfExperimentTemplateTimeoutsPropertyToHclTerraform(struct?: TfExperimentTemplate.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsExperimentTemplateTimeoutsPropertyToHclTerraform(struct?: AwsExperimentTemplate.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1146,14 +1146,14 @@ export function tfExperimentTemplateTimeoutsPropertyToHclTerraform(struct?: TfEx
 }
 
 
-export namespace TfExperimentTemplate {
+export namespace AwsExperimentTemplate {
 export interface ParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#key TfExperimentTemplate#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#key AwsExperimentTemplate#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#value TfExperimentTemplate#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#value AwsExperimentTemplate#value}
   */
   readonly value: string;
 }
@@ -1255,11 +1255,11 @@ export class ParameterPropertyList extends cdktn.ComplexList {
 }
 export interface ActionTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#key TfExperimentTemplate#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#key AwsExperimentTemplate#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#value TfExperimentTemplate#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#value AwsExperimentTemplate#value}
   */
   readonly value: string;
 }
@@ -1329,31 +1329,31 @@ export class ActionTargetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#action_id TfExperimentTemplate#action_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#action_id AwsExperimentTemplate#action_id}
   */
   readonly actionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#description TfExperimentTemplate#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#description AwsExperimentTemplate#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#name TfExperimentTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#name AwsExperimentTemplate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#start_after TfExperimentTemplate#start_after}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#start_after AwsExperimentTemplate#start_after}
   */
   readonly startAfter?: string[];
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#parameter TfExperimentTemplate#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#parameter AwsExperimentTemplate#parameter}
   */
   readonly parameter?: ParameterProperty[] | cdktn.IResolvable;
   /**
   * target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#target TfExperimentTemplate#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#target AwsExperimentTemplate#target}
   */
   readonly target?: ActionTargetProperty;
 }
@@ -1543,11 +1543,11 @@ export class ActionPropertyList extends cdktn.ComplexList {
 }
 export interface ExperimentOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#account_targeting TfExperimentTemplate#account_targeting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#account_targeting AwsExperimentTemplate#account_targeting}
   */
   readonly accountTargeting?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#empty_target_resolution_mode TfExperimentTemplate#empty_target_resolution_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#empty_target_resolution_mode AwsExperimentTemplate#empty_target_resolution_mode}
   */
   readonly emptyTargetResolutionMode?: string;
 }
@@ -1623,7 +1623,7 @@ export class ExperimentOptionsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface CloudwatchDashboardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#dashboard_arn TfExperimentTemplate#dashboard_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#dashboard_arn AwsExperimentTemplate#dashboard_arn}
   */
   readonly dashboardArn?: string;
 }
@@ -1711,7 +1711,7 @@ export interface DataSourcesProperty {
   /**
   * cloudwatch_dashboard block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#cloudwatch_dashboard TfExperimentTemplate#cloudwatch_dashboard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#cloudwatch_dashboard AwsExperimentTemplate#cloudwatch_dashboard}
   */
   readonly cloudwatchDashboard?: CloudwatchDashboardProperty[] | cdktn.IResolvable;
 }
@@ -1765,11 +1765,11 @@ export class DataSourcesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ExperimentReportConfigurationOutputsS3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#bucket_name TfExperimentTemplate#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#bucket_name AwsExperimentTemplate#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#prefix TfExperimentTemplate#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#prefix AwsExperimentTemplate#prefix}
   */
   readonly prefix?: string;
 }
@@ -1844,7 +1844,7 @@ export interface OutputsProperty {
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#s3_configuration TfExperimentTemplate#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#s3_configuration AwsExperimentTemplate#s3_configuration}
   */
   readonly s3Configuration?: ExperimentReportConfigurationOutputsS3ConfigurationProperty;
 }
@@ -1898,23 +1898,23 @@ export class OutputsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ExperimentReportConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#post_experiment_duration TfExperimentTemplate#post_experiment_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#post_experiment_duration AwsExperimentTemplate#post_experiment_duration}
   */
   readonly postExperimentDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#pre_experiment_duration TfExperimentTemplate#pre_experiment_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#pre_experiment_duration AwsExperimentTemplate#pre_experiment_duration}
   */
   readonly preExperimentDuration?: string;
   /**
   * data_sources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#data_sources TfExperimentTemplate#data_sources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#data_sources AwsExperimentTemplate#data_sources}
   */
   readonly dataSources?: DataSourcesProperty;
   /**
   * outputs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#outputs TfExperimentTemplate#outputs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#outputs AwsExperimentTemplate#outputs}
   */
   readonly outputs?: OutputsProperty;
 }
@@ -2034,7 +2034,7 @@ export class ExperimentReportConfigurationPropertyOutputReference extends cdktn.
 }
 export interface CloudwatchLogsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#log_group_arn TfExperimentTemplate#log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#log_group_arn AwsExperimentTemplate#log_group_arn}
   */
   readonly logGroupArn: string;
 }
@@ -2085,11 +2085,11 @@ export class CloudwatchLogsConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface LogConfigurationS3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#bucket_name TfExperimentTemplate#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#bucket_name AwsExperimentTemplate#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#prefix TfExperimentTemplate#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#prefix AwsExperimentTemplate#prefix}
   */
   readonly prefix?: string;
 }
@@ -2162,19 +2162,19 @@ export class LogConfigurationS3ConfigurationPropertyOutputReference extends cdkt
 }
 export interface LogConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#log_schema_version TfExperimentTemplate#log_schema_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#log_schema_version AwsExperimentTemplate#log_schema_version}
   */
   readonly logSchemaVersion: number;
   /**
   * cloudwatch_logs_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#cloudwatch_logs_configuration TfExperimentTemplate#cloudwatch_logs_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#cloudwatch_logs_configuration AwsExperimentTemplate#cloudwatch_logs_configuration}
   */
   readonly cloudwatchLogsConfiguration?: CloudwatchLogsConfigurationProperty;
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#s3_configuration TfExperimentTemplate#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#s3_configuration AwsExperimentTemplate#s3_configuration}
   */
   readonly s3Configuration?: LogConfigurationS3ConfigurationProperty;
 }
@@ -2269,11 +2269,11 @@ export class LogConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface StopConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#source TfExperimentTemplate#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#source AwsExperimentTemplate#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#value TfExperimentTemplate#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#value AwsExperimentTemplate#value}
   */
   readonly value?: string;
 }
@@ -2378,11 +2378,11 @@ export class StopConditionPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#path TfExperimentTemplate#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#path AwsExperimentTemplate#path}
   */
   readonly path: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#values TfExperimentTemplate#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#values AwsExperimentTemplate#values}
   */
   readonly values: string[];
 }
@@ -2484,11 +2484,11 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceTagProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#key TfExperimentTemplate#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#key AwsExperimentTemplate#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#value TfExperimentTemplate#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#value AwsExperimentTemplate#value}
   */
   readonly value: string;
 }
@@ -2590,35 +2590,35 @@ export class ResourceTagPropertyList extends cdktn.ComplexList {
 }
 export interface TargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#name TfExperimentTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#name AwsExperimentTemplate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#parameters TfExperimentTemplate#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#parameters AwsExperimentTemplate#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#resource_arns TfExperimentTemplate#resource_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#resource_arns AwsExperimentTemplate#resource_arns}
   */
   readonly resourceArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#resource_type TfExperimentTemplate#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#resource_type AwsExperimentTemplate#resource_type}
   */
   readonly resourceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#selection_mode TfExperimentTemplate#selection_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#selection_mode AwsExperimentTemplate#selection_mode}
   */
   readonly selectionMode: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#filter TfExperimentTemplate#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#filter AwsExperimentTemplate#filter}
   */
   readonly filter?: FilterProperty[] | cdktn.IResolvable;
   /**
   * resource_tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#resource_tag TfExperimentTemplate#resource_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#resource_tag AwsExperimentTemplate#resource_tag}
   */
   readonly resourceTag?: ResourceTagProperty[] | cdktn.IResolvable;
 }
@@ -2827,15 +2827,15 @@ export class TargetPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#create TfExperimentTemplate#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#create AwsExperimentTemplate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#delete TfExperimentTemplate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#delete AwsExperimentTemplate#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#update TfExperimentTemplate#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fis_experiment_template#update AwsExperimentTemplate#update}
   */
   readonly update?: string;
 }

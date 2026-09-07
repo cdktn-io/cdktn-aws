@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEmailContactConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEmailContactConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notificationscontacts_email_contact#email_address TfEmailContact#email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notificationscontacts_email_contact#email_address AwsEmailContact#email_address}
   */
   readonly emailAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notificationscontacts_email_contact#name TfEmailContact#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notificationscontacts_email_contact#name AwsEmailContact#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notificationscontacts_email_contact#tags TfEmailContact#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notificationscontacts_email_contact#tags AwsEmailContact#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -23,7 +23,7 @@ export interface TfEmailContactConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notificationscontacts_email_contact aws_notificationscontacts_email_contact}
 */
-export class TfEmailContact extends cdktn.TerraformResource {
+export class AwsEmailContact extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class TfEmailContact extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEmailContact resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEmailContact resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEmailContact to import
-  * @param importFromId The id of the existing TfEmailContact that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notificationscontacts_email_contact#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEmailContact to import is found
+  * @param importToId The construct id used in the generated config for the AwsEmailContact to import
+  * @param importFromId The id of the existing AwsEmailContact that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notificationscontacts_email_contact#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEmailContact to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_notificationscontacts_email_contact", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class TfEmailContact extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEmailContactConfig
+  * @param options AwsEmailContactConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEmailContactConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEmailContactConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_notificationscontacts_email_contact',
       terraformGeneratorMetadata: {

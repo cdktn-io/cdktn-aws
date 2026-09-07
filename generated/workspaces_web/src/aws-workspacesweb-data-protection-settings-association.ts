@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataProtectionSettingsAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDataProtectionSettingsAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings_association#data_protection_settings_arn TfDataProtectionSettingsAssociation#data_protection_settings_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings_association#data_protection_settings_arn AwsDataProtectionSettingsAssociation#data_protection_settings_arn}
   */
   readonly dataProtectionSettingsArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings_association#portal_arn TfDataProtectionSettingsAssociation#portal_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings_association#portal_arn AwsDataProtectionSettingsAssociation#portal_arn}
   */
   readonly portalArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings_association#region TfDataProtectionSettingsAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings_association#region AwsDataProtectionSettingsAssociation#region}
   */
   readonly region?: string;
 }
@@ -25,7 +25,7 @@ export interface TfDataProtectionSettingsAssociationConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings_association aws_workspacesweb_data_protection_settings_association}
 */
-export class TfDataProtectionSettingsAssociation extends cdktn.TerraformResource {
+export class AwsDataProtectionSettingsAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class TfDataProtectionSettingsAssociation extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataProtectionSettingsAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDataProtectionSettingsAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataProtectionSettingsAssociation to import
-  * @param importFromId The id of the existing TfDataProtectionSettingsAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataProtectionSettingsAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsDataProtectionSettingsAssociation to import
+  * @param importFromId The id of the existing AwsDataProtectionSettingsAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDataProtectionSettingsAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_data_protection_settings_association", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class TfDataProtectionSettingsAssociation extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataProtectionSettingsAssociationConfig
+  * @param options AwsDataProtectionSettingsAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataProtectionSettingsAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDataProtectionSettingsAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_data_protection_settings_association',
       terraformGeneratorMetadata: {

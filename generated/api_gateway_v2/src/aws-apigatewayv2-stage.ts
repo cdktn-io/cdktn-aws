@@ -5,80 +5,80 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfStageConfig extends cdktn.TerraformMetaArguments {
+export interface AwsStageConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#api_id TfStage#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#api_id AwsStage#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#auto_deploy TfStage#auto_deploy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#auto_deploy AwsStage#auto_deploy}
   */
   readonly autoDeploy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#client_certificate_id TfStage#client_certificate_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#client_certificate_id AwsStage#client_certificate_id}
   */
   readonly clientCertificateId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#deployment_id TfStage#deployment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#deployment_id AwsStage#deployment_id}
   */
   readonly deploymentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#description TfStage#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#description AwsStage#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#id TfStage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#id AwsStage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#name TfStage#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#name AwsStage#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#region TfStage#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#region AwsStage#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#stage_variables TfStage#stage_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#stage_variables AwsStage#stage_variables}
   */
   readonly stageVariables?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#tags TfStage#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#tags AwsStage#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#tags_all TfStage#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#tags_all AwsStage#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * access_log_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#access_log_settings TfStage#access_log_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#access_log_settings AwsStage#access_log_settings}
   */
-  readonly accessLogSettings?: TfStage.AccessLogSettingsProperty;
+  readonly accessLogSettings?: AwsStage.AccessLogSettingsProperty;
   /**
   * default_route_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#default_route_settings TfStage#default_route_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#default_route_settings AwsStage#default_route_settings}
   */
-  readonly defaultRouteSettings?: TfStage.DefaultRouteSettingsProperty;
+  readonly defaultRouteSettings?: AwsStage.DefaultRouteSettingsProperty;
   /**
   * route_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#route_settings TfStage#route_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#route_settings AwsStage#route_settings}
   */
-  readonly routeSettings?: TfStage.RouteSettingsProperty[] | cdktn.IResolvable;
+  readonly routeSettings?: AwsStage.RouteSettingsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage aws_apigatewayv2_stage}
 */
-export class TfStage extends cdktn.TerraformResource {
+export class AwsStage extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -89,11 +89,11 @@ export class TfStage extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfStage resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsStage resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfStage to import
-  * @param importFromId The id of the existing TfStage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfStage to import is found
+  * @param importToId The construct id used in the generated config for the AwsStage to import
+  * @param importFromId The id of the existing AwsStage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apigatewayv2_stage", importId: importFromId, provider });
@@ -108,9 +108,9 @@ export class TfStage extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfStageConfig
+  * @param options AwsStageConfig
   */
-  public constructor(scope: Construct, id: string, config: TfStageConfig) {
+  public constructor(scope: Construct, id: string, config: AwsStageConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apigatewayv2_stage',
       terraformGeneratorMetadata: {
@@ -332,11 +332,11 @@ export class TfStage extends cdktn.TerraformResource {
   }
 
   // access_log_settings - computed: false, optional: true, required: false
-  private _accessLogSettings = new TfStage.AccessLogSettingsPropertyOutputReference(this, "access_log_settings");
+  private _accessLogSettings = new AwsStage.AccessLogSettingsPropertyOutputReference(this, "access_log_settings");
   public get accessLogSettings() {
     return this._accessLogSettings;
   }
-  public putAccessLogSettings(value: TfStage.AccessLogSettingsProperty) {
+  public putAccessLogSettings(value: AwsStage.AccessLogSettingsProperty) {
     this._accessLogSettings.internalValue = value;
   }
   public resetAccessLogSettings() {
@@ -348,11 +348,11 @@ export class TfStage extends cdktn.TerraformResource {
   }
 
   // default_route_settings - computed: false, optional: true, required: false
-  private _defaultRouteSettings = new TfStage.DefaultRouteSettingsPropertyOutputReference(this, "default_route_settings");
+  private _defaultRouteSettings = new AwsStage.DefaultRouteSettingsPropertyOutputReference(this, "default_route_settings");
   public get defaultRouteSettings() {
     return this._defaultRouteSettings;
   }
-  public putDefaultRouteSettings(value: TfStage.DefaultRouteSettingsProperty) {
+  public putDefaultRouteSettings(value: AwsStage.DefaultRouteSettingsProperty) {
     this._defaultRouteSettings.internalValue = value;
   }
   public resetDefaultRouteSettings() {
@@ -364,11 +364,11 @@ export class TfStage extends cdktn.TerraformResource {
   }
 
   // route_settings - computed: false, optional: true, required: false
-  private _routeSettings = new TfStage.RouteSettingsPropertyList(this, "route_settings", true);
+  private _routeSettings = new AwsStage.RouteSettingsPropertyList(this, "route_settings", true);
   public get routeSettings() {
     return this._routeSettings;
   }
-  public putRouteSettings(value: TfStage.RouteSettingsProperty[] | cdktn.IResolvable) {
+  public putRouteSettings(value: AwsStage.RouteSettingsProperty[] | cdktn.IResolvable) {
     this._routeSettings.internalValue = value;
   }
   public resetRouteSettings() {
@@ -396,9 +396,9 @@ export class TfStage extends cdktn.TerraformResource {
       stage_variables: cdktn.hashMapper(cdktn.stringToTerraform)(this._stageVariables),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      access_log_settings: tfStageAccessLogSettingsPropertyToTerraform(this._accessLogSettings.internalValue),
-      default_route_settings: tfStageDefaultRouteSettingsPropertyToTerraform(this._defaultRouteSettings.internalValue),
-      route_settings: cdktn.listMapper(tfStageRouteSettingsPropertyToTerraform, true)(this._routeSettings.internalValue),
+      access_log_settings: awsStageAccessLogSettingsPropertyToTerraform(this._accessLogSettings.internalValue),
+      default_route_settings: awsStageDefaultRouteSettingsPropertyToTerraform(this._defaultRouteSettings.internalValue),
+      route_settings: cdktn.listMapper(awsStageRouteSettingsPropertyToTerraform, true)(this._routeSettings.internalValue),
     };
   }
 
@@ -471,22 +471,22 @@ export class TfStage extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       access_log_settings: {
-        value: tfStageAccessLogSettingsPropertyToHclTerraform(this._accessLogSettings.internalValue),
+        value: awsStageAccessLogSettingsPropertyToHclTerraform(this._accessLogSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStage.AccessLogSettingsPropertyList",
+        storageClassType: "AwsStage.AccessLogSettingsPropertyList",
       },
       default_route_settings: {
-        value: tfStageDefaultRouteSettingsPropertyToHclTerraform(this._defaultRouteSettings.internalValue),
+        value: awsStageDefaultRouteSettingsPropertyToHclTerraform(this._defaultRouteSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStage.DefaultRouteSettingsPropertyList",
+        storageClassType: "AwsStage.DefaultRouteSettingsPropertyList",
       },
       route_settings: {
-        value: cdktn.listMapperHcl(tfStageRouteSettingsPropertyToHclTerraform, true)(this._routeSettings.internalValue),
+        value: cdktn.listMapperHcl(awsStageRouteSettingsPropertyToHclTerraform, true)(this._routeSettings.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfStage.RouteSettingsPropertyList",
+        storageClassType: "AwsStage.RouteSettingsPropertyList",
       },
     };
 
@@ -495,7 +495,7 @@ export class TfStage extends cdktn.TerraformResource {
   }
 }
 
-export function tfStageAccessLogSettingsPropertyToTerraform(struct?: TfStage.AccessLogSettingsPropertyOutputReference | TfStage.AccessLogSettingsProperty): any {
+export function awsStageAccessLogSettingsPropertyToTerraform(struct?: AwsStage.AccessLogSettingsPropertyOutputReference | AwsStage.AccessLogSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function tfStageAccessLogSettingsPropertyToTerraform(struct?: TfStage.Acc
 }
 
 
-export function tfStageAccessLogSettingsPropertyToHclTerraform(struct?: TfStage.AccessLogSettingsPropertyOutputReference | TfStage.AccessLogSettingsProperty): any {
+export function awsStageAccessLogSettingsPropertyToHclTerraform(struct?: AwsStage.AccessLogSettingsPropertyOutputReference | AwsStage.AccessLogSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,7 +532,7 @@ export function tfStageAccessLogSettingsPropertyToHclTerraform(struct?: TfStage.
 }
 
 
-export function tfStageDefaultRouteSettingsPropertyToTerraform(struct?: TfStage.DefaultRouteSettingsPropertyOutputReference | TfStage.DefaultRouteSettingsProperty): any {
+export function awsStageDefaultRouteSettingsPropertyToTerraform(struct?: AwsStage.DefaultRouteSettingsPropertyOutputReference | AwsStage.DefaultRouteSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function tfStageDefaultRouteSettingsPropertyToTerraform(struct?: TfStage.
 }
 
 
-export function tfStageDefaultRouteSettingsPropertyToHclTerraform(struct?: TfStage.DefaultRouteSettingsPropertyOutputReference | TfStage.DefaultRouteSettingsProperty): any {
+export function awsStageDefaultRouteSettingsPropertyToHclTerraform(struct?: AwsStage.DefaultRouteSettingsPropertyOutputReference | AwsStage.DefaultRouteSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -590,7 +590,7 @@ export function tfStageDefaultRouteSettingsPropertyToHclTerraform(struct?: TfSta
 }
 
 
-export function tfStageRouteSettingsPropertyToTerraform(struct?: TfStage.RouteSettingsProperty | cdktn.IResolvable): any {
+export function awsStageRouteSettingsPropertyToTerraform(struct?: AwsStage.RouteSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -606,7 +606,7 @@ export function tfStageRouteSettingsPropertyToTerraform(struct?: TfStage.RouteSe
 }
 
 
-export function tfStageRouteSettingsPropertyToHclTerraform(struct?: TfStage.RouteSettingsProperty | cdktn.IResolvable): any {
+export function awsStageRouteSettingsPropertyToHclTerraform(struct?: AwsStage.RouteSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -655,14 +655,14 @@ export function tfStageRouteSettingsPropertyToHclTerraform(struct?: TfStage.Rout
 }
 
 
-export namespace TfStage {
+export namespace AwsStage {
 export interface AccessLogSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#destination_arn TfStage#destination_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#destination_arn AwsStage#destination_arn}
   */
   readonly destinationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#format TfStage#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#format AwsStage#format}
   */
   readonly format: string;
 }
@@ -732,23 +732,23 @@ export class AccessLogSettingsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface DefaultRouteSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#data_trace_enabled TfStage#data_trace_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#data_trace_enabled AwsStage#data_trace_enabled}
   */
   readonly dataTraceEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#detailed_metrics_enabled TfStage#detailed_metrics_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#detailed_metrics_enabled AwsStage#detailed_metrics_enabled}
   */
   readonly detailedMetricsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#logging_level TfStage#logging_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#logging_level AwsStage#logging_level}
   */
   readonly loggingLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#throttling_burst_limit TfStage#throttling_burst_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#throttling_burst_limit AwsStage#throttling_burst_limit}
   */
   readonly throttlingBurstLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#throttling_rate_limit TfStage#throttling_rate_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#throttling_rate_limit AwsStage#throttling_rate_limit}
   */
   readonly throttlingRateLimit?: number;
 }
@@ -890,27 +890,27 @@ export class DefaultRouteSettingsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface RouteSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#data_trace_enabled TfStage#data_trace_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#data_trace_enabled AwsStage#data_trace_enabled}
   */
   readonly dataTraceEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#detailed_metrics_enabled TfStage#detailed_metrics_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#detailed_metrics_enabled AwsStage#detailed_metrics_enabled}
   */
   readonly detailedMetricsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#logging_level TfStage#logging_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#logging_level AwsStage#logging_level}
   */
   readonly loggingLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#route_key TfStage#route_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#route_key AwsStage#route_key}
   */
   readonly routeKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#throttling_burst_limit TfStage#throttling_burst_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#throttling_burst_limit AwsStage#throttling_burst_limit}
   */
   readonly throttlingBurstLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#throttling_rate_limit TfStage#throttling_rate_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_stage#throttling_rate_limit AwsStage#throttling_rate_limit}
   */
   readonly throttlingRateLimit?: number;
 }

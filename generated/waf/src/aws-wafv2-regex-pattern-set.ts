@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRegexPatternSetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRegexPatternSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#description TfRegexPatternSet#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#description AwsRegexPatternSet#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#id TfRegexPatternSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#id AwsRegexPatternSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#name TfRegexPatternSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#name AwsRegexPatternSet#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#name_prefix TfRegexPatternSet#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#name_prefix AwsRegexPatternSet#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#region TfRegexPatternSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#region AwsRegexPatternSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#scope TfRegexPatternSet#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#scope AwsRegexPatternSet#scope}
   */
   readonly scope: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#tags TfRegexPatternSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#tags AwsRegexPatternSet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#tags_all TfRegexPatternSet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#tags_all AwsRegexPatternSet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * regular_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#regular_expression TfRegexPatternSet#regular_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#regular_expression AwsRegexPatternSet#regular_expression}
   */
-  readonly regularExpression?: TfRegexPatternSet.RegularExpressionProperty[] | cdktn.IResolvable;
+  readonly regularExpression?: AwsRegexPatternSet.RegularExpressionProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set aws_wafv2_regex_pattern_set}
 */
-export class TfRegexPatternSet extends cdktn.TerraformResource {
+export class AwsRegexPatternSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfRegexPatternSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRegexPatternSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRegexPatternSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRegexPatternSet to import
-  * @param importFromId The id of the existing TfRegexPatternSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRegexPatternSet to import is found
+  * @param importToId The construct id used in the generated config for the AwsRegexPatternSet to import
+  * @param importFromId The id of the existing AwsRegexPatternSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRegexPatternSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafv2_regex_pattern_set", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfRegexPatternSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRegexPatternSetConfig
+  * @param options AwsRegexPatternSetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRegexPatternSetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRegexPatternSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafv2_regex_pattern_set',
       terraformGeneratorMetadata: {
@@ -253,11 +253,11 @@ export class TfRegexPatternSet extends cdktn.TerraformResource {
   }
 
   // regular_expression - computed: false, optional: true, required: false
-  private _regularExpression = new TfRegexPatternSet.RegularExpressionPropertyList(this, "regular_expression", true);
+  private _regularExpression = new AwsRegexPatternSet.RegularExpressionPropertyList(this, "regular_expression", true);
   public get regularExpression() {
     return this._regularExpression;
   }
-  public putRegularExpression(value: TfRegexPatternSet.RegularExpressionProperty[] | cdktn.IResolvable) {
+  public putRegularExpression(value: AwsRegexPatternSet.RegularExpressionProperty[] | cdktn.IResolvable) {
     this._regularExpression.internalValue = value;
   }
   public resetRegularExpression() {
@@ -282,7 +282,7 @@ export class TfRegexPatternSet extends cdktn.TerraformResource {
       scope: cdktn.stringToTerraform(this._scope),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      regular_expression: cdktn.listMapper(tfRegexPatternSetRegularExpressionPropertyToTerraform, true)(this._regularExpression.internalValue),
+      regular_expression: cdktn.listMapper(awsRegexPatternSetRegularExpressionPropertyToTerraform, true)(this._regularExpression.internalValue),
     };
   }
 
@@ -337,10 +337,10 @@ export class TfRegexPatternSet extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       regular_expression: {
-        value: cdktn.listMapperHcl(tfRegexPatternSetRegularExpressionPropertyToHclTerraform, true)(this._regularExpression.internalValue),
+        value: cdktn.listMapperHcl(awsRegexPatternSetRegularExpressionPropertyToHclTerraform, true)(this._regularExpression.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfRegexPatternSet.RegularExpressionPropertyList",
+        storageClassType: "AwsRegexPatternSet.RegularExpressionPropertyList",
       },
     };
 
@@ -349,7 +349,7 @@ export class TfRegexPatternSet extends cdktn.TerraformResource {
   }
 }
 
-export function tfRegexPatternSetRegularExpressionPropertyToTerraform(struct?: TfRegexPatternSet.RegularExpressionProperty | cdktn.IResolvable): any {
+export function awsRegexPatternSetRegularExpressionPropertyToTerraform(struct?: AwsRegexPatternSet.RegularExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function tfRegexPatternSetRegularExpressionPropertyToTerraform(struct?: T
 }
 
 
-export function tfRegexPatternSetRegularExpressionPropertyToHclTerraform(struct?: TfRegexPatternSet.RegularExpressionProperty | cdktn.IResolvable): any {
+export function awsRegexPatternSetRegularExpressionPropertyToHclTerraform(struct?: AwsRegexPatternSet.RegularExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,10 +379,10 @@ export function tfRegexPatternSetRegularExpressionPropertyToHclTerraform(struct?
 }
 
 
-export namespace TfRegexPatternSet {
+export namespace AwsRegexPatternSet {
 export interface RegularExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#regex_string TfRegexPatternSet#regex_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_regex_pattern_set#regex_string AwsRegexPatternSet#regex_string}
   */
   readonly regexString: string;
 }

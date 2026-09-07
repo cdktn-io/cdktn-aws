@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFunctionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFunctionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#api_id TfFunction#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#api_id AwsFunction#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#code TfFunction#code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#code AwsFunction#code}
   */
   readonly code?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#data_source TfFunction#data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#data_source AwsFunction#data_source}
   */
   readonly dataSource: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#description TfFunction#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#description AwsFunction#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#function_version TfFunction#function_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#function_version AwsFunction#function_version}
   */
   readonly functionVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#id TfFunction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#id AwsFunction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#max_batch_size TfFunction#max_batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#max_batch_size AwsFunction#max_batch_size}
   */
   readonly maxBatchSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#name TfFunction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#name AwsFunction#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#region TfFunction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#region AwsFunction#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#request_mapping_template TfFunction#request_mapping_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#request_mapping_template AwsFunction#request_mapping_template}
   */
   readonly requestMappingTemplate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#response_mapping_template TfFunction#response_mapping_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#response_mapping_template AwsFunction#response_mapping_template}
   */
   readonly responseMappingTemplate?: string;
   /**
   * runtime block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#runtime TfFunction#runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#runtime AwsFunction#runtime}
   */
-  readonly runtime?: TfFunction.RuntimeProperty;
+  readonly runtime?: AwsFunction.RuntimeProperty;
   /**
   * sync_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#sync_config TfFunction#sync_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#sync_config AwsFunction#sync_config}
   */
-  readonly syncConfig?: TfFunction.SyncConfigProperty;
+  readonly syncConfig?: AwsFunction.SyncConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function aws_appsync_function}
 */
-export class TfFunction extends cdktn.TerraformResource {
+export class AwsFunction extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class TfFunction extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFunction resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFunction resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFunction to import
-  * @param importFromId The id of the existing TfFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFunction to import is found
+  * @param importToId The construct id used in the generated config for the AwsFunction to import
+  * @param importFromId The id of the existing AwsFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFunction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appsync_function", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class TfFunction extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFunctionConfig
+  * @param options AwsFunctionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFunctionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFunctionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appsync_function',
       terraformGeneratorMetadata: {
@@ -317,11 +317,11 @@ export class TfFunction extends cdktn.TerraformResource {
   }
 
   // runtime - computed: false, optional: true, required: false
-  private _runtime = new TfFunction.RuntimePropertyOutputReference(this, "runtime");
+  private _runtime = new AwsFunction.RuntimePropertyOutputReference(this, "runtime");
   public get runtime() {
     return this._runtime;
   }
-  public putRuntime(value: TfFunction.RuntimeProperty) {
+  public putRuntime(value: AwsFunction.RuntimeProperty) {
     this._runtime.internalValue = value;
   }
   public resetRuntime() {
@@ -333,11 +333,11 @@ export class TfFunction extends cdktn.TerraformResource {
   }
 
   // sync_config - computed: false, optional: true, required: false
-  private _syncConfig = new TfFunction.SyncConfigPropertyOutputReference(this, "sync_config");
+  private _syncConfig = new AwsFunction.SyncConfigPropertyOutputReference(this, "sync_config");
   public get syncConfig() {
     return this._syncConfig;
   }
-  public putSyncConfig(value: TfFunction.SyncConfigProperty) {
+  public putSyncConfig(value: AwsFunction.SyncConfigProperty) {
     this._syncConfig.internalValue = value;
   }
   public resetSyncConfig() {
@@ -365,8 +365,8 @@ export class TfFunction extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       request_mapping_template: cdktn.stringToTerraform(this._requestMappingTemplate),
       response_mapping_template: cdktn.stringToTerraform(this._responseMappingTemplate),
-      runtime: tfFunctionRuntimePropertyToTerraform(this._runtime.internalValue),
-      sync_config: tfFunctionSyncConfigPropertyToTerraform(this._syncConfig.internalValue),
+      runtime: awsFunctionRuntimePropertyToTerraform(this._runtime.internalValue),
+      sync_config: awsFunctionSyncConfigPropertyToTerraform(this._syncConfig.internalValue),
     };
   }
 
@@ -439,16 +439,16 @@ export class TfFunction extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       runtime: {
-        value: tfFunctionRuntimePropertyToHclTerraform(this._runtime.internalValue),
+        value: awsFunctionRuntimePropertyToHclTerraform(this._runtime.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFunction.RuntimePropertyList",
+        storageClassType: "AwsFunction.RuntimePropertyList",
       },
       sync_config: {
-        value: tfFunctionSyncConfigPropertyToHclTerraform(this._syncConfig.internalValue),
+        value: awsFunctionSyncConfigPropertyToHclTerraform(this._syncConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFunction.SyncConfigPropertyList",
+        storageClassType: "AwsFunction.SyncConfigPropertyList",
       },
     };
 
@@ -457,7 +457,7 @@ export class TfFunction extends cdktn.TerraformResource {
   }
 }
 
-export function tfFunctionRuntimePropertyToTerraform(struct?: TfFunction.RuntimePropertyOutputReference | TfFunction.RuntimeProperty): any {
+export function awsFunctionRuntimePropertyToTerraform(struct?: AwsFunction.RuntimePropertyOutputReference | AwsFunction.RuntimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function tfFunctionRuntimePropertyToTerraform(struct?: TfFunction.Runtime
 }
 
 
-export function tfFunctionRuntimePropertyToHclTerraform(struct?: TfFunction.RuntimePropertyOutputReference | TfFunction.RuntimeProperty): any {
+export function awsFunctionRuntimePropertyToHclTerraform(struct?: AwsFunction.RuntimePropertyOutputReference | AwsFunction.RuntimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -494,7 +494,7 @@ export function tfFunctionRuntimePropertyToHclTerraform(struct?: TfFunction.Runt
 }
 
 
-export function tfFunctionLambdaConflictHandlerConfigPropertyToTerraform(struct?: TfFunction.LambdaConflictHandlerConfigPropertyOutputReference | TfFunction.LambdaConflictHandlerConfigProperty): any {
+export function awsFunctionLambdaConflictHandlerConfigPropertyToTerraform(struct?: AwsFunction.LambdaConflictHandlerConfigPropertyOutputReference | AwsFunction.LambdaConflictHandlerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -505,7 +505,7 @@ export function tfFunctionLambdaConflictHandlerConfigPropertyToTerraform(struct?
 }
 
 
-export function tfFunctionLambdaConflictHandlerConfigPropertyToHclTerraform(struct?: TfFunction.LambdaConflictHandlerConfigPropertyOutputReference | TfFunction.LambdaConflictHandlerConfigProperty): any {
+export function awsFunctionLambdaConflictHandlerConfigPropertyToHclTerraform(struct?: AwsFunction.LambdaConflictHandlerConfigPropertyOutputReference | AwsFunction.LambdaConflictHandlerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -524,7 +524,7 @@ export function tfFunctionLambdaConflictHandlerConfigPropertyToHclTerraform(stru
 }
 
 
-export function tfFunctionSyncConfigPropertyToTerraform(struct?: TfFunction.SyncConfigPropertyOutputReference | TfFunction.SyncConfigProperty): any {
+export function awsFunctionSyncConfigPropertyToTerraform(struct?: AwsFunction.SyncConfigPropertyOutputReference | AwsFunction.SyncConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,12 +532,12 @@ export function tfFunctionSyncConfigPropertyToTerraform(struct?: TfFunction.Sync
   return {
     conflict_detection: cdktn.stringToTerraform(struct!.conflictDetection),
     conflict_handler: cdktn.stringToTerraform(struct!.conflictHandler),
-    lambda_conflict_handler_config: tfFunctionLambdaConflictHandlerConfigPropertyToTerraform(struct!.lambdaConflictHandlerConfig),
+    lambda_conflict_handler_config: awsFunctionLambdaConflictHandlerConfigPropertyToTerraform(struct!.lambdaConflictHandlerConfig),
   }
 }
 
 
-export function tfFunctionSyncConfigPropertyToHclTerraform(struct?: TfFunction.SyncConfigPropertyOutputReference | TfFunction.SyncConfigProperty): any {
+export function awsFunctionSyncConfigPropertyToHclTerraform(struct?: AwsFunction.SyncConfigPropertyOutputReference | AwsFunction.SyncConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,7 +556,7 @@ export function tfFunctionSyncConfigPropertyToHclTerraform(struct?: TfFunction.S
       storageClassType: "string",
     },
     lambda_conflict_handler_config: {
-      value: tfFunctionLambdaConflictHandlerConfigPropertyToHclTerraform(struct!.lambdaConflictHandlerConfig),
+      value: awsFunctionLambdaConflictHandlerConfigPropertyToHclTerraform(struct!.lambdaConflictHandlerConfig),
       isBlock: true,
       type: "list",
       storageClassType: "LambdaConflictHandlerConfigPropertyList",
@@ -568,14 +568,14 @@ export function tfFunctionSyncConfigPropertyToHclTerraform(struct?: TfFunction.S
 }
 
 
-export namespace TfFunction {
+export namespace AwsFunction {
 export interface RuntimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#name TfFunction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#name AwsFunction#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#runtime_version TfFunction#runtime_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#runtime_version AwsFunction#runtime_version}
   */
   readonly runtimeVersion: string;
 }
@@ -645,7 +645,7 @@ export class RuntimePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LambdaConflictHandlerConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#lambda_conflict_handler_arn TfFunction#lambda_conflict_handler_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#lambda_conflict_handler_arn AwsFunction#lambda_conflict_handler_arn}
   */
   readonly lambdaConflictHandlerArn?: string;
 }
@@ -699,17 +699,17 @@ export class LambdaConflictHandlerConfigPropertyOutputReference extends cdktn.Co
 }
 export interface SyncConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#conflict_detection TfFunction#conflict_detection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#conflict_detection AwsFunction#conflict_detection}
   */
   readonly conflictDetection?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#conflict_handler TfFunction#conflict_handler}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#conflict_handler AwsFunction#conflict_handler}
   */
   readonly conflictHandler?: string;
   /**
   * lambda_conflict_handler_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#lambda_conflict_handler_config TfFunction#lambda_conflict_handler_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_function#lambda_conflict_handler_config AwsFunction#lambda_conflict_handler_config}
   */
   readonly lambdaConflictHandlerConfig?: LambdaConflictHandlerConfigProperty;
 }

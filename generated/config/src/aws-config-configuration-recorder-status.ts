@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConfigurationRecorderStatusConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConfigurationRecorderStatusConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder_status#id TfConfigurationRecorderStatus#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder_status#id AwsConfigurationRecorderStatus#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder_status#is_enabled TfConfigurationRecorderStatus#is_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder_status#is_enabled AwsConfigurationRecorderStatus#is_enabled}
   */
   readonly isEnabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder_status#name TfConfigurationRecorderStatus#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder_status#name AwsConfigurationRecorderStatus#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder_status#region TfConfigurationRecorderStatus#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder_status#region AwsConfigurationRecorderStatus#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface TfConfigurationRecorderStatusConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder_status aws_config_configuration_recorder_status}
 */
-export class TfConfigurationRecorderStatus extends cdktn.TerraformResource {
+export class AwsConfigurationRecorderStatus extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfConfigurationRecorderStatus extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConfigurationRecorderStatus resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConfigurationRecorderStatus resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConfigurationRecorderStatus to import
-  * @param importFromId The id of the existing TfConfigurationRecorderStatus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder_status#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConfigurationRecorderStatus to import is found
+  * @param importToId The construct id used in the generated config for the AwsConfigurationRecorderStatus to import
+  * @param importFromId The id of the existing AwsConfigurationRecorderStatus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_recorder_status#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConfigurationRecorderStatus to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_config_configuration_recorder_status", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfConfigurationRecorderStatus extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConfigurationRecorderStatusConfig
+  * @param options AwsConfigurationRecorderStatusConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConfigurationRecorderStatusConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConfigurationRecorderStatusConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_config_configuration_recorder_status',
       terraformGeneratorMetadata: {

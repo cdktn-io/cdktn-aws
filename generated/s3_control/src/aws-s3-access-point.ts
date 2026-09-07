@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAccessPointConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAccessPointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#account_id TfAccessPoint#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#account_id AwsAccessPoint#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#bucket TfAccessPoint#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#bucket AwsAccessPoint#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#bucket_account_id TfAccessPoint#bucket_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#bucket_account_id AwsAccessPoint#bucket_account_id}
   */
   readonly bucketAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#id TfAccessPoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#id AwsAccessPoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#name TfAccessPoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#name AwsAccessPoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#policy TfAccessPoint#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#policy AwsAccessPoint#policy}
   */
   readonly policy?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#region TfAccessPoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#region AwsAccessPoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#tags TfAccessPoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#tags AwsAccessPoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#tags_all TfAccessPoint#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#tags_all AwsAccessPoint#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * public_access_block_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#public_access_block_configuration TfAccessPoint#public_access_block_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#public_access_block_configuration AwsAccessPoint#public_access_block_configuration}
   */
-  readonly publicAccessBlockConfiguration?: TfAccessPoint.PublicAccessBlockConfigurationProperty;
+  readonly publicAccessBlockConfiguration?: AwsAccessPoint.PublicAccessBlockConfigurationProperty;
   /**
   * vpc_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#vpc_configuration TfAccessPoint#vpc_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#vpc_configuration AwsAccessPoint#vpc_configuration}
   */
-  readonly vpcConfiguration?: TfAccessPoint.VpcConfigurationProperty;
+  readonly vpcConfiguration?: AwsAccessPoint.VpcConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point aws_s3_access_point}
 */
-export class TfAccessPoint extends cdktn.TerraformResource {
+export class AwsAccessPoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class TfAccessPoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAccessPoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAccessPoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAccessPoint to import
-  * @param importFromId The id of the existing TfAccessPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAccessPoint to import is found
+  * @param importToId The construct id used in the generated config for the AwsAccessPoint to import
+  * @param importFromId The id of the existing AwsAccessPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAccessPoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_access_point", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class TfAccessPoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAccessPointConfig
+  * @param options AwsAccessPointConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAccessPointConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAccessPointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_access_point',
       terraformGeneratorMetadata: {
@@ -299,11 +299,11 @@ export class TfAccessPoint extends cdktn.TerraformResource {
   }
 
   // public_access_block_configuration - computed: false, optional: true, required: false
-  private _publicAccessBlockConfiguration = new TfAccessPoint.PublicAccessBlockConfigurationPropertyOutputReference(this, "public_access_block_configuration");
+  private _publicAccessBlockConfiguration = new AwsAccessPoint.PublicAccessBlockConfigurationPropertyOutputReference(this, "public_access_block_configuration");
   public get publicAccessBlockConfiguration() {
     return this._publicAccessBlockConfiguration;
   }
-  public putPublicAccessBlockConfiguration(value: TfAccessPoint.PublicAccessBlockConfigurationProperty) {
+  public putPublicAccessBlockConfiguration(value: AwsAccessPoint.PublicAccessBlockConfigurationProperty) {
     this._publicAccessBlockConfiguration.internalValue = value;
   }
   public resetPublicAccessBlockConfiguration() {
@@ -315,11 +315,11 @@ export class TfAccessPoint extends cdktn.TerraformResource {
   }
 
   // vpc_configuration - computed: false, optional: true, required: false
-  private _vpcConfiguration = new TfAccessPoint.VpcConfigurationPropertyOutputReference(this, "vpc_configuration");
+  private _vpcConfiguration = new AwsAccessPoint.VpcConfigurationPropertyOutputReference(this, "vpc_configuration");
   public get vpcConfiguration() {
     return this._vpcConfiguration;
   }
-  public putVpcConfiguration(value: TfAccessPoint.VpcConfigurationProperty) {
+  public putVpcConfiguration(value: AwsAccessPoint.VpcConfigurationProperty) {
     this._vpcConfiguration.internalValue = value;
   }
   public resetVpcConfiguration() {
@@ -345,8 +345,8 @@ export class TfAccessPoint extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      public_access_block_configuration: tfAccessPointPublicAccessBlockConfigurationPropertyToTerraform(this._publicAccessBlockConfiguration.internalValue),
-      vpc_configuration: tfAccessPointVpcConfigurationPropertyToTerraform(this._vpcConfiguration.internalValue),
+      public_access_block_configuration: awsAccessPointPublicAccessBlockConfigurationPropertyToTerraform(this._publicAccessBlockConfiguration.internalValue),
+      vpc_configuration: awsAccessPointVpcConfigurationPropertyToTerraform(this._vpcConfiguration.internalValue),
     };
   }
 
@@ -407,16 +407,16 @@ export class TfAccessPoint extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       public_access_block_configuration: {
-        value: tfAccessPointPublicAccessBlockConfigurationPropertyToHclTerraform(this._publicAccessBlockConfiguration.internalValue),
+        value: awsAccessPointPublicAccessBlockConfigurationPropertyToHclTerraform(this._publicAccessBlockConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAccessPoint.PublicAccessBlockConfigurationPropertyList",
+        storageClassType: "AwsAccessPoint.PublicAccessBlockConfigurationPropertyList",
       },
       vpc_configuration: {
-        value: tfAccessPointVpcConfigurationPropertyToHclTerraform(this._vpcConfiguration.internalValue),
+        value: awsAccessPointVpcConfigurationPropertyToHclTerraform(this._vpcConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAccessPoint.VpcConfigurationPropertyList",
+        storageClassType: "AwsAccessPoint.VpcConfigurationPropertyList",
       },
     };
 
@@ -425,7 +425,7 @@ export class TfAccessPoint extends cdktn.TerraformResource {
   }
 }
 
-export function tfAccessPointPublicAccessBlockConfigurationPropertyToTerraform(struct?: TfAccessPoint.PublicAccessBlockConfigurationPropertyOutputReference | TfAccessPoint.PublicAccessBlockConfigurationProperty): any {
+export function awsAccessPointPublicAccessBlockConfigurationPropertyToTerraform(struct?: AwsAccessPoint.PublicAccessBlockConfigurationPropertyOutputReference | AwsAccessPoint.PublicAccessBlockConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function tfAccessPointPublicAccessBlockConfigurationPropertyToTerraform(s
 }
 
 
-export function tfAccessPointPublicAccessBlockConfigurationPropertyToHclTerraform(struct?: TfAccessPoint.PublicAccessBlockConfigurationPropertyOutputReference | TfAccessPoint.PublicAccessBlockConfigurationProperty): any {
+export function awsAccessPointPublicAccessBlockConfigurationPropertyToHclTerraform(struct?: AwsAccessPoint.PublicAccessBlockConfigurationPropertyOutputReference | AwsAccessPoint.PublicAccessBlockConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,7 +476,7 @@ export function tfAccessPointPublicAccessBlockConfigurationPropertyToHclTerrafor
 }
 
 
-export function tfAccessPointVpcConfigurationPropertyToTerraform(struct?: TfAccessPoint.VpcConfigurationPropertyOutputReference | TfAccessPoint.VpcConfigurationProperty): any {
+export function awsAccessPointVpcConfigurationPropertyToTerraform(struct?: AwsAccessPoint.VpcConfigurationPropertyOutputReference | AwsAccessPoint.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,7 +487,7 @@ export function tfAccessPointVpcConfigurationPropertyToTerraform(struct?: TfAcce
 }
 
 
-export function tfAccessPointVpcConfigurationPropertyToHclTerraform(struct?: TfAccessPoint.VpcConfigurationPropertyOutputReference | TfAccessPoint.VpcConfigurationProperty): any {
+export function awsAccessPointVpcConfigurationPropertyToHclTerraform(struct?: AwsAccessPoint.VpcConfigurationPropertyOutputReference | AwsAccessPoint.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,22 +506,22 @@ export function tfAccessPointVpcConfigurationPropertyToHclTerraform(struct?: TfA
 }
 
 
-export namespace TfAccessPoint {
+export namespace AwsAccessPoint {
 export interface PublicAccessBlockConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#block_public_acls TfAccessPoint#block_public_acls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#block_public_acls AwsAccessPoint#block_public_acls}
   */
   readonly blockPublicAcls?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#block_public_policy TfAccessPoint#block_public_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#block_public_policy AwsAccessPoint#block_public_policy}
   */
   readonly blockPublicPolicy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#ignore_public_acls TfAccessPoint#ignore_public_acls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#ignore_public_acls AwsAccessPoint#ignore_public_acls}
   */
   readonly ignorePublicAcls?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#restrict_public_buckets TfAccessPoint#restrict_public_buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#restrict_public_buckets AwsAccessPoint#restrict_public_buckets}
   */
   readonly restrictPublicBuckets?: boolean | cdktn.IResolvable;
 }
@@ -641,7 +641,7 @@ export class PublicAccessBlockConfigurationPropertyOutputReference extends cdktn
 }
 export interface VpcConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#vpc_id TfAccessPoint#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_access_point#vpc_id AwsAccessPoint#vpc_id}
   */
   readonly vpcId: string;
 }

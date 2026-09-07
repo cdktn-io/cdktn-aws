@@ -5,83 +5,83 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfStreamProcessorConfig extends cdktn.TerraformMetaArguments {
+export interface AwsStreamProcessorConfig extends cdktn.TerraformMetaArguments {
   /**
   * The identifier for your AWS Key Management Service key (AWS KMS key). You can supply the Amazon Resource Name (ARN) of your KMS key, the ID of your KMS key, an alias for your KMS key, or an alias ARN.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#kms_key_id TfStreamProcessor#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#kms_key_id AwsStreamProcessor#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
   * An identifier you assign to the stream processor.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#name TfStreamProcessor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#name AwsStreamProcessor#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#region TfStreamProcessor#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#region AwsStreamProcessor#region}
   */
   readonly region?: string;
   /**
   * The Amazon Resource Number (ARN) of the IAM role that allows access to the stream processor.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#role_arn TfStreamProcessor#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#role_arn AwsStreamProcessor#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#tags TfStreamProcessor#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#tags AwsStreamProcessor#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * data_sharing_preference block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#data_sharing_preference TfStreamProcessor#data_sharing_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#data_sharing_preference AwsStreamProcessor#data_sharing_preference}
   */
-  readonly dataSharingPreference?: TfStreamProcessor.DataSharingPreferenceProperty[] | cdktn.IResolvable;
+  readonly dataSharingPreference?: AwsStreamProcessor.DataSharingPreferenceProperty[] | cdktn.IResolvable;
   /**
   * input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#input TfStreamProcessor#input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#input AwsStreamProcessor#input}
   */
-  readonly input?: TfStreamProcessor.InputProperty[] | cdktn.IResolvable;
+  readonly input?: AwsStreamProcessor.InputProperty[] | cdktn.IResolvable;
   /**
   * notification_channel block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#notification_channel TfStreamProcessor#notification_channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#notification_channel AwsStreamProcessor#notification_channel}
   */
-  readonly notificationChannel?: TfStreamProcessor.NotificationChannelProperty[] | cdktn.IResolvable;
+  readonly notificationChannel?: AwsStreamProcessor.NotificationChannelProperty[] | cdktn.IResolvable;
   /**
   * output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#output TfStreamProcessor#output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#output AwsStreamProcessor#output}
   */
-  readonly output?: TfStreamProcessor.OutputProperty[] | cdktn.IResolvable;
+  readonly output?: AwsStreamProcessor.OutputProperty[] | cdktn.IResolvable;
   /**
   * regions_of_interest block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#regions_of_interest TfStreamProcessor#regions_of_interest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#regions_of_interest AwsStreamProcessor#regions_of_interest}
   */
-  readonly regionsOfInterest?: TfStreamProcessor.RegionsOfInterestProperty[] | cdktn.IResolvable;
+  readonly regionsOfInterest?: AwsStreamProcessor.RegionsOfInterestProperty[] | cdktn.IResolvable;
   /**
   * settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#settings TfStreamProcessor#settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#settings AwsStreamProcessor#settings}
   */
-  readonly settings?: TfStreamProcessor.SettingsProperty[] | cdktn.IResolvable;
+  readonly settings?: AwsStreamProcessor.SettingsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#timeouts TfStreamProcessor#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#timeouts AwsStreamProcessor#timeouts}
   */
-  readonly timeouts?: TfStreamProcessor.TimeoutsProperty;
+  readonly timeouts?: AwsStreamProcessor.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor aws_rekognition_stream_processor}
 */
-export class TfStreamProcessor extends cdktn.TerraformResource {
+export class AwsStreamProcessor extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -92,11 +92,11 @@ export class TfStreamProcessor extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfStreamProcessor resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsStreamProcessor resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfStreamProcessor to import
-  * @param importFromId The id of the existing TfStreamProcessor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfStreamProcessor to import is found
+  * @param importToId The construct id used in the generated config for the AwsStreamProcessor to import
+  * @param importFromId The id of the existing AwsStreamProcessor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStreamProcessor to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rekognition_stream_processor", importId: importFromId, provider });
@@ -111,9 +111,9 @@ export class TfStreamProcessor extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfStreamProcessorConfig
+  * @param options AwsStreamProcessorConfig
   */
-  public constructor(scope: Construct, id: string, config: TfStreamProcessorConfig) {
+  public constructor(scope: Construct, id: string, config: AwsStreamProcessorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rekognition_stream_processor',
       terraformGeneratorMetadata: {
@@ -238,11 +238,11 @@ export class TfStreamProcessor extends cdktn.TerraformResource {
   }
 
   // data_sharing_preference - computed: false, optional: true, required: false
-  private _dataSharingPreference = new TfStreamProcessor.DataSharingPreferencePropertyList(this, "data_sharing_preference", false);
+  private _dataSharingPreference = new AwsStreamProcessor.DataSharingPreferencePropertyList(this, "data_sharing_preference", false);
   public get dataSharingPreference() {
     return this._dataSharingPreference;
   }
-  public putDataSharingPreference(value: TfStreamProcessor.DataSharingPreferenceProperty[] | cdktn.IResolvable) {
+  public putDataSharingPreference(value: AwsStreamProcessor.DataSharingPreferenceProperty[] | cdktn.IResolvable) {
     this._dataSharingPreference.internalValue = value;
   }
   public resetDataSharingPreference() {
@@ -254,11 +254,11 @@ export class TfStreamProcessor extends cdktn.TerraformResource {
   }
 
   // input - computed: false, optional: true, required: false
-  private _input = new TfStreamProcessor.InputPropertyList(this, "input", false);
+  private _input = new AwsStreamProcessor.InputPropertyList(this, "input", false);
   public get input() {
     return this._input;
   }
-  public putInput(value: TfStreamProcessor.InputProperty[] | cdktn.IResolvable) {
+  public putInput(value: AwsStreamProcessor.InputProperty[] | cdktn.IResolvable) {
     this._input.internalValue = value;
   }
   public resetInput() {
@@ -270,11 +270,11 @@ export class TfStreamProcessor extends cdktn.TerraformResource {
   }
 
   // notification_channel - computed: false, optional: true, required: false
-  private _notificationChannel = new TfStreamProcessor.NotificationChannelPropertyList(this, "notification_channel", false);
+  private _notificationChannel = new AwsStreamProcessor.NotificationChannelPropertyList(this, "notification_channel", false);
   public get notificationChannel() {
     return this._notificationChannel;
   }
-  public putNotificationChannel(value: TfStreamProcessor.NotificationChannelProperty[] | cdktn.IResolvable) {
+  public putNotificationChannel(value: AwsStreamProcessor.NotificationChannelProperty[] | cdktn.IResolvable) {
     this._notificationChannel.internalValue = value;
   }
   public resetNotificationChannel() {
@@ -286,11 +286,11 @@ export class TfStreamProcessor extends cdktn.TerraformResource {
   }
 
   // output - computed: false, optional: true, required: false
-  private _output = new TfStreamProcessor.OutputPropertyList(this, "output", false);
+  private _output = new AwsStreamProcessor.OutputPropertyList(this, "output", false);
   public get output() {
     return this._output;
   }
-  public putOutput(value: TfStreamProcessor.OutputProperty[] | cdktn.IResolvable) {
+  public putOutput(value: AwsStreamProcessor.OutputProperty[] | cdktn.IResolvable) {
     this._output.internalValue = value;
   }
   public resetOutput() {
@@ -302,11 +302,11 @@ export class TfStreamProcessor extends cdktn.TerraformResource {
   }
 
   // regions_of_interest - computed: false, optional: true, required: false
-  private _regionsOfInterest = new TfStreamProcessor.RegionsOfInterestPropertyList(this, "regions_of_interest", false);
+  private _regionsOfInterest = new AwsStreamProcessor.RegionsOfInterestPropertyList(this, "regions_of_interest", false);
   public get regionsOfInterest() {
     return this._regionsOfInterest;
   }
-  public putRegionsOfInterest(value: TfStreamProcessor.RegionsOfInterestProperty[] | cdktn.IResolvable) {
+  public putRegionsOfInterest(value: AwsStreamProcessor.RegionsOfInterestProperty[] | cdktn.IResolvable) {
     this._regionsOfInterest.internalValue = value;
   }
   public resetRegionsOfInterest() {
@@ -318,11 +318,11 @@ export class TfStreamProcessor extends cdktn.TerraformResource {
   }
 
   // settings - computed: false, optional: true, required: false
-  private _settings = new TfStreamProcessor.SettingsPropertyList(this, "settings", false);
+  private _settings = new AwsStreamProcessor.SettingsPropertyList(this, "settings", false);
   public get settings() {
     return this._settings;
   }
-  public putSettings(value: TfStreamProcessor.SettingsProperty[] | cdktn.IResolvable) {
+  public putSettings(value: AwsStreamProcessor.SettingsProperty[] | cdktn.IResolvable) {
     this._settings.internalValue = value;
   }
   public resetSettings() {
@@ -334,11 +334,11 @@ export class TfStreamProcessor extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfStreamProcessor.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsStreamProcessor.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfStreamProcessor.TimeoutsProperty) {
+  public putTimeouts(value: AwsStreamProcessor.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -360,13 +360,13 @@ export class TfStreamProcessor extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      data_sharing_preference: cdktn.listMapper(tfStreamProcessorDataSharingPreferencePropertyToTerraform, true)(this._dataSharingPreference.internalValue),
-      input: cdktn.listMapper(tfStreamProcessorInputPropertyToTerraform, true)(this._input.internalValue),
-      notification_channel: cdktn.listMapper(tfStreamProcessorNotificationChannelPropertyToTerraform, true)(this._notificationChannel.internalValue),
-      output: cdktn.listMapper(tfStreamProcessorOutputPropertyToTerraform, true)(this._output.internalValue),
-      regions_of_interest: cdktn.listMapper(tfStreamProcessorRegionsOfInterestPropertyToTerraform, true)(this._regionsOfInterest.internalValue),
-      settings: cdktn.listMapper(tfStreamProcessorSettingsPropertyToTerraform, true)(this._settings.internalValue),
-      timeouts: tfStreamProcessorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      data_sharing_preference: cdktn.listMapper(awsStreamProcessorDataSharingPreferencePropertyToTerraform, true)(this._dataSharingPreference.internalValue),
+      input: cdktn.listMapper(awsStreamProcessorInputPropertyToTerraform, true)(this._input.internalValue),
+      notification_channel: cdktn.listMapper(awsStreamProcessorNotificationChannelPropertyToTerraform, true)(this._notificationChannel.internalValue),
+      output: cdktn.listMapper(awsStreamProcessorOutputPropertyToTerraform, true)(this._output.internalValue),
+      regions_of_interest: cdktn.listMapper(awsStreamProcessorRegionsOfInterestPropertyToTerraform, true)(this._regionsOfInterest.internalValue),
+      settings: cdktn.listMapper(awsStreamProcessorSettingsPropertyToTerraform, true)(this._settings.internalValue),
+      timeouts: awsStreamProcessorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -403,46 +403,46 @@ export class TfStreamProcessor extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       data_sharing_preference: {
-        value: cdktn.listMapperHcl(tfStreamProcessorDataSharingPreferencePropertyToHclTerraform, true)(this._dataSharingPreference.internalValue),
+        value: cdktn.listMapperHcl(awsStreamProcessorDataSharingPreferencePropertyToHclTerraform, true)(this._dataSharingPreference.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStreamProcessor.DataSharingPreferencePropertyList",
+        storageClassType: "AwsStreamProcessor.DataSharingPreferencePropertyList",
       },
       input: {
-        value: cdktn.listMapperHcl(tfStreamProcessorInputPropertyToHclTerraform, true)(this._input.internalValue),
+        value: cdktn.listMapperHcl(awsStreamProcessorInputPropertyToHclTerraform, true)(this._input.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStreamProcessor.InputPropertyList",
+        storageClassType: "AwsStreamProcessor.InputPropertyList",
       },
       notification_channel: {
-        value: cdktn.listMapperHcl(tfStreamProcessorNotificationChannelPropertyToHclTerraform, true)(this._notificationChannel.internalValue),
+        value: cdktn.listMapperHcl(awsStreamProcessorNotificationChannelPropertyToHclTerraform, true)(this._notificationChannel.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStreamProcessor.NotificationChannelPropertyList",
+        storageClassType: "AwsStreamProcessor.NotificationChannelPropertyList",
       },
       output: {
-        value: cdktn.listMapperHcl(tfStreamProcessorOutputPropertyToHclTerraform, true)(this._output.internalValue),
+        value: cdktn.listMapperHcl(awsStreamProcessorOutputPropertyToHclTerraform, true)(this._output.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStreamProcessor.OutputPropertyList",
+        storageClassType: "AwsStreamProcessor.OutputPropertyList",
       },
       regions_of_interest: {
-        value: cdktn.listMapperHcl(tfStreamProcessorRegionsOfInterestPropertyToHclTerraform, true)(this._regionsOfInterest.internalValue),
+        value: cdktn.listMapperHcl(awsStreamProcessorRegionsOfInterestPropertyToHclTerraform, true)(this._regionsOfInterest.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStreamProcessor.RegionsOfInterestPropertyList",
+        storageClassType: "AwsStreamProcessor.RegionsOfInterestPropertyList",
       },
       settings: {
-        value: cdktn.listMapperHcl(tfStreamProcessorSettingsPropertyToHclTerraform, true)(this._settings.internalValue),
+        value: cdktn.listMapperHcl(awsStreamProcessorSettingsPropertyToHclTerraform, true)(this._settings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStreamProcessor.SettingsPropertyList",
+        storageClassType: "AwsStreamProcessor.SettingsPropertyList",
       },
       timeouts: {
-        value: tfStreamProcessorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsStreamProcessorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfStreamProcessor.TimeoutsProperty",
+        storageClassType: "AwsStreamProcessor.TimeoutsProperty",
       },
     };
 
@@ -451,7 +451,7 @@ export class TfStreamProcessor extends cdktn.TerraformResource {
   }
 }
 
-export function tfStreamProcessorDataSharingPreferencePropertyToTerraform(struct?: TfStreamProcessor.DataSharingPreferenceProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorDataSharingPreferencePropertyToTerraform(struct?: AwsStreamProcessor.DataSharingPreferenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -462,7 +462,7 @@ export function tfStreamProcessorDataSharingPreferencePropertyToTerraform(struct
 }
 
 
-export function tfStreamProcessorDataSharingPreferencePropertyToHclTerraform(struct?: TfStreamProcessor.DataSharingPreferenceProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorDataSharingPreferencePropertyToHclTerraform(struct?: AwsStreamProcessor.DataSharingPreferenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function tfStreamProcessorDataSharingPreferencePropertyToHclTerraform(str
 }
 
 
-export function tfStreamProcessorKinesisVideoStreamPropertyToTerraform(struct?: TfStreamProcessor.KinesisVideoStreamProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorKinesisVideoStreamPropertyToTerraform(struct?: AwsStreamProcessor.KinesisVideoStreamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -492,7 +492,7 @@ export function tfStreamProcessorKinesisVideoStreamPropertyToTerraform(struct?: 
 }
 
 
-export function tfStreamProcessorKinesisVideoStreamPropertyToHclTerraform(struct?: TfStreamProcessor.KinesisVideoStreamProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorKinesisVideoStreamPropertyToHclTerraform(struct?: AwsStreamProcessor.KinesisVideoStreamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -511,25 +511,25 @@ export function tfStreamProcessorKinesisVideoStreamPropertyToHclTerraform(struct
 }
 
 
-export function tfStreamProcessorInputPropertyToTerraform(struct?: TfStreamProcessor.InputProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorInputPropertyToTerraform(struct?: AwsStreamProcessor.InputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    kinesis_video_stream: cdktn.listMapper(tfStreamProcessorKinesisVideoStreamPropertyToTerraform, true)(struct!.kinesisVideoStream),
+    kinesis_video_stream: cdktn.listMapper(awsStreamProcessorKinesisVideoStreamPropertyToTerraform, true)(struct!.kinesisVideoStream),
   }
 }
 
 
-export function tfStreamProcessorInputPropertyToHclTerraform(struct?: TfStreamProcessor.InputProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorInputPropertyToHclTerraform(struct?: AwsStreamProcessor.InputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     kinesis_video_stream: {
-      value: cdktn.listMapperHcl(tfStreamProcessorKinesisVideoStreamPropertyToHclTerraform, true)(struct!.kinesisVideoStream),
+      value: cdktn.listMapperHcl(awsStreamProcessorKinesisVideoStreamPropertyToHclTerraform, true)(struct!.kinesisVideoStream),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisVideoStreamPropertyList",
@@ -541,7 +541,7 @@ export function tfStreamProcessorInputPropertyToHclTerraform(struct?: TfStreamPr
 }
 
 
-export function tfStreamProcessorNotificationChannelPropertyToTerraform(struct?: TfStreamProcessor.NotificationChannelProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorNotificationChannelPropertyToTerraform(struct?: AwsStreamProcessor.NotificationChannelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -552,7 +552,7 @@ export function tfStreamProcessorNotificationChannelPropertyToTerraform(struct?:
 }
 
 
-export function tfStreamProcessorNotificationChannelPropertyToHclTerraform(struct?: TfStreamProcessor.NotificationChannelProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorNotificationChannelPropertyToHclTerraform(struct?: AwsStreamProcessor.NotificationChannelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -571,7 +571,7 @@ export function tfStreamProcessorNotificationChannelPropertyToHclTerraform(struc
 }
 
 
-export function tfStreamProcessorKinesisDataStreamPropertyToTerraform(struct?: TfStreamProcessor.KinesisDataStreamProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorKinesisDataStreamPropertyToTerraform(struct?: AwsStreamProcessor.KinesisDataStreamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,7 +582,7 @@ export function tfStreamProcessorKinesisDataStreamPropertyToTerraform(struct?: T
 }
 
 
-export function tfStreamProcessorKinesisDataStreamPropertyToHclTerraform(struct?: TfStreamProcessor.KinesisDataStreamProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorKinesisDataStreamPropertyToHclTerraform(struct?: AwsStreamProcessor.KinesisDataStreamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -601,7 +601,7 @@ export function tfStreamProcessorKinesisDataStreamPropertyToHclTerraform(struct?
 }
 
 
-export function tfStreamProcessorS3DestinationPropertyToTerraform(struct?: TfStreamProcessor.S3DestinationProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorS3DestinationPropertyToTerraform(struct?: AwsStreamProcessor.S3DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -613,7 +613,7 @@ export function tfStreamProcessorS3DestinationPropertyToTerraform(struct?: TfStr
 }
 
 
-export function tfStreamProcessorS3DestinationPropertyToHclTerraform(struct?: TfStreamProcessor.S3DestinationProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorS3DestinationPropertyToHclTerraform(struct?: AwsStreamProcessor.S3DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -638,32 +638,32 @@ export function tfStreamProcessorS3DestinationPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfStreamProcessorOutputPropertyToTerraform(struct?: TfStreamProcessor.OutputProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorOutputPropertyToTerraform(struct?: AwsStreamProcessor.OutputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    kinesis_data_stream: cdktn.listMapper(tfStreamProcessorKinesisDataStreamPropertyToTerraform, true)(struct!.kinesisDataStream),
-    s3_destination: cdktn.listMapper(tfStreamProcessorS3DestinationPropertyToTerraform, true)(struct!.s3Destination),
+    kinesis_data_stream: cdktn.listMapper(awsStreamProcessorKinesisDataStreamPropertyToTerraform, true)(struct!.kinesisDataStream),
+    s3_destination: cdktn.listMapper(awsStreamProcessorS3DestinationPropertyToTerraform, true)(struct!.s3Destination),
   }
 }
 
 
-export function tfStreamProcessorOutputPropertyToHclTerraform(struct?: TfStreamProcessor.OutputProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorOutputPropertyToHclTerraform(struct?: AwsStreamProcessor.OutputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     kinesis_data_stream: {
-      value: cdktn.listMapperHcl(tfStreamProcessorKinesisDataStreamPropertyToHclTerraform, true)(struct!.kinesisDataStream),
+      value: cdktn.listMapperHcl(awsStreamProcessorKinesisDataStreamPropertyToHclTerraform, true)(struct!.kinesisDataStream),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisDataStreamPropertyList",
     },
     s3_destination: {
-      value: cdktn.listMapperHcl(tfStreamProcessorS3DestinationPropertyToHclTerraform, true)(struct!.s3Destination),
+      value: cdktn.listMapperHcl(awsStreamProcessorS3DestinationPropertyToHclTerraform, true)(struct!.s3Destination),
       isBlock: true,
       type: "list",
       storageClassType: "S3DestinationPropertyList",
@@ -675,7 +675,7 @@ export function tfStreamProcessorOutputPropertyToHclTerraform(struct?: TfStreamP
 }
 
 
-export function tfStreamProcessorBoundingBoxPropertyToTerraform(struct?: TfStreamProcessor.BoundingBoxProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorBoundingBoxPropertyToTerraform(struct?: AwsStreamProcessor.BoundingBoxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -689,7 +689,7 @@ export function tfStreamProcessorBoundingBoxPropertyToTerraform(struct?: TfStrea
 }
 
 
-export function tfStreamProcessorBoundingBoxPropertyToHclTerraform(struct?: TfStreamProcessor.BoundingBoxProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorBoundingBoxPropertyToHclTerraform(struct?: AwsStreamProcessor.BoundingBoxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -726,7 +726,7 @@ export function tfStreamProcessorBoundingBoxPropertyToHclTerraform(struct?: TfSt
 }
 
 
-export function tfStreamProcessorPolygonPropertyToTerraform(struct?: TfStreamProcessor.PolygonProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorPolygonPropertyToTerraform(struct?: AwsStreamProcessor.PolygonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -738,7 +738,7 @@ export function tfStreamProcessorPolygonPropertyToTerraform(struct?: TfStreamPro
 }
 
 
-export function tfStreamProcessorPolygonPropertyToHclTerraform(struct?: TfStreamProcessor.PolygonProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorPolygonPropertyToHclTerraform(struct?: AwsStreamProcessor.PolygonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -763,32 +763,32 @@ export function tfStreamProcessorPolygonPropertyToHclTerraform(struct?: TfStream
 }
 
 
-export function tfStreamProcessorRegionsOfInterestPropertyToTerraform(struct?: TfStreamProcessor.RegionsOfInterestProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorRegionsOfInterestPropertyToTerraform(struct?: AwsStreamProcessor.RegionsOfInterestProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    bounding_box: cdktn.listMapper(tfStreamProcessorBoundingBoxPropertyToTerraform, true)(struct!.boundingBox),
-    polygon: cdktn.listMapper(tfStreamProcessorPolygonPropertyToTerraform, true)(struct!.polygon),
+    bounding_box: cdktn.listMapper(awsStreamProcessorBoundingBoxPropertyToTerraform, true)(struct!.boundingBox),
+    polygon: cdktn.listMapper(awsStreamProcessorPolygonPropertyToTerraform, true)(struct!.polygon),
   }
 }
 
 
-export function tfStreamProcessorRegionsOfInterestPropertyToHclTerraform(struct?: TfStreamProcessor.RegionsOfInterestProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorRegionsOfInterestPropertyToHclTerraform(struct?: AwsStreamProcessor.RegionsOfInterestProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     bounding_box: {
-      value: cdktn.listMapperHcl(tfStreamProcessorBoundingBoxPropertyToHclTerraform, true)(struct!.boundingBox),
+      value: cdktn.listMapperHcl(awsStreamProcessorBoundingBoxPropertyToHclTerraform, true)(struct!.boundingBox),
       isBlock: true,
       type: "list",
       storageClassType: "BoundingBoxPropertyList",
     },
     polygon: {
-      value: cdktn.listMapperHcl(tfStreamProcessorPolygonPropertyToHclTerraform, true)(struct!.polygon),
+      value: cdktn.listMapperHcl(awsStreamProcessorPolygonPropertyToHclTerraform, true)(struct!.polygon),
       isBlock: true,
       type: "list",
       storageClassType: "PolygonPropertyList",
@@ -800,7 +800,7 @@ export function tfStreamProcessorRegionsOfInterestPropertyToHclTerraform(struct?
 }
 
 
-export function tfStreamProcessorConnectedHomePropertyToTerraform(struct?: TfStreamProcessor.ConnectedHomeProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorConnectedHomePropertyToTerraform(struct?: AwsStreamProcessor.ConnectedHomeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -812,7 +812,7 @@ export function tfStreamProcessorConnectedHomePropertyToTerraform(struct?: TfStr
 }
 
 
-export function tfStreamProcessorConnectedHomePropertyToHclTerraform(struct?: TfStreamProcessor.ConnectedHomeProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorConnectedHomePropertyToHclTerraform(struct?: AwsStreamProcessor.ConnectedHomeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -837,7 +837,7 @@ export function tfStreamProcessorConnectedHomePropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfStreamProcessorFaceSearchPropertyToTerraform(struct?: TfStreamProcessor.FaceSearchProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorFaceSearchPropertyToTerraform(struct?: AwsStreamProcessor.FaceSearchProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -849,7 +849,7 @@ export function tfStreamProcessorFaceSearchPropertyToTerraform(struct?: TfStream
 }
 
 
-export function tfStreamProcessorFaceSearchPropertyToHclTerraform(struct?: TfStreamProcessor.FaceSearchProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorFaceSearchPropertyToHclTerraform(struct?: AwsStreamProcessor.FaceSearchProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -874,32 +874,32 @@ export function tfStreamProcessorFaceSearchPropertyToHclTerraform(struct?: TfStr
 }
 
 
-export function tfStreamProcessorSettingsPropertyToTerraform(struct?: TfStreamProcessor.SettingsProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorSettingsPropertyToTerraform(struct?: AwsStreamProcessor.SettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    connected_home: cdktn.listMapper(tfStreamProcessorConnectedHomePropertyToTerraform, true)(struct!.connectedHome),
-    face_search: cdktn.listMapper(tfStreamProcessorFaceSearchPropertyToTerraform, true)(struct!.faceSearch),
+    connected_home: cdktn.listMapper(awsStreamProcessorConnectedHomePropertyToTerraform, true)(struct!.connectedHome),
+    face_search: cdktn.listMapper(awsStreamProcessorFaceSearchPropertyToTerraform, true)(struct!.faceSearch),
   }
 }
 
 
-export function tfStreamProcessorSettingsPropertyToHclTerraform(struct?: TfStreamProcessor.SettingsProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorSettingsPropertyToHclTerraform(struct?: AwsStreamProcessor.SettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     connected_home: {
-      value: cdktn.listMapperHcl(tfStreamProcessorConnectedHomePropertyToHclTerraform, true)(struct!.connectedHome),
+      value: cdktn.listMapperHcl(awsStreamProcessorConnectedHomePropertyToHclTerraform, true)(struct!.connectedHome),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectedHomePropertyList",
     },
     face_search: {
-      value: cdktn.listMapperHcl(tfStreamProcessorFaceSearchPropertyToHclTerraform, true)(struct!.faceSearch),
+      value: cdktn.listMapperHcl(awsStreamProcessorFaceSearchPropertyToHclTerraform, true)(struct!.faceSearch),
       isBlock: true,
       type: "list",
       storageClassType: "FaceSearchPropertyList",
@@ -911,7 +911,7 @@ export function tfStreamProcessorSettingsPropertyToHclTerraform(struct?: TfStrea
 }
 
 
-export function tfStreamProcessorTimeoutsPropertyToTerraform(struct?: TfStreamProcessor.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorTimeoutsPropertyToTerraform(struct?: AwsStreamProcessor.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -924,7 +924,7 @@ export function tfStreamProcessorTimeoutsPropertyToTerraform(struct?: TfStreamPr
 }
 
 
-export function tfStreamProcessorTimeoutsPropertyToHclTerraform(struct?: TfStreamProcessor.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsStreamProcessorTimeoutsPropertyToHclTerraform(struct?: AwsStreamProcessor.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -955,12 +955,12 @@ export function tfStreamProcessorTimeoutsPropertyToHclTerraform(struct?: TfStrea
 }
 
 
-export namespace TfStreamProcessor {
+export namespace AwsStreamProcessor {
 export interface DataSharingPreferenceProperty {
   /**
   * Do you want to share data with Rekognition to improve model performance.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#opt_in TfStreamProcessor#opt_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#opt_in AwsStreamProcessor#opt_in}
   */
   readonly optIn: boolean | cdktn.IResolvable;
 }
@@ -1045,7 +1045,7 @@ export interface KinesisVideoStreamProperty {
   /**
   * ARN of the Kinesis video stream stream that streams the source video.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#arn TfStreamProcessor#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#arn AwsStreamProcessor#arn}
   */
   readonly arn: string;
 }
@@ -1130,7 +1130,7 @@ export interface InputProperty {
   /**
   * kinesis_video_stream block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#kinesis_video_stream TfStreamProcessor#kinesis_video_stream}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#kinesis_video_stream AwsStreamProcessor#kinesis_video_stream}
   */
   readonly kinesisVideoStream?: KinesisVideoStreamProperty[] | cdktn.IResolvable;
 }
@@ -1218,7 +1218,7 @@ export interface NotificationChannelProperty {
   /**
   * The Amazon Resource Number (ARN) of the Amazon Amazon Simple Notification Service topic to which Amazon Rekognition posts the completion status.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#sns_topic_arn TfStreamProcessor#sns_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#sns_topic_arn AwsStreamProcessor#sns_topic_arn}
   */
   readonly snsTopicArn?: string;
 }
@@ -1306,7 +1306,7 @@ export interface KinesisDataStreamProperty {
   /**
   * ARN of the output Amazon Kinesis Data Streams stream.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#arn TfStreamProcessor#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#arn AwsStreamProcessor#arn}
   */
   readonly arn?: string;
 }
@@ -1394,13 +1394,13 @@ export interface S3DestinationProperty {
   /**
   * The name of the Amazon S3 bucket you want to associate with the streaming video project.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#bucket TfStreamProcessor#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#bucket AwsStreamProcessor#bucket}
   */
   readonly bucket?: string;
   /**
   * The prefix value of the location within the bucket that you want the information to be published to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#key_prefix TfStreamProcessor#key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#key_prefix AwsStreamProcessor#key_prefix}
   */
   readonly keyPrefix?: string;
 }
@@ -1510,13 +1510,13 @@ export interface OutputProperty {
   /**
   * kinesis_data_stream block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#kinesis_data_stream TfStreamProcessor#kinesis_data_stream}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#kinesis_data_stream AwsStreamProcessor#kinesis_data_stream}
   */
   readonly kinesisDataStream?: KinesisDataStreamProperty[] | cdktn.IResolvable;
   /**
   * s3_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#s3_destination TfStreamProcessor#s3_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#s3_destination AwsStreamProcessor#s3_destination}
   */
   readonly s3Destination?: S3DestinationProperty[] | cdktn.IResolvable;
 }
@@ -1626,25 +1626,25 @@ export interface BoundingBoxProperty {
   /**
   * Height of the bounding box as a ratio of the overall image height.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#height TfStreamProcessor#height}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#height AwsStreamProcessor#height}
   */
   readonly height?: number;
   /**
   * Left coordinate of the bounding box as a ratio of overall image width.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#left TfStreamProcessor#left}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#left AwsStreamProcessor#left}
   */
   readonly left?: number;
   /**
   * Top coordinate of the bounding box as a ratio of overall image height.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#top TfStreamProcessor#top}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#top AwsStreamProcessor#top}
   */
   readonly top?: number;
   /**
   * Width of the bounding box as a ratio of the overall image width.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#width TfStreamProcessor#width}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#width AwsStreamProcessor#width}
   */
   readonly width?: number;
 }
@@ -1798,13 +1798,13 @@ export interface PolygonProperty {
   /**
   * The value of the X coordinate for a point on a Polygon.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#x TfStreamProcessor#x}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#x AwsStreamProcessor#x}
   */
   readonly x?: number;
   /**
   * The value of the Y coordinate for a point on a Polygon.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#y TfStreamProcessor#y}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#y AwsStreamProcessor#y}
   */
   readonly y?: number;
 }
@@ -1914,13 +1914,13 @@ export interface RegionsOfInterestProperty {
   /**
   * bounding_box block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#bounding_box TfStreamProcessor#bounding_box}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#bounding_box AwsStreamProcessor#bounding_box}
   */
   readonly boundingBox?: BoundingBoxProperty[] | cdktn.IResolvable;
   /**
   * polygon block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#polygon TfStreamProcessor#polygon}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#polygon AwsStreamProcessor#polygon}
   */
   readonly polygon?: PolygonProperty[] | cdktn.IResolvable;
 }
@@ -2030,13 +2030,13 @@ export interface ConnectedHomeProperty {
   /**
   * Specifies what you want to detect in the video, such as people, packages, or pets.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#labels TfStreamProcessor#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#labels AwsStreamProcessor#labels}
   */
   readonly labels?: string[];
   /**
   * The minimum confidence required to label an object in the video.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#min_confidence TfStreamProcessor#min_confidence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#min_confidence AwsStreamProcessor#min_confidence}
   */
   readonly minConfidence?: number;
 }
@@ -2146,13 +2146,13 @@ export interface FaceSearchProperty {
   /**
   * The ID of a collection that contains faces that you want to search for.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#collection_id TfStreamProcessor#collection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#collection_id AwsStreamProcessor#collection_id}
   */
   readonly collectionId: string;
   /**
   * Minimum face match confidence score that must be met to return a result for a recognized face.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#face_match_threshold TfStreamProcessor#face_match_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#face_match_threshold AwsStreamProcessor#face_match_threshold}
   */
   readonly faceMatchThreshold?: number;
 }
@@ -2259,13 +2259,13 @@ export interface SettingsProperty {
   /**
   * connected_home block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#connected_home TfStreamProcessor#connected_home}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#connected_home AwsStreamProcessor#connected_home}
   */
   readonly connectedHome?: ConnectedHomeProperty[] | cdktn.IResolvable;
   /**
   * face_search block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#face_search TfStreamProcessor#face_search}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#face_search AwsStreamProcessor#face_search}
   */
   readonly faceSearch?: FaceSearchProperty[] | cdktn.IResolvable;
 }
@@ -2375,19 +2375,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#create TfStreamProcessor#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#create AwsStreamProcessor#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#delete TfStreamProcessor#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#delete AwsStreamProcessor#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#update TfStreamProcessor#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rekognition_stream_processor#update AwsStreamProcessor#update}
   */
   readonly update?: string;
 }

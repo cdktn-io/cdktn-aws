@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSchedulingPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSchedulingPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#id TfSchedulingPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#id AwsSchedulingPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#name TfSchedulingPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#name AwsSchedulingPolicy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#region TfSchedulingPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#region AwsSchedulingPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#tags TfSchedulingPolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#tags AwsSchedulingPolicy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#tags_all TfSchedulingPolicy#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#tags_all AwsSchedulingPolicy#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * fair_share_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#fair_share_policy TfSchedulingPolicy#fair_share_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#fair_share_policy AwsSchedulingPolicy#fair_share_policy}
   */
-  readonly fairSharePolicy?: TfSchedulingPolicy.FairSharePolicyProperty;
+  readonly fairSharePolicy?: AwsSchedulingPolicy.FairSharePolicyProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy aws_batch_scheduling_policy}
 */
-export class TfSchedulingPolicy extends cdktn.TerraformResource {
+export class AwsSchedulingPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfSchedulingPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSchedulingPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSchedulingPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSchedulingPolicy to import
-  * @param importFromId The id of the existing TfSchedulingPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSchedulingPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsSchedulingPolicy to import
+  * @param importFromId The id of the existing AwsSchedulingPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSchedulingPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_batch_scheduling_policy", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfSchedulingPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSchedulingPolicyConfig
+  * @param options AwsSchedulingPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSchedulingPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSchedulingPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_batch_scheduling_policy',
       terraformGeneratorMetadata: {
@@ -185,11 +185,11 @@ export class TfSchedulingPolicy extends cdktn.TerraformResource {
   }
 
   // fair_share_policy - computed: false, optional: true, required: false
-  private _fairSharePolicy = new TfSchedulingPolicy.FairSharePolicyPropertyOutputReference(this, "fair_share_policy");
+  private _fairSharePolicy = new AwsSchedulingPolicy.FairSharePolicyPropertyOutputReference(this, "fair_share_policy");
   public get fairSharePolicy() {
     return this._fairSharePolicy;
   }
-  public putFairSharePolicy(value: TfSchedulingPolicy.FairSharePolicyProperty) {
+  public putFairSharePolicy(value: AwsSchedulingPolicy.FairSharePolicyProperty) {
     this._fairSharePolicy.internalValue = value;
   }
   public resetFairSharePolicy() {
@@ -211,7 +211,7 @@ export class TfSchedulingPolicy extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      fair_share_policy: tfSchedulingPolicyFairSharePolicyPropertyToTerraform(this._fairSharePolicy.internalValue),
+      fair_share_policy: awsSchedulingPolicyFairSharePolicyPropertyToTerraform(this._fairSharePolicy.internalValue),
     };
   }
 
@@ -248,10 +248,10 @@ export class TfSchedulingPolicy extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       fair_share_policy: {
-        value: tfSchedulingPolicyFairSharePolicyPropertyToHclTerraform(this._fairSharePolicy.internalValue),
+        value: awsSchedulingPolicyFairSharePolicyPropertyToHclTerraform(this._fairSharePolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSchedulingPolicy.FairSharePolicyPropertyList",
+        storageClassType: "AwsSchedulingPolicy.FairSharePolicyPropertyList",
       },
     };
 
@@ -260,7 +260,7 @@ export class TfSchedulingPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfSchedulingPolicyShareDistributionPropertyToTerraform(struct?: TfSchedulingPolicy.ShareDistributionProperty | cdktn.IResolvable): any {
+export function awsSchedulingPolicyShareDistributionPropertyToTerraform(struct?: AwsSchedulingPolicy.ShareDistributionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,7 +272,7 @@ export function tfSchedulingPolicyShareDistributionPropertyToTerraform(struct?: 
 }
 
 
-export function tfSchedulingPolicyShareDistributionPropertyToHclTerraform(struct?: TfSchedulingPolicy.ShareDistributionProperty | cdktn.IResolvable): any {
+export function awsSchedulingPolicyShareDistributionPropertyToHclTerraform(struct?: AwsSchedulingPolicy.ShareDistributionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function tfSchedulingPolicyShareDistributionPropertyToHclTerraform(struct
 }
 
 
-export function tfSchedulingPolicyFairSharePolicyPropertyToTerraform(struct?: TfSchedulingPolicy.FairSharePolicyPropertyOutputReference | TfSchedulingPolicy.FairSharePolicyProperty): any {
+export function awsSchedulingPolicyFairSharePolicyPropertyToTerraform(struct?: AwsSchedulingPolicy.FairSharePolicyPropertyOutputReference | AwsSchedulingPolicy.FairSharePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,12 +305,12 @@ export function tfSchedulingPolicyFairSharePolicyPropertyToTerraform(struct?: Tf
   return {
     compute_reservation: cdktn.numberToTerraform(struct!.computeReservation),
     share_decay_seconds: cdktn.numberToTerraform(struct!.shareDecaySeconds),
-    share_distribution: cdktn.listMapper(tfSchedulingPolicyShareDistributionPropertyToTerraform, true)(struct!.shareDistribution),
+    share_distribution: cdktn.listMapper(awsSchedulingPolicyShareDistributionPropertyToTerraform, true)(struct!.shareDistribution),
   }
 }
 
 
-export function tfSchedulingPolicyFairSharePolicyPropertyToHclTerraform(struct?: TfSchedulingPolicy.FairSharePolicyPropertyOutputReference | TfSchedulingPolicy.FairSharePolicyProperty): any {
+export function awsSchedulingPolicyFairSharePolicyPropertyToHclTerraform(struct?: AwsSchedulingPolicy.FairSharePolicyPropertyOutputReference | AwsSchedulingPolicy.FairSharePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function tfSchedulingPolicyFairSharePolicyPropertyToHclTerraform(struct?:
       storageClassType: "number",
     },
     share_distribution: {
-      value: cdktn.listMapperHcl(tfSchedulingPolicyShareDistributionPropertyToHclTerraform, true)(struct!.shareDistribution),
+      value: cdktn.listMapperHcl(awsSchedulingPolicyShareDistributionPropertyToHclTerraform, true)(struct!.shareDistribution),
       isBlock: true,
       type: "set",
       storageClassType: "ShareDistributionPropertyList",
@@ -341,14 +341,14 @@ export function tfSchedulingPolicyFairSharePolicyPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfSchedulingPolicy {
+export namespace AwsSchedulingPolicy {
 export interface ShareDistributionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#share_identifier TfSchedulingPolicy#share_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#share_identifier AwsSchedulingPolicy#share_identifier}
   */
   readonly shareIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#weight_factor TfSchedulingPolicy#weight_factor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#weight_factor AwsSchedulingPolicy#weight_factor}
   */
   readonly weightFactor?: number;
 }
@@ -453,17 +453,17 @@ export class ShareDistributionPropertyList extends cdktn.ComplexList {
 }
 export interface FairSharePolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#compute_reservation TfSchedulingPolicy#compute_reservation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#compute_reservation AwsSchedulingPolicy#compute_reservation}
   */
   readonly computeReservation?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#share_decay_seconds TfSchedulingPolicy#share_decay_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#share_decay_seconds AwsSchedulingPolicy#share_decay_seconds}
   */
   readonly shareDecaySeconds?: number;
   /**
   * share_distribution block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#share_distribution TfSchedulingPolicy#share_distribution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/batch_scheduling_policy#share_distribution AwsSchedulingPolicy#share_distribution}
   */
   readonly shareDistribution?: ShareDistributionProperty[] | cdktn.IResolvable;
 }

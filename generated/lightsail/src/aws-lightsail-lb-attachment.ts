@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLbAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLbAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_attachment#id TfLbAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_attachment#id AwsLbAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_attachment#instance_name TfLbAttachment#instance_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_attachment#instance_name AwsLbAttachment#instance_name}
   */
   readonly instanceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_attachment#lb_name TfLbAttachment#lb_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_attachment#lb_name AwsLbAttachment#lb_name}
   */
   readonly lbName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_attachment#region TfLbAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_attachment#region AwsLbAttachment#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface TfLbAttachmentConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_attachment aws_lightsail_lb_attachment}
 */
-export class TfLbAttachment extends cdktn.TerraformResource {
+export class AwsLbAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfLbAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLbAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLbAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLbAttachment to import
-  * @param importFromId The id of the existing TfLbAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLbAttachment to import is found
+  * @param importToId The construct id used in the generated config for the AwsLbAttachment to import
+  * @param importFromId The id of the existing AwsLbAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_lb_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLbAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_lb_attachment", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfLbAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLbAttachmentConfig
+  * @param options AwsLbAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLbAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLbAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lightsail_lb_attachment',
       terraformGeneratorMetadata: {

@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAssessmentReportConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAssessmentReportConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_report#assessment_id TfAssessmentReport#assessment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_report#assessment_id AwsAssessmentReport#assessment_id}
   */
   readonly assessmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_report#description TfAssessmentReport#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_report#description AwsAssessmentReport#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_report#name TfAssessmentReport#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_report#name AwsAssessmentReport#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_report#region TfAssessmentReport#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_report#region AwsAssessmentReport#region}
   */
   readonly region?: string;
 }
@@ -29,7 +29,7 @@ export interface TfAssessmentReportConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_report aws_auditmanager_assessment_report}
 */
-export class TfAssessmentReport extends cdktn.TerraformResource {
+export class AwsAssessmentReport extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class TfAssessmentReport extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAssessmentReport resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAssessmentReport resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAssessmentReport to import
-  * @param importFromId The id of the existing TfAssessmentReport that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_report#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAssessmentReport to import is found
+  * @param importToId The construct id used in the generated config for the AwsAssessmentReport to import
+  * @param importFromId The id of the existing AwsAssessmentReport that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_report#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAssessmentReport to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_auditmanager_assessment_report", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class TfAssessmentReport extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAssessmentReportConfig
+  * @param options AwsAssessmentReportConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAssessmentReportConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAssessmentReportConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_auditmanager_assessment_report',
       terraformGeneratorMetadata: {

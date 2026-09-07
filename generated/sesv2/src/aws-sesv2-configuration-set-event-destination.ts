@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConfigurationSetEventDestinationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConfigurationSetEventDestinationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#configuration_set_name TfConfigurationSetEventDestination#configuration_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#configuration_set_name AwsConfigurationSetEventDestination#configuration_set_name}
   */
   readonly configurationSetName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#event_destination_name TfConfigurationSetEventDestination#event_destination_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#event_destination_name AwsConfigurationSetEventDestination#event_destination_name}
   */
   readonly eventDestinationName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#id TfConfigurationSetEventDestination#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#id AwsConfigurationSetEventDestination#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,21 +24,21 @@ export interface TfConfigurationSetEventDestinationConfig extends cdktn.Terrafor
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#region TfConfigurationSetEventDestination#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#region AwsConfigurationSetEventDestination#region}
   */
   readonly region?: string;
   /**
   * event_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#event_destination TfConfigurationSetEventDestination#event_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#event_destination AwsConfigurationSetEventDestination#event_destination}
   */
-  readonly eventDestination: TfConfigurationSetEventDestination.EventDestinationProperty;
+  readonly eventDestination: AwsConfigurationSetEventDestination.EventDestinationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination aws_sesv2_configuration_set_event_destination}
 */
-export class TfConfigurationSetEventDestination extends cdktn.TerraformResource {
+export class AwsConfigurationSetEventDestination extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfConfigurationSetEventDestination extends cdktn.TerraformResource 
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConfigurationSetEventDestination resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConfigurationSetEventDestination resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConfigurationSetEventDestination to import
-  * @param importFromId The id of the existing TfConfigurationSetEventDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConfigurationSetEventDestination to import is found
+  * @param importToId The construct id used in the generated config for the AwsConfigurationSetEventDestination to import
+  * @param importFromId The id of the existing AwsConfigurationSetEventDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConfigurationSetEventDestination to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_configuration_set_event_destination", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfConfigurationSetEventDestination extends cdktn.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConfigurationSetEventDestinationConfig
+  * @param options AwsConfigurationSetEventDestinationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConfigurationSetEventDestinationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConfigurationSetEventDestinationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_configuration_set_event_destination',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class TfConfigurationSetEventDestination extends cdktn.TerraformResource 
   }
 
   // event_destination - computed: false, optional: false, required: true
-  private _eventDestination = new TfConfigurationSetEventDestination.EventDestinationPropertyOutputReference(this, "event_destination");
+  private _eventDestination = new AwsConfigurationSetEventDestination.EventDestinationPropertyOutputReference(this, "event_destination");
   public get eventDestination() {
     return this._eventDestination;
   }
-  public putEventDestination(value: TfConfigurationSetEventDestination.EventDestinationProperty) {
+  public putEventDestination(value: AwsConfigurationSetEventDestination.EventDestinationProperty) {
     this._eventDestination.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -178,7 +178,7 @@ export class TfConfigurationSetEventDestination extends cdktn.TerraformResource 
       event_destination_name: cdktn.stringToTerraform(this._eventDestinationName),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      event_destination: tfConfigurationSetEventDestinationEventDestinationPropertyToTerraform(this._eventDestination.internalValue),
+      event_destination: awsConfigurationSetEventDestinationEventDestinationPropertyToTerraform(this._eventDestination.internalValue),
     };
   }
 
@@ -209,10 +209,10 @@ export class TfConfigurationSetEventDestination extends cdktn.TerraformResource 
         storageClassType: "string",
       },
       event_destination: {
-        value: tfConfigurationSetEventDestinationEventDestinationPropertyToHclTerraform(this._eventDestination.internalValue),
+        value: awsConfigurationSetEventDestinationEventDestinationPropertyToHclTerraform(this._eventDestination.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConfigurationSetEventDestination.EventDestinationPropertyList",
+        storageClassType: "AwsConfigurationSetEventDestination.EventDestinationPropertyList",
       },
     };
 
@@ -221,7 +221,7 @@ export class TfConfigurationSetEventDestination extends cdktn.TerraformResource 
   }
 }
 
-export function tfConfigurationSetEventDestinationDimensionConfigurationPropertyToTerraform(struct?: TfConfigurationSetEventDestination.DimensionConfigurationProperty | cdktn.IResolvable): any {
+export function awsConfigurationSetEventDestinationDimensionConfigurationPropertyToTerraform(struct?: AwsConfigurationSetEventDestination.DimensionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -234,7 +234,7 @@ export function tfConfigurationSetEventDestinationDimensionConfigurationProperty
 }
 
 
-export function tfConfigurationSetEventDestinationDimensionConfigurationPropertyToHclTerraform(struct?: TfConfigurationSetEventDestination.DimensionConfigurationProperty | cdktn.IResolvable): any {
+export function awsConfigurationSetEventDestinationDimensionConfigurationPropertyToHclTerraform(struct?: AwsConfigurationSetEventDestination.DimensionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,25 +265,25 @@ export function tfConfigurationSetEventDestinationDimensionConfigurationProperty
 }
 
 
-export function tfConfigurationSetEventDestinationCloudWatchDestinationPropertyToTerraform(struct?: TfConfigurationSetEventDestination.CloudWatchDestinationPropertyOutputReference | TfConfigurationSetEventDestination.CloudWatchDestinationProperty): any {
+export function awsConfigurationSetEventDestinationCloudWatchDestinationPropertyToTerraform(struct?: AwsConfigurationSetEventDestination.CloudWatchDestinationPropertyOutputReference | AwsConfigurationSetEventDestination.CloudWatchDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    dimension_configuration: cdktn.listMapper(tfConfigurationSetEventDestinationDimensionConfigurationPropertyToTerraform, true)(struct!.dimensionConfiguration),
+    dimension_configuration: cdktn.listMapper(awsConfigurationSetEventDestinationDimensionConfigurationPropertyToTerraform, true)(struct!.dimensionConfiguration),
   }
 }
 
 
-export function tfConfigurationSetEventDestinationCloudWatchDestinationPropertyToHclTerraform(struct?: TfConfigurationSetEventDestination.CloudWatchDestinationPropertyOutputReference | TfConfigurationSetEventDestination.CloudWatchDestinationProperty): any {
+export function awsConfigurationSetEventDestinationCloudWatchDestinationPropertyToHclTerraform(struct?: AwsConfigurationSetEventDestination.CloudWatchDestinationPropertyOutputReference | AwsConfigurationSetEventDestination.CloudWatchDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     dimension_configuration: {
-      value: cdktn.listMapperHcl(tfConfigurationSetEventDestinationDimensionConfigurationPropertyToHclTerraform, true)(struct!.dimensionConfiguration),
+      value: cdktn.listMapperHcl(awsConfigurationSetEventDestinationDimensionConfigurationPropertyToHclTerraform, true)(struct!.dimensionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DimensionConfigurationPropertyList",
@@ -295,7 +295,7 @@ export function tfConfigurationSetEventDestinationCloudWatchDestinationPropertyT
 }
 
 
-export function tfConfigurationSetEventDestinationEventBridgeDestinationPropertyToTerraform(struct?: TfConfigurationSetEventDestination.EventBridgeDestinationPropertyOutputReference | TfConfigurationSetEventDestination.EventBridgeDestinationProperty): any {
+export function awsConfigurationSetEventDestinationEventBridgeDestinationPropertyToTerraform(struct?: AwsConfigurationSetEventDestination.EventBridgeDestinationPropertyOutputReference | AwsConfigurationSetEventDestination.EventBridgeDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function tfConfigurationSetEventDestinationEventBridgeDestinationProperty
 }
 
 
-export function tfConfigurationSetEventDestinationEventBridgeDestinationPropertyToHclTerraform(struct?: TfConfigurationSetEventDestination.EventBridgeDestinationPropertyOutputReference | TfConfigurationSetEventDestination.EventBridgeDestinationProperty): any {
+export function awsConfigurationSetEventDestinationEventBridgeDestinationPropertyToHclTerraform(struct?: AwsConfigurationSetEventDestination.EventBridgeDestinationPropertyOutputReference | AwsConfigurationSetEventDestination.EventBridgeDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function tfConfigurationSetEventDestinationEventBridgeDestinationProperty
 }
 
 
-export function tfConfigurationSetEventDestinationKinesisFirehoseDestinationPropertyToTerraform(struct?: TfConfigurationSetEventDestination.KinesisFirehoseDestinationPropertyOutputReference | TfConfigurationSetEventDestination.KinesisFirehoseDestinationProperty): any {
+export function awsConfigurationSetEventDestinationKinesisFirehoseDestinationPropertyToTerraform(struct?: AwsConfigurationSetEventDestination.KinesisFirehoseDestinationPropertyOutputReference | AwsConfigurationSetEventDestination.KinesisFirehoseDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function tfConfigurationSetEventDestinationKinesisFirehoseDestinationProp
 }
 
 
-export function tfConfigurationSetEventDestinationKinesisFirehoseDestinationPropertyToHclTerraform(struct?: TfConfigurationSetEventDestination.KinesisFirehoseDestinationPropertyOutputReference | TfConfigurationSetEventDestination.KinesisFirehoseDestinationProperty): any {
+export function awsConfigurationSetEventDestinationKinesisFirehoseDestinationPropertyToHclTerraform(struct?: AwsConfigurationSetEventDestination.KinesisFirehoseDestinationPropertyOutputReference | AwsConfigurationSetEventDestination.KinesisFirehoseDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,7 +362,7 @@ export function tfConfigurationSetEventDestinationKinesisFirehoseDestinationProp
 }
 
 
-export function tfConfigurationSetEventDestinationPinpointDestinationPropertyToTerraform(struct?: TfConfigurationSetEventDestination.PinpointDestinationPropertyOutputReference | TfConfigurationSetEventDestination.PinpointDestinationProperty): any {
+export function awsConfigurationSetEventDestinationPinpointDestinationPropertyToTerraform(struct?: AwsConfigurationSetEventDestination.PinpointDestinationPropertyOutputReference | AwsConfigurationSetEventDestination.PinpointDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,7 +373,7 @@ export function tfConfigurationSetEventDestinationPinpointDestinationPropertyToT
 }
 
 
-export function tfConfigurationSetEventDestinationPinpointDestinationPropertyToHclTerraform(struct?: TfConfigurationSetEventDestination.PinpointDestinationPropertyOutputReference | TfConfigurationSetEventDestination.PinpointDestinationProperty): any {
+export function awsConfigurationSetEventDestinationPinpointDestinationPropertyToHclTerraform(struct?: AwsConfigurationSetEventDestination.PinpointDestinationPropertyOutputReference | AwsConfigurationSetEventDestination.PinpointDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function tfConfigurationSetEventDestinationPinpointDestinationPropertyToH
 }
 
 
-export function tfConfigurationSetEventDestinationSnsDestinationPropertyToTerraform(struct?: TfConfigurationSetEventDestination.SnsDestinationPropertyOutputReference | TfConfigurationSetEventDestination.SnsDestinationProperty): any {
+export function awsConfigurationSetEventDestinationSnsDestinationPropertyToTerraform(struct?: AwsConfigurationSetEventDestination.SnsDestinationPropertyOutputReference | AwsConfigurationSetEventDestination.SnsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function tfConfigurationSetEventDestinationSnsDestinationPropertyToTerraf
 }
 
 
-export function tfConfigurationSetEventDestinationSnsDestinationPropertyToHclTerraform(struct?: TfConfigurationSetEventDestination.SnsDestinationPropertyOutputReference | TfConfigurationSetEventDestination.SnsDestinationProperty): any {
+export function awsConfigurationSetEventDestinationSnsDestinationPropertyToHclTerraform(struct?: AwsConfigurationSetEventDestination.SnsDestinationPropertyOutputReference | AwsConfigurationSetEventDestination.SnsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function tfConfigurationSetEventDestinationSnsDestinationPropertyToHclTer
 }
 
 
-export function tfConfigurationSetEventDestinationEventDestinationPropertyToTerraform(struct?: TfConfigurationSetEventDestination.EventDestinationPropertyOutputReference | TfConfigurationSetEventDestination.EventDestinationProperty): any {
+export function awsConfigurationSetEventDestinationEventDestinationPropertyToTerraform(struct?: AwsConfigurationSetEventDestination.EventDestinationPropertyOutputReference | AwsConfigurationSetEventDestination.EventDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,16 +430,16 @@ export function tfConfigurationSetEventDestinationEventDestinationPropertyToTerr
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
     matching_event_types: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.matchingEventTypes),
-    cloud_watch_destination: tfConfigurationSetEventDestinationCloudWatchDestinationPropertyToTerraform(struct!.cloudWatchDestination),
-    event_bridge_destination: tfConfigurationSetEventDestinationEventBridgeDestinationPropertyToTerraform(struct!.eventBridgeDestination),
-    kinesis_firehose_destination: tfConfigurationSetEventDestinationKinesisFirehoseDestinationPropertyToTerraform(struct!.kinesisFirehoseDestination),
-    pinpoint_destination: tfConfigurationSetEventDestinationPinpointDestinationPropertyToTerraform(struct!.pinpointDestination),
-    sns_destination: tfConfigurationSetEventDestinationSnsDestinationPropertyToTerraform(struct!.snsDestination),
+    cloud_watch_destination: awsConfigurationSetEventDestinationCloudWatchDestinationPropertyToTerraform(struct!.cloudWatchDestination),
+    event_bridge_destination: awsConfigurationSetEventDestinationEventBridgeDestinationPropertyToTerraform(struct!.eventBridgeDestination),
+    kinesis_firehose_destination: awsConfigurationSetEventDestinationKinesisFirehoseDestinationPropertyToTerraform(struct!.kinesisFirehoseDestination),
+    pinpoint_destination: awsConfigurationSetEventDestinationPinpointDestinationPropertyToTerraform(struct!.pinpointDestination),
+    sns_destination: awsConfigurationSetEventDestinationSnsDestinationPropertyToTerraform(struct!.snsDestination),
   }
 }
 
 
-export function tfConfigurationSetEventDestinationEventDestinationPropertyToHclTerraform(struct?: TfConfigurationSetEventDestination.EventDestinationPropertyOutputReference | TfConfigurationSetEventDestination.EventDestinationProperty): any {
+export function awsConfigurationSetEventDestinationEventDestinationPropertyToHclTerraform(struct?: AwsConfigurationSetEventDestination.EventDestinationPropertyOutputReference | AwsConfigurationSetEventDestination.EventDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,31 +458,31 @@ export function tfConfigurationSetEventDestinationEventDestinationPropertyToHclT
       storageClassType: "stringList",
     },
     cloud_watch_destination: {
-      value: tfConfigurationSetEventDestinationCloudWatchDestinationPropertyToHclTerraform(struct!.cloudWatchDestination),
+      value: awsConfigurationSetEventDestinationCloudWatchDestinationPropertyToHclTerraform(struct!.cloudWatchDestination),
       isBlock: true,
       type: "list",
       storageClassType: "CloudWatchDestinationPropertyList",
     },
     event_bridge_destination: {
-      value: tfConfigurationSetEventDestinationEventBridgeDestinationPropertyToHclTerraform(struct!.eventBridgeDestination),
+      value: awsConfigurationSetEventDestinationEventBridgeDestinationPropertyToHclTerraform(struct!.eventBridgeDestination),
       isBlock: true,
       type: "list",
       storageClassType: "EventBridgeDestinationPropertyList",
     },
     kinesis_firehose_destination: {
-      value: tfConfigurationSetEventDestinationKinesisFirehoseDestinationPropertyToHclTerraform(struct!.kinesisFirehoseDestination),
+      value: awsConfigurationSetEventDestinationKinesisFirehoseDestinationPropertyToHclTerraform(struct!.kinesisFirehoseDestination),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisFirehoseDestinationPropertyList",
     },
     pinpoint_destination: {
-      value: tfConfigurationSetEventDestinationPinpointDestinationPropertyToHclTerraform(struct!.pinpointDestination),
+      value: awsConfigurationSetEventDestinationPinpointDestinationPropertyToHclTerraform(struct!.pinpointDestination),
       isBlock: true,
       type: "list",
       storageClassType: "PinpointDestinationPropertyList",
     },
     sns_destination: {
-      value: tfConfigurationSetEventDestinationSnsDestinationPropertyToHclTerraform(struct!.snsDestination),
+      value: awsConfigurationSetEventDestinationSnsDestinationPropertyToHclTerraform(struct!.snsDestination),
       isBlock: true,
       type: "list",
       storageClassType: "SnsDestinationPropertyList",
@@ -494,18 +494,18 @@ export function tfConfigurationSetEventDestinationEventDestinationPropertyToHclT
 }
 
 
-export namespace TfConfigurationSetEventDestination {
+export namespace AwsConfigurationSetEventDestination {
 export interface DimensionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#default_dimension_value TfConfigurationSetEventDestination#default_dimension_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#default_dimension_value AwsConfigurationSetEventDestination#default_dimension_value}
   */
   readonly defaultDimensionValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#dimension_name TfConfigurationSetEventDestination#dimension_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#dimension_name AwsConfigurationSetEventDestination#dimension_name}
   */
   readonly dimensionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#dimension_value_source TfConfigurationSetEventDestination#dimension_value_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#dimension_value_source AwsConfigurationSetEventDestination#dimension_value_source}
   */
   readonly dimensionValueSource: string;
 }
@@ -628,7 +628,7 @@ export interface CloudWatchDestinationProperty {
   /**
   * dimension_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#dimension_configuration TfConfigurationSetEventDestination#dimension_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#dimension_configuration AwsConfigurationSetEventDestination#dimension_configuration}
   */
   readonly dimensionConfiguration: DimensionConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -679,7 +679,7 @@ export class CloudWatchDestinationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface EventBridgeDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#event_bus_arn TfConfigurationSetEventDestination#event_bus_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#event_bus_arn AwsConfigurationSetEventDestination#event_bus_arn}
   */
   readonly eventBusArn: string;
 }
@@ -730,11 +730,11 @@ export class EventBridgeDestinationPropertyOutputReference extends cdktn.Complex
 }
 export interface KinesisFirehoseDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#delivery_stream_arn TfConfigurationSetEventDestination#delivery_stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#delivery_stream_arn AwsConfigurationSetEventDestination#delivery_stream_arn}
   */
   readonly deliveryStreamArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#iam_role_arn TfConfigurationSetEventDestination#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#iam_role_arn AwsConfigurationSetEventDestination#iam_role_arn}
   */
   readonly iamRoleArn: string;
 }
@@ -804,7 +804,7 @@ export class KinesisFirehoseDestinationPropertyOutputReference extends cdktn.Com
 }
 export interface PinpointDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#application_arn TfConfigurationSetEventDestination#application_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#application_arn AwsConfigurationSetEventDestination#application_arn}
   */
   readonly applicationArn: string;
 }
@@ -855,7 +855,7 @@ export class PinpointDestinationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface SnsDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#topic_arn TfConfigurationSetEventDestination#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#topic_arn AwsConfigurationSetEventDestination#topic_arn}
   */
   readonly topicArn: string;
 }
@@ -906,41 +906,41 @@ export class SnsDestinationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EventDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#enabled TfConfigurationSetEventDestination#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#enabled AwsConfigurationSetEventDestination#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#matching_event_types TfConfigurationSetEventDestination#matching_event_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#matching_event_types AwsConfigurationSetEventDestination#matching_event_types}
   */
   readonly matchingEventTypes: string[];
   /**
   * cloud_watch_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#cloud_watch_destination TfConfigurationSetEventDestination#cloud_watch_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#cloud_watch_destination AwsConfigurationSetEventDestination#cloud_watch_destination}
   */
   readonly cloudWatchDestination?: CloudWatchDestinationProperty;
   /**
   * event_bridge_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#event_bridge_destination TfConfigurationSetEventDestination#event_bridge_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#event_bridge_destination AwsConfigurationSetEventDestination#event_bridge_destination}
   */
   readonly eventBridgeDestination?: EventBridgeDestinationProperty;
   /**
   * kinesis_firehose_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#kinesis_firehose_destination TfConfigurationSetEventDestination#kinesis_firehose_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#kinesis_firehose_destination AwsConfigurationSetEventDestination#kinesis_firehose_destination}
   */
   readonly kinesisFirehoseDestination?: KinesisFirehoseDestinationProperty;
   /**
   * pinpoint_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#pinpoint_destination TfConfigurationSetEventDestination#pinpoint_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#pinpoint_destination AwsConfigurationSetEventDestination#pinpoint_destination}
   */
   readonly pinpointDestination?: PinpointDestinationProperty;
   /**
   * sns_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#sns_destination TfConfigurationSetEventDestination#sns_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_configuration_set_event_destination#sns_destination AwsConfigurationSetEventDestination#sns_destination}
   */
   readonly snsDestination?: SnsDestinationProperty;
 }

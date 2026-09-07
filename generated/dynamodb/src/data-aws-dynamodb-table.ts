@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfTableConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsTableConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table#id DataTfTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table#id DataAwsTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table#name DataTfTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table#name DataAwsTable#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table#region DataTfTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table#region DataAwsTable#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table#tags DataTfTable#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table#tags DataAwsTable#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * server_side_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table#server_side_encryption DataTfTable#server_side_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table#server_side_encryption DataAwsTable#server_side_encryption}
   */
-  readonly serverSideEncryption?: DataTfTable.ServerSideEncryptionProperty;
+  readonly serverSideEncryption?: DataAwsTable.ServerSideEncryptionProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table aws_dynamodb_table}
 */
-export class DataTfTable extends cdktn.TerraformDataSource {
+export class DataAwsTable extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class DataTfTable extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfTable resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsTable resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfTable to import
-  * @param importFromId The id of the existing DataTfTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfTable to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsTable to import
+  * @param importFromId The id of the existing DataAwsTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dynamodb_table", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class DataTfTable extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfTableConfig
+  * @param options DataAwsTableConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfTableConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsTableConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dynamodb_table',
       terraformGeneratorMetadata: {
@@ -103,7 +103,7 @@ export class DataTfTable extends cdktn.TerraformDataSource {
   }
 
   // attribute - computed: true, optional: false, required: false
-  private _attribute = new DataTfTable.AttributePropertyList(this, "attribute", true);
+  private _attribute = new DataAwsTable.AttributePropertyList(this, "attribute", true);
   public get attribute() {
     return this._attribute;
   }
@@ -119,7 +119,7 @@ export class DataTfTable extends cdktn.TerraformDataSource {
   }
 
   // global_secondary_index - computed: true, optional: false, required: false
-  private _globalSecondaryIndex = new DataTfTable.GlobalSecondaryIndexPropertyList(this, "global_secondary_index", true);
+  private _globalSecondaryIndex = new DataAwsTable.GlobalSecondaryIndexPropertyList(this, "global_secondary_index", true);
   public get globalSecondaryIndex() {
     return this._globalSecondaryIndex;
   }
@@ -146,7 +146,7 @@ export class DataTfTable extends cdktn.TerraformDataSource {
   }
 
   // local_secondary_index - computed: true, optional: false, required: false
-  private _localSecondaryIndex = new DataTfTable.LocalSecondaryIndexPropertyList(this, "local_secondary_index", true);
+  private _localSecondaryIndex = new DataAwsTable.LocalSecondaryIndexPropertyList(this, "local_secondary_index", true);
   public get localSecondaryIndex() {
     return this._localSecondaryIndex;
   }
@@ -165,13 +165,13 @@ export class DataTfTable extends cdktn.TerraformDataSource {
   }
 
   // on_demand_throughput - computed: true, optional: false, required: false
-  private _onDemandThroughput = new DataTfTable.OnDemandThroughputPropertyList(this, "on_demand_throughput", false);
+  private _onDemandThroughput = new DataAwsTable.OnDemandThroughputPropertyList(this, "on_demand_throughput", false);
   public get onDemandThroughput() {
     return this._onDemandThroughput;
   }
 
   // point_in_time_recovery - computed: true, optional: false, required: false
-  private _pointInTimeRecovery = new DataTfTable.PointInTimeRecoveryPropertyList(this, "point_in_time_recovery", false);
+  private _pointInTimeRecovery = new DataAwsTable.PointInTimeRecoveryPropertyList(this, "point_in_time_recovery", false);
   public get pointInTimeRecovery() {
     return this._pointInTimeRecovery;
   }
@@ -203,7 +203,7 @@ export class DataTfTable extends cdktn.TerraformDataSource {
   }
 
   // replica - computed: true, optional: false, required: false
-  private _replica = new DataTfTable.ReplicaPropertyList(this, "replica", true);
+  private _replica = new DataAwsTable.ReplicaPropertyList(this, "replica", true);
   public get replica() {
     return this._replica;
   }
@@ -250,13 +250,13 @@ export class DataTfTable extends cdktn.TerraformDataSource {
   }
 
   // ttl - computed: true, optional: false, required: false
-  private _ttl = new DataTfTable.TtlPropertyList(this, "ttl", true);
+  private _ttl = new DataAwsTable.TtlPropertyList(this, "ttl", true);
   public get ttl() {
     return this._ttl;
   }
 
   // warm_throughput - computed: true, optional: false, required: false
-  private _warmThroughput = new DataTfTable.WarmThroughputPropertyList(this, "warm_throughput", false);
+  private _warmThroughput = new DataAwsTable.WarmThroughputPropertyList(this, "warm_throughput", false);
   public get warmThroughput() {
     return this._warmThroughput;
   }
@@ -267,11 +267,11 @@ export class DataTfTable extends cdktn.TerraformDataSource {
   }
 
   // server_side_encryption - computed: false, optional: true, required: false
-  private _serverSideEncryption = new DataTfTable.ServerSideEncryptionPropertyOutputReference(this, "server_side_encryption");
+  private _serverSideEncryption = new DataAwsTable.ServerSideEncryptionPropertyOutputReference(this, "server_side_encryption");
   public get serverSideEncryption() {
     return this._serverSideEncryption;
   }
-  public putServerSideEncryption(value: DataTfTable.ServerSideEncryptionProperty) {
+  public putServerSideEncryption(value: DataAwsTable.ServerSideEncryptionProperty) {
     this._serverSideEncryption.internalValue = value;
   }
   public resetServerSideEncryption() {
@@ -292,7 +292,7 @@ export class DataTfTable extends cdktn.TerraformDataSource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      server_side_encryption: dataTfTableServerSideEncryptionPropertyToTerraform(this._serverSideEncryption.internalValue),
+      server_side_encryption: dataAwsTableServerSideEncryptionPropertyToTerraform(this._serverSideEncryption.internalValue),
     };
   }
 
@@ -323,10 +323,10 @@ export class DataTfTable extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       server_side_encryption: {
-        value: dataTfTableServerSideEncryptionPropertyToHclTerraform(this._serverSideEncryption.internalValue),
+        value: dataAwsTableServerSideEncryptionPropertyToHclTerraform(this._serverSideEncryption.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfTable.ServerSideEncryptionPropertyList",
+        storageClassType: "DataAwsTable.ServerSideEncryptionPropertyList",
       },
     };
 
@@ -335,7 +335,7 @@ export class DataTfTable extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfTableAttributePropertyToTerraform(struct?: DataTfTable.AttributeProperty): any {
+export function dataAwsTableAttributePropertyToTerraform(struct?: DataAwsTable.AttributeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function dataTfTableAttributePropertyToTerraform(struct?: DataTfTable.Att
 }
 
 
-export function dataTfTableAttributePropertyToHclTerraform(struct?: DataTfTable.AttributeProperty): any {
+export function dataAwsTableAttributePropertyToHclTerraform(struct?: DataAwsTable.AttributeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -356,7 +356,7 @@ export function dataTfTableAttributePropertyToHclTerraform(struct?: DataTfTable.
 }
 
 
-export function dataTfTableKeySchemaPropertyToTerraform(struct?: DataTfTable.KeySchemaProperty): any {
+export function dataAwsTableKeySchemaPropertyToTerraform(struct?: DataAwsTable.KeySchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function dataTfTableKeySchemaPropertyToTerraform(struct?: DataTfTable.Key
 }
 
 
-export function dataTfTableKeySchemaPropertyToHclTerraform(struct?: DataTfTable.KeySchemaProperty): any {
+export function dataAwsTableKeySchemaPropertyToHclTerraform(struct?: DataAwsTable.KeySchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -377,7 +377,7 @@ export function dataTfTableKeySchemaPropertyToHclTerraform(struct?: DataTfTable.
 }
 
 
-export function dataTfTableGlobalSecondaryIndexOnDemandThroughputPropertyToTerraform(struct?: DataTfTable.GlobalSecondaryIndexOnDemandThroughputProperty): any {
+export function dataAwsTableGlobalSecondaryIndexOnDemandThroughputPropertyToTerraform(struct?: DataAwsTable.GlobalSecondaryIndexOnDemandThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function dataTfTableGlobalSecondaryIndexOnDemandThroughputPropertyToTerra
 }
 
 
-export function dataTfTableGlobalSecondaryIndexOnDemandThroughputPropertyToHclTerraform(struct?: DataTfTable.GlobalSecondaryIndexOnDemandThroughputProperty): any {
+export function dataAwsTableGlobalSecondaryIndexOnDemandThroughputPropertyToHclTerraform(struct?: DataAwsTable.GlobalSecondaryIndexOnDemandThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function dataTfTableGlobalSecondaryIndexOnDemandThroughputPropertyToHclTe
 }
 
 
-export function dataTfTableGlobalSecondaryIndexWarmThroughputPropertyToTerraform(struct?: DataTfTable.GlobalSecondaryIndexWarmThroughputProperty): any {
+export function dataAwsTableGlobalSecondaryIndexWarmThroughputPropertyToTerraform(struct?: DataAwsTable.GlobalSecondaryIndexWarmThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,7 +408,7 @@ export function dataTfTableGlobalSecondaryIndexWarmThroughputPropertyToTerraform
 }
 
 
-export function dataTfTableGlobalSecondaryIndexWarmThroughputPropertyToHclTerraform(struct?: DataTfTable.GlobalSecondaryIndexWarmThroughputProperty): any {
+export function dataAwsTableGlobalSecondaryIndexWarmThroughputPropertyToHclTerraform(struct?: DataAwsTable.GlobalSecondaryIndexWarmThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -419,7 +419,7 @@ export function dataTfTableGlobalSecondaryIndexWarmThroughputPropertyToHclTerraf
 }
 
 
-export function dataTfTableGlobalSecondaryIndexPropertyToTerraform(struct?: DataTfTable.GlobalSecondaryIndexProperty): any {
+export function dataAwsTableGlobalSecondaryIndexPropertyToTerraform(struct?: DataAwsTable.GlobalSecondaryIndexProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,7 +429,7 @@ export function dataTfTableGlobalSecondaryIndexPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfTableGlobalSecondaryIndexPropertyToHclTerraform(struct?: DataTfTable.GlobalSecondaryIndexProperty): any {
+export function dataAwsTableGlobalSecondaryIndexPropertyToHclTerraform(struct?: DataAwsTable.GlobalSecondaryIndexProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -440,7 +440,7 @@ export function dataTfTableGlobalSecondaryIndexPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataTfTableLocalSecondaryIndexPropertyToTerraform(struct?: DataTfTable.LocalSecondaryIndexProperty): any {
+export function dataAwsTableLocalSecondaryIndexPropertyToTerraform(struct?: DataAwsTable.LocalSecondaryIndexProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -450,7 +450,7 @@ export function dataTfTableLocalSecondaryIndexPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfTableLocalSecondaryIndexPropertyToHclTerraform(struct?: DataTfTable.LocalSecondaryIndexProperty): any {
+export function dataAwsTableLocalSecondaryIndexPropertyToHclTerraform(struct?: DataAwsTable.LocalSecondaryIndexProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,7 +461,7 @@ export function dataTfTableLocalSecondaryIndexPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfTableOnDemandThroughputPropertyToTerraform(struct?: DataTfTable.OnDemandThroughputProperty): any {
+export function dataAwsTableOnDemandThroughputPropertyToTerraform(struct?: DataAwsTable.OnDemandThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,7 +471,7 @@ export function dataTfTableOnDemandThroughputPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfTableOnDemandThroughputPropertyToHclTerraform(struct?: DataTfTable.OnDemandThroughputProperty): any {
+export function dataAwsTableOnDemandThroughputPropertyToHclTerraform(struct?: DataAwsTable.OnDemandThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,7 +482,7 @@ export function dataTfTableOnDemandThroughputPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfTablePointInTimeRecoveryPropertyToTerraform(struct?: DataTfTable.PointInTimeRecoveryProperty): any {
+export function dataAwsTablePointInTimeRecoveryPropertyToTerraform(struct?: DataAwsTable.PointInTimeRecoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -492,7 +492,7 @@ export function dataTfTablePointInTimeRecoveryPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfTablePointInTimeRecoveryPropertyToHclTerraform(struct?: DataTfTable.PointInTimeRecoveryProperty): any {
+export function dataAwsTablePointInTimeRecoveryPropertyToHclTerraform(struct?: DataAwsTable.PointInTimeRecoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,7 +503,7 @@ export function dataTfTablePointInTimeRecoveryPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfTableReplicaPropertyToTerraform(struct?: DataTfTable.ReplicaProperty): any {
+export function dataAwsTableReplicaPropertyToTerraform(struct?: DataAwsTable.ReplicaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -513,7 +513,7 @@ export function dataTfTableReplicaPropertyToTerraform(struct?: DataTfTable.Repli
 }
 
 
-export function dataTfTableReplicaPropertyToHclTerraform(struct?: DataTfTable.ReplicaProperty): any {
+export function dataAwsTableReplicaPropertyToHclTerraform(struct?: DataAwsTable.ReplicaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -524,7 +524,7 @@ export function dataTfTableReplicaPropertyToHclTerraform(struct?: DataTfTable.Re
 }
 
 
-export function dataTfTableTtlPropertyToTerraform(struct?: DataTfTable.TtlProperty): any {
+export function dataAwsTableTtlPropertyToTerraform(struct?: DataAwsTable.TtlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -534,7 +534,7 @@ export function dataTfTableTtlPropertyToTerraform(struct?: DataTfTable.TtlProper
 }
 
 
-export function dataTfTableTtlPropertyToHclTerraform(struct?: DataTfTable.TtlProperty): any {
+export function dataAwsTableTtlPropertyToHclTerraform(struct?: DataAwsTable.TtlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -545,7 +545,7 @@ export function dataTfTableTtlPropertyToHclTerraform(struct?: DataTfTable.TtlPro
 }
 
 
-export function dataTfTableWarmThroughputPropertyToTerraform(struct?: DataTfTable.WarmThroughputProperty): any {
+export function dataAwsTableWarmThroughputPropertyToTerraform(struct?: DataAwsTable.WarmThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -555,7 +555,7 @@ export function dataTfTableWarmThroughputPropertyToTerraform(struct?: DataTfTabl
 }
 
 
-export function dataTfTableWarmThroughputPropertyToHclTerraform(struct?: DataTfTable.WarmThroughputProperty): any {
+export function dataAwsTableWarmThroughputPropertyToHclTerraform(struct?: DataAwsTable.WarmThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -566,7 +566,7 @@ export function dataTfTableWarmThroughputPropertyToHclTerraform(struct?: DataTfT
 }
 
 
-export function dataTfTableServerSideEncryptionPropertyToTerraform(struct?: DataTfTable.ServerSideEncryptionPropertyOutputReference | DataTfTable.ServerSideEncryptionProperty): any {
+export function dataAwsTableServerSideEncryptionPropertyToTerraform(struct?: DataAwsTable.ServerSideEncryptionPropertyOutputReference | DataAwsTable.ServerSideEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -576,7 +576,7 @@ export function dataTfTableServerSideEncryptionPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfTableServerSideEncryptionPropertyToHclTerraform(struct?: DataTfTable.ServerSideEncryptionPropertyOutputReference | DataTfTable.ServerSideEncryptionProperty): any {
+export function dataAwsTableServerSideEncryptionPropertyToHclTerraform(struct?: DataAwsTable.ServerSideEncryptionPropertyOutputReference | DataAwsTable.ServerSideEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,7 +587,7 @@ export function dataTfTableServerSideEncryptionPropertyToHclTerraform(struct?: D
 }
 
 
-export namespace DataTfTable {
+export namespace DataAwsTable {
 export interface AttributeProperty {
 }
 export class AttributePropertyOutputReference extends cdktn.ComplexObject {

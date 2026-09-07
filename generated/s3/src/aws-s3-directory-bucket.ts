@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDirectoryBucketConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDirectoryBucketConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#bucket TfDirectoryBucket#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#bucket AwsDirectoryBucket#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#data_redundancy TfDirectoryBucket#data_redundancy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#data_redundancy AwsDirectoryBucket#data_redundancy}
   */
   readonly dataRedundancy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#force_destroy TfDirectoryBucket#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#force_destroy AwsDirectoryBucket#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#region TfDirectoryBucket#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#region AwsDirectoryBucket#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#tags TfDirectoryBucket#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#tags AwsDirectoryBucket#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#type TfDirectoryBucket#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#type AwsDirectoryBucket#type}
   */
   readonly type?: string;
   /**
   * location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#location TfDirectoryBucket#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#location AwsDirectoryBucket#location}
   */
-  readonly location?: TfDirectoryBucket.LocationProperty[] | cdktn.IResolvable;
+  readonly location?: AwsDirectoryBucket.LocationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket aws_s3_directory_bucket}
 */
-export class TfDirectoryBucket extends cdktn.TerraformResource {
+export class AwsDirectoryBucket extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class TfDirectoryBucket extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDirectoryBucket resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDirectoryBucket resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDirectoryBucket to import
-  * @param importFromId The id of the existing TfDirectoryBucket that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDirectoryBucket to import is found
+  * @param importToId The construct id used in the generated config for the AwsDirectoryBucket to import
+  * @param importFromId The id of the existing AwsDirectoryBucket that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDirectoryBucket to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_directory_bucket", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class TfDirectoryBucket extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDirectoryBucketConfig
+  * @param options AwsDirectoryBucketConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDirectoryBucketConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDirectoryBucketConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_directory_bucket',
       terraformGeneratorMetadata: {
@@ -214,11 +214,11 @@ export class TfDirectoryBucket extends cdktn.TerraformResource {
   }
 
   // location - computed: false, optional: true, required: false
-  private _location = new TfDirectoryBucket.LocationPropertyList(this, "location", false);
+  private _location = new AwsDirectoryBucket.LocationPropertyList(this, "location", false);
   public get location() {
     return this._location;
   }
-  public putLocation(value: TfDirectoryBucket.LocationProperty[] | cdktn.IResolvable) {
+  public putLocation(value: AwsDirectoryBucket.LocationProperty[] | cdktn.IResolvable) {
     this._location.internalValue = value;
   }
   public resetLocation() {
@@ -241,7 +241,7 @@ export class TfDirectoryBucket extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       type: cdktn.stringToTerraform(this._type),
-      location: cdktn.listMapper(tfDirectoryBucketLocationPropertyToTerraform, true)(this._location.internalValue),
+      location: cdktn.listMapper(awsDirectoryBucketLocationPropertyToTerraform, true)(this._location.internalValue),
     };
   }
 
@@ -284,10 +284,10 @@ export class TfDirectoryBucket extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       location: {
-        value: cdktn.listMapperHcl(tfDirectoryBucketLocationPropertyToHclTerraform, true)(this._location.internalValue),
+        value: cdktn.listMapperHcl(awsDirectoryBucketLocationPropertyToHclTerraform, true)(this._location.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDirectoryBucket.LocationPropertyList",
+        storageClassType: "AwsDirectoryBucket.LocationPropertyList",
       },
     };
 
@@ -296,7 +296,7 @@ export class TfDirectoryBucket extends cdktn.TerraformResource {
   }
 }
 
-export function tfDirectoryBucketLocationPropertyToTerraform(struct?: TfDirectoryBucket.LocationProperty | cdktn.IResolvable): any {
+export function awsDirectoryBucketLocationPropertyToTerraform(struct?: AwsDirectoryBucket.LocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function tfDirectoryBucketLocationPropertyToTerraform(struct?: TfDirector
 }
 
 
-export function tfDirectoryBucketLocationPropertyToHclTerraform(struct?: TfDirectoryBucket.LocationProperty | cdktn.IResolvable): any {
+export function awsDirectoryBucketLocationPropertyToHclTerraform(struct?: AwsDirectoryBucket.LocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,14 +333,14 @@ export function tfDirectoryBucketLocationPropertyToHclTerraform(struct?: TfDirec
 }
 
 
-export namespace TfDirectoryBucket {
+export namespace AwsDirectoryBucket {
 export interface LocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#name TfDirectoryBucket#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#name AwsDirectoryBucket#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#type TfDirectoryBucket#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_directory_bucket#type AwsDirectoryBucket#type}
   */
   readonly type?: string;
 }

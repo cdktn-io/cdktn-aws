@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfOrganizationAdminAccountRegistrationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsOrganizationAdminAccountRegistrationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_organization_admin_account_registration#admin_account_id TfOrganizationAdminAccountRegistration#admin_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_organization_admin_account_registration#admin_account_id AwsOrganizationAdminAccountRegistration#admin_account_id}
   */
   readonly adminAccountId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_organization_admin_account_registration#region TfOrganizationAdminAccountRegistration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_organization_admin_account_registration#region AwsOrganizationAdminAccountRegistration#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface TfOrganizationAdminAccountRegistrationConfig extends cdktn.Terr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_organization_admin_account_registration aws_auditmanager_organization_admin_account_registration}
 */
-export class TfOrganizationAdminAccountRegistration extends cdktn.TerraformResource {
+export class AwsOrganizationAdminAccountRegistration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class TfOrganizationAdminAccountRegistration extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfOrganizationAdminAccountRegistration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsOrganizationAdminAccountRegistration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfOrganizationAdminAccountRegistration to import
-  * @param importFromId The id of the existing TfOrganizationAdminAccountRegistration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_organization_admin_account_registration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfOrganizationAdminAccountRegistration to import is found
+  * @param importToId The construct id used in the generated config for the AwsOrganizationAdminAccountRegistration to import
+  * @param importFromId The id of the existing AwsOrganizationAdminAccountRegistration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_organization_admin_account_registration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOrganizationAdminAccountRegistration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_auditmanager_organization_admin_account_registration", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class TfOrganizationAdminAccountRegistration extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfOrganizationAdminAccountRegistrationConfig
+  * @param options AwsOrganizationAdminAccountRegistrationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfOrganizationAdminAccountRegistrationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsOrganizationAdminAccountRegistrationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_auditmanager_organization_admin_account_registration',
       terraformGeneratorMetadata: {

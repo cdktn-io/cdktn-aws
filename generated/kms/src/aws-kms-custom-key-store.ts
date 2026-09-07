@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCustomKeyStoreConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCustomKeyStoreConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#cloud_hsm_cluster_id TfCustomKeyStore#cloud_hsm_cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#cloud_hsm_cluster_id AwsCustomKeyStore#cloud_hsm_cluster_id}
   */
   readonly cloudHsmClusterId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#custom_key_store_name TfCustomKeyStore#custom_key_store_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#custom_key_store_name AwsCustomKeyStore#custom_key_store_name}
   */
   readonly customKeyStoreName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#custom_key_store_type TfCustomKeyStore#custom_key_store_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#custom_key_store_type AwsCustomKeyStore#custom_key_store_type}
   */
   readonly customKeyStoreType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#id TfCustomKeyStore#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#id AwsCustomKeyStore#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#key_store_password TfCustomKeyStore#key_store_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#key_store_password AwsCustomKeyStore#key_store_password}
   */
   readonly keyStorePassword?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#region TfCustomKeyStore#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#region AwsCustomKeyStore#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#trust_anchor_certificate TfCustomKeyStore#trust_anchor_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#trust_anchor_certificate AwsCustomKeyStore#trust_anchor_certificate}
   */
   readonly trustAnchorCertificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#xks_proxy_connectivity TfCustomKeyStore#xks_proxy_connectivity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#xks_proxy_connectivity AwsCustomKeyStore#xks_proxy_connectivity}
   */
   readonly xksProxyConnectivity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#xks_proxy_uri_endpoint TfCustomKeyStore#xks_proxy_uri_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#xks_proxy_uri_endpoint AwsCustomKeyStore#xks_proxy_uri_endpoint}
   */
   readonly xksProxyUriEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#xks_proxy_uri_path TfCustomKeyStore#xks_proxy_uri_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#xks_proxy_uri_path AwsCustomKeyStore#xks_proxy_uri_path}
   */
   readonly xksProxyUriPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#xks_proxy_vpc_endpoint_service_name TfCustomKeyStore#xks_proxy_vpc_endpoint_service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#xks_proxy_vpc_endpoint_service_name AwsCustomKeyStore#xks_proxy_vpc_endpoint_service_name}
   */
   readonly xksProxyVpcEndpointServiceName?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#timeouts TfCustomKeyStore#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#timeouts AwsCustomKeyStore#timeouts}
   */
-  readonly timeouts?: TfCustomKeyStore.TimeoutsProperty;
+  readonly timeouts?: AwsCustomKeyStore.TimeoutsProperty;
   /**
   * xks_proxy_authentication_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#xks_proxy_authentication_credential TfCustomKeyStore#xks_proxy_authentication_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#xks_proxy_authentication_credential AwsCustomKeyStore#xks_proxy_authentication_credential}
   */
-  readonly xksProxyAuthenticationCredential?: TfCustomKeyStore.XksProxyAuthenticationCredentialProperty;
+  readonly xksProxyAuthenticationCredential?: AwsCustomKeyStore.XksProxyAuthenticationCredentialProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store aws_kms_custom_key_store}
 */
-export class TfCustomKeyStore extends cdktn.TerraformResource {
+export class AwsCustomKeyStore extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class TfCustomKeyStore extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCustomKeyStore resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCustomKeyStore resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCustomKeyStore to import
-  * @param importFromId The id of the existing TfCustomKeyStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCustomKeyStore to import is found
+  * @param importToId The construct id used in the generated config for the AwsCustomKeyStore to import
+  * @param importFromId The id of the existing AwsCustomKeyStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCustomKeyStore to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kms_custom_key_store", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class TfCustomKeyStore extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCustomKeyStoreConfig
+  * @param options AwsCustomKeyStoreConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCustomKeyStoreConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCustomKeyStoreConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kms_custom_key_store',
       terraformGeneratorMetadata: {
@@ -313,11 +313,11 @@ export class TfCustomKeyStore extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCustomKeyStore.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCustomKeyStore.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCustomKeyStore.TimeoutsProperty) {
+  public putTimeouts(value: AwsCustomKeyStore.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -329,11 +329,11 @@ export class TfCustomKeyStore extends cdktn.TerraformResource {
   }
 
   // xks_proxy_authentication_credential - computed: false, optional: true, required: false
-  private _xksProxyAuthenticationCredential = new TfCustomKeyStore.XksProxyAuthenticationCredentialPropertyOutputReference(this, "xks_proxy_authentication_credential");
+  private _xksProxyAuthenticationCredential = new AwsCustomKeyStore.XksProxyAuthenticationCredentialPropertyOutputReference(this, "xks_proxy_authentication_credential");
   public get xksProxyAuthenticationCredential() {
     return this._xksProxyAuthenticationCredential;
   }
-  public putXksProxyAuthenticationCredential(value: TfCustomKeyStore.XksProxyAuthenticationCredentialProperty) {
+  public putXksProxyAuthenticationCredential(value: AwsCustomKeyStore.XksProxyAuthenticationCredentialProperty) {
     this._xksProxyAuthenticationCredential.internalValue = value;
   }
   public resetXksProxyAuthenticationCredential() {
@@ -361,8 +361,8 @@ export class TfCustomKeyStore extends cdktn.TerraformResource {
       xks_proxy_uri_endpoint: cdktn.stringToTerraform(this._xksProxyUriEndpoint),
       xks_proxy_uri_path: cdktn.stringToTerraform(this._xksProxyUriPath),
       xks_proxy_vpc_endpoint_service_name: cdktn.stringToTerraform(this._xksProxyVpcEndpointServiceName),
-      timeouts: tfCustomKeyStoreTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      xks_proxy_authentication_credential: tfCustomKeyStoreXksProxyAuthenticationCredentialPropertyToTerraform(this._xksProxyAuthenticationCredential.internalValue),
+      timeouts: awsCustomKeyStoreTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      xks_proxy_authentication_credential: awsCustomKeyStoreXksProxyAuthenticationCredentialPropertyToTerraform(this._xksProxyAuthenticationCredential.internalValue),
     };
   }
 
@@ -435,16 +435,16 @@ export class TfCustomKeyStore extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfCustomKeyStoreTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCustomKeyStoreTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCustomKeyStore.TimeoutsProperty",
+        storageClassType: "AwsCustomKeyStore.TimeoutsProperty",
       },
       xks_proxy_authentication_credential: {
-        value: tfCustomKeyStoreXksProxyAuthenticationCredentialPropertyToHclTerraform(this._xksProxyAuthenticationCredential.internalValue),
+        value: awsCustomKeyStoreXksProxyAuthenticationCredentialPropertyToHclTerraform(this._xksProxyAuthenticationCredential.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCustomKeyStore.XksProxyAuthenticationCredentialPropertyList",
+        storageClassType: "AwsCustomKeyStore.XksProxyAuthenticationCredentialPropertyList",
       },
     };
 
@@ -453,7 +453,7 @@ export class TfCustomKeyStore extends cdktn.TerraformResource {
   }
 }
 
-export function tfCustomKeyStoreTimeoutsPropertyToTerraform(struct?: TfCustomKeyStore.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomKeyStoreTimeoutsPropertyToTerraform(struct?: AwsCustomKeyStore.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function tfCustomKeyStoreTimeoutsPropertyToTerraform(struct?: TfCustomKey
 }
 
 
-export function tfCustomKeyStoreTimeoutsPropertyToHclTerraform(struct?: TfCustomKeyStore.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomKeyStoreTimeoutsPropertyToHclTerraform(struct?: AwsCustomKeyStore.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,7 +497,7 @@ export function tfCustomKeyStoreTimeoutsPropertyToHclTerraform(struct?: TfCustom
 }
 
 
-export function tfCustomKeyStoreXksProxyAuthenticationCredentialPropertyToTerraform(struct?: TfCustomKeyStore.XksProxyAuthenticationCredentialPropertyOutputReference | TfCustomKeyStore.XksProxyAuthenticationCredentialProperty): any {
+export function awsCustomKeyStoreXksProxyAuthenticationCredentialPropertyToTerraform(struct?: AwsCustomKeyStore.XksProxyAuthenticationCredentialPropertyOutputReference | AwsCustomKeyStore.XksProxyAuthenticationCredentialProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -509,7 +509,7 @@ export function tfCustomKeyStoreXksProxyAuthenticationCredentialPropertyToTerraf
 }
 
 
-export function tfCustomKeyStoreXksProxyAuthenticationCredentialPropertyToHclTerraform(struct?: TfCustomKeyStore.XksProxyAuthenticationCredentialPropertyOutputReference | TfCustomKeyStore.XksProxyAuthenticationCredentialProperty): any {
+export function awsCustomKeyStoreXksProxyAuthenticationCredentialPropertyToHclTerraform(struct?: AwsCustomKeyStore.XksProxyAuthenticationCredentialPropertyOutputReference | AwsCustomKeyStore.XksProxyAuthenticationCredentialProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -534,18 +534,18 @@ export function tfCustomKeyStoreXksProxyAuthenticationCredentialPropertyToHclTer
 }
 
 
-export namespace TfCustomKeyStore {
+export namespace AwsCustomKeyStore {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#create TfCustomKeyStore#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#create AwsCustomKeyStore#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#delete TfCustomKeyStore#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#delete AwsCustomKeyStore#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#update TfCustomKeyStore#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#update AwsCustomKeyStore#update}
   */
   readonly update?: string;
 }
@@ -653,11 +653,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface XksProxyAuthenticationCredentialProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#access_key_id TfCustomKeyStore#access_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#access_key_id AwsCustomKeyStore#access_key_id}
   */
   readonly accessKeyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#raw_secret_access_key TfCustomKeyStore#raw_secret_access_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_custom_key_store#raw_secret_access_key AwsCustomKeyStore#raw_secret_access_key}
   */
   readonly rawSecretAccessKey: string;
 }

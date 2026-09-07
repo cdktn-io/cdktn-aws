@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEncryptionConfigConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEncryptionConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_encryption_config#id TfEncryptionConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_encryption_config#id AwsEncryptionConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_encryption_config#key_id TfEncryptionConfig#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_encryption_config#key_id AwsEncryptionConfig#key_id}
   */
   readonly keyId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_encryption_config#region TfEncryptionConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_encryption_config#region AwsEncryptionConfig#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_encryption_config#type TfEncryptionConfig#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_encryption_config#type AwsEncryptionConfig#type}
   */
   readonly type: string;
 }
@@ -32,7 +32,7 @@ export interface TfEncryptionConfigConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_encryption_config aws_xray_encryption_config}
 */
-export class TfEncryptionConfig extends cdktn.TerraformResource {
+export class AwsEncryptionConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfEncryptionConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEncryptionConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEncryptionConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEncryptionConfig to import
-  * @param importFromId The id of the existing TfEncryptionConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_encryption_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEncryptionConfig to import is found
+  * @param importToId The construct id used in the generated config for the AwsEncryptionConfig to import
+  * @param importFromId The id of the existing AwsEncryptionConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_encryption_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEncryptionConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_xray_encryption_config", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfEncryptionConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEncryptionConfigConfig
+  * @param options AwsEncryptionConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEncryptionConfigConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEncryptionConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_xray_encryption_config',
       terraformGeneratorMetadata: {

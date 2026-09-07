@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBucketIntelligentTieringConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBucketIntelligentTieringConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#bucket TfBucketIntelligentTieringConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#bucket AwsBucketIntelligentTieringConfiguration#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#id TfBucketIntelligentTieringConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#id AwsBucketIntelligentTieringConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#name TfBucketIntelligentTieringConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#name AwsBucketIntelligentTieringConfiguration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#region TfBucketIntelligentTieringConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#region AwsBucketIntelligentTieringConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#status TfBucketIntelligentTieringConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#status AwsBucketIntelligentTieringConfiguration#status}
   */
   readonly status?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#filter TfBucketIntelligentTieringConfiguration#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#filter AwsBucketIntelligentTieringConfiguration#filter}
   */
-  readonly filter?: TfBucketIntelligentTieringConfiguration.FilterProperty;
+  readonly filter?: AwsBucketIntelligentTieringConfiguration.FilterProperty;
   /**
   * tiering block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#tiering TfBucketIntelligentTieringConfiguration#tiering}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#tiering AwsBucketIntelligentTieringConfiguration#tiering}
   */
-  readonly tiering: TfBucketIntelligentTieringConfiguration.TieringProperty[] | cdktn.IResolvable;
+  readonly tiering: AwsBucketIntelligentTieringConfiguration.TieringProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration aws_s3_bucket_intelligent_tiering_configuration}
 */
-export class TfBucketIntelligentTieringConfiguration extends cdktn.TerraformResource {
+export class AwsBucketIntelligentTieringConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfBucketIntelligentTieringConfiguration extends cdktn.TerraformReso
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBucketIntelligentTieringConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBucketIntelligentTieringConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBucketIntelligentTieringConfiguration to import
-  * @param importFromId The id of the existing TfBucketIntelligentTieringConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBucketIntelligentTieringConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsBucketIntelligentTieringConfiguration to import
+  * @param importFromId The id of the existing AwsBucketIntelligentTieringConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBucketIntelligentTieringConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_intelligent_tiering_configuration", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfBucketIntelligentTieringConfiguration extends cdktn.TerraformReso
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBucketIntelligentTieringConfigurationConfig
+  * @param options AwsBucketIntelligentTieringConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBucketIntelligentTieringConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBucketIntelligentTieringConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_intelligent_tiering_configuration',
       terraformGeneratorMetadata: {
@@ -184,11 +184,11 @@ export class TfBucketIntelligentTieringConfiguration extends cdktn.TerraformReso
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfBucketIntelligentTieringConfiguration.FilterPropertyOutputReference(this, "filter");
+  private _filter = new AwsBucketIntelligentTieringConfiguration.FilterPropertyOutputReference(this, "filter");
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfBucketIntelligentTieringConfiguration.FilterProperty) {
+  public putFilter(value: AwsBucketIntelligentTieringConfiguration.FilterProperty) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -200,11 +200,11 @@ export class TfBucketIntelligentTieringConfiguration extends cdktn.TerraformReso
   }
 
   // tiering - computed: false, optional: false, required: true
-  private _tiering = new TfBucketIntelligentTieringConfiguration.TieringPropertyList(this, "tiering", true);
+  private _tiering = new AwsBucketIntelligentTieringConfiguration.TieringPropertyList(this, "tiering", true);
   public get tiering() {
     return this._tiering;
   }
-  public putTiering(value: TfBucketIntelligentTieringConfiguration.TieringProperty[] | cdktn.IResolvable) {
+  public putTiering(value: AwsBucketIntelligentTieringConfiguration.TieringProperty[] | cdktn.IResolvable) {
     this._tiering.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -223,8 +223,8 @@ export class TfBucketIntelligentTieringConfiguration extends cdktn.TerraformReso
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       status: cdktn.stringToTerraform(this._status),
-      filter: tfBucketIntelligentTieringConfigurationFilterPropertyToTerraform(this._filter.internalValue),
-      tiering: cdktn.listMapper(tfBucketIntelligentTieringConfigurationTieringPropertyToTerraform, true)(this._tiering.internalValue),
+      filter: awsBucketIntelligentTieringConfigurationFilterPropertyToTerraform(this._filter.internalValue),
+      tiering: cdktn.listMapper(awsBucketIntelligentTieringConfigurationTieringPropertyToTerraform, true)(this._tiering.internalValue),
     };
   }
 
@@ -261,16 +261,16 @@ export class TfBucketIntelligentTieringConfiguration extends cdktn.TerraformReso
         storageClassType: "string",
       },
       filter: {
-        value: tfBucketIntelligentTieringConfigurationFilterPropertyToHclTerraform(this._filter.internalValue),
+        value: awsBucketIntelligentTieringConfigurationFilterPropertyToHclTerraform(this._filter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBucketIntelligentTieringConfiguration.FilterPropertyList",
+        storageClassType: "AwsBucketIntelligentTieringConfiguration.FilterPropertyList",
       },
       tiering: {
-        value: cdktn.listMapperHcl(tfBucketIntelligentTieringConfigurationTieringPropertyToHclTerraform, true)(this._tiering.internalValue),
+        value: cdktn.listMapperHcl(awsBucketIntelligentTieringConfigurationTieringPropertyToHclTerraform, true)(this._tiering.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfBucketIntelligentTieringConfiguration.TieringPropertyList",
+        storageClassType: "AwsBucketIntelligentTieringConfiguration.TieringPropertyList",
       },
     };
 
@@ -279,7 +279,7 @@ export class TfBucketIntelligentTieringConfiguration extends cdktn.TerraformReso
   }
 }
 
-export function tfBucketIntelligentTieringConfigurationFilterPropertyToTerraform(struct?: TfBucketIntelligentTieringConfiguration.FilterPropertyOutputReference | TfBucketIntelligentTieringConfiguration.FilterProperty): any {
+export function awsBucketIntelligentTieringConfigurationFilterPropertyToTerraform(struct?: AwsBucketIntelligentTieringConfiguration.FilterPropertyOutputReference | AwsBucketIntelligentTieringConfiguration.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -291,7 +291,7 @@ export function tfBucketIntelligentTieringConfigurationFilterPropertyToTerraform
 }
 
 
-export function tfBucketIntelligentTieringConfigurationFilterPropertyToHclTerraform(struct?: TfBucketIntelligentTieringConfiguration.FilterPropertyOutputReference | TfBucketIntelligentTieringConfiguration.FilterProperty): any {
+export function awsBucketIntelligentTieringConfigurationFilterPropertyToHclTerraform(struct?: AwsBucketIntelligentTieringConfiguration.FilterPropertyOutputReference | AwsBucketIntelligentTieringConfiguration.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function tfBucketIntelligentTieringConfigurationFilterPropertyToHclTerraf
 }
 
 
-export function tfBucketIntelligentTieringConfigurationTieringPropertyToTerraform(struct?: TfBucketIntelligentTieringConfiguration.TieringProperty | cdktn.IResolvable): any {
+export function awsBucketIntelligentTieringConfigurationTieringPropertyToTerraform(struct?: AwsBucketIntelligentTieringConfiguration.TieringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function tfBucketIntelligentTieringConfigurationTieringPropertyToTerrafor
 }
 
 
-export function tfBucketIntelligentTieringConfigurationTieringPropertyToHclTerraform(struct?: TfBucketIntelligentTieringConfiguration.TieringProperty | cdktn.IResolvable): any {
+export function awsBucketIntelligentTieringConfigurationTieringPropertyToHclTerraform(struct?: AwsBucketIntelligentTieringConfiguration.TieringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,14 +353,14 @@ export function tfBucketIntelligentTieringConfigurationTieringPropertyToHclTerra
 }
 
 
-export namespace TfBucketIntelligentTieringConfiguration {
+export namespace AwsBucketIntelligentTieringConfiguration {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#prefix TfBucketIntelligentTieringConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#prefix AwsBucketIntelligentTieringConfiguration#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#tags TfBucketIntelligentTieringConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#tags AwsBucketIntelligentTieringConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -436,11 +436,11 @@ export class FilterPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TieringProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#access_tier TfBucketIntelligentTieringConfiguration#access_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#access_tier AwsBucketIntelligentTieringConfiguration#access_tier}
   */
   readonly accessTier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#days TfBucketIntelligentTieringConfiguration#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_intelligent_tiering_configuration#days AwsBucketIntelligentTieringConfiguration#days}
   */
   readonly days: number;
 }

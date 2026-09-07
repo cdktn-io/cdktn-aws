@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEc2TrafficMirrorFilterConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEc2TrafficMirrorFilterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#description TfEc2TrafficMirrorFilter#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#description AwsEc2TrafficMirrorFilter#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#id TfEc2TrafficMirrorFilter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#id AwsEc2TrafficMirrorFilter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#network_services TfEc2TrafficMirrorFilter#network_services}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#network_services AwsEc2TrafficMirrorFilter#network_services}
   */
   readonly networkServices?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#region TfEc2TrafficMirrorFilter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#region AwsEc2TrafficMirrorFilter#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#tags TfEc2TrafficMirrorFilter#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#tags AwsEc2TrafficMirrorFilter#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#tags_all TfEc2TrafficMirrorFilter#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#tags_all AwsEc2TrafficMirrorFilter#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface TfEc2TrafficMirrorFilterConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter aws_ec2_traffic_mirror_filter}
 */
-export class TfEc2TrafficMirrorFilter extends cdktn.TerraformResource {
+export class AwsEc2TrafficMirrorFilter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfEc2TrafficMirrorFilter extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEc2TrafficMirrorFilter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEc2TrafficMirrorFilter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEc2TrafficMirrorFilter to import
-  * @param importFromId The id of the existing TfEc2TrafficMirrorFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEc2TrafficMirrorFilter to import is found
+  * @param importToId The construct id used in the generated config for the AwsEc2TrafficMirrorFilter to import
+  * @param importFromId The id of the existing AwsEc2TrafficMirrorFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_filter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEc2TrafficMirrorFilter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_traffic_mirror_filter", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfEc2TrafficMirrorFilter extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEc2TrafficMirrorFilterConfig = {}
+  * @param options AwsEc2TrafficMirrorFilterConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfEc2TrafficMirrorFilterConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsEc2TrafficMirrorFilterConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_traffic_mirror_filter',
       terraformGeneratorMetadata: {

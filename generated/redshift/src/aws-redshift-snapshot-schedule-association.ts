@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSnapshotScheduleAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSnapshotScheduleAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule_association#cluster_identifier TfSnapshotScheduleAssociation#cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule_association#cluster_identifier AwsSnapshotScheduleAssociation#cluster_identifier}
   */
   readonly clusterIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule_association#id TfSnapshotScheduleAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule_association#id AwsSnapshotScheduleAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface TfSnapshotScheduleAssociationConfig extends cdktn.TerraformMeta
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule_association#region TfSnapshotScheduleAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule_association#region AwsSnapshotScheduleAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule_association#schedule_identifier TfSnapshotScheduleAssociation#schedule_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule_association#schedule_identifier AwsSnapshotScheduleAssociation#schedule_identifier}
   */
   readonly scheduleIdentifier: string;
 }
@@ -32,7 +32,7 @@ export interface TfSnapshotScheduleAssociationConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule_association aws_redshift_snapshot_schedule_association}
 */
-export class TfSnapshotScheduleAssociation extends cdktn.TerraformResource {
+export class AwsSnapshotScheduleAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfSnapshotScheduleAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSnapshotScheduleAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSnapshotScheduleAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSnapshotScheduleAssociation to import
-  * @param importFromId The id of the existing TfSnapshotScheduleAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSnapshotScheduleAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsSnapshotScheduleAssociation to import
+  * @param importFromId The id of the existing AwsSnapshotScheduleAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSnapshotScheduleAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_snapshot_schedule_association", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfSnapshotScheduleAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSnapshotScheduleAssociationConfig
+  * @param options AwsSnapshotScheduleAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSnapshotScheduleAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSnapshotScheduleAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_snapshot_schedule_association',
       terraformGeneratorMetadata: {

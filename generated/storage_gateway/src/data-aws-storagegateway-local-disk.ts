@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfLocalDiskConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsLocalDiskConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk#disk_node DataTfLocalDisk#disk_node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk#disk_node DataAwsLocalDisk#disk_node}
   */
   readonly diskNode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk#disk_path DataTfLocalDisk#disk_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk#disk_path DataAwsLocalDisk#disk_path}
   */
   readonly diskPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk#gateway_arn DataTfLocalDisk#gateway_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk#gateway_arn DataAwsLocalDisk#gateway_arn}
   */
   readonly gatewayArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk#id DataTfLocalDisk#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk#id DataAwsLocalDisk#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,7 +28,7 @@ export interface DataTfLocalDiskConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk#region DataTfLocalDisk#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk#region DataAwsLocalDisk#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface DataTfLocalDiskConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk aws_storagegateway_local_disk}
 */
-export class DataTfLocalDisk extends cdktn.TerraformDataSource {
+export class DataAwsLocalDisk extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfLocalDisk extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfLocalDisk resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsLocalDisk resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfLocalDisk to import
-  * @param importFromId The id of the existing DataTfLocalDisk that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfLocalDisk to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsLocalDisk to import
+  * @param importFromId The id of the existing DataAwsLocalDisk that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/storagegateway_local_disk#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsLocalDisk to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_storagegateway_local_disk", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfLocalDisk extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfLocalDiskConfig
+  * @param options DataAwsLocalDiskConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfLocalDiskConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsLocalDiskConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_storagegateway_local_disk',
       terraformGeneratorMetadata: {

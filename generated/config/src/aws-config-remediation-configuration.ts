@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRemediationConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRemediationConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#automatic TfRemediationConfiguration#automatic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#automatic AwsRemediationConfiguration#automatic}
   */
   readonly automatic?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#config_rule_name TfRemediationConfiguration#config_rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#config_rule_name AwsRemediationConfiguration#config_rule_name}
   */
   readonly configRuleName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#id TfRemediationConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#id AwsRemediationConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#maximum_automatic_attempts TfRemediationConfiguration#maximum_automatic_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#maximum_automatic_attempts AwsRemediationConfiguration#maximum_automatic_attempts}
   */
   readonly maximumAutomaticAttempts?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#region TfRemediationConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#region AwsRemediationConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#resource_type TfRemediationConfiguration#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#resource_type AwsRemediationConfiguration#resource_type}
   */
   readonly resourceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#retry_attempt_seconds TfRemediationConfiguration#retry_attempt_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#retry_attempt_seconds AwsRemediationConfiguration#retry_attempt_seconds}
   */
   readonly retryAttemptSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#target_id TfRemediationConfiguration#target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#target_id AwsRemediationConfiguration#target_id}
   */
   readonly targetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#target_type TfRemediationConfiguration#target_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#target_type AwsRemediationConfiguration#target_type}
   */
   readonly targetType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#target_version TfRemediationConfiguration#target_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#target_version AwsRemediationConfiguration#target_version}
   */
   readonly targetVersion?: string;
   /**
   * execution_controls block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#execution_controls TfRemediationConfiguration#execution_controls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#execution_controls AwsRemediationConfiguration#execution_controls}
   */
-  readonly executionControls?: TfRemediationConfiguration.ExecutionControlsProperty;
+  readonly executionControls?: AwsRemediationConfiguration.ExecutionControlsProperty;
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#parameter TfRemediationConfiguration#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#parameter AwsRemediationConfiguration#parameter}
   */
-  readonly parameter?: TfRemediationConfiguration.ParameterProperty[] | cdktn.IResolvable;
+  readonly parameter?: AwsRemediationConfiguration.ParameterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration aws_config_remediation_configuration}
 */
-export class TfRemediationConfiguration extends cdktn.TerraformResource {
+export class AwsRemediationConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfRemediationConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRemediationConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRemediationConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRemediationConfiguration to import
-  * @param importFromId The id of the existing TfRemediationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRemediationConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsRemediationConfiguration to import
+  * @param importFromId The id of the existing AwsRemediationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRemediationConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_config_remediation_configuration", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfRemediationConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRemediationConfigurationConfig
+  * @param options AwsRemediationConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRemediationConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRemediationConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_config_remediation_configuration',
       terraformGeneratorMetadata: {
@@ -291,11 +291,11 @@ export class TfRemediationConfiguration extends cdktn.TerraformResource {
   }
 
   // execution_controls - computed: false, optional: true, required: false
-  private _executionControls = new TfRemediationConfiguration.ExecutionControlsPropertyOutputReference(this, "execution_controls");
+  private _executionControls = new AwsRemediationConfiguration.ExecutionControlsPropertyOutputReference(this, "execution_controls");
   public get executionControls() {
     return this._executionControls;
   }
-  public putExecutionControls(value: TfRemediationConfiguration.ExecutionControlsProperty) {
+  public putExecutionControls(value: AwsRemediationConfiguration.ExecutionControlsProperty) {
     this._executionControls.internalValue = value;
   }
   public resetExecutionControls() {
@@ -307,11 +307,11 @@ export class TfRemediationConfiguration extends cdktn.TerraformResource {
   }
 
   // parameter - computed: false, optional: true, required: false
-  private _parameter = new TfRemediationConfiguration.ParameterPropertyList(this, "parameter", false);
+  private _parameter = new AwsRemediationConfiguration.ParameterPropertyList(this, "parameter", false);
   public get parameter() {
     return this._parameter;
   }
-  public putParameter(value: TfRemediationConfiguration.ParameterProperty[] | cdktn.IResolvable) {
+  public putParameter(value: AwsRemediationConfiguration.ParameterProperty[] | cdktn.IResolvable) {
     this._parameter.internalValue = value;
   }
   public resetParameter() {
@@ -338,8 +338,8 @@ export class TfRemediationConfiguration extends cdktn.TerraformResource {
       target_id: cdktn.stringToTerraform(this._targetId),
       target_type: cdktn.stringToTerraform(this._targetType),
       target_version: cdktn.stringToTerraform(this._targetVersion),
-      execution_controls: tfRemediationConfigurationExecutionControlsPropertyToTerraform(this._executionControls.internalValue),
-      parameter: cdktn.listMapper(tfRemediationConfigurationParameterPropertyToTerraform, true)(this._parameter.internalValue),
+      execution_controls: awsRemediationConfigurationExecutionControlsPropertyToTerraform(this._executionControls.internalValue),
+      parameter: cdktn.listMapper(awsRemediationConfigurationParameterPropertyToTerraform, true)(this._parameter.internalValue),
     };
   }
 
@@ -406,16 +406,16 @@ export class TfRemediationConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       execution_controls: {
-        value: tfRemediationConfigurationExecutionControlsPropertyToHclTerraform(this._executionControls.internalValue),
+        value: awsRemediationConfigurationExecutionControlsPropertyToHclTerraform(this._executionControls.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRemediationConfiguration.ExecutionControlsPropertyList",
+        storageClassType: "AwsRemediationConfiguration.ExecutionControlsPropertyList",
       },
       parameter: {
-        value: cdktn.listMapperHcl(tfRemediationConfigurationParameterPropertyToHclTerraform, true)(this._parameter.internalValue),
+        value: cdktn.listMapperHcl(awsRemediationConfigurationParameterPropertyToHclTerraform, true)(this._parameter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRemediationConfiguration.ParameterPropertyList",
+        storageClassType: "AwsRemediationConfiguration.ParameterPropertyList",
       },
     };
 
@@ -424,7 +424,7 @@ export class TfRemediationConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfRemediationConfigurationSsmControlsPropertyToTerraform(struct?: TfRemediationConfiguration.SsmControlsPropertyOutputReference | TfRemediationConfiguration.SsmControlsProperty): any {
+export function awsRemediationConfigurationSsmControlsPropertyToTerraform(struct?: AwsRemediationConfiguration.SsmControlsPropertyOutputReference | AwsRemediationConfiguration.SsmControlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function tfRemediationConfigurationSsmControlsPropertyToTerraform(struct?
 }
 
 
-export function tfRemediationConfigurationSsmControlsPropertyToHclTerraform(struct?: TfRemediationConfiguration.SsmControlsPropertyOutputReference | TfRemediationConfiguration.SsmControlsProperty): any {
+export function awsRemediationConfigurationSsmControlsPropertyToHclTerraform(struct?: AwsRemediationConfiguration.SsmControlsPropertyOutputReference | AwsRemediationConfiguration.SsmControlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,25 +461,25 @@ export function tfRemediationConfigurationSsmControlsPropertyToHclTerraform(stru
 }
 
 
-export function tfRemediationConfigurationExecutionControlsPropertyToTerraform(struct?: TfRemediationConfiguration.ExecutionControlsPropertyOutputReference | TfRemediationConfiguration.ExecutionControlsProperty): any {
+export function awsRemediationConfigurationExecutionControlsPropertyToTerraform(struct?: AwsRemediationConfiguration.ExecutionControlsPropertyOutputReference | AwsRemediationConfiguration.ExecutionControlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    ssm_controls: tfRemediationConfigurationSsmControlsPropertyToTerraform(struct!.ssmControls),
+    ssm_controls: awsRemediationConfigurationSsmControlsPropertyToTerraform(struct!.ssmControls),
   }
 }
 
 
-export function tfRemediationConfigurationExecutionControlsPropertyToHclTerraform(struct?: TfRemediationConfiguration.ExecutionControlsPropertyOutputReference | TfRemediationConfiguration.ExecutionControlsProperty): any {
+export function awsRemediationConfigurationExecutionControlsPropertyToHclTerraform(struct?: AwsRemediationConfiguration.ExecutionControlsPropertyOutputReference | AwsRemediationConfiguration.ExecutionControlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     ssm_controls: {
-      value: tfRemediationConfigurationSsmControlsPropertyToHclTerraform(struct!.ssmControls),
+      value: awsRemediationConfigurationSsmControlsPropertyToHclTerraform(struct!.ssmControls),
       isBlock: true,
       type: "list",
       storageClassType: "SsmControlsPropertyList",
@@ -491,7 +491,7 @@ export function tfRemediationConfigurationExecutionControlsPropertyToHclTerrafor
 }
 
 
-export function tfRemediationConfigurationParameterPropertyToTerraform(struct?: TfRemediationConfiguration.ParameterProperty | cdktn.IResolvable): any {
+export function awsRemediationConfigurationParameterPropertyToTerraform(struct?: AwsRemediationConfiguration.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -505,7 +505,7 @@ export function tfRemediationConfigurationParameterPropertyToTerraform(struct?: 
 }
 
 
-export function tfRemediationConfigurationParameterPropertyToHclTerraform(struct?: TfRemediationConfiguration.ParameterProperty | cdktn.IResolvable): any {
+export function awsRemediationConfigurationParameterPropertyToHclTerraform(struct?: AwsRemediationConfiguration.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -542,14 +542,14 @@ export function tfRemediationConfigurationParameterPropertyToHclTerraform(struct
 }
 
 
-export namespace TfRemediationConfiguration {
+export namespace AwsRemediationConfiguration {
 export interface SsmControlsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#concurrent_execution_rate_percentage TfRemediationConfiguration#concurrent_execution_rate_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#concurrent_execution_rate_percentage AwsRemediationConfiguration#concurrent_execution_rate_percentage}
   */
   readonly concurrentExecutionRatePercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#error_percentage TfRemediationConfiguration#error_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#error_percentage AwsRemediationConfiguration#error_percentage}
   */
   readonly errorPercentage?: number;
 }
@@ -627,7 +627,7 @@ export interface ExecutionControlsProperty {
   /**
   * ssm_controls block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#ssm_controls TfRemediationConfiguration#ssm_controls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#ssm_controls AwsRemediationConfiguration#ssm_controls}
   */
   readonly ssmControls?: SsmControlsProperty;
 }
@@ -681,19 +681,19 @@ export class ExecutionControlsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface ParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#name TfRemediationConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#name AwsRemediationConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#resource_value TfRemediationConfiguration#resource_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#resource_value AwsRemediationConfiguration#resource_value}
   */
   readonly resourceValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#static_value TfRemediationConfiguration#static_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#static_value AwsRemediationConfiguration#static_value}
   */
   readonly staticValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#static_values TfRemediationConfiguration#static_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_remediation_configuration#static_values AwsRemediationConfiguration#static_values}
   */
   readonly staticValues?: string[];
 }

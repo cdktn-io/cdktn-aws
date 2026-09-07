@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBudgetResourceAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBudgetResourceAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#budget_name TfBudgetResourceAssociation#budget_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#budget_name AwsBudgetResourceAssociation#budget_name}
   */
   readonly budgetName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#id TfBudgetResourceAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#id AwsBudgetResourceAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,25 +20,25 @@ export interface TfBudgetResourceAssociationConfig extends cdktn.TerraformMetaAr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#region TfBudgetResourceAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#region AwsBudgetResourceAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#resource_id TfBudgetResourceAssociation#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#resource_id AwsBudgetResourceAssociation#resource_id}
   */
   readonly resourceId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#timeouts TfBudgetResourceAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#timeouts AwsBudgetResourceAssociation#timeouts}
   */
-  readonly timeouts?: TfBudgetResourceAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsBudgetResourceAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association aws_servicecatalog_budget_resource_association}
 */
-export class TfBudgetResourceAssociation extends cdktn.TerraformResource {
+export class AwsBudgetResourceAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfBudgetResourceAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBudgetResourceAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBudgetResourceAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBudgetResourceAssociation to import
-  * @param importFromId The id of the existing TfBudgetResourceAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBudgetResourceAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsBudgetResourceAssociation to import
+  * @param importFromId The id of the existing AwsBudgetResourceAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBudgetResourceAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_budget_resource_association", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfBudgetResourceAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBudgetResourceAssociationConfig
+  * @param options AwsBudgetResourceAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBudgetResourceAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBudgetResourceAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_budget_resource_association',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class TfBudgetResourceAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfBudgetResourceAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsBudgetResourceAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfBudgetResourceAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsBudgetResourceAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -181,7 +181,7 @@ export class TfBudgetResourceAssociation extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       resource_id: cdktn.stringToTerraform(this._resourceId),
-      timeouts: tfBudgetResourceAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsBudgetResourceAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class TfBudgetResourceAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfBudgetResourceAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsBudgetResourceAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfBudgetResourceAssociation.TimeoutsProperty",
+        storageClassType: "AwsBudgetResourceAssociation.TimeoutsProperty",
       },
     };
 
@@ -224,7 +224,7 @@ export class TfBudgetResourceAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfBudgetResourceAssociationTimeoutsPropertyToTerraform(struct?: TfBudgetResourceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBudgetResourceAssociationTimeoutsPropertyToTerraform(struct?: AwsBudgetResourceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -237,7 +237,7 @@ export function tfBudgetResourceAssociationTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function tfBudgetResourceAssociationTimeoutsPropertyToHclTerraform(struct?: TfBudgetResourceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBudgetResourceAssociationTimeoutsPropertyToHclTerraform(struct?: AwsBudgetResourceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,18 +268,18 @@ export function tfBudgetResourceAssociationTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace TfBudgetResourceAssociation {
+export namespace AwsBudgetResourceAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#create TfBudgetResourceAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#create AwsBudgetResourceAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#delete TfBudgetResourceAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#delete AwsBudgetResourceAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#read TfBudgetResourceAssociation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_budget_resource_association#read AwsBudgetResourceAssociation#read}
   */
   readonly read?: string;
 }

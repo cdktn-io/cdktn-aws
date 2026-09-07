@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfProjectConfig extends cdktn.TerraformMetaArguments {
+export interface AwsProjectConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#id TfProject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#id AwsProject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#project_description TfProject#project_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#project_description AwsProject#project_description}
   */
   readonly projectDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#project_name TfProject#project_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#project_name AwsProject#project_name}
   */
   readonly projectName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#region TfProject#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#region AwsProject#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#tags TfProject#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#tags AwsProject#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#tags_all TfProject#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#tags_all AwsProject#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * service_catalog_provisioning_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#service_catalog_provisioning_details TfProject#service_catalog_provisioning_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#service_catalog_provisioning_details AwsProject#service_catalog_provisioning_details}
   */
-  readonly serviceCatalogProvisioningDetails: TfProject.ServiceCatalogProvisioningDetailsProperty;
+  readonly serviceCatalogProvisioningDetails: AwsProject.ServiceCatalogProvisioningDetailsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project aws_sagemaker_project}
 */
-export class TfProject extends cdktn.TerraformResource {
+export class AwsProject extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfProject extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfProject resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsProject resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfProject to import
-  * @param importFromId The id of the existing TfProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfProject to import is found
+  * @param importToId The construct id used in the generated config for the AwsProject to import
+  * @param importFromId The id of the existing AwsProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsProject to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_project", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfProject extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfProjectConfig
+  * @param options AwsProjectConfig
   */
-  public constructor(scope: Construct, id: string, config: TfProjectConfig) {
+  public constructor(scope: Construct, id: string, config: AwsProjectConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_project',
       terraformGeneratorMetadata: {
@@ -211,11 +211,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // service_catalog_provisioning_details - computed: false, optional: false, required: true
-  private _serviceCatalogProvisioningDetails = new TfProject.ServiceCatalogProvisioningDetailsPropertyOutputReference(this, "service_catalog_provisioning_details");
+  private _serviceCatalogProvisioningDetails = new AwsProject.ServiceCatalogProvisioningDetailsPropertyOutputReference(this, "service_catalog_provisioning_details");
   public get serviceCatalogProvisioningDetails() {
     return this._serviceCatalogProvisioningDetails;
   }
-  public putServiceCatalogProvisioningDetails(value: TfProject.ServiceCatalogProvisioningDetailsProperty) {
+  public putServiceCatalogProvisioningDetails(value: AwsProject.ServiceCatalogProvisioningDetailsProperty) {
     this._serviceCatalogProvisioningDetails.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -235,7 +235,7 @@ export class TfProject extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      service_catalog_provisioning_details: tfProjectServiceCatalogProvisioningDetailsPropertyToTerraform(this._serviceCatalogProvisioningDetails.internalValue),
+      service_catalog_provisioning_details: awsProjectServiceCatalogProvisioningDetailsPropertyToTerraform(this._serviceCatalogProvisioningDetails.internalValue),
     };
   }
 
@@ -278,10 +278,10 @@ export class TfProject extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       service_catalog_provisioning_details: {
-        value: tfProjectServiceCatalogProvisioningDetailsPropertyToHclTerraform(this._serviceCatalogProvisioningDetails.internalValue),
+        value: awsProjectServiceCatalogProvisioningDetailsPropertyToHclTerraform(this._serviceCatalogProvisioningDetails.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProject.ServiceCatalogProvisioningDetailsPropertyList",
+        storageClassType: "AwsProject.ServiceCatalogProvisioningDetailsPropertyList",
       },
     };
 
@@ -290,7 +290,7 @@ export class TfProject extends cdktn.TerraformResource {
   }
 }
 
-export function tfProjectProvisioningParameterPropertyToTerraform(struct?: TfProject.ProvisioningParameterProperty | cdktn.IResolvable): any {
+export function awsProjectProvisioningParameterPropertyToTerraform(struct?: AwsProject.ProvisioningParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function tfProjectProvisioningParameterPropertyToTerraform(struct?: TfPro
 }
 
 
-export function tfProjectProvisioningParameterPropertyToHclTerraform(struct?: TfProject.ProvisioningParameterProperty | cdktn.IResolvable): any {
+export function awsProjectProvisioningParameterPropertyToHclTerraform(struct?: AwsProject.ProvisioningParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function tfProjectProvisioningParameterPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfProjectServiceCatalogProvisioningDetailsPropertyToTerraform(struct?: TfProject.ServiceCatalogProvisioningDetailsPropertyOutputReference | TfProject.ServiceCatalogProvisioningDetailsProperty): any {
+export function awsProjectServiceCatalogProvisioningDetailsPropertyToTerraform(struct?: AwsProject.ServiceCatalogProvisioningDetailsPropertyOutputReference | AwsProject.ServiceCatalogProvisioningDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,12 +336,12 @@ export function tfProjectServiceCatalogProvisioningDetailsPropertyToTerraform(st
     path_id: cdktn.stringToTerraform(struct!.pathId),
     product_id: cdktn.stringToTerraform(struct!.productId),
     provisioning_artifact_id: cdktn.stringToTerraform(struct!.provisioningArtifactId),
-    provisioning_parameter: cdktn.listMapper(tfProjectProvisioningParameterPropertyToTerraform, true)(struct!.provisioningParameter),
+    provisioning_parameter: cdktn.listMapper(awsProjectProvisioningParameterPropertyToTerraform, true)(struct!.provisioningParameter),
   }
 }
 
 
-export function tfProjectServiceCatalogProvisioningDetailsPropertyToHclTerraform(struct?: TfProject.ServiceCatalogProvisioningDetailsPropertyOutputReference | TfProject.ServiceCatalogProvisioningDetailsProperty): any {
+export function awsProjectServiceCatalogProvisioningDetailsPropertyToHclTerraform(struct?: AwsProject.ServiceCatalogProvisioningDetailsPropertyOutputReference | AwsProject.ServiceCatalogProvisioningDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function tfProjectServiceCatalogProvisioningDetailsPropertyToHclTerraform
       storageClassType: "string",
     },
     provisioning_parameter: {
-      value: cdktn.listMapperHcl(tfProjectProvisioningParameterPropertyToHclTerraform, true)(struct!.provisioningParameter),
+      value: cdktn.listMapperHcl(awsProjectProvisioningParameterPropertyToHclTerraform, true)(struct!.provisioningParameter),
       isBlock: true,
       type: "list",
       storageClassType: "ProvisioningParameterPropertyList",
@@ -378,14 +378,14 @@ export function tfProjectServiceCatalogProvisioningDetailsPropertyToHclTerraform
 }
 
 
-export namespace TfProject {
+export namespace AwsProject {
 export interface ProvisioningParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#key TfProject#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#key AwsProject#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#value TfProject#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#value AwsProject#value}
   */
   readonly value?: string;
 }
@@ -490,21 +490,21 @@ export class ProvisioningParameterPropertyList extends cdktn.ComplexList {
 }
 export interface ServiceCatalogProvisioningDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#path_id TfProject#path_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#path_id AwsProject#path_id}
   */
   readonly pathId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#product_id TfProject#product_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#product_id AwsProject#product_id}
   */
   readonly productId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#provisioning_artifact_id TfProject#provisioning_artifact_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#provisioning_artifact_id AwsProject#provisioning_artifact_id}
   */
   readonly provisioningArtifactId?: string;
   /**
   * provisioning_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#provisioning_parameter TfProject#provisioning_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_project#provisioning_parameter AwsProject#provisioning_parameter}
   */
   readonly provisioningParameter?: ProvisioningParameterProperty[] | cdktn.IResolvable;
 }

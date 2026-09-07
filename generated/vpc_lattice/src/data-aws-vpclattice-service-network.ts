@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfServiceNetworkConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsServiceNetworkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network#id DataTfServiceNetwork#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network#id DataAwsServiceNetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,15 +16,15 @@ export interface DataTfServiceNetworkConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network#region DataTfServiceNetwork#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network#region DataAwsServiceNetwork#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network#service_network_identifier DataTfServiceNetwork#service_network_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network#service_network_identifier DataAwsServiceNetwork#service_network_identifier}
   */
   readonly serviceNetworkIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network#tags DataTfServiceNetwork#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network#tags DataAwsServiceNetwork#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataTfServiceNetworkConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network aws_vpclattice_service_network}
 */
-export class DataTfServiceNetwork extends cdktn.TerraformDataSource {
+export class DataAwsServiceNetwork extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfServiceNetwork extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfServiceNetwork resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsServiceNetwork resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfServiceNetwork to import
-  * @param importFromId The id of the existing DataTfServiceNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfServiceNetwork to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsServiceNetwork to import
+  * @param importFromId The id of the existing DataAwsServiceNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsServiceNetwork to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_service_network", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfServiceNetwork extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfServiceNetworkConfig
+  * @param options DataAwsServiceNetworkConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfServiceNetworkConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsServiceNetworkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_service_network',
       terraformGeneratorMetadata: {

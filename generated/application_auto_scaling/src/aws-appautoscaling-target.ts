@@ -5,64 +5,64 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTargetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTargetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#id TfTarget#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#id AwsTarget#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#max_capacity TfTarget#max_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#max_capacity AwsTarget#max_capacity}
   */
   readonly maxCapacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#min_capacity TfTarget#min_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#min_capacity AwsTarget#min_capacity}
   */
   readonly minCapacity: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#region TfTarget#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#region AwsTarget#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#resource_id TfTarget#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#resource_id AwsTarget#resource_id}
   */
   readonly resourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#role_arn TfTarget#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#role_arn AwsTarget#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#scalable_dimension TfTarget#scalable_dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#scalable_dimension AwsTarget#scalable_dimension}
   */
   readonly scalableDimension: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#service_namespace TfTarget#service_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#service_namespace AwsTarget#service_namespace}
   */
   readonly serviceNamespace: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#tags TfTarget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#tags AwsTarget#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#tags_all TfTarget#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#tags_all AwsTarget#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * suspended_state block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#suspended_state TfTarget#suspended_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#suspended_state AwsTarget#suspended_state}
   */
-  readonly suspendedState?: TfTarget.SuspendedStateProperty;
+  readonly suspendedState?: AwsTarget.SuspendedStateProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target aws_appautoscaling_target}
 */
-export class TfTarget extends cdktn.TerraformResource {
+export class AwsTarget extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -73,11 +73,11 @@ export class TfTarget extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTarget resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTarget resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTarget to import
-  * @param importFromId The id of the existing TfTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTarget to import is found
+  * @param importToId The construct id used in the generated config for the AwsTarget to import
+  * @param importFromId The id of the existing AwsTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTarget to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appautoscaling_target", importId: importFromId, provider });
@@ -92,9 +92,9 @@ export class TfTarget extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTargetConfig
+  * @param options AwsTargetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTargetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTargetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appautoscaling_target',
       terraformGeneratorMetadata: {
@@ -278,11 +278,11 @@ export class TfTarget extends cdktn.TerraformResource {
   }
 
   // suspended_state - computed: false, optional: true, required: false
-  private _suspendedState = new TfTarget.SuspendedStatePropertyOutputReference(this, "suspended_state");
+  private _suspendedState = new AwsTarget.SuspendedStatePropertyOutputReference(this, "suspended_state");
   public get suspendedState() {
     return this._suspendedState;
   }
-  public putSuspendedState(value: TfTarget.SuspendedStateProperty) {
+  public putSuspendedState(value: AwsTarget.SuspendedStateProperty) {
     this._suspendedState.internalValue = value;
   }
   public resetSuspendedState() {
@@ -309,7 +309,7 @@ export class TfTarget extends cdktn.TerraformResource {
       service_namespace: cdktn.stringToTerraform(this._serviceNamespace),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      suspended_state: tfTargetSuspendedStatePropertyToTerraform(this._suspendedState.internalValue),
+      suspended_state: awsTargetSuspendedStatePropertyToTerraform(this._suspendedState.internalValue),
     };
   }
 
@@ -376,10 +376,10 @@ export class TfTarget extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       suspended_state: {
-        value: tfTargetSuspendedStatePropertyToHclTerraform(this._suspendedState.internalValue),
+        value: awsTargetSuspendedStatePropertyToHclTerraform(this._suspendedState.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTarget.SuspendedStatePropertyList",
+        storageClassType: "AwsTarget.SuspendedStatePropertyList",
       },
     };
 
@@ -388,7 +388,7 @@ export class TfTarget extends cdktn.TerraformResource {
   }
 }
 
-export function tfTargetSuspendedStatePropertyToTerraform(struct?: TfTarget.SuspendedStatePropertyOutputReference | TfTarget.SuspendedStateProperty): any {
+export function awsTargetSuspendedStatePropertyToTerraform(struct?: AwsTarget.SuspendedStatePropertyOutputReference | AwsTarget.SuspendedStateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function tfTargetSuspendedStatePropertyToTerraform(struct?: TfTarget.Susp
 }
 
 
-export function tfTargetSuspendedStatePropertyToHclTerraform(struct?: TfTarget.SuspendedStatePropertyOutputReference | TfTarget.SuspendedStateProperty): any {
+export function awsTargetSuspendedStatePropertyToHclTerraform(struct?: AwsTarget.SuspendedStatePropertyOutputReference | AwsTarget.SuspendedStateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -432,18 +432,18 @@ export function tfTargetSuspendedStatePropertyToHclTerraform(struct?: TfTarget.S
 }
 
 
-export namespace TfTarget {
+export namespace AwsTarget {
 export interface SuspendedStateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#dynamic_scaling_in_suspended TfTarget#dynamic_scaling_in_suspended}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#dynamic_scaling_in_suspended AwsTarget#dynamic_scaling_in_suspended}
   */
   readonly dynamicScalingInSuspended?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#dynamic_scaling_out_suspended TfTarget#dynamic_scaling_out_suspended}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#dynamic_scaling_out_suspended AwsTarget#dynamic_scaling_out_suspended}
   */
   readonly dynamicScalingOutSuspended?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#scheduled_scaling_suspended TfTarget#scheduled_scaling_suspended}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#scheduled_scaling_suspended AwsTarget#scheduled_scaling_suspended}
   */
   readonly scheduledScalingSuspended?: boolean | cdktn.IResolvable;
 }

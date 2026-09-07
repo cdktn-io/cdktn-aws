@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRuntimeVersionsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRuntimeVersionsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/synthetics_runtime_versions#region DataTfRuntimeVersions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/synthetics_runtime_versions#region DataAwsRuntimeVersions#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface DataTfRuntimeVersionsConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/synthetics_runtime_versions aws_synthetics_runtime_versions}
 */
-export class DataTfRuntimeVersions extends cdktn.TerraformDataSource {
+export class DataAwsRuntimeVersions extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class DataTfRuntimeVersions extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRuntimeVersions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRuntimeVersions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRuntimeVersions to import
-  * @param importFromId The id of the existing DataTfRuntimeVersions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/synthetics_runtime_versions#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRuntimeVersions to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRuntimeVersions to import
+  * @param importFromId The id of the existing DataAwsRuntimeVersions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/synthetics_runtime_versions#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRuntimeVersions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_synthetics_runtime_versions", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class DataTfRuntimeVersions extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRuntimeVersionsConfig = {}
+  * @param options DataAwsRuntimeVersionsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfRuntimeVersionsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsRuntimeVersionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_synthetics_runtime_versions',
       terraformGeneratorMetadata: {
@@ -94,7 +94,7 @@ export class DataTfRuntimeVersions extends cdktn.TerraformDataSource {
   }
 
   // runtime_versions - computed: true, optional: false, required: false
-  private _runtimeVersions = new DataTfRuntimeVersions.RuntimeVersionsPropertyList(this, "runtime_versions", false);
+  private _runtimeVersions = new DataAwsRuntimeVersions.RuntimeVersionsPropertyList(this, "runtime_versions", false);
   public get runtimeVersions() {
     return this._runtimeVersions;
   }
@@ -124,7 +124,7 @@ export class DataTfRuntimeVersions extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfRuntimeVersionsRuntimeVersionsPropertyToTerraform(struct?: DataTfRuntimeVersions.RuntimeVersionsProperty): any {
+export function dataAwsRuntimeVersionsRuntimeVersionsPropertyToTerraform(struct?: DataAwsRuntimeVersions.RuntimeVersionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -134,7 +134,7 @@ export function dataTfRuntimeVersionsRuntimeVersionsPropertyToTerraform(struct?:
 }
 
 
-export function dataTfRuntimeVersionsRuntimeVersionsPropertyToHclTerraform(struct?: DataTfRuntimeVersions.RuntimeVersionsProperty): any {
+export function dataAwsRuntimeVersionsRuntimeVersionsPropertyToHclTerraform(struct?: DataAwsRuntimeVersions.RuntimeVersionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -145,7 +145,7 @@ export function dataTfRuntimeVersionsRuntimeVersionsPropertyToHclTerraform(struc
 }
 
 
-export namespace DataTfRuntimeVersions {
+export namespace DataAwsRuntimeVersions {
 export interface RuntimeVersionsProperty {
 }
 export class RuntimeVersionsPropertyOutputReference extends cdktn.ComplexObject {

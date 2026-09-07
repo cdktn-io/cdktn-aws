@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLifecyclePolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLifecyclePolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#default_policy TfLifecyclePolicy#default_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#default_policy AwsLifecyclePolicy#default_policy}
   */
   readonly defaultPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#description TfLifecyclePolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#description AwsLifecyclePolicy#description}
   */
   readonly description: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#execution_role_arn TfLifecyclePolicy#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#execution_role_arn AwsLifecyclePolicy#execution_role_arn}
   */
   readonly executionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#id TfLifecyclePolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#id AwsLifecyclePolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,33 +28,33 @@ export interface TfLifecyclePolicyConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#region TfLifecyclePolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#region AwsLifecyclePolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#state TfLifecyclePolicy#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#state AwsLifecyclePolicy#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#tags TfLifecyclePolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#tags AwsLifecyclePolicy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#tags_all TfLifecyclePolicy#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#tags_all AwsLifecyclePolicy#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * policy_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#policy_details TfLifecyclePolicy#policy_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#policy_details AwsLifecyclePolicy#policy_details}
   */
-  readonly policyDetails: TfLifecyclePolicy.PolicyDetailsProperty;
+  readonly policyDetails: AwsLifecyclePolicy.PolicyDetailsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy aws_dlm_lifecycle_policy}
 */
-export class TfLifecyclePolicy extends cdktn.TerraformResource {
+export class AwsLifecyclePolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLifecyclePolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLifecyclePolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLifecyclePolicy to import
-  * @param importFromId The id of the existing TfLifecyclePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLifecyclePolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsLifecyclePolicy to import
+  * @param importFromId The id of the existing AwsLifecyclePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLifecyclePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dlm_lifecycle_policy", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLifecyclePolicyConfig
+  * @param options AwsLifecyclePolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLifecyclePolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLifecyclePolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dlm_lifecycle_policy',
       terraformGeneratorMetadata: {
@@ -245,11 +245,11 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
   }
 
   // policy_details - computed: false, optional: false, required: true
-  private _policyDetails = new TfLifecyclePolicy.PolicyDetailsPropertyOutputReference(this, "policy_details");
+  private _policyDetails = new AwsLifecyclePolicy.PolicyDetailsPropertyOutputReference(this, "policy_details");
   public get policyDetails() {
     return this._policyDetails;
   }
-  public putPolicyDetails(value: TfLifecyclePolicy.PolicyDetailsProperty) {
+  public putPolicyDetails(value: AwsLifecyclePolicy.PolicyDetailsProperty) {
     this._policyDetails.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -271,7 +271,7 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
       state: cdktn.stringToTerraform(this._state),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      policy_details: tfLifecyclePolicyPolicyDetailsPropertyToTerraform(this._policyDetails.internalValue),
+      policy_details: awsLifecyclePolicyPolicyDetailsPropertyToTerraform(this._policyDetails.internalValue),
     };
   }
 
@@ -326,10 +326,10 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       policy_details: {
-        value: tfLifecyclePolicyPolicyDetailsPropertyToHclTerraform(this._policyDetails.internalValue),
+        value: awsLifecyclePolicyPolicyDetailsPropertyToHclTerraform(this._policyDetails.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLifecyclePolicy.PolicyDetailsPropertyList",
+        storageClassType: "AwsLifecyclePolicy.PolicyDetailsPropertyList",
       },
     };
 
@@ -338,7 +338,7 @@ export class TfLifecyclePolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfLifecyclePolicyEncryptionConfigurationPropertyToTerraform(struct?: TfLifecyclePolicy.EncryptionConfigurationPropertyOutputReference | TfLifecyclePolicy.EncryptionConfigurationProperty): any {
+export function awsLifecyclePolicyEncryptionConfigurationPropertyToTerraform(struct?: AwsLifecyclePolicy.EncryptionConfigurationPropertyOutputReference | AwsLifecyclePolicy.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function tfLifecyclePolicyEncryptionConfigurationPropertyToTerraform(stru
 }
 
 
-export function tfLifecyclePolicyEncryptionConfigurationPropertyToHclTerraform(struct?: TfLifecyclePolicy.EncryptionConfigurationPropertyOutputReference | TfLifecyclePolicy.EncryptionConfigurationProperty): any {
+export function awsLifecyclePolicyEncryptionConfigurationPropertyToHclTerraform(struct?: AwsLifecyclePolicy.EncryptionConfigurationPropertyOutputReference | AwsLifecyclePolicy.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,7 +375,7 @@ export function tfLifecyclePolicyEncryptionConfigurationPropertyToHclTerraform(s
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsActionCrossRegionCopyRetainRulePropertyToTerraform(struct?: TfLifecyclePolicy.PolicyDetailsActionCrossRegionCopyRetainRulePropertyOutputReference | TfLifecyclePolicy.PolicyDetailsActionCrossRegionCopyRetainRuleProperty): any {
+export function awsLifecyclePolicyPolicyDetailsActionCrossRegionCopyRetainRulePropertyToTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsActionCrossRegionCopyRetainRulePropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsActionCrossRegionCopyRetainRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function tfLifecyclePolicyPolicyDetailsActionCrossRegionCopyRetainRulePro
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsActionCrossRegionCopyRetainRulePropertyToHclTerraform(struct?: TfLifecyclePolicy.PolicyDetailsActionCrossRegionCopyRetainRulePropertyOutputReference | TfLifecyclePolicy.PolicyDetailsActionCrossRegionCopyRetainRuleProperty): any {
+export function awsLifecyclePolicyPolicyDetailsActionCrossRegionCopyRetainRulePropertyToHclTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsActionCrossRegionCopyRetainRulePropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsActionCrossRegionCopyRetainRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,20 +412,20 @@ export function tfLifecyclePolicyPolicyDetailsActionCrossRegionCopyRetainRulePro
 }
 
 
-export function tfLifecyclePolicyCrossRegionCopyPropertyToTerraform(struct?: TfLifecyclePolicy.CrossRegionCopyProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyCrossRegionCopyPropertyToTerraform(struct?: AwsLifecyclePolicy.CrossRegionCopyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     target: cdktn.stringToTerraform(struct!.target),
-    encryption_configuration: tfLifecyclePolicyEncryptionConfigurationPropertyToTerraform(struct!.encryptionConfiguration),
-    retain_rule: tfLifecyclePolicyPolicyDetailsActionCrossRegionCopyRetainRulePropertyToTerraform(struct!.retainRule),
+    encryption_configuration: awsLifecyclePolicyEncryptionConfigurationPropertyToTerraform(struct!.encryptionConfiguration),
+    retain_rule: awsLifecyclePolicyPolicyDetailsActionCrossRegionCopyRetainRulePropertyToTerraform(struct!.retainRule),
   }
 }
 
 
-export function tfLifecyclePolicyCrossRegionCopyPropertyToHclTerraform(struct?: TfLifecyclePolicy.CrossRegionCopyProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyCrossRegionCopyPropertyToHclTerraform(struct?: AwsLifecyclePolicy.CrossRegionCopyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -438,13 +438,13 @@ export function tfLifecyclePolicyCrossRegionCopyPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     encryption_configuration: {
-      value: tfLifecyclePolicyEncryptionConfigurationPropertyToHclTerraform(struct!.encryptionConfiguration),
+      value: awsLifecyclePolicyEncryptionConfigurationPropertyToHclTerraform(struct!.encryptionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "EncryptionConfigurationPropertyList",
     },
     retain_rule: {
-      value: tfLifecyclePolicyPolicyDetailsActionCrossRegionCopyRetainRulePropertyToHclTerraform(struct!.retainRule),
+      value: awsLifecyclePolicyPolicyDetailsActionCrossRegionCopyRetainRulePropertyToHclTerraform(struct!.retainRule),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyDetailsActionCrossRegionCopyRetainRulePropertyList",
@@ -456,19 +456,19 @@ export function tfLifecyclePolicyCrossRegionCopyPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfLifecyclePolicyActionPropertyToTerraform(struct?: TfLifecyclePolicy.ActionPropertyOutputReference | TfLifecyclePolicy.ActionProperty): any {
+export function awsLifecyclePolicyActionPropertyToTerraform(struct?: AwsLifecyclePolicy.ActionPropertyOutputReference | AwsLifecyclePolicy.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    cross_region_copy: cdktn.listMapper(tfLifecyclePolicyCrossRegionCopyPropertyToTerraform, true)(struct!.crossRegionCopy),
+    cross_region_copy: cdktn.listMapper(awsLifecyclePolicyCrossRegionCopyPropertyToTerraform, true)(struct!.crossRegionCopy),
   }
 }
 
 
-export function tfLifecyclePolicyActionPropertyToHclTerraform(struct?: TfLifecyclePolicy.ActionPropertyOutputReference | TfLifecyclePolicy.ActionProperty): any {
+export function awsLifecyclePolicyActionPropertyToHclTerraform(struct?: AwsLifecyclePolicy.ActionPropertyOutputReference | AwsLifecyclePolicy.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function tfLifecyclePolicyActionPropertyToHclTerraform(struct?: TfLifecyc
       storageClassType: "string",
     },
     cross_region_copy: {
-      value: cdktn.listMapperHcl(tfLifecyclePolicyCrossRegionCopyPropertyToHclTerraform, true)(struct!.crossRegionCopy),
+      value: cdktn.listMapperHcl(awsLifecyclePolicyCrossRegionCopyPropertyToHclTerraform, true)(struct!.crossRegionCopy),
       isBlock: true,
       type: "set",
       storageClassType: "CrossRegionCopyPropertyList",
@@ -493,7 +493,7 @@ export function tfLifecyclePolicyActionPropertyToHclTerraform(struct?: TfLifecyc
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsEventSourceParametersPropertyToTerraform(struct?: TfLifecyclePolicy.PolicyDetailsEventSourceParametersPropertyOutputReference | TfLifecyclePolicy.PolicyDetailsEventSourceParametersProperty): any {
+export function awsLifecyclePolicyPolicyDetailsEventSourceParametersPropertyToTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsEventSourceParametersPropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsEventSourceParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,7 +506,7 @@ export function tfLifecyclePolicyPolicyDetailsEventSourceParametersPropertyToTer
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsEventSourceParametersPropertyToHclTerraform(struct?: TfLifecyclePolicy.PolicyDetailsEventSourceParametersPropertyOutputReference | TfLifecyclePolicy.PolicyDetailsEventSourceParametersProperty): any {
+export function awsLifecyclePolicyPolicyDetailsEventSourceParametersPropertyToHclTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsEventSourceParametersPropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsEventSourceParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -537,19 +537,19 @@ export function tfLifecyclePolicyPolicyDetailsEventSourceParametersPropertyToHcl
 }
 
 
-export function tfLifecyclePolicyEventSourcePropertyToTerraform(struct?: TfLifecyclePolicy.EventSourcePropertyOutputReference | TfLifecyclePolicy.EventSourceProperty): any {
+export function awsLifecyclePolicyEventSourcePropertyToTerraform(struct?: AwsLifecyclePolicy.EventSourcePropertyOutputReference | AwsLifecyclePolicy.EventSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    parameters: tfLifecyclePolicyPolicyDetailsEventSourceParametersPropertyToTerraform(struct!.parameters),
+    parameters: awsLifecyclePolicyPolicyDetailsEventSourceParametersPropertyToTerraform(struct!.parameters),
   }
 }
 
 
-export function tfLifecyclePolicyEventSourcePropertyToHclTerraform(struct?: TfLifecyclePolicy.EventSourcePropertyOutputReference | TfLifecyclePolicy.EventSourceProperty): any {
+export function awsLifecyclePolicyEventSourcePropertyToHclTerraform(struct?: AwsLifecyclePolicy.EventSourcePropertyOutputReference | AwsLifecyclePolicy.EventSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -562,7 +562,7 @@ export function tfLifecyclePolicyEventSourcePropertyToHclTerraform(struct?: TfLi
       storageClassType: "string",
     },
     parameters: {
-      value: tfLifecyclePolicyPolicyDetailsEventSourceParametersPropertyToHclTerraform(struct!.parameters),
+      value: awsLifecyclePolicyPolicyDetailsEventSourceParametersPropertyToHclTerraform(struct!.parameters),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyDetailsEventSourceParametersPropertyList",
@@ -574,7 +574,7 @@ export function tfLifecyclePolicyEventSourcePropertyToHclTerraform(struct?: TfLi
 }
 
 
-export function tfLifecyclePolicyExclusionsPropertyToTerraform(struct?: TfLifecyclePolicy.ExclusionsPropertyOutputReference | TfLifecyclePolicy.ExclusionsProperty): any {
+export function awsLifecyclePolicyExclusionsPropertyToTerraform(struct?: AwsLifecyclePolicy.ExclusionsPropertyOutputReference | AwsLifecyclePolicy.ExclusionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,7 +587,7 @@ export function tfLifecyclePolicyExclusionsPropertyToTerraform(struct?: TfLifecy
 }
 
 
-export function tfLifecyclePolicyExclusionsPropertyToHclTerraform(struct?: TfLifecyclePolicy.ExclusionsPropertyOutputReference | TfLifecyclePolicy.ExclusionsProperty): any {
+export function awsLifecyclePolicyExclusionsPropertyToHclTerraform(struct?: AwsLifecyclePolicy.ExclusionsPropertyOutputReference | AwsLifecyclePolicy.ExclusionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -618,7 +618,7 @@ export function tfLifecyclePolicyExclusionsPropertyToHclTerraform(struct?: TfLif
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsParametersPropertyToTerraform(struct?: TfLifecyclePolicy.PolicyDetailsParametersPropertyOutputReference | TfLifecyclePolicy.PolicyDetailsParametersProperty): any {
+export function awsLifecyclePolicyPolicyDetailsParametersPropertyToTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsParametersPropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -631,7 +631,7 @@ export function tfLifecyclePolicyPolicyDetailsParametersPropertyToTerraform(stru
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsParametersPropertyToHclTerraform(struct?: TfLifecyclePolicy.PolicyDetailsParametersPropertyOutputReference | TfLifecyclePolicy.PolicyDetailsParametersProperty): any {
+export function awsLifecyclePolicyPolicyDetailsParametersPropertyToHclTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsParametersPropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -662,7 +662,7 @@ export function tfLifecyclePolicyPolicyDetailsParametersPropertyToHclTerraform(s
 }
 
 
-export function tfLifecyclePolicyRetentionArchiveTierPropertyToTerraform(struct?: TfLifecyclePolicy.RetentionArchiveTierPropertyOutputReference | TfLifecyclePolicy.RetentionArchiveTierProperty): any {
+export function awsLifecyclePolicyRetentionArchiveTierPropertyToTerraform(struct?: AwsLifecyclePolicy.RetentionArchiveTierPropertyOutputReference | AwsLifecyclePolicy.RetentionArchiveTierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -675,7 +675,7 @@ export function tfLifecyclePolicyRetentionArchiveTierPropertyToTerraform(struct?
 }
 
 
-export function tfLifecyclePolicyRetentionArchiveTierPropertyToHclTerraform(struct?: TfLifecyclePolicy.RetentionArchiveTierPropertyOutputReference | TfLifecyclePolicy.RetentionArchiveTierProperty): any {
+export function awsLifecyclePolicyRetentionArchiveTierPropertyToHclTerraform(struct?: AwsLifecyclePolicy.RetentionArchiveTierPropertyOutputReference | AwsLifecyclePolicy.RetentionArchiveTierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -706,25 +706,25 @@ export function tfLifecyclePolicyRetentionArchiveTierPropertyToHclTerraform(stru
 }
 
 
-export function tfLifecyclePolicyArchiveRetainRulePropertyToTerraform(struct?: TfLifecyclePolicy.ArchiveRetainRulePropertyOutputReference | TfLifecyclePolicy.ArchiveRetainRuleProperty): any {
+export function awsLifecyclePolicyArchiveRetainRulePropertyToTerraform(struct?: AwsLifecyclePolicy.ArchiveRetainRulePropertyOutputReference | AwsLifecyclePolicy.ArchiveRetainRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    retention_archive_tier: tfLifecyclePolicyRetentionArchiveTierPropertyToTerraform(struct!.retentionArchiveTier),
+    retention_archive_tier: awsLifecyclePolicyRetentionArchiveTierPropertyToTerraform(struct!.retentionArchiveTier),
   }
 }
 
 
-export function tfLifecyclePolicyArchiveRetainRulePropertyToHclTerraform(struct?: TfLifecyclePolicy.ArchiveRetainRulePropertyOutputReference | TfLifecyclePolicy.ArchiveRetainRuleProperty): any {
+export function awsLifecyclePolicyArchiveRetainRulePropertyToHclTerraform(struct?: AwsLifecyclePolicy.ArchiveRetainRulePropertyOutputReference | AwsLifecyclePolicy.ArchiveRetainRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     retention_archive_tier: {
-      value: tfLifecyclePolicyRetentionArchiveTierPropertyToHclTerraform(struct!.retentionArchiveTier),
+      value: awsLifecyclePolicyRetentionArchiveTierPropertyToHclTerraform(struct!.retentionArchiveTier),
       isBlock: true,
       type: "list",
       storageClassType: "RetentionArchiveTierPropertyList",
@@ -736,25 +736,25 @@ export function tfLifecyclePolicyArchiveRetainRulePropertyToHclTerraform(struct?
 }
 
 
-export function tfLifecyclePolicyArchiveRulePropertyToTerraform(struct?: TfLifecyclePolicy.ArchiveRulePropertyOutputReference | TfLifecyclePolicy.ArchiveRuleProperty): any {
+export function awsLifecyclePolicyArchiveRulePropertyToTerraform(struct?: AwsLifecyclePolicy.ArchiveRulePropertyOutputReference | AwsLifecyclePolicy.ArchiveRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    archive_retain_rule: tfLifecyclePolicyArchiveRetainRulePropertyToTerraform(struct!.archiveRetainRule),
+    archive_retain_rule: awsLifecyclePolicyArchiveRetainRulePropertyToTerraform(struct!.archiveRetainRule),
   }
 }
 
 
-export function tfLifecyclePolicyArchiveRulePropertyToHclTerraform(struct?: TfLifecyclePolicy.ArchiveRulePropertyOutputReference | TfLifecyclePolicy.ArchiveRuleProperty): any {
+export function awsLifecyclePolicyArchiveRulePropertyToHclTerraform(struct?: AwsLifecyclePolicy.ArchiveRulePropertyOutputReference | AwsLifecyclePolicy.ArchiveRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     archive_retain_rule: {
-      value: tfLifecyclePolicyArchiveRetainRulePropertyToHclTerraform(struct!.archiveRetainRule),
+      value: awsLifecyclePolicyArchiveRetainRulePropertyToHclTerraform(struct!.archiveRetainRule),
       isBlock: true,
       type: "list",
       storageClassType: "ArchiveRetainRulePropertyList",
@@ -766,7 +766,7 @@ export function tfLifecyclePolicyArchiveRulePropertyToHclTerraform(struct?: TfLi
 }
 
 
-export function tfLifecyclePolicyScriptsPropertyToTerraform(struct?: TfLifecyclePolicy.ScriptsPropertyOutputReference | TfLifecyclePolicy.ScriptsProperty): any {
+export function awsLifecyclePolicyScriptsPropertyToTerraform(struct?: AwsLifecyclePolicy.ScriptsPropertyOutputReference | AwsLifecyclePolicy.ScriptsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -782,7 +782,7 @@ export function tfLifecyclePolicyScriptsPropertyToTerraform(struct?: TfLifecycle
 }
 
 
-export function tfLifecyclePolicyScriptsPropertyToHclTerraform(struct?: TfLifecyclePolicy.ScriptsPropertyOutputReference | TfLifecyclePolicy.ScriptsProperty): any {
+export function awsLifecyclePolicyScriptsPropertyToHclTerraform(struct?: AwsLifecyclePolicy.ScriptsPropertyOutputReference | AwsLifecyclePolicy.ScriptsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -831,7 +831,7 @@ export function tfLifecyclePolicyScriptsPropertyToHclTerraform(struct?: TfLifecy
 }
 
 
-export function tfLifecyclePolicyCreateRulePropertyToTerraform(struct?: TfLifecyclePolicy.CreateRulePropertyOutputReference | TfLifecyclePolicy.CreateRuleProperty): any {
+export function awsLifecyclePolicyCreateRulePropertyToTerraform(struct?: AwsLifecyclePolicy.CreateRulePropertyOutputReference | AwsLifecyclePolicy.CreateRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -842,12 +842,12 @@ export function tfLifecyclePolicyCreateRulePropertyToTerraform(struct?: TfLifecy
     interval_unit: cdktn.stringToTerraform(struct!.intervalUnit),
     location: cdktn.stringToTerraform(struct!.location),
     times: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.times),
-    scripts: tfLifecyclePolicyScriptsPropertyToTerraform(struct!.scripts),
+    scripts: awsLifecyclePolicyScriptsPropertyToTerraform(struct!.scripts),
   }
 }
 
 
-export function tfLifecyclePolicyCreateRulePropertyToHclTerraform(struct?: TfLifecyclePolicy.CreateRulePropertyOutputReference | TfLifecyclePolicy.CreateRuleProperty): any {
+export function awsLifecyclePolicyCreateRulePropertyToHclTerraform(struct?: AwsLifecyclePolicy.CreateRulePropertyOutputReference | AwsLifecyclePolicy.CreateRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -884,7 +884,7 @@ export function tfLifecyclePolicyCreateRulePropertyToHclTerraform(struct?: TfLif
       storageClassType: "stringList",
     },
     scripts: {
-      value: tfLifecyclePolicyScriptsPropertyToHclTerraform(struct!.scripts),
+      value: awsLifecyclePolicyScriptsPropertyToHclTerraform(struct!.scripts),
       isBlock: true,
       type: "list",
       storageClassType: "ScriptsPropertyList",
@@ -896,7 +896,7 @@ export function tfLifecyclePolicyCreateRulePropertyToHclTerraform(struct?: TfLif
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyToTerraform(struct?: TfLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyOutputReference | TfLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleProperty): any {
+export function awsLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyToTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -908,7 +908,7 @@ export function tfLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDepreca
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyToHclTerraform(struct?: TfLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyOutputReference | TfLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleProperty): any {
+export function awsLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyToHclTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -933,7 +933,7 @@ export function tfLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDepreca
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyToTerraform(struct?: TfLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyOutputReference | TfLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleRetainRuleProperty): any {
+export function awsLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyToTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleRetainRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -945,7 +945,7 @@ export function tfLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainR
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyToHclTerraform(struct?: TfLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyOutputReference | TfLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleRetainRuleProperty): any {
+export function awsLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyToHclTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsScheduleCrossRegionCopyRuleRetainRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -970,7 +970,7 @@ export function tfLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainR
 }
 
 
-export function tfLifecyclePolicyCrossRegionCopyRulePropertyToTerraform(struct?: TfLifecyclePolicy.CrossRegionCopyRuleProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyCrossRegionCopyRulePropertyToTerraform(struct?: AwsLifecyclePolicy.CrossRegionCopyRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -981,13 +981,13 @@ export function tfLifecyclePolicyCrossRegionCopyRulePropertyToTerraform(struct?:
     encrypted: cdktn.booleanToTerraform(struct!.encrypted),
     target: cdktn.stringToTerraform(struct!.target),
     target_region: cdktn.stringToTerraform(struct!.targetRegion),
-    deprecate_rule: tfLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyToTerraform(struct!.deprecateRule),
-    retain_rule: tfLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyToTerraform(struct!.retainRule),
+    deprecate_rule: awsLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyToTerraform(struct!.deprecateRule),
+    retain_rule: awsLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyToTerraform(struct!.retainRule),
   }
 }
 
 
-export function tfLifecyclePolicyCrossRegionCopyRulePropertyToHclTerraform(struct?: TfLifecyclePolicy.CrossRegionCopyRuleProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicyCrossRegionCopyRulePropertyToHclTerraform(struct?: AwsLifecyclePolicy.CrossRegionCopyRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1024,13 +1024,13 @@ export function tfLifecyclePolicyCrossRegionCopyRulePropertyToHclTerraform(struc
       storageClassType: "string",
     },
     deprecate_rule: {
-      value: tfLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyToHclTerraform(struct!.deprecateRule),
+      value: awsLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyToHclTerraform(struct!.deprecateRule),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyList",
     },
     retain_rule: {
-      value: tfLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyToHclTerraform(struct!.retainRule),
+      value: awsLifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyToHclTerraform(struct!.retainRule),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyList",
@@ -1042,7 +1042,7 @@ export function tfLifecyclePolicyCrossRegionCopyRulePropertyToHclTerraform(struc
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsScheduleDeprecateRulePropertyToTerraform(struct?: TfLifecyclePolicy.PolicyDetailsScheduleDeprecateRulePropertyOutputReference | TfLifecyclePolicy.PolicyDetailsScheduleDeprecateRuleProperty): any {
+export function awsLifecyclePolicyPolicyDetailsScheduleDeprecateRulePropertyToTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsScheduleDeprecateRulePropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsScheduleDeprecateRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1055,7 +1055,7 @@ export function tfLifecyclePolicyPolicyDetailsScheduleDeprecateRulePropertyToTer
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsScheduleDeprecateRulePropertyToHclTerraform(struct?: TfLifecyclePolicy.PolicyDetailsScheduleDeprecateRulePropertyOutputReference | TfLifecyclePolicy.PolicyDetailsScheduleDeprecateRuleProperty): any {
+export function awsLifecyclePolicyPolicyDetailsScheduleDeprecateRulePropertyToHclTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsScheduleDeprecateRulePropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsScheduleDeprecateRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1086,7 +1086,7 @@ export function tfLifecyclePolicyPolicyDetailsScheduleDeprecateRulePropertyToHcl
 }
 
 
-export function tfLifecyclePolicyFastRestoreRulePropertyToTerraform(struct?: TfLifecyclePolicy.FastRestoreRulePropertyOutputReference | TfLifecyclePolicy.FastRestoreRuleProperty): any {
+export function awsLifecyclePolicyFastRestoreRulePropertyToTerraform(struct?: AwsLifecyclePolicy.FastRestoreRulePropertyOutputReference | AwsLifecyclePolicy.FastRestoreRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1100,7 +1100,7 @@ export function tfLifecyclePolicyFastRestoreRulePropertyToTerraform(struct?: TfL
 }
 
 
-export function tfLifecyclePolicyFastRestoreRulePropertyToHclTerraform(struct?: TfLifecyclePolicy.FastRestoreRulePropertyOutputReference | TfLifecyclePolicy.FastRestoreRuleProperty): any {
+export function awsLifecyclePolicyFastRestoreRulePropertyToHclTerraform(struct?: AwsLifecyclePolicy.FastRestoreRulePropertyOutputReference | AwsLifecyclePolicy.FastRestoreRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1137,7 +1137,7 @@ export function tfLifecyclePolicyFastRestoreRulePropertyToHclTerraform(struct?: 
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsScheduleRetainRulePropertyToTerraform(struct?: TfLifecyclePolicy.PolicyDetailsScheduleRetainRulePropertyOutputReference | TfLifecyclePolicy.PolicyDetailsScheduleRetainRuleProperty): any {
+export function awsLifecyclePolicyPolicyDetailsScheduleRetainRulePropertyToTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsScheduleRetainRulePropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsScheduleRetainRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1150,7 +1150,7 @@ export function tfLifecyclePolicyPolicyDetailsScheduleRetainRulePropertyToTerraf
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsScheduleRetainRulePropertyToHclTerraform(struct?: TfLifecyclePolicy.PolicyDetailsScheduleRetainRulePropertyOutputReference | TfLifecyclePolicy.PolicyDetailsScheduleRetainRuleProperty): any {
+export function awsLifecyclePolicyPolicyDetailsScheduleRetainRulePropertyToHclTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsScheduleRetainRulePropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsScheduleRetainRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1181,7 +1181,7 @@ export function tfLifecyclePolicyPolicyDetailsScheduleRetainRulePropertyToHclTer
 }
 
 
-export function tfLifecyclePolicyShareRulePropertyToTerraform(struct?: TfLifecyclePolicy.ShareRulePropertyOutputReference | TfLifecyclePolicy.ShareRuleProperty): any {
+export function awsLifecyclePolicyShareRulePropertyToTerraform(struct?: AwsLifecyclePolicy.ShareRulePropertyOutputReference | AwsLifecyclePolicy.ShareRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1194,7 +1194,7 @@ export function tfLifecyclePolicyShareRulePropertyToTerraform(struct?: TfLifecyc
 }
 
 
-export function tfLifecyclePolicyShareRulePropertyToHclTerraform(struct?: TfLifecyclePolicy.ShareRulePropertyOutputReference | TfLifecyclePolicy.ShareRuleProperty): any {
+export function awsLifecyclePolicyShareRulePropertyToHclTerraform(struct?: AwsLifecyclePolicy.ShareRulePropertyOutputReference | AwsLifecyclePolicy.ShareRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1225,7 +1225,7 @@ export function tfLifecyclePolicyShareRulePropertyToHclTerraform(struct?: TfLife
 }
 
 
-export function tfLifecyclePolicySchedulePropertyToTerraform(struct?: TfLifecyclePolicy.ScheduleProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicySchedulePropertyToTerraform(struct?: AwsLifecyclePolicy.ScheduleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1235,18 +1235,18 @@ export function tfLifecyclePolicySchedulePropertyToTerraform(struct?: TfLifecycl
     name: cdktn.stringToTerraform(struct!.name),
     tags_to_add: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tagsToAdd),
     variable_tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.variableTags),
-    archive_rule: tfLifecyclePolicyArchiveRulePropertyToTerraform(struct!.archiveRule),
-    create_rule: tfLifecyclePolicyCreateRulePropertyToTerraform(struct!.createRule),
-    cross_region_copy_rule: cdktn.listMapper(tfLifecyclePolicyCrossRegionCopyRulePropertyToTerraform, true)(struct!.crossRegionCopyRule),
-    deprecate_rule: tfLifecyclePolicyPolicyDetailsScheduleDeprecateRulePropertyToTerraform(struct!.deprecateRule),
-    fast_restore_rule: tfLifecyclePolicyFastRestoreRulePropertyToTerraform(struct!.fastRestoreRule),
-    retain_rule: tfLifecyclePolicyPolicyDetailsScheduleRetainRulePropertyToTerraform(struct!.retainRule),
-    share_rule: tfLifecyclePolicyShareRulePropertyToTerraform(struct!.shareRule),
+    archive_rule: awsLifecyclePolicyArchiveRulePropertyToTerraform(struct!.archiveRule),
+    create_rule: awsLifecyclePolicyCreateRulePropertyToTerraform(struct!.createRule),
+    cross_region_copy_rule: cdktn.listMapper(awsLifecyclePolicyCrossRegionCopyRulePropertyToTerraform, true)(struct!.crossRegionCopyRule),
+    deprecate_rule: awsLifecyclePolicyPolicyDetailsScheduleDeprecateRulePropertyToTerraform(struct!.deprecateRule),
+    fast_restore_rule: awsLifecyclePolicyFastRestoreRulePropertyToTerraform(struct!.fastRestoreRule),
+    retain_rule: awsLifecyclePolicyPolicyDetailsScheduleRetainRulePropertyToTerraform(struct!.retainRule),
+    share_rule: awsLifecyclePolicyShareRulePropertyToTerraform(struct!.shareRule),
   }
 }
 
 
-export function tfLifecyclePolicySchedulePropertyToHclTerraform(struct?: TfLifecyclePolicy.ScheduleProperty | cdktn.IResolvable): any {
+export function awsLifecyclePolicySchedulePropertyToHclTerraform(struct?: AwsLifecyclePolicy.ScheduleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1277,43 +1277,43 @@ export function tfLifecyclePolicySchedulePropertyToHclTerraform(struct?: TfLifec
       storageClassType: "stringMap",
     },
     archive_rule: {
-      value: tfLifecyclePolicyArchiveRulePropertyToHclTerraform(struct!.archiveRule),
+      value: awsLifecyclePolicyArchiveRulePropertyToHclTerraform(struct!.archiveRule),
       isBlock: true,
       type: "list",
       storageClassType: "ArchiveRulePropertyList",
     },
     create_rule: {
-      value: tfLifecyclePolicyCreateRulePropertyToHclTerraform(struct!.createRule),
+      value: awsLifecyclePolicyCreateRulePropertyToHclTerraform(struct!.createRule),
       isBlock: true,
       type: "list",
       storageClassType: "CreateRulePropertyList",
     },
     cross_region_copy_rule: {
-      value: cdktn.listMapperHcl(tfLifecyclePolicyCrossRegionCopyRulePropertyToHclTerraform, true)(struct!.crossRegionCopyRule),
+      value: cdktn.listMapperHcl(awsLifecyclePolicyCrossRegionCopyRulePropertyToHclTerraform, true)(struct!.crossRegionCopyRule),
       isBlock: true,
       type: "set",
       storageClassType: "CrossRegionCopyRulePropertyList",
     },
     deprecate_rule: {
-      value: tfLifecyclePolicyPolicyDetailsScheduleDeprecateRulePropertyToHclTerraform(struct!.deprecateRule),
+      value: awsLifecyclePolicyPolicyDetailsScheduleDeprecateRulePropertyToHclTerraform(struct!.deprecateRule),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyDetailsScheduleDeprecateRulePropertyList",
     },
     fast_restore_rule: {
-      value: tfLifecyclePolicyFastRestoreRulePropertyToHclTerraform(struct!.fastRestoreRule),
+      value: awsLifecyclePolicyFastRestoreRulePropertyToHclTerraform(struct!.fastRestoreRule),
       isBlock: true,
       type: "list",
       storageClassType: "FastRestoreRulePropertyList",
     },
     retain_rule: {
-      value: tfLifecyclePolicyPolicyDetailsScheduleRetainRulePropertyToHclTerraform(struct!.retainRule),
+      value: awsLifecyclePolicyPolicyDetailsScheduleRetainRulePropertyToHclTerraform(struct!.retainRule),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyDetailsScheduleRetainRulePropertyList",
     },
     share_rule: {
-      value: tfLifecyclePolicyShareRulePropertyToHclTerraform(struct!.shareRule),
+      value: awsLifecyclePolicyShareRulePropertyToHclTerraform(struct!.shareRule),
       isBlock: true,
       type: "list",
       storageClassType: "ShareRulePropertyList",
@@ -1325,7 +1325,7 @@ export function tfLifecyclePolicySchedulePropertyToHclTerraform(struct?: TfLifec
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsPropertyToTerraform(struct?: TfLifecyclePolicy.PolicyDetailsPropertyOutputReference | TfLifecyclePolicy.PolicyDetailsProperty): any {
+export function awsLifecyclePolicyPolicyDetailsPropertyToTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsPropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1341,16 +1341,16 @@ export function tfLifecyclePolicyPolicyDetailsPropertyToTerraform(struct?: TfLif
     resource_types: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.resourceTypes),
     retain_interval: cdktn.numberToTerraform(struct!.retainInterval),
     target_tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.targetTags),
-    action: tfLifecyclePolicyActionPropertyToTerraform(struct!.action),
-    event_source: tfLifecyclePolicyEventSourcePropertyToTerraform(struct!.eventSource),
-    exclusions: tfLifecyclePolicyExclusionsPropertyToTerraform(struct!.exclusions),
-    parameters: tfLifecyclePolicyPolicyDetailsParametersPropertyToTerraform(struct!.parameters),
-    schedule: cdktn.listMapper(tfLifecyclePolicySchedulePropertyToTerraform, true)(struct!.schedule),
+    action: awsLifecyclePolicyActionPropertyToTerraform(struct!.action),
+    event_source: awsLifecyclePolicyEventSourcePropertyToTerraform(struct!.eventSource),
+    exclusions: awsLifecyclePolicyExclusionsPropertyToTerraform(struct!.exclusions),
+    parameters: awsLifecyclePolicyPolicyDetailsParametersPropertyToTerraform(struct!.parameters),
+    schedule: cdktn.listMapper(awsLifecyclePolicySchedulePropertyToTerraform, true)(struct!.schedule),
   }
 }
 
 
-export function tfLifecyclePolicyPolicyDetailsPropertyToHclTerraform(struct?: TfLifecyclePolicy.PolicyDetailsPropertyOutputReference | TfLifecyclePolicy.PolicyDetailsProperty): any {
+export function awsLifecyclePolicyPolicyDetailsPropertyToHclTerraform(struct?: AwsLifecyclePolicy.PolicyDetailsPropertyOutputReference | AwsLifecyclePolicy.PolicyDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1417,31 +1417,31 @@ export function tfLifecyclePolicyPolicyDetailsPropertyToHclTerraform(struct?: Tf
       storageClassType: "stringMap",
     },
     action: {
-      value: tfLifecyclePolicyActionPropertyToHclTerraform(struct!.action),
+      value: awsLifecyclePolicyActionPropertyToHclTerraform(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "ActionPropertyList",
     },
     event_source: {
-      value: tfLifecyclePolicyEventSourcePropertyToHclTerraform(struct!.eventSource),
+      value: awsLifecyclePolicyEventSourcePropertyToHclTerraform(struct!.eventSource),
       isBlock: true,
       type: "list",
       storageClassType: "EventSourcePropertyList",
     },
     exclusions: {
-      value: tfLifecyclePolicyExclusionsPropertyToHclTerraform(struct!.exclusions),
+      value: awsLifecyclePolicyExclusionsPropertyToHclTerraform(struct!.exclusions),
       isBlock: true,
       type: "list",
       storageClassType: "ExclusionsPropertyList",
     },
     parameters: {
-      value: tfLifecyclePolicyPolicyDetailsParametersPropertyToHclTerraform(struct!.parameters),
+      value: awsLifecyclePolicyPolicyDetailsParametersPropertyToHclTerraform(struct!.parameters),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyDetailsParametersPropertyList",
     },
     schedule: {
-      value: cdktn.listMapperHcl(tfLifecyclePolicySchedulePropertyToHclTerraform, true)(struct!.schedule),
+      value: cdktn.listMapperHcl(awsLifecyclePolicySchedulePropertyToHclTerraform, true)(struct!.schedule),
       isBlock: true,
       type: "list",
       storageClassType: "SchedulePropertyList",
@@ -1453,14 +1453,14 @@ export function tfLifecyclePolicyPolicyDetailsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfLifecyclePolicy {
+export namespace AwsLifecyclePolicy {
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#cmk_arn TfLifecyclePolicy#cmk_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#cmk_arn AwsLifecyclePolicy#cmk_arn}
   */
   readonly cmkArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#encrypted TfLifecyclePolicy#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#encrypted AwsLifecyclePolicy#encrypted}
   */
   readonly encrypted?: boolean | cdktn.IResolvable;
 }
@@ -1536,11 +1536,11 @@ export class EncryptionConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface PolicyDetailsActionCrossRegionCopyRetainRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval TfLifecyclePolicy#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval AwsLifecyclePolicy#interval}
   */
   readonly interval: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit TfLifecyclePolicy#interval_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit AwsLifecyclePolicy#interval_unit}
   */
   readonly intervalUnit: string;
 }
@@ -1610,19 +1610,19 @@ export class PolicyDetailsActionCrossRegionCopyRetainRulePropertyOutputReference
 }
 export interface CrossRegionCopyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#target TfLifecyclePolicy#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#target AwsLifecyclePolicy#target}
   */
   readonly target: string;
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#encryption_configuration TfLifecyclePolicy#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#encryption_configuration AwsLifecyclePolicy#encryption_configuration}
   */
   readonly encryptionConfiguration: EncryptionConfigurationProperty;
   /**
   * retain_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#retain_rule TfLifecyclePolicy#retain_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#retain_rule AwsLifecyclePolicy#retain_rule}
   */
   readonly retainRule?: PolicyDetailsActionCrossRegionCopyRetainRuleProperty;
 }
@@ -1746,13 +1746,13 @@ export class CrossRegionCopyPropertyList extends cdktn.ComplexList {
 }
 export interface ActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#name TfLifecyclePolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#name AwsLifecyclePolicy#name}
   */
   readonly name: string;
   /**
   * cross_region_copy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#cross_region_copy TfLifecyclePolicy#cross_region_copy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#cross_region_copy AwsLifecyclePolicy#cross_region_copy}
   */
   readonly crossRegionCopy: CrossRegionCopyProperty[] | cdktn.IResolvable;
 }
@@ -1822,15 +1822,15 @@ export class ActionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PolicyDetailsEventSourceParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#description_regex TfLifecyclePolicy#description_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#description_regex AwsLifecyclePolicy#description_regex}
   */
   readonly descriptionRegex: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#event_type TfLifecyclePolicy#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#event_type AwsLifecyclePolicy#event_type}
   */
   readonly eventType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#snapshot_owner TfLifecyclePolicy#snapshot_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#snapshot_owner AwsLifecyclePolicy#snapshot_owner}
   */
   readonly snapshotOwner: string[];
 }
@@ -1919,13 +1919,13 @@ export class PolicyDetailsEventSourceParametersPropertyOutputReference extends c
 }
 export interface EventSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#type TfLifecyclePolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#type AwsLifecyclePolicy#type}
   */
   readonly type: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#parameters TfLifecyclePolicy#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#parameters AwsLifecyclePolicy#parameters}
   */
   readonly parameters: PolicyDetailsEventSourceParametersProperty;
 }
@@ -1995,15 +1995,15 @@ export class EventSourcePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ExclusionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#exclude_boot_volumes TfLifecyclePolicy#exclude_boot_volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#exclude_boot_volumes AwsLifecyclePolicy#exclude_boot_volumes}
   */
   readonly excludeBootVolumes?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#exclude_tags TfLifecyclePolicy#exclude_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#exclude_tags AwsLifecyclePolicy#exclude_tags}
   */
   readonly excludeTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#exclude_volume_types TfLifecyclePolicy#exclude_volume_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#exclude_volume_types AwsLifecyclePolicy#exclude_volume_types}
   */
   readonly excludeVolumeTypes?: string[];
 }
@@ -2101,15 +2101,15 @@ export class ExclusionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PolicyDetailsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#exclude_boot_volume TfLifecyclePolicy#exclude_boot_volume}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#exclude_boot_volume AwsLifecyclePolicy#exclude_boot_volume}
   */
   readonly excludeBootVolume?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#exclude_data_volume_tags TfLifecyclePolicy#exclude_data_volume_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#exclude_data_volume_tags AwsLifecyclePolicy#exclude_data_volume_tags}
   */
   readonly excludeDataVolumeTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#no_reboot TfLifecyclePolicy#no_reboot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#no_reboot AwsLifecyclePolicy#no_reboot}
   */
   readonly noReboot?: boolean | cdktn.IResolvable;
 }
@@ -2207,15 +2207,15 @@ export class PolicyDetailsParametersPropertyOutputReference extends cdktn.Comple
 }
 export interface RetentionArchiveTierProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#count TfLifecyclePolicy#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#count AwsLifecyclePolicy#count}
   */
   readonly count?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval TfLifecyclePolicy#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval AwsLifecyclePolicy#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit TfLifecyclePolicy#interval_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit AwsLifecyclePolicy#interval_unit}
   */
   readonly intervalUnit?: string;
 }
@@ -2315,7 +2315,7 @@ export interface ArchiveRetainRuleProperty {
   /**
   * retention_archive_tier block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#retention_archive_tier TfLifecyclePolicy#retention_archive_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#retention_archive_tier AwsLifecyclePolicy#retention_archive_tier}
   */
   readonly retentionArchiveTier: RetentionArchiveTierProperty;
 }
@@ -2368,7 +2368,7 @@ export interface ArchiveRuleProperty {
   /**
   * archive_retain_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#archive_retain_rule TfLifecyclePolicy#archive_retain_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#archive_retain_rule AwsLifecyclePolicy#archive_retain_rule}
   */
   readonly archiveRetainRule: ArchiveRetainRuleProperty;
 }
@@ -2419,27 +2419,27 @@ export class ArchiveRulePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ScriptsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#execute_operation_on_script_failure TfLifecyclePolicy#execute_operation_on_script_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#execute_operation_on_script_failure AwsLifecyclePolicy#execute_operation_on_script_failure}
   */
   readonly executeOperationOnScriptFailure?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#execution_handler TfLifecyclePolicy#execution_handler}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#execution_handler AwsLifecyclePolicy#execution_handler}
   */
   readonly executionHandler: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#execution_handler_service TfLifecyclePolicy#execution_handler_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#execution_handler_service AwsLifecyclePolicy#execution_handler_service}
   */
   readonly executionHandlerService?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#execution_timeout TfLifecyclePolicy#execution_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#execution_timeout AwsLifecyclePolicy#execution_timeout}
   */
   readonly executionTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#maximum_retry_count TfLifecyclePolicy#maximum_retry_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#maximum_retry_count AwsLifecyclePolicy#maximum_retry_count}
   */
   readonly maximumRetryCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#stages TfLifecyclePolicy#stages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#stages AwsLifecyclePolicy#stages}
   */
   readonly stages?: string[];
 }
@@ -2600,29 +2600,29 @@ export class ScriptsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CreateRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#cron_expression TfLifecyclePolicy#cron_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#cron_expression AwsLifecyclePolicy#cron_expression}
   */
   readonly cronExpression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval TfLifecyclePolicy#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval AwsLifecyclePolicy#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit TfLifecyclePolicy#interval_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit AwsLifecyclePolicy#interval_unit}
   */
   readonly intervalUnit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#location TfLifecyclePolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#location AwsLifecyclePolicy#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#times TfLifecyclePolicy#times}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#times AwsLifecyclePolicy#times}
   */
   readonly times?: string[];
   /**
   * scripts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#scripts TfLifecyclePolicy#scripts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#scripts AwsLifecyclePolicy#scripts}
   */
   readonly scripts?: ScriptsProperty;
 }
@@ -2786,11 +2786,11 @@ export class CreateRulePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval TfLifecyclePolicy#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval AwsLifecyclePolicy#interval}
   */
   readonly interval: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit TfLifecyclePolicy#interval_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit AwsLifecyclePolicy#interval_unit}
   */
   readonly intervalUnit: string;
 }
@@ -2860,11 +2860,11 @@ export class PolicyDetailsScheduleCrossRegionCopyRuleDeprecateRulePropertyOutput
 }
 export interface PolicyDetailsScheduleCrossRegionCopyRuleRetainRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval TfLifecyclePolicy#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval AwsLifecyclePolicy#interval}
   */
   readonly interval: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit TfLifecyclePolicy#interval_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit AwsLifecyclePolicy#interval_unit}
   */
   readonly intervalUnit: string;
 }
@@ -2934,35 +2934,35 @@ export class PolicyDetailsScheduleCrossRegionCopyRuleRetainRulePropertyOutputRef
 }
 export interface CrossRegionCopyRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#cmk_arn TfLifecyclePolicy#cmk_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#cmk_arn AwsLifecyclePolicy#cmk_arn}
   */
   readonly cmkArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#copy_tags TfLifecyclePolicy#copy_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#copy_tags AwsLifecyclePolicy#copy_tags}
   */
   readonly copyTags?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#encrypted TfLifecyclePolicy#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#encrypted AwsLifecyclePolicy#encrypted}
   */
   readonly encrypted: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#target TfLifecyclePolicy#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#target AwsLifecyclePolicy#target}
   */
   readonly target?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#target_region TfLifecyclePolicy#target_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#target_region AwsLifecyclePolicy#target_region}
   */
   readonly targetRegion?: string;
   /**
   * deprecate_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#deprecate_rule TfLifecyclePolicy#deprecate_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#deprecate_rule AwsLifecyclePolicy#deprecate_rule}
   */
   readonly deprecateRule?: PolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleProperty;
   /**
   * retain_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#retain_rule TfLifecyclePolicy#retain_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#retain_rule AwsLifecyclePolicy#retain_rule}
   */
   readonly retainRule?: PolicyDetailsScheduleCrossRegionCopyRuleRetainRuleProperty;
 }
@@ -3177,15 +3177,15 @@ export class CrossRegionCopyRulePropertyList extends cdktn.ComplexList {
 }
 export interface PolicyDetailsScheduleDeprecateRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#count TfLifecyclePolicy#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#count AwsLifecyclePolicy#count}
   */
   readonly count?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval TfLifecyclePolicy#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval AwsLifecyclePolicy#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit TfLifecyclePolicy#interval_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit AwsLifecyclePolicy#interval_unit}
   */
   readonly intervalUnit?: string;
 }
@@ -3283,19 +3283,19 @@ export class PolicyDetailsScheduleDeprecateRulePropertyOutputReference extends c
 }
 export interface FastRestoreRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#availability_zones TfLifecyclePolicy#availability_zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#availability_zones AwsLifecyclePolicy#availability_zones}
   */
   readonly availabilityZones: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#count TfLifecyclePolicy#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#count AwsLifecyclePolicy#count}
   */
   readonly count?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval TfLifecyclePolicy#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval AwsLifecyclePolicy#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit TfLifecyclePolicy#interval_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit AwsLifecyclePolicy#interval_unit}
   */
   readonly intervalUnit?: string;
 }
@@ -3412,15 +3412,15 @@ export class FastRestoreRulePropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface PolicyDetailsScheduleRetainRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#count TfLifecyclePolicy#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#count AwsLifecyclePolicy#count}
   */
   readonly count?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval TfLifecyclePolicy#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval AwsLifecyclePolicy#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit TfLifecyclePolicy#interval_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#interval_unit AwsLifecyclePolicy#interval_unit}
   */
   readonly intervalUnit?: string;
 }
@@ -3518,15 +3518,15 @@ export class PolicyDetailsScheduleRetainRulePropertyOutputReference extends cdkt
 }
 export interface ShareRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#target_accounts TfLifecyclePolicy#target_accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#target_accounts AwsLifecyclePolicy#target_accounts}
   */
   readonly targetAccounts: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#unshare_interval TfLifecyclePolicy#unshare_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#unshare_interval AwsLifecyclePolicy#unshare_interval}
   */
   readonly unshareInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#unshare_interval_unit TfLifecyclePolicy#unshare_interval_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#unshare_interval_unit AwsLifecyclePolicy#unshare_interval_unit}
   */
   readonly unshareIntervalUnit?: string;
 }
@@ -3621,61 +3621,61 @@ export class ShareRulePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ScheduleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#copy_tags TfLifecyclePolicy#copy_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#copy_tags AwsLifecyclePolicy#copy_tags}
   */
   readonly copyTags?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#name TfLifecyclePolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#name AwsLifecyclePolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#tags_to_add TfLifecyclePolicy#tags_to_add}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#tags_to_add AwsLifecyclePolicy#tags_to_add}
   */
   readonly tagsToAdd?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#variable_tags TfLifecyclePolicy#variable_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#variable_tags AwsLifecyclePolicy#variable_tags}
   */
   readonly variableTags?: { [key: string]: string };
   /**
   * archive_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#archive_rule TfLifecyclePolicy#archive_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#archive_rule AwsLifecyclePolicy#archive_rule}
   */
   readonly archiveRule?: ArchiveRuleProperty;
   /**
   * create_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#create_rule TfLifecyclePolicy#create_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#create_rule AwsLifecyclePolicy#create_rule}
   */
   readonly createRule: CreateRuleProperty;
   /**
   * cross_region_copy_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#cross_region_copy_rule TfLifecyclePolicy#cross_region_copy_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#cross_region_copy_rule AwsLifecyclePolicy#cross_region_copy_rule}
   */
   readonly crossRegionCopyRule?: CrossRegionCopyRuleProperty[] | cdktn.IResolvable;
   /**
   * deprecate_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#deprecate_rule TfLifecyclePolicy#deprecate_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#deprecate_rule AwsLifecyclePolicy#deprecate_rule}
   */
   readonly deprecateRule?: PolicyDetailsScheduleDeprecateRuleProperty;
   /**
   * fast_restore_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#fast_restore_rule TfLifecyclePolicy#fast_restore_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#fast_restore_rule AwsLifecyclePolicy#fast_restore_rule}
   */
   readonly fastRestoreRule?: FastRestoreRuleProperty;
   /**
   * retain_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#retain_rule TfLifecyclePolicy#retain_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#retain_rule AwsLifecyclePolicy#retain_rule}
   */
   readonly retainRule: PolicyDetailsScheduleRetainRuleProperty;
   /**
   * share_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#share_rule TfLifecyclePolicy#share_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#share_rule AwsLifecyclePolicy#share_rule}
   */
   readonly shareRule?: ShareRuleProperty;
 }
@@ -3972,73 +3972,73 @@ export class SchedulePropertyList extends cdktn.ComplexList {
 }
 export interface PolicyDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#copy_tags TfLifecyclePolicy#copy_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#copy_tags AwsLifecyclePolicy#copy_tags}
   */
   readonly copyTags?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#create_interval TfLifecyclePolicy#create_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#create_interval AwsLifecyclePolicy#create_interval}
   */
   readonly createInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#extend_deletion TfLifecyclePolicy#extend_deletion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#extend_deletion AwsLifecyclePolicy#extend_deletion}
   */
   readonly extendDeletion?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#policy_language TfLifecyclePolicy#policy_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#policy_language AwsLifecyclePolicy#policy_language}
   */
   readonly policyLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#policy_type TfLifecyclePolicy#policy_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#policy_type AwsLifecyclePolicy#policy_type}
   */
   readonly policyType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#resource_locations TfLifecyclePolicy#resource_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#resource_locations AwsLifecyclePolicy#resource_locations}
   */
   readonly resourceLocations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#resource_type TfLifecyclePolicy#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#resource_type AwsLifecyclePolicy#resource_type}
   */
   readonly resourceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#resource_types TfLifecyclePolicy#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#resource_types AwsLifecyclePolicy#resource_types}
   */
   readonly resourceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#retain_interval TfLifecyclePolicy#retain_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#retain_interval AwsLifecyclePolicy#retain_interval}
   */
   readonly retainInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#target_tags TfLifecyclePolicy#target_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#target_tags AwsLifecyclePolicy#target_tags}
   */
   readonly targetTags?: { [key: string]: string };
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#action TfLifecyclePolicy#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#action AwsLifecyclePolicy#action}
   */
   readonly action?: ActionProperty;
   /**
   * event_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#event_source TfLifecyclePolicy#event_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#event_source AwsLifecyclePolicy#event_source}
   */
   readonly eventSource?: EventSourceProperty;
   /**
   * exclusions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#exclusions TfLifecyclePolicy#exclusions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#exclusions AwsLifecyclePolicy#exclusions}
   */
   readonly exclusions?: ExclusionsProperty;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#parameters TfLifecyclePolicy#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#parameters AwsLifecyclePolicy#parameters}
   */
   readonly parameters?: PolicyDetailsParametersProperty;
   /**
   * schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#schedule TfLifecyclePolicy#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dlm_lifecycle_policy#schedule AwsLifecyclePolicy#schedule}
   */
   readonly schedule?: ScheduleProperty[] | cdktn.IResolvable;
 }

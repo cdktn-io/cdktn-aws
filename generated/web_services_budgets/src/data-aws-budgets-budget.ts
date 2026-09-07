@@ -5,28 +5,28 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfBudgetConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsBudgetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget#account_id DataTfBudget#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget#account_id DataAwsBudget#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget#id DataTfBudget#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget#id DataAwsBudget#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget#name DataTfBudget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget#name DataAwsBudget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget#name_prefix DataTfBudget#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget#name_prefix DataAwsBudget#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget#tags DataTfBudget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget#tags DataAwsBudget#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -34,7 +34,7 @@ export interface DataTfBudgetConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget aws_budgets_budget}
 */
-export class DataTfBudget extends cdktn.TerraformDataSource {
+export class DataAwsBudget extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class DataTfBudget extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfBudget resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsBudget resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfBudget to import
-  * @param importFromId The id of the existing DataTfBudget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfBudget to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsBudget to import
+  * @param importFromId The id of the existing DataAwsBudget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/budgets_budget#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsBudget to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_budgets_budget", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class DataTfBudget extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfBudgetConfig
+  * @param options DataAwsBudgetConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfBudgetConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsBudgetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_budgets_budget',
       terraformGeneratorMetadata: {
@@ -115,7 +115,7 @@ export class DataTfBudget extends cdktn.TerraformDataSource {
   }
 
   // auto_adjust_data - computed: true, optional: false, required: false
-  private _autoAdjustData = new DataTfBudget.AutoAdjustDataPropertyList(this, "auto_adjust_data", false);
+  private _autoAdjustData = new DataAwsBudget.AutoAdjustDataPropertyList(this, "auto_adjust_data", false);
   public get autoAdjustData() {
     return this._autoAdjustData;
   }
@@ -131,7 +131,7 @@ export class DataTfBudget extends cdktn.TerraformDataSource {
   }
 
   // budget_limit - computed: true, optional: false, required: false
-  private _budgetLimit = new DataTfBudget.BudgetLimitPropertyList(this, "budget_limit", false);
+  private _budgetLimit = new DataAwsBudget.BudgetLimitPropertyList(this, "budget_limit", false);
   public get budgetLimit() {
     return this._budgetLimit;
   }
@@ -142,19 +142,19 @@ export class DataTfBudget extends cdktn.TerraformDataSource {
   }
 
   // calculated_spend - computed: true, optional: false, required: false
-  private _calculatedSpend = new DataTfBudget.CalculatedSpendPropertyList(this, "calculated_spend", false);
+  private _calculatedSpend = new DataAwsBudget.CalculatedSpendPropertyList(this, "calculated_spend", false);
   public get calculatedSpend() {
     return this._calculatedSpend;
   }
 
   // cost_filter - computed: true, optional: false, required: false
-  private _costFilter = new DataTfBudget.CostFilterPropertyList(this, "cost_filter", true);
+  private _costFilter = new DataAwsBudget.CostFilterPropertyList(this, "cost_filter", true);
   public get costFilter() {
     return this._costFilter;
   }
 
   // cost_types - computed: true, optional: false, required: false
-  private _costTypes = new DataTfBudget.CostTypesPropertyList(this, "cost_types", false);
+  private _costTypes = new DataAwsBudget.CostTypesPropertyList(this, "cost_types", false);
   public get costTypes() {
     return this._costTypes;
   }
@@ -205,13 +205,13 @@ export class DataTfBudget extends cdktn.TerraformDataSource {
   }
 
   // notification - computed: true, optional: false, required: false
-  private _notification = new DataTfBudget.NotificationPropertyList(this, "notification", true);
+  private _notification = new DataAwsBudget.NotificationPropertyList(this, "notification", true);
   public get notification() {
     return this._notification;
   }
 
   // planned_limit - computed: true, optional: false, required: false
-  private _plannedLimit = new DataTfBudget.PlannedLimitPropertyList(this, "planned_limit", true);
+  private _plannedLimit = new DataAwsBudget.PlannedLimitPropertyList(this, "planned_limit", true);
   public get plannedLimit() {
     return this._plannedLimit;
   }
@@ -300,7 +300,7 @@ export class DataTfBudget extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfBudgetHistoricalOptionsPropertyToTerraform(struct?: DataTfBudget.HistoricalOptionsProperty): any {
+export function dataAwsBudgetHistoricalOptionsPropertyToTerraform(struct?: DataAwsBudget.HistoricalOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,7 +310,7 @@ export function dataTfBudgetHistoricalOptionsPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfBudgetHistoricalOptionsPropertyToHclTerraform(struct?: DataTfBudget.HistoricalOptionsProperty): any {
+export function dataAwsBudgetHistoricalOptionsPropertyToHclTerraform(struct?: DataAwsBudget.HistoricalOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,7 +321,7 @@ export function dataTfBudgetHistoricalOptionsPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfBudgetAutoAdjustDataPropertyToTerraform(struct?: DataTfBudget.AutoAdjustDataProperty): any {
+export function dataAwsBudgetAutoAdjustDataPropertyToTerraform(struct?: DataAwsBudget.AutoAdjustDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,7 +331,7 @@ export function dataTfBudgetAutoAdjustDataPropertyToTerraform(struct?: DataTfBud
 }
 
 
-export function dataTfBudgetAutoAdjustDataPropertyToHclTerraform(struct?: DataTfBudget.AutoAdjustDataProperty): any {
+export function dataAwsBudgetAutoAdjustDataPropertyToHclTerraform(struct?: DataAwsBudget.AutoAdjustDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function dataTfBudgetAutoAdjustDataPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export function dataTfBudgetBudgetLimitPropertyToTerraform(struct?: DataTfBudget.BudgetLimitProperty): any {
+export function dataAwsBudgetBudgetLimitPropertyToTerraform(struct?: DataAwsBudget.BudgetLimitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -352,7 +352,7 @@ export function dataTfBudgetBudgetLimitPropertyToTerraform(struct?: DataTfBudget
 }
 
 
-export function dataTfBudgetBudgetLimitPropertyToHclTerraform(struct?: DataTfBudget.BudgetLimitProperty): any {
+export function dataAwsBudgetBudgetLimitPropertyToHclTerraform(struct?: DataAwsBudget.BudgetLimitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -363,7 +363,7 @@ export function dataTfBudgetBudgetLimitPropertyToHclTerraform(struct?: DataTfBud
 }
 
 
-export function dataTfBudgetActualSpendPropertyToTerraform(struct?: DataTfBudget.ActualSpendProperty): any {
+export function dataAwsBudgetActualSpendPropertyToTerraform(struct?: DataAwsBudget.ActualSpendProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,7 +373,7 @@ export function dataTfBudgetActualSpendPropertyToTerraform(struct?: DataTfBudget
 }
 
 
-export function dataTfBudgetActualSpendPropertyToHclTerraform(struct?: DataTfBudget.ActualSpendProperty): any {
+export function dataAwsBudgetActualSpendPropertyToHclTerraform(struct?: DataAwsBudget.ActualSpendProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function dataTfBudgetActualSpendPropertyToHclTerraform(struct?: DataTfBud
 }
 
 
-export function dataTfBudgetCalculatedSpendPropertyToTerraform(struct?: DataTfBudget.CalculatedSpendProperty): any {
+export function dataAwsBudgetCalculatedSpendPropertyToTerraform(struct?: DataAwsBudget.CalculatedSpendProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,7 +394,7 @@ export function dataTfBudgetCalculatedSpendPropertyToTerraform(struct?: DataTfBu
 }
 
 
-export function dataTfBudgetCalculatedSpendPropertyToHclTerraform(struct?: DataTfBudget.CalculatedSpendProperty): any {
+export function dataAwsBudgetCalculatedSpendPropertyToHclTerraform(struct?: DataAwsBudget.CalculatedSpendProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -405,7 +405,7 @@ export function dataTfBudgetCalculatedSpendPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfBudgetCostFilterPropertyToTerraform(struct?: DataTfBudget.CostFilterProperty): any {
+export function dataAwsBudgetCostFilterPropertyToTerraform(struct?: DataAwsBudget.CostFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -415,7 +415,7 @@ export function dataTfBudgetCostFilterPropertyToTerraform(struct?: DataTfBudget.
 }
 
 
-export function dataTfBudgetCostFilterPropertyToHclTerraform(struct?: DataTfBudget.CostFilterProperty): any {
+export function dataAwsBudgetCostFilterPropertyToHclTerraform(struct?: DataAwsBudget.CostFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -426,7 +426,7 @@ export function dataTfBudgetCostFilterPropertyToHclTerraform(struct?: DataTfBudg
 }
 
 
-export function dataTfBudgetCostTypesPropertyToTerraform(struct?: DataTfBudget.CostTypesProperty): any {
+export function dataAwsBudgetCostTypesPropertyToTerraform(struct?: DataAwsBudget.CostTypesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function dataTfBudgetCostTypesPropertyToTerraform(struct?: DataTfBudget.C
 }
 
 
-export function dataTfBudgetCostTypesPropertyToHclTerraform(struct?: DataTfBudget.CostTypesProperty): any {
+export function dataAwsBudgetCostTypesPropertyToHclTerraform(struct?: DataAwsBudget.CostTypesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -447,7 +447,7 @@ export function dataTfBudgetCostTypesPropertyToHclTerraform(struct?: DataTfBudge
 }
 
 
-export function dataTfBudgetNotificationPropertyToTerraform(struct?: DataTfBudget.NotificationProperty): any {
+export function dataAwsBudgetNotificationPropertyToTerraform(struct?: DataAwsBudget.NotificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -457,7 +457,7 @@ export function dataTfBudgetNotificationPropertyToTerraform(struct?: DataTfBudge
 }
 
 
-export function dataTfBudgetNotificationPropertyToHclTerraform(struct?: DataTfBudget.NotificationProperty): any {
+export function dataAwsBudgetNotificationPropertyToHclTerraform(struct?: DataAwsBudget.NotificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -468,7 +468,7 @@ export function dataTfBudgetNotificationPropertyToHclTerraform(struct?: DataTfBu
 }
 
 
-export function dataTfBudgetPlannedLimitPropertyToTerraform(struct?: DataTfBudget.PlannedLimitProperty): any {
+export function dataAwsBudgetPlannedLimitPropertyToTerraform(struct?: DataAwsBudget.PlannedLimitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -478,7 +478,7 @@ export function dataTfBudgetPlannedLimitPropertyToTerraform(struct?: DataTfBudge
 }
 
 
-export function dataTfBudgetPlannedLimitPropertyToHclTerraform(struct?: DataTfBudget.PlannedLimitProperty): any {
+export function dataAwsBudgetPlannedLimitPropertyToHclTerraform(struct?: DataAwsBudget.PlannedLimitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -489,7 +489,7 @@ export function dataTfBudgetPlannedLimitPropertyToHclTerraform(struct?: DataTfBu
 }
 
 
-export namespace DataTfBudget {
+export namespace DataAwsBudget {
 export interface HistoricalOptionsProperty {
 }
 export class HistoricalOptionsPropertyOutputReference extends cdktn.ComplexObject {

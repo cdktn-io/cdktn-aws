@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy#arn DataTfPolicy#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy#arn DataAwsPolicy#arn}
   */
   readonly arn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy#region DataTfPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy#region DataAwsPolicy#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataTfPolicyConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy aws_resiliencehubv2_policy}
 */
-export class DataTfPolicy extends cdktn.TerraformDataSource {
+export class DataAwsPolicy extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataTfPolicy extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfPolicy to import
-  * @param importFromId The id of the existing DataTfPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfPolicy to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsPolicy to import
+  * @param importFromId The id of the existing DataAwsPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/resiliencehubv2_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resiliencehubv2_policy", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataTfPolicy extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfPolicyConfig
+  * @param options DataAwsPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resiliencehubv2_policy',
       terraformGeneratorMetadata: {
@@ -91,13 +91,13 @@ export class DataTfPolicy extends cdktn.TerraformDataSource {
   }
 
   // availability_slo - computed: true, optional: false, required: false
-  private _availabilitySlo = new DataTfPolicy.AvailabilitySloPropertyList(this, "availability_slo", false);
+  private _availabilitySlo = new DataAwsPolicy.AvailabilitySloPropertyList(this, "availability_slo", false);
   public get availabilitySlo() {
     return this._availabilitySlo;
   }
 
   // data_recovery - computed: true, optional: false, required: false
-  private _dataRecovery = new DataTfPolicy.DataRecoveryPropertyList(this, "data_recovery", false);
+  private _dataRecovery = new DataAwsPolicy.DataRecoveryPropertyList(this, "data_recovery", false);
   public get dataRecovery() {
     return this._dataRecovery;
   }
@@ -113,13 +113,13 @@ export class DataTfPolicy extends cdktn.TerraformDataSource {
   }
 
   // multi_az - computed: true, optional: false, required: false
-  private _multiAz = new DataTfPolicy.MultiAzPropertyList(this, "multi_az", false);
+  private _multiAz = new DataAwsPolicy.MultiAzPropertyList(this, "multi_az", false);
   public get multiAz() {
     return this._multiAz;
   }
 
   // multi_region - computed: true, optional: false, required: false
-  private _multiRegion = new DataTfPolicy.MultiRegionPropertyList(this, "multi_region", false);
+  private _multiRegion = new DataAwsPolicy.MultiRegionPropertyList(this, "multi_region", false);
   public get multiRegion() {
     return this._multiRegion;
   }
@@ -183,7 +183,7 @@ export class DataTfPolicy extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfPolicyAvailabilitySloPropertyToTerraform(struct?: DataTfPolicy.AvailabilitySloProperty): any {
+export function dataAwsPolicyAvailabilitySloPropertyToTerraform(struct?: DataAwsPolicy.AvailabilitySloProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -193,7 +193,7 @@ export function dataTfPolicyAvailabilitySloPropertyToTerraform(struct?: DataTfPo
 }
 
 
-export function dataTfPolicyAvailabilitySloPropertyToHclTerraform(struct?: DataTfPolicy.AvailabilitySloProperty): any {
+export function dataAwsPolicyAvailabilitySloPropertyToHclTerraform(struct?: DataAwsPolicy.AvailabilitySloProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -204,7 +204,7 @@ export function dataTfPolicyAvailabilitySloPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfPolicyDataRecoveryPropertyToTerraform(struct?: DataTfPolicy.DataRecoveryProperty): any {
+export function dataAwsPolicyDataRecoveryPropertyToTerraform(struct?: DataAwsPolicy.DataRecoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -214,7 +214,7 @@ export function dataTfPolicyDataRecoveryPropertyToTerraform(struct?: DataTfPolic
 }
 
 
-export function dataTfPolicyDataRecoveryPropertyToHclTerraform(struct?: DataTfPolicy.DataRecoveryProperty): any {
+export function dataAwsPolicyDataRecoveryPropertyToHclTerraform(struct?: DataAwsPolicy.DataRecoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -225,7 +225,7 @@ export function dataTfPolicyDataRecoveryPropertyToHclTerraform(struct?: DataTfPo
 }
 
 
-export function dataTfPolicyMultiAzPropertyToTerraform(struct?: DataTfPolicy.MultiAzProperty): any {
+export function dataAwsPolicyMultiAzPropertyToTerraform(struct?: DataAwsPolicy.MultiAzProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function dataTfPolicyMultiAzPropertyToTerraform(struct?: DataTfPolicy.Mul
 }
 
 
-export function dataTfPolicyMultiAzPropertyToHclTerraform(struct?: DataTfPolicy.MultiAzProperty): any {
+export function dataAwsPolicyMultiAzPropertyToHclTerraform(struct?: DataAwsPolicy.MultiAzProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function dataTfPolicyMultiAzPropertyToHclTerraform(struct?: DataTfPolicy.
 }
 
 
-export function dataTfPolicyMultiRegionPropertyToTerraform(struct?: DataTfPolicy.MultiRegionProperty): any {
+export function dataAwsPolicyMultiRegionPropertyToTerraform(struct?: DataAwsPolicy.MultiRegionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function dataTfPolicyMultiRegionPropertyToTerraform(struct?: DataTfPolicy
 }
 
 
-export function dataTfPolicyMultiRegionPropertyToHclTerraform(struct?: DataTfPolicy.MultiRegionProperty): any {
+export function dataAwsPolicyMultiRegionPropertyToHclTerraform(struct?: DataAwsPolicy.MultiRegionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,7 +267,7 @@ export function dataTfPolicyMultiRegionPropertyToHclTerraform(struct?: DataTfPol
 }
 
 
-export namespace DataTfPolicy {
+export namespace DataAwsPolicy {
 export interface AvailabilitySloProperty {
 }
 export class AvailabilitySloPropertyOutputReference extends cdktn.ComplexObject {

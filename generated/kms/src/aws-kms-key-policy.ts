@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfKeyPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsKeyPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy#bypass_policy_lockout_safety_check TfKeyPolicy#bypass_policy_lockout_safety_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy#bypass_policy_lockout_safety_check AwsKeyPolicy#bypass_policy_lockout_safety_check}
   */
   readonly bypassPolicyLockoutSafetyCheck?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy#id TfKeyPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy#id AwsKeyPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy#key_id TfKeyPolicy#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy#key_id AwsKeyPolicy#key_id}
   */
   readonly keyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy#policy TfKeyPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy#policy AwsKeyPolicy#policy}
   */
   readonly policy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy#region TfKeyPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy#region AwsKeyPolicy#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface TfKeyPolicyConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy aws_kms_key_policy}
 */
-export class TfKeyPolicy extends cdktn.TerraformResource {
+export class AwsKeyPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfKeyPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfKeyPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsKeyPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfKeyPolicy to import
-  * @param importFromId The id of the existing TfKeyPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfKeyPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsKeyPolicy to import
+  * @param importFromId The id of the existing AwsKeyPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsKeyPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kms_key_policy", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfKeyPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfKeyPolicyConfig
+  * @param options AwsKeyPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfKeyPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsKeyPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kms_key_policy',
       terraformGeneratorMetadata: {

@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRuleGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRuleGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#id TfRuleGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#id AwsRuleGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#metric_name TfRuleGroup#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#metric_name AwsRuleGroup#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#name TfRuleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#name AwsRuleGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#tags TfRuleGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#tags AwsRuleGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#tags_all TfRuleGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#tags_all AwsRuleGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * activated_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#activated_rule TfRuleGroup#activated_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#activated_rule AwsRuleGroup#activated_rule}
   */
-  readonly activatedRule?: TfRuleGroup.ActivatedRuleProperty[] | cdktn.IResolvable;
+  readonly activatedRule?: AwsRuleGroup.ActivatedRuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group aws_waf_rule_group}
 */
-export class TfRuleGroup extends cdktn.TerraformResource {
+export class AwsRuleGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfRuleGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRuleGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRuleGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRuleGroup to import
-  * @param importFromId The id of the existing TfRuleGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRuleGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsRuleGroup to import
+  * @param importFromId The id of the existing AwsRuleGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRuleGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_waf_rule_group", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfRuleGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRuleGroupConfig
+  * @param options AwsRuleGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRuleGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRuleGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_waf_rule_group',
       terraformGeneratorMetadata: {
@@ -180,11 +180,11 @@ export class TfRuleGroup extends cdktn.TerraformResource {
   }
 
   // activated_rule - computed: false, optional: true, required: false
-  private _activatedRule = new TfRuleGroup.ActivatedRulePropertyList(this, "activated_rule", true);
+  private _activatedRule = new AwsRuleGroup.ActivatedRulePropertyList(this, "activated_rule", true);
   public get activatedRule() {
     return this._activatedRule;
   }
-  public putActivatedRule(value: TfRuleGroup.ActivatedRuleProperty[] | cdktn.IResolvable) {
+  public putActivatedRule(value: AwsRuleGroup.ActivatedRuleProperty[] | cdktn.IResolvable) {
     this._activatedRule.internalValue = value;
   }
   public resetActivatedRule() {
@@ -206,7 +206,7 @@ export class TfRuleGroup extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      activated_rule: cdktn.listMapper(tfRuleGroupActivatedRulePropertyToTerraform, true)(this._activatedRule.internalValue),
+      activated_rule: cdktn.listMapper(awsRuleGroupActivatedRulePropertyToTerraform, true)(this._activatedRule.internalValue),
     };
   }
 
@@ -243,10 +243,10 @@ export class TfRuleGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       activated_rule: {
-        value: cdktn.listMapperHcl(tfRuleGroupActivatedRulePropertyToHclTerraform, true)(this._activatedRule.internalValue),
+        value: cdktn.listMapperHcl(awsRuleGroupActivatedRulePropertyToHclTerraform, true)(this._activatedRule.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfRuleGroup.ActivatedRulePropertyList",
+        storageClassType: "AwsRuleGroup.ActivatedRulePropertyList",
       },
     };
 
@@ -255,7 +255,7 @@ export class TfRuleGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfRuleGroupActionPropertyToTerraform(struct?: TfRuleGroup.ActionPropertyOutputReference | TfRuleGroup.ActionProperty): any {
+export function awsRuleGroupActionPropertyToTerraform(struct?: AwsRuleGroup.ActionPropertyOutputReference | AwsRuleGroup.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function tfRuleGroupActionPropertyToTerraform(struct?: TfRuleGroup.Action
 }
 
 
-export function tfRuleGroupActionPropertyToHclTerraform(struct?: TfRuleGroup.ActionPropertyOutputReference | TfRuleGroup.ActionProperty): any {
+export function awsRuleGroupActionPropertyToHclTerraform(struct?: AwsRuleGroup.ActionPropertyOutputReference | AwsRuleGroup.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -285,7 +285,7 @@ export function tfRuleGroupActionPropertyToHclTerraform(struct?: TfRuleGroup.Act
 }
 
 
-export function tfRuleGroupActivatedRulePropertyToTerraform(struct?: TfRuleGroup.ActivatedRuleProperty | cdktn.IResolvable): any {
+export function awsRuleGroupActivatedRulePropertyToTerraform(struct?: AwsRuleGroup.ActivatedRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,12 +294,12 @@ export function tfRuleGroupActivatedRulePropertyToTerraform(struct?: TfRuleGroup
     priority: cdktn.numberToTerraform(struct!.priority),
     rule_id: cdktn.stringToTerraform(struct!.ruleId),
     type: cdktn.stringToTerraform(struct!.type),
-    action: tfRuleGroupActionPropertyToTerraform(struct!.action),
+    action: awsRuleGroupActionPropertyToTerraform(struct!.action),
   }
 }
 
 
-export function tfRuleGroupActivatedRulePropertyToHclTerraform(struct?: TfRuleGroup.ActivatedRuleProperty | cdktn.IResolvable): any {
+export function awsRuleGroupActivatedRulePropertyToHclTerraform(struct?: AwsRuleGroup.ActivatedRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function tfRuleGroupActivatedRulePropertyToHclTerraform(struct?: TfRuleGr
       storageClassType: "string",
     },
     action: {
-      value: tfRuleGroupActionPropertyToHclTerraform(struct!.action),
+      value: awsRuleGroupActionPropertyToHclTerraform(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "ActionPropertyList",
@@ -336,10 +336,10 @@ export function tfRuleGroupActivatedRulePropertyToHclTerraform(struct?: TfRuleGr
 }
 
 
-export namespace TfRuleGroup {
+export namespace AwsRuleGroup {
 export interface ActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#type TfRuleGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#type AwsRuleGroup#type}
   */
   readonly type: string;
 }
@@ -390,21 +390,21 @@ export class ActionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ActivatedRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#priority TfRuleGroup#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#priority AwsRuleGroup#priority}
   */
   readonly priority: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#rule_id TfRuleGroup#rule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#rule_id AwsRuleGroup#rule_id}
   */
   readonly ruleId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#type TfRuleGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#type AwsRuleGroup#type}
   */
   readonly type?: string;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#action TfRuleGroup#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/waf_rule_group#action AwsRuleGroup#action}
   */
   readonly action: ActionProperty;
 }

@@ -31,17 +31,17 @@ describe("the symbol index", () => {
     const s3Bucket = index.byModule.get("s3-bucket")!;
     expect(s3Bucket.symbols.get("S3BucketCorsRule")).toEqual({
       group: "s3",
-      member: "TfBucket.CorsRuleProperty",
+      member: "AwsBucket.CorsRuleProperty",
     });
     expect(s3Bucket.symbols.get("S3BucketCorsRuleOutputReference")?.member).toBe(
-      "TfBucket.CorsRulePropertyOutputReference",
+      "AwsBucket.CorsRulePropertyOutputReference",
     );
-    expect(s3Bucket.symbols.get("S3BucketCorsRuleList")?.member).toBe("TfBucket.CorsRulePropertyList");
+    expect(s3Bucket.symbols.get("S3BucketCorsRuleList")?.member).toBe("AwsBucket.CorsRulePropertyList");
     expect(s3Bucket.symbols.get("s3BucketCorsRuleToTerraform")?.member).toBe(
-      "tfBucketMapperCorsRulePropertyToTerraform",
+      "awsBucketMapperCorsRulePropertyToTerraform",
     );
     expect(s3Bucket.symbols.get("s3BucketCorsRuleToHclTerraform")?.member).toBe(
-      "tfBucketMapperCorsRulePropertyToHclTerraform",
+      "awsBucketMapperCorsRulePropertyToHclTerraform",
     );
   });
 
@@ -49,10 +49,10 @@ describe("the symbol index", () => {
     // The one entry where the rule is wrong: the config struct lost the pool race to a nested one.
     expect(
       index.byModule.get("wafv2-web-acl-association")!.symbols.get("Wafv2WebAclAssociationConfigA"),
-    ).toEqual({ group: "waf", member: "TfWebAclAssociationConfig" });
+    ).toEqual({ group: "waf", member: "AwsWebAclAssociationConfig" });
     expect(index.byModule.get("s3-bucket")!.symbols.get("S3BucketConfig")).toEqual({
       group: "s3",
-      member: "TfBucketConfig",
+      member: "AwsBucketConfig",
     });
   });
 
@@ -76,7 +76,7 @@ describe("the symbol index", () => {
     ).toBe("wafv2-web-acl-rule");
     expect(index.byModule.get("wafv2-web-acl-rule")?.symbols.get("Wafv2WebAclRuleActionA")).toEqual({
       group: "waf",
-      member: "TfWebAclRule.ActionProperty",
+      member: "AwsWebAclRule.ActionProperty",
     });
   });
 });

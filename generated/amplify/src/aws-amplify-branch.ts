@@ -5,94 +5,94 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBranchConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBranchConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#app_id TfBranch#app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#app_id AwsBranch#app_id}
   */
   readonly appId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#backend_environment_arn TfBranch#backend_environment_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#backend_environment_arn AwsBranch#backend_environment_arn}
   */
   readonly backendEnvironmentArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#basic_auth_credentials TfBranch#basic_auth_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#basic_auth_credentials AwsBranch#basic_auth_credentials}
   */
   readonly basicAuthCredentials?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#branch_name TfBranch#branch_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#branch_name AwsBranch#branch_name}
   */
   readonly branchName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#description TfBranch#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#description AwsBranch#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#display_name TfBranch#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#display_name AwsBranch#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#enable_auto_build TfBranch#enable_auto_build}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#enable_auto_build AwsBranch#enable_auto_build}
   */
   readonly enableAutoBuild?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#enable_basic_auth TfBranch#enable_basic_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#enable_basic_auth AwsBranch#enable_basic_auth}
   */
   readonly enableBasicAuth?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#enable_notification TfBranch#enable_notification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#enable_notification AwsBranch#enable_notification}
   */
   readonly enableNotification?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#enable_performance_mode TfBranch#enable_performance_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#enable_performance_mode AwsBranch#enable_performance_mode}
   */
   readonly enablePerformanceMode?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#enable_pull_request_preview TfBranch#enable_pull_request_preview}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#enable_pull_request_preview AwsBranch#enable_pull_request_preview}
   */
   readonly enablePullRequestPreview?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#enable_skew_protection TfBranch#enable_skew_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#enable_skew_protection AwsBranch#enable_skew_protection}
   */
   readonly enableSkewProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#environment_variables TfBranch#environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#environment_variables AwsBranch#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#framework TfBranch#framework}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#framework AwsBranch#framework}
   */
   readonly framework?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#id TfBranch#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#id AwsBranch#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#pull_request_environment_name TfBranch#pull_request_environment_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#pull_request_environment_name AwsBranch#pull_request_environment_name}
   */
   readonly pullRequestEnvironmentName?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#region TfBranch#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#region AwsBranch#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#stage TfBranch#stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#stage AwsBranch#stage}
   */
   readonly stage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#tags TfBranch#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#tags AwsBranch#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#tags_all TfBranch#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#tags_all AwsBranch#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#ttl TfBranch#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#ttl AwsBranch#ttl}
   */
   readonly ttl?: string;
 }
@@ -100,7 +100,7 @@ export interface TfBranchConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch aws_amplify_branch}
 */
-export class TfBranch extends cdktn.TerraformResource {
+export class AwsBranch extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -111,11 +111,11 @@ export class TfBranch extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBranch resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBranch resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBranch to import
-  * @param importFromId The id of the existing TfBranch that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBranch to import is found
+  * @param importToId The construct id used in the generated config for the AwsBranch to import
+  * @param importFromId The id of the existing AwsBranch that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_branch#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBranch to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_amplify_branch", importId: importFromId, provider });
@@ -130,9 +130,9 @@ export class TfBranch extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBranchConfig
+  * @param options AwsBranchConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBranchConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBranchConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_amplify_branch',
       terraformGeneratorMetadata: {

@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#description TfEndpoint#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#description AwsEndpoint#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#id TfEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#id AwsEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#name TfEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#name AwsEndpoint#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#region TfEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#region AwsEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#role_arn TfEndpoint#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#role_arn AwsEndpoint#role_arn}
   */
   readonly roleArn?: string;
   /**
   * event_bus block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#event_bus TfEndpoint#event_bus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#event_bus AwsEndpoint#event_bus}
   */
-  readonly eventBus: TfEndpoint.EventBusProperty[] | cdktn.IResolvable;
+  readonly eventBus: AwsEndpoint.EventBusProperty[] | cdktn.IResolvable;
   /**
   * replication_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#replication_config TfEndpoint#replication_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#replication_config AwsEndpoint#replication_config}
   */
-  readonly replicationConfig?: TfEndpoint.ReplicationConfigProperty;
+  readonly replicationConfig?: AwsEndpoint.ReplicationConfigProperty;
   /**
   * routing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#routing_config TfEndpoint#routing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#routing_config AwsEndpoint#routing_config}
   */
-  readonly routingConfig: TfEndpoint.RoutingConfigProperty;
+  readonly routingConfig: AwsEndpoint.RoutingConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint aws_cloudwatch_event_endpoint}
 */
-export class TfEndpoint extends cdktn.TerraformResource {
+export class AwsEndpoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfEndpoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEndpoint to import
-  * @param importFromId The id of the existing TfEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the AwsEndpoint to import
+  * @param importFromId The id of the existing AwsEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_event_endpoint", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfEndpoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEndpointConfig
+  * @param options AwsEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_event_endpoint',
       terraformGeneratorMetadata: {
@@ -204,11 +204,11 @@ export class TfEndpoint extends cdktn.TerraformResource {
   }
 
   // event_bus - computed: false, optional: false, required: true
-  private _eventBus = new TfEndpoint.EventBusPropertyList(this, "event_bus", false);
+  private _eventBus = new AwsEndpoint.EventBusPropertyList(this, "event_bus", false);
   public get eventBus() {
     return this._eventBus;
   }
-  public putEventBus(value: TfEndpoint.EventBusProperty[] | cdktn.IResolvable) {
+  public putEventBus(value: AwsEndpoint.EventBusProperty[] | cdktn.IResolvable) {
     this._eventBus.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -217,11 +217,11 @@ export class TfEndpoint extends cdktn.TerraformResource {
   }
 
   // replication_config - computed: false, optional: true, required: false
-  private _replicationConfig = new TfEndpoint.ReplicationConfigPropertyOutputReference(this, "replication_config");
+  private _replicationConfig = new AwsEndpoint.ReplicationConfigPropertyOutputReference(this, "replication_config");
   public get replicationConfig() {
     return this._replicationConfig;
   }
-  public putReplicationConfig(value: TfEndpoint.ReplicationConfigProperty) {
+  public putReplicationConfig(value: AwsEndpoint.ReplicationConfigProperty) {
     this._replicationConfig.internalValue = value;
   }
   public resetReplicationConfig() {
@@ -233,11 +233,11 @@ export class TfEndpoint extends cdktn.TerraformResource {
   }
 
   // routing_config - computed: false, optional: false, required: true
-  private _routingConfig = new TfEndpoint.RoutingConfigPropertyOutputReference(this, "routing_config");
+  private _routingConfig = new AwsEndpoint.RoutingConfigPropertyOutputReference(this, "routing_config");
   public get routingConfig() {
     return this._routingConfig;
   }
-  public putRoutingConfig(value: TfEndpoint.RoutingConfigProperty) {
+  public putRoutingConfig(value: AwsEndpoint.RoutingConfigProperty) {
     this._routingConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -256,9 +256,9 @@ export class TfEndpoint extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       role_arn: cdktn.stringToTerraform(this._roleArn),
-      event_bus: cdktn.listMapper(tfEndpointEventBusPropertyToTerraform, true)(this._eventBus.internalValue),
-      replication_config: tfEndpointReplicationConfigPropertyToTerraform(this._replicationConfig.internalValue),
-      routing_config: tfEndpointRoutingConfigPropertyToTerraform(this._routingConfig.internalValue),
+      event_bus: cdktn.listMapper(awsEndpointEventBusPropertyToTerraform, true)(this._eventBus.internalValue),
+      replication_config: awsEndpointReplicationConfigPropertyToTerraform(this._replicationConfig.internalValue),
+      routing_config: awsEndpointRoutingConfigPropertyToTerraform(this._routingConfig.internalValue),
     };
   }
 
@@ -295,22 +295,22 @@ export class TfEndpoint extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       event_bus: {
-        value: cdktn.listMapperHcl(tfEndpointEventBusPropertyToHclTerraform, true)(this._eventBus.internalValue),
+        value: cdktn.listMapperHcl(awsEndpointEventBusPropertyToHclTerraform, true)(this._eventBus.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEndpoint.EventBusPropertyList",
+        storageClassType: "AwsEndpoint.EventBusPropertyList",
       },
       replication_config: {
-        value: tfEndpointReplicationConfigPropertyToHclTerraform(this._replicationConfig.internalValue),
+        value: awsEndpointReplicationConfigPropertyToHclTerraform(this._replicationConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEndpoint.ReplicationConfigPropertyList",
+        storageClassType: "AwsEndpoint.ReplicationConfigPropertyList",
       },
       routing_config: {
-        value: tfEndpointRoutingConfigPropertyToHclTerraform(this._routingConfig.internalValue),
+        value: awsEndpointRoutingConfigPropertyToHclTerraform(this._routingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEndpoint.RoutingConfigPropertyList",
+        storageClassType: "AwsEndpoint.RoutingConfigPropertyList",
       },
     };
 
@@ -319,7 +319,7 @@ export class TfEndpoint extends cdktn.TerraformResource {
   }
 }
 
-export function tfEndpointEventBusPropertyToTerraform(struct?: TfEndpoint.EventBusProperty | cdktn.IResolvable): any {
+export function awsEndpointEventBusPropertyToTerraform(struct?: AwsEndpoint.EventBusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function tfEndpointEventBusPropertyToTerraform(struct?: TfEndpoint.EventB
 }
 
 
-export function tfEndpointEventBusPropertyToHclTerraform(struct?: TfEndpoint.EventBusProperty | cdktn.IResolvable): any {
+export function awsEndpointEventBusPropertyToHclTerraform(struct?: AwsEndpoint.EventBusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function tfEndpointEventBusPropertyToHclTerraform(struct?: TfEndpoint.Eve
 }
 
 
-export function tfEndpointReplicationConfigPropertyToTerraform(struct?: TfEndpoint.ReplicationConfigPropertyOutputReference | TfEndpoint.ReplicationConfigProperty): any {
+export function awsEndpointReplicationConfigPropertyToTerraform(struct?: AwsEndpoint.ReplicationConfigPropertyOutputReference | AwsEndpoint.ReplicationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function tfEndpointReplicationConfigPropertyToTerraform(struct?: TfEndpoi
 }
 
 
-export function tfEndpointReplicationConfigPropertyToHclTerraform(struct?: TfEndpoint.ReplicationConfigPropertyOutputReference | TfEndpoint.ReplicationConfigProperty): any {
+export function awsEndpointReplicationConfigPropertyToHclTerraform(struct?: AwsEndpoint.ReplicationConfigPropertyOutputReference | AwsEndpoint.ReplicationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function tfEndpointReplicationConfigPropertyToHclTerraform(struct?: TfEnd
 }
 
 
-export function tfEndpointPrimaryPropertyToTerraform(struct?: TfEndpoint.PrimaryPropertyOutputReference | TfEndpoint.PrimaryProperty): any {
+export function awsEndpointPrimaryPropertyToTerraform(struct?: AwsEndpoint.PrimaryPropertyOutputReference | AwsEndpoint.PrimaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -390,7 +390,7 @@ export function tfEndpointPrimaryPropertyToTerraform(struct?: TfEndpoint.Primary
 }
 
 
-export function tfEndpointPrimaryPropertyToHclTerraform(struct?: TfEndpoint.PrimaryPropertyOutputReference | TfEndpoint.PrimaryProperty): any {
+export function awsEndpointPrimaryPropertyToHclTerraform(struct?: AwsEndpoint.PrimaryPropertyOutputReference | AwsEndpoint.PrimaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function tfEndpointPrimaryPropertyToHclTerraform(struct?: TfEndpoint.Prim
 }
 
 
-export function tfEndpointSecondaryPropertyToTerraform(struct?: TfEndpoint.SecondaryPropertyOutputReference | TfEndpoint.SecondaryProperty): any {
+export function awsEndpointSecondaryPropertyToTerraform(struct?: AwsEndpoint.SecondaryPropertyOutputReference | AwsEndpoint.SecondaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function tfEndpointSecondaryPropertyToTerraform(struct?: TfEndpoint.Secon
 }
 
 
-export function tfEndpointSecondaryPropertyToHclTerraform(struct?: TfEndpoint.SecondaryPropertyOutputReference | TfEndpoint.SecondaryProperty): any {
+export function awsEndpointSecondaryPropertyToHclTerraform(struct?: AwsEndpoint.SecondaryPropertyOutputReference | AwsEndpoint.SecondaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,32 +439,32 @@ export function tfEndpointSecondaryPropertyToHclTerraform(struct?: TfEndpoint.Se
 }
 
 
-export function tfEndpointFailoverConfigPropertyToTerraform(struct?: TfEndpoint.FailoverConfigPropertyOutputReference | TfEndpoint.FailoverConfigProperty): any {
+export function awsEndpointFailoverConfigPropertyToTerraform(struct?: AwsEndpoint.FailoverConfigPropertyOutputReference | AwsEndpoint.FailoverConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    primary: tfEndpointPrimaryPropertyToTerraform(struct!.primary),
-    secondary: tfEndpointSecondaryPropertyToTerraform(struct!.secondary),
+    primary: awsEndpointPrimaryPropertyToTerraform(struct!.primary),
+    secondary: awsEndpointSecondaryPropertyToTerraform(struct!.secondary),
   }
 }
 
 
-export function tfEndpointFailoverConfigPropertyToHclTerraform(struct?: TfEndpoint.FailoverConfigPropertyOutputReference | TfEndpoint.FailoverConfigProperty): any {
+export function awsEndpointFailoverConfigPropertyToHclTerraform(struct?: AwsEndpoint.FailoverConfigPropertyOutputReference | AwsEndpoint.FailoverConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     primary: {
-      value: tfEndpointPrimaryPropertyToHclTerraform(struct!.primary),
+      value: awsEndpointPrimaryPropertyToHclTerraform(struct!.primary),
       isBlock: true,
       type: "list",
       storageClassType: "PrimaryPropertyList",
     },
     secondary: {
-      value: tfEndpointSecondaryPropertyToHclTerraform(struct!.secondary),
+      value: awsEndpointSecondaryPropertyToHclTerraform(struct!.secondary),
       isBlock: true,
       type: "list",
       storageClassType: "SecondaryPropertyList",
@@ -476,25 +476,25 @@ export function tfEndpointFailoverConfigPropertyToHclTerraform(struct?: TfEndpoi
 }
 
 
-export function tfEndpointRoutingConfigPropertyToTerraform(struct?: TfEndpoint.RoutingConfigPropertyOutputReference | TfEndpoint.RoutingConfigProperty): any {
+export function awsEndpointRoutingConfigPropertyToTerraform(struct?: AwsEndpoint.RoutingConfigPropertyOutputReference | AwsEndpoint.RoutingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    failover_config: tfEndpointFailoverConfigPropertyToTerraform(struct!.failoverConfig),
+    failover_config: awsEndpointFailoverConfigPropertyToTerraform(struct!.failoverConfig),
   }
 }
 
 
-export function tfEndpointRoutingConfigPropertyToHclTerraform(struct?: TfEndpoint.RoutingConfigPropertyOutputReference | TfEndpoint.RoutingConfigProperty): any {
+export function awsEndpointRoutingConfigPropertyToHclTerraform(struct?: AwsEndpoint.RoutingConfigPropertyOutputReference | AwsEndpoint.RoutingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     failover_config: {
-      value: tfEndpointFailoverConfigPropertyToHclTerraform(struct!.failoverConfig),
+      value: awsEndpointFailoverConfigPropertyToHclTerraform(struct!.failoverConfig),
       isBlock: true,
       type: "list",
       storageClassType: "FailoverConfigPropertyList",
@@ -506,10 +506,10 @@ export function tfEndpointRoutingConfigPropertyToHclTerraform(struct?: TfEndpoin
 }
 
 
-export namespace TfEndpoint {
+export namespace AwsEndpoint {
 export interface EventBusProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#event_bus_arn TfEndpoint#event_bus_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#event_bus_arn AwsEndpoint#event_bus_arn}
   */
   readonly eventBusArn: string;
 }
@@ -592,7 +592,7 @@ export class EventBusPropertyList extends cdktn.ComplexList {
 }
 export interface ReplicationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#state TfEndpoint#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#state AwsEndpoint#state}
   */
   readonly state?: string;
 }
@@ -646,7 +646,7 @@ export class ReplicationConfigPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface PrimaryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#health_check TfEndpoint#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#health_check AwsEndpoint#health_check}
   */
   readonly healthCheck?: string;
 }
@@ -700,7 +700,7 @@ export class PrimaryPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SecondaryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#route TfEndpoint#route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#route AwsEndpoint#route}
   */
   readonly route?: string;
 }
@@ -756,13 +756,13 @@ export interface FailoverConfigProperty {
   /**
   * primary block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#primary TfEndpoint#primary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#primary AwsEndpoint#primary}
   */
   readonly primary: PrimaryProperty;
   /**
   * secondary block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#secondary TfEndpoint#secondary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#secondary AwsEndpoint#secondary}
   */
   readonly secondary: SecondaryProperty;
 }
@@ -834,7 +834,7 @@ export interface RoutingConfigProperty {
   /**
   * failover_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#failover_config TfEndpoint#failover_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_endpoint#failover_config AwsEndpoint#failover_config}
   */
   readonly failoverConfig: FailoverConfigProperty;
 }

@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfSnapshotConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsSnapshotConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_snapshot#id DataTfSnapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_snapshot#id DataAwsSnapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_snapshot#name DataTfSnapshot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_snapshot#name DataAwsSnapshot#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_snapshot#region DataTfSnapshot#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_snapshot#region DataAwsSnapshot#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_snapshot#tags DataTfSnapshot#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_snapshot#tags DataAwsSnapshot#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataTfSnapshotConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_snapshot aws_memorydb_snapshot}
 */
-export class DataTfSnapshot extends cdktn.TerraformDataSource {
+export class DataAwsSnapshot extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfSnapshot extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfSnapshot resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsSnapshot resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfSnapshot to import
-  * @param importFromId The id of the existing DataTfSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_snapshot#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfSnapshot to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsSnapshot to import
+  * @param importFromId The id of the existing DataAwsSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_snapshot#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsSnapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_memorydb_snapshot", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfSnapshot extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfSnapshotConfig
+  * @param options DataAwsSnapshotConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfSnapshotConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsSnapshotConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_memorydb_snapshot',
       terraformGeneratorMetadata: {
@@ -96,7 +96,7 @@ export class DataTfSnapshot extends cdktn.TerraformDataSource {
   }
 
   // cluster_configuration - computed: true, optional: false, required: false
-  private _clusterConfiguration = new DataTfSnapshot.ClusterConfigurationPropertyList(this, "cluster_configuration", false);
+  private _clusterConfiguration = new DataAwsSnapshot.ClusterConfigurationPropertyList(this, "cluster_configuration", false);
   public get clusterConfiguration() {
     return this._clusterConfiguration;
   }
@@ -223,7 +223,7 @@ export class DataTfSnapshot extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfSnapshotClusterConfigurationPropertyToTerraform(struct?: DataTfSnapshot.ClusterConfigurationProperty): any {
+export function dataAwsSnapshotClusterConfigurationPropertyToTerraform(struct?: DataAwsSnapshot.ClusterConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function dataTfSnapshotClusterConfigurationPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfSnapshotClusterConfigurationPropertyToHclTerraform(struct?: DataTfSnapshot.ClusterConfigurationProperty): any {
+export function dataAwsSnapshotClusterConfigurationPropertyToHclTerraform(struct?: DataAwsSnapshot.ClusterConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function dataTfSnapshotClusterConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataTfSnapshot {
+export namespace DataAwsSnapshot {
 export interface ClusterConfigurationProperty {
 }
 export class ClusterConfigurationPropertyOutputReference extends cdktn.ComplexObject {

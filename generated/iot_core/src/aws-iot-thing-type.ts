@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfThingTypeConfig extends cdktn.TerraformMetaArguments {
+export interface AwsThingTypeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#deprecated TfThingType#deprecated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#deprecated AwsThingType#deprecated}
   */
   readonly deprecated?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#id TfThingType#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#id AwsThingType#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#name TfThingType#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#name AwsThingType#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#region TfThingType#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#region AwsThingType#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#tags TfThingType#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#tags AwsThingType#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#tags_all TfThingType#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#tags_all AwsThingType#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#properties TfThingType#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#properties AwsThingType#properties}
   */
-  readonly properties?: TfThingType.PropertiesProperty;
+  readonly properties?: AwsThingType.PropertiesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type aws_iot_thing_type}
 */
-export class TfThingType extends cdktn.TerraformResource {
+export class AwsThingType extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfThingType extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfThingType resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsThingType resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfThingType to import
-  * @param importFromId The id of the existing TfThingType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfThingType to import is found
+  * @param importToId The construct id used in the generated config for the AwsThingType to import
+  * @param importFromId The id of the existing AwsThingType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsThingType to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_thing_type", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfThingType extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfThingTypeConfig
+  * @param options AwsThingTypeConfig
   */
-  public constructor(scope: Construct, id: string, config: TfThingTypeConfig) {
+  public constructor(scope: Construct, id: string, config: AwsThingTypeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_thing_type',
       terraformGeneratorMetadata: {
@@ -206,11 +206,11 @@ export class TfThingType extends cdktn.TerraformResource {
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties = new TfThingType.PropertiesPropertyOutputReference(this, "properties");
+  private _properties = new AwsThingType.PropertiesPropertyOutputReference(this, "properties");
   public get properties() {
     return this._properties;
   }
-  public putProperties(value: TfThingType.PropertiesProperty) {
+  public putProperties(value: AwsThingType.PropertiesProperty) {
     this._properties.internalValue = value;
   }
   public resetProperties() {
@@ -233,7 +233,7 @@ export class TfThingType extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      properties: tfThingTypePropertiesPropertyToTerraform(this._properties.internalValue),
+      properties: awsThingTypePropertiesPropertyToTerraform(this._properties.internalValue),
     };
   }
 
@@ -276,10 +276,10 @@ export class TfThingType extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       properties: {
-        value: tfThingTypePropertiesPropertyToHclTerraform(this._properties.internalValue),
+        value: awsThingTypePropertiesPropertyToHclTerraform(this._properties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfThingType.PropertiesPropertyList",
+        storageClassType: "AwsThingType.PropertiesPropertyList",
       },
     };
 
@@ -288,7 +288,7 @@ export class TfThingType extends cdktn.TerraformResource {
   }
 }
 
-export function tfThingTypePropertiesPropertyToTerraform(struct?: TfThingType.PropertiesPropertyOutputReference | TfThingType.PropertiesProperty): any {
+export function awsThingTypePropertiesPropertyToTerraform(struct?: AwsThingType.PropertiesPropertyOutputReference | AwsThingType.PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function tfThingTypePropertiesPropertyToTerraform(struct?: TfThingType.Pr
 }
 
 
-export function tfThingTypePropertiesPropertyToHclTerraform(struct?: TfThingType.PropertiesPropertyOutputReference | TfThingType.PropertiesProperty): any {
+export function awsThingTypePropertiesPropertyToHclTerraform(struct?: AwsThingType.PropertiesPropertyOutputReference | AwsThingType.PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,14 +325,14 @@ export function tfThingTypePropertiesPropertyToHclTerraform(struct?: TfThingType
 }
 
 
-export namespace TfThingType {
+export namespace AwsThingType {
 export interface PropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#description TfThingType#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#description AwsThingType#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#searchable_attributes TfThingType#searchable_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_thing_type#searchable_attributes AwsThingType#searchable_attributes}
   */
   readonly searchableAttributes?: string[];
 }

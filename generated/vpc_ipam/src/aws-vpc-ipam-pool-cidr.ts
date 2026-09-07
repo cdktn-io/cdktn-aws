@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPoolCidrConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPoolCidrConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#cidr TfPoolCidr#cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#cidr AwsPoolCidr#cidr}
   */
   readonly cidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#id TfPoolCidr#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#id AwsPoolCidr#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#ipam_pool_id TfPoolCidr#ipam_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#ipam_pool_id AwsPoolCidr#ipam_pool_id}
   */
   readonly ipamPoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#netmask_length TfPoolCidr#netmask_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#netmask_length AwsPoolCidr#netmask_length}
   */
   readonly netmaskLength?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#region TfPoolCidr#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#region AwsPoolCidr#region}
   */
   readonly region?: string;
   /**
   * cidr_authorization_context block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#cidr_authorization_context TfPoolCidr#cidr_authorization_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#cidr_authorization_context AwsPoolCidr#cidr_authorization_context}
   */
-  readonly cidrAuthorizationContext?: TfPoolCidr.CidrAuthorizationContextProperty;
+  readonly cidrAuthorizationContext?: AwsPoolCidr.CidrAuthorizationContextProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#timeouts TfPoolCidr#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#timeouts AwsPoolCidr#timeouts}
   */
-  readonly timeouts?: TfPoolCidr.TimeoutsProperty;
+  readonly timeouts?: AwsPoolCidr.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr aws_vpc_ipam_pool_cidr}
 */
-export class TfPoolCidr extends cdktn.TerraformResource {
+export class AwsPoolCidr extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfPoolCidr extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPoolCidr resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPoolCidr resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPoolCidr to import
-  * @param importFromId The id of the existing TfPoolCidr that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPoolCidr to import is found
+  * @param importToId The construct id used in the generated config for the AwsPoolCidr to import
+  * @param importFromId The id of the existing AwsPoolCidr that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPoolCidr to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_ipam_pool_cidr", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfPoolCidr extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPoolCidrConfig
+  * @param options AwsPoolCidrConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPoolCidrConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPoolCidrConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_ipam_pool_cidr',
       terraformGeneratorMetadata: {
@@ -192,11 +192,11 @@ export class TfPoolCidr extends cdktn.TerraformResource {
   }
 
   // cidr_authorization_context - computed: false, optional: true, required: false
-  private _cidrAuthorizationContext = new TfPoolCidr.CidrAuthorizationContextPropertyOutputReference(this, "cidr_authorization_context");
+  private _cidrAuthorizationContext = new AwsPoolCidr.CidrAuthorizationContextPropertyOutputReference(this, "cidr_authorization_context");
   public get cidrAuthorizationContext() {
     return this._cidrAuthorizationContext;
   }
-  public putCidrAuthorizationContext(value: TfPoolCidr.CidrAuthorizationContextProperty) {
+  public putCidrAuthorizationContext(value: AwsPoolCidr.CidrAuthorizationContextProperty) {
     this._cidrAuthorizationContext.internalValue = value;
   }
   public resetCidrAuthorizationContext() {
@@ -208,11 +208,11 @@ export class TfPoolCidr extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPoolCidr.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPoolCidr.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPoolCidr.TimeoutsProperty) {
+  public putTimeouts(value: AwsPoolCidr.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -234,8 +234,8 @@ export class TfPoolCidr extends cdktn.TerraformResource {
       ipam_pool_id: cdktn.stringToTerraform(this._ipamPoolId),
       netmask_length: cdktn.numberToTerraform(this._netmaskLength),
       region: cdktn.stringToTerraform(this._region),
-      cidr_authorization_context: tfPoolCidrCidrAuthorizationContextPropertyToTerraform(this._cidrAuthorizationContext.internalValue),
-      timeouts: tfPoolCidrTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      cidr_authorization_context: awsPoolCidrCidrAuthorizationContextPropertyToTerraform(this._cidrAuthorizationContext.internalValue),
+      timeouts: awsPoolCidrTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -272,16 +272,16 @@ export class TfPoolCidr extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cidr_authorization_context: {
-        value: tfPoolCidrCidrAuthorizationContextPropertyToHclTerraform(this._cidrAuthorizationContext.internalValue),
+        value: awsPoolCidrCidrAuthorizationContextPropertyToHclTerraform(this._cidrAuthorizationContext.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPoolCidr.CidrAuthorizationContextPropertyList",
+        storageClassType: "AwsPoolCidr.CidrAuthorizationContextPropertyList",
       },
       timeouts: {
-        value: tfPoolCidrTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPoolCidrTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPoolCidr.TimeoutsProperty",
+        storageClassType: "AwsPoolCidr.TimeoutsProperty",
       },
     };
 
@@ -290,7 +290,7 @@ export class TfPoolCidr extends cdktn.TerraformResource {
   }
 }
 
-export function tfPoolCidrCidrAuthorizationContextPropertyToTerraform(struct?: TfPoolCidr.CidrAuthorizationContextPropertyOutputReference | TfPoolCidr.CidrAuthorizationContextProperty): any {
+export function awsPoolCidrCidrAuthorizationContextPropertyToTerraform(struct?: AwsPoolCidr.CidrAuthorizationContextPropertyOutputReference | AwsPoolCidr.CidrAuthorizationContextProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function tfPoolCidrCidrAuthorizationContextPropertyToTerraform(struct?: T
 }
 
 
-export function tfPoolCidrCidrAuthorizationContextPropertyToHclTerraform(struct?: TfPoolCidr.CidrAuthorizationContextPropertyOutputReference | TfPoolCidr.CidrAuthorizationContextProperty): any {
+export function awsPoolCidrCidrAuthorizationContextPropertyToHclTerraform(struct?: AwsPoolCidr.CidrAuthorizationContextPropertyOutputReference | AwsPoolCidr.CidrAuthorizationContextProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function tfPoolCidrCidrAuthorizationContextPropertyToHclTerraform(struct?
 }
 
 
-export function tfPoolCidrTimeoutsPropertyToTerraform(struct?: TfPoolCidr.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPoolCidrTimeoutsPropertyToTerraform(struct?: AwsPoolCidr.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function tfPoolCidrTimeoutsPropertyToTerraform(struct?: TfPoolCidr.Timeou
 }
 
 
-export function tfPoolCidrTimeoutsPropertyToHclTerraform(struct?: TfPoolCidr.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPoolCidrTimeoutsPropertyToHclTerraform(struct?: AwsPoolCidr.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,14 +364,14 @@ export function tfPoolCidrTimeoutsPropertyToHclTerraform(struct?: TfPoolCidr.Tim
 }
 
 
-export namespace TfPoolCidr {
+export namespace AwsPoolCidr {
 export interface CidrAuthorizationContextProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#message TfPoolCidr#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#message AwsPoolCidr#message}
   */
   readonly message?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#signature TfPoolCidr#signature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#signature AwsPoolCidr#signature}
   */
   readonly signature?: string;
 }
@@ -447,11 +447,11 @@ export class CidrAuthorizationContextPropertyOutputReference extends cdktn.Compl
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#create TfPoolCidr#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#create AwsPoolCidr#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#delete TfPoolCidr#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr#delete AwsPoolCidr#delete}
   */
   readonly delete?: string;
 }

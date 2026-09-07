@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfQueueConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsQueueConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/media_convert_queue#id DataTfQueue#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/media_convert_queue#id DataAwsQueue#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface DataTfQueueConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/media_convert_queue#region DataTfQueue#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/media_convert_queue#region DataAwsQueue#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/media_convert_queue#tags DataTfQueue#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/media_convert_queue#tags DataAwsQueue#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -28,7 +28,7 @@ export interface DataTfQueueConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/media_convert_queue aws_media_convert_queue}
 */
-export class DataTfQueue extends cdktn.TerraformDataSource {
+export class DataAwsQueue extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataTfQueue extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfQueue resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsQueue resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfQueue to import
-  * @param importFromId The id of the existing DataTfQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/media_convert_queue#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfQueue to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsQueue to import
+  * @param importFromId The id of the existing DataAwsQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/media_convert_queue#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsQueue to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_media_convert_queue", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataTfQueue extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfQueueConfig
+  * @param options DataAwsQueueConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfQueueConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsQueueConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_media_convert_queue',
       terraformGeneratorMetadata: {

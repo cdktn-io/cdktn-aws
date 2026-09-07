@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfUserPoliciesExclusiveConfig extends cdktn.TerraformMetaArguments {
+export interface AwsUserPoliciesExclusiveConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_user_policies_exclusive#policy_names TfUserPoliciesExclusive#policy_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_user_policies_exclusive#policy_names AwsUserPoliciesExclusive#policy_names}
   */
   readonly policyNames: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_user_policies_exclusive#user_name TfUserPoliciesExclusive#user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_user_policies_exclusive#user_name AwsUserPoliciesExclusive#user_name}
   */
   readonly userName: string;
 }
@@ -19,7 +19,7 @@ export interface TfUserPoliciesExclusiveConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_user_policies_exclusive aws_iam_user_policies_exclusive}
 */
-export class TfUserPoliciesExclusive extends cdktn.TerraformResource {
+export class AwsUserPoliciesExclusive extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class TfUserPoliciesExclusive extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfUserPoliciesExclusive resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsUserPoliciesExclusive resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfUserPoliciesExclusive to import
-  * @param importFromId The id of the existing TfUserPoliciesExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_user_policies_exclusive#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfUserPoliciesExclusive to import is found
+  * @param importToId The construct id used in the generated config for the AwsUserPoliciesExclusive to import
+  * @param importFromId The id of the existing AwsUserPoliciesExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_user_policies_exclusive#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsUserPoliciesExclusive to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_user_policies_exclusive", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class TfUserPoliciesExclusive extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfUserPoliciesExclusiveConfig
+  * @param options AwsUserPoliciesExclusiveConfig
   */
-  public constructor(scope: Construct, id: string, config: TfUserPoliciesExclusiveConfig) {
+  public constructor(scope: Construct, id: string, config: AwsUserPoliciesExclusiveConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_user_policies_exclusive',
       terraformGeneratorMetadata: {

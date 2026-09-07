@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCustomPluginConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCustomPluginConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#content_type TfCustomPlugin#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#content_type AwsCustomPlugin#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#description TfCustomPlugin#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#description AwsCustomPlugin#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#id TfCustomPlugin#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#id AwsCustomPlugin#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#name TfCustomPlugin#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#name AwsCustomPlugin#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#region TfCustomPlugin#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#region AwsCustomPlugin#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#tags TfCustomPlugin#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#tags AwsCustomPlugin#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#tags_all TfCustomPlugin#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#tags_all AwsCustomPlugin#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#location TfCustomPlugin#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#location AwsCustomPlugin#location}
   */
-  readonly location: TfCustomPlugin.LocationProperty;
+  readonly location: AwsCustomPlugin.LocationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#timeouts TfCustomPlugin#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#timeouts AwsCustomPlugin#timeouts}
   */
-  readonly timeouts?: TfCustomPlugin.TimeoutsProperty;
+  readonly timeouts?: AwsCustomPlugin.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin aws_mskconnect_custom_plugin}
 */
-export class TfCustomPlugin extends cdktn.TerraformResource {
+export class AwsCustomPlugin extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class TfCustomPlugin extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCustomPlugin resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCustomPlugin resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCustomPlugin to import
-  * @param importFromId The id of the existing TfCustomPlugin that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCustomPlugin to import is found
+  * @param importToId The construct id used in the generated config for the AwsCustomPlugin to import
+  * @param importFromId The id of the existing AwsCustomPlugin that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCustomPlugin to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mskconnect_custom_plugin", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class TfCustomPlugin extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCustomPluginConfig
+  * @param options AwsCustomPluginConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCustomPluginConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCustomPluginConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_mskconnect_custom_plugin',
       terraformGeneratorMetadata: {
@@ -241,11 +241,11 @@ export class TfCustomPlugin extends cdktn.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location = new TfCustomPlugin.LocationPropertyOutputReference(this, "location");
+  private _location = new AwsCustomPlugin.LocationPropertyOutputReference(this, "location");
   public get location() {
     return this._location;
   }
-  public putLocation(value: TfCustomPlugin.LocationProperty) {
+  public putLocation(value: AwsCustomPlugin.LocationProperty) {
     this._location.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -254,11 +254,11 @@ export class TfCustomPlugin extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCustomPlugin.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCustomPlugin.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCustomPlugin.TimeoutsProperty) {
+  public putTimeouts(value: AwsCustomPlugin.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -282,8 +282,8 @@ export class TfCustomPlugin extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      location: tfCustomPluginLocationPropertyToTerraform(this._location.internalValue),
-      timeouts: tfCustomPluginTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      location: awsCustomPluginLocationPropertyToTerraform(this._location.internalValue),
+      timeouts: awsCustomPluginTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -332,16 +332,16 @@ export class TfCustomPlugin extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       location: {
-        value: tfCustomPluginLocationPropertyToHclTerraform(this._location.internalValue),
+        value: awsCustomPluginLocationPropertyToHclTerraform(this._location.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCustomPlugin.LocationPropertyList",
+        storageClassType: "AwsCustomPlugin.LocationPropertyList",
       },
       timeouts: {
-        value: tfCustomPluginTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCustomPluginTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCustomPlugin.TimeoutsProperty",
+        storageClassType: "AwsCustomPlugin.TimeoutsProperty",
       },
     };
 
@@ -350,7 +350,7 @@ export class TfCustomPlugin extends cdktn.TerraformResource {
   }
 }
 
-export function tfCustomPluginS3PropertyToTerraform(struct?: TfCustomPlugin.S3PropertyOutputReference | TfCustomPlugin.S3Property): any {
+export function awsCustomPluginS3PropertyToTerraform(struct?: AwsCustomPlugin.S3PropertyOutputReference | AwsCustomPlugin.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -363,7 +363,7 @@ export function tfCustomPluginS3PropertyToTerraform(struct?: TfCustomPlugin.S3Pr
 }
 
 
-export function tfCustomPluginS3PropertyToHclTerraform(struct?: TfCustomPlugin.S3PropertyOutputReference | TfCustomPlugin.S3Property): any {
+export function awsCustomPluginS3PropertyToHclTerraform(struct?: AwsCustomPlugin.S3PropertyOutputReference | AwsCustomPlugin.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,25 +394,25 @@ export function tfCustomPluginS3PropertyToHclTerraform(struct?: TfCustomPlugin.S
 }
 
 
-export function tfCustomPluginLocationPropertyToTerraform(struct?: TfCustomPlugin.LocationPropertyOutputReference | TfCustomPlugin.LocationProperty): any {
+export function awsCustomPluginLocationPropertyToTerraform(struct?: AwsCustomPlugin.LocationPropertyOutputReference | AwsCustomPlugin.LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3: tfCustomPluginS3PropertyToTerraform(struct!.s3),
+    s3: awsCustomPluginS3PropertyToTerraform(struct!.s3),
   }
 }
 
 
-export function tfCustomPluginLocationPropertyToHclTerraform(struct?: TfCustomPlugin.LocationPropertyOutputReference | TfCustomPlugin.LocationProperty): any {
+export function awsCustomPluginLocationPropertyToHclTerraform(struct?: AwsCustomPlugin.LocationPropertyOutputReference | AwsCustomPlugin.LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3: {
-      value: tfCustomPluginS3PropertyToHclTerraform(struct!.s3),
+      value: awsCustomPluginS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
@@ -424,7 +424,7 @@ export function tfCustomPluginLocationPropertyToHclTerraform(struct?: TfCustomPl
 }
 
 
-export function tfCustomPluginTimeoutsPropertyToTerraform(struct?: TfCustomPlugin.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomPluginTimeoutsPropertyToTerraform(struct?: AwsCustomPlugin.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,7 +436,7 @@ export function tfCustomPluginTimeoutsPropertyToTerraform(struct?: TfCustomPlugi
 }
 
 
-export function tfCustomPluginTimeoutsPropertyToHclTerraform(struct?: TfCustomPlugin.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomPluginTimeoutsPropertyToHclTerraform(struct?: AwsCustomPlugin.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,18 +461,18 @@ export function tfCustomPluginTimeoutsPropertyToHclTerraform(struct?: TfCustomPl
 }
 
 
-export namespace TfCustomPlugin {
+export namespace AwsCustomPlugin {
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#bucket_arn TfCustomPlugin#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#bucket_arn AwsCustomPlugin#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#file_key TfCustomPlugin#file_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#file_key AwsCustomPlugin#file_key}
   */
   readonly fileKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#object_version TfCustomPlugin#object_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#object_version AwsCustomPlugin#object_version}
   */
   readonly objectVersion?: string;
 }
@@ -566,7 +566,7 @@ export interface LocationProperty {
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#s3 TfCustomPlugin#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#s3 AwsCustomPlugin#s3}
   */
   readonly s3: S3Property;
 }
@@ -617,11 +617,11 @@ export class LocationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#create TfCustomPlugin#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#create AwsCustomPlugin#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#delete TfCustomPlugin#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_custom_plugin#delete AwsCustomPlugin#delete}
   */
   readonly delete?: string;
 }

@@ -5,108 +5,108 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfTaskExecutionConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsTaskExecutionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#client_token DataTfTaskExecution#client_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#client_token DataAwsTaskExecution#client_token}
   */
   readonly clientToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#cluster DataTfTaskExecution#cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#cluster DataAwsTaskExecution#cluster}
   */
   readonly cluster: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#desired_count DataTfTaskExecution#desired_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#desired_count DataAwsTaskExecution#desired_count}
   */
   readonly desiredCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#enable_ecs_managed_tags DataTfTaskExecution#enable_ecs_managed_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#enable_ecs_managed_tags DataAwsTaskExecution#enable_ecs_managed_tags}
   */
   readonly enableEcsManagedTags?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#enable_execute_command DataTfTaskExecution#enable_execute_command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#enable_execute_command DataAwsTaskExecution#enable_execute_command}
   */
   readonly enableExecuteCommand?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#group DataTfTaskExecution#group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#group DataAwsTaskExecution#group}
   */
   readonly group?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#id DataTfTaskExecution#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#id DataAwsTaskExecution#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#launch_type DataTfTaskExecution#launch_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#launch_type DataAwsTaskExecution#launch_type}
   */
   readonly launchType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#platform_version DataTfTaskExecution#platform_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#platform_version DataAwsTaskExecution#platform_version}
   */
   readonly platformVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#propagate_tags DataTfTaskExecution#propagate_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#propagate_tags DataAwsTaskExecution#propagate_tags}
   */
   readonly propagateTags?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#reference_id DataTfTaskExecution#reference_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#reference_id DataAwsTaskExecution#reference_id}
   */
   readonly referenceId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#region DataTfTaskExecution#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#region DataAwsTaskExecution#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#started_by DataTfTaskExecution#started_by}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#started_by DataAwsTaskExecution#started_by}
   */
   readonly startedBy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#tags DataTfTaskExecution#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#tags DataAwsTaskExecution#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#task_definition DataTfTaskExecution#task_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#task_definition DataAwsTaskExecution#task_definition}
   */
   readonly taskDefinition: string;
   /**
   * capacity_provider_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#capacity_provider_strategy DataTfTaskExecution#capacity_provider_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#capacity_provider_strategy DataAwsTaskExecution#capacity_provider_strategy}
   */
-  readonly capacityProviderStrategy?: DataTfTaskExecution.CapacityProviderStrategyProperty[] | cdktn.IResolvable;
+  readonly capacityProviderStrategy?: DataAwsTaskExecution.CapacityProviderStrategyProperty[] | cdktn.IResolvable;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#network_configuration DataTfTaskExecution#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#network_configuration DataAwsTaskExecution#network_configuration}
   */
-  readonly networkConfiguration?: DataTfTaskExecution.NetworkConfigurationProperty;
+  readonly networkConfiguration?: DataAwsTaskExecution.NetworkConfigurationProperty;
   /**
   * overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#overrides DataTfTaskExecution#overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#overrides DataAwsTaskExecution#overrides}
   */
-  readonly overrides?: DataTfTaskExecution.OverridesProperty;
+  readonly overrides?: DataAwsTaskExecution.OverridesProperty;
   /**
   * placement_constraints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#placement_constraints DataTfTaskExecution#placement_constraints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#placement_constraints DataAwsTaskExecution#placement_constraints}
   */
-  readonly placementConstraints?: DataTfTaskExecution.PlacementConstraintsProperty[] | cdktn.IResolvable;
+  readonly placementConstraints?: DataAwsTaskExecution.PlacementConstraintsProperty[] | cdktn.IResolvable;
   /**
   * placement_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#placement_strategy DataTfTaskExecution#placement_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#placement_strategy DataAwsTaskExecution#placement_strategy}
   */
-  readonly placementStrategy?: DataTfTaskExecution.PlacementStrategyProperty[] | cdktn.IResolvable;
+  readonly placementStrategy?: DataAwsTaskExecution.PlacementStrategyProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution aws_ecs_task_execution}
 */
-export class DataTfTaskExecution extends cdktn.TerraformDataSource {
+export class DataAwsTaskExecution extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -117,11 +117,11 @@ export class DataTfTaskExecution extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfTaskExecution resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsTaskExecution resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfTaskExecution to import
-  * @param importFromId The id of the existing DataTfTaskExecution that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfTaskExecution to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsTaskExecution to import
+  * @param importFromId The id of the existing DataAwsTaskExecution that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsTaskExecution to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_task_execution", importId: importFromId, provider });
@@ -136,9 +136,9 @@ export class DataTfTaskExecution extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfTaskExecutionConfig
+  * @param options DataAwsTaskExecutionConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfTaskExecutionConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsTaskExecutionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_task_execution',
       terraformGeneratorMetadata: {
@@ -420,11 +420,11 @@ export class DataTfTaskExecution extends cdktn.TerraformDataSource {
   }
 
   // capacity_provider_strategy - computed: false, optional: true, required: false
-  private _capacityProviderStrategy = new DataTfTaskExecution.CapacityProviderStrategyPropertyList(this, "capacity_provider_strategy", true);
+  private _capacityProviderStrategy = new DataAwsTaskExecution.CapacityProviderStrategyPropertyList(this, "capacity_provider_strategy", true);
   public get capacityProviderStrategy() {
     return this._capacityProviderStrategy;
   }
-  public putCapacityProviderStrategy(value: DataTfTaskExecution.CapacityProviderStrategyProperty[] | cdktn.IResolvable) {
+  public putCapacityProviderStrategy(value: DataAwsTaskExecution.CapacityProviderStrategyProperty[] | cdktn.IResolvable) {
     this._capacityProviderStrategy.internalValue = value;
   }
   public resetCapacityProviderStrategy() {
@@ -436,11 +436,11 @@ export class DataTfTaskExecution extends cdktn.TerraformDataSource {
   }
 
   // network_configuration - computed: false, optional: true, required: false
-  private _networkConfiguration = new DataTfTaskExecution.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
+  private _networkConfiguration = new DataAwsTaskExecution.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
-  public putNetworkConfiguration(value: DataTfTaskExecution.NetworkConfigurationProperty) {
+  public putNetworkConfiguration(value: DataAwsTaskExecution.NetworkConfigurationProperty) {
     this._networkConfiguration.internalValue = value;
   }
   public resetNetworkConfiguration() {
@@ -452,11 +452,11 @@ export class DataTfTaskExecution extends cdktn.TerraformDataSource {
   }
 
   // overrides - computed: false, optional: true, required: false
-  private _overrides = new DataTfTaskExecution.OverridesPropertyOutputReference(this, "overrides");
+  private _overrides = new DataAwsTaskExecution.OverridesPropertyOutputReference(this, "overrides");
   public get overrides() {
     return this._overrides;
   }
-  public putOverrides(value: DataTfTaskExecution.OverridesProperty) {
+  public putOverrides(value: DataAwsTaskExecution.OverridesProperty) {
     this._overrides.internalValue = value;
   }
   public resetOverrides() {
@@ -468,11 +468,11 @@ export class DataTfTaskExecution extends cdktn.TerraformDataSource {
   }
 
   // placement_constraints - computed: false, optional: true, required: false
-  private _placementConstraints = new DataTfTaskExecution.PlacementConstraintsPropertyList(this, "placement_constraints", true);
+  private _placementConstraints = new DataAwsTaskExecution.PlacementConstraintsPropertyList(this, "placement_constraints", true);
   public get placementConstraints() {
     return this._placementConstraints;
   }
-  public putPlacementConstraints(value: DataTfTaskExecution.PlacementConstraintsProperty[] | cdktn.IResolvable) {
+  public putPlacementConstraints(value: DataAwsTaskExecution.PlacementConstraintsProperty[] | cdktn.IResolvable) {
     this._placementConstraints.internalValue = value;
   }
   public resetPlacementConstraints() {
@@ -484,11 +484,11 @@ export class DataTfTaskExecution extends cdktn.TerraformDataSource {
   }
 
   // placement_strategy - computed: false, optional: true, required: false
-  private _placementStrategy = new DataTfTaskExecution.PlacementStrategyPropertyList(this, "placement_strategy", false);
+  private _placementStrategy = new DataAwsTaskExecution.PlacementStrategyPropertyList(this, "placement_strategy", false);
   public get placementStrategy() {
     return this._placementStrategy;
   }
-  public putPlacementStrategy(value: DataTfTaskExecution.PlacementStrategyProperty[] | cdktn.IResolvable) {
+  public putPlacementStrategy(value: DataAwsTaskExecution.PlacementStrategyProperty[] | cdktn.IResolvable) {
     this._placementStrategy.internalValue = value;
   }
   public resetPlacementStrategy() {
@@ -520,11 +520,11 @@ export class DataTfTaskExecution extends cdktn.TerraformDataSource {
       started_by: cdktn.stringToTerraform(this._startedBy),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       task_definition: cdktn.stringToTerraform(this._taskDefinition),
-      capacity_provider_strategy: cdktn.listMapper(dataTfTaskExecutionCapacityProviderStrategyPropertyToTerraform, true)(this._capacityProviderStrategy.internalValue),
-      network_configuration: dataTfTaskExecutionNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
-      overrides: dataTfTaskExecutionOverridesPropertyToTerraform(this._overrides.internalValue),
-      placement_constraints: cdktn.listMapper(dataTfTaskExecutionPlacementConstraintsPropertyToTerraform, true)(this._placementConstraints.internalValue),
-      placement_strategy: cdktn.listMapper(dataTfTaskExecutionPlacementStrategyPropertyToTerraform, true)(this._placementStrategy.internalValue),
+      capacity_provider_strategy: cdktn.listMapper(dataAwsTaskExecutionCapacityProviderStrategyPropertyToTerraform, true)(this._capacityProviderStrategy.internalValue),
+      network_configuration: dataAwsTaskExecutionNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
+      overrides: dataAwsTaskExecutionOverridesPropertyToTerraform(this._overrides.internalValue),
+      placement_constraints: cdktn.listMapper(dataAwsTaskExecutionPlacementConstraintsPropertyToTerraform, true)(this._placementConstraints.internalValue),
+      placement_strategy: cdktn.listMapper(dataAwsTaskExecutionPlacementStrategyPropertyToTerraform, true)(this._placementStrategy.internalValue),
     };
   }
 
@@ -621,34 +621,34 @@ export class DataTfTaskExecution extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       capacity_provider_strategy: {
-        value: cdktn.listMapperHcl(dataTfTaskExecutionCapacityProviderStrategyPropertyToHclTerraform, true)(this._capacityProviderStrategy.internalValue),
+        value: cdktn.listMapperHcl(dataAwsTaskExecutionCapacityProviderStrategyPropertyToHclTerraform, true)(this._capacityProviderStrategy.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfTaskExecution.CapacityProviderStrategyPropertyList",
+        storageClassType: "DataAwsTaskExecution.CapacityProviderStrategyPropertyList",
       },
       network_configuration: {
-        value: dataTfTaskExecutionNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
+        value: dataAwsTaskExecutionNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfTaskExecution.NetworkConfigurationPropertyList",
+        storageClassType: "DataAwsTaskExecution.NetworkConfigurationPropertyList",
       },
       overrides: {
-        value: dataTfTaskExecutionOverridesPropertyToHclTerraform(this._overrides.internalValue),
+        value: dataAwsTaskExecutionOverridesPropertyToHclTerraform(this._overrides.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfTaskExecution.OverridesPropertyList",
+        storageClassType: "DataAwsTaskExecution.OverridesPropertyList",
       },
       placement_constraints: {
-        value: cdktn.listMapperHcl(dataTfTaskExecutionPlacementConstraintsPropertyToHclTerraform, true)(this._placementConstraints.internalValue),
+        value: cdktn.listMapperHcl(dataAwsTaskExecutionPlacementConstraintsPropertyToHclTerraform, true)(this._placementConstraints.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfTaskExecution.PlacementConstraintsPropertyList",
+        storageClassType: "DataAwsTaskExecution.PlacementConstraintsPropertyList",
       },
       placement_strategy: {
-        value: cdktn.listMapperHcl(dataTfTaskExecutionPlacementStrategyPropertyToHclTerraform, true)(this._placementStrategy.internalValue),
+        value: cdktn.listMapperHcl(dataAwsTaskExecutionPlacementStrategyPropertyToHclTerraform, true)(this._placementStrategy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfTaskExecution.PlacementStrategyPropertyList",
+        storageClassType: "DataAwsTaskExecution.PlacementStrategyPropertyList",
       },
     };
 
@@ -657,7 +657,7 @@ export class DataTfTaskExecution extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfTaskExecutionCapacityProviderStrategyPropertyToTerraform(struct?: DataTfTaskExecution.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function dataAwsTaskExecutionCapacityProviderStrategyPropertyToTerraform(struct?: DataAwsTaskExecution.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -670,7 +670,7 @@ export function dataTfTaskExecutionCapacityProviderStrategyPropertyToTerraform(s
 }
 
 
-export function dataTfTaskExecutionCapacityProviderStrategyPropertyToHclTerraform(struct?: DataTfTaskExecution.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function dataAwsTaskExecutionCapacityProviderStrategyPropertyToHclTerraform(struct?: DataAwsTaskExecution.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -701,7 +701,7 @@ export function dataTfTaskExecutionCapacityProviderStrategyPropertyToHclTerrafor
 }
 
 
-export function dataTfTaskExecutionNetworkConfigurationPropertyToTerraform(struct?: DataTfTaskExecution.NetworkConfigurationPropertyOutputReference | DataTfTaskExecution.NetworkConfigurationProperty): any {
+export function dataAwsTaskExecutionNetworkConfigurationPropertyToTerraform(struct?: DataAwsTaskExecution.NetworkConfigurationPropertyOutputReference | DataAwsTaskExecution.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,7 +714,7 @@ export function dataTfTaskExecutionNetworkConfigurationPropertyToTerraform(struc
 }
 
 
-export function dataTfTaskExecutionNetworkConfigurationPropertyToHclTerraform(struct?: DataTfTaskExecution.NetworkConfigurationPropertyOutputReference | DataTfTaskExecution.NetworkConfigurationProperty): any {
+export function dataAwsTaskExecutionNetworkConfigurationPropertyToHclTerraform(struct?: DataAwsTaskExecution.NetworkConfigurationPropertyOutputReference | DataAwsTaskExecution.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -745,7 +745,7 @@ export function dataTfTaskExecutionNetworkConfigurationPropertyToHclTerraform(st
 }
 
 
-export function dataTfTaskExecutionEnvironmentPropertyToTerraform(struct?: DataTfTaskExecution.EnvironmentProperty | cdktn.IResolvable): any {
+export function dataAwsTaskExecutionEnvironmentPropertyToTerraform(struct?: DataAwsTaskExecution.EnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -757,7 +757,7 @@ export function dataTfTaskExecutionEnvironmentPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfTaskExecutionEnvironmentPropertyToHclTerraform(struct?: DataTfTaskExecution.EnvironmentProperty | cdktn.IResolvable): any {
+export function dataAwsTaskExecutionEnvironmentPropertyToHclTerraform(struct?: DataAwsTaskExecution.EnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -782,7 +782,7 @@ export function dataTfTaskExecutionEnvironmentPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfTaskExecutionResourceRequirementsPropertyToTerraform(struct?: DataTfTaskExecution.ResourceRequirementsProperty | cdktn.IResolvable): any {
+export function dataAwsTaskExecutionResourceRequirementsPropertyToTerraform(struct?: DataAwsTaskExecution.ResourceRequirementsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -794,7 +794,7 @@ export function dataTfTaskExecutionResourceRequirementsPropertyToTerraform(struc
 }
 
 
-export function dataTfTaskExecutionResourceRequirementsPropertyToHclTerraform(struct?: DataTfTaskExecution.ResourceRequirementsProperty | cdktn.IResolvable): any {
+export function dataAwsTaskExecutionResourceRequirementsPropertyToHclTerraform(struct?: DataAwsTaskExecution.ResourceRequirementsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -819,7 +819,7 @@ export function dataTfTaskExecutionResourceRequirementsPropertyToHclTerraform(st
 }
 
 
-export function dataTfTaskExecutionContainerOverridesPropertyToTerraform(struct?: DataTfTaskExecution.ContainerOverridesProperty | cdktn.IResolvable): any {
+export function dataAwsTaskExecutionContainerOverridesPropertyToTerraform(struct?: DataAwsTaskExecution.ContainerOverridesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -830,13 +830,13 @@ export function dataTfTaskExecutionContainerOverridesPropertyToTerraform(struct?
     memory: cdktn.numberToTerraform(struct!.memory),
     memory_reservation: cdktn.numberToTerraform(struct!.memoryReservation),
     name: cdktn.stringToTerraform(struct!.name),
-    environment: cdktn.listMapper(dataTfTaskExecutionEnvironmentPropertyToTerraform, true)(struct!.environment),
-    resource_requirements: cdktn.listMapper(dataTfTaskExecutionResourceRequirementsPropertyToTerraform, true)(struct!.resourceRequirements),
+    environment: cdktn.listMapper(dataAwsTaskExecutionEnvironmentPropertyToTerraform, true)(struct!.environment),
+    resource_requirements: cdktn.listMapper(dataAwsTaskExecutionResourceRequirementsPropertyToTerraform, true)(struct!.resourceRequirements),
   }
 }
 
 
-export function dataTfTaskExecutionContainerOverridesPropertyToHclTerraform(struct?: DataTfTaskExecution.ContainerOverridesProperty | cdktn.IResolvable): any {
+export function dataAwsTaskExecutionContainerOverridesPropertyToHclTerraform(struct?: DataAwsTaskExecution.ContainerOverridesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -873,13 +873,13 @@ export function dataTfTaskExecutionContainerOverridesPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     environment: {
-      value: cdktn.listMapperHcl(dataTfTaskExecutionEnvironmentPropertyToHclTerraform, true)(struct!.environment),
+      value: cdktn.listMapperHcl(dataAwsTaskExecutionEnvironmentPropertyToHclTerraform, true)(struct!.environment),
       isBlock: true,
       type: "set",
       storageClassType: "EnvironmentPropertyList",
     },
     resource_requirements: {
-      value: cdktn.listMapperHcl(dataTfTaskExecutionResourceRequirementsPropertyToHclTerraform, true)(struct!.resourceRequirements),
+      value: cdktn.listMapperHcl(dataAwsTaskExecutionResourceRequirementsPropertyToHclTerraform, true)(struct!.resourceRequirements),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceRequirementsPropertyList",
@@ -891,7 +891,7 @@ export function dataTfTaskExecutionContainerOverridesPropertyToHclTerraform(stru
 }
 
 
-export function dataTfTaskExecutionOverridesPropertyToTerraform(struct?: DataTfTaskExecution.OverridesPropertyOutputReference | DataTfTaskExecution.OverridesProperty): any {
+export function dataAwsTaskExecutionOverridesPropertyToTerraform(struct?: DataAwsTaskExecution.OverridesPropertyOutputReference | DataAwsTaskExecution.OverridesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -901,12 +901,12 @@ export function dataTfTaskExecutionOverridesPropertyToTerraform(struct?: DataTfT
     execution_role_arn: cdktn.stringToTerraform(struct!.executionRoleArn),
     memory: cdktn.stringToTerraform(struct!.memory),
     task_role_arn: cdktn.stringToTerraform(struct!.taskRoleArn),
-    container_overrides: cdktn.listMapper(dataTfTaskExecutionContainerOverridesPropertyToTerraform, true)(struct!.containerOverrides),
+    container_overrides: cdktn.listMapper(dataAwsTaskExecutionContainerOverridesPropertyToTerraform, true)(struct!.containerOverrides),
   }
 }
 
 
-export function dataTfTaskExecutionOverridesPropertyToHclTerraform(struct?: DataTfTaskExecution.OverridesPropertyOutputReference | DataTfTaskExecution.OverridesProperty): any {
+export function dataAwsTaskExecutionOverridesPropertyToHclTerraform(struct?: DataAwsTaskExecution.OverridesPropertyOutputReference | DataAwsTaskExecution.OverridesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -937,7 +937,7 @@ export function dataTfTaskExecutionOverridesPropertyToHclTerraform(struct?: Data
       storageClassType: "string",
     },
     container_overrides: {
-      value: cdktn.listMapperHcl(dataTfTaskExecutionContainerOverridesPropertyToHclTerraform, true)(struct!.containerOverrides),
+      value: cdktn.listMapperHcl(dataAwsTaskExecutionContainerOverridesPropertyToHclTerraform, true)(struct!.containerOverrides),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerOverridesPropertyList",
@@ -949,7 +949,7 @@ export function dataTfTaskExecutionOverridesPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataTfTaskExecutionPlacementConstraintsPropertyToTerraform(struct?: DataTfTaskExecution.PlacementConstraintsProperty | cdktn.IResolvable): any {
+export function dataAwsTaskExecutionPlacementConstraintsPropertyToTerraform(struct?: DataAwsTaskExecution.PlacementConstraintsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -961,7 +961,7 @@ export function dataTfTaskExecutionPlacementConstraintsPropertyToTerraform(struc
 }
 
 
-export function dataTfTaskExecutionPlacementConstraintsPropertyToHclTerraform(struct?: DataTfTaskExecution.PlacementConstraintsProperty | cdktn.IResolvable): any {
+export function dataAwsTaskExecutionPlacementConstraintsPropertyToHclTerraform(struct?: DataAwsTaskExecution.PlacementConstraintsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -986,7 +986,7 @@ export function dataTfTaskExecutionPlacementConstraintsPropertyToHclTerraform(st
 }
 
 
-export function dataTfTaskExecutionPlacementStrategyPropertyToTerraform(struct?: DataTfTaskExecution.PlacementStrategyProperty | cdktn.IResolvable): any {
+export function dataAwsTaskExecutionPlacementStrategyPropertyToTerraform(struct?: DataAwsTaskExecution.PlacementStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -998,7 +998,7 @@ export function dataTfTaskExecutionPlacementStrategyPropertyToTerraform(struct?:
 }
 
 
-export function dataTfTaskExecutionPlacementStrategyPropertyToHclTerraform(struct?: DataTfTaskExecution.PlacementStrategyProperty | cdktn.IResolvable): any {
+export function dataAwsTaskExecutionPlacementStrategyPropertyToHclTerraform(struct?: DataAwsTaskExecution.PlacementStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1023,18 +1023,18 @@ export function dataTfTaskExecutionPlacementStrategyPropertyToHclTerraform(struc
 }
 
 
-export namespace DataTfTaskExecution {
+export namespace DataAwsTaskExecution {
 export interface CapacityProviderStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#base DataTfTaskExecution#base}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#base DataAwsTaskExecution#base}
   */
   readonly base?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#capacity_provider DataTfTaskExecution#capacity_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#capacity_provider DataAwsTaskExecution#capacity_provider}
   */
   readonly capacityProvider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#weight DataTfTaskExecution#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#weight DataAwsTaskExecution#weight}
   */
   readonly weight?: number;
 }
@@ -1161,15 +1161,15 @@ export class CapacityProviderStrategyPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#assign_public_ip DataTfTaskExecution#assign_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#assign_public_ip DataAwsTaskExecution#assign_public_ip}
   */
   readonly assignPublicIp?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#security_groups DataTfTaskExecution#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#security_groups DataAwsTaskExecution#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#subnets DataTfTaskExecution#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#subnets DataAwsTaskExecution#subnets}
   */
   readonly subnets: string[];
 }
@@ -1264,11 +1264,11 @@ export class NetworkConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface EnvironmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#key DataTfTaskExecution#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#key DataAwsTaskExecution#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#value DataTfTaskExecution#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#value DataAwsTaskExecution#value}
   */
   readonly value: string;
 }
@@ -1370,11 +1370,11 @@ export class EnvironmentPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceRequirementsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#type DataTfTaskExecution#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#type DataAwsTaskExecution#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#value DataTfTaskExecution#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#value DataAwsTaskExecution#value}
   */
   readonly value: string;
 }
@@ -1476,35 +1476,35 @@ export class ResourceRequirementsPropertyList extends cdktn.ComplexList {
 }
 export interface ContainerOverridesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#command DataTfTaskExecution#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#command DataAwsTaskExecution#command}
   */
   readonly command?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#cpu DataTfTaskExecution#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#cpu DataAwsTaskExecution#cpu}
   */
   readonly cpu?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#memory DataTfTaskExecution#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#memory DataAwsTaskExecution#memory}
   */
   readonly memory?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#memory_reservation DataTfTaskExecution#memory_reservation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#memory_reservation DataAwsTaskExecution#memory_reservation}
   */
   readonly memoryReservation?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#name DataTfTaskExecution#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#name DataAwsTaskExecution#name}
   */
   readonly name: string;
   /**
   * environment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#environment DataTfTaskExecution#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#environment DataAwsTaskExecution#environment}
   */
   readonly environment?: EnvironmentProperty[] | cdktn.IResolvable;
   /**
   * resource_requirements block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#resource_requirements DataTfTaskExecution#resource_requirements}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#resource_requirements DataAwsTaskExecution#resource_requirements}
   */
   readonly resourceRequirements?: ResourceRequirementsProperty[] | cdktn.IResolvable;
 }
@@ -1719,25 +1719,25 @@ export class ContainerOverridesPropertyList extends cdktn.ComplexList {
 }
 export interface OverridesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#cpu DataTfTaskExecution#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#cpu DataAwsTaskExecution#cpu}
   */
   readonly cpu?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#execution_role_arn DataTfTaskExecution#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#execution_role_arn DataAwsTaskExecution#execution_role_arn}
   */
   readonly executionRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#memory DataTfTaskExecution#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#memory DataAwsTaskExecution#memory}
   */
   readonly memory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#task_role_arn DataTfTaskExecution#task_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#task_role_arn DataAwsTaskExecution#task_role_arn}
   */
   readonly taskRoleArn?: string;
   /**
   * container_overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#container_overrides DataTfTaskExecution#container_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#container_overrides DataAwsTaskExecution#container_overrides}
   */
   readonly containerOverrides?: ContainerOverridesProperty[] | cdktn.IResolvable;
 }
@@ -1879,11 +1879,11 @@ export class OverridesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PlacementConstraintsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#expression DataTfTaskExecution#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#expression DataAwsTaskExecution#expression}
   */
   readonly expression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#type DataTfTaskExecution#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#type DataAwsTaskExecution#type}
   */
   readonly type: string;
 }
@@ -1988,11 +1988,11 @@ export class PlacementConstraintsPropertyList extends cdktn.ComplexList {
 }
 export interface PlacementStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#field DataTfTaskExecution#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#field DataAwsTaskExecution#field}
   */
   readonly field?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#type DataTfTaskExecution#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_task_execution#type DataAwsTaskExecution#type}
   */
   readonly type: string;
 }

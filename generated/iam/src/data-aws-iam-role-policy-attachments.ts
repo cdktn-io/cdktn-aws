@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRolePolicyAttachmentsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRolePolicyAttachmentsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role_policy_attachments#path_prefix DataTfRolePolicyAttachments#path_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role_policy_attachments#path_prefix DataAwsRolePolicyAttachments#path_prefix}
   */
   readonly pathPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role_policy_attachments#role_name DataTfRolePolicyAttachments#role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role_policy_attachments#role_name DataAwsRolePolicyAttachments#role_name}
   */
   readonly roleName: string;
 }
@@ -19,7 +19,7 @@ export interface DataTfRolePolicyAttachmentsConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role_policy_attachments aws_iam_role_policy_attachments}
 */
-export class DataTfRolePolicyAttachments extends cdktn.TerraformDataSource {
+export class DataAwsRolePolicyAttachments extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class DataTfRolePolicyAttachments extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRolePolicyAttachments resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRolePolicyAttachments resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRolePolicyAttachments to import
-  * @param importFromId The id of the existing DataTfRolePolicyAttachments that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role_policy_attachments#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRolePolicyAttachments to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRolePolicyAttachments to import
+  * @param importFromId The id of the existing DataAwsRolePolicyAttachments that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/iam_role_policy_attachments#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRolePolicyAttachments to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_role_policy_attachments", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class DataTfRolePolicyAttachments extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRolePolicyAttachmentsConfig
+  * @param options DataAwsRolePolicyAttachmentsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfRolePolicyAttachmentsConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsRolePolicyAttachmentsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_role_policy_attachments',
       terraformGeneratorMetadata: {
@@ -76,7 +76,7 @@ export class DataTfRolePolicyAttachments extends cdktn.TerraformDataSource {
   // ==========
 
   // attached_policies - computed: true, optional: false, required: false
-  private _attachedPolicies = new DataTfRolePolicyAttachments.AttachedPoliciesPropertyList(this, "attached_policies", false);
+  private _attachedPolicies = new DataAwsRolePolicyAttachments.AttachedPoliciesPropertyList(this, "attached_policies", false);
   public get attachedPolicies() {
     return this._attachedPolicies;
   }
@@ -142,7 +142,7 @@ export class DataTfRolePolicyAttachments extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfRolePolicyAttachmentsAttachedPoliciesPropertyToTerraform(struct?: DataTfRolePolicyAttachments.AttachedPoliciesProperty): any {
+export function dataAwsRolePolicyAttachmentsAttachedPoliciesPropertyToTerraform(struct?: DataAwsRolePolicyAttachments.AttachedPoliciesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -152,7 +152,7 @@ export function dataTfRolePolicyAttachmentsAttachedPoliciesPropertyToTerraform(s
 }
 
 
-export function dataTfRolePolicyAttachmentsAttachedPoliciesPropertyToHclTerraform(struct?: DataTfRolePolicyAttachments.AttachedPoliciesProperty): any {
+export function dataAwsRolePolicyAttachmentsAttachedPoliciesPropertyToHclTerraform(struct?: DataAwsRolePolicyAttachments.AttachedPoliciesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -163,7 +163,7 @@ export function dataTfRolePolicyAttachmentsAttachedPoliciesPropertyToHclTerrafor
 }
 
 
-export namespace DataTfRolePolicyAttachments {
+export namespace DataAwsRolePolicyAttachments {
 export interface AttachedPoliciesProperty {
 }
 export class AttachedPoliciesPropertyOutputReference extends cdktn.ComplexObject {

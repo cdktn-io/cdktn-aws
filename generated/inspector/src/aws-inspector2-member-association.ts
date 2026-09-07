@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMemberAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMemberAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#account_id TfMemberAssociation#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#account_id AwsMemberAssociation#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#id TfMemberAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#id AwsMemberAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,21 +20,21 @@ export interface TfMemberAssociationConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#region TfMemberAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#region AwsMemberAssociation#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#timeouts TfMemberAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#timeouts AwsMemberAssociation#timeouts}
   */
-  readonly timeouts?: TfMemberAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsMemberAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association aws_inspector2_member_association}
 */
-export class TfMemberAssociation extends cdktn.TerraformResource {
+export class AwsMemberAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfMemberAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMemberAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMemberAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMemberAssociation to import
-  * @param importFromId The id of the existing TfMemberAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMemberAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsMemberAssociation to import
+  * @param importFromId The id of the existing AwsMemberAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMemberAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_inspector2_member_association", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfMemberAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMemberAssociationConfig
+  * @param options AwsMemberAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMemberAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMemberAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_inspector2_member_association',
       terraformGeneratorMetadata: {
@@ -153,11 +153,11 @@ export class TfMemberAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfMemberAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsMemberAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfMemberAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsMemberAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -177,7 +177,7 @@ export class TfMemberAssociation extends cdktn.TerraformResource {
       account_id: cdktn.stringToTerraform(this._accountId),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfMemberAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsMemberAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -202,10 +202,10 @@ export class TfMemberAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfMemberAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsMemberAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfMemberAssociation.TimeoutsProperty",
+        storageClassType: "AwsMemberAssociation.TimeoutsProperty",
       },
     };
 
@@ -214,7 +214,7 @@ export class TfMemberAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfMemberAssociationTimeoutsPropertyToTerraform(struct?: TfMemberAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMemberAssociationTimeoutsPropertyToTerraform(struct?: AwsMemberAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -226,7 +226,7 @@ export function tfMemberAssociationTimeoutsPropertyToTerraform(struct?: TfMember
 }
 
 
-export function tfMemberAssociationTimeoutsPropertyToHclTerraform(struct?: TfMemberAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMemberAssociationTimeoutsPropertyToHclTerraform(struct?: AwsMemberAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -251,14 +251,14 @@ export function tfMemberAssociationTimeoutsPropertyToHclTerraform(struct?: TfMem
 }
 
 
-export namespace TfMemberAssociation {
+export namespace AwsMemberAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#create TfMemberAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#create AwsMemberAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#delete TfMemberAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_member_association#delete AwsMemberAssociation#delete}
   */
   readonly delete?: string;
 }

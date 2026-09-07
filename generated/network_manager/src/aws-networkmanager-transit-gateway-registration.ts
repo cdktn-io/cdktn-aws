@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTransitGatewayRegistrationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTransitGatewayRegistrationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#global_network_id TfTransitGatewayRegistration#global_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#global_network_id AwsTransitGatewayRegistration#global_network_id}
   */
   readonly globalNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#id TfTransitGatewayRegistration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#id AwsTransitGatewayRegistration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#transit_gateway_arn TfTransitGatewayRegistration#transit_gateway_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#transit_gateway_arn AwsTransitGatewayRegistration#transit_gateway_arn}
   */
   readonly transitGatewayArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#timeouts TfTransitGatewayRegistration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#timeouts AwsTransitGatewayRegistration#timeouts}
   */
-  readonly timeouts?: TfTransitGatewayRegistration.TimeoutsProperty;
+  readonly timeouts?: AwsTransitGatewayRegistration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration aws_networkmanager_transit_gateway_registration}
 */
-export class TfTransitGatewayRegistration extends cdktn.TerraformResource {
+export class AwsTransitGatewayRegistration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfTransitGatewayRegistration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTransitGatewayRegistration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTransitGatewayRegistration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTransitGatewayRegistration to import
-  * @param importFromId The id of the existing TfTransitGatewayRegistration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTransitGatewayRegistration to import is found
+  * @param importToId The construct id used in the generated config for the AwsTransitGatewayRegistration to import
+  * @param importFromId The id of the existing AwsTransitGatewayRegistration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTransitGatewayRegistration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_transit_gateway_registration", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfTransitGatewayRegistration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTransitGatewayRegistrationConfig
+  * @param options AwsTransitGatewayRegistrationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTransitGatewayRegistrationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTransitGatewayRegistrationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_transit_gateway_registration',
       terraformGeneratorMetadata: {
@@ -133,11 +133,11 @@ export class TfTransitGatewayRegistration extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTransitGatewayRegistration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTransitGatewayRegistration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTransitGatewayRegistration.TimeoutsProperty) {
+  public putTimeouts(value: AwsTransitGatewayRegistration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -157,7 +157,7 @@ export class TfTransitGatewayRegistration extends cdktn.TerraformResource {
       global_network_id: cdktn.stringToTerraform(this._globalNetworkId),
       id: cdktn.stringToTerraform(this._id),
       transit_gateway_arn: cdktn.stringToTerraform(this._transitGatewayArn),
-      timeouts: tfTransitGatewayRegistrationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsTransitGatewayRegistrationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -182,10 +182,10 @@ export class TfTransitGatewayRegistration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfTransitGatewayRegistrationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTransitGatewayRegistrationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTransitGatewayRegistration.TimeoutsProperty",
+        storageClassType: "AwsTransitGatewayRegistration.TimeoutsProperty",
       },
     };
 
@@ -194,7 +194,7 @@ export class TfTransitGatewayRegistration extends cdktn.TerraformResource {
   }
 }
 
-export function tfTransitGatewayRegistrationTimeoutsPropertyToTerraform(struct?: TfTransitGatewayRegistration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTransitGatewayRegistrationTimeoutsPropertyToTerraform(struct?: AwsTransitGatewayRegistration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -206,7 +206,7 @@ export function tfTransitGatewayRegistrationTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function tfTransitGatewayRegistrationTimeoutsPropertyToHclTerraform(struct?: TfTransitGatewayRegistration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTransitGatewayRegistrationTimeoutsPropertyToHclTerraform(struct?: AwsTransitGatewayRegistration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -231,14 +231,14 @@ export function tfTransitGatewayRegistrationTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace TfTransitGatewayRegistration {
+export namespace AwsTransitGatewayRegistration {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#create TfTransitGatewayRegistration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#create AwsTransitGatewayRegistration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#delete TfTransitGatewayRegistration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_registration#delete AwsTransitGatewayRegistration#delete}
   */
   readonly delete?: string;
 }

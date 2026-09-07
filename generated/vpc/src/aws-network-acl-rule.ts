@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfNetworkAclRuleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsNetworkAclRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#cidr_block TfNetworkAclRule#cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#cidr_block AwsNetworkAclRule#cidr_block}
   */
   readonly cidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#egress TfNetworkAclRule#egress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#egress AwsNetworkAclRule#egress}
   */
   readonly egress?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#from_port TfNetworkAclRule#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#from_port AwsNetworkAclRule#from_port}
   */
   readonly fromPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#icmp_code TfNetworkAclRule#icmp_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#icmp_code AwsNetworkAclRule#icmp_code}
   */
   readonly icmpCode?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#icmp_type TfNetworkAclRule#icmp_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#icmp_type AwsNetworkAclRule#icmp_type}
   */
   readonly icmpType?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#id TfNetworkAclRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#id AwsNetworkAclRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#ipv6_cidr_block TfNetworkAclRule#ipv6_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#ipv6_cidr_block AwsNetworkAclRule#ipv6_cidr_block}
   */
   readonly ipv6CidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#network_acl_id TfNetworkAclRule#network_acl_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#network_acl_id AwsNetworkAclRule#network_acl_id}
   */
   readonly networkAclId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#protocol TfNetworkAclRule#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#protocol AwsNetworkAclRule#protocol}
   */
   readonly protocol: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#region TfNetworkAclRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#region AwsNetworkAclRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#rule_action TfNetworkAclRule#rule_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#rule_action AwsNetworkAclRule#rule_action}
   */
   readonly ruleAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#rule_number TfNetworkAclRule#rule_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#rule_number AwsNetworkAclRule#rule_number}
   */
   readonly ruleNumber: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#to_port TfNetworkAclRule#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#to_port AwsNetworkAclRule#to_port}
   */
   readonly toPort?: number;
 }
@@ -68,7 +68,7 @@ export interface TfNetworkAclRuleConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule aws_network_acl_rule}
 */
-export class TfNetworkAclRule extends cdktn.TerraformResource {
+export class AwsNetworkAclRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfNetworkAclRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfNetworkAclRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsNetworkAclRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfNetworkAclRule to import
-  * @param importFromId The id of the existing TfNetworkAclRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfNetworkAclRule to import is found
+  * @param importToId The construct id used in the generated config for the AwsNetworkAclRule to import
+  * @param importFromId The id of the existing AwsNetworkAclRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_acl_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNetworkAclRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_network_acl_rule", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfNetworkAclRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfNetworkAclRuleConfig
+  * @param options AwsNetworkAclRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfNetworkAclRuleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsNetworkAclRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_network_acl_rule',
       terraformGeneratorMetadata: {

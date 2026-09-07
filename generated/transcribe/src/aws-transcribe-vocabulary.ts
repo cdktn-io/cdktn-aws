@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVocabularyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVocabularyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#id TfVocabulary#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#id AwsVocabulary#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#language_code TfVocabulary#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#language_code AwsVocabulary#language_code}
   */
   readonly languageCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#phrases TfVocabulary#phrases}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#phrases AwsVocabulary#phrases}
   */
   readonly phrases?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#region TfVocabulary#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#region AwsVocabulary#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#tags TfVocabulary#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#tags AwsVocabulary#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#tags_all TfVocabulary#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#tags_all AwsVocabulary#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#vocabulary_file_uri TfVocabulary#vocabulary_file_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#vocabulary_file_uri AwsVocabulary#vocabulary_file_uri}
   */
   readonly vocabularyFileUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#vocabulary_name TfVocabulary#vocabulary_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#vocabulary_name AwsVocabulary#vocabulary_name}
   */
   readonly vocabularyName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#timeouts TfVocabulary#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#timeouts AwsVocabulary#timeouts}
   */
-  readonly timeouts?: TfVocabulary.TimeoutsProperty;
+  readonly timeouts?: AwsVocabulary.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary aws_transcribe_vocabulary}
 */
-export class TfVocabulary extends cdktn.TerraformResource {
+export class AwsVocabulary extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfVocabulary extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVocabulary resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVocabulary resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVocabulary to import
-  * @param importFromId The id of the existing TfVocabulary that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVocabulary to import is found
+  * @param importToId The construct id used in the generated config for the AwsVocabulary to import
+  * @param importFromId The id of the existing AwsVocabulary that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVocabulary to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transcribe_vocabulary", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfVocabulary extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVocabularyConfig
+  * @param options AwsVocabularyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVocabularyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVocabularyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transcribe_vocabulary',
       terraformGeneratorMetadata: {
@@ -250,11 +250,11 @@ export class TfVocabulary extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfVocabulary.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsVocabulary.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfVocabulary.TimeoutsProperty) {
+  public putTimeouts(value: AwsVocabulary.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -279,7 +279,7 @@ export class TfVocabulary extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vocabulary_file_uri: cdktn.stringToTerraform(this._vocabularyFileUri),
       vocabulary_name: cdktn.stringToTerraform(this._vocabularyName),
-      timeouts: tfVocabularyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsVocabularyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -334,10 +334,10 @@ export class TfVocabulary extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfVocabularyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsVocabularyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfVocabulary.TimeoutsProperty",
+        storageClassType: "AwsVocabulary.TimeoutsProperty",
       },
     };
 
@@ -346,7 +346,7 @@ export class TfVocabulary extends cdktn.TerraformResource {
   }
 }
 
-export function tfVocabularyTimeoutsPropertyToTerraform(struct?: TfVocabulary.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsVocabularyTimeoutsPropertyToTerraform(struct?: AwsVocabulary.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function tfVocabularyTimeoutsPropertyToTerraform(struct?: TfVocabulary.Ti
 }
 
 
-export function tfVocabularyTimeoutsPropertyToHclTerraform(struct?: TfVocabulary.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsVocabularyTimeoutsPropertyToHclTerraform(struct?: AwsVocabulary.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -390,18 +390,18 @@ export function tfVocabularyTimeoutsPropertyToHclTerraform(struct?: TfVocabulary
 }
 
 
-export namespace TfVocabulary {
+export namespace AwsVocabulary {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#create TfVocabulary#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#create AwsVocabulary#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#delete TfVocabulary#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#delete AwsVocabulary#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#update TfVocabulary#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_vocabulary#update AwsVocabulary#update}
   */
   readonly update?: string;
 }

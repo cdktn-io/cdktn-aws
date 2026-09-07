@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCodeSigningConfigConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCodeSigningConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#description TfCodeSigningConfig#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#description AwsCodeSigningConfig#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#id TfCodeSigningConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#id AwsCodeSigningConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,35 +20,35 @@ export interface TfCodeSigningConfigConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#region TfCodeSigningConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#region AwsCodeSigningConfig#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#tags TfCodeSigningConfig#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#tags AwsCodeSigningConfig#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#tags_all TfCodeSigningConfig#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#tags_all AwsCodeSigningConfig#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * allowed_publishers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#allowed_publishers TfCodeSigningConfig#allowed_publishers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#allowed_publishers AwsCodeSigningConfig#allowed_publishers}
   */
-  readonly allowedPublishers: TfCodeSigningConfig.AllowedPublishersProperty;
+  readonly allowedPublishers: AwsCodeSigningConfig.AllowedPublishersProperty;
   /**
   * policies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#policies TfCodeSigningConfig#policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#policies AwsCodeSigningConfig#policies}
   */
-  readonly policies?: TfCodeSigningConfig.PoliciesProperty;
+  readonly policies?: AwsCodeSigningConfig.PoliciesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config aws_lambda_code_signing_config}
 */
-export class TfCodeSigningConfig extends cdktn.TerraformResource {
+export class AwsCodeSigningConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfCodeSigningConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCodeSigningConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCodeSigningConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCodeSigningConfig to import
-  * @param importFromId The id of the existing TfCodeSigningConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCodeSigningConfig to import is found
+  * @param importToId The construct id used in the generated config for the AwsCodeSigningConfig to import
+  * @param importFromId The id of the existing AwsCodeSigningConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCodeSigningConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_code_signing_config", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfCodeSigningConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCodeSigningConfigConfig
+  * @param options AwsCodeSigningConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCodeSigningConfigConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCodeSigningConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_code_signing_config',
       terraformGeneratorMetadata: {
@@ -205,11 +205,11 @@ export class TfCodeSigningConfig extends cdktn.TerraformResource {
   }
 
   // allowed_publishers - computed: false, optional: false, required: true
-  private _allowedPublishers = new TfCodeSigningConfig.AllowedPublishersPropertyOutputReference(this, "allowed_publishers");
+  private _allowedPublishers = new AwsCodeSigningConfig.AllowedPublishersPropertyOutputReference(this, "allowed_publishers");
   public get allowedPublishers() {
     return this._allowedPublishers;
   }
-  public putAllowedPublishers(value: TfCodeSigningConfig.AllowedPublishersProperty) {
+  public putAllowedPublishers(value: AwsCodeSigningConfig.AllowedPublishersProperty) {
     this._allowedPublishers.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -218,11 +218,11 @@ export class TfCodeSigningConfig extends cdktn.TerraformResource {
   }
 
   // policies - computed: false, optional: true, required: false
-  private _policies = new TfCodeSigningConfig.PoliciesPropertyOutputReference(this, "policies");
+  private _policies = new AwsCodeSigningConfig.PoliciesPropertyOutputReference(this, "policies");
   public get policies() {
     return this._policies;
   }
-  public putPolicies(value: TfCodeSigningConfig.PoliciesProperty) {
+  public putPolicies(value: AwsCodeSigningConfig.PoliciesProperty) {
     this._policies.internalValue = value;
   }
   public resetPolicies() {
@@ -244,8 +244,8 @@ export class TfCodeSigningConfig extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      allowed_publishers: tfCodeSigningConfigAllowedPublishersPropertyToTerraform(this._allowedPublishers.internalValue),
-      policies: tfCodeSigningConfigPoliciesPropertyToTerraform(this._policies.internalValue),
+      allowed_publishers: awsCodeSigningConfigAllowedPublishersPropertyToTerraform(this._allowedPublishers.internalValue),
+      policies: awsCodeSigningConfigPoliciesPropertyToTerraform(this._policies.internalValue),
     };
   }
 
@@ -282,16 +282,16 @@ export class TfCodeSigningConfig extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       allowed_publishers: {
-        value: tfCodeSigningConfigAllowedPublishersPropertyToHclTerraform(this._allowedPublishers.internalValue),
+        value: awsCodeSigningConfigAllowedPublishersPropertyToHclTerraform(this._allowedPublishers.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCodeSigningConfig.AllowedPublishersPropertyList",
+        storageClassType: "AwsCodeSigningConfig.AllowedPublishersPropertyList",
       },
       policies: {
-        value: tfCodeSigningConfigPoliciesPropertyToHclTerraform(this._policies.internalValue),
+        value: awsCodeSigningConfigPoliciesPropertyToHclTerraform(this._policies.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCodeSigningConfig.PoliciesPropertyList",
+        storageClassType: "AwsCodeSigningConfig.PoliciesPropertyList",
       },
     };
 
@@ -300,7 +300,7 @@ export class TfCodeSigningConfig extends cdktn.TerraformResource {
   }
 }
 
-export function tfCodeSigningConfigAllowedPublishersPropertyToTerraform(struct?: TfCodeSigningConfig.AllowedPublishersPropertyOutputReference | TfCodeSigningConfig.AllowedPublishersProperty): any {
+export function awsCodeSigningConfigAllowedPublishersPropertyToTerraform(struct?: AwsCodeSigningConfig.AllowedPublishersPropertyOutputReference | AwsCodeSigningConfig.AllowedPublishersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function tfCodeSigningConfigAllowedPublishersPropertyToTerraform(struct?:
 }
 
 
-export function tfCodeSigningConfigAllowedPublishersPropertyToHclTerraform(struct?: TfCodeSigningConfig.AllowedPublishersPropertyOutputReference | TfCodeSigningConfig.AllowedPublishersProperty): any {
+export function awsCodeSigningConfigAllowedPublishersPropertyToHclTerraform(struct?: AwsCodeSigningConfig.AllowedPublishersPropertyOutputReference | AwsCodeSigningConfig.AllowedPublishersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function tfCodeSigningConfigAllowedPublishersPropertyToHclTerraform(struc
 }
 
 
-export function tfCodeSigningConfigPoliciesPropertyToTerraform(struct?: TfCodeSigningConfig.PoliciesPropertyOutputReference | TfCodeSigningConfig.PoliciesProperty): any {
+export function awsCodeSigningConfigPoliciesPropertyToTerraform(struct?: AwsCodeSigningConfig.PoliciesPropertyOutputReference | AwsCodeSigningConfig.PoliciesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function tfCodeSigningConfigPoliciesPropertyToTerraform(struct?: TfCodeSi
 }
 
 
-export function tfCodeSigningConfigPoliciesPropertyToHclTerraform(struct?: TfCodeSigningConfig.PoliciesPropertyOutputReference | TfCodeSigningConfig.PoliciesProperty): any {
+export function awsCodeSigningConfigPoliciesPropertyToHclTerraform(struct?: AwsCodeSigningConfig.PoliciesPropertyOutputReference | AwsCodeSigningConfig.PoliciesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,10 +360,10 @@ export function tfCodeSigningConfigPoliciesPropertyToHclTerraform(struct?: TfCod
 }
 
 
-export namespace TfCodeSigningConfig {
+export namespace AwsCodeSigningConfig {
 export interface AllowedPublishersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#signing_profile_version_arns TfCodeSigningConfig#signing_profile_version_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#signing_profile_version_arns AwsCodeSigningConfig#signing_profile_version_arns}
   */
   readonly signingProfileVersionArns: string[];
 }
@@ -414,7 +414,7 @@ export class AllowedPublishersPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface PoliciesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#untrusted_artifact_on_deployment TfCodeSigningConfig#untrusted_artifact_on_deployment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_code_signing_config#untrusted_artifact_on_deployment AwsCodeSigningConfig#untrusted_artifact_on_deployment}
   */
   readonly untrustedArtifactOnDeployment: string;
 }

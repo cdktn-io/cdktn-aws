@@ -5,24 +5,24 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSigningCertificateConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSigningCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_signing_certificate#certificate_body TfSigningCertificate#certificate_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_signing_certificate#certificate_body AwsSigningCertificate#certificate_body}
   */
   readonly certificateBody: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_signing_certificate#id TfSigningCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_signing_certificate#id AwsSigningCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_signing_certificate#status TfSigningCertificate#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_signing_certificate#status AwsSigningCertificate#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_signing_certificate#user_name TfSigningCertificate#user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_signing_certificate#user_name AwsSigningCertificate#user_name}
   */
   readonly userName: string;
 }
@@ -30,7 +30,7 @@ export interface TfSigningCertificateConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_signing_certificate aws_iam_signing_certificate}
 */
-export class TfSigningCertificate extends cdktn.TerraformResource {
+export class AwsSigningCertificate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class TfSigningCertificate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSigningCertificate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSigningCertificate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSigningCertificate to import
-  * @param importFromId The id of the existing TfSigningCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_signing_certificate#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSigningCertificate to import is found
+  * @param importToId The construct id used in the generated config for the AwsSigningCertificate to import
+  * @param importFromId The id of the existing AwsSigningCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_signing_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSigningCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_signing_certificate", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class TfSigningCertificate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSigningCertificateConfig
+  * @param options AwsSigningCertificateConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSigningCertificateConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSigningCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_signing_certificate',
       terraformGeneratorMetadata: {

@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfBrokerInstanceTypeOfferingsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsBrokerInstanceTypeOfferingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings#engine_type DataTfBrokerInstanceTypeOfferings#engine_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings#engine_type DataAwsBrokerInstanceTypeOfferings#engine_type}
   */
   readonly engineType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings#host_instance_type DataTfBrokerInstanceTypeOfferings#host_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings#host_instance_type DataAwsBrokerInstanceTypeOfferings#host_instance_type}
   */
   readonly hostInstanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings#id DataTfBrokerInstanceTypeOfferings#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings#id DataAwsBrokerInstanceTypeOfferings#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface DataTfBrokerInstanceTypeOfferingsConfig extends cdktn.Terraform
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings#region DataTfBrokerInstanceTypeOfferings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings#region DataAwsBrokerInstanceTypeOfferings#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings#storage_type DataTfBrokerInstanceTypeOfferings#storage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings#storage_type DataAwsBrokerInstanceTypeOfferings#storage_type}
   */
   readonly storageType?: string;
 }
@@ -36,7 +36,7 @@ export interface DataTfBrokerInstanceTypeOfferingsConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings aws_mq_broker_instance_type_offerings}
 */
-export class DataTfBrokerInstanceTypeOfferings extends cdktn.TerraformDataSource {
+export class DataAwsBrokerInstanceTypeOfferings extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfBrokerInstanceTypeOfferings extends cdktn.TerraformDataSource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfBrokerInstanceTypeOfferings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsBrokerInstanceTypeOfferings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfBrokerInstanceTypeOfferings to import
-  * @param importFromId The id of the existing DataTfBrokerInstanceTypeOfferings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfBrokerInstanceTypeOfferings to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsBrokerInstanceTypeOfferings to import
+  * @param importFromId The id of the existing DataAwsBrokerInstanceTypeOfferings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/mq_broker_instance_type_offerings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsBrokerInstanceTypeOfferings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mq_broker_instance_type_offerings", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfBrokerInstanceTypeOfferings extends cdktn.TerraformDataSource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfBrokerInstanceTypeOfferingsConfig = {}
+  * @param options DataAwsBrokerInstanceTypeOfferingsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfBrokerInstanceTypeOfferingsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsBrokerInstanceTypeOfferingsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_mq_broker_instance_type_offerings',
       terraformGeneratorMetadata: {
@@ -96,7 +96,7 @@ export class DataTfBrokerInstanceTypeOfferings extends cdktn.TerraformDataSource
   // ==========
 
   // broker_instance_options - computed: true, optional: false, required: false
-  private _brokerInstanceOptions = new DataTfBrokerInstanceTypeOfferings.BrokerInstanceOptionsPropertyList(this, "broker_instance_options", false);
+  private _brokerInstanceOptions = new DataAwsBrokerInstanceTypeOfferings.BrokerInstanceOptionsPropertyList(this, "broker_instance_options", false);
   public get brokerInstanceOptions() {
     return this._brokerInstanceOptions;
   }
@@ -234,7 +234,7 @@ export class DataTfBrokerInstanceTypeOfferings extends cdktn.TerraformDataSource
   }
 }
 
-export function dataTfBrokerInstanceTypeOfferingsAvailabilityZonesPropertyToTerraform(struct?: DataTfBrokerInstanceTypeOfferings.AvailabilityZonesProperty): any {
+export function dataAwsBrokerInstanceTypeOfferingsAvailabilityZonesPropertyToTerraform(struct?: DataAwsBrokerInstanceTypeOfferings.AvailabilityZonesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function dataTfBrokerInstanceTypeOfferingsAvailabilityZonesPropertyToTerr
 }
 
 
-export function dataTfBrokerInstanceTypeOfferingsAvailabilityZonesPropertyToHclTerraform(struct?: DataTfBrokerInstanceTypeOfferings.AvailabilityZonesProperty): any {
+export function dataAwsBrokerInstanceTypeOfferingsAvailabilityZonesPropertyToHclTerraform(struct?: DataAwsBrokerInstanceTypeOfferings.AvailabilityZonesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -255,7 +255,7 @@ export function dataTfBrokerInstanceTypeOfferingsAvailabilityZonesPropertyToHclT
 }
 
 
-export function dataTfBrokerInstanceTypeOfferingsBrokerInstanceOptionsPropertyToTerraform(struct?: DataTfBrokerInstanceTypeOfferings.BrokerInstanceOptionsProperty): any {
+export function dataAwsBrokerInstanceTypeOfferingsBrokerInstanceOptionsPropertyToTerraform(struct?: DataAwsBrokerInstanceTypeOfferings.BrokerInstanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function dataTfBrokerInstanceTypeOfferingsBrokerInstanceOptionsPropertyTo
 }
 
 
-export function dataTfBrokerInstanceTypeOfferingsBrokerInstanceOptionsPropertyToHclTerraform(struct?: DataTfBrokerInstanceTypeOfferings.BrokerInstanceOptionsProperty): any {
+export function dataAwsBrokerInstanceTypeOfferingsBrokerInstanceOptionsPropertyToHclTerraform(struct?: DataAwsBrokerInstanceTypeOfferings.BrokerInstanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,7 +276,7 @@ export function dataTfBrokerInstanceTypeOfferingsBrokerInstanceOptionsPropertyTo
 }
 
 
-export namespace DataTfBrokerInstanceTypeOfferings {
+export namespace DataAwsBrokerInstanceTypeOfferings {
 export interface AvailabilityZonesProperty {
 }
 export class AvailabilityZonesPropertyOutputReference extends cdktn.ComplexObject {

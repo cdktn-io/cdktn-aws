@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfThreatintelsetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsThreatintelsetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#activate TfThreatintelset#activate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#activate AwsThreatintelset#activate}
   */
   readonly activate: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#detector_id TfThreatintelset#detector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#detector_id AwsThreatintelset#detector_id}
   */
   readonly detectorId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#format TfThreatintelset#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#format AwsThreatintelset#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#id TfThreatintelset#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#id AwsThreatintelset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#location TfThreatintelset#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#location AwsThreatintelset#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#name TfThreatintelset#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#name AwsThreatintelset#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#region TfThreatintelset#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#region AwsThreatintelset#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#tags TfThreatintelset#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#tags AwsThreatintelset#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#tags_all TfThreatintelset#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#tags_all AwsThreatintelset#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -52,7 +52,7 @@ export interface TfThreatintelsetConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset aws_guardduty_threatintelset}
 */
-export class TfThreatintelset extends cdktn.TerraformResource {
+export class AwsThreatintelset extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfThreatintelset extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfThreatintelset resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsThreatintelset resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfThreatintelset to import
-  * @param importFromId The id of the existing TfThreatintelset that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfThreatintelset to import is found
+  * @param importToId The construct id used in the generated config for the AwsThreatintelset to import
+  * @param importFromId The id of the existing AwsThreatintelset that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_threatintelset#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsThreatintelset to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_guardduty_threatintelset", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfThreatintelset extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfThreatintelsetConfig
+  * @param options AwsThreatintelsetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfThreatintelsetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsThreatintelsetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_guardduty_threatintelset',
       terraformGeneratorMetadata: {

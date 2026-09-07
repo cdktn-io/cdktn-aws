@@ -5,39 +5,39 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTelemetryPipelineConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTelemetryPipelineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#name TfTelemetryPipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#name AwsTelemetryPipeline#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#region TfTelemetryPipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#region AwsTelemetryPipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#tags TfTelemetryPipeline#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#tags AwsTelemetryPipeline#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#configuration TfTelemetryPipeline#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#configuration AwsTelemetryPipeline#configuration}
   */
-  readonly configuration?: TfTelemetryPipeline.ConfigurationProperty[] | cdktn.IResolvable;
+  readonly configuration?: AwsTelemetryPipeline.ConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#timeouts TfTelemetryPipeline#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#timeouts AwsTelemetryPipeline#timeouts}
   */
-  readonly timeouts?: TfTelemetryPipeline.TimeoutsProperty;
+  readonly timeouts?: AwsTelemetryPipeline.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline aws_observabilityadmin_telemetry_pipeline}
 */
-export class TfTelemetryPipeline extends cdktn.TerraformResource {
+export class AwsTelemetryPipeline extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfTelemetryPipeline extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTelemetryPipeline resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTelemetryPipeline resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTelemetryPipeline to import
-  * @param importFromId The id of the existing TfTelemetryPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTelemetryPipeline to import is found
+  * @param importToId The construct id used in the generated config for the AwsTelemetryPipeline to import
+  * @param importFromId The id of the existing AwsTelemetryPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTelemetryPipeline to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_observabilityadmin_telemetry_pipeline", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfTelemetryPipeline extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTelemetryPipelineConfig
+  * @param options AwsTelemetryPipelineConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTelemetryPipelineConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTelemetryPipelineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_observabilityadmin_telemetry_pipeline',
       terraformGeneratorMetadata: {
@@ -153,11 +153,11 @@ export class TfTelemetryPipeline extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new TfTelemetryPipeline.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new AwsTelemetryPipeline.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: TfTelemetryPipeline.ConfigurationProperty[] | cdktn.IResolvable) {
+  public putConfiguration(value: AwsTelemetryPipeline.ConfigurationProperty[] | cdktn.IResolvable) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -169,11 +169,11 @@ export class TfTelemetryPipeline extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTelemetryPipeline.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTelemetryPipeline.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTelemetryPipeline.TimeoutsProperty) {
+  public putTimeouts(value: AwsTelemetryPipeline.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -193,8 +193,8 @@ export class TfTelemetryPipeline extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      configuration: cdktn.listMapper(tfTelemetryPipelineConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
-      timeouts: tfTelemetryPipelineTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      configuration: cdktn.listMapper(awsTelemetryPipelineConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
+      timeouts: awsTelemetryPipelineTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -219,16 +219,16 @@ export class TfTelemetryPipeline extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       configuration: {
-        value: cdktn.listMapperHcl(tfTelemetryPipelineConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
+        value: cdktn.listMapperHcl(awsTelemetryPipelineConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTelemetryPipeline.ConfigurationPropertyList",
+        storageClassType: "AwsTelemetryPipeline.ConfigurationPropertyList",
       },
       timeouts: {
-        value: tfTelemetryPipelineTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTelemetryPipelineTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTelemetryPipeline.TimeoutsProperty",
+        storageClassType: "AwsTelemetryPipeline.TimeoutsProperty",
       },
     };
 
@@ -237,7 +237,7 @@ export class TfTelemetryPipeline extends cdktn.TerraformResource {
   }
 }
 
-export function tfTelemetryPipelineConfigurationPropertyToTerraform(struct?: TfTelemetryPipeline.ConfigurationProperty | cdktn.IResolvable): any {
+export function awsTelemetryPipelineConfigurationPropertyToTerraform(struct?: AwsTelemetryPipeline.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -248,7 +248,7 @@ export function tfTelemetryPipelineConfigurationPropertyToTerraform(struct?: TfT
 }
 
 
-export function tfTelemetryPipelineConfigurationPropertyToHclTerraform(struct?: TfTelemetryPipeline.ConfigurationProperty | cdktn.IResolvable): any {
+export function awsTelemetryPipelineConfigurationPropertyToHclTerraform(struct?: AwsTelemetryPipeline.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,7 +267,7 @@ export function tfTelemetryPipelineConfigurationPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfTelemetryPipelineTimeoutsPropertyToTerraform(struct?: TfTelemetryPipeline.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTelemetryPipelineTimeoutsPropertyToTerraform(struct?: AwsTelemetryPipeline.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function tfTelemetryPipelineTimeoutsPropertyToTerraform(struct?: TfTeleme
 }
 
 
-export function tfTelemetryPipelineTimeoutsPropertyToHclTerraform(struct?: TfTelemetryPipeline.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTelemetryPipelineTimeoutsPropertyToHclTerraform(struct?: AwsTelemetryPipeline.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,10 +311,10 @@ export function tfTelemetryPipelineTimeoutsPropertyToHclTerraform(struct?: TfTel
 }
 
 
-export namespace TfTelemetryPipeline {
+export namespace AwsTelemetryPipeline {
 export interface ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#body TfTelemetryPipeline#body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#body AwsTelemetryPipeline#body}
   */
   readonly body: string;
 }
@@ -399,19 +399,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#create TfTelemetryPipeline#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#create AwsTelemetryPipeline#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#delete TfTelemetryPipeline#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#delete AwsTelemetryPipeline#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#update TfTelemetryPipeline#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_pipeline#update AwsTelemetryPipeline#update}
   */
   readonly update?: string;
 }

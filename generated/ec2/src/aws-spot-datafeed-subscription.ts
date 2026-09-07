@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSpotDatafeedSubscriptionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSpotDatafeedSubscriptionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/spot_datafeed_subscription#bucket TfSpotDatafeedSubscription#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/spot_datafeed_subscription#bucket AwsSpotDatafeedSubscription#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/spot_datafeed_subscription#id TfSpotDatafeedSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/spot_datafeed_subscription#id AwsSpotDatafeedSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/spot_datafeed_subscription#prefix TfSpotDatafeedSubscription#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/spot_datafeed_subscription#prefix AwsSpotDatafeedSubscription#prefix}
   */
   readonly prefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/spot_datafeed_subscription#region TfSpotDatafeedSubscription#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/spot_datafeed_subscription#region AwsSpotDatafeedSubscription#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface TfSpotDatafeedSubscriptionConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/spot_datafeed_subscription aws_spot_datafeed_subscription}
 */
-export class TfSpotDatafeedSubscription extends cdktn.TerraformResource {
+export class AwsSpotDatafeedSubscription extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfSpotDatafeedSubscription extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSpotDatafeedSubscription resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSpotDatafeedSubscription resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSpotDatafeedSubscription to import
-  * @param importFromId The id of the existing TfSpotDatafeedSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/spot_datafeed_subscription#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSpotDatafeedSubscription to import is found
+  * @param importToId The construct id used in the generated config for the AwsSpotDatafeedSubscription to import
+  * @param importFromId The id of the existing AwsSpotDatafeedSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/spot_datafeed_subscription#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSpotDatafeedSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_spot_datafeed_subscription", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfSpotDatafeedSubscription extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSpotDatafeedSubscriptionConfig
+  * @param options AwsSpotDatafeedSubscriptionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSpotDatafeedSubscriptionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSpotDatafeedSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_spot_datafeed_subscription',
       terraformGeneratorMetadata: {

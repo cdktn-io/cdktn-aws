@@ -5,198 +5,198 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfServiceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#availability_zone_rebalancing TfService#availability_zone_rebalancing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#availability_zone_rebalancing AwsService#availability_zone_rebalancing}
   */
   readonly availabilityZoneRebalancing?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#cluster TfService#cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#cluster AwsService#cluster}
   */
   readonly cluster?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#deployment_maximum_percent TfService#deployment_maximum_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#deployment_maximum_percent AwsService#deployment_maximum_percent}
   */
   readonly deploymentMaximumPercent?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#deployment_minimum_healthy_percent TfService#deployment_minimum_healthy_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#deployment_minimum_healthy_percent AwsService#deployment_minimum_healthy_percent}
   */
   readonly deploymentMinimumHealthyPercent?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#desired_count TfService#desired_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#desired_count AwsService#desired_count}
   */
   readonly desiredCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#enable_ecs_managed_tags TfService#enable_ecs_managed_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#enable_ecs_managed_tags AwsService#enable_ecs_managed_tags}
   */
   readonly enableEcsManagedTags?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#enable_execute_command TfService#enable_execute_command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#enable_execute_command AwsService#enable_execute_command}
   */
   readonly enableExecuteCommand?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#force_delete TfService#force_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#force_delete AwsService#force_delete}
   */
   readonly forceDelete?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#force_new_deployment TfService#force_new_deployment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#force_new_deployment AwsService#force_new_deployment}
   */
   readonly forceNewDeployment?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#health_check_grace_period_seconds TfService#health_check_grace_period_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#health_check_grace_period_seconds AwsService#health_check_grace_period_seconds}
   */
   readonly healthCheckGracePeriodSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#iam_role TfService#iam_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#iam_role AwsService#iam_role}
   */
   readonly iamRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#id TfService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#id AwsService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#launch_type TfService#launch_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#launch_type AwsService#launch_type}
   */
   readonly launchType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#name TfService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#name AwsService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#platform_version TfService#platform_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#platform_version AwsService#platform_version}
   */
   readonly platformVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#propagate_tags TfService#propagate_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#propagate_tags AwsService#propagate_tags}
   */
   readonly propagateTags?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#region TfService#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#region AwsService#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#scheduling_strategy TfService#scheduling_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#scheduling_strategy AwsService#scheduling_strategy}
   */
   readonly schedulingStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#sigint_rollback TfService#sigint_rollback}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#sigint_rollback AwsService#sigint_rollback}
   */
   readonly sigintRollback?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#tags TfService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#tags AwsService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#tags_all TfService#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#tags_all AwsService#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#task_definition TfService#task_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#task_definition AwsService#task_definition}
   */
   readonly taskDefinition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#triggers TfService#triggers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#triggers AwsService#triggers}
   */
   readonly triggers?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#wait_for_steady_state TfService#wait_for_steady_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#wait_for_steady_state AwsService#wait_for_steady_state}
   */
   readonly waitForSteadyState?: boolean | cdktn.IResolvable;
   /**
   * alarms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#alarms TfService#alarms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#alarms AwsService#alarms}
   */
-  readonly alarms?: TfService.AlarmsProperty;
+  readonly alarms?: AwsService.AlarmsProperty;
   /**
   * capacity_provider_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#capacity_provider_strategy TfService#capacity_provider_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#capacity_provider_strategy AwsService#capacity_provider_strategy}
   */
-  readonly capacityProviderStrategy?: TfService.CapacityProviderStrategyProperty[] | cdktn.IResolvable;
+  readonly capacityProviderStrategy?: AwsService.CapacityProviderStrategyProperty[] | cdktn.IResolvable;
   /**
   * deployment_circuit_breaker block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#deployment_circuit_breaker TfService#deployment_circuit_breaker}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#deployment_circuit_breaker AwsService#deployment_circuit_breaker}
   */
-  readonly deploymentCircuitBreaker?: TfService.DeploymentCircuitBreakerProperty;
+  readonly deploymentCircuitBreaker?: AwsService.DeploymentCircuitBreakerProperty;
   /**
   * deployment_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#deployment_configuration TfService#deployment_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#deployment_configuration AwsService#deployment_configuration}
   */
-  readonly deploymentConfiguration?: TfService.DeploymentConfigurationProperty;
+  readonly deploymentConfiguration?: AwsService.DeploymentConfigurationProperty;
   /**
   * deployment_controller block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#deployment_controller TfService#deployment_controller}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#deployment_controller AwsService#deployment_controller}
   */
-  readonly deploymentController?: TfService.DeploymentControllerProperty;
+  readonly deploymentController?: AwsService.DeploymentControllerProperty;
   /**
   * load_balancer block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#load_balancer TfService#load_balancer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#load_balancer AwsService#load_balancer}
   */
-  readonly loadBalancer?: TfService.LoadBalancerProperty[] | cdktn.IResolvable;
+  readonly loadBalancer?: AwsService.LoadBalancerProperty[] | cdktn.IResolvable;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#network_configuration TfService#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#network_configuration AwsService#network_configuration}
   */
-  readonly networkConfiguration?: TfService.NetworkConfigurationProperty;
+  readonly networkConfiguration?: AwsService.NetworkConfigurationProperty;
   /**
   * ordered_placement_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#ordered_placement_strategy TfService#ordered_placement_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#ordered_placement_strategy AwsService#ordered_placement_strategy}
   */
-  readonly orderedPlacementStrategy?: TfService.OrderedPlacementStrategyProperty[] | cdktn.IResolvable;
+  readonly orderedPlacementStrategy?: AwsService.OrderedPlacementStrategyProperty[] | cdktn.IResolvable;
   /**
   * placement_constraints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#placement_constraints TfService#placement_constraints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#placement_constraints AwsService#placement_constraints}
   */
-  readonly placementConstraints?: TfService.PlacementConstraintsProperty[] | cdktn.IResolvable;
+  readonly placementConstraints?: AwsService.PlacementConstraintsProperty[] | cdktn.IResolvable;
   /**
   * service_connect_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#service_connect_configuration TfService#service_connect_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#service_connect_configuration AwsService#service_connect_configuration}
   */
-  readonly serviceConnectConfiguration?: TfService.ServiceConnectConfigurationProperty;
+  readonly serviceConnectConfiguration?: AwsService.ServiceConnectConfigurationProperty;
   /**
   * service_registries block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#service_registries TfService#service_registries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#service_registries AwsService#service_registries}
   */
-  readonly serviceRegistries?: TfService.ServiceRegistriesProperty;
+  readonly serviceRegistries?: AwsService.ServiceRegistriesProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#timeouts TfService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#timeouts AwsService#timeouts}
   */
-  readonly timeouts?: TfService.TimeoutsProperty;
+  readonly timeouts?: AwsService.TimeoutsProperty;
   /**
   * volume_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#volume_configuration TfService#volume_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#volume_configuration AwsService#volume_configuration}
   */
-  readonly volumeConfiguration?: TfService.VolumeConfigurationProperty;
+  readonly volumeConfiguration?: AwsService.VolumeConfigurationProperty;
   /**
   * vpc_lattice_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#vpc_lattice_configurations TfService#vpc_lattice_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#vpc_lattice_configurations AwsService#vpc_lattice_configurations}
   */
-  readonly vpcLatticeConfigurations?: TfService.VpcLatticeConfigurationsProperty[] | cdktn.IResolvable;
+  readonly vpcLatticeConfigurations?: AwsService.VpcLatticeConfigurationsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service aws_ecs_service}
 */
-export class TfService extends cdktn.TerraformResource {
+export class AwsService extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -207,11 +207,11 @@ export class TfService extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfService resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfService to import
-  * @param importFromId The id of the existing TfService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfService to import is found
+  * @param importToId The construct id used in the generated config for the AwsService to import
+  * @param importFromId The id of the existing AwsService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_service", importId: importFromId, provider });
@@ -226,9 +226,9 @@ export class TfService extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfServiceConfig
+  * @param options AwsServiceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfServiceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_service',
       terraformGeneratorMetadata: {
@@ -675,11 +675,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // alarms - computed: false, optional: true, required: false
-  private _alarms = new TfService.AlarmsPropertyOutputReference(this, "alarms");
+  private _alarms = new AwsService.AlarmsPropertyOutputReference(this, "alarms");
   public get alarms() {
     return this._alarms;
   }
-  public putAlarms(value: TfService.AlarmsProperty) {
+  public putAlarms(value: AwsService.AlarmsProperty) {
     this._alarms.internalValue = value;
   }
   public resetAlarms() {
@@ -691,11 +691,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // capacity_provider_strategy - computed: false, optional: true, required: false
-  private _capacityProviderStrategy = new TfService.CapacityProviderStrategyPropertyList(this, "capacity_provider_strategy", true);
+  private _capacityProviderStrategy = new AwsService.CapacityProviderStrategyPropertyList(this, "capacity_provider_strategy", true);
   public get capacityProviderStrategy() {
     return this._capacityProviderStrategy;
   }
-  public putCapacityProviderStrategy(value: TfService.CapacityProviderStrategyProperty[] | cdktn.IResolvable) {
+  public putCapacityProviderStrategy(value: AwsService.CapacityProviderStrategyProperty[] | cdktn.IResolvable) {
     this._capacityProviderStrategy.internalValue = value;
   }
   public resetCapacityProviderStrategy() {
@@ -707,11 +707,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // deployment_circuit_breaker - computed: false, optional: true, required: false
-  private _deploymentCircuitBreaker = new TfService.DeploymentCircuitBreakerPropertyOutputReference(this, "deployment_circuit_breaker");
+  private _deploymentCircuitBreaker = new AwsService.DeploymentCircuitBreakerPropertyOutputReference(this, "deployment_circuit_breaker");
   public get deploymentCircuitBreaker() {
     return this._deploymentCircuitBreaker;
   }
-  public putDeploymentCircuitBreaker(value: TfService.DeploymentCircuitBreakerProperty) {
+  public putDeploymentCircuitBreaker(value: AwsService.DeploymentCircuitBreakerProperty) {
     this._deploymentCircuitBreaker.internalValue = value;
   }
   public resetDeploymentCircuitBreaker() {
@@ -723,11 +723,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // deployment_configuration - computed: false, optional: true, required: false
-  private _deploymentConfiguration = new TfService.DeploymentConfigurationPropertyOutputReference(this, "deployment_configuration");
+  private _deploymentConfiguration = new AwsService.DeploymentConfigurationPropertyOutputReference(this, "deployment_configuration");
   public get deploymentConfiguration() {
     return this._deploymentConfiguration;
   }
-  public putDeploymentConfiguration(value: TfService.DeploymentConfigurationProperty) {
+  public putDeploymentConfiguration(value: AwsService.DeploymentConfigurationProperty) {
     this._deploymentConfiguration.internalValue = value;
   }
   public resetDeploymentConfiguration() {
@@ -739,11 +739,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // deployment_controller - computed: false, optional: true, required: false
-  private _deploymentController = new TfService.DeploymentControllerPropertyOutputReference(this, "deployment_controller");
+  private _deploymentController = new AwsService.DeploymentControllerPropertyOutputReference(this, "deployment_controller");
   public get deploymentController() {
     return this._deploymentController;
   }
-  public putDeploymentController(value: TfService.DeploymentControllerProperty) {
+  public putDeploymentController(value: AwsService.DeploymentControllerProperty) {
     this._deploymentController.internalValue = value;
   }
   public resetDeploymentController() {
@@ -755,11 +755,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // load_balancer - computed: false, optional: true, required: false
-  private _loadBalancer = new TfService.LoadBalancerPropertyList(this, "load_balancer", true);
+  private _loadBalancer = new AwsService.LoadBalancerPropertyList(this, "load_balancer", true);
   public get loadBalancer() {
     return this._loadBalancer;
   }
-  public putLoadBalancer(value: TfService.LoadBalancerProperty[] | cdktn.IResolvable) {
+  public putLoadBalancer(value: AwsService.LoadBalancerProperty[] | cdktn.IResolvable) {
     this._loadBalancer.internalValue = value;
   }
   public resetLoadBalancer() {
@@ -771,11 +771,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // network_configuration - computed: false, optional: true, required: false
-  private _networkConfiguration = new TfService.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
+  private _networkConfiguration = new AwsService.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
-  public putNetworkConfiguration(value: TfService.NetworkConfigurationProperty) {
+  public putNetworkConfiguration(value: AwsService.NetworkConfigurationProperty) {
     this._networkConfiguration.internalValue = value;
   }
   public resetNetworkConfiguration() {
@@ -787,11 +787,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // ordered_placement_strategy - computed: false, optional: true, required: false
-  private _orderedPlacementStrategy = new TfService.OrderedPlacementStrategyPropertyList(this, "ordered_placement_strategy", false);
+  private _orderedPlacementStrategy = new AwsService.OrderedPlacementStrategyPropertyList(this, "ordered_placement_strategy", false);
   public get orderedPlacementStrategy() {
     return this._orderedPlacementStrategy;
   }
-  public putOrderedPlacementStrategy(value: TfService.OrderedPlacementStrategyProperty[] | cdktn.IResolvable) {
+  public putOrderedPlacementStrategy(value: AwsService.OrderedPlacementStrategyProperty[] | cdktn.IResolvable) {
     this._orderedPlacementStrategy.internalValue = value;
   }
   public resetOrderedPlacementStrategy() {
@@ -803,11 +803,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // placement_constraints - computed: false, optional: true, required: false
-  private _placementConstraints = new TfService.PlacementConstraintsPropertyList(this, "placement_constraints", true);
+  private _placementConstraints = new AwsService.PlacementConstraintsPropertyList(this, "placement_constraints", true);
   public get placementConstraints() {
     return this._placementConstraints;
   }
-  public putPlacementConstraints(value: TfService.PlacementConstraintsProperty[] | cdktn.IResolvable) {
+  public putPlacementConstraints(value: AwsService.PlacementConstraintsProperty[] | cdktn.IResolvable) {
     this._placementConstraints.internalValue = value;
   }
   public resetPlacementConstraints() {
@@ -819,11 +819,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // service_connect_configuration - computed: false, optional: true, required: false
-  private _serviceConnectConfiguration = new TfService.ServiceConnectConfigurationPropertyOutputReference(this, "service_connect_configuration");
+  private _serviceConnectConfiguration = new AwsService.ServiceConnectConfigurationPropertyOutputReference(this, "service_connect_configuration");
   public get serviceConnectConfiguration() {
     return this._serviceConnectConfiguration;
   }
-  public putServiceConnectConfiguration(value: TfService.ServiceConnectConfigurationProperty) {
+  public putServiceConnectConfiguration(value: AwsService.ServiceConnectConfigurationProperty) {
     this._serviceConnectConfiguration.internalValue = value;
   }
   public resetServiceConnectConfiguration() {
@@ -835,11 +835,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // service_registries - computed: false, optional: true, required: false
-  private _serviceRegistries = new TfService.ServiceRegistriesPropertyOutputReference(this, "service_registries");
+  private _serviceRegistries = new AwsService.ServiceRegistriesPropertyOutputReference(this, "service_registries");
   public get serviceRegistries() {
     return this._serviceRegistries;
   }
-  public putServiceRegistries(value: TfService.ServiceRegistriesProperty) {
+  public putServiceRegistries(value: AwsService.ServiceRegistriesProperty) {
     this._serviceRegistries.internalValue = value;
   }
   public resetServiceRegistries() {
@@ -851,11 +851,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfService.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsService.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfService.TimeoutsProperty) {
+  public putTimeouts(value: AwsService.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -867,11 +867,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // volume_configuration - computed: false, optional: true, required: false
-  private _volumeConfiguration = new TfService.VolumeConfigurationPropertyOutputReference(this, "volume_configuration");
+  private _volumeConfiguration = new AwsService.VolumeConfigurationPropertyOutputReference(this, "volume_configuration");
   public get volumeConfiguration() {
     return this._volumeConfiguration;
   }
-  public putVolumeConfiguration(value: TfService.VolumeConfigurationProperty) {
+  public putVolumeConfiguration(value: AwsService.VolumeConfigurationProperty) {
     this._volumeConfiguration.internalValue = value;
   }
   public resetVolumeConfiguration() {
@@ -883,11 +883,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // vpc_lattice_configurations - computed: false, optional: true, required: false
-  private _vpcLatticeConfigurations = new TfService.VpcLatticeConfigurationsPropertyList(this, "vpc_lattice_configurations", true);
+  private _vpcLatticeConfigurations = new AwsService.VpcLatticeConfigurationsPropertyList(this, "vpc_lattice_configurations", true);
   public get vpcLatticeConfigurations() {
     return this._vpcLatticeConfigurations;
   }
-  public putVpcLatticeConfigurations(value: TfService.VpcLatticeConfigurationsProperty[] | cdktn.IResolvable) {
+  public putVpcLatticeConfigurations(value: AwsService.VpcLatticeConfigurationsProperty[] | cdktn.IResolvable) {
     this._vpcLatticeConfigurations.internalValue = value;
   }
   public resetVpcLatticeConfigurations() {
@@ -928,20 +928,20 @@ export class TfService extends cdktn.TerraformResource {
       task_definition: cdktn.stringToTerraform(this._taskDefinition),
       triggers: cdktn.hashMapper(cdktn.stringToTerraform)(this._triggers),
       wait_for_steady_state: cdktn.booleanToTerraform(this._waitForSteadyState),
-      alarms: tfServiceAlarmsPropertyToTerraform(this._alarms.internalValue),
-      capacity_provider_strategy: cdktn.listMapper(tfServiceCapacityProviderStrategyPropertyToTerraform, true)(this._capacityProviderStrategy.internalValue),
-      deployment_circuit_breaker: tfServiceDeploymentCircuitBreakerPropertyToTerraform(this._deploymentCircuitBreaker.internalValue),
-      deployment_configuration: tfServiceDeploymentConfigurationPropertyToTerraform(this._deploymentConfiguration.internalValue),
-      deployment_controller: tfServiceDeploymentControllerPropertyToTerraform(this._deploymentController.internalValue),
-      load_balancer: cdktn.listMapper(tfServiceLoadBalancerPropertyToTerraform, true)(this._loadBalancer.internalValue),
-      network_configuration: tfServiceNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
-      ordered_placement_strategy: cdktn.listMapper(tfServiceOrderedPlacementStrategyPropertyToTerraform, true)(this._orderedPlacementStrategy.internalValue),
-      placement_constraints: cdktn.listMapper(tfServicePlacementConstraintsPropertyToTerraform, true)(this._placementConstraints.internalValue),
-      service_connect_configuration: tfServiceServiceConnectConfigurationPropertyToTerraform(this._serviceConnectConfiguration.internalValue),
-      service_registries: tfServiceServiceRegistriesPropertyToTerraform(this._serviceRegistries.internalValue),
-      timeouts: tfServiceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      volume_configuration: tfServiceVolumeConfigurationPropertyToTerraform(this._volumeConfiguration.internalValue),
-      vpc_lattice_configurations: cdktn.listMapper(tfServiceVpcLatticeConfigurationsPropertyToTerraform, true)(this._vpcLatticeConfigurations.internalValue),
+      alarms: awsServiceAlarmsPropertyToTerraform(this._alarms.internalValue),
+      capacity_provider_strategy: cdktn.listMapper(awsServiceCapacityProviderStrategyPropertyToTerraform, true)(this._capacityProviderStrategy.internalValue),
+      deployment_circuit_breaker: awsServiceDeploymentCircuitBreakerPropertyToTerraform(this._deploymentCircuitBreaker.internalValue),
+      deployment_configuration: awsServiceDeploymentConfigurationPropertyToTerraform(this._deploymentConfiguration.internalValue),
+      deployment_controller: awsServiceDeploymentControllerPropertyToTerraform(this._deploymentController.internalValue),
+      load_balancer: cdktn.listMapper(awsServiceLoadBalancerPropertyToTerraform, true)(this._loadBalancer.internalValue),
+      network_configuration: awsServiceNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
+      ordered_placement_strategy: cdktn.listMapper(awsServiceOrderedPlacementStrategyPropertyToTerraform, true)(this._orderedPlacementStrategy.internalValue),
+      placement_constraints: cdktn.listMapper(awsServicePlacementConstraintsPropertyToTerraform, true)(this._placementConstraints.internalValue),
+      service_connect_configuration: awsServiceServiceConnectConfigurationPropertyToTerraform(this._serviceConnectConfiguration.internalValue),
+      service_registries: awsServiceServiceRegistriesPropertyToTerraform(this._serviceRegistries.internalValue),
+      timeouts: awsServiceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      volume_configuration: awsServiceVolumeConfigurationPropertyToTerraform(this._volumeConfiguration.internalValue),
+      vpc_lattice_configurations: cdktn.listMapper(awsServiceVpcLatticeConfigurationsPropertyToTerraform, true)(this._vpcLatticeConfigurations.internalValue),
     };
   }
 
@@ -1092,88 +1092,88 @@ export class TfService extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       alarms: {
-        value: tfServiceAlarmsPropertyToHclTerraform(this._alarms.internalValue),
+        value: awsServiceAlarmsPropertyToHclTerraform(this._alarms.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.AlarmsPropertyList",
+        storageClassType: "AwsService.AlarmsPropertyList",
       },
       capacity_provider_strategy: {
-        value: cdktn.listMapperHcl(tfServiceCapacityProviderStrategyPropertyToHclTerraform, true)(this._capacityProviderStrategy.internalValue),
+        value: cdktn.listMapperHcl(awsServiceCapacityProviderStrategyPropertyToHclTerraform, true)(this._capacityProviderStrategy.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfService.CapacityProviderStrategyPropertyList",
+        storageClassType: "AwsService.CapacityProviderStrategyPropertyList",
       },
       deployment_circuit_breaker: {
-        value: tfServiceDeploymentCircuitBreakerPropertyToHclTerraform(this._deploymentCircuitBreaker.internalValue),
+        value: awsServiceDeploymentCircuitBreakerPropertyToHclTerraform(this._deploymentCircuitBreaker.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.DeploymentCircuitBreakerPropertyList",
+        storageClassType: "AwsService.DeploymentCircuitBreakerPropertyList",
       },
       deployment_configuration: {
-        value: tfServiceDeploymentConfigurationPropertyToHclTerraform(this._deploymentConfiguration.internalValue),
+        value: awsServiceDeploymentConfigurationPropertyToHclTerraform(this._deploymentConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.DeploymentConfigurationPropertyList",
+        storageClassType: "AwsService.DeploymentConfigurationPropertyList",
       },
       deployment_controller: {
-        value: tfServiceDeploymentControllerPropertyToHclTerraform(this._deploymentController.internalValue),
+        value: awsServiceDeploymentControllerPropertyToHclTerraform(this._deploymentController.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.DeploymentControllerPropertyList",
+        storageClassType: "AwsService.DeploymentControllerPropertyList",
       },
       load_balancer: {
-        value: cdktn.listMapperHcl(tfServiceLoadBalancerPropertyToHclTerraform, true)(this._loadBalancer.internalValue),
+        value: cdktn.listMapperHcl(awsServiceLoadBalancerPropertyToHclTerraform, true)(this._loadBalancer.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfService.LoadBalancerPropertyList",
+        storageClassType: "AwsService.LoadBalancerPropertyList",
       },
       network_configuration: {
-        value: tfServiceNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
+        value: awsServiceNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.NetworkConfigurationPropertyList",
+        storageClassType: "AwsService.NetworkConfigurationPropertyList",
       },
       ordered_placement_strategy: {
-        value: cdktn.listMapperHcl(tfServiceOrderedPlacementStrategyPropertyToHclTerraform, true)(this._orderedPlacementStrategy.internalValue),
+        value: cdktn.listMapperHcl(awsServiceOrderedPlacementStrategyPropertyToHclTerraform, true)(this._orderedPlacementStrategy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.OrderedPlacementStrategyPropertyList",
+        storageClassType: "AwsService.OrderedPlacementStrategyPropertyList",
       },
       placement_constraints: {
-        value: cdktn.listMapperHcl(tfServicePlacementConstraintsPropertyToHclTerraform, true)(this._placementConstraints.internalValue),
+        value: cdktn.listMapperHcl(awsServicePlacementConstraintsPropertyToHclTerraform, true)(this._placementConstraints.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfService.PlacementConstraintsPropertyList",
+        storageClassType: "AwsService.PlacementConstraintsPropertyList",
       },
       service_connect_configuration: {
-        value: tfServiceServiceConnectConfigurationPropertyToHclTerraform(this._serviceConnectConfiguration.internalValue),
+        value: awsServiceServiceConnectConfigurationPropertyToHclTerraform(this._serviceConnectConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.ServiceConnectConfigurationPropertyList",
+        storageClassType: "AwsService.ServiceConnectConfigurationPropertyList",
       },
       service_registries: {
-        value: tfServiceServiceRegistriesPropertyToHclTerraform(this._serviceRegistries.internalValue),
+        value: awsServiceServiceRegistriesPropertyToHclTerraform(this._serviceRegistries.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.ServiceRegistriesPropertyList",
+        storageClassType: "AwsService.ServiceRegistriesPropertyList",
       },
       timeouts: {
-        value: tfServiceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsServiceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfService.TimeoutsProperty",
+        storageClassType: "AwsService.TimeoutsProperty",
       },
       volume_configuration: {
-        value: tfServiceVolumeConfigurationPropertyToHclTerraform(this._volumeConfiguration.internalValue),
+        value: awsServiceVolumeConfigurationPropertyToHclTerraform(this._volumeConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.VolumeConfigurationPropertyList",
+        storageClassType: "AwsService.VolumeConfigurationPropertyList",
       },
       vpc_lattice_configurations: {
-        value: cdktn.listMapperHcl(tfServiceVpcLatticeConfigurationsPropertyToHclTerraform, true)(this._vpcLatticeConfigurations.internalValue),
+        value: cdktn.listMapperHcl(awsServiceVpcLatticeConfigurationsPropertyToHclTerraform, true)(this._vpcLatticeConfigurations.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfService.VpcLatticeConfigurationsPropertyList",
+        storageClassType: "AwsService.VpcLatticeConfigurationsPropertyList",
       },
     };
 
@@ -1182,7 +1182,7 @@ export class TfService extends cdktn.TerraformResource {
   }
 }
 
-export function tfServiceAlarmsPropertyToTerraform(struct?: TfService.AlarmsPropertyOutputReference | TfService.AlarmsProperty): any {
+export function awsServiceAlarmsPropertyToTerraform(struct?: AwsService.AlarmsPropertyOutputReference | AwsService.AlarmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1195,7 +1195,7 @@ export function tfServiceAlarmsPropertyToTerraform(struct?: TfService.AlarmsProp
 }
 
 
-export function tfServiceAlarmsPropertyToHclTerraform(struct?: TfService.AlarmsPropertyOutputReference | TfService.AlarmsProperty): any {
+export function awsServiceAlarmsPropertyToHclTerraform(struct?: AwsService.AlarmsPropertyOutputReference | AwsService.AlarmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1226,7 +1226,7 @@ export function tfServiceAlarmsPropertyToHclTerraform(struct?: TfService.AlarmsP
 }
 
 
-export function tfServiceCapacityProviderStrategyPropertyToTerraform(struct?: TfService.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function awsServiceCapacityProviderStrategyPropertyToTerraform(struct?: AwsService.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1239,7 +1239,7 @@ export function tfServiceCapacityProviderStrategyPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfServiceCapacityProviderStrategyPropertyToHclTerraform(struct?: TfService.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function awsServiceCapacityProviderStrategyPropertyToHclTerraform(struct?: AwsService.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1270,7 +1270,7 @@ export function tfServiceCapacityProviderStrategyPropertyToHclTerraform(struct?:
 }
 
 
-export function tfServiceDeploymentCircuitBreakerPropertyToTerraform(struct?: TfService.DeploymentCircuitBreakerPropertyOutputReference | TfService.DeploymentCircuitBreakerProperty): any {
+export function awsServiceDeploymentCircuitBreakerPropertyToTerraform(struct?: AwsService.DeploymentCircuitBreakerPropertyOutputReference | AwsService.DeploymentCircuitBreakerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1282,7 +1282,7 @@ export function tfServiceDeploymentCircuitBreakerPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfServiceDeploymentCircuitBreakerPropertyToHclTerraform(struct?: TfService.DeploymentCircuitBreakerPropertyOutputReference | TfService.DeploymentCircuitBreakerProperty): any {
+export function awsServiceDeploymentCircuitBreakerPropertyToHclTerraform(struct?: AwsService.DeploymentCircuitBreakerPropertyOutputReference | AwsService.DeploymentCircuitBreakerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1307,7 +1307,7 @@ export function tfServiceDeploymentCircuitBreakerPropertyToHclTerraform(struct?:
 }
 
 
-export function tfServiceCanaryConfigurationPropertyToTerraform(struct?: TfService.CanaryConfigurationPropertyOutputReference | TfService.CanaryConfigurationProperty): any {
+export function awsServiceCanaryConfigurationPropertyToTerraform(struct?: AwsService.CanaryConfigurationPropertyOutputReference | AwsService.CanaryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1319,7 +1319,7 @@ export function tfServiceCanaryConfigurationPropertyToTerraform(struct?: TfServi
 }
 
 
-export function tfServiceCanaryConfigurationPropertyToHclTerraform(struct?: TfService.CanaryConfigurationPropertyOutputReference | TfService.CanaryConfigurationProperty): any {
+export function awsServiceCanaryConfigurationPropertyToHclTerraform(struct?: AwsService.CanaryConfigurationPropertyOutputReference | AwsService.CanaryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1344,7 +1344,7 @@ export function tfServiceCanaryConfigurationPropertyToHclTerraform(struct?: TfSe
 }
 
 
-export function tfServiceLifecycleHookPropertyToTerraform(struct?: TfService.LifecycleHookProperty | cdktn.IResolvable): any {
+export function awsServiceLifecycleHookPropertyToTerraform(struct?: AwsService.LifecycleHookProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1358,7 +1358,7 @@ export function tfServiceLifecycleHookPropertyToTerraform(struct?: TfService.Lif
 }
 
 
-export function tfServiceLifecycleHookPropertyToHclTerraform(struct?: TfService.LifecycleHookProperty | cdktn.IResolvable): any {
+export function awsServiceLifecycleHookPropertyToHclTerraform(struct?: AwsService.LifecycleHookProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1395,7 +1395,7 @@ export function tfServiceLifecycleHookPropertyToHclTerraform(struct?: TfService.
 }
 
 
-export function tfServiceLinearConfigurationPropertyToTerraform(struct?: TfService.LinearConfigurationPropertyOutputReference | TfService.LinearConfigurationProperty): any {
+export function awsServiceLinearConfigurationPropertyToTerraform(struct?: AwsService.LinearConfigurationPropertyOutputReference | AwsService.LinearConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1407,7 +1407,7 @@ export function tfServiceLinearConfigurationPropertyToTerraform(struct?: TfServi
 }
 
 
-export function tfServiceLinearConfigurationPropertyToHclTerraform(struct?: TfService.LinearConfigurationPropertyOutputReference | TfService.LinearConfigurationProperty): any {
+export function awsServiceLinearConfigurationPropertyToHclTerraform(struct?: AwsService.LinearConfigurationPropertyOutputReference | AwsService.LinearConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1432,7 +1432,7 @@ export function tfServiceLinearConfigurationPropertyToHclTerraform(struct?: TfSe
 }
 
 
-export function tfServiceDeploymentConfigurationPropertyToTerraform(struct?: TfService.DeploymentConfigurationPropertyOutputReference | TfService.DeploymentConfigurationProperty): any {
+export function awsServiceDeploymentConfigurationPropertyToTerraform(struct?: AwsService.DeploymentConfigurationPropertyOutputReference | AwsService.DeploymentConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1440,14 +1440,14 @@ export function tfServiceDeploymentConfigurationPropertyToTerraform(struct?: TfS
   return {
     bake_time_in_minutes: cdktn.stringToTerraform(struct!.bakeTimeInMinutes),
     strategy: cdktn.stringToTerraform(struct!.strategy),
-    canary_configuration: tfServiceCanaryConfigurationPropertyToTerraform(struct!.canaryConfiguration),
-    lifecycle_hook: cdktn.listMapper(tfServiceLifecycleHookPropertyToTerraform, true)(struct!.lifecycleHook),
-    linear_configuration: tfServiceLinearConfigurationPropertyToTerraform(struct!.linearConfiguration),
+    canary_configuration: awsServiceCanaryConfigurationPropertyToTerraform(struct!.canaryConfiguration),
+    lifecycle_hook: cdktn.listMapper(awsServiceLifecycleHookPropertyToTerraform, true)(struct!.lifecycleHook),
+    linear_configuration: awsServiceLinearConfigurationPropertyToTerraform(struct!.linearConfiguration),
   }
 }
 
 
-export function tfServiceDeploymentConfigurationPropertyToHclTerraform(struct?: TfService.DeploymentConfigurationPropertyOutputReference | TfService.DeploymentConfigurationProperty): any {
+export function awsServiceDeploymentConfigurationPropertyToHclTerraform(struct?: AwsService.DeploymentConfigurationPropertyOutputReference | AwsService.DeploymentConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1466,19 +1466,19 @@ export function tfServiceDeploymentConfigurationPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     canary_configuration: {
-      value: tfServiceCanaryConfigurationPropertyToHclTerraform(struct!.canaryConfiguration),
+      value: awsServiceCanaryConfigurationPropertyToHclTerraform(struct!.canaryConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CanaryConfigurationPropertyList",
     },
     lifecycle_hook: {
-      value: cdktn.listMapperHcl(tfServiceLifecycleHookPropertyToHclTerraform, true)(struct!.lifecycleHook),
+      value: cdktn.listMapperHcl(awsServiceLifecycleHookPropertyToHclTerraform, true)(struct!.lifecycleHook),
       isBlock: true,
       type: "set",
       storageClassType: "LifecycleHookPropertyList",
     },
     linear_configuration: {
-      value: tfServiceLinearConfigurationPropertyToHclTerraform(struct!.linearConfiguration),
+      value: awsServiceLinearConfigurationPropertyToHclTerraform(struct!.linearConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "LinearConfigurationPropertyList",
@@ -1490,7 +1490,7 @@ export function tfServiceDeploymentConfigurationPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfServiceDeploymentControllerPropertyToTerraform(struct?: TfService.DeploymentControllerPropertyOutputReference | TfService.DeploymentControllerProperty): any {
+export function awsServiceDeploymentControllerPropertyToTerraform(struct?: AwsService.DeploymentControllerPropertyOutputReference | AwsService.DeploymentControllerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1501,7 +1501,7 @@ export function tfServiceDeploymentControllerPropertyToTerraform(struct?: TfServ
 }
 
 
-export function tfServiceDeploymentControllerPropertyToHclTerraform(struct?: TfService.DeploymentControllerPropertyOutputReference | TfService.DeploymentControllerProperty): any {
+export function awsServiceDeploymentControllerPropertyToHclTerraform(struct?: AwsService.DeploymentControllerPropertyOutputReference | AwsService.DeploymentControllerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1520,7 +1520,7 @@ export function tfServiceDeploymentControllerPropertyToHclTerraform(struct?: TfS
 }
 
 
-export function tfServiceAdvancedConfigurationPropertyToTerraform(struct?: TfService.AdvancedConfigurationPropertyOutputReference | TfService.AdvancedConfigurationProperty): any {
+export function awsServiceAdvancedConfigurationPropertyToTerraform(struct?: AwsService.AdvancedConfigurationPropertyOutputReference | AwsService.AdvancedConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1534,7 +1534,7 @@ export function tfServiceAdvancedConfigurationPropertyToTerraform(struct?: TfSer
 }
 
 
-export function tfServiceAdvancedConfigurationPropertyToHclTerraform(struct?: TfService.AdvancedConfigurationPropertyOutputReference | TfService.AdvancedConfigurationProperty): any {
+export function awsServiceAdvancedConfigurationPropertyToHclTerraform(struct?: AwsService.AdvancedConfigurationPropertyOutputReference | AwsService.AdvancedConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1571,7 +1571,7 @@ export function tfServiceAdvancedConfigurationPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfServiceLoadBalancerPropertyToTerraform(struct?: TfService.LoadBalancerProperty | cdktn.IResolvable): any {
+export function awsServiceLoadBalancerPropertyToTerraform(struct?: AwsService.LoadBalancerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1581,12 +1581,12 @@ export function tfServiceLoadBalancerPropertyToTerraform(struct?: TfService.Load
     container_port: cdktn.numberToTerraform(struct!.containerPort),
     elb_name: cdktn.stringToTerraform(struct!.elbName),
     target_group_arn: cdktn.stringToTerraform(struct!.targetGroupArn),
-    advanced_configuration: tfServiceAdvancedConfigurationPropertyToTerraform(struct!.advancedConfiguration),
+    advanced_configuration: awsServiceAdvancedConfigurationPropertyToTerraform(struct!.advancedConfiguration),
   }
 }
 
 
-export function tfServiceLoadBalancerPropertyToHclTerraform(struct?: TfService.LoadBalancerProperty | cdktn.IResolvable): any {
+export function awsServiceLoadBalancerPropertyToHclTerraform(struct?: AwsService.LoadBalancerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1617,7 +1617,7 @@ export function tfServiceLoadBalancerPropertyToHclTerraform(struct?: TfService.L
       storageClassType: "string",
     },
     advanced_configuration: {
-      value: tfServiceAdvancedConfigurationPropertyToHclTerraform(struct!.advancedConfiguration),
+      value: awsServiceAdvancedConfigurationPropertyToHclTerraform(struct!.advancedConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AdvancedConfigurationPropertyList",
@@ -1629,7 +1629,7 @@ export function tfServiceLoadBalancerPropertyToHclTerraform(struct?: TfService.L
 }
 
 
-export function tfServiceNetworkConfigurationPropertyToTerraform(struct?: TfService.NetworkConfigurationPropertyOutputReference | TfService.NetworkConfigurationProperty): any {
+export function awsServiceNetworkConfigurationPropertyToTerraform(struct?: AwsService.NetworkConfigurationPropertyOutputReference | AwsService.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1642,7 +1642,7 @@ export function tfServiceNetworkConfigurationPropertyToTerraform(struct?: TfServ
 }
 
 
-export function tfServiceNetworkConfigurationPropertyToHclTerraform(struct?: TfService.NetworkConfigurationPropertyOutputReference | TfService.NetworkConfigurationProperty): any {
+export function awsServiceNetworkConfigurationPropertyToHclTerraform(struct?: AwsService.NetworkConfigurationPropertyOutputReference | AwsService.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1673,7 +1673,7 @@ export function tfServiceNetworkConfigurationPropertyToHclTerraform(struct?: TfS
 }
 
 
-export function tfServiceOrderedPlacementStrategyPropertyToTerraform(struct?: TfService.OrderedPlacementStrategyProperty | cdktn.IResolvable): any {
+export function awsServiceOrderedPlacementStrategyPropertyToTerraform(struct?: AwsService.OrderedPlacementStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1685,7 +1685,7 @@ export function tfServiceOrderedPlacementStrategyPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfServiceOrderedPlacementStrategyPropertyToHclTerraform(struct?: TfService.OrderedPlacementStrategyProperty | cdktn.IResolvable): any {
+export function awsServiceOrderedPlacementStrategyPropertyToHclTerraform(struct?: AwsService.OrderedPlacementStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1710,7 +1710,7 @@ export function tfServiceOrderedPlacementStrategyPropertyToHclTerraform(struct?:
 }
 
 
-export function tfServicePlacementConstraintsPropertyToTerraform(struct?: TfService.PlacementConstraintsProperty | cdktn.IResolvable): any {
+export function awsServicePlacementConstraintsPropertyToTerraform(struct?: AwsService.PlacementConstraintsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1722,7 +1722,7 @@ export function tfServicePlacementConstraintsPropertyToTerraform(struct?: TfServ
 }
 
 
-export function tfServicePlacementConstraintsPropertyToHclTerraform(struct?: TfService.PlacementConstraintsProperty | cdktn.IResolvable): any {
+export function awsServicePlacementConstraintsPropertyToHclTerraform(struct?: AwsService.PlacementConstraintsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1747,7 +1747,7 @@ export function tfServicePlacementConstraintsPropertyToHclTerraform(struct?: TfS
 }
 
 
-export function tfServiceAccessLogConfigurationPropertyToTerraform(struct?: TfService.AccessLogConfigurationPropertyOutputReference | TfService.AccessLogConfigurationProperty): any {
+export function awsServiceAccessLogConfigurationPropertyToTerraform(struct?: AwsService.AccessLogConfigurationPropertyOutputReference | AwsService.AccessLogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1759,7 +1759,7 @@ export function tfServiceAccessLogConfigurationPropertyToTerraform(struct?: TfSe
 }
 
 
-export function tfServiceAccessLogConfigurationPropertyToHclTerraform(struct?: TfService.AccessLogConfigurationPropertyOutputReference | TfService.AccessLogConfigurationProperty): any {
+export function awsServiceAccessLogConfigurationPropertyToHclTerraform(struct?: AwsService.AccessLogConfigurationPropertyOutputReference | AwsService.AccessLogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1784,7 +1784,7 @@ export function tfServiceAccessLogConfigurationPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfServiceSecretOptionPropertyToTerraform(struct?: TfService.SecretOptionProperty | cdktn.IResolvable): any {
+export function awsServiceSecretOptionPropertyToTerraform(struct?: AwsService.SecretOptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1796,7 +1796,7 @@ export function tfServiceSecretOptionPropertyToTerraform(struct?: TfService.Secr
 }
 
 
-export function tfServiceSecretOptionPropertyToHclTerraform(struct?: TfService.SecretOptionProperty | cdktn.IResolvable): any {
+export function awsServiceSecretOptionPropertyToHclTerraform(struct?: AwsService.SecretOptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1821,7 +1821,7 @@ export function tfServiceSecretOptionPropertyToHclTerraform(struct?: TfService.S
 }
 
 
-export function tfServiceLogConfigurationPropertyToTerraform(struct?: TfService.LogConfigurationPropertyOutputReference | TfService.LogConfigurationProperty): any {
+export function awsServiceLogConfigurationPropertyToTerraform(struct?: AwsService.LogConfigurationPropertyOutputReference | AwsService.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1829,12 +1829,12 @@ export function tfServiceLogConfigurationPropertyToTerraform(struct?: TfService.
   return {
     log_driver: cdktn.stringToTerraform(struct!.logDriver),
     options: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.options),
-    secret_option: cdktn.listMapper(tfServiceSecretOptionPropertyToTerraform, true)(struct!.secretOption),
+    secret_option: cdktn.listMapper(awsServiceSecretOptionPropertyToTerraform, true)(struct!.secretOption),
   }
 }
 
 
-export function tfServiceLogConfigurationPropertyToHclTerraform(struct?: TfService.LogConfigurationPropertyOutputReference | TfService.LogConfigurationProperty): any {
+export function awsServiceLogConfigurationPropertyToHclTerraform(struct?: AwsService.LogConfigurationPropertyOutputReference | AwsService.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1853,7 +1853,7 @@ export function tfServiceLogConfigurationPropertyToHclTerraform(struct?: TfServi
       storageClassType: "stringMap",
     },
     secret_option: {
-      value: cdktn.listMapperHcl(tfServiceSecretOptionPropertyToHclTerraform, true)(struct!.secretOption),
+      value: cdktn.listMapperHcl(awsServiceSecretOptionPropertyToHclTerraform, true)(struct!.secretOption),
       isBlock: true,
       type: "list",
       storageClassType: "SecretOptionPropertyList",
@@ -1865,7 +1865,7 @@ export function tfServiceLogConfigurationPropertyToHclTerraform(struct?: TfServi
 }
 
 
-export function tfServiceValuePropertyToTerraform(struct?: TfService.ValuePropertyOutputReference | TfService.ValueProperty): any {
+export function awsServiceValuePropertyToTerraform(struct?: AwsService.ValuePropertyOutputReference | AwsService.ValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1876,7 +1876,7 @@ export function tfServiceValuePropertyToTerraform(struct?: TfService.ValueProper
 }
 
 
-export function tfServiceValuePropertyToHclTerraform(struct?: TfService.ValuePropertyOutputReference | TfService.ValueProperty): any {
+export function awsServiceValuePropertyToHclTerraform(struct?: AwsService.ValuePropertyOutputReference | AwsService.ValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1895,19 +1895,19 @@ export function tfServiceValuePropertyToHclTerraform(struct?: TfService.ValuePro
 }
 
 
-export function tfServiceHeaderPropertyToTerraform(struct?: TfService.HeaderPropertyOutputReference | TfService.HeaderProperty): any {
+export function awsServiceHeaderPropertyToTerraform(struct?: AwsService.HeaderPropertyOutputReference | AwsService.HeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    value: tfServiceValuePropertyToTerraform(struct!.value),
+    value: awsServiceValuePropertyToTerraform(struct!.value),
   }
 }
 
 
-export function tfServiceHeaderPropertyToHclTerraform(struct?: TfService.HeaderPropertyOutputReference | TfService.HeaderProperty): any {
+export function awsServiceHeaderPropertyToHclTerraform(struct?: AwsService.HeaderPropertyOutputReference | AwsService.HeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1920,7 +1920,7 @@ export function tfServiceHeaderPropertyToHclTerraform(struct?: TfService.HeaderP
       storageClassType: "string",
     },
     value: {
-      value: tfServiceValuePropertyToHclTerraform(struct!.value),
+      value: awsServiceValuePropertyToHclTerraform(struct!.value),
       isBlock: true,
       type: "list",
       storageClassType: "ValuePropertyList",
@@ -1932,25 +1932,25 @@ export function tfServiceHeaderPropertyToHclTerraform(struct?: TfService.HeaderP
 }
 
 
-export function tfServiceTestTrafficRulesPropertyToTerraform(struct?: TfService.TestTrafficRulesProperty | cdktn.IResolvable): any {
+export function awsServiceTestTrafficRulesPropertyToTerraform(struct?: AwsService.TestTrafficRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    header: tfServiceHeaderPropertyToTerraform(struct!.header),
+    header: awsServiceHeaderPropertyToTerraform(struct!.header),
   }
 }
 
 
-export function tfServiceTestTrafficRulesPropertyToHclTerraform(struct?: TfService.TestTrafficRulesProperty | cdktn.IResolvable): any {
+export function awsServiceTestTrafficRulesPropertyToHclTerraform(struct?: AwsService.TestTrafficRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     header: {
-      value: tfServiceHeaderPropertyToHclTerraform(struct!.header),
+      value: awsServiceHeaderPropertyToHclTerraform(struct!.header),
       isBlock: true,
       type: "list",
       storageClassType: "HeaderPropertyList",
@@ -1962,7 +1962,7 @@ export function tfServiceTestTrafficRulesPropertyToHclTerraform(struct?: TfServi
 }
 
 
-export function tfServiceClientAliasPropertyToTerraform(struct?: TfService.ClientAliasPropertyOutputReference | TfService.ClientAliasProperty): any {
+export function awsServiceClientAliasPropertyToTerraform(struct?: AwsService.ClientAliasPropertyOutputReference | AwsService.ClientAliasProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1970,12 +1970,12 @@ export function tfServiceClientAliasPropertyToTerraform(struct?: TfService.Clien
   return {
     dns_name: cdktn.stringToTerraform(struct!.dnsName),
     port: cdktn.numberToTerraform(struct!.port),
-    test_traffic_rules: cdktn.listMapper(tfServiceTestTrafficRulesPropertyToTerraform, true)(struct!.testTrafficRules),
+    test_traffic_rules: cdktn.listMapper(awsServiceTestTrafficRulesPropertyToTerraform, true)(struct!.testTrafficRules),
   }
 }
 
 
-export function tfServiceClientAliasPropertyToHclTerraform(struct?: TfService.ClientAliasPropertyOutputReference | TfService.ClientAliasProperty): any {
+export function awsServiceClientAliasPropertyToHclTerraform(struct?: AwsService.ClientAliasPropertyOutputReference | AwsService.ClientAliasProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1994,7 +1994,7 @@ export function tfServiceClientAliasPropertyToHclTerraform(struct?: TfService.Cl
       storageClassType: "number",
     },
     test_traffic_rules: {
-      value: cdktn.listMapperHcl(tfServiceTestTrafficRulesPropertyToHclTerraform, true)(struct!.testTrafficRules),
+      value: cdktn.listMapperHcl(awsServiceTestTrafficRulesPropertyToHclTerraform, true)(struct!.testTrafficRules),
       isBlock: true,
       type: "list",
       storageClassType: "TestTrafficRulesPropertyList",
@@ -2006,7 +2006,7 @@ export function tfServiceClientAliasPropertyToHclTerraform(struct?: TfService.Cl
 }
 
 
-export function tfServiceTimeoutPropertyToTerraform(struct?: TfService.TimeoutPropertyOutputReference | TfService.TimeoutProperty): any {
+export function awsServiceTimeoutPropertyToTerraform(struct?: AwsService.TimeoutPropertyOutputReference | AwsService.TimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2018,7 +2018,7 @@ export function tfServiceTimeoutPropertyToTerraform(struct?: TfService.TimeoutPr
 }
 
 
-export function tfServiceTimeoutPropertyToHclTerraform(struct?: TfService.TimeoutPropertyOutputReference | TfService.TimeoutProperty): any {
+export function awsServiceTimeoutPropertyToHclTerraform(struct?: AwsService.TimeoutPropertyOutputReference | AwsService.TimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2043,7 +2043,7 @@ export function tfServiceTimeoutPropertyToHclTerraform(struct?: TfService.Timeou
 }
 
 
-export function tfServiceIssuerCertAuthorityPropertyToTerraform(struct?: TfService.IssuerCertAuthorityPropertyOutputReference | TfService.IssuerCertAuthorityProperty): any {
+export function awsServiceIssuerCertAuthorityPropertyToTerraform(struct?: AwsService.IssuerCertAuthorityPropertyOutputReference | AwsService.IssuerCertAuthorityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2054,7 +2054,7 @@ export function tfServiceIssuerCertAuthorityPropertyToTerraform(struct?: TfServi
 }
 
 
-export function tfServiceIssuerCertAuthorityPropertyToHclTerraform(struct?: TfService.IssuerCertAuthorityPropertyOutputReference | TfService.IssuerCertAuthorityProperty): any {
+export function awsServiceIssuerCertAuthorityPropertyToHclTerraform(struct?: AwsService.IssuerCertAuthorityPropertyOutputReference | AwsService.IssuerCertAuthorityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2073,7 +2073,7 @@ export function tfServiceIssuerCertAuthorityPropertyToHclTerraform(struct?: TfSe
 }
 
 
-export function tfServiceTlsPropertyToTerraform(struct?: TfService.TlsPropertyOutputReference | TfService.TlsProperty): any {
+export function awsServiceTlsPropertyToTerraform(struct?: AwsService.TlsPropertyOutputReference | AwsService.TlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2081,12 +2081,12 @@ export function tfServiceTlsPropertyToTerraform(struct?: TfService.TlsPropertyOu
   return {
     kms_key: cdktn.stringToTerraform(struct!.kmsKey),
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    issuer_cert_authority: tfServiceIssuerCertAuthorityPropertyToTerraform(struct!.issuerCertAuthority),
+    issuer_cert_authority: awsServiceIssuerCertAuthorityPropertyToTerraform(struct!.issuerCertAuthority),
   }
 }
 
 
-export function tfServiceTlsPropertyToHclTerraform(struct?: TfService.TlsPropertyOutputReference | TfService.TlsProperty): any {
+export function awsServiceTlsPropertyToHclTerraform(struct?: AwsService.TlsPropertyOutputReference | AwsService.TlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2105,7 +2105,7 @@ export function tfServiceTlsPropertyToHclTerraform(struct?: TfService.TlsPropert
       storageClassType: "string",
     },
     issuer_cert_authority: {
-      value: tfServiceIssuerCertAuthorityPropertyToHclTerraform(struct!.issuerCertAuthority),
+      value: awsServiceIssuerCertAuthorityPropertyToHclTerraform(struct!.issuerCertAuthority),
       isBlock: true,
       type: "list",
       storageClassType: "IssuerCertAuthorityPropertyList",
@@ -2117,7 +2117,7 @@ export function tfServiceTlsPropertyToHclTerraform(struct?: TfService.TlsPropert
 }
 
 
-export function tfServiceServicePropertyToTerraform(struct?: TfService.ServiceProperty | cdktn.IResolvable): any {
+export function awsServiceServicePropertyToTerraform(struct?: AwsService.ServiceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2126,14 +2126,14 @@ export function tfServiceServicePropertyToTerraform(struct?: TfService.ServicePr
     discovery_name: cdktn.stringToTerraform(struct!.discoveryName),
     ingress_port_override: cdktn.numberToTerraform(struct!.ingressPortOverride),
     port_name: cdktn.stringToTerraform(struct!.portName),
-    client_alias: tfServiceClientAliasPropertyToTerraform(struct!.clientAlias),
-    timeout: tfServiceTimeoutPropertyToTerraform(struct!.timeout),
-    tls: tfServiceTlsPropertyToTerraform(struct!.tls),
+    client_alias: awsServiceClientAliasPropertyToTerraform(struct!.clientAlias),
+    timeout: awsServiceTimeoutPropertyToTerraform(struct!.timeout),
+    tls: awsServiceTlsPropertyToTerraform(struct!.tls),
   }
 }
 
 
-export function tfServiceServicePropertyToHclTerraform(struct?: TfService.ServiceProperty | cdktn.IResolvable): any {
+export function awsServiceServicePropertyToHclTerraform(struct?: AwsService.ServiceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2158,19 +2158,19 @@ export function tfServiceServicePropertyToHclTerraform(struct?: TfService.Servic
       storageClassType: "string",
     },
     client_alias: {
-      value: tfServiceClientAliasPropertyToHclTerraform(struct!.clientAlias),
+      value: awsServiceClientAliasPropertyToHclTerraform(struct!.clientAlias),
       isBlock: true,
       type: "list",
       storageClassType: "ClientAliasPropertyList",
     },
     timeout: {
-      value: tfServiceTimeoutPropertyToHclTerraform(struct!.timeout),
+      value: awsServiceTimeoutPropertyToHclTerraform(struct!.timeout),
       isBlock: true,
       type: "list",
       storageClassType: "TimeoutPropertyList",
     },
     tls: {
-      value: tfServiceTlsPropertyToHclTerraform(struct!.tls),
+      value: awsServiceTlsPropertyToHclTerraform(struct!.tls),
       isBlock: true,
       type: "list",
       storageClassType: "TlsPropertyList",
@@ -2182,7 +2182,7 @@ export function tfServiceServicePropertyToHclTerraform(struct?: TfService.Servic
 }
 
 
-export function tfServiceServiceConnectConfigurationPropertyToTerraform(struct?: TfService.ServiceConnectConfigurationPropertyOutputReference | TfService.ServiceConnectConfigurationProperty): any {
+export function awsServiceServiceConnectConfigurationPropertyToTerraform(struct?: AwsService.ServiceConnectConfigurationPropertyOutputReference | AwsService.ServiceConnectConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2190,14 +2190,14 @@ export function tfServiceServiceConnectConfigurationPropertyToTerraform(struct?:
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
     namespace: cdktn.stringToTerraform(struct!.namespace),
-    access_log_configuration: tfServiceAccessLogConfigurationPropertyToTerraform(struct!.accessLogConfiguration),
-    log_configuration: tfServiceLogConfigurationPropertyToTerraform(struct!.logConfiguration),
-    service: cdktn.listMapper(tfServiceServicePropertyToTerraform, true)(struct!.service),
+    access_log_configuration: awsServiceAccessLogConfigurationPropertyToTerraform(struct!.accessLogConfiguration),
+    log_configuration: awsServiceLogConfigurationPropertyToTerraform(struct!.logConfiguration),
+    service: cdktn.listMapper(awsServiceServicePropertyToTerraform, true)(struct!.service),
   }
 }
 
 
-export function tfServiceServiceConnectConfigurationPropertyToHclTerraform(struct?: TfService.ServiceConnectConfigurationPropertyOutputReference | TfService.ServiceConnectConfigurationProperty): any {
+export function awsServiceServiceConnectConfigurationPropertyToHclTerraform(struct?: AwsService.ServiceConnectConfigurationPropertyOutputReference | AwsService.ServiceConnectConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2216,19 +2216,19 @@ export function tfServiceServiceConnectConfigurationPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     access_log_configuration: {
-      value: tfServiceAccessLogConfigurationPropertyToHclTerraform(struct!.accessLogConfiguration),
+      value: awsServiceAccessLogConfigurationPropertyToHclTerraform(struct!.accessLogConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AccessLogConfigurationPropertyList",
     },
     log_configuration: {
-      value: tfServiceLogConfigurationPropertyToHclTerraform(struct!.logConfiguration),
+      value: awsServiceLogConfigurationPropertyToHclTerraform(struct!.logConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "LogConfigurationPropertyList",
     },
     service: {
-      value: cdktn.listMapperHcl(tfServiceServicePropertyToHclTerraform, true)(struct!.service),
+      value: cdktn.listMapperHcl(awsServiceServicePropertyToHclTerraform, true)(struct!.service),
       isBlock: true,
       type: "list",
       storageClassType: "ServicePropertyList",
@@ -2240,7 +2240,7 @@ export function tfServiceServiceConnectConfigurationPropertyToHclTerraform(struc
 }
 
 
-export function tfServiceServiceRegistriesPropertyToTerraform(struct?: TfService.ServiceRegistriesPropertyOutputReference | TfService.ServiceRegistriesProperty): any {
+export function awsServiceServiceRegistriesPropertyToTerraform(struct?: AwsService.ServiceRegistriesPropertyOutputReference | AwsService.ServiceRegistriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2254,7 +2254,7 @@ export function tfServiceServiceRegistriesPropertyToTerraform(struct?: TfService
 }
 
 
-export function tfServiceServiceRegistriesPropertyToHclTerraform(struct?: TfService.ServiceRegistriesPropertyOutputReference | TfService.ServiceRegistriesProperty): any {
+export function awsServiceServiceRegistriesPropertyToHclTerraform(struct?: AwsService.ServiceRegistriesPropertyOutputReference | AwsService.ServiceRegistriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2291,7 +2291,7 @@ export function tfServiceServiceRegistriesPropertyToHclTerraform(struct?: TfServ
 }
 
 
-export function tfServiceTimeoutsPropertyToTerraform(struct?: TfService.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsServiceTimeoutsPropertyToTerraform(struct?: AwsService.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2304,7 +2304,7 @@ export function tfServiceTimeoutsPropertyToTerraform(struct?: TfService.Timeouts
 }
 
 
-export function tfServiceTimeoutsPropertyToHclTerraform(struct?: TfService.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsServiceTimeoutsPropertyToHclTerraform(struct?: AwsService.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2335,7 +2335,7 @@ export function tfServiceTimeoutsPropertyToHclTerraform(struct?: TfService.Timeo
 }
 
 
-export function tfServiceTagSpecificationsPropertyToTerraform(struct?: TfService.TagSpecificationsProperty | cdktn.IResolvable): any {
+export function awsServiceTagSpecificationsPropertyToTerraform(struct?: AwsService.TagSpecificationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2348,7 +2348,7 @@ export function tfServiceTagSpecificationsPropertyToTerraform(struct?: TfService
 }
 
 
-export function tfServiceTagSpecificationsPropertyToHclTerraform(struct?: TfService.TagSpecificationsProperty | cdktn.IResolvable): any {
+export function awsServiceTagSpecificationsPropertyToHclTerraform(struct?: AwsService.TagSpecificationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2379,7 +2379,7 @@ export function tfServiceTagSpecificationsPropertyToHclTerraform(struct?: TfServ
 }
 
 
-export function tfServiceManagedEbsVolumePropertyToTerraform(struct?: TfService.ManagedEbsVolumePropertyOutputReference | TfService.ManagedEbsVolumeProperty): any {
+export function awsServiceManagedEbsVolumePropertyToTerraform(struct?: AwsService.ManagedEbsVolumePropertyOutputReference | AwsService.ManagedEbsVolumeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2395,12 +2395,12 @@ export function tfServiceManagedEbsVolumePropertyToTerraform(struct?: TfService.
     throughput: cdktn.numberToTerraform(struct!.throughput),
     volume_initialization_rate: cdktn.numberToTerraform(struct!.volumeInitializationRate),
     volume_type: cdktn.stringToTerraform(struct!.volumeType),
-    tag_specifications: cdktn.listMapper(tfServiceTagSpecificationsPropertyToTerraform, true)(struct!.tagSpecifications),
+    tag_specifications: cdktn.listMapper(awsServiceTagSpecificationsPropertyToTerraform, true)(struct!.tagSpecifications),
   }
 }
 
 
-export function tfServiceManagedEbsVolumePropertyToHclTerraform(struct?: TfService.ManagedEbsVolumePropertyOutputReference | TfService.ManagedEbsVolumeProperty): any {
+export function awsServiceManagedEbsVolumePropertyToHclTerraform(struct?: AwsService.ManagedEbsVolumePropertyOutputReference | AwsService.ManagedEbsVolumeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2467,7 +2467,7 @@ export function tfServiceManagedEbsVolumePropertyToHclTerraform(struct?: TfServi
       storageClassType: "string",
     },
     tag_specifications: {
-      value: cdktn.listMapperHcl(tfServiceTagSpecificationsPropertyToHclTerraform, true)(struct!.tagSpecifications),
+      value: cdktn.listMapperHcl(awsServiceTagSpecificationsPropertyToHclTerraform, true)(struct!.tagSpecifications),
       isBlock: true,
       type: "list",
       storageClassType: "TagSpecificationsPropertyList",
@@ -2479,19 +2479,19 @@ export function tfServiceManagedEbsVolumePropertyToHclTerraform(struct?: TfServi
 }
 
 
-export function tfServiceVolumeConfigurationPropertyToTerraform(struct?: TfService.VolumeConfigurationPropertyOutputReference | TfService.VolumeConfigurationProperty): any {
+export function awsServiceVolumeConfigurationPropertyToTerraform(struct?: AwsService.VolumeConfigurationPropertyOutputReference | AwsService.VolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    managed_ebs_volume: tfServiceManagedEbsVolumePropertyToTerraform(struct!.managedEbsVolume),
+    managed_ebs_volume: awsServiceManagedEbsVolumePropertyToTerraform(struct!.managedEbsVolume),
   }
 }
 
 
-export function tfServiceVolumeConfigurationPropertyToHclTerraform(struct?: TfService.VolumeConfigurationPropertyOutputReference | TfService.VolumeConfigurationProperty): any {
+export function awsServiceVolumeConfigurationPropertyToHclTerraform(struct?: AwsService.VolumeConfigurationPropertyOutputReference | AwsService.VolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2504,7 +2504,7 @@ export function tfServiceVolumeConfigurationPropertyToHclTerraform(struct?: TfSe
       storageClassType: "string",
     },
     managed_ebs_volume: {
-      value: tfServiceManagedEbsVolumePropertyToHclTerraform(struct!.managedEbsVolume),
+      value: awsServiceManagedEbsVolumePropertyToHclTerraform(struct!.managedEbsVolume),
       isBlock: true,
       type: "list",
       storageClassType: "ManagedEbsVolumePropertyList",
@@ -2516,7 +2516,7 @@ export function tfServiceVolumeConfigurationPropertyToHclTerraform(struct?: TfSe
 }
 
 
-export function tfServiceVpcLatticeConfigurationsPropertyToTerraform(struct?: TfService.VpcLatticeConfigurationsProperty | cdktn.IResolvable): any {
+export function awsServiceVpcLatticeConfigurationsPropertyToTerraform(struct?: AwsService.VpcLatticeConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2529,7 +2529,7 @@ export function tfServiceVpcLatticeConfigurationsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfServiceVpcLatticeConfigurationsPropertyToHclTerraform(struct?: TfService.VpcLatticeConfigurationsProperty | cdktn.IResolvable): any {
+export function awsServiceVpcLatticeConfigurationsPropertyToHclTerraform(struct?: AwsService.VpcLatticeConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2560,18 +2560,18 @@ export function tfServiceVpcLatticeConfigurationsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfService {
+export namespace AwsService {
 export interface AlarmsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#alarm_names TfService#alarm_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#alarm_names AwsService#alarm_names}
   */
   readonly alarmNames: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#enable TfService#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#enable AwsService#enable}
   */
   readonly enable: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#rollback TfService#rollback}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#rollback AwsService#rollback}
   */
   readonly rollback: boolean | cdktn.IResolvable;
 }
@@ -2660,15 +2660,15 @@ export class AlarmsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CapacityProviderStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#base TfService#base}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#base AwsService#base}
   */
   readonly base?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#capacity_provider TfService#capacity_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#capacity_provider AwsService#capacity_provider}
   */
   readonly capacityProvider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#weight TfService#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#weight AwsService#weight}
   */
   readonly weight?: number;
 }
@@ -2795,11 +2795,11 @@ export class CapacityProviderStrategyPropertyList extends cdktn.ComplexList {
 }
 export interface DeploymentCircuitBreakerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#enable TfService#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#enable AwsService#enable}
   */
   readonly enable: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#rollback TfService#rollback}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#rollback AwsService#rollback}
   */
   readonly rollback: boolean | cdktn.IResolvable;
 }
@@ -2869,11 +2869,11 @@ export class DeploymentCircuitBreakerPropertyOutputReference extends cdktn.Compl
 }
 export interface CanaryConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#canary_bake_time_in_minutes TfService#canary_bake_time_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#canary_bake_time_in_minutes AwsService#canary_bake_time_in_minutes}
   */
   readonly canaryBakeTimeInMinutes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#canary_percent TfService#canary_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#canary_percent AwsService#canary_percent}
   */
   readonly canaryPercent?: number;
 }
@@ -2949,19 +2949,19 @@ export class CanaryConfigurationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface LifecycleHookProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#hook_details TfService#hook_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#hook_details AwsService#hook_details}
   */
   readonly hookDetails?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#hook_target_arn TfService#hook_target_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#hook_target_arn AwsService#hook_target_arn}
   */
   readonly hookTargetArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#lifecycle_stages TfService#lifecycle_stages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#lifecycle_stages AwsService#lifecycle_stages}
   */
   readonly lifecycleStages: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#role_arn TfService#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#role_arn AwsService#role_arn}
   */
   readonly roleArn: string;
 }
@@ -3104,11 +3104,11 @@ export class LifecycleHookPropertyList extends cdktn.ComplexList {
 }
 export interface LinearConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#step_bake_time_in_minutes TfService#step_bake_time_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#step_bake_time_in_minutes AwsService#step_bake_time_in_minutes}
   */
   readonly stepBakeTimeInMinutes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#step_percent TfService#step_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#step_percent AwsService#step_percent}
   */
   readonly stepPercent?: number;
 }
@@ -3184,29 +3184,29 @@ export class LinearConfigurationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface DeploymentConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#bake_time_in_minutes TfService#bake_time_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#bake_time_in_minutes AwsService#bake_time_in_minutes}
   */
   readonly bakeTimeInMinutes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#strategy TfService#strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#strategy AwsService#strategy}
   */
   readonly strategy?: string;
   /**
   * canary_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#canary_configuration TfService#canary_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#canary_configuration AwsService#canary_configuration}
   */
   readonly canaryConfiguration?: CanaryConfigurationProperty;
   /**
   * lifecycle_hook block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#lifecycle_hook TfService#lifecycle_hook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#lifecycle_hook AwsService#lifecycle_hook}
   */
   readonly lifecycleHook?: LifecycleHookProperty[] | cdktn.IResolvable;
   /**
   * linear_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#linear_configuration TfService#linear_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#linear_configuration AwsService#linear_configuration}
   */
   readonly linearConfiguration?: LinearConfigurationProperty;
 }
@@ -3348,7 +3348,7 @@ export class DeploymentConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface DeploymentControllerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#type TfService#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#type AwsService#type}
   */
   readonly type?: string;
 }
@@ -3402,19 +3402,19 @@ export class DeploymentControllerPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface AdvancedConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#alternate_target_group_arn TfService#alternate_target_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#alternate_target_group_arn AwsService#alternate_target_group_arn}
   */
   readonly alternateTargetGroupArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#production_listener_rule TfService#production_listener_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#production_listener_rule AwsService#production_listener_rule}
   */
   readonly productionListenerRule: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#role_arn TfService#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#role_arn AwsService#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#test_listener_rule TfService#test_listener_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#test_listener_rule AwsService#test_listener_rule}
   */
   readonly testListenerRule?: string;
 }
@@ -3525,25 +3525,25 @@ export class AdvancedConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface LoadBalancerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#container_name TfService#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#container_name AwsService#container_name}
   */
   readonly containerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#container_port TfService#container_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#container_port AwsService#container_port}
   */
   readonly containerPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#elb_name TfService#elb_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#elb_name AwsService#elb_name}
   */
   readonly elbName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#target_group_arn TfService#target_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#target_group_arn AwsService#target_group_arn}
   */
   readonly targetGroupArn?: string;
   /**
   * advanced_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#advanced_configuration TfService#advanced_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#advanced_configuration AwsService#advanced_configuration}
   */
   readonly advancedConfiguration?: AdvancedConfigurationProperty;
 }
@@ -3711,15 +3711,15 @@ export class LoadBalancerPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#assign_public_ip TfService#assign_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#assign_public_ip AwsService#assign_public_ip}
   */
   readonly assignPublicIp?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#security_groups TfService#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#security_groups AwsService#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#subnets TfService#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#subnets AwsService#subnets}
   */
   readonly subnets: string[];
 }
@@ -3814,11 +3814,11 @@ export class NetworkConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface OrderedPlacementStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#field TfService#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#field AwsService#field}
   */
   readonly field?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#type TfService#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#type AwsService#type}
   */
   readonly type: string;
 }
@@ -3923,11 +3923,11 @@ export class OrderedPlacementStrategyPropertyList extends cdktn.ComplexList {
 }
 export interface PlacementConstraintsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#expression TfService#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#expression AwsService#expression}
   */
   readonly expression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#type TfService#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#type AwsService#type}
   */
   readonly type: string;
 }
@@ -4032,11 +4032,11 @@ export class PlacementConstraintsPropertyList extends cdktn.ComplexList {
 }
 export interface AccessLogConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#format TfService#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#format AwsService#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#include_query_parameters TfService#include_query_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#include_query_parameters AwsService#include_query_parameters}
   */
   readonly includeQueryParameters?: string;
 }
@@ -4109,11 +4109,11 @@ export class AccessLogConfigurationPropertyOutputReference extends cdktn.Complex
 }
 export interface SecretOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#name TfService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#name AwsService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#value_from TfService#value_from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#value_from AwsService#value_from}
   */
   readonly valueFrom: string;
 }
@@ -4215,17 +4215,17 @@ export class SecretOptionPropertyList extends cdktn.ComplexList {
 }
 export interface LogConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#log_driver TfService#log_driver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#log_driver AwsService#log_driver}
   */
   readonly logDriver: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#options TfService#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#options AwsService#options}
   */
   readonly options?: { [key: string]: string };
   /**
   * secret_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#secret_option TfService#secret_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#secret_option AwsService#secret_option}
   */
   readonly secretOption?: SecretOptionProperty[] | cdktn.IResolvable;
 }
@@ -4320,7 +4320,7 @@ export class LogConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#exact TfService#exact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#exact AwsService#exact}
   */
   readonly exact: string;
 }
@@ -4371,13 +4371,13 @@ export class ValuePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#name TfService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#name AwsService#name}
   */
   readonly name: string;
   /**
   * value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#value TfService#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#value AwsService#value}
   */
   readonly value: ValueProperty;
 }
@@ -4449,7 +4449,7 @@ export interface TestTrafficRulesProperty {
   /**
   * header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#header TfService#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#header AwsService#header}
   */
   readonly header?: HeaderProperty;
 }
@@ -4535,17 +4535,17 @@ export class TestTrafficRulesPropertyList extends cdktn.ComplexList {
 }
 export interface ClientAliasProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#dns_name TfService#dns_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#dns_name AwsService#dns_name}
   */
   readonly dnsName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#port TfService#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#port AwsService#port}
   */
   readonly port: number;
   /**
   * test_traffic_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#test_traffic_rules TfService#test_traffic_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#test_traffic_rules AwsService#test_traffic_rules}
   */
   readonly testTrafficRules?: TestTrafficRulesProperty[] | cdktn.IResolvable;
 }
@@ -4640,11 +4640,11 @@ export class ClientAliasPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#idle_timeout_seconds TfService#idle_timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#idle_timeout_seconds AwsService#idle_timeout_seconds}
   */
   readonly idleTimeoutSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#per_request_timeout_seconds TfService#per_request_timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#per_request_timeout_seconds AwsService#per_request_timeout_seconds}
   */
   readonly perRequestTimeoutSeconds?: number;
 }
@@ -4720,7 +4720,7 @@ export class TimeoutPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IssuerCertAuthorityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#aws_pca_authority_arn TfService#aws_pca_authority_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#aws_pca_authority_arn AwsService#aws_pca_authority_arn}
   */
   readonly awsPcaAuthorityArn: string;
 }
@@ -4771,17 +4771,17 @@ export class IssuerCertAuthorityPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface TlsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#kms_key TfService#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#kms_key AwsService#kms_key}
   */
   readonly kmsKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#role_arn TfService#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#role_arn AwsService#role_arn}
   */
   readonly roleArn?: string;
   /**
   * issuer_cert_authority block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#issuer_cert_authority TfService#issuer_cert_authority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#issuer_cert_authority AwsService#issuer_cert_authority}
   */
   readonly issuerCertAuthority: IssuerCertAuthorityProperty;
 }
@@ -4876,33 +4876,33 @@ export class TlsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ServiceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#discovery_name TfService#discovery_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#discovery_name AwsService#discovery_name}
   */
   readonly discoveryName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#ingress_port_override TfService#ingress_port_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#ingress_port_override AwsService#ingress_port_override}
   */
   readonly ingressPortOverride?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#port_name TfService#port_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#port_name AwsService#port_name}
   */
   readonly portName: string;
   /**
   * client_alias block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#client_alias TfService#client_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#client_alias AwsService#client_alias}
   */
   readonly clientAlias?: ClientAliasProperty;
   /**
   * timeout block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#timeout TfService#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#timeout AwsService#timeout}
   */
   readonly timeout?: TimeoutProperty;
   /**
   * tls block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#tls TfService#tls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#tls AwsService#tls}
   */
   readonly tls?: TlsProperty;
 }
@@ -5095,29 +5095,29 @@ export class ServicePropertyList extends cdktn.ComplexList {
 }
 export interface ServiceConnectConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#enabled TfService#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#enabled AwsService#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#namespace TfService#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#namespace AwsService#namespace}
   */
   readonly namespace?: string;
   /**
   * access_log_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#access_log_configuration TfService#access_log_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#access_log_configuration AwsService#access_log_configuration}
   */
   readonly accessLogConfiguration?: AccessLogConfigurationProperty;
   /**
   * log_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#log_configuration TfService#log_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#log_configuration AwsService#log_configuration}
   */
   readonly logConfiguration?: LogConfigurationProperty;
   /**
   * service block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#service TfService#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#service AwsService#service}
   */
   readonly service?: ServiceProperty[] | cdktn.IResolvable;
 }
@@ -5256,19 +5256,19 @@ export class ServiceConnectConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface ServiceRegistriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#container_name TfService#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#container_name AwsService#container_name}
   */
   readonly containerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#container_port TfService#container_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#container_port AwsService#container_port}
   */
   readonly containerPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#port TfService#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#port AwsService#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#registry_arn TfService#registry_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#registry_arn AwsService#registry_arn}
   */
   readonly registryArn: string;
 }
@@ -5385,15 +5385,15 @@ export class ServiceRegistriesPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#create TfService#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#create AwsService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#delete TfService#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#delete AwsService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#update TfService#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#update AwsService#update}
   */
   readonly update?: string;
 }
@@ -5501,15 +5501,15 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TagSpecificationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#propagate_tags TfService#propagate_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#propagate_tags AwsService#propagate_tags}
   */
   readonly propagateTags?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#resource_type TfService#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#resource_type AwsService#resource_type}
   */
   readonly resourceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#tags TfService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#tags AwsService#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -5636,49 +5636,49 @@ export class TagSpecificationsPropertyList extends cdktn.ComplexList {
 }
 export interface ManagedEbsVolumeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#encrypted TfService#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#encrypted AwsService#encrypted}
   */
   readonly encrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#file_system_type TfService#file_system_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#file_system_type AwsService#file_system_type}
   */
   readonly fileSystemType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#iops TfService#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#iops AwsService#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#kms_key_id TfService#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#kms_key_id AwsService#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#role_arn TfService#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#role_arn AwsService#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#size_in_gb TfService#size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#size_in_gb AwsService#size_in_gb}
   */
   readonly sizeInGb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#snapshot_id TfService#snapshot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#snapshot_id AwsService#snapshot_id}
   */
   readonly snapshotId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#throughput TfService#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#throughput AwsService#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#volume_initialization_rate TfService#volume_initialization_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#volume_initialization_rate AwsService#volume_initialization_rate}
   */
   readonly volumeInitializationRate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#volume_type TfService#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#volume_type AwsService#volume_type}
   */
   readonly volumeType?: string;
   /**
   * tag_specifications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#tag_specifications TfService#tag_specifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#tag_specifications AwsService#tag_specifications}
   */
   readonly tagSpecifications?: TagSpecificationsProperty[] | cdktn.IResolvable;
 }
@@ -5949,13 +5949,13 @@ export class ManagedEbsVolumePropertyOutputReference extends cdktn.ComplexObject
 }
 export interface VolumeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#name TfService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#name AwsService#name}
   */
   readonly name: string;
   /**
   * managed_ebs_volume block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#managed_ebs_volume TfService#managed_ebs_volume}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#managed_ebs_volume AwsService#managed_ebs_volume}
   */
   readonly managedEbsVolume: ManagedEbsVolumeProperty;
 }
@@ -6025,15 +6025,15 @@ export class VolumeConfigurationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface VpcLatticeConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#port_name TfService#port_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#port_name AwsService#port_name}
   */
   readonly portName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#role_arn TfService#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#role_arn AwsService#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#target_group_arn TfService#target_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_service#target_group_arn AwsService#target_group_arn}
   */
   readonly targetGroupArn: string;
 }

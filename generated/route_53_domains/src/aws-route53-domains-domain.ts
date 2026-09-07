@@ -5,81 +5,81 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDomainConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDomainConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#admin_privacy TfDomain#admin_privacy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#admin_privacy AwsDomain#admin_privacy}
   */
   readonly adminPrivacy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#auto_renew TfDomain#auto_renew}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#auto_renew AwsDomain#auto_renew}
   */
   readonly autoRenew?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#billing_contact TfDomain#billing_contact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#billing_contact AwsDomain#billing_contact}
   */
-  readonly billingContact?: TfDomain.BillingContactProperty[] | cdktn.IResolvable;
+  readonly billingContact?: AwsDomain.BillingContactProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#billing_privacy TfDomain#billing_privacy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#billing_privacy AwsDomain#billing_privacy}
   */
   readonly billingPrivacy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#domain_name TfDomain#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#domain_name AwsDomain#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#duration_in_years TfDomain#duration_in_years}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#duration_in_years AwsDomain#duration_in_years}
   */
   readonly durationInYears?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#name_server TfDomain#name_server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#name_server AwsDomain#name_server}
   */
-  readonly nameServer?: TfDomain.NameServerProperty[] | cdktn.IResolvable;
+  readonly nameServer?: AwsDomain.NameServerProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#registrant_privacy TfDomain#registrant_privacy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#registrant_privacy AwsDomain#registrant_privacy}
   */
   readonly registrantPrivacy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#tags TfDomain#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#tags AwsDomain#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#tech_privacy TfDomain#tech_privacy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#tech_privacy AwsDomain#tech_privacy}
   */
   readonly techPrivacy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#transfer_lock TfDomain#transfer_lock}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#transfer_lock AwsDomain#transfer_lock}
   */
   readonly transferLock?: boolean | cdktn.IResolvable;
   /**
   * admin_contact block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#admin_contact TfDomain#admin_contact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#admin_contact AwsDomain#admin_contact}
   */
-  readonly adminContact?: TfDomain.AdminContactProperty[] | cdktn.IResolvable;
+  readonly adminContact?: AwsDomain.AdminContactProperty[] | cdktn.IResolvable;
   /**
   * registrant_contact block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#registrant_contact TfDomain#registrant_contact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#registrant_contact AwsDomain#registrant_contact}
   */
-  readonly registrantContact?: TfDomain.RegistrantContactProperty[] | cdktn.IResolvable;
+  readonly registrantContact?: AwsDomain.RegistrantContactProperty[] | cdktn.IResolvable;
   /**
   * tech_contact block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#tech_contact TfDomain#tech_contact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#tech_contact AwsDomain#tech_contact}
   */
-  readonly techContact?: TfDomain.TechContactProperty[] | cdktn.IResolvable;
+  readonly techContact?: AwsDomain.TechContactProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#timeouts TfDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#timeouts AwsDomain#timeouts}
   */
-  readonly timeouts?: TfDomain.TimeoutsProperty;
+  readonly timeouts?: AwsDomain.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain aws_route53domains_domain}
 */
-export class TfDomain extends cdktn.TerraformResource {
+export class AwsDomain extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -90,11 +90,11 @@ export class TfDomain extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDomain to import
-  * @param importFromId The id of the existing TfDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDomain to import is found
+  * @param importToId The construct id used in the generated config for the AwsDomain to import
+  * @param importFromId The id of the existing AwsDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53domains_domain", importId: importFromId, provider });
@@ -109,9 +109,9 @@ export class TfDomain extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDomainConfig
+  * @param options AwsDomainConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDomainConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53domains_domain',
       terraformGeneratorMetadata: {
@@ -191,11 +191,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // billing_contact - computed: true, optional: true, required: false
-  private _billingContact = new TfDomain.BillingContactPropertyList(this, "billing_contact", false);
+  private _billingContact = new AwsDomain.BillingContactPropertyList(this, "billing_contact", false);
   public get billingContact() {
     return this._billingContact;
   }
-  public putBillingContact(value: TfDomain.BillingContactProperty[] | cdktn.IResolvable) {
+  public putBillingContact(value: AwsDomain.BillingContactProperty[] | cdktn.IResolvable) {
     this._billingContact.internalValue = value;
   }
   public resetBillingContact() {
@@ -267,11 +267,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // name_server - computed: true, optional: true, required: false
-  private _nameServer = new TfDomain.NameServerPropertyList(this, "name_server", false);
+  private _nameServer = new AwsDomain.NameServerPropertyList(this, "name_server", false);
   public get nameServer() {
     return this._nameServer;
   }
-  public putNameServer(value: TfDomain.NameServerProperty[] | cdktn.IResolvable) {
+  public putNameServer(value: AwsDomain.NameServerProperty[] | cdktn.IResolvable) {
     this._nameServer.internalValue = value;
   }
   public resetNameServer() {
@@ -378,11 +378,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // admin_contact - computed: false, optional: true, required: false
-  private _adminContact = new TfDomain.AdminContactPropertyList(this, "admin_contact", false);
+  private _adminContact = new AwsDomain.AdminContactPropertyList(this, "admin_contact", false);
   public get adminContact() {
     return this._adminContact;
   }
-  public putAdminContact(value: TfDomain.AdminContactProperty[] | cdktn.IResolvable) {
+  public putAdminContact(value: AwsDomain.AdminContactProperty[] | cdktn.IResolvable) {
     this._adminContact.internalValue = value;
   }
   public resetAdminContact() {
@@ -394,11 +394,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // registrant_contact - computed: false, optional: true, required: false
-  private _registrantContact = new TfDomain.RegistrantContactPropertyList(this, "registrant_contact", false);
+  private _registrantContact = new AwsDomain.RegistrantContactPropertyList(this, "registrant_contact", false);
   public get registrantContact() {
     return this._registrantContact;
   }
-  public putRegistrantContact(value: TfDomain.RegistrantContactProperty[] | cdktn.IResolvable) {
+  public putRegistrantContact(value: AwsDomain.RegistrantContactProperty[] | cdktn.IResolvable) {
     this._registrantContact.internalValue = value;
   }
   public resetRegistrantContact() {
@@ -410,11 +410,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // tech_contact - computed: false, optional: true, required: false
-  private _techContact = new TfDomain.TechContactPropertyList(this, "tech_contact", false);
+  private _techContact = new AwsDomain.TechContactPropertyList(this, "tech_contact", false);
   public get techContact() {
     return this._techContact;
   }
-  public putTechContact(value: TfDomain.TechContactProperty[] | cdktn.IResolvable) {
+  public putTechContact(value: AwsDomain.TechContactProperty[] | cdktn.IResolvable) {
     this._techContact.internalValue = value;
   }
   public resetTechContact() {
@@ -426,11 +426,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDomain.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDomain.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDomain.TimeoutsProperty) {
+  public putTimeouts(value: AwsDomain.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -449,19 +449,19 @@ export class TfDomain extends cdktn.TerraformResource {
     return {
       admin_privacy: cdktn.booleanToTerraform(this._adminPrivacy),
       auto_renew: cdktn.booleanToTerraform(this._autoRenew),
-      billing_contact: cdktn.listMapper(tfDomainBillingContactPropertyToTerraform, false)(this._billingContact.internalValue),
+      billing_contact: cdktn.listMapper(awsDomainBillingContactPropertyToTerraform, false)(this._billingContact.internalValue),
       billing_privacy: cdktn.booleanToTerraform(this._billingPrivacy),
       domain_name: cdktn.stringToTerraform(this._domainName),
       duration_in_years: cdktn.numberToTerraform(this._durationInYears),
-      name_server: cdktn.listMapper(tfDomainNameServerPropertyToTerraform, false)(this._nameServer.internalValue),
+      name_server: cdktn.listMapper(awsDomainNameServerPropertyToTerraform, false)(this._nameServer.internalValue),
       registrant_privacy: cdktn.booleanToTerraform(this._registrantPrivacy),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tech_privacy: cdktn.booleanToTerraform(this._techPrivacy),
       transfer_lock: cdktn.booleanToTerraform(this._transferLock),
-      admin_contact: cdktn.listMapper(tfDomainAdminContactPropertyToTerraform, true)(this._adminContact.internalValue),
-      registrant_contact: cdktn.listMapper(tfDomainRegistrantContactPropertyToTerraform, true)(this._registrantContact.internalValue),
-      tech_contact: cdktn.listMapper(tfDomainTechContactPropertyToTerraform, true)(this._techContact.internalValue),
-      timeouts: tfDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      admin_contact: cdktn.listMapper(awsDomainAdminContactPropertyToTerraform, true)(this._adminContact.internalValue),
+      registrant_contact: cdktn.listMapper(awsDomainRegistrantContactPropertyToTerraform, true)(this._registrantContact.internalValue),
+      tech_contact: cdktn.listMapper(awsDomainTechContactPropertyToTerraform, true)(this._techContact.internalValue),
+      timeouts: awsDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -480,10 +480,10 @@ export class TfDomain extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       billing_contact: {
-        value: cdktn.listMapperHcl(tfDomainBillingContactPropertyToHclTerraform, false)(this._billingContact.internalValue),
+        value: cdktn.listMapperHcl(awsDomainBillingContactPropertyToHclTerraform, false)(this._billingContact.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.BillingContactPropertyList",
+        storageClassType: "AwsDomain.BillingContactPropertyList",
       },
       billing_privacy: {
         value: cdktn.booleanToHclTerraform(this._billingPrivacy),
@@ -504,10 +504,10 @@ export class TfDomain extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       name_server: {
-        value: cdktn.listMapperHcl(tfDomainNameServerPropertyToHclTerraform, false)(this._nameServer.internalValue),
+        value: cdktn.listMapperHcl(awsDomainNameServerPropertyToHclTerraform, false)(this._nameServer.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.NameServerPropertyList",
+        storageClassType: "AwsDomain.NameServerPropertyList",
       },
       registrant_privacy: {
         value: cdktn.booleanToHclTerraform(this._registrantPrivacy),
@@ -534,28 +534,28 @@ export class TfDomain extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       admin_contact: {
-        value: cdktn.listMapperHcl(tfDomainAdminContactPropertyToHclTerraform, true)(this._adminContact.internalValue),
+        value: cdktn.listMapperHcl(awsDomainAdminContactPropertyToHclTerraform, true)(this._adminContact.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.AdminContactPropertyList",
+        storageClassType: "AwsDomain.AdminContactPropertyList",
       },
       registrant_contact: {
-        value: cdktn.listMapperHcl(tfDomainRegistrantContactPropertyToHclTerraform, true)(this._registrantContact.internalValue),
+        value: cdktn.listMapperHcl(awsDomainRegistrantContactPropertyToHclTerraform, true)(this._registrantContact.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.RegistrantContactPropertyList",
+        storageClassType: "AwsDomain.RegistrantContactPropertyList",
       },
       tech_contact: {
-        value: cdktn.listMapperHcl(tfDomainTechContactPropertyToHclTerraform, true)(this._techContact.internalValue),
+        value: cdktn.listMapperHcl(awsDomainTechContactPropertyToHclTerraform, true)(this._techContact.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.TechContactPropertyList",
+        storageClassType: "AwsDomain.TechContactPropertyList",
       },
       timeouts: {
-        value: tfDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDomain.TimeoutsProperty",
+        storageClassType: "AwsDomain.TimeoutsProperty",
       },
     };
 
@@ -564,7 +564,7 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 }
 
-export function tfDomainBillingContactExtraParamPropertyToTerraform(struct?: TfDomain.BillingContactExtraParamProperty | cdktn.IResolvable): any {
+export function awsDomainBillingContactExtraParamPropertyToTerraform(struct?: AwsDomain.BillingContactExtraParamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -576,7 +576,7 @@ export function tfDomainBillingContactExtraParamPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDomainBillingContactExtraParamPropertyToHclTerraform(struct?: TfDomain.BillingContactExtraParamProperty | cdktn.IResolvable): any {
+export function awsDomainBillingContactExtraParamPropertyToHclTerraform(struct?: AwsDomain.BillingContactExtraParamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -601,7 +601,7 @@ export function tfDomainBillingContactExtraParamPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDomainBillingContactPropertyToTerraform(struct?: TfDomain.BillingContactProperty | cdktn.IResolvable): any {
+export function awsDomainBillingContactPropertyToTerraform(struct?: AwsDomain.BillingContactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -613,7 +613,7 @@ export function tfDomainBillingContactPropertyToTerraform(struct?: TfDomain.Bill
     contact_type: cdktn.stringToTerraform(struct!.contactType),
     country_code: cdktn.stringToTerraform(struct!.countryCode),
     email: cdktn.stringToTerraform(struct!.email),
-    extra_param: cdktn.listMapper(tfDomainBillingContactExtraParamPropertyToTerraform, false)(struct!.extraParam),
+    extra_param: cdktn.listMapper(awsDomainBillingContactExtraParamPropertyToTerraform, false)(struct!.extraParam),
     fax: cdktn.stringToTerraform(struct!.fax),
     first_name: cdktn.stringToTerraform(struct!.firstName),
     last_name: cdktn.stringToTerraform(struct!.lastName),
@@ -625,7 +625,7 @@ export function tfDomainBillingContactPropertyToTerraform(struct?: TfDomain.Bill
 }
 
 
-export function tfDomainBillingContactPropertyToHclTerraform(struct?: TfDomain.BillingContactProperty | cdktn.IResolvable): any {
+export function awsDomainBillingContactPropertyToHclTerraform(struct?: AwsDomain.BillingContactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function tfDomainBillingContactPropertyToHclTerraform(struct?: TfDomain.B
       storageClassType: "string",
     },
     extra_param: {
-      value: cdktn.listMapperHcl(tfDomainBillingContactExtraParamPropertyToHclTerraform, false)(struct!.extraParam),
+      value: cdktn.listMapperHcl(awsDomainBillingContactExtraParamPropertyToHclTerraform, false)(struct!.extraParam),
       isBlock: true,
       type: "list",
       storageClassType: "BillingContactExtraParamPropertyList",
@@ -722,7 +722,7 @@ export function tfDomainBillingContactPropertyToHclTerraform(struct?: TfDomain.B
 }
 
 
-export function tfDomainNameServerPropertyToTerraform(struct?: TfDomain.NameServerProperty | cdktn.IResolvable): any {
+export function awsDomainNameServerPropertyToTerraform(struct?: AwsDomain.NameServerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -734,7 +734,7 @@ export function tfDomainNameServerPropertyToTerraform(struct?: TfDomain.NameServ
 }
 
 
-export function tfDomainNameServerPropertyToHclTerraform(struct?: TfDomain.NameServerProperty | cdktn.IResolvable): any {
+export function awsDomainNameServerPropertyToHclTerraform(struct?: AwsDomain.NameServerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -759,7 +759,7 @@ export function tfDomainNameServerPropertyToHclTerraform(struct?: TfDomain.NameS
 }
 
 
-export function tfDomainAdminContactExtraParamPropertyToTerraform(struct?: TfDomain.AdminContactExtraParamProperty | cdktn.IResolvable): any {
+export function awsDomainAdminContactExtraParamPropertyToTerraform(struct?: AwsDomain.AdminContactExtraParamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -771,7 +771,7 @@ export function tfDomainAdminContactExtraParamPropertyToTerraform(struct?: TfDom
 }
 
 
-export function tfDomainAdminContactExtraParamPropertyToHclTerraform(struct?: TfDomain.AdminContactExtraParamProperty | cdktn.IResolvable): any {
+export function awsDomainAdminContactExtraParamPropertyToHclTerraform(struct?: AwsDomain.AdminContactExtraParamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -796,7 +796,7 @@ export function tfDomainAdminContactExtraParamPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDomainAdminContactPropertyToTerraform(struct?: TfDomain.AdminContactProperty | cdktn.IResolvable): any {
+export function awsDomainAdminContactPropertyToTerraform(struct?: AwsDomain.AdminContactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -815,12 +815,12 @@ export function tfDomainAdminContactPropertyToTerraform(struct?: TfDomain.AdminC
     phone_number: cdktn.stringToTerraform(struct!.phoneNumber),
     state: cdktn.stringToTerraform(struct!.state),
     zip_code: cdktn.stringToTerraform(struct!.zipCode),
-    extra_param: cdktn.listMapper(tfDomainAdminContactExtraParamPropertyToTerraform, true)(struct!.extraParam),
+    extra_param: cdktn.listMapper(awsDomainAdminContactExtraParamPropertyToTerraform, true)(struct!.extraParam),
   }
 }
 
 
-export function tfDomainAdminContactPropertyToHclTerraform(struct?: TfDomain.AdminContactProperty | cdktn.IResolvable): any {
+export function awsDomainAdminContactPropertyToHclTerraform(struct?: AwsDomain.AdminContactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -905,7 +905,7 @@ export function tfDomainAdminContactPropertyToHclTerraform(struct?: TfDomain.Adm
       storageClassType: "string",
     },
     extra_param: {
-      value: cdktn.listMapperHcl(tfDomainAdminContactExtraParamPropertyToHclTerraform, true)(struct!.extraParam),
+      value: cdktn.listMapperHcl(awsDomainAdminContactExtraParamPropertyToHclTerraform, true)(struct!.extraParam),
       isBlock: true,
       type: "list",
       storageClassType: "AdminContactExtraParamPropertyList",
@@ -917,7 +917,7 @@ export function tfDomainAdminContactPropertyToHclTerraform(struct?: TfDomain.Adm
 }
 
 
-export function tfDomainRegistrantContactExtraParamPropertyToTerraform(struct?: TfDomain.RegistrantContactExtraParamProperty | cdktn.IResolvable): any {
+export function awsDomainRegistrantContactExtraParamPropertyToTerraform(struct?: AwsDomain.RegistrantContactExtraParamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -929,7 +929,7 @@ export function tfDomainRegistrantContactExtraParamPropertyToTerraform(struct?: 
 }
 
 
-export function tfDomainRegistrantContactExtraParamPropertyToHclTerraform(struct?: TfDomain.RegistrantContactExtraParamProperty | cdktn.IResolvable): any {
+export function awsDomainRegistrantContactExtraParamPropertyToHclTerraform(struct?: AwsDomain.RegistrantContactExtraParamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -954,7 +954,7 @@ export function tfDomainRegistrantContactExtraParamPropertyToHclTerraform(struct
 }
 
 
-export function tfDomainRegistrantContactPropertyToTerraform(struct?: TfDomain.RegistrantContactProperty | cdktn.IResolvable): any {
+export function awsDomainRegistrantContactPropertyToTerraform(struct?: AwsDomain.RegistrantContactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -973,12 +973,12 @@ export function tfDomainRegistrantContactPropertyToTerraform(struct?: TfDomain.R
     phone_number: cdktn.stringToTerraform(struct!.phoneNumber),
     state: cdktn.stringToTerraform(struct!.state),
     zip_code: cdktn.stringToTerraform(struct!.zipCode),
-    extra_param: cdktn.listMapper(tfDomainRegistrantContactExtraParamPropertyToTerraform, true)(struct!.extraParam),
+    extra_param: cdktn.listMapper(awsDomainRegistrantContactExtraParamPropertyToTerraform, true)(struct!.extraParam),
   }
 }
 
 
-export function tfDomainRegistrantContactPropertyToHclTerraform(struct?: TfDomain.RegistrantContactProperty | cdktn.IResolvable): any {
+export function awsDomainRegistrantContactPropertyToHclTerraform(struct?: AwsDomain.RegistrantContactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1063,7 +1063,7 @@ export function tfDomainRegistrantContactPropertyToHclTerraform(struct?: TfDomai
       storageClassType: "string",
     },
     extra_param: {
-      value: cdktn.listMapperHcl(tfDomainRegistrantContactExtraParamPropertyToHclTerraform, true)(struct!.extraParam),
+      value: cdktn.listMapperHcl(awsDomainRegistrantContactExtraParamPropertyToHclTerraform, true)(struct!.extraParam),
       isBlock: true,
       type: "list",
       storageClassType: "RegistrantContactExtraParamPropertyList",
@@ -1075,7 +1075,7 @@ export function tfDomainRegistrantContactPropertyToHclTerraform(struct?: TfDomai
 }
 
 
-export function tfDomainTechContactExtraParamPropertyToTerraform(struct?: TfDomain.TechContactExtraParamProperty | cdktn.IResolvable): any {
+export function awsDomainTechContactExtraParamPropertyToTerraform(struct?: AwsDomain.TechContactExtraParamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1087,7 +1087,7 @@ export function tfDomainTechContactExtraParamPropertyToTerraform(struct?: TfDoma
 }
 
 
-export function tfDomainTechContactExtraParamPropertyToHclTerraform(struct?: TfDomain.TechContactExtraParamProperty | cdktn.IResolvable): any {
+export function awsDomainTechContactExtraParamPropertyToHclTerraform(struct?: AwsDomain.TechContactExtraParamProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1112,7 +1112,7 @@ export function tfDomainTechContactExtraParamPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDomainTechContactPropertyToTerraform(struct?: TfDomain.TechContactProperty | cdktn.IResolvable): any {
+export function awsDomainTechContactPropertyToTerraform(struct?: AwsDomain.TechContactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1131,12 +1131,12 @@ export function tfDomainTechContactPropertyToTerraform(struct?: TfDomain.TechCon
     phone_number: cdktn.stringToTerraform(struct!.phoneNumber),
     state: cdktn.stringToTerraform(struct!.state),
     zip_code: cdktn.stringToTerraform(struct!.zipCode),
-    extra_param: cdktn.listMapper(tfDomainTechContactExtraParamPropertyToTerraform, true)(struct!.extraParam),
+    extra_param: cdktn.listMapper(awsDomainTechContactExtraParamPropertyToTerraform, true)(struct!.extraParam),
   }
 }
 
 
-export function tfDomainTechContactPropertyToHclTerraform(struct?: TfDomain.TechContactProperty | cdktn.IResolvable): any {
+export function awsDomainTechContactPropertyToHclTerraform(struct?: AwsDomain.TechContactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1221,7 +1221,7 @@ export function tfDomainTechContactPropertyToHclTerraform(struct?: TfDomain.Tech
       storageClassType: "string",
     },
     extra_param: {
-      value: cdktn.listMapperHcl(tfDomainTechContactExtraParamPropertyToHclTerraform, true)(struct!.extraParam),
+      value: cdktn.listMapperHcl(awsDomainTechContactExtraParamPropertyToHclTerraform, true)(struct!.extraParam),
       isBlock: true,
       type: "list",
       storageClassType: "TechContactExtraParamPropertyList",
@@ -1233,7 +1233,7 @@ export function tfDomainTechContactPropertyToHclTerraform(struct?: TfDomain.Tech
 }
 
 
-export function tfDomainTimeoutsPropertyToTerraform(struct?: TfDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDomainTimeoutsPropertyToTerraform(struct?: AwsDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1246,7 +1246,7 @@ export function tfDomainTimeoutsPropertyToTerraform(struct?: TfDomain.TimeoutsPr
 }
 
 
-export function tfDomainTimeoutsPropertyToHclTerraform(struct?: TfDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDomainTimeoutsPropertyToHclTerraform(struct?: AwsDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1277,14 +1277,14 @@ export function tfDomainTimeoutsPropertyToHclTerraform(struct?: TfDomain.Timeout
 }
 
 
-export namespace TfDomain {
+export namespace AwsDomain {
 export interface BillingContactExtraParamProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#name TfDomain#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#name AwsDomain#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#value TfDomain#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#value AwsDomain#value}
   */
   readonly value?: string;
 }
@@ -1392,59 +1392,59 @@ export class BillingContactExtraParamPropertyList extends cdktn.ComplexList {
 }
 export interface BillingContactProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_1 TfDomain#address_line_1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_1 AwsDomain#address_line_1}
   */
   readonly addressLine1?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_2 TfDomain#address_line_2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_2 AwsDomain#address_line_2}
   */
   readonly addressLine2?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#city TfDomain#city}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#city AwsDomain#city}
   */
   readonly city?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#contact_type TfDomain#contact_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#contact_type AwsDomain#contact_type}
   */
   readonly contactType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#country_code TfDomain#country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#country_code AwsDomain#country_code}
   */
   readonly countryCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#email TfDomain#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#email AwsDomain#email}
   */
   readonly email?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#extra_param TfDomain#extra_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#extra_param AwsDomain#extra_param}
   */
   readonly extraParam?: BillingContactExtraParamProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#fax TfDomain#fax}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#fax AwsDomain#fax}
   */
   readonly fax?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#first_name TfDomain#first_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#first_name AwsDomain#first_name}
   */
   readonly firstName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#last_name TfDomain#last_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#last_name AwsDomain#last_name}
   */
   readonly lastName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#organization_name TfDomain#organization_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#organization_name AwsDomain#organization_name}
   */
   readonly organizationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#phone_number TfDomain#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#phone_number AwsDomain#phone_number}
   */
   readonly phoneNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#state TfDomain#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#state AwsDomain#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#zip_code TfDomain#zip_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#zip_code AwsDomain#zip_code}
   */
   readonly zipCode?: string;
 }
@@ -1816,11 +1816,11 @@ export class BillingContactPropertyList extends cdktn.ComplexList {
 }
 export interface NameServerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#glue_ips TfDomain#glue_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#glue_ips AwsDomain#glue_ips}
   */
   readonly glueIps?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#name TfDomain#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#name AwsDomain#name}
   */
   readonly name?: string;
 }
@@ -1928,11 +1928,11 @@ export class NameServerPropertyList extends cdktn.ComplexList {
 }
 export interface AdminContactExtraParamProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#name TfDomain#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#name AwsDomain#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#value TfDomain#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#value AwsDomain#value}
   */
   readonly value: string;
 }
@@ -2034,61 +2034,61 @@ export class AdminContactExtraParamPropertyList extends cdktn.ComplexList {
 }
 export interface AdminContactProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_1 TfDomain#address_line_1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_1 AwsDomain#address_line_1}
   */
   readonly addressLine1?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_2 TfDomain#address_line_2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_2 AwsDomain#address_line_2}
   */
   readonly addressLine2?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#city TfDomain#city}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#city AwsDomain#city}
   */
   readonly city?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#contact_type TfDomain#contact_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#contact_type AwsDomain#contact_type}
   */
   readonly contactType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#country_code TfDomain#country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#country_code AwsDomain#country_code}
   */
   readonly countryCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#email TfDomain#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#email AwsDomain#email}
   */
   readonly email?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#fax TfDomain#fax}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#fax AwsDomain#fax}
   */
   readonly fax?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#first_name TfDomain#first_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#first_name AwsDomain#first_name}
   */
   readonly firstName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#last_name TfDomain#last_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#last_name AwsDomain#last_name}
   */
   readonly lastName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#organization_name TfDomain#organization_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#organization_name AwsDomain#organization_name}
   */
   readonly organizationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#phone_number TfDomain#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#phone_number AwsDomain#phone_number}
   */
   readonly phoneNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#state TfDomain#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#state AwsDomain#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#zip_code TfDomain#zip_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#zip_code AwsDomain#zip_code}
   */
   readonly zipCode?: string;
   /**
   * extra_param block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#extra_param TfDomain#extra_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#extra_param AwsDomain#extra_param}
   */
   readonly extraParam?: AdminContactExtraParamProperty[] | cdktn.IResolvable;
 }
@@ -2460,11 +2460,11 @@ export class AdminContactPropertyList extends cdktn.ComplexList {
 }
 export interface RegistrantContactExtraParamProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#name TfDomain#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#name AwsDomain#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#value TfDomain#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#value AwsDomain#value}
   */
   readonly value: string;
 }
@@ -2566,61 +2566,61 @@ export class RegistrantContactExtraParamPropertyList extends cdktn.ComplexList {
 }
 export interface RegistrantContactProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_1 TfDomain#address_line_1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_1 AwsDomain#address_line_1}
   */
   readonly addressLine1?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_2 TfDomain#address_line_2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_2 AwsDomain#address_line_2}
   */
   readonly addressLine2?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#city TfDomain#city}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#city AwsDomain#city}
   */
   readonly city?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#contact_type TfDomain#contact_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#contact_type AwsDomain#contact_type}
   */
   readonly contactType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#country_code TfDomain#country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#country_code AwsDomain#country_code}
   */
   readonly countryCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#email TfDomain#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#email AwsDomain#email}
   */
   readonly email?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#fax TfDomain#fax}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#fax AwsDomain#fax}
   */
   readonly fax?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#first_name TfDomain#first_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#first_name AwsDomain#first_name}
   */
   readonly firstName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#last_name TfDomain#last_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#last_name AwsDomain#last_name}
   */
   readonly lastName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#organization_name TfDomain#organization_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#organization_name AwsDomain#organization_name}
   */
   readonly organizationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#phone_number TfDomain#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#phone_number AwsDomain#phone_number}
   */
   readonly phoneNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#state TfDomain#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#state AwsDomain#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#zip_code TfDomain#zip_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#zip_code AwsDomain#zip_code}
   */
   readonly zipCode?: string;
   /**
   * extra_param block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#extra_param TfDomain#extra_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#extra_param AwsDomain#extra_param}
   */
   readonly extraParam?: RegistrantContactExtraParamProperty[] | cdktn.IResolvable;
 }
@@ -2992,11 +2992,11 @@ export class RegistrantContactPropertyList extends cdktn.ComplexList {
 }
 export interface TechContactExtraParamProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#name TfDomain#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#name AwsDomain#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#value TfDomain#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#value AwsDomain#value}
   */
   readonly value: string;
 }
@@ -3098,61 +3098,61 @@ export class TechContactExtraParamPropertyList extends cdktn.ComplexList {
 }
 export interface TechContactProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_1 TfDomain#address_line_1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_1 AwsDomain#address_line_1}
   */
   readonly addressLine1?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_2 TfDomain#address_line_2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#address_line_2 AwsDomain#address_line_2}
   */
   readonly addressLine2?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#city TfDomain#city}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#city AwsDomain#city}
   */
   readonly city?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#contact_type TfDomain#contact_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#contact_type AwsDomain#contact_type}
   */
   readonly contactType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#country_code TfDomain#country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#country_code AwsDomain#country_code}
   */
   readonly countryCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#email TfDomain#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#email AwsDomain#email}
   */
   readonly email?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#fax TfDomain#fax}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#fax AwsDomain#fax}
   */
   readonly fax?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#first_name TfDomain#first_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#first_name AwsDomain#first_name}
   */
   readonly firstName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#last_name TfDomain#last_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#last_name AwsDomain#last_name}
   */
   readonly lastName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#organization_name TfDomain#organization_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#organization_name AwsDomain#organization_name}
   */
   readonly organizationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#phone_number TfDomain#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#phone_number AwsDomain#phone_number}
   */
   readonly phoneNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#state TfDomain#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#state AwsDomain#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#zip_code TfDomain#zip_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#zip_code AwsDomain#zip_code}
   */
   readonly zipCode?: string;
   /**
   * extra_param block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#extra_param TfDomain#extra_param}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#extra_param AwsDomain#extra_param}
   */
   readonly extraParam?: TechContactExtraParamProperty[] | cdktn.IResolvable;
 }
@@ -3526,19 +3526,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#create TfDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#create AwsDomain#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#delete TfDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#delete AwsDomain#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#update TfDomain#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53domains_domain#update AwsDomain#update}
   */
   readonly update?: string;
 }

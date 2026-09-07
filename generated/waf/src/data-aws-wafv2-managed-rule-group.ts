@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfManagedRuleGroupConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsManagedRuleGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group#name DataTfManagedRuleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group#name DataAwsManagedRuleGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group#region DataTfManagedRuleGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group#region DataAwsManagedRuleGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group#scope DataTfManagedRuleGroup#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group#scope DataAwsManagedRuleGroup#scope}
   */
   readonly scope: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group#vendor_name DataTfManagedRuleGroup#vendor_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group#vendor_name DataAwsManagedRuleGroup#vendor_name}
   */
   readonly vendorName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group#version_name DataTfManagedRuleGroup#version_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group#version_name DataAwsManagedRuleGroup#version_name}
   */
   readonly versionName?: string;
 }
@@ -33,7 +33,7 @@ export interface DataTfManagedRuleGroupConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group aws_wafv2_managed_rule_group}
 */
-export class DataTfManagedRuleGroup extends cdktn.TerraformDataSource {
+export class DataAwsManagedRuleGroup extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class DataTfManagedRuleGroup extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfManagedRuleGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsManagedRuleGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfManagedRuleGroup to import
-  * @param importFromId The id of the existing DataTfManagedRuleGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfManagedRuleGroup to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsManagedRuleGroup to import
+  * @param importFromId The id of the existing DataAwsManagedRuleGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/wafv2_managed_rule_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsManagedRuleGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafv2_managed_rule_group", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class DataTfManagedRuleGroup extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfManagedRuleGroupConfig
+  * @param options DataAwsManagedRuleGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfManagedRuleGroupConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsManagedRuleGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafv2_managed_rule_group',
       terraformGeneratorMetadata: {
@@ -93,7 +93,7 @@ export class DataTfManagedRuleGroup extends cdktn.TerraformDataSource {
   // ==========
 
   // available_labels - computed: true, optional: false, required: false
-  private _availableLabels = new DataTfManagedRuleGroup.AvailableLabelsPropertyList(this, "available_labels", false);
+  private _availableLabels = new DataAwsManagedRuleGroup.AvailableLabelsPropertyList(this, "available_labels", false);
   public get availableLabels() {
     return this._availableLabels;
   }
@@ -104,7 +104,7 @@ export class DataTfManagedRuleGroup extends cdktn.TerraformDataSource {
   }
 
   // consumed_labels - computed: true, optional: false, required: false
-  private _consumedLabels = new DataTfManagedRuleGroup.ConsumedLabelsPropertyList(this, "consumed_labels", false);
+  private _consumedLabels = new DataAwsManagedRuleGroup.ConsumedLabelsPropertyList(this, "consumed_labels", false);
   public get consumedLabels() {
     return this._consumedLabels;
   }
@@ -144,7 +144,7 @@ export class DataTfManagedRuleGroup extends cdktn.TerraformDataSource {
   }
 
   // rules - computed: true, optional: false, required: false
-  private _rules = new DataTfManagedRuleGroup.RulesPropertyList(this, "rules", false);
+  private _rules = new DataAwsManagedRuleGroup.RulesPropertyList(this, "rules", false);
   public get rules() {
     return this._rules;
   }
@@ -249,7 +249,7 @@ export class DataTfManagedRuleGroup extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfManagedRuleGroupAvailableLabelsPropertyToTerraform(struct?: DataTfManagedRuleGroup.AvailableLabelsProperty): any {
+export function dataAwsManagedRuleGroupAvailableLabelsPropertyToTerraform(struct?: DataAwsManagedRuleGroup.AvailableLabelsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function dataTfManagedRuleGroupAvailableLabelsPropertyToTerraform(struct?
 }
 
 
-export function dataTfManagedRuleGroupAvailableLabelsPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.AvailableLabelsProperty): any {
+export function dataAwsManagedRuleGroupAvailableLabelsPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.AvailableLabelsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,7 +270,7 @@ export function dataTfManagedRuleGroupAvailableLabelsPropertyToHclTerraform(stru
 }
 
 
-export function dataTfManagedRuleGroupConsumedLabelsPropertyToTerraform(struct?: DataTfManagedRuleGroup.ConsumedLabelsProperty): any {
+export function dataAwsManagedRuleGroupConsumedLabelsPropertyToTerraform(struct?: DataAwsManagedRuleGroup.ConsumedLabelsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function dataTfManagedRuleGroupConsumedLabelsPropertyToTerraform(struct?:
 }
 
 
-export function dataTfManagedRuleGroupConsumedLabelsPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.ConsumedLabelsProperty): any {
+export function dataAwsManagedRuleGroupConsumedLabelsPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.ConsumedLabelsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -291,7 +291,7 @@ export function dataTfManagedRuleGroupConsumedLabelsPropertyToHclTerraform(struc
 }
 
 
-export function dataTfManagedRuleGroupRulesActionAllowCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: DataTfManagedRuleGroup.RulesActionAllowCustomRequestHandlingInsertHeaderProperty): any {
+export function dataAwsManagedRuleGroupRulesActionAllowCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: DataAwsManagedRuleGroup.RulesActionAllowCustomRequestHandlingInsertHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function dataTfManagedRuleGroupRulesActionAllowCustomRequestHandlingInser
 }
 
 
-export function dataTfManagedRuleGroupRulesActionAllowCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.RulesActionAllowCustomRequestHandlingInsertHeaderProperty): any {
+export function dataAwsManagedRuleGroupRulesActionAllowCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.RulesActionAllowCustomRequestHandlingInsertHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function dataTfManagedRuleGroupRulesActionAllowCustomRequestHandlingInser
 }
 
 
-export function dataTfManagedRuleGroupRulesActionAllowCustomRequestHandlingPropertyToTerraform(struct?: DataTfManagedRuleGroup.RulesActionAllowCustomRequestHandlingProperty): any {
+export function dataAwsManagedRuleGroupRulesActionAllowCustomRequestHandlingPropertyToTerraform(struct?: DataAwsManagedRuleGroup.RulesActionAllowCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function dataTfManagedRuleGroupRulesActionAllowCustomRequestHandlingPrope
 }
 
 
-export function dataTfManagedRuleGroupRulesActionAllowCustomRequestHandlingPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.RulesActionAllowCustomRequestHandlingProperty): any {
+export function dataAwsManagedRuleGroupRulesActionAllowCustomRequestHandlingPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.RulesActionAllowCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function dataTfManagedRuleGroupRulesActionAllowCustomRequestHandlingPrope
 }
 
 
-export function dataTfManagedRuleGroupAllowPropertyToTerraform(struct?: DataTfManagedRuleGroup.AllowProperty): any {
+export function dataAwsManagedRuleGroupAllowPropertyToTerraform(struct?: DataAwsManagedRuleGroup.AllowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function dataTfManagedRuleGroupAllowPropertyToTerraform(struct?: DataTfMa
 }
 
 
-export function dataTfManagedRuleGroupAllowPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.AllowProperty): any {
+export function dataAwsManagedRuleGroupAllowPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.AllowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function dataTfManagedRuleGroupAllowPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfManagedRuleGroupResponseHeaderPropertyToTerraform(struct?: DataTfManagedRuleGroup.ResponseHeaderProperty): any {
+export function dataAwsManagedRuleGroupResponseHeaderPropertyToTerraform(struct?: DataAwsManagedRuleGroup.ResponseHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function dataTfManagedRuleGroupResponseHeaderPropertyToTerraform(struct?:
 }
 
 
-export function dataTfManagedRuleGroupResponseHeaderPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.ResponseHeaderProperty): any {
+export function dataAwsManagedRuleGroupResponseHeaderPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.ResponseHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,7 +375,7 @@ export function dataTfManagedRuleGroupResponseHeaderPropertyToHclTerraform(struc
 }
 
 
-export function dataTfManagedRuleGroupCustomResponsePropertyToTerraform(struct?: DataTfManagedRuleGroup.CustomResponseProperty): any {
+export function dataAwsManagedRuleGroupCustomResponsePropertyToTerraform(struct?: DataAwsManagedRuleGroup.CustomResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function dataTfManagedRuleGroupCustomResponsePropertyToTerraform(struct?:
 }
 
 
-export function dataTfManagedRuleGroupCustomResponsePropertyToHclTerraform(struct?: DataTfManagedRuleGroup.CustomResponseProperty): any {
+export function dataAwsManagedRuleGroupCustomResponsePropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.CustomResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -396,7 +396,7 @@ export function dataTfManagedRuleGroupCustomResponsePropertyToHclTerraform(struc
 }
 
 
-export function dataTfManagedRuleGroupBlockPropertyToTerraform(struct?: DataTfManagedRuleGroup.BlockProperty): any {
+export function dataAwsManagedRuleGroupBlockPropertyToTerraform(struct?: DataAwsManagedRuleGroup.BlockProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -406,7 +406,7 @@ export function dataTfManagedRuleGroupBlockPropertyToTerraform(struct?: DataTfMa
 }
 
 
-export function dataTfManagedRuleGroupBlockPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.BlockProperty): any {
+export function dataAwsManagedRuleGroupBlockPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.BlockProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function dataTfManagedRuleGroupBlockPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfManagedRuleGroupRulesActionCaptchaCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: DataTfManagedRuleGroup.RulesActionCaptchaCustomRequestHandlingInsertHeaderProperty): any {
+export function dataAwsManagedRuleGroupRulesActionCaptchaCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: DataAwsManagedRuleGroup.RulesActionCaptchaCustomRequestHandlingInsertHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,7 +427,7 @@ export function dataTfManagedRuleGroupRulesActionCaptchaCustomRequestHandlingIns
 }
 
 
-export function dataTfManagedRuleGroupRulesActionCaptchaCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.RulesActionCaptchaCustomRequestHandlingInsertHeaderProperty): any {
+export function dataAwsManagedRuleGroupRulesActionCaptchaCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.RulesActionCaptchaCustomRequestHandlingInsertHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -438,7 +438,7 @@ export function dataTfManagedRuleGroupRulesActionCaptchaCustomRequestHandlingIns
 }
 
 
-export function dataTfManagedRuleGroupRulesActionCaptchaCustomRequestHandlingPropertyToTerraform(struct?: DataTfManagedRuleGroup.RulesActionCaptchaCustomRequestHandlingProperty): any {
+export function dataAwsManagedRuleGroupRulesActionCaptchaCustomRequestHandlingPropertyToTerraform(struct?: DataAwsManagedRuleGroup.RulesActionCaptchaCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function dataTfManagedRuleGroupRulesActionCaptchaCustomRequestHandlingPro
 }
 
 
-export function dataTfManagedRuleGroupRulesActionCaptchaCustomRequestHandlingPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.RulesActionCaptchaCustomRequestHandlingProperty): any {
+export function dataAwsManagedRuleGroupRulesActionCaptchaCustomRequestHandlingPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.RulesActionCaptchaCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,7 +459,7 @@ export function dataTfManagedRuleGroupRulesActionCaptchaCustomRequestHandlingPro
 }
 
 
-export function dataTfManagedRuleGroupCaptchaPropertyToTerraform(struct?: DataTfManagedRuleGroup.CaptchaProperty): any {
+export function dataAwsManagedRuleGroupCaptchaPropertyToTerraform(struct?: DataAwsManagedRuleGroup.CaptchaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function dataTfManagedRuleGroupCaptchaPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfManagedRuleGroupCaptchaPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.CaptchaProperty): any {
+export function dataAwsManagedRuleGroupCaptchaPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.CaptchaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -480,7 +480,7 @@ export function dataTfManagedRuleGroupCaptchaPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfManagedRuleGroupRulesActionChallengeCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: DataTfManagedRuleGroup.RulesActionChallengeCustomRequestHandlingInsertHeaderProperty): any {
+export function dataAwsManagedRuleGroupRulesActionChallengeCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: DataAwsManagedRuleGroup.RulesActionChallengeCustomRequestHandlingInsertHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -490,7 +490,7 @@ export function dataTfManagedRuleGroupRulesActionChallengeCustomRequestHandlingI
 }
 
 
-export function dataTfManagedRuleGroupRulesActionChallengeCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.RulesActionChallengeCustomRequestHandlingInsertHeaderProperty): any {
+export function dataAwsManagedRuleGroupRulesActionChallengeCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.RulesActionChallengeCustomRequestHandlingInsertHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -501,7 +501,7 @@ export function dataTfManagedRuleGroupRulesActionChallengeCustomRequestHandlingI
 }
 
 
-export function dataTfManagedRuleGroupRulesActionChallengeCustomRequestHandlingPropertyToTerraform(struct?: DataTfManagedRuleGroup.RulesActionChallengeCustomRequestHandlingProperty): any {
+export function dataAwsManagedRuleGroupRulesActionChallengeCustomRequestHandlingPropertyToTerraform(struct?: DataAwsManagedRuleGroup.RulesActionChallengeCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -511,7 +511,7 @@ export function dataTfManagedRuleGroupRulesActionChallengeCustomRequestHandlingP
 }
 
 
-export function dataTfManagedRuleGroupRulesActionChallengeCustomRequestHandlingPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.RulesActionChallengeCustomRequestHandlingProperty): any {
+export function dataAwsManagedRuleGroupRulesActionChallengeCustomRequestHandlingPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.RulesActionChallengeCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -522,7 +522,7 @@ export function dataTfManagedRuleGroupRulesActionChallengeCustomRequestHandlingP
 }
 
 
-export function dataTfManagedRuleGroupChallengePropertyToTerraform(struct?: DataTfManagedRuleGroup.ChallengeProperty): any {
+export function dataAwsManagedRuleGroupChallengePropertyToTerraform(struct?: DataAwsManagedRuleGroup.ChallengeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,7 +532,7 @@ export function dataTfManagedRuleGroupChallengePropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfManagedRuleGroupChallengePropertyToHclTerraform(struct?: DataTfManagedRuleGroup.ChallengeProperty): any {
+export function dataAwsManagedRuleGroupChallengePropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.ChallengeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -543,7 +543,7 @@ export function dataTfManagedRuleGroupChallengePropertyToHclTerraform(struct?: D
 }
 
 
-export function dataTfManagedRuleGroupRulesActionCountCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: DataTfManagedRuleGroup.RulesActionCountCustomRequestHandlingInsertHeaderProperty): any {
+export function dataAwsManagedRuleGroupRulesActionCountCustomRequestHandlingInsertHeaderPropertyToTerraform(struct?: DataAwsManagedRuleGroup.RulesActionCountCustomRequestHandlingInsertHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,7 +553,7 @@ export function dataTfManagedRuleGroupRulesActionCountCustomRequestHandlingInser
 }
 
 
-export function dataTfManagedRuleGroupRulesActionCountCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.RulesActionCountCustomRequestHandlingInsertHeaderProperty): any {
+export function dataAwsManagedRuleGroupRulesActionCountCustomRequestHandlingInsertHeaderPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.RulesActionCountCustomRequestHandlingInsertHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -564,7 +564,7 @@ export function dataTfManagedRuleGroupRulesActionCountCustomRequestHandlingInser
 }
 
 
-export function dataTfManagedRuleGroupRulesActionCountCustomRequestHandlingPropertyToTerraform(struct?: DataTfManagedRuleGroup.RulesActionCountCustomRequestHandlingProperty): any {
+export function dataAwsManagedRuleGroupRulesActionCountCustomRequestHandlingPropertyToTerraform(struct?: DataAwsManagedRuleGroup.RulesActionCountCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function dataTfManagedRuleGroupRulesActionCountCustomRequestHandlingPrope
 }
 
 
-export function dataTfManagedRuleGroupRulesActionCountCustomRequestHandlingPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.RulesActionCountCustomRequestHandlingProperty): any {
+export function dataAwsManagedRuleGroupRulesActionCountCustomRequestHandlingPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.RulesActionCountCustomRequestHandlingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -585,7 +585,7 @@ export function dataTfManagedRuleGroupRulesActionCountCustomRequestHandlingPrope
 }
 
 
-export function dataTfManagedRuleGroupCountPropertyToTerraform(struct?: DataTfManagedRuleGroup.CountProperty): any {
+export function dataAwsManagedRuleGroupCountPropertyToTerraform(struct?: DataAwsManagedRuleGroup.CountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -595,7 +595,7 @@ export function dataTfManagedRuleGroupCountPropertyToTerraform(struct?: DataTfMa
 }
 
 
-export function dataTfManagedRuleGroupCountPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.CountProperty): any {
+export function dataAwsManagedRuleGroupCountPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.CountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -606,7 +606,7 @@ export function dataTfManagedRuleGroupCountPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfManagedRuleGroupActionPropertyToTerraform(struct?: DataTfManagedRuleGroup.ActionProperty): any {
+export function dataAwsManagedRuleGroupActionPropertyToTerraform(struct?: DataAwsManagedRuleGroup.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,7 +616,7 @@ export function dataTfManagedRuleGroupActionPropertyToTerraform(struct?: DataTfM
 }
 
 
-export function dataTfManagedRuleGroupActionPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.ActionProperty): any {
+export function dataAwsManagedRuleGroupActionPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.ActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -627,7 +627,7 @@ export function dataTfManagedRuleGroupActionPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataTfManagedRuleGroupRulesPropertyToTerraform(struct?: DataTfManagedRuleGroup.RulesProperty): any {
+export function dataAwsManagedRuleGroupRulesPropertyToTerraform(struct?: DataAwsManagedRuleGroup.RulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function dataTfManagedRuleGroupRulesPropertyToTerraform(struct?: DataTfMa
 }
 
 
-export function dataTfManagedRuleGroupRulesPropertyToHclTerraform(struct?: DataTfManagedRuleGroup.RulesProperty): any {
+export function dataAwsManagedRuleGroupRulesPropertyToHclTerraform(struct?: DataAwsManagedRuleGroup.RulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -648,7 +648,7 @@ export function dataTfManagedRuleGroupRulesPropertyToHclTerraform(struct?: DataT
 }
 
 
-export namespace DataTfManagedRuleGroup {
+export namespace DataAwsManagedRuleGroup {
 export interface AvailableLabelsProperty {
 }
 export class AvailableLabelsPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,110 +5,110 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCanaryConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCanaryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#artifact_s3_location TfCanary#artifact_s3_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#artifact_s3_location AwsCanary#artifact_s3_location}
   */
   readonly artifactS3Location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#delete_lambda TfCanary#delete_lambda}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#delete_lambda AwsCanary#delete_lambda}
   */
   readonly deleteLambda?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#execution_role_arn TfCanary#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#execution_role_arn AwsCanary#execution_role_arn}
   */
   readonly executionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#failure_retention_period TfCanary#failure_retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#failure_retention_period AwsCanary#failure_retention_period}
   */
   readonly failureRetentionPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#handler TfCanary#handler}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#handler AwsCanary#handler}
   */
   readonly handler: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#id TfCanary#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#id AwsCanary#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#name TfCanary#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#name AwsCanary#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#region TfCanary#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#region AwsCanary#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#runtime_version TfCanary#runtime_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#runtime_version AwsCanary#runtime_version}
   */
   readonly runtimeVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#s3_bucket TfCanary#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#s3_bucket AwsCanary#s3_bucket}
   */
   readonly s3Bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#s3_key TfCanary#s3_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#s3_key AwsCanary#s3_key}
   */
   readonly s3Key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#s3_version TfCanary#s3_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#s3_version AwsCanary#s3_version}
   */
   readonly s3Version?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#start_canary TfCanary#start_canary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#start_canary AwsCanary#start_canary}
   */
   readonly startCanary?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#success_retention_period TfCanary#success_retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#success_retention_period AwsCanary#success_retention_period}
   */
   readonly successRetentionPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#tags TfCanary#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#tags AwsCanary#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#tags_all TfCanary#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#tags_all AwsCanary#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#zip_file TfCanary#zip_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#zip_file AwsCanary#zip_file}
   */
   readonly zipFile?: string;
   /**
   * artifact_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#artifact_config TfCanary#artifact_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#artifact_config AwsCanary#artifact_config}
   */
-  readonly artifactConfig?: TfCanary.ArtifactConfigProperty;
+  readonly artifactConfig?: AwsCanary.ArtifactConfigProperty;
   /**
   * run_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#run_config TfCanary#run_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#run_config AwsCanary#run_config}
   */
-  readonly runConfig?: TfCanary.RunConfigProperty;
+  readonly runConfig?: AwsCanary.RunConfigProperty;
   /**
   * schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#schedule TfCanary#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#schedule AwsCanary#schedule}
   */
-  readonly schedule: TfCanary.ScheduleProperty;
+  readonly schedule: AwsCanary.ScheduleProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#vpc_config TfCanary#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#vpc_config AwsCanary#vpc_config}
   */
-  readonly vpcConfig?: TfCanary.VpcConfigProperty;
+  readonly vpcConfig?: AwsCanary.VpcConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary aws_synthetics_canary}
 */
-export class TfCanary extends cdktn.TerraformResource {
+export class AwsCanary extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -119,11 +119,11 @@ export class TfCanary extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCanary resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCanary resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCanary to import
-  * @param importFromId The id of the existing TfCanary that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCanary to import is found
+  * @param importToId The construct id used in the generated config for the AwsCanary to import
+  * @param importFromId The id of the existing AwsCanary that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCanary to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_synthetics_canary", importId: importFromId, provider });
@@ -138,9 +138,9 @@ export class TfCanary extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCanaryConfig
+  * @param options AwsCanaryConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCanaryConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCanaryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_synthetics_canary',
       terraformGeneratorMetadata: {
@@ -445,7 +445,7 @@ export class TfCanary extends cdktn.TerraformResource {
   }
 
   // timeline - computed: true, optional: false, required: false
-  private _timeline = new TfCanary.TimelinePropertyList(this, "timeline", false);
+  private _timeline = new AwsCanary.TimelinePropertyList(this, "timeline", false);
   public get timeline() {
     return this._timeline;
   }
@@ -467,11 +467,11 @@ export class TfCanary extends cdktn.TerraformResource {
   }
 
   // artifact_config - computed: false, optional: true, required: false
-  private _artifactConfig = new TfCanary.ArtifactConfigPropertyOutputReference(this, "artifact_config");
+  private _artifactConfig = new AwsCanary.ArtifactConfigPropertyOutputReference(this, "artifact_config");
   public get artifactConfig() {
     return this._artifactConfig;
   }
-  public putArtifactConfig(value: TfCanary.ArtifactConfigProperty) {
+  public putArtifactConfig(value: AwsCanary.ArtifactConfigProperty) {
     this._artifactConfig.internalValue = value;
   }
   public resetArtifactConfig() {
@@ -483,11 +483,11 @@ export class TfCanary extends cdktn.TerraformResource {
   }
 
   // run_config - computed: false, optional: true, required: false
-  private _runConfig = new TfCanary.RunConfigPropertyOutputReference(this, "run_config");
+  private _runConfig = new AwsCanary.RunConfigPropertyOutputReference(this, "run_config");
   public get runConfig() {
     return this._runConfig;
   }
-  public putRunConfig(value: TfCanary.RunConfigProperty) {
+  public putRunConfig(value: AwsCanary.RunConfigProperty) {
     this._runConfig.internalValue = value;
   }
   public resetRunConfig() {
@@ -499,11 +499,11 @@ export class TfCanary extends cdktn.TerraformResource {
   }
 
   // schedule - computed: false, optional: false, required: true
-  private _schedule = new TfCanary.SchedulePropertyOutputReference(this, "schedule");
+  private _schedule = new AwsCanary.SchedulePropertyOutputReference(this, "schedule");
   public get schedule() {
     return this._schedule;
   }
-  public putSchedule(value: TfCanary.ScheduleProperty) {
+  public putSchedule(value: AwsCanary.ScheduleProperty) {
     this._schedule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -512,11 +512,11 @@ export class TfCanary extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new TfCanary.VpcConfigPropertyOutputReference(this, "vpc_config");
+  private _vpcConfig = new AwsCanary.VpcConfigPropertyOutputReference(this, "vpc_config");
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: TfCanary.VpcConfigProperty) {
+  public putVpcConfig(value: AwsCanary.VpcConfigProperty) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -550,10 +550,10 @@ export class TfCanary extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       zip_file: cdktn.stringToTerraform(this._zipFile),
-      artifact_config: tfCanaryArtifactConfigPropertyToTerraform(this._artifactConfig.internalValue),
-      run_config: tfCanaryRunConfigPropertyToTerraform(this._runConfig.internalValue),
-      schedule: tfCanarySchedulePropertyToTerraform(this._schedule.internalValue),
-      vpc_config: tfCanaryVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
+      artifact_config: awsCanaryArtifactConfigPropertyToTerraform(this._artifactConfig.internalValue),
+      run_config: awsCanaryRunConfigPropertyToTerraform(this._runConfig.internalValue),
+      schedule: awsCanarySchedulePropertyToTerraform(this._schedule.internalValue),
+      vpc_config: awsCanaryVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
     };
   }
 
@@ -662,28 +662,28 @@ export class TfCanary extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       artifact_config: {
-        value: tfCanaryArtifactConfigPropertyToHclTerraform(this._artifactConfig.internalValue),
+        value: awsCanaryArtifactConfigPropertyToHclTerraform(this._artifactConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCanary.ArtifactConfigPropertyList",
+        storageClassType: "AwsCanary.ArtifactConfigPropertyList",
       },
       run_config: {
-        value: tfCanaryRunConfigPropertyToHclTerraform(this._runConfig.internalValue),
+        value: awsCanaryRunConfigPropertyToHclTerraform(this._runConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCanary.RunConfigPropertyList",
+        storageClassType: "AwsCanary.RunConfigPropertyList",
       },
       schedule: {
-        value: tfCanarySchedulePropertyToHclTerraform(this._schedule.internalValue),
+        value: awsCanarySchedulePropertyToHclTerraform(this._schedule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCanary.SchedulePropertyList",
+        storageClassType: "AwsCanary.SchedulePropertyList",
       },
       vpc_config: {
-        value: tfCanaryVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
+        value: awsCanaryVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCanary.VpcConfigPropertyList",
+        storageClassType: "AwsCanary.VpcConfigPropertyList",
       },
     };
 
@@ -692,7 +692,7 @@ export class TfCanary extends cdktn.TerraformResource {
   }
 }
 
-export function tfCanaryTimelinePropertyToTerraform(struct?: TfCanary.TimelineProperty): any {
+export function awsCanaryTimelinePropertyToTerraform(struct?: AwsCanary.TimelineProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -702,7 +702,7 @@ export function tfCanaryTimelinePropertyToTerraform(struct?: TfCanary.TimelinePr
 }
 
 
-export function tfCanaryTimelinePropertyToHclTerraform(struct?: TfCanary.TimelineProperty): any {
+export function awsCanaryTimelinePropertyToHclTerraform(struct?: AwsCanary.TimelineProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -713,7 +713,7 @@ export function tfCanaryTimelinePropertyToHclTerraform(struct?: TfCanary.Timelin
 }
 
 
-export function tfCanaryS3EncryptionPropertyToTerraform(struct?: TfCanary.S3EncryptionPropertyOutputReference | TfCanary.S3EncryptionProperty): any {
+export function awsCanaryS3EncryptionPropertyToTerraform(struct?: AwsCanary.S3EncryptionPropertyOutputReference | AwsCanary.S3EncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -725,7 +725,7 @@ export function tfCanaryS3EncryptionPropertyToTerraform(struct?: TfCanary.S3Encr
 }
 
 
-export function tfCanaryS3EncryptionPropertyToHclTerraform(struct?: TfCanary.S3EncryptionPropertyOutputReference | TfCanary.S3EncryptionProperty): any {
+export function awsCanaryS3EncryptionPropertyToHclTerraform(struct?: AwsCanary.S3EncryptionPropertyOutputReference | AwsCanary.S3EncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -750,25 +750,25 @@ export function tfCanaryS3EncryptionPropertyToHclTerraform(struct?: TfCanary.S3E
 }
 
 
-export function tfCanaryArtifactConfigPropertyToTerraform(struct?: TfCanary.ArtifactConfigPropertyOutputReference | TfCanary.ArtifactConfigProperty): any {
+export function awsCanaryArtifactConfigPropertyToTerraform(struct?: AwsCanary.ArtifactConfigPropertyOutputReference | AwsCanary.ArtifactConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_encryption: tfCanaryS3EncryptionPropertyToTerraform(struct!.s3Encryption),
+    s3_encryption: awsCanaryS3EncryptionPropertyToTerraform(struct!.s3Encryption),
   }
 }
 
 
-export function tfCanaryArtifactConfigPropertyToHclTerraform(struct?: TfCanary.ArtifactConfigPropertyOutputReference | TfCanary.ArtifactConfigProperty): any {
+export function awsCanaryArtifactConfigPropertyToHclTerraform(struct?: AwsCanary.ArtifactConfigPropertyOutputReference | AwsCanary.ArtifactConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_encryption: {
-      value: tfCanaryS3EncryptionPropertyToHclTerraform(struct!.s3Encryption),
+      value: awsCanaryS3EncryptionPropertyToHclTerraform(struct!.s3Encryption),
       isBlock: true,
       type: "list",
       storageClassType: "S3EncryptionPropertyList",
@@ -780,7 +780,7 @@ export function tfCanaryArtifactConfigPropertyToHclTerraform(struct?: TfCanary.A
 }
 
 
-export function tfCanaryRunConfigPropertyToTerraform(struct?: TfCanary.RunConfigPropertyOutputReference | TfCanary.RunConfigProperty): any {
+export function awsCanaryRunConfigPropertyToTerraform(struct?: AwsCanary.RunConfigPropertyOutputReference | AwsCanary.RunConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -795,7 +795,7 @@ export function tfCanaryRunConfigPropertyToTerraform(struct?: TfCanary.RunConfig
 }
 
 
-export function tfCanaryRunConfigPropertyToHclTerraform(struct?: TfCanary.RunConfigPropertyOutputReference | TfCanary.RunConfigProperty): any {
+export function awsCanaryRunConfigPropertyToHclTerraform(struct?: AwsCanary.RunConfigPropertyOutputReference | AwsCanary.RunConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -838,7 +838,7 @@ export function tfCanaryRunConfigPropertyToHclTerraform(struct?: TfCanary.RunCon
 }
 
 
-export function tfCanaryRetryConfigPropertyToTerraform(struct?: TfCanary.RetryConfigPropertyOutputReference | TfCanary.RetryConfigProperty): any {
+export function awsCanaryRetryConfigPropertyToTerraform(struct?: AwsCanary.RetryConfigPropertyOutputReference | AwsCanary.RetryConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -849,7 +849,7 @@ export function tfCanaryRetryConfigPropertyToTerraform(struct?: TfCanary.RetryCo
 }
 
 
-export function tfCanaryRetryConfigPropertyToHclTerraform(struct?: TfCanary.RetryConfigPropertyOutputReference | TfCanary.RetryConfigProperty): any {
+export function awsCanaryRetryConfigPropertyToHclTerraform(struct?: AwsCanary.RetryConfigPropertyOutputReference | AwsCanary.RetryConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -868,7 +868,7 @@ export function tfCanaryRetryConfigPropertyToHclTerraform(struct?: TfCanary.Retr
 }
 
 
-export function tfCanarySchedulePropertyToTerraform(struct?: TfCanary.SchedulePropertyOutputReference | TfCanary.ScheduleProperty): any {
+export function awsCanarySchedulePropertyToTerraform(struct?: AwsCanary.SchedulePropertyOutputReference | AwsCanary.ScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -876,12 +876,12 @@ export function tfCanarySchedulePropertyToTerraform(struct?: TfCanary.SchedulePr
   return {
     duration_in_seconds: cdktn.numberToTerraform(struct!.durationInSeconds),
     expression: cdktn.stringToTerraform(struct!.expression),
-    retry_config: tfCanaryRetryConfigPropertyToTerraform(struct!.retryConfig),
+    retry_config: awsCanaryRetryConfigPropertyToTerraform(struct!.retryConfig),
   }
 }
 
 
-export function tfCanarySchedulePropertyToHclTerraform(struct?: TfCanary.SchedulePropertyOutputReference | TfCanary.ScheduleProperty): any {
+export function awsCanarySchedulePropertyToHclTerraform(struct?: AwsCanary.SchedulePropertyOutputReference | AwsCanary.ScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -900,7 +900,7 @@ export function tfCanarySchedulePropertyToHclTerraform(struct?: TfCanary.Schedul
       storageClassType: "string",
     },
     retry_config: {
-      value: tfCanaryRetryConfigPropertyToHclTerraform(struct!.retryConfig),
+      value: awsCanaryRetryConfigPropertyToHclTerraform(struct!.retryConfig),
       isBlock: true,
       type: "list",
       storageClassType: "RetryConfigPropertyList",
@@ -912,7 +912,7 @@ export function tfCanarySchedulePropertyToHclTerraform(struct?: TfCanary.Schedul
 }
 
 
-export function tfCanaryVpcConfigPropertyToTerraform(struct?: TfCanary.VpcConfigPropertyOutputReference | TfCanary.VpcConfigProperty): any {
+export function awsCanaryVpcConfigPropertyToTerraform(struct?: AwsCanary.VpcConfigPropertyOutputReference | AwsCanary.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -925,7 +925,7 @@ export function tfCanaryVpcConfigPropertyToTerraform(struct?: TfCanary.VpcConfig
 }
 
 
-export function tfCanaryVpcConfigPropertyToHclTerraform(struct?: TfCanary.VpcConfigPropertyOutputReference | TfCanary.VpcConfigProperty): any {
+export function awsCanaryVpcConfigPropertyToHclTerraform(struct?: AwsCanary.VpcConfigPropertyOutputReference | AwsCanary.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -956,7 +956,7 @@ export function tfCanaryVpcConfigPropertyToHclTerraform(struct?: TfCanary.VpcCon
 }
 
 
-export namespace TfCanary {
+export namespace AwsCanary {
 export interface TimelineProperty {
 }
 export class TimelinePropertyOutputReference extends cdktn.ComplexObject {
@@ -1028,11 +1028,11 @@ export class TimelinePropertyList extends cdktn.ComplexList {
 }
 export interface S3EncryptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#encryption_mode TfCanary#encryption_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#encryption_mode AwsCanary#encryption_mode}
   */
   readonly encryptionMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#kms_key_arn TfCanary#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#kms_key_arn AwsCanary#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
 }
@@ -1110,7 +1110,7 @@ export interface ArtifactConfigProperty {
   /**
   * s3_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#s3_encryption TfCanary#s3_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#s3_encryption AwsCanary#s3_encryption}
   */
   readonly s3Encryption?: S3EncryptionProperty;
 }
@@ -1164,23 +1164,23 @@ export class ArtifactConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RunConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#active_tracing TfCanary#active_tracing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#active_tracing AwsCanary#active_tracing}
   */
   readonly activeTracing?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#environment_variables TfCanary#environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#environment_variables AwsCanary#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#ephemeral_storage TfCanary#ephemeral_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#ephemeral_storage AwsCanary#ephemeral_storage}
   */
   readonly ephemeralStorage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#memory_in_mb TfCanary#memory_in_mb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#memory_in_mb AwsCanary#memory_in_mb}
   */
   readonly memoryInMb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#timeout_in_seconds TfCanary#timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#timeout_in_seconds AwsCanary#timeout_in_seconds}
   */
   readonly timeoutInSeconds?: number;
 }
@@ -1322,7 +1322,7 @@ export class RunConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RetryConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#max_retries TfCanary#max_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#max_retries AwsCanary#max_retries}
   */
   readonly maxRetries: number;
 }
@@ -1373,17 +1373,17 @@ export class RetryConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ScheduleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#duration_in_seconds TfCanary#duration_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#duration_in_seconds AwsCanary#duration_in_seconds}
   */
   readonly durationInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#expression TfCanary#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#expression AwsCanary#expression}
   */
   readonly expression: string;
   /**
   * retry_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#retry_config TfCanary#retry_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#retry_config AwsCanary#retry_config}
   */
   readonly retryConfig?: RetryConfigProperty;
 }
@@ -1478,15 +1478,15 @@ export class SchedulePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#ipv6_allowed_for_dual_stack TfCanary#ipv6_allowed_for_dual_stack}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#ipv6_allowed_for_dual_stack AwsCanary#ipv6_allowed_for_dual_stack}
   */
   readonly ipv6AllowedForDualStack?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#security_group_ids TfCanary#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#security_group_ids AwsCanary#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#subnet_ids TfCanary#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/synthetics_canary#subnet_ids AwsCanary#subnet_ids}
   */
   readonly subnetIds?: string[];
 }

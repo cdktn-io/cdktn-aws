@@ -5,216 +5,216 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLaunchTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLaunchTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#default_version TfLaunchTemplate#default_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#default_version AwsLaunchTemplate#default_version}
   */
   readonly defaultVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#description TfLaunchTemplate#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#description AwsLaunchTemplate#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#disable_api_stop TfLaunchTemplate#disable_api_stop}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#disable_api_stop AwsLaunchTemplate#disable_api_stop}
   */
   readonly disableApiStop?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#disable_api_termination TfLaunchTemplate#disable_api_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#disable_api_termination AwsLaunchTemplate#disable_api_termination}
   */
   readonly disableApiTermination?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ebs_optimized TfLaunchTemplate#ebs_optimized}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ebs_optimized AwsLaunchTemplate#ebs_optimized}
   */
   readonly ebsOptimized?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#id TfLaunchTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#id AwsLaunchTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#image_id TfLaunchTemplate#image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#image_id AwsLaunchTemplate#image_id}
   */
   readonly imageId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_initiated_shutdown_behavior TfLaunchTemplate#instance_initiated_shutdown_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_initiated_shutdown_behavior AwsLaunchTemplate#instance_initiated_shutdown_behavior}
   */
   readonly instanceInitiatedShutdownBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_type TfLaunchTemplate#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_type AwsLaunchTemplate#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#kernel_id TfLaunchTemplate#kernel_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#kernel_id AwsLaunchTemplate#kernel_id}
   */
   readonly kernelId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#key_name TfLaunchTemplate#key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#key_name AwsLaunchTemplate#key_name}
   */
   readonly keyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#name TfLaunchTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#name AwsLaunchTemplate#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#name_prefix TfLaunchTemplate#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#name_prefix AwsLaunchTemplate#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ram_disk_id TfLaunchTemplate#ram_disk_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ram_disk_id AwsLaunchTemplate#ram_disk_id}
   */
   readonly ramDiskId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#region TfLaunchTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#region AwsLaunchTemplate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#security_group_names TfLaunchTemplate#security_group_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#security_group_names AwsLaunchTemplate#security_group_names}
   */
   readonly securityGroupNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#tags TfLaunchTemplate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#tags AwsLaunchTemplate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#tags_all TfLaunchTemplate#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#tags_all AwsLaunchTemplate#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#update_default_version TfLaunchTemplate#update_default_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#update_default_version AwsLaunchTemplate#update_default_version}
   */
   readonly updateDefaultVersion?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#user_data TfLaunchTemplate#user_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#user_data AwsLaunchTemplate#user_data}
   */
   readonly userData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#vpc_security_group_ids TfLaunchTemplate#vpc_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#vpc_security_group_ids AwsLaunchTemplate#vpc_security_group_ids}
   */
   readonly vpcSecurityGroupIds?: string[];
   /**
   * block_device_mappings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#block_device_mappings TfLaunchTemplate#block_device_mappings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#block_device_mappings AwsLaunchTemplate#block_device_mappings}
   */
-  readonly blockDeviceMappings?: TfLaunchTemplate.BlockDeviceMappingsProperty[] | cdktn.IResolvable;
+  readonly blockDeviceMappings?: AwsLaunchTemplate.BlockDeviceMappingsProperty[] | cdktn.IResolvable;
   /**
   * capacity_reservation_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#capacity_reservation_specification TfLaunchTemplate#capacity_reservation_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#capacity_reservation_specification AwsLaunchTemplate#capacity_reservation_specification}
   */
-  readonly capacityReservationSpecification?: TfLaunchTemplate.CapacityReservationSpecificationProperty;
+  readonly capacityReservationSpecification?: AwsLaunchTemplate.CapacityReservationSpecificationProperty;
   /**
   * cpu_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#cpu_options TfLaunchTemplate#cpu_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#cpu_options AwsLaunchTemplate#cpu_options}
   */
-  readonly cpuOptions?: TfLaunchTemplate.CpuOptionsProperty;
+  readonly cpuOptions?: AwsLaunchTemplate.CpuOptionsProperty;
   /**
   * credit_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#credit_specification TfLaunchTemplate#credit_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#credit_specification AwsLaunchTemplate#credit_specification}
   */
-  readonly creditSpecification?: TfLaunchTemplate.CreditSpecificationProperty;
+  readonly creditSpecification?: AwsLaunchTemplate.CreditSpecificationProperty;
   /**
   * enclave_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#enclave_options TfLaunchTemplate#enclave_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#enclave_options AwsLaunchTemplate#enclave_options}
   */
-  readonly enclaveOptions?: TfLaunchTemplate.EnclaveOptionsProperty;
+  readonly enclaveOptions?: AwsLaunchTemplate.EnclaveOptionsProperty;
   /**
   * hibernation_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#hibernation_options TfLaunchTemplate#hibernation_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#hibernation_options AwsLaunchTemplate#hibernation_options}
   */
-  readonly hibernationOptions?: TfLaunchTemplate.HibernationOptionsProperty;
+  readonly hibernationOptions?: AwsLaunchTemplate.HibernationOptionsProperty;
   /**
   * iam_instance_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#iam_instance_profile TfLaunchTemplate#iam_instance_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#iam_instance_profile AwsLaunchTemplate#iam_instance_profile}
   */
-  readonly iamInstanceProfile?: TfLaunchTemplate.IamInstanceProfileProperty;
+  readonly iamInstanceProfile?: AwsLaunchTemplate.IamInstanceProfileProperty;
   /**
   * instance_market_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_market_options TfLaunchTemplate#instance_market_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_market_options AwsLaunchTemplate#instance_market_options}
   */
-  readonly instanceMarketOptions?: TfLaunchTemplate.InstanceMarketOptionsProperty;
+  readonly instanceMarketOptions?: AwsLaunchTemplate.InstanceMarketOptionsProperty;
   /**
   * instance_requirements block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_requirements TfLaunchTemplate#instance_requirements}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_requirements AwsLaunchTemplate#instance_requirements}
   */
-  readonly instanceRequirements?: TfLaunchTemplate.InstanceRequirementsProperty;
+  readonly instanceRequirements?: AwsLaunchTemplate.InstanceRequirementsProperty;
   /**
   * license_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#license_specification TfLaunchTemplate#license_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#license_specification AwsLaunchTemplate#license_specification}
   */
-  readonly licenseSpecification?: TfLaunchTemplate.LicenseSpecificationProperty[] | cdktn.IResolvable;
+  readonly licenseSpecification?: AwsLaunchTemplate.LicenseSpecificationProperty[] | cdktn.IResolvable;
   /**
   * maintenance_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#maintenance_options TfLaunchTemplate#maintenance_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#maintenance_options AwsLaunchTemplate#maintenance_options}
   */
-  readonly maintenanceOptions?: TfLaunchTemplate.MaintenanceOptionsProperty;
+  readonly maintenanceOptions?: AwsLaunchTemplate.MaintenanceOptionsProperty;
   /**
   * metadata_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#metadata_options TfLaunchTemplate#metadata_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#metadata_options AwsLaunchTemplate#metadata_options}
   */
-  readonly metadataOptions?: TfLaunchTemplate.MetadataOptionsProperty;
+  readonly metadataOptions?: AwsLaunchTemplate.MetadataOptionsProperty;
   /**
   * monitoring block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#monitoring TfLaunchTemplate#monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#monitoring AwsLaunchTemplate#monitoring}
   */
-  readonly monitoring?: TfLaunchTemplate.MonitoringProperty;
+  readonly monitoring?: AwsLaunchTemplate.MonitoringProperty;
   /**
   * network_interfaces block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_interfaces TfLaunchTemplate#network_interfaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_interfaces AwsLaunchTemplate#network_interfaces}
   */
-  readonly networkInterfaces?: TfLaunchTemplate.NetworkInterfacesProperty[] | cdktn.IResolvable;
+  readonly networkInterfaces?: AwsLaunchTemplate.NetworkInterfacesProperty[] | cdktn.IResolvable;
   /**
   * network_performance_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_performance_options TfLaunchTemplate#network_performance_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_performance_options AwsLaunchTemplate#network_performance_options}
   */
-  readonly networkPerformanceOptions?: TfLaunchTemplate.NetworkPerformanceOptionsProperty;
+  readonly networkPerformanceOptions?: AwsLaunchTemplate.NetworkPerformanceOptionsProperty;
   /**
   * placement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#placement TfLaunchTemplate#placement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#placement AwsLaunchTemplate#placement}
   */
-  readonly placement?: TfLaunchTemplate.PlacementProperty;
+  readonly placement?: AwsLaunchTemplate.PlacementProperty;
   /**
   * private_dns_name_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#private_dns_name_options TfLaunchTemplate#private_dns_name_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#private_dns_name_options AwsLaunchTemplate#private_dns_name_options}
   */
-  readonly privateDnsNameOptions?: TfLaunchTemplate.PrivateDnsNameOptionsProperty;
+  readonly privateDnsNameOptions?: AwsLaunchTemplate.PrivateDnsNameOptionsProperty;
   /**
   * secondary_interfaces block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#secondary_interfaces TfLaunchTemplate#secondary_interfaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#secondary_interfaces AwsLaunchTemplate#secondary_interfaces}
   */
-  readonly secondaryInterfaces?: TfLaunchTemplate.SecondaryInterfacesProperty[] | cdktn.IResolvable;
+  readonly secondaryInterfaces?: AwsLaunchTemplate.SecondaryInterfacesProperty[] | cdktn.IResolvable;
   /**
   * tag_specifications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#tag_specifications TfLaunchTemplate#tag_specifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#tag_specifications AwsLaunchTemplate#tag_specifications}
   */
-  readonly tagSpecifications?: TfLaunchTemplate.TagSpecificationsProperty[] | cdktn.IResolvable;
+  readonly tagSpecifications?: AwsLaunchTemplate.TagSpecificationsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template aws_launch_template}
 */
-export class TfLaunchTemplate extends cdktn.TerraformResource {
+export class AwsLaunchTemplate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -225,11 +225,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLaunchTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLaunchTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLaunchTemplate to import
-  * @param importFromId The id of the existing TfLaunchTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLaunchTemplate to import is found
+  * @param importToId The construct id used in the generated config for the AwsLaunchTemplate to import
+  * @param importFromId The id of the existing AwsLaunchTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLaunchTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_launch_template", importId: importFromId, provider });
@@ -244,9 +244,9 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLaunchTemplateConfig = {}
+  * @param options AwsLaunchTemplateConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfLaunchTemplateConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsLaunchTemplateConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_launch_template',
       terraformGeneratorMetadata: {
@@ -655,11 +655,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // block_device_mappings - computed: false, optional: true, required: false
-  private _blockDeviceMappings = new TfLaunchTemplate.BlockDeviceMappingsPropertyList(this, "block_device_mappings", false);
+  private _blockDeviceMappings = new AwsLaunchTemplate.BlockDeviceMappingsPropertyList(this, "block_device_mappings", false);
   public get blockDeviceMappings() {
     return this._blockDeviceMappings;
   }
-  public putBlockDeviceMappings(value: TfLaunchTemplate.BlockDeviceMappingsProperty[] | cdktn.IResolvable) {
+  public putBlockDeviceMappings(value: AwsLaunchTemplate.BlockDeviceMappingsProperty[] | cdktn.IResolvable) {
     this._blockDeviceMappings.internalValue = value;
   }
   public resetBlockDeviceMappings() {
@@ -671,11 +671,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // capacity_reservation_specification - computed: false, optional: true, required: false
-  private _capacityReservationSpecification = new TfLaunchTemplate.CapacityReservationSpecificationPropertyOutputReference(this, "capacity_reservation_specification");
+  private _capacityReservationSpecification = new AwsLaunchTemplate.CapacityReservationSpecificationPropertyOutputReference(this, "capacity_reservation_specification");
   public get capacityReservationSpecification() {
     return this._capacityReservationSpecification;
   }
-  public putCapacityReservationSpecification(value: TfLaunchTemplate.CapacityReservationSpecificationProperty) {
+  public putCapacityReservationSpecification(value: AwsLaunchTemplate.CapacityReservationSpecificationProperty) {
     this._capacityReservationSpecification.internalValue = value;
   }
   public resetCapacityReservationSpecification() {
@@ -687,11 +687,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // cpu_options - computed: false, optional: true, required: false
-  private _cpuOptions = new TfLaunchTemplate.CpuOptionsPropertyOutputReference(this, "cpu_options");
+  private _cpuOptions = new AwsLaunchTemplate.CpuOptionsPropertyOutputReference(this, "cpu_options");
   public get cpuOptions() {
     return this._cpuOptions;
   }
-  public putCpuOptions(value: TfLaunchTemplate.CpuOptionsProperty) {
+  public putCpuOptions(value: AwsLaunchTemplate.CpuOptionsProperty) {
     this._cpuOptions.internalValue = value;
   }
   public resetCpuOptions() {
@@ -703,11 +703,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // credit_specification - computed: false, optional: true, required: false
-  private _creditSpecification = new TfLaunchTemplate.CreditSpecificationPropertyOutputReference(this, "credit_specification");
+  private _creditSpecification = new AwsLaunchTemplate.CreditSpecificationPropertyOutputReference(this, "credit_specification");
   public get creditSpecification() {
     return this._creditSpecification;
   }
-  public putCreditSpecification(value: TfLaunchTemplate.CreditSpecificationProperty) {
+  public putCreditSpecification(value: AwsLaunchTemplate.CreditSpecificationProperty) {
     this._creditSpecification.internalValue = value;
   }
   public resetCreditSpecification() {
@@ -719,11 +719,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // enclave_options - computed: false, optional: true, required: false
-  private _enclaveOptions = new TfLaunchTemplate.EnclaveOptionsPropertyOutputReference(this, "enclave_options");
+  private _enclaveOptions = new AwsLaunchTemplate.EnclaveOptionsPropertyOutputReference(this, "enclave_options");
   public get enclaveOptions() {
     return this._enclaveOptions;
   }
-  public putEnclaveOptions(value: TfLaunchTemplate.EnclaveOptionsProperty) {
+  public putEnclaveOptions(value: AwsLaunchTemplate.EnclaveOptionsProperty) {
     this._enclaveOptions.internalValue = value;
   }
   public resetEnclaveOptions() {
@@ -735,11 +735,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // hibernation_options - computed: false, optional: true, required: false
-  private _hibernationOptions = new TfLaunchTemplate.HibernationOptionsPropertyOutputReference(this, "hibernation_options");
+  private _hibernationOptions = new AwsLaunchTemplate.HibernationOptionsPropertyOutputReference(this, "hibernation_options");
   public get hibernationOptions() {
     return this._hibernationOptions;
   }
-  public putHibernationOptions(value: TfLaunchTemplate.HibernationOptionsProperty) {
+  public putHibernationOptions(value: AwsLaunchTemplate.HibernationOptionsProperty) {
     this._hibernationOptions.internalValue = value;
   }
   public resetHibernationOptions() {
@@ -751,11 +751,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // iam_instance_profile - computed: false, optional: true, required: false
-  private _iamInstanceProfile = new TfLaunchTemplate.IamInstanceProfilePropertyOutputReference(this, "iam_instance_profile");
+  private _iamInstanceProfile = new AwsLaunchTemplate.IamInstanceProfilePropertyOutputReference(this, "iam_instance_profile");
   public get iamInstanceProfile() {
     return this._iamInstanceProfile;
   }
-  public putIamInstanceProfile(value: TfLaunchTemplate.IamInstanceProfileProperty) {
+  public putIamInstanceProfile(value: AwsLaunchTemplate.IamInstanceProfileProperty) {
     this._iamInstanceProfile.internalValue = value;
   }
   public resetIamInstanceProfile() {
@@ -767,11 +767,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // instance_market_options - computed: false, optional: true, required: false
-  private _instanceMarketOptions = new TfLaunchTemplate.InstanceMarketOptionsPropertyOutputReference(this, "instance_market_options");
+  private _instanceMarketOptions = new AwsLaunchTemplate.InstanceMarketOptionsPropertyOutputReference(this, "instance_market_options");
   public get instanceMarketOptions() {
     return this._instanceMarketOptions;
   }
-  public putInstanceMarketOptions(value: TfLaunchTemplate.InstanceMarketOptionsProperty) {
+  public putInstanceMarketOptions(value: AwsLaunchTemplate.InstanceMarketOptionsProperty) {
     this._instanceMarketOptions.internalValue = value;
   }
   public resetInstanceMarketOptions() {
@@ -783,11 +783,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // instance_requirements - computed: false, optional: true, required: false
-  private _instanceRequirements = new TfLaunchTemplate.InstanceRequirementsPropertyOutputReference(this, "instance_requirements");
+  private _instanceRequirements = new AwsLaunchTemplate.InstanceRequirementsPropertyOutputReference(this, "instance_requirements");
   public get instanceRequirements() {
     return this._instanceRequirements;
   }
-  public putInstanceRequirements(value: TfLaunchTemplate.InstanceRequirementsProperty) {
+  public putInstanceRequirements(value: AwsLaunchTemplate.InstanceRequirementsProperty) {
     this._instanceRequirements.internalValue = value;
   }
   public resetInstanceRequirements() {
@@ -799,11 +799,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // license_specification - computed: false, optional: true, required: false
-  private _licenseSpecification = new TfLaunchTemplate.LicenseSpecificationPropertyList(this, "license_specification", true);
+  private _licenseSpecification = new AwsLaunchTemplate.LicenseSpecificationPropertyList(this, "license_specification", true);
   public get licenseSpecification() {
     return this._licenseSpecification;
   }
-  public putLicenseSpecification(value: TfLaunchTemplate.LicenseSpecificationProperty[] | cdktn.IResolvable) {
+  public putLicenseSpecification(value: AwsLaunchTemplate.LicenseSpecificationProperty[] | cdktn.IResolvable) {
     this._licenseSpecification.internalValue = value;
   }
   public resetLicenseSpecification() {
@@ -815,11 +815,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // maintenance_options - computed: false, optional: true, required: false
-  private _maintenanceOptions = new TfLaunchTemplate.MaintenanceOptionsPropertyOutputReference(this, "maintenance_options");
+  private _maintenanceOptions = new AwsLaunchTemplate.MaintenanceOptionsPropertyOutputReference(this, "maintenance_options");
   public get maintenanceOptions() {
     return this._maintenanceOptions;
   }
-  public putMaintenanceOptions(value: TfLaunchTemplate.MaintenanceOptionsProperty) {
+  public putMaintenanceOptions(value: AwsLaunchTemplate.MaintenanceOptionsProperty) {
     this._maintenanceOptions.internalValue = value;
   }
   public resetMaintenanceOptions() {
@@ -831,11 +831,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // metadata_options - computed: false, optional: true, required: false
-  private _metadataOptions = new TfLaunchTemplate.MetadataOptionsPropertyOutputReference(this, "metadata_options");
+  private _metadataOptions = new AwsLaunchTemplate.MetadataOptionsPropertyOutputReference(this, "metadata_options");
   public get metadataOptions() {
     return this._metadataOptions;
   }
-  public putMetadataOptions(value: TfLaunchTemplate.MetadataOptionsProperty) {
+  public putMetadataOptions(value: AwsLaunchTemplate.MetadataOptionsProperty) {
     this._metadataOptions.internalValue = value;
   }
   public resetMetadataOptions() {
@@ -847,11 +847,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // monitoring - computed: false, optional: true, required: false
-  private _monitoring = new TfLaunchTemplate.MonitoringPropertyOutputReference(this, "monitoring");
+  private _monitoring = new AwsLaunchTemplate.MonitoringPropertyOutputReference(this, "monitoring");
   public get monitoring() {
     return this._monitoring;
   }
-  public putMonitoring(value: TfLaunchTemplate.MonitoringProperty) {
+  public putMonitoring(value: AwsLaunchTemplate.MonitoringProperty) {
     this._monitoring.internalValue = value;
   }
   public resetMonitoring() {
@@ -863,11 +863,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // network_interfaces - computed: false, optional: true, required: false
-  private _networkInterfaces = new TfLaunchTemplate.NetworkInterfacesPropertyList(this, "network_interfaces", false);
+  private _networkInterfaces = new AwsLaunchTemplate.NetworkInterfacesPropertyList(this, "network_interfaces", false);
   public get networkInterfaces() {
     return this._networkInterfaces;
   }
-  public putNetworkInterfaces(value: TfLaunchTemplate.NetworkInterfacesProperty[] | cdktn.IResolvable) {
+  public putNetworkInterfaces(value: AwsLaunchTemplate.NetworkInterfacesProperty[] | cdktn.IResolvable) {
     this._networkInterfaces.internalValue = value;
   }
   public resetNetworkInterfaces() {
@@ -879,11 +879,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // network_performance_options - computed: false, optional: true, required: false
-  private _networkPerformanceOptions = new TfLaunchTemplate.NetworkPerformanceOptionsPropertyOutputReference(this, "network_performance_options");
+  private _networkPerformanceOptions = new AwsLaunchTemplate.NetworkPerformanceOptionsPropertyOutputReference(this, "network_performance_options");
   public get networkPerformanceOptions() {
     return this._networkPerformanceOptions;
   }
-  public putNetworkPerformanceOptions(value: TfLaunchTemplate.NetworkPerformanceOptionsProperty) {
+  public putNetworkPerformanceOptions(value: AwsLaunchTemplate.NetworkPerformanceOptionsProperty) {
     this._networkPerformanceOptions.internalValue = value;
   }
   public resetNetworkPerformanceOptions() {
@@ -895,11 +895,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // placement - computed: false, optional: true, required: false
-  private _placement = new TfLaunchTemplate.PlacementPropertyOutputReference(this, "placement");
+  private _placement = new AwsLaunchTemplate.PlacementPropertyOutputReference(this, "placement");
   public get placement() {
     return this._placement;
   }
-  public putPlacement(value: TfLaunchTemplate.PlacementProperty) {
+  public putPlacement(value: AwsLaunchTemplate.PlacementProperty) {
     this._placement.internalValue = value;
   }
   public resetPlacement() {
@@ -911,11 +911,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // private_dns_name_options - computed: false, optional: true, required: false
-  private _privateDnsNameOptions = new TfLaunchTemplate.PrivateDnsNameOptionsPropertyOutputReference(this, "private_dns_name_options");
+  private _privateDnsNameOptions = new AwsLaunchTemplate.PrivateDnsNameOptionsPropertyOutputReference(this, "private_dns_name_options");
   public get privateDnsNameOptions() {
     return this._privateDnsNameOptions;
   }
-  public putPrivateDnsNameOptions(value: TfLaunchTemplate.PrivateDnsNameOptionsProperty) {
+  public putPrivateDnsNameOptions(value: AwsLaunchTemplate.PrivateDnsNameOptionsProperty) {
     this._privateDnsNameOptions.internalValue = value;
   }
   public resetPrivateDnsNameOptions() {
@@ -927,11 +927,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // secondary_interfaces - computed: false, optional: true, required: false
-  private _secondaryInterfaces = new TfLaunchTemplate.SecondaryInterfacesPropertyList(this, "secondary_interfaces", false);
+  private _secondaryInterfaces = new AwsLaunchTemplate.SecondaryInterfacesPropertyList(this, "secondary_interfaces", false);
   public get secondaryInterfaces() {
     return this._secondaryInterfaces;
   }
-  public putSecondaryInterfaces(value: TfLaunchTemplate.SecondaryInterfacesProperty[] | cdktn.IResolvable) {
+  public putSecondaryInterfaces(value: AwsLaunchTemplate.SecondaryInterfacesProperty[] | cdktn.IResolvable) {
     this._secondaryInterfaces.internalValue = value;
   }
   public resetSecondaryInterfaces() {
@@ -943,11 +943,11 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 
   // tag_specifications - computed: false, optional: true, required: false
-  private _tagSpecifications = new TfLaunchTemplate.TagSpecificationsPropertyList(this, "tag_specifications", false);
+  private _tagSpecifications = new AwsLaunchTemplate.TagSpecificationsPropertyList(this, "tag_specifications", false);
   public get tagSpecifications() {
     return this._tagSpecifications;
   }
-  public putTagSpecifications(value: TfLaunchTemplate.TagSpecificationsProperty[] | cdktn.IResolvable) {
+  public putTagSpecifications(value: AwsLaunchTemplate.TagSpecificationsProperty[] | cdktn.IResolvable) {
     this._tagSpecifications.internalValue = value;
   }
   public resetTagSpecifications() {
@@ -985,25 +985,25 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
       update_default_version: cdktn.booleanToTerraform(this._updateDefaultVersion),
       user_data: cdktn.stringToTerraform(this._userData),
       vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
-      block_device_mappings: cdktn.listMapper(tfLaunchTemplateBlockDeviceMappingsPropertyToTerraform, true)(this._blockDeviceMappings.internalValue),
-      capacity_reservation_specification: tfLaunchTemplateCapacityReservationSpecificationPropertyToTerraform(this._capacityReservationSpecification.internalValue),
-      cpu_options: tfLaunchTemplateCpuOptionsPropertyToTerraform(this._cpuOptions.internalValue),
-      credit_specification: tfLaunchTemplateCreditSpecificationPropertyToTerraform(this._creditSpecification.internalValue),
-      enclave_options: tfLaunchTemplateEnclaveOptionsPropertyToTerraform(this._enclaveOptions.internalValue),
-      hibernation_options: tfLaunchTemplateHibernationOptionsPropertyToTerraform(this._hibernationOptions.internalValue),
-      iam_instance_profile: tfLaunchTemplateIamInstanceProfilePropertyToTerraform(this._iamInstanceProfile.internalValue),
-      instance_market_options: tfLaunchTemplateInstanceMarketOptionsPropertyToTerraform(this._instanceMarketOptions.internalValue),
-      instance_requirements: tfLaunchTemplateInstanceRequirementsPropertyToTerraform(this._instanceRequirements.internalValue),
-      license_specification: cdktn.listMapper(tfLaunchTemplateLicenseSpecificationPropertyToTerraform, true)(this._licenseSpecification.internalValue),
-      maintenance_options: tfLaunchTemplateMaintenanceOptionsPropertyToTerraform(this._maintenanceOptions.internalValue),
-      metadata_options: tfLaunchTemplateMetadataOptionsPropertyToTerraform(this._metadataOptions.internalValue),
-      monitoring: tfLaunchTemplateMonitoringPropertyToTerraform(this._monitoring.internalValue),
-      network_interfaces: cdktn.listMapper(tfLaunchTemplateNetworkInterfacesPropertyToTerraform, true)(this._networkInterfaces.internalValue),
-      network_performance_options: tfLaunchTemplateNetworkPerformanceOptionsPropertyToTerraform(this._networkPerformanceOptions.internalValue),
-      placement: tfLaunchTemplatePlacementPropertyToTerraform(this._placement.internalValue),
-      private_dns_name_options: tfLaunchTemplatePrivateDnsNameOptionsPropertyToTerraform(this._privateDnsNameOptions.internalValue),
-      secondary_interfaces: cdktn.listMapper(tfLaunchTemplateSecondaryInterfacesPropertyToTerraform, true)(this._secondaryInterfaces.internalValue),
-      tag_specifications: cdktn.listMapper(tfLaunchTemplateTagSpecificationsPropertyToTerraform, true)(this._tagSpecifications.internalValue),
+      block_device_mappings: cdktn.listMapper(awsLaunchTemplateBlockDeviceMappingsPropertyToTerraform, true)(this._blockDeviceMappings.internalValue),
+      capacity_reservation_specification: awsLaunchTemplateCapacityReservationSpecificationPropertyToTerraform(this._capacityReservationSpecification.internalValue),
+      cpu_options: awsLaunchTemplateCpuOptionsPropertyToTerraform(this._cpuOptions.internalValue),
+      credit_specification: awsLaunchTemplateCreditSpecificationPropertyToTerraform(this._creditSpecification.internalValue),
+      enclave_options: awsLaunchTemplateEnclaveOptionsPropertyToTerraform(this._enclaveOptions.internalValue),
+      hibernation_options: awsLaunchTemplateHibernationOptionsPropertyToTerraform(this._hibernationOptions.internalValue),
+      iam_instance_profile: awsLaunchTemplateIamInstanceProfilePropertyToTerraform(this._iamInstanceProfile.internalValue),
+      instance_market_options: awsLaunchTemplateInstanceMarketOptionsPropertyToTerraform(this._instanceMarketOptions.internalValue),
+      instance_requirements: awsLaunchTemplateInstanceRequirementsPropertyToTerraform(this._instanceRequirements.internalValue),
+      license_specification: cdktn.listMapper(awsLaunchTemplateLicenseSpecificationPropertyToTerraform, true)(this._licenseSpecification.internalValue),
+      maintenance_options: awsLaunchTemplateMaintenanceOptionsPropertyToTerraform(this._maintenanceOptions.internalValue),
+      metadata_options: awsLaunchTemplateMetadataOptionsPropertyToTerraform(this._metadataOptions.internalValue),
+      monitoring: awsLaunchTemplateMonitoringPropertyToTerraform(this._monitoring.internalValue),
+      network_interfaces: cdktn.listMapper(awsLaunchTemplateNetworkInterfacesPropertyToTerraform, true)(this._networkInterfaces.internalValue),
+      network_performance_options: awsLaunchTemplateNetworkPerformanceOptionsPropertyToTerraform(this._networkPerformanceOptions.internalValue),
+      placement: awsLaunchTemplatePlacementPropertyToTerraform(this._placement.internalValue),
+      private_dns_name_options: awsLaunchTemplatePrivateDnsNameOptionsPropertyToTerraform(this._privateDnsNameOptions.internalValue),
+      secondary_interfaces: cdktn.listMapper(awsLaunchTemplateSecondaryInterfacesPropertyToTerraform, true)(this._secondaryInterfaces.internalValue),
+      tag_specifications: cdktn.listMapper(awsLaunchTemplateTagSpecificationsPropertyToTerraform, true)(this._tagSpecifications.internalValue),
     };
   }
 
@@ -1136,118 +1136,118 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       block_device_mappings: {
-        value: cdktn.listMapperHcl(tfLaunchTemplateBlockDeviceMappingsPropertyToHclTerraform, true)(this._blockDeviceMappings.internalValue),
+        value: cdktn.listMapperHcl(awsLaunchTemplateBlockDeviceMappingsPropertyToHclTerraform, true)(this._blockDeviceMappings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.BlockDeviceMappingsPropertyList",
+        storageClassType: "AwsLaunchTemplate.BlockDeviceMappingsPropertyList",
       },
       capacity_reservation_specification: {
-        value: tfLaunchTemplateCapacityReservationSpecificationPropertyToHclTerraform(this._capacityReservationSpecification.internalValue),
+        value: awsLaunchTemplateCapacityReservationSpecificationPropertyToHclTerraform(this._capacityReservationSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.CapacityReservationSpecificationPropertyList",
+        storageClassType: "AwsLaunchTemplate.CapacityReservationSpecificationPropertyList",
       },
       cpu_options: {
-        value: tfLaunchTemplateCpuOptionsPropertyToHclTerraform(this._cpuOptions.internalValue),
+        value: awsLaunchTemplateCpuOptionsPropertyToHclTerraform(this._cpuOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.CpuOptionsPropertyList",
+        storageClassType: "AwsLaunchTemplate.CpuOptionsPropertyList",
       },
       credit_specification: {
-        value: tfLaunchTemplateCreditSpecificationPropertyToHclTerraform(this._creditSpecification.internalValue),
+        value: awsLaunchTemplateCreditSpecificationPropertyToHclTerraform(this._creditSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.CreditSpecificationPropertyList",
+        storageClassType: "AwsLaunchTemplate.CreditSpecificationPropertyList",
       },
       enclave_options: {
-        value: tfLaunchTemplateEnclaveOptionsPropertyToHclTerraform(this._enclaveOptions.internalValue),
+        value: awsLaunchTemplateEnclaveOptionsPropertyToHclTerraform(this._enclaveOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.EnclaveOptionsPropertyList",
+        storageClassType: "AwsLaunchTemplate.EnclaveOptionsPropertyList",
       },
       hibernation_options: {
-        value: tfLaunchTemplateHibernationOptionsPropertyToHclTerraform(this._hibernationOptions.internalValue),
+        value: awsLaunchTemplateHibernationOptionsPropertyToHclTerraform(this._hibernationOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.HibernationOptionsPropertyList",
+        storageClassType: "AwsLaunchTemplate.HibernationOptionsPropertyList",
       },
       iam_instance_profile: {
-        value: tfLaunchTemplateIamInstanceProfilePropertyToHclTerraform(this._iamInstanceProfile.internalValue),
+        value: awsLaunchTemplateIamInstanceProfilePropertyToHclTerraform(this._iamInstanceProfile.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.IamInstanceProfilePropertyList",
+        storageClassType: "AwsLaunchTemplate.IamInstanceProfilePropertyList",
       },
       instance_market_options: {
-        value: tfLaunchTemplateInstanceMarketOptionsPropertyToHclTerraform(this._instanceMarketOptions.internalValue),
+        value: awsLaunchTemplateInstanceMarketOptionsPropertyToHclTerraform(this._instanceMarketOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.InstanceMarketOptionsPropertyList",
+        storageClassType: "AwsLaunchTemplate.InstanceMarketOptionsPropertyList",
       },
       instance_requirements: {
-        value: tfLaunchTemplateInstanceRequirementsPropertyToHclTerraform(this._instanceRequirements.internalValue),
+        value: awsLaunchTemplateInstanceRequirementsPropertyToHclTerraform(this._instanceRequirements.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.InstanceRequirementsPropertyList",
+        storageClassType: "AwsLaunchTemplate.InstanceRequirementsPropertyList",
       },
       license_specification: {
-        value: cdktn.listMapperHcl(tfLaunchTemplateLicenseSpecificationPropertyToHclTerraform, true)(this._licenseSpecification.internalValue),
+        value: cdktn.listMapperHcl(awsLaunchTemplateLicenseSpecificationPropertyToHclTerraform, true)(this._licenseSpecification.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfLaunchTemplate.LicenseSpecificationPropertyList",
+        storageClassType: "AwsLaunchTemplate.LicenseSpecificationPropertyList",
       },
       maintenance_options: {
-        value: tfLaunchTemplateMaintenanceOptionsPropertyToHclTerraform(this._maintenanceOptions.internalValue),
+        value: awsLaunchTemplateMaintenanceOptionsPropertyToHclTerraform(this._maintenanceOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.MaintenanceOptionsPropertyList",
+        storageClassType: "AwsLaunchTemplate.MaintenanceOptionsPropertyList",
       },
       metadata_options: {
-        value: tfLaunchTemplateMetadataOptionsPropertyToHclTerraform(this._metadataOptions.internalValue),
+        value: awsLaunchTemplateMetadataOptionsPropertyToHclTerraform(this._metadataOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.MetadataOptionsPropertyList",
+        storageClassType: "AwsLaunchTemplate.MetadataOptionsPropertyList",
       },
       monitoring: {
-        value: tfLaunchTemplateMonitoringPropertyToHclTerraform(this._monitoring.internalValue),
+        value: awsLaunchTemplateMonitoringPropertyToHclTerraform(this._monitoring.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.MonitoringPropertyList",
+        storageClassType: "AwsLaunchTemplate.MonitoringPropertyList",
       },
       network_interfaces: {
-        value: cdktn.listMapperHcl(tfLaunchTemplateNetworkInterfacesPropertyToHclTerraform, true)(this._networkInterfaces.internalValue),
+        value: cdktn.listMapperHcl(awsLaunchTemplateNetworkInterfacesPropertyToHclTerraform, true)(this._networkInterfaces.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.NetworkInterfacesPropertyList",
+        storageClassType: "AwsLaunchTemplate.NetworkInterfacesPropertyList",
       },
       network_performance_options: {
-        value: tfLaunchTemplateNetworkPerformanceOptionsPropertyToHclTerraform(this._networkPerformanceOptions.internalValue),
+        value: awsLaunchTemplateNetworkPerformanceOptionsPropertyToHclTerraform(this._networkPerformanceOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.NetworkPerformanceOptionsPropertyList",
+        storageClassType: "AwsLaunchTemplate.NetworkPerformanceOptionsPropertyList",
       },
       placement: {
-        value: tfLaunchTemplatePlacementPropertyToHclTerraform(this._placement.internalValue),
+        value: awsLaunchTemplatePlacementPropertyToHclTerraform(this._placement.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.PlacementPropertyList",
+        storageClassType: "AwsLaunchTemplate.PlacementPropertyList",
       },
       private_dns_name_options: {
-        value: tfLaunchTemplatePrivateDnsNameOptionsPropertyToHclTerraform(this._privateDnsNameOptions.internalValue),
+        value: awsLaunchTemplatePrivateDnsNameOptionsPropertyToHclTerraform(this._privateDnsNameOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.PrivateDnsNameOptionsPropertyList",
+        storageClassType: "AwsLaunchTemplate.PrivateDnsNameOptionsPropertyList",
       },
       secondary_interfaces: {
-        value: cdktn.listMapperHcl(tfLaunchTemplateSecondaryInterfacesPropertyToHclTerraform, true)(this._secondaryInterfaces.internalValue),
+        value: cdktn.listMapperHcl(awsLaunchTemplateSecondaryInterfacesPropertyToHclTerraform, true)(this._secondaryInterfaces.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.SecondaryInterfacesPropertyList",
+        storageClassType: "AwsLaunchTemplate.SecondaryInterfacesPropertyList",
       },
       tag_specifications: {
-        value: cdktn.listMapperHcl(tfLaunchTemplateTagSpecificationsPropertyToHclTerraform, true)(this._tagSpecifications.internalValue),
+        value: cdktn.listMapperHcl(awsLaunchTemplateTagSpecificationsPropertyToHclTerraform, true)(this._tagSpecifications.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchTemplate.TagSpecificationsPropertyList",
+        storageClassType: "AwsLaunchTemplate.TagSpecificationsPropertyList",
       },
     };
 
@@ -1256,7 +1256,7 @@ export class TfLaunchTemplate extends cdktn.TerraformResource {
   }
 }
 
-export function tfLaunchTemplateEbsPropertyToTerraform(struct?: TfLaunchTemplate.EbsPropertyOutputReference | TfLaunchTemplate.EbsProperty): any {
+export function awsLaunchTemplateEbsPropertyToTerraform(struct?: AwsLaunchTemplate.EbsPropertyOutputReference | AwsLaunchTemplate.EbsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1275,7 +1275,7 @@ export function tfLaunchTemplateEbsPropertyToTerraform(struct?: TfLaunchTemplate
 }
 
 
-export function tfLaunchTemplateEbsPropertyToHclTerraform(struct?: TfLaunchTemplate.EbsPropertyOutputReference | TfLaunchTemplate.EbsProperty): any {
+export function awsLaunchTemplateEbsPropertyToHclTerraform(struct?: AwsLaunchTemplate.EbsPropertyOutputReference | AwsLaunchTemplate.EbsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1342,7 +1342,7 @@ export function tfLaunchTemplateEbsPropertyToHclTerraform(struct?: TfLaunchTempl
 }
 
 
-export function tfLaunchTemplateBlockDeviceMappingsPropertyToTerraform(struct?: TfLaunchTemplate.BlockDeviceMappingsProperty | cdktn.IResolvable): any {
+export function awsLaunchTemplateBlockDeviceMappingsPropertyToTerraform(struct?: AwsLaunchTemplate.BlockDeviceMappingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1351,12 +1351,12 @@ export function tfLaunchTemplateBlockDeviceMappingsPropertyToTerraform(struct?: 
     device_name: cdktn.stringToTerraform(struct!.deviceName),
     no_device: cdktn.stringToTerraform(struct!.noDevice),
     virtual_name: cdktn.stringToTerraform(struct!.virtualName),
-    ebs: tfLaunchTemplateEbsPropertyToTerraform(struct!.ebs),
+    ebs: awsLaunchTemplateEbsPropertyToTerraform(struct!.ebs),
   }
 }
 
 
-export function tfLaunchTemplateBlockDeviceMappingsPropertyToHclTerraform(struct?: TfLaunchTemplate.BlockDeviceMappingsProperty | cdktn.IResolvable): any {
+export function awsLaunchTemplateBlockDeviceMappingsPropertyToHclTerraform(struct?: AwsLaunchTemplate.BlockDeviceMappingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1381,7 +1381,7 @@ export function tfLaunchTemplateBlockDeviceMappingsPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     ebs: {
-      value: tfLaunchTemplateEbsPropertyToHclTerraform(struct!.ebs),
+      value: awsLaunchTemplateEbsPropertyToHclTerraform(struct!.ebs),
       isBlock: true,
       type: "list",
       storageClassType: "EbsPropertyList",
@@ -1393,7 +1393,7 @@ export function tfLaunchTemplateBlockDeviceMappingsPropertyToHclTerraform(struct
 }
 
 
-export function tfLaunchTemplateCapacityReservationTargetPropertyToTerraform(struct?: TfLaunchTemplate.CapacityReservationTargetPropertyOutputReference | TfLaunchTemplate.CapacityReservationTargetProperty): any {
+export function awsLaunchTemplateCapacityReservationTargetPropertyToTerraform(struct?: AwsLaunchTemplate.CapacityReservationTargetPropertyOutputReference | AwsLaunchTemplate.CapacityReservationTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1405,7 +1405,7 @@ export function tfLaunchTemplateCapacityReservationTargetPropertyToTerraform(str
 }
 
 
-export function tfLaunchTemplateCapacityReservationTargetPropertyToHclTerraform(struct?: TfLaunchTemplate.CapacityReservationTargetPropertyOutputReference | TfLaunchTemplate.CapacityReservationTargetProperty): any {
+export function awsLaunchTemplateCapacityReservationTargetPropertyToHclTerraform(struct?: AwsLaunchTemplate.CapacityReservationTargetPropertyOutputReference | AwsLaunchTemplate.CapacityReservationTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1430,19 +1430,19 @@ export function tfLaunchTemplateCapacityReservationTargetPropertyToHclTerraform(
 }
 
 
-export function tfLaunchTemplateCapacityReservationSpecificationPropertyToTerraform(struct?: TfLaunchTemplate.CapacityReservationSpecificationPropertyOutputReference | TfLaunchTemplate.CapacityReservationSpecificationProperty): any {
+export function awsLaunchTemplateCapacityReservationSpecificationPropertyToTerraform(struct?: AwsLaunchTemplate.CapacityReservationSpecificationPropertyOutputReference | AwsLaunchTemplate.CapacityReservationSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     capacity_reservation_preference: cdktn.stringToTerraform(struct!.capacityReservationPreference),
-    capacity_reservation_target: tfLaunchTemplateCapacityReservationTargetPropertyToTerraform(struct!.capacityReservationTarget),
+    capacity_reservation_target: awsLaunchTemplateCapacityReservationTargetPropertyToTerraform(struct!.capacityReservationTarget),
   }
 }
 
 
-export function tfLaunchTemplateCapacityReservationSpecificationPropertyToHclTerraform(struct?: TfLaunchTemplate.CapacityReservationSpecificationPropertyOutputReference | TfLaunchTemplate.CapacityReservationSpecificationProperty): any {
+export function awsLaunchTemplateCapacityReservationSpecificationPropertyToHclTerraform(struct?: AwsLaunchTemplate.CapacityReservationSpecificationPropertyOutputReference | AwsLaunchTemplate.CapacityReservationSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1455,7 +1455,7 @@ export function tfLaunchTemplateCapacityReservationSpecificationPropertyToHclTer
       storageClassType: "string",
     },
     capacity_reservation_target: {
-      value: tfLaunchTemplateCapacityReservationTargetPropertyToHclTerraform(struct!.capacityReservationTarget),
+      value: awsLaunchTemplateCapacityReservationTargetPropertyToHclTerraform(struct!.capacityReservationTarget),
       isBlock: true,
       type: "list",
       storageClassType: "CapacityReservationTargetPropertyList",
@@ -1467,7 +1467,7 @@ export function tfLaunchTemplateCapacityReservationSpecificationPropertyToHclTer
 }
 
 
-export function tfLaunchTemplateCpuOptionsPropertyToTerraform(struct?: TfLaunchTemplate.CpuOptionsPropertyOutputReference | TfLaunchTemplate.CpuOptionsProperty): any {
+export function awsLaunchTemplateCpuOptionsPropertyToTerraform(struct?: AwsLaunchTemplate.CpuOptionsPropertyOutputReference | AwsLaunchTemplate.CpuOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1481,7 +1481,7 @@ export function tfLaunchTemplateCpuOptionsPropertyToTerraform(struct?: TfLaunchT
 }
 
 
-export function tfLaunchTemplateCpuOptionsPropertyToHclTerraform(struct?: TfLaunchTemplate.CpuOptionsPropertyOutputReference | TfLaunchTemplate.CpuOptionsProperty): any {
+export function awsLaunchTemplateCpuOptionsPropertyToHclTerraform(struct?: AwsLaunchTemplate.CpuOptionsPropertyOutputReference | AwsLaunchTemplate.CpuOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1518,7 +1518,7 @@ export function tfLaunchTemplateCpuOptionsPropertyToHclTerraform(struct?: TfLaun
 }
 
 
-export function tfLaunchTemplateCreditSpecificationPropertyToTerraform(struct?: TfLaunchTemplate.CreditSpecificationPropertyOutputReference | TfLaunchTemplate.CreditSpecificationProperty): any {
+export function awsLaunchTemplateCreditSpecificationPropertyToTerraform(struct?: AwsLaunchTemplate.CreditSpecificationPropertyOutputReference | AwsLaunchTemplate.CreditSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1529,7 +1529,7 @@ export function tfLaunchTemplateCreditSpecificationPropertyToTerraform(struct?: 
 }
 
 
-export function tfLaunchTemplateCreditSpecificationPropertyToHclTerraform(struct?: TfLaunchTemplate.CreditSpecificationPropertyOutputReference | TfLaunchTemplate.CreditSpecificationProperty): any {
+export function awsLaunchTemplateCreditSpecificationPropertyToHclTerraform(struct?: AwsLaunchTemplate.CreditSpecificationPropertyOutputReference | AwsLaunchTemplate.CreditSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1548,7 +1548,7 @@ export function tfLaunchTemplateCreditSpecificationPropertyToHclTerraform(struct
 }
 
 
-export function tfLaunchTemplateEnclaveOptionsPropertyToTerraform(struct?: TfLaunchTemplate.EnclaveOptionsPropertyOutputReference | TfLaunchTemplate.EnclaveOptionsProperty): any {
+export function awsLaunchTemplateEnclaveOptionsPropertyToTerraform(struct?: AwsLaunchTemplate.EnclaveOptionsPropertyOutputReference | AwsLaunchTemplate.EnclaveOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1559,7 +1559,7 @@ export function tfLaunchTemplateEnclaveOptionsPropertyToTerraform(struct?: TfLau
 }
 
 
-export function tfLaunchTemplateEnclaveOptionsPropertyToHclTerraform(struct?: TfLaunchTemplate.EnclaveOptionsPropertyOutputReference | TfLaunchTemplate.EnclaveOptionsProperty): any {
+export function awsLaunchTemplateEnclaveOptionsPropertyToHclTerraform(struct?: AwsLaunchTemplate.EnclaveOptionsPropertyOutputReference | AwsLaunchTemplate.EnclaveOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1578,7 +1578,7 @@ export function tfLaunchTemplateEnclaveOptionsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfLaunchTemplateHibernationOptionsPropertyToTerraform(struct?: TfLaunchTemplate.HibernationOptionsPropertyOutputReference | TfLaunchTemplate.HibernationOptionsProperty): any {
+export function awsLaunchTemplateHibernationOptionsPropertyToTerraform(struct?: AwsLaunchTemplate.HibernationOptionsPropertyOutputReference | AwsLaunchTemplate.HibernationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1589,7 +1589,7 @@ export function tfLaunchTemplateHibernationOptionsPropertyToTerraform(struct?: T
 }
 
 
-export function tfLaunchTemplateHibernationOptionsPropertyToHclTerraform(struct?: TfLaunchTemplate.HibernationOptionsPropertyOutputReference | TfLaunchTemplate.HibernationOptionsProperty): any {
+export function awsLaunchTemplateHibernationOptionsPropertyToHclTerraform(struct?: AwsLaunchTemplate.HibernationOptionsPropertyOutputReference | AwsLaunchTemplate.HibernationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1608,7 +1608,7 @@ export function tfLaunchTemplateHibernationOptionsPropertyToHclTerraform(struct?
 }
 
 
-export function tfLaunchTemplateIamInstanceProfilePropertyToTerraform(struct?: TfLaunchTemplate.IamInstanceProfilePropertyOutputReference | TfLaunchTemplate.IamInstanceProfileProperty): any {
+export function awsLaunchTemplateIamInstanceProfilePropertyToTerraform(struct?: AwsLaunchTemplate.IamInstanceProfilePropertyOutputReference | AwsLaunchTemplate.IamInstanceProfileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1620,7 +1620,7 @@ export function tfLaunchTemplateIamInstanceProfilePropertyToTerraform(struct?: T
 }
 
 
-export function tfLaunchTemplateIamInstanceProfilePropertyToHclTerraform(struct?: TfLaunchTemplate.IamInstanceProfilePropertyOutputReference | TfLaunchTemplate.IamInstanceProfileProperty): any {
+export function awsLaunchTemplateIamInstanceProfilePropertyToHclTerraform(struct?: AwsLaunchTemplate.IamInstanceProfilePropertyOutputReference | AwsLaunchTemplate.IamInstanceProfileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1645,7 +1645,7 @@ export function tfLaunchTemplateIamInstanceProfilePropertyToHclTerraform(struct?
 }
 
 
-export function tfLaunchTemplateSpotOptionsPropertyToTerraform(struct?: TfLaunchTemplate.SpotOptionsPropertyOutputReference | TfLaunchTemplate.SpotOptionsProperty): any {
+export function awsLaunchTemplateSpotOptionsPropertyToTerraform(struct?: AwsLaunchTemplate.SpotOptionsPropertyOutputReference | AwsLaunchTemplate.SpotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1660,7 +1660,7 @@ export function tfLaunchTemplateSpotOptionsPropertyToTerraform(struct?: TfLaunch
 }
 
 
-export function tfLaunchTemplateSpotOptionsPropertyToHclTerraform(struct?: TfLaunchTemplate.SpotOptionsPropertyOutputReference | TfLaunchTemplate.SpotOptionsProperty): any {
+export function awsLaunchTemplateSpotOptionsPropertyToHclTerraform(struct?: AwsLaunchTemplate.SpotOptionsPropertyOutputReference | AwsLaunchTemplate.SpotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1703,19 +1703,19 @@ export function tfLaunchTemplateSpotOptionsPropertyToHclTerraform(struct?: TfLau
 }
 
 
-export function tfLaunchTemplateInstanceMarketOptionsPropertyToTerraform(struct?: TfLaunchTemplate.InstanceMarketOptionsPropertyOutputReference | TfLaunchTemplate.InstanceMarketOptionsProperty): any {
+export function awsLaunchTemplateInstanceMarketOptionsPropertyToTerraform(struct?: AwsLaunchTemplate.InstanceMarketOptionsPropertyOutputReference | AwsLaunchTemplate.InstanceMarketOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     market_type: cdktn.stringToTerraform(struct!.marketType),
-    spot_options: tfLaunchTemplateSpotOptionsPropertyToTerraform(struct!.spotOptions),
+    spot_options: awsLaunchTemplateSpotOptionsPropertyToTerraform(struct!.spotOptions),
   }
 }
 
 
-export function tfLaunchTemplateInstanceMarketOptionsPropertyToHclTerraform(struct?: TfLaunchTemplate.InstanceMarketOptionsPropertyOutputReference | TfLaunchTemplate.InstanceMarketOptionsProperty): any {
+export function awsLaunchTemplateInstanceMarketOptionsPropertyToHclTerraform(struct?: AwsLaunchTemplate.InstanceMarketOptionsPropertyOutputReference | AwsLaunchTemplate.InstanceMarketOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1728,7 +1728,7 @@ export function tfLaunchTemplateInstanceMarketOptionsPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     spot_options: {
-      value: tfLaunchTemplateSpotOptionsPropertyToHclTerraform(struct!.spotOptions),
+      value: awsLaunchTemplateSpotOptionsPropertyToHclTerraform(struct!.spotOptions),
       isBlock: true,
       type: "list",
       storageClassType: "SpotOptionsPropertyList",
@@ -1740,7 +1740,7 @@ export function tfLaunchTemplateInstanceMarketOptionsPropertyToHclTerraform(stru
 }
 
 
-export function tfLaunchTemplateAcceleratorCountPropertyToTerraform(struct?: TfLaunchTemplate.AcceleratorCountPropertyOutputReference | TfLaunchTemplate.AcceleratorCountProperty): any {
+export function awsLaunchTemplateAcceleratorCountPropertyToTerraform(struct?: AwsLaunchTemplate.AcceleratorCountPropertyOutputReference | AwsLaunchTemplate.AcceleratorCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1752,7 +1752,7 @@ export function tfLaunchTemplateAcceleratorCountPropertyToTerraform(struct?: TfL
 }
 
 
-export function tfLaunchTemplateAcceleratorCountPropertyToHclTerraform(struct?: TfLaunchTemplate.AcceleratorCountPropertyOutputReference | TfLaunchTemplate.AcceleratorCountProperty): any {
+export function awsLaunchTemplateAcceleratorCountPropertyToHclTerraform(struct?: AwsLaunchTemplate.AcceleratorCountPropertyOutputReference | AwsLaunchTemplate.AcceleratorCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1777,7 +1777,7 @@ export function tfLaunchTemplateAcceleratorCountPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfLaunchTemplateAcceleratorTotalMemoryMibPropertyToTerraform(struct?: TfLaunchTemplate.AcceleratorTotalMemoryMibPropertyOutputReference | TfLaunchTemplate.AcceleratorTotalMemoryMibProperty): any {
+export function awsLaunchTemplateAcceleratorTotalMemoryMibPropertyToTerraform(struct?: AwsLaunchTemplate.AcceleratorTotalMemoryMibPropertyOutputReference | AwsLaunchTemplate.AcceleratorTotalMemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1789,7 +1789,7 @@ export function tfLaunchTemplateAcceleratorTotalMemoryMibPropertyToTerraform(str
 }
 
 
-export function tfLaunchTemplateAcceleratorTotalMemoryMibPropertyToHclTerraform(struct?: TfLaunchTemplate.AcceleratorTotalMemoryMibPropertyOutputReference | TfLaunchTemplate.AcceleratorTotalMemoryMibProperty): any {
+export function awsLaunchTemplateAcceleratorTotalMemoryMibPropertyToHclTerraform(struct?: AwsLaunchTemplate.AcceleratorTotalMemoryMibPropertyOutputReference | AwsLaunchTemplate.AcceleratorTotalMemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1814,7 +1814,7 @@ export function tfLaunchTemplateAcceleratorTotalMemoryMibPropertyToHclTerraform(
 }
 
 
-export function tfLaunchTemplateBaselineEbsBandwidthMbpsPropertyToTerraform(struct?: TfLaunchTemplate.BaselineEbsBandwidthMbpsPropertyOutputReference | TfLaunchTemplate.BaselineEbsBandwidthMbpsProperty): any {
+export function awsLaunchTemplateBaselineEbsBandwidthMbpsPropertyToTerraform(struct?: AwsLaunchTemplate.BaselineEbsBandwidthMbpsPropertyOutputReference | AwsLaunchTemplate.BaselineEbsBandwidthMbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1826,7 +1826,7 @@ export function tfLaunchTemplateBaselineEbsBandwidthMbpsPropertyToTerraform(stru
 }
 
 
-export function tfLaunchTemplateBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct?: TfLaunchTemplate.BaselineEbsBandwidthMbpsPropertyOutputReference | TfLaunchTemplate.BaselineEbsBandwidthMbpsProperty): any {
+export function awsLaunchTemplateBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct?: AwsLaunchTemplate.BaselineEbsBandwidthMbpsPropertyOutputReference | AwsLaunchTemplate.BaselineEbsBandwidthMbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1851,7 +1851,7 @@ export function tfLaunchTemplateBaselineEbsBandwidthMbpsPropertyToHclTerraform(s
 }
 
 
-export function tfLaunchTemplateMemoryGibPerVcpuPropertyToTerraform(struct?: TfLaunchTemplate.MemoryGibPerVcpuPropertyOutputReference | TfLaunchTemplate.MemoryGibPerVcpuProperty): any {
+export function awsLaunchTemplateMemoryGibPerVcpuPropertyToTerraform(struct?: AwsLaunchTemplate.MemoryGibPerVcpuPropertyOutputReference | AwsLaunchTemplate.MemoryGibPerVcpuProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1863,7 +1863,7 @@ export function tfLaunchTemplateMemoryGibPerVcpuPropertyToTerraform(struct?: TfL
 }
 
 
-export function tfLaunchTemplateMemoryGibPerVcpuPropertyToHclTerraform(struct?: TfLaunchTemplate.MemoryGibPerVcpuPropertyOutputReference | TfLaunchTemplate.MemoryGibPerVcpuProperty): any {
+export function awsLaunchTemplateMemoryGibPerVcpuPropertyToHclTerraform(struct?: AwsLaunchTemplate.MemoryGibPerVcpuPropertyOutputReference | AwsLaunchTemplate.MemoryGibPerVcpuProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1888,7 +1888,7 @@ export function tfLaunchTemplateMemoryGibPerVcpuPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfLaunchTemplateMemoryMibPropertyToTerraform(struct?: TfLaunchTemplate.MemoryMibPropertyOutputReference | TfLaunchTemplate.MemoryMibProperty): any {
+export function awsLaunchTemplateMemoryMibPropertyToTerraform(struct?: AwsLaunchTemplate.MemoryMibPropertyOutputReference | AwsLaunchTemplate.MemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1900,7 +1900,7 @@ export function tfLaunchTemplateMemoryMibPropertyToTerraform(struct?: TfLaunchTe
 }
 
 
-export function tfLaunchTemplateMemoryMibPropertyToHclTerraform(struct?: TfLaunchTemplate.MemoryMibPropertyOutputReference | TfLaunchTemplate.MemoryMibProperty): any {
+export function awsLaunchTemplateMemoryMibPropertyToHclTerraform(struct?: AwsLaunchTemplate.MemoryMibPropertyOutputReference | AwsLaunchTemplate.MemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1925,7 +1925,7 @@ export function tfLaunchTemplateMemoryMibPropertyToHclTerraform(struct?: TfLaunc
 }
 
 
-export function tfLaunchTemplateNetworkBandwidthGbpsPropertyToTerraform(struct?: TfLaunchTemplate.NetworkBandwidthGbpsPropertyOutputReference | TfLaunchTemplate.NetworkBandwidthGbpsProperty): any {
+export function awsLaunchTemplateNetworkBandwidthGbpsPropertyToTerraform(struct?: AwsLaunchTemplate.NetworkBandwidthGbpsPropertyOutputReference | AwsLaunchTemplate.NetworkBandwidthGbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1937,7 +1937,7 @@ export function tfLaunchTemplateNetworkBandwidthGbpsPropertyToTerraform(struct?:
 }
 
 
-export function tfLaunchTemplateNetworkBandwidthGbpsPropertyToHclTerraform(struct?: TfLaunchTemplate.NetworkBandwidthGbpsPropertyOutputReference | TfLaunchTemplate.NetworkBandwidthGbpsProperty): any {
+export function awsLaunchTemplateNetworkBandwidthGbpsPropertyToHclTerraform(struct?: AwsLaunchTemplate.NetworkBandwidthGbpsPropertyOutputReference | AwsLaunchTemplate.NetworkBandwidthGbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1962,7 +1962,7 @@ export function tfLaunchTemplateNetworkBandwidthGbpsPropertyToHclTerraform(struc
 }
 
 
-export function tfLaunchTemplateNetworkInterfaceCountPropertyToTerraform(struct?: TfLaunchTemplate.NetworkInterfaceCountPropertyOutputReference | TfLaunchTemplate.NetworkInterfaceCountProperty): any {
+export function awsLaunchTemplateNetworkInterfaceCountPropertyToTerraform(struct?: AwsLaunchTemplate.NetworkInterfaceCountPropertyOutputReference | AwsLaunchTemplate.NetworkInterfaceCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1974,7 +1974,7 @@ export function tfLaunchTemplateNetworkInterfaceCountPropertyToTerraform(struct?
 }
 
 
-export function tfLaunchTemplateNetworkInterfaceCountPropertyToHclTerraform(struct?: TfLaunchTemplate.NetworkInterfaceCountPropertyOutputReference | TfLaunchTemplate.NetworkInterfaceCountProperty): any {
+export function awsLaunchTemplateNetworkInterfaceCountPropertyToHclTerraform(struct?: AwsLaunchTemplate.NetworkInterfaceCountPropertyOutputReference | AwsLaunchTemplate.NetworkInterfaceCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1999,7 +1999,7 @@ export function tfLaunchTemplateNetworkInterfaceCountPropertyToHclTerraform(stru
 }
 
 
-export function tfLaunchTemplateTotalLocalStorageGbPropertyToTerraform(struct?: TfLaunchTemplate.TotalLocalStorageGbPropertyOutputReference | TfLaunchTemplate.TotalLocalStorageGbProperty): any {
+export function awsLaunchTemplateTotalLocalStorageGbPropertyToTerraform(struct?: AwsLaunchTemplate.TotalLocalStorageGbPropertyOutputReference | AwsLaunchTemplate.TotalLocalStorageGbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2011,7 +2011,7 @@ export function tfLaunchTemplateTotalLocalStorageGbPropertyToTerraform(struct?: 
 }
 
 
-export function tfLaunchTemplateTotalLocalStorageGbPropertyToHclTerraform(struct?: TfLaunchTemplate.TotalLocalStorageGbPropertyOutputReference | TfLaunchTemplate.TotalLocalStorageGbProperty): any {
+export function awsLaunchTemplateTotalLocalStorageGbPropertyToHclTerraform(struct?: AwsLaunchTemplate.TotalLocalStorageGbPropertyOutputReference | AwsLaunchTemplate.TotalLocalStorageGbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2036,7 +2036,7 @@ export function tfLaunchTemplateTotalLocalStorageGbPropertyToHclTerraform(struct
 }
 
 
-export function tfLaunchTemplateVcpuCountPropertyToTerraform(struct?: TfLaunchTemplate.VcpuCountPropertyOutputReference | TfLaunchTemplate.VcpuCountProperty): any {
+export function awsLaunchTemplateVcpuCountPropertyToTerraform(struct?: AwsLaunchTemplate.VcpuCountPropertyOutputReference | AwsLaunchTemplate.VcpuCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2048,7 +2048,7 @@ export function tfLaunchTemplateVcpuCountPropertyToTerraform(struct?: TfLaunchTe
 }
 
 
-export function tfLaunchTemplateVcpuCountPropertyToHclTerraform(struct?: TfLaunchTemplate.VcpuCountPropertyOutputReference | TfLaunchTemplate.VcpuCountProperty): any {
+export function awsLaunchTemplateVcpuCountPropertyToHclTerraform(struct?: AwsLaunchTemplate.VcpuCountPropertyOutputReference | AwsLaunchTemplate.VcpuCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2073,7 +2073,7 @@ export function tfLaunchTemplateVcpuCountPropertyToHclTerraform(struct?: TfLaunc
 }
 
 
-export function tfLaunchTemplateInstanceRequirementsPropertyToTerraform(struct?: TfLaunchTemplate.InstanceRequirementsPropertyOutputReference | TfLaunchTemplate.InstanceRequirementsProperty): any {
+export function awsLaunchTemplateInstanceRequirementsPropertyToTerraform(struct?: AwsLaunchTemplate.InstanceRequirementsPropertyOutputReference | AwsLaunchTemplate.InstanceRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2094,20 +2094,20 @@ export function tfLaunchTemplateInstanceRequirementsPropertyToTerraform(struct?:
     on_demand_max_price_percentage_over_lowest_price: cdktn.numberToTerraform(struct!.onDemandMaxPricePercentageOverLowestPrice),
     require_hibernate_support: cdktn.booleanToTerraform(struct!.requireHibernateSupport),
     spot_max_price_percentage_over_lowest_price: cdktn.numberToTerraform(struct!.spotMaxPricePercentageOverLowestPrice),
-    accelerator_count: tfLaunchTemplateAcceleratorCountPropertyToTerraform(struct!.acceleratorCount),
-    accelerator_total_memory_mib: tfLaunchTemplateAcceleratorTotalMemoryMibPropertyToTerraform(struct!.acceleratorTotalMemoryMib),
-    baseline_ebs_bandwidth_mbps: tfLaunchTemplateBaselineEbsBandwidthMbpsPropertyToTerraform(struct!.baselineEbsBandwidthMbps),
-    memory_gib_per_vcpu: tfLaunchTemplateMemoryGibPerVcpuPropertyToTerraform(struct!.memoryGibPerVcpu),
-    memory_mib: tfLaunchTemplateMemoryMibPropertyToTerraform(struct!.memoryMib),
-    network_bandwidth_gbps: tfLaunchTemplateNetworkBandwidthGbpsPropertyToTerraform(struct!.networkBandwidthGbps),
-    network_interface_count: tfLaunchTemplateNetworkInterfaceCountPropertyToTerraform(struct!.networkInterfaceCount),
-    total_local_storage_gb: tfLaunchTemplateTotalLocalStorageGbPropertyToTerraform(struct!.totalLocalStorageGb),
-    vcpu_count: tfLaunchTemplateVcpuCountPropertyToTerraform(struct!.vcpuCount),
+    accelerator_count: awsLaunchTemplateAcceleratorCountPropertyToTerraform(struct!.acceleratorCount),
+    accelerator_total_memory_mib: awsLaunchTemplateAcceleratorTotalMemoryMibPropertyToTerraform(struct!.acceleratorTotalMemoryMib),
+    baseline_ebs_bandwidth_mbps: awsLaunchTemplateBaselineEbsBandwidthMbpsPropertyToTerraform(struct!.baselineEbsBandwidthMbps),
+    memory_gib_per_vcpu: awsLaunchTemplateMemoryGibPerVcpuPropertyToTerraform(struct!.memoryGibPerVcpu),
+    memory_mib: awsLaunchTemplateMemoryMibPropertyToTerraform(struct!.memoryMib),
+    network_bandwidth_gbps: awsLaunchTemplateNetworkBandwidthGbpsPropertyToTerraform(struct!.networkBandwidthGbps),
+    network_interface_count: awsLaunchTemplateNetworkInterfaceCountPropertyToTerraform(struct!.networkInterfaceCount),
+    total_local_storage_gb: awsLaunchTemplateTotalLocalStorageGbPropertyToTerraform(struct!.totalLocalStorageGb),
+    vcpu_count: awsLaunchTemplateVcpuCountPropertyToTerraform(struct!.vcpuCount),
   }
 }
 
 
-export function tfLaunchTemplateInstanceRequirementsPropertyToHclTerraform(struct?: TfLaunchTemplate.InstanceRequirementsPropertyOutputReference | TfLaunchTemplate.InstanceRequirementsProperty): any {
+export function awsLaunchTemplateInstanceRequirementsPropertyToHclTerraform(struct?: AwsLaunchTemplate.InstanceRequirementsPropertyOutputReference | AwsLaunchTemplate.InstanceRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2204,55 +2204,55 @@ export function tfLaunchTemplateInstanceRequirementsPropertyToHclTerraform(struc
       storageClassType: "number",
     },
     accelerator_count: {
-      value: tfLaunchTemplateAcceleratorCountPropertyToHclTerraform(struct!.acceleratorCount),
+      value: awsLaunchTemplateAcceleratorCountPropertyToHclTerraform(struct!.acceleratorCount),
       isBlock: true,
       type: "list",
       storageClassType: "AcceleratorCountPropertyList",
     },
     accelerator_total_memory_mib: {
-      value: tfLaunchTemplateAcceleratorTotalMemoryMibPropertyToHclTerraform(struct!.acceleratorTotalMemoryMib),
+      value: awsLaunchTemplateAcceleratorTotalMemoryMibPropertyToHclTerraform(struct!.acceleratorTotalMemoryMib),
       isBlock: true,
       type: "list",
       storageClassType: "AcceleratorTotalMemoryMibPropertyList",
     },
     baseline_ebs_bandwidth_mbps: {
-      value: tfLaunchTemplateBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct!.baselineEbsBandwidthMbps),
+      value: awsLaunchTemplateBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct!.baselineEbsBandwidthMbps),
       isBlock: true,
       type: "list",
       storageClassType: "BaselineEbsBandwidthMbpsPropertyList",
     },
     memory_gib_per_vcpu: {
-      value: tfLaunchTemplateMemoryGibPerVcpuPropertyToHclTerraform(struct!.memoryGibPerVcpu),
+      value: awsLaunchTemplateMemoryGibPerVcpuPropertyToHclTerraform(struct!.memoryGibPerVcpu),
       isBlock: true,
       type: "list",
       storageClassType: "MemoryGibPerVcpuPropertyList",
     },
     memory_mib: {
-      value: tfLaunchTemplateMemoryMibPropertyToHclTerraform(struct!.memoryMib),
+      value: awsLaunchTemplateMemoryMibPropertyToHclTerraform(struct!.memoryMib),
       isBlock: true,
       type: "list",
       storageClassType: "MemoryMibPropertyList",
     },
     network_bandwidth_gbps: {
-      value: tfLaunchTemplateNetworkBandwidthGbpsPropertyToHclTerraform(struct!.networkBandwidthGbps),
+      value: awsLaunchTemplateNetworkBandwidthGbpsPropertyToHclTerraform(struct!.networkBandwidthGbps),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkBandwidthGbpsPropertyList",
     },
     network_interface_count: {
-      value: tfLaunchTemplateNetworkInterfaceCountPropertyToHclTerraform(struct!.networkInterfaceCount),
+      value: awsLaunchTemplateNetworkInterfaceCountPropertyToHclTerraform(struct!.networkInterfaceCount),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkInterfaceCountPropertyList",
     },
     total_local_storage_gb: {
-      value: tfLaunchTemplateTotalLocalStorageGbPropertyToHclTerraform(struct!.totalLocalStorageGb),
+      value: awsLaunchTemplateTotalLocalStorageGbPropertyToHclTerraform(struct!.totalLocalStorageGb),
       isBlock: true,
       type: "list",
       storageClassType: "TotalLocalStorageGbPropertyList",
     },
     vcpu_count: {
-      value: tfLaunchTemplateVcpuCountPropertyToHclTerraform(struct!.vcpuCount),
+      value: awsLaunchTemplateVcpuCountPropertyToHclTerraform(struct!.vcpuCount),
       isBlock: true,
       type: "list",
       storageClassType: "VcpuCountPropertyList",
@@ -2264,7 +2264,7 @@ export function tfLaunchTemplateInstanceRequirementsPropertyToHclTerraform(struc
 }
 
 
-export function tfLaunchTemplateLicenseSpecificationPropertyToTerraform(struct?: TfLaunchTemplate.LicenseSpecificationProperty | cdktn.IResolvable): any {
+export function awsLaunchTemplateLicenseSpecificationPropertyToTerraform(struct?: AwsLaunchTemplate.LicenseSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2275,7 +2275,7 @@ export function tfLaunchTemplateLicenseSpecificationPropertyToTerraform(struct?:
 }
 
 
-export function tfLaunchTemplateLicenseSpecificationPropertyToHclTerraform(struct?: TfLaunchTemplate.LicenseSpecificationProperty | cdktn.IResolvable): any {
+export function awsLaunchTemplateLicenseSpecificationPropertyToHclTerraform(struct?: AwsLaunchTemplate.LicenseSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2294,7 +2294,7 @@ export function tfLaunchTemplateLicenseSpecificationPropertyToHclTerraform(struc
 }
 
 
-export function tfLaunchTemplateMaintenanceOptionsPropertyToTerraform(struct?: TfLaunchTemplate.MaintenanceOptionsPropertyOutputReference | TfLaunchTemplate.MaintenanceOptionsProperty): any {
+export function awsLaunchTemplateMaintenanceOptionsPropertyToTerraform(struct?: AwsLaunchTemplate.MaintenanceOptionsPropertyOutputReference | AwsLaunchTemplate.MaintenanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2305,7 +2305,7 @@ export function tfLaunchTemplateMaintenanceOptionsPropertyToTerraform(struct?: T
 }
 
 
-export function tfLaunchTemplateMaintenanceOptionsPropertyToHclTerraform(struct?: TfLaunchTemplate.MaintenanceOptionsPropertyOutputReference | TfLaunchTemplate.MaintenanceOptionsProperty): any {
+export function awsLaunchTemplateMaintenanceOptionsPropertyToHclTerraform(struct?: AwsLaunchTemplate.MaintenanceOptionsPropertyOutputReference | AwsLaunchTemplate.MaintenanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2324,7 +2324,7 @@ export function tfLaunchTemplateMaintenanceOptionsPropertyToHclTerraform(struct?
 }
 
 
-export function tfLaunchTemplateMetadataOptionsPropertyToTerraform(struct?: TfLaunchTemplate.MetadataOptionsPropertyOutputReference | TfLaunchTemplate.MetadataOptionsProperty): any {
+export function awsLaunchTemplateMetadataOptionsPropertyToTerraform(struct?: AwsLaunchTemplate.MetadataOptionsPropertyOutputReference | AwsLaunchTemplate.MetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2339,7 +2339,7 @@ export function tfLaunchTemplateMetadataOptionsPropertyToTerraform(struct?: TfLa
 }
 
 
-export function tfLaunchTemplateMetadataOptionsPropertyToHclTerraform(struct?: TfLaunchTemplate.MetadataOptionsPropertyOutputReference | TfLaunchTemplate.MetadataOptionsProperty): any {
+export function awsLaunchTemplateMetadataOptionsPropertyToHclTerraform(struct?: AwsLaunchTemplate.MetadataOptionsPropertyOutputReference | AwsLaunchTemplate.MetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2382,7 +2382,7 @@ export function tfLaunchTemplateMetadataOptionsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfLaunchTemplateMonitoringPropertyToTerraform(struct?: TfLaunchTemplate.MonitoringPropertyOutputReference | TfLaunchTemplate.MonitoringProperty): any {
+export function awsLaunchTemplateMonitoringPropertyToTerraform(struct?: AwsLaunchTemplate.MonitoringPropertyOutputReference | AwsLaunchTemplate.MonitoringProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2393,7 +2393,7 @@ export function tfLaunchTemplateMonitoringPropertyToTerraform(struct?: TfLaunchT
 }
 
 
-export function tfLaunchTemplateMonitoringPropertyToHclTerraform(struct?: TfLaunchTemplate.MonitoringPropertyOutputReference | TfLaunchTemplate.MonitoringProperty): any {
+export function awsLaunchTemplateMonitoringPropertyToHclTerraform(struct?: AwsLaunchTemplate.MonitoringPropertyOutputReference | AwsLaunchTemplate.MonitoringProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2412,7 +2412,7 @@ export function tfLaunchTemplateMonitoringPropertyToHclTerraform(struct?: TfLaun
 }
 
 
-export function tfLaunchTemplateConnectionTrackingSpecificationPropertyToTerraform(struct?: TfLaunchTemplate.ConnectionTrackingSpecificationPropertyOutputReference | TfLaunchTemplate.ConnectionTrackingSpecificationProperty): any {
+export function awsLaunchTemplateConnectionTrackingSpecificationPropertyToTerraform(struct?: AwsLaunchTemplate.ConnectionTrackingSpecificationPropertyOutputReference | AwsLaunchTemplate.ConnectionTrackingSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2425,7 +2425,7 @@ export function tfLaunchTemplateConnectionTrackingSpecificationPropertyToTerrafo
 }
 
 
-export function tfLaunchTemplateConnectionTrackingSpecificationPropertyToHclTerraform(struct?: TfLaunchTemplate.ConnectionTrackingSpecificationPropertyOutputReference | TfLaunchTemplate.ConnectionTrackingSpecificationProperty): any {
+export function awsLaunchTemplateConnectionTrackingSpecificationPropertyToHclTerraform(struct?: AwsLaunchTemplate.ConnectionTrackingSpecificationPropertyOutputReference | AwsLaunchTemplate.ConnectionTrackingSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2456,7 +2456,7 @@ export function tfLaunchTemplateConnectionTrackingSpecificationPropertyToHclTerr
 }
 
 
-export function tfLaunchTemplateEnaSrdUdpSpecificationPropertyToTerraform(struct?: TfLaunchTemplate.EnaSrdUdpSpecificationPropertyOutputReference | TfLaunchTemplate.EnaSrdUdpSpecificationProperty): any {
+export function awsLaunchTemplateEnaSrdUdpSpecificationPropertyToTerraform(struct?: AwsLaunchTemplate.EnaSrdUdpSpecificationPropertyOutputReference | AwsLaunchTemplate.EnaSrdUdpSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2467,7 +2467,7 @@ export function tfLaunchTemplateEnaSrdUdpSpecificationPropertyToTerraform(struct
 }
 
 
-export function tfLaunchTemplateEnaSrdUdpSpecificationPropertyToHclTerraform(struct?: TfLaunchTemplate.EnaSrdUdpSpecificationPropertyOutputReference | TfLaunchTemplate.EnaSrdUdpSpecificationProperty): any {
+export function awsLaunchTemplateEnaSrdUdpSpecificationPropertyToHclTerraform(struct?: AwsLaunchTemplate.EnaSrdUdpSpecificationPropertyOutputReference | AwsLaunchTemplate.EnaSrdUdpSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2486,19 +2486,19 @@ export function tfLaunchTemplateEnaSrdUdpSpecificationPropertyToHclTerraform(str
 }
 
 
-export function tfLaunchTemplateEnaSrdSpecificationPropertyToTerraform(struct?: TfLaunchTemplate.EnaSrdSpecificationPropertyOutputReference | TfLaunchTemplate.EnaSrdSpecificationProperty): any {
+export function awsLaunchTemplateEnaSrdSpecificationPropertyToTerraform(struct?: AwsLaunchTemplate.EnaSrdSpecificationPropertyOutputReference | AwsLaunchTemplate.EnaSrdSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     ena_srd_enabled: cdktn.booleanToTerraform(struct!.enaSrdEnabled),
-    ena_srd_udp_specification: tfLaunchTemplateEnaSrdUdpSpecificationPropertyToTerraform(struct!.enaSrdUdpSpecification),
+    ena_srd_udp_specification: awsLaunchTemplateEnaSrdUdpSpecificationPropertyToTerraform(struct!.enaSrdUdpSpecification),
   }
 }
 
 
-export function tfLaunchTemplateEnaSrdSpecificationPropertyToHclTerraform(struct?: TfLaunchTemplate.EnaSrdSpecificationPropertyOutputReference | TfLaunchTemplate.EnaSrdSpecificationProperty): any {
+export function awsLaunchTemplateEnaSrdSpecificationPropertyToHclTerraform(struct?: AwsLaunchTemplate.EnaSrdSpecificationPropertyOutputReference | AwsLaunchTemplate.EnaSrdSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2511,7 +2511,7 @@ export function tfLaunchTemplateEnaSrdSpecificationPropertyToHclTerraform(struct
       storageClassType: "boolean",
     },
     ena_srd_udp_specification: {
-      value: tfLaunchTemplateEnaSrdUdpSpecificationPropertyToHclTerraform(struct!.enaSrdUdpSpecification),
+      value: awsLaunchTemplateEnaSrdUdpSpecificationPropertyToHclTerraform(struct!.enaSrdUdpSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "EnaSrdUdpSpecificationPropertyList",
@@ -2523,7 +2523,7 @@ export function tfLaunchTemplateEnaSrdSpecificationPropertyToHclTerraform(struct
 }
 
 
-export function tfLaunchTemplateNetworkInterfacesPropertyToTerraform(struct?: TfLaunchTemplate.NetworkInterfacesProperty | cdktn.IResolvable): any {
+export function awsLaunchTemplateNetworkInterfacesPropertyToTerraform(struct?: AwsLaunchTemplate.NetworkInterfacesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2550,13 +2550,13 @@ export function tfLaunchTemplateNetworkInterfacesPropertyToTerraform(struct?: Tf
     private_ip_address: cdktn.stringToTerraform(struct!.privateIpAddress),
     security_groups: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.securityGroups),
     subnet_id: cdktn.stringToTerraform(struct!.subnetId),
-    connection_tracking_specification: tfLaunchTemplateConnectionTrackingSpecificationPropertyToTerraform(struct!.connectionTrackingSpecification),
-    ena_srd_specification: tfLaunchTemplateEnaSrdSpecificationPropertyToTerraform(struct!.enaSrdSpecification),
+    connection_tracking_specification: awsLaunchTemplateConnectionTrackingSpecificationPropertyToTerraform(struct!.connectionTrackingSpecification),
+    ena_srd_specification: awsLaunchTemplateEnaSrdSpecificationPropertyToTerraform(struct!.enaSrdSpecification),
   }
 }
 
 
-export function tfLaunchTemplateNetworkInterfacesPropertyToHclTerraform(struct?: TfLaunchTemplate.NetworkInterfacesProperty | cdktn.IResolvable): any {
+export function awsLaunchTemplateNetworkInterfacesPropertyToHclTerraform(struct?: AwsLaunchTemplate.NetworkInterfacesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2689,13 +2689,13 @@ export function tfLaunchTemplateNetworkInterfacesPropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     connection_tracking_specification: {
-      value: tfLaunchTemplateConnectionTrackingSpecificationPropertyToHclTerraform(struct!.connectionTrackingSpecification),
+      value: awsLaunchTemplateConnectionTrackingSpecificationPropertyToHclTerraform(struct!.connectionTrackingSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectionTrackingSpecificationPropertyList",
     },
     ena_srd_specification: {
-      value: tfLaunchTemplateEnaSrdSpecificationPropertyToHclTerraform(struct!.enaSrdSpecification),
+      value: awsLaunchTemplateEnaSrdSpecificationPropertyToHclTerraform(struct!.enaSrdSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "EnaSrdSpecificationPropertyList",
@@ -2707,7 +2707,7 @@ export function tfLaunchTemplateNetworkInterfacesPropertyToHclTerraform(struct?:
 }
 
 
-export function tfLaunchTemplateNetworkPerformanceOptionsPropertyToTerraform(struct?: TfLaunchTemplate.NetworkPerformanceOptionsPropertyOutputReference | TfLaunchTemplate.NetworkPerformanceOptionsProperty): any {
+export function awsLaunchTemplateNetworkPerformanceOptionsPropertyToTerraform(struct?: AwsLaunchTemplate.NetworkPerformanceOptionsPropertyOutputReference | AwsLaunchTemplate.NetworkPerformanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2718,7 +2718,7 @@ export function tfLaunchTemplateNetworkPerformanceOptionsPropertyToTerraform(str
 }
 
 
-export function tfLaunchTemplateNetworkPerformanceOptionsPropertyToHclTerraform(struct?: TfLaunchTemplate.NetworkPerformanceOptionsPropertyOutputReference | TfLaunchTemplate.NetworkPerformanceOptionsProperty): any {
+export function awsLaunchTemplateNetworkPerformanceOptionsPropertyToHclTerraform(struct?: AwsLaunchTemplate.NetworkPerformanceOptionsPropertyOutputReference | AwsLaunchTemplate.NetworkPerformanceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2737,7 +2737,7 @@ export function tfLaunchTemplateNetworkPerformanceOptionsPropertyToHclTerraform(
 }
 
 
-export function tfLaunchTemplatePlacementPropertyToTerraform(struct?: TfLaunchTemplate.PlacementPropertyOutputReference | TfLaunchTemplate.PlacementProperty): any {
+export function awsLaunchTemplatePlacementPropertyToTerraform(struct?: AwsLaunchTemplate.PlacementPropertyOutputReference | AwsLaunchTemplate.PlacementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2756,7 +2756,7 @@ export function tfLaunchTemplatePlacementPropertyToTerraform(struct?: TfLaunchTe
 }
 
 
-export function tfLaunchTemplatePlacementPropertyToHclTerraform(struct?: TfLaunchTemplate.PlacementPropertyOutputReference | TfLaunchTemplate.PlacementProperty): any {
+export function awsLaunchTemplatePlacementPropertyToHclTerraform(struct?: AwsLaunchTemplate.PlacementPropertyOutputReference | AwsLaunchTemplate.PlacementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2823,7 +2823,7 @@ export function tfLaunchTemplatePlacementPropertyToHclTerraform(struct?: TfLaunc
 }
 
 
-export function tfLaunchTemplatePrivateDnsNameOptionsPropertyToTerraform(struct?: TfLaunchTemplate.PrivateDnsNameOptionsPropertyOutputReference | TfLaunchTemplate.PrivateDnsNameOptionsProperty): any {
+export function awsLaunchTemplatePrivateDnsNameOptionsPropertyToTerraform(struct?: AwsLaunchTemplate.PrivateDnsNameOptionsPropertyOutputReference | AwsLaunchTemplate.PrivateDnsNameOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2836,7 +2836,7 @@ export function tfLaunchTemplatePrivateDnsNameOptionsPropertyToTerraform(struct?
 }
 
 
-export function tfLaunchTemplatePrivateDnsNameOptionsPropertyToHclTerraform(struct?: TfLaunchTemplate.PrivateDnsNameOptionsPropertyOutputReference | TfLaunchTemplate.PrivateDnsNameOptionsProperty): any {
+export function awsLaunchTemplatePrivateDnsNameOptionsPropertyToHclTerraform(struct?: AwsLaunchTemplate.PrivateDnsNameOptionsPropertyOutputReference | AwsLaunchTemplate.PrivateDnsNameOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2867,7 +2867,7 @@ export function tfLaunchTemplatePrivateDnsNameOptionsPropertyToHclTerraform(stru
 }
 
 
-export function tfLaunchTemplateSecondaryInterfacesPropertyToTerraform(struct?: TfLaunchTemplate.SecondaryInterfacesProperty | cdktn.IResolvable): any {
+export function awsLaunchTemplateSecondaryInterfacesPropertyToTerraform(struct?: AwsLaunchTemplate.SecondaryInterfacesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2884,7 +2884,7 @@ export function tfLaunchTemplateSecondaryInterfacesPropertyToTerraform(struct?: 
 }
 
 
-export function tfLaunchTemplateSecondaryInterfacesPropertyToHclTerraform(struct?: TfLaunchTemplate.SecondaryInterfacesProperty | cdktn.IResolvable): any {
+export function awsLaunchTemplateSecondaryInterfacesPropertyToHclTerraform(struct?: AwsLaunchTemplate.SecondaryInterfacesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2939,7 +2939,7 @@ export function tfLaunchTemplateSecondaryInterfacesPropertyToHclTerraform(struct
 }
 
 
-export function tfLaunchTemplateTagSpecificationsPropertyToTerraform(struct?: TfLaunchTemplate.TagSpecificationsProperty | cdktn.IResolvable): any {
+export function awsLaunchTemplateTagSpecificationsPropertyToTerraform(struct?: AwsLaunchTemplate.TagSpecificationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2951,7 +2951,7 @@ export function tfLaunchTemplateTagSpecificationsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfLaunchTemplateTagSpecificationsPropertyToHclTerraform(struct?: TfLaunchTemplate.TagSpecificationsProperty | cdktn.IResolvable): any {
+export function awsLaunchTemplateTagSpecificationsPropertyToHclTerraform(struct?: AwsLaunchTemplate.TagSpecificationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2976,42 +2976,42 @@ export function tfLaunchTemplateTagSpecificationsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfLaunchTemplate {
+export namespace AwsLaunchTemplate {
 export interface EbsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#delete_on_termination TfLaunchTemplate#delete_on_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#delete_on_termination AwsLaunchTemplate#delete_on_termination}
   */
   readonly deleteOnTermination?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#encrypted TfLaunchTemplate#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#encrypted AwsLaunchTemplate#encrypted}
   */
   readonly encrypted?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#iops TfLaunchTemplate#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#iops AwsLaunchTemplate#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#kms_key_id TfLaunchTemplate#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#kms_key_id AwsLaunchTemplate#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#snapshot_id TfLaunchTemplate#snapshot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#snapshot_id AwsLaunchTemplate#snapshot_id}
   */
   readonly snapshotId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#throughput TfLaunchTemplate#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#throughput AwsLaunchTemplate#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#volume_initialization_rate TfLaunchTemplate#volume_initialization_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#volume_initialization_rate AwsLaunchTemplate#volume_initialization_rate}
   */
   readonly volumeInitializationRate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#volume_size TfLaunchTemplate#volume_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#volume_size AwsLaunchTemplate#volume_size}
   */
   readonly volumeSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#volume_type TfLaunchTemplate#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#volume_type AwsLaunchTemplate#volume_type}
   */
   readonly volumeType?: string;
 }
@@ -3241,21 +3241,21 @@ export class EbsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BlockDeviceMappingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#device_name TfLaunchTemplate#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#device_name AwsLaunchTemplate#device_name}
   */
   readonly deviceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#no_device TfLaunchTemplate#no_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#no_device AwsLaunchTemplate#no_device}
   */
   readonly noDevice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#virtual_name TfLaunchTemplate#virtual_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#virtual_name AwsLaunchTemplate#virtual_name}
   */
   readonly virtualName?: string;
   /**
   * ebs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ebs TfLaunchTemplate#ebs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ebs AwsLaunchTemplate#ebs}
   */
   readonly ebs?: EbsProperty;
 }
@@ -3407,11 +3407,11 @@ export class BlockDeviceMappingsPropertyList extends cdktn.ComplexList {
 }
 export interface CapacityReservationTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#capacity_reservation_id TfLaunchTemplate#capacity_reservation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#capacity_reservation_id AwsLaunchTemplate#capacity_reservation_id}
   */
   readonly capacityReservationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#capacity_reservation_resource_group_arn TfLaunchTemplate#capacity_reservation_resource_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#capacity_reservation_resource_group_arn AwsLaunchTemplate#capacity_reservation_resource_group_arn}
   */
   readonly capacityReservationResourceGroupArn?: string;
 }
@@ -3487,13 +3487,13 @@ export class CapacityReservationTargetPropertyOutputReference extends cdktn.Comp
 }
 export interface CapacityReservationSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#capacity_reservation_preference TfLaunchTemplate#capacity_reservation_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#capacity_reservation_preference AwsLaunchTemplate#capacity_reservation_preference}
   */
   readonly capacityReservationPreference?: string;
   /**
   * capacity_reservation_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#capacity_reservation_target TfLaunchTemplate#capacity_reservation_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#capacity_reservation_target AwsLaunchTemplate#capacity_reservation_target}
   */
   readonly capacityReservationTarget?: CapacityReservationTargetProperty;
 }
@@ -3569,19 +3569,19 @@ export class CapacityReservationSpecificationPropertyOutputReference extends cdk
 }
 export interface CpuOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#amd_sev_snp TfLaunchTemplate#amd_sev_snp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#amd_sev_snp AwsLaunchTemplate#amd_sev_snp}
   */
   readonly amdSevSnp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#core_count TfLaunchTemplate#core_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#core_count AwsLaunchTemplate#core_count}
   */
   readonly coreCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#nested_virtualization TfLaunchTemplate#nested_virtualization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#nested_virtualization AwsLaunchTemplate#nested_virtualization}
   */
   readonly nestedVirtualization?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#threads_per_core TfLaunchTemplate#threads_per_core}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#threads_per_core AwsLaunchTemplate#threads_per_core}
   */
   readonly threadsPerCore?: number;
 }
@@ -3701,7 +3701,7 @@ export class CpuOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CreditSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#cpu_credits TfLaunchTemplate#cpu_credits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#cpu_credits AwsLaunchTemplate#cpu_credits}
   */
   readonly cpuCredits?: string;
 }
@@ -3755,7 +3755,7 @@ export class CreditSpecificationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface EnclaveOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#enabled TfLaunchTemplate#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#enabled AwsLaunchTemplate#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -3809,7 +3809,7 @@ export class EnclaveOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HibernationOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#configured TfLaunchTemplate#configured}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#configured AwsLaunchTemplate#configured}
   */
   readonly configured: boolean | cdktn.IResolvable;
 }
@@ -3860,11 +3860,11 @@ export class HibernationOptionsPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface IamInstanceProfileProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#arn TfLaunchTemplate#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#arn AwsLaunchTemplate#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#name TfLaunchTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#name AwsLaunchTemplate#name}
   */
   readonly name?: string;
 }
@@ -3940,23 +3940,23 @@ export class IamInstanceProfilePropertyOutputReference extends cdktn.ComplexObje
 }
 export interface SpotOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#block_duration_minutes TfLaunchTemplate#block_duration_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#block_duration_minutes AwsLaunchTemplate#block_duration_minutes}
   */
   readonly blockDurationMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_interruption_behavior TfLaunchTemplate#instance_interruption_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_interruption_behavior AwsLaunchTemplate#instance_interruption_behavior}
   */
   readonly instanceInterruptionBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max_price TfLaunchTemplate#max_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max_price AwsLaunchTemplate#max_price}
   */
   readonly maxPrice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#spot_instance_type TfLaunchTemplate#spot_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#spot_instance_type AwsLaunchTemplate#spot_instance_type}
   */
   readonly spotInstanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#valid_until TfLaunchTemplate#valid_until}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#valid_until AwsLaunchTemplate#valid_until}
   */
   readonly validUntil?: string;
 }
@@ -4098,13 +4098,13 @@ export class SpotOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface InstanceMarketOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#market_type TfLaunchTemplate#market_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#market_type AwsLaunchTemplate#market_type}
   */
   readonly marketType?: string;
   /**
   * spot_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#spot_options TfLaunchTemplate#spot_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#spot_options AwsLaunchTemplate#spot_options}
   */
   readonly spotOptions?: SpotOptionsProperty;
 }
@@ -4180,11 +4180,11 @@ export class InstanceMarketOptionsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface AcceleratorCountProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max TfLaunchTemplate#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max AwsLaunchTemplate#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min TfLaunchTemplate#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min AwsLaunchTemplate#min}
   */
   readonly min?: number;
 }
@@ -4260,11 +4260,11 @@ export class AcceleratorCountPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface AcceleratorTotalMemoryMibProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max TfLaunchTemplate#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max AwsLaunchTemplate#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min TfLaunchTemplate#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min AwsLaunchTemplate#min}
   */
   readonly min?: number;
 }
@@ -4340,11 +4340,11 @@ export class AcceleratorTotalMemoryMibPropertyOutputReference extends cdktn.Comp
 }
 export interface BaselineEbsBandwidthMbpsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max TfLaunchTemplate#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max AwsLaunchTemplate#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min TfLaunchTemplate#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min AwsLaunchTemplate#min}
   */
   readonly min?: number;
 }
@@ -4420,11 +4420,11 @@ export class BaselineEbsBandwidthMbpsPropertyOutputReference extends cdktn.Compl
 }
 export interface MemoryGibPerVcpuProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max TfLaunchTemplate#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max AwsLaunchTemplate#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min TfLaunchTemplate#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min AwsLaunchTemplate#min}
   */
   readonly min?: number;
 }
@@ -4500,11 +4500,11 @@ export class MemoryGibPerVcpuPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface MemoryMibProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max TfLaunchTemplate#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max AwsLaunchTemplate#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min TfLaunchTemplate#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min AwsLaunchTemplate#min}
   */
   readonly min: number;
 }
@@ -4577,11 +4577,11 @@ export class MemoryMibPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NetworkBandwidthGbpsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max TfLaunchTemplate#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max AwsLaunchTemplate#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min TfLaunchTemplate#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min AwsLaunchTemplate#min}
   */
   readonly min?: number;
 }
@@ -4657,11 +4657,11 @@ export class NetworkBandwidthGbpsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface NetworkInterfaceCountProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max TfLaunchTemplate#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max AwsLaunchTemplate#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min TfLaunchTemplate#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min AwsLaunchTemplate#min}
   */
   readonly min?: number;
 }
@@ -4737,11 +4737,11 @@ export class NetworkInterfaceCountPropertyOutputReference extends cdktn.ComplexO
 }
 export interface TotalLocalStorageGbProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max TfLaunchTemplate#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max AwsLaunchTemplate#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min TfLaunchTemplate#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min AwsLaunchTemplate#min}
   */
   readonly min?: number;
 }
@@ -4817,11 +4817,11 @@ export class TotalLocalStorageGbPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface VcpuCountProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max TfLaunchTemplate#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max AwsLaunchTemplate#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min TfLaunchTemplate#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#min AwsLaunchTemplate#min}
   */
   readonly min: number;
 }
@@ -4894,117 +4894,117 @@ export class VcpuCountPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface InstanceRequirementsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#accelerator_manufacturers TfLaunchTemplate#accelerator_manufacturers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#accelerator_manufacturers AwsLaunchTemplate#accelerator_manufacturers}
   */
   readonly acceleratorManufacturers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#accelerator_names TfLaunchTemplate#accelerator_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#accelerator_names AwsLaunchTemplate#accelerator_names}
   */
   readonly acceleratorNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#accelerator_types TfLaunchTemplate#accelerator_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#accelerator_types AwsLaunchTemplate#accelerator_types}
   */
   readonly acceleratorTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#allowed_instance_types TfLaunchTemplate#allowed_instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#allowed_instance_types AwsLaunchTemplate#allowed_instance_types}
   */
   readonly allowedInstanceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#bare_metal TfLaunchTemplate#bare_metal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#bare_metal AwsLaunchTemplate#bare_metal}
   */
   readonly bareMetal?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#burstable_performance TfLaunchTemplate#burstable_performance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#burstable_performance AwsLaunchTemplate#burstable_performance}
   */
   readonly burstablePerformance?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#cpu_manufacturers TfLaunchTemplate#cpu_manufacturers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#cpu_manufacturers AwsLaunchTemplate#cpu_manufacturers}
   */
   readonly cpuManufacturers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#excluded_instance_types TfLaunchTemplate#excluded_instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#excluded_instance_types AwsLaunchTemplate#excluded_instance_types}
   */
   readonly excludedInstanceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_generations TfLaunchTemplate#instance_generations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_generations AwsLaunchTemplate#instance_generations}
   */
   readonly instanceGenerations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#local_storage TfLaunchTemplate#local_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#local_storage AwsLaunchTemplate#local_storage}
   */
   readonly localStorage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#local_storage_types TfLaunchTemplate#local_storage_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#local_storage_types AwsLaunchTemplate#local_storage_types}
   */
   readonly localStorageTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max_spot_price_as_percentage_of_optimal_on_demand_price TfLaunchTemplate#max_spot_price_as_percentage_of_optimal_on_demand_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#max_spot_price_as_percentage_of_optimal_on_demand_price AwsLaunchTemplate#max_spot_price_as_percentage_of_optimal_on_demand_price}
   */
   readonly maxSpotPriceAsPercentageOfOptimalOnDemandPrice?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#on_demand_max_price_percentage_over_lowest_price TfLaunchTemplate#on_demand_max_price_percentage_over_lowest_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#on_demand_max_price_percentage_over_lowest_price AwsLaunchTemplate#on_demand_max_price_percentage_over_lowest_price}
   */
   readonly onDemandMaxPricePercentageOverLowestPrice?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#require_hibernate_support TfLaunchTemplate#require_hibernate_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#require_hibernate_support AwsLaunchTemplate#require_hibernate_support}
   */
   readonly requireHibernateSupport?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#spot_max_price_percentage_over_lowest_price TfLaunchTemplate#spot_max_price_percentage_over_lowest_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#spot_max_price_percentage_over_lowest_price AwsLaunchTemplate#spot_max_price_percentage_over_lowest_price}
   */
   readonly spotMaxPricePercentageOverLowestPrice?: number;
   /**
   * accelerator_count block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#accelerator_count TfLaunchTemplate#accelerator_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#accelerator_count AwsLaunchTemplate#accelerator_count}
   */
   readonly acceleratorCount?: AcceleratorCountProperty;
   /**
   * accelerator_total_memory_mib block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#accelerator_total_memory_mib TfLaunchTemplate#accelerator_total_memory_mib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#accelerator_total_memory_mib AwsLaunchTemplate#accelerator_total_memory_mib}
   */
   readonly acceleratorTotalMemoryMib?: AcceleratorTotalMemoryMibProperty;
   /**
   * baseline_ebs_bandwidth_mbps block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#baseline_ebs_bandwidth_mbps TfLaunchTemplate#baseline_ebs_bandwidth_mbps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#baseline_ebs_bandwidth_mbps AwsLaunchTemplate#baseline_ebs_bandwidth_mbps}
   */
   readonly baselineEbsBandwidthMbps?: BaselineEbsBandwidthMbpsProperty;
   /**
   * memory_gib_per_vcpu block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#memory_gib_per_vcpu TfLaunchTemplate#memory_gib_per_vcpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#memory_gib_per_vcpu AwsLaunchTemplate#memory_gib_per_vcpu}
   */
   readonly memoryGibPerVcpu?: MemoryGibPerVcpuProperty;
   /**
   * memory_mib block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#memory_mib TfLaunchTemplate#memory_mib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#memory_mib AwsLaunchTemplate#memory_mib}
   */
   readonly memoryMib: MemoryMibProperty;
   /**
   * network_bandwidth_gbps block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_bandwidth_gbps TfLaunchTemplate#network_bandwidth_gbps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_bandwidth_gbps AwsLaunchTemplate#network_bandwidth_gbps}
   */
   readonly networkBandwidthGbps?: NetworkBandwidthGbpsProperty;
   /**
   * network_interface_count block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_interface_count TfLaunchTemplate#network_interface_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_interface_count AwsLaunchTemplate#network_interface_count}
   */
   readonly networkInterfaceCount?: NetworkInterfaceCountProperty;
   /**
   * total_local_storage_gb block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#total_local_storage_gb TfLaunchTemplate#total_local_storage_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#total_local_storage_gb AwsLaunchTemplate#total_local_storage_gb}
   */
   readonly totalLocalStorageGb?: TotalLocalStorageGbProperty;
   /**
   * vcpu_count block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#vcpu_count TfLaunchTemplate#vcpu_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#vcpu_count AwsLaunchTemplate#vcpu_count}
   */
   readonly vcpuCount: VcpuCountProperty;
 }
@@ -5558,7 +5558,7 @@ export class InstanceRequirementsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface LicenseSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#license_configuration_arn TfLaunchTemplate#license_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#license_configuration_arn AwsLaunchTemplate#license_configuration_arn}
   */
   readonly licenseConfigurationArn: string;
 }
@@ -5641,7 +5641,7 @@ export class LicenseSpecificationPropertyList extends cdktn.ComplexList {
 }
 export interface MaintenanceOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#auto_recovery TfLaunchTemplate#auto_recovery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#auto_recovery AwsLaunchTemplate#auto_recovery}
   */
   readonly autoRecovery?: string;
 }
@@ -5695,23 +5695,23 @@ export class MaintenanceOptionsPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface MetadataOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#http_endpoint TfLaunchTemplate#http_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#http_endpoint AwsLaunchTemplate#http_endpoint}
   */
   readonly httpEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#http_protocol_ipv6 TfLaunchTemplate#http_protocol_ipv6}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#http_protocol_ipv6 AwsLaunchTemplate#http_protocol_ipv6}
   */
   readonly httpProtocolIpv6?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#http_put_response_hop_limit TfLaunchTemplate#http_put_response_hop_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#http_put_response_hop_limit AwsLaunchTemplate#http_put_response_hop_limit}
   */
   readonly httpPutResponseHopLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#http_tokens TfLaunchTemplate#http_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#http_tokens AwsLaunchTemplate#http_tokens}
   */
   readonly httpTokens?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_metadata_tags TfLaunchTemplate#instance_metadata_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#instance_metadata_tags AwsLaunchTemplate#instance_metadata_tags}
   */
   readonly instanceMetadataTags?: string;
 }
@@ -5853,7 +5853,7 @@ export class MetadataOptionsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface MonitoringProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#enabled TfLaunchTemplate#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#enabled AwsLaunchTemplate#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -5907,15 +5907,15 @@ export class MonitoringPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ConnectionTrackingSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#tcp_established_timeout TfLaunchTemplate#tcp_established_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#tcp_established_timeout AwsLaunchTemplate#tcp_established_timeout}
   */
   readonly tcpEstablishedTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#udp_stream_timeout TfLaunchTemplate#udp_stream_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#udp_stream_timeout AwsLaunchTemplate#udp_stream_timeout}
   */
   readonly udpStreamTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#udp_timeout TfLaunchTemplate#udp_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#udp_timeout AwsLaunchTemplate#udp_timeout}
   */
   readonly udpTimeout?: number;
 }
@@ -6013,7 +6013,7 @@ export class ConnectionTrackingSpecificationPropertyOutputReference extends cdkt
 }
 export interface EnaSrdUdpSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ena_srd_udp_enabled TfLaunchTemplate#ena_srd_udp_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ena_srd_udp_enabled AwsLaunchTemplate#ena_srd_udp_enabled}
   */
   readonly enaSrdUdpEnabled?: boolean | cdktn.IResolvable;
 }
@@ -6067,13 +6067,13 @@ export class EnaSrdUdpSpecificationPropertyOutputReference extends cdktn.Complex
 }
 export interface EnaSrdSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ena_srd_enabled TfLaunchTemplate#ena_srd_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ena_srd_enabled AwsLaunchTemplate#ena_srd_enabled}
   */
   readonly enaSrdEnabled?: boolean | cdktn.IResolvable;
   /**
   * ena_srd_udp_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ena_srd_udp_specification TfLaunchTemplate#ena_srd_udp_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ena_srd_udp_specification AwsLaunchTemplate#ena_srd_udp_specification}
   */
   readonly enaSrdUdpSpecification?: EnaSrdUdpSpecificationProperty;
 }
@@ -6149,99 +6149,99 @@ export class EnaSrdSpecificationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface NetworkInterfacesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#associate_carrier_ip_address TfLaunchTemplate#associate_carrier_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#associate_carrier_ip_address AwsLaunchTemplate#associate_carrier_ip_address}
   */
   readonly associateCarrierIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#associate_public_ip_address TfLaunchTemplate#associate_public_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#associate_public_ip_address AwsLaunchTemplate#associate_public_ip_address}
   */
   readonly associatePublicIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#delete_on_termination TfLaunchTemplate#delete_on_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#delete_on_termination AwsLaunchTemplate#delete_on_termination}
   */
   readonly deleteOnTermination?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#description TfLaunchTemplate#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#description AwsLaunchTemplate#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#device_index TfLaunchTemplate#device_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#device_index AwsLaunchTemplate#device_index}
   */
   readonly deviceIndex?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ena_queue_count TfLaunchTemplate#ena_queue_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ena_queue_count AwsLaunchTemplate#ena_queue_count}
   */
   readonly enaQueueCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#interface_type TfLaunchTemplate#interface_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#interface_type AwsLaunchTemplate#interface_type}
   */
   readonly interfaceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv4_address_count TfLaunchTemplate#ipv4_address_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv4_address_count AwsLaunchTemplate#ipv4_address_count}
   */
   readonly ipv4AddressCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv4_addresses TfLaunchTemplate#ipv4_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv4_addresses AwsLaunchTemplate#ipv4_addresses}
   */
   readonly ipv4Addresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv4_prefix_count TfLaunchTemplate#ipv4_prefix_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv4_prefix_count AwsLaunchTemplate#ipv4_prefix_count}
   */
   readonly ipv4PrefixCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv4_prefixes TfLaunchTemplate#ipv4_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv4_prefixes AwsLaunchTemplate#ipv4_prefixes}
   */
   readonly ipv4Prefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv6_address_count TfLaunchTemplate#ipv6_address_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv6_address_count AwsLaunchTemplate#ipv6_address_count}
   */
   readonly ipv6AddressCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv6_addresses TfLaunchTemplate#ipv6_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv6_addresses AwsLaunchTemplate#ipv6_addresses}
   */
   readonly ipv6Addresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv6_prefix_count TfLaunchTemplate#ipv6_prefix_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv6_prefix_count AwsLaunchTemplate#ipv6_prefix_count}
   */
   readonly ipv6PrefixCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv6_prefixes TfLaunchTemplate#ipv6_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ipv6_prefixes AwsLaunchTemplate#ipv6_prefixes}
   */
   readonly ipv6Prefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_card_index TfLaunchTemplate#network_card_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_card_index AwsLaunchTemplate#network_card_index}
   */
   readonly networkCardIndex?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_interface_id TfLaunchTemplate#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_interface_id AwsLaunchTemplate#network_interface_id}
   */
   readonly networkInterfaceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#primary_ipv6 TfLaunchTemplate#primary_ipv6}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#primary_ipv6 AwsLaunchTemplate#primary_ipv6}
   */
   readonly primaryIpv6?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#private_ip_address TfLaunchTemplate#private_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#private_ip_address AwsLaunchTemplate#private_ip_address}
   */
   readonly privateIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#security_groups TfLaunchTemplate#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#security_groups AwsLaunchTemplate#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#subnet_id TfLaunchTemplate#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#subnet_id AwsLaunchTemplate#subnet_id}
   */
   readonly subnetId?: string;
   /**
   * connection_tracking_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#connection_tracking_specification TfLaunchTemplate#connection_tracking_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#connection_tracking_specification AwsLaunchTemplate#connection_tracking_specification}
   */
   readonly connectionTrackingSpecification?: ConnectionTrackingSpecificationProperty;
   /**
   * ena_srd_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ena_srd_specification TfLaunchTemplate#ena_srd_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#ena_srd_specification AwsLaunchTemplate#ena_srd_specification}
   */
   readonly enaSrdSpecification?: EnaSrdSpecificationProperty;
 }
@@ -6811,7 +6811,7 @@ export class NetworkInterfacesPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkPerformanceOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#bandwidth_weighting TfLaunchTemplate#bandwidth_weighting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#bandwidth_weighting AwsLaunchTemplate#bandwidth_weighting}
   */
   readonly bandwidthWeighting?: string;
 }
@@ -6865,39 +6865,39 @@ export class NetworkPerformanceOptionsPropertyOutputReference extends cdktn.Comp
 }
 export interface PlacementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#affinity TfLaunchTemplate#affinity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#affinity AwsLaunchTemplate#affinity}
   */
   readonly affinity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#availability_zone TfLaunchTemplate#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#availability_zone AwsLaunchTemplate#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#group_id TfLaunchTemplate#group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#group_id AwsLaunchTemplate#group_id}
   */
   readonly groupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#group_name TfLaunchTemplate#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#group_name AwsLaunchTemplate#group_name}
   */
   readonly groupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#host_id TfLaunchTemplate#host_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#host_id AwsLaunchTemplate#host_id}
   */
   readonly hostId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#host_resource_group_arn TfLaunchTemplate#host_resource_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#host_resource_group_arn AwsLaunchTemplate#host_resource_group_arn}
   */
   readonly hostResourceGroupArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#partition_number TfLaunchTemplate#partition_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#partition_number AwsLaunchTemplate#partition_number}
   */
   readonly partitionNumber?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#spread_domain TfLaunchTemplate#spread_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#spread_domain AwsLaunchTemplate#spread_domain}
   */
   readonly spreadDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#tenancy TfLaunchTemplate#tenancy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#tenancy AwsLaunchTemplate#tenancy}
   */
   readonly tenancy?: string;
 }
@@ -7127,15 +7127,15 @@ export class PlacementPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PrivateDnsNameOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#enable_resource_name_dns_a_record TfLaunchTemplate#enable_resource_name_dns_a_record}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#enable_resource_name_dns_a_record AwsLaunchTemplate#enable_resource_name_dns_a_record}
   */
   readonly enableResourceNameDnsARecord?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#enable_resource_name_dns_aaaa_record TfLaunchTemplate#enable_resource_name_dns_aaaa_record}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#enable_resource_name_dns_aaaa_record AwsLaunchTemplate#enable_resource_name_dns_aaaa_record}
   */
   readonly enableResourceNameDnsAaaaRecord?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#hostname_type TfLaunchTemplate#hostname_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#hostname_type AwsLaunchTemplate#hostname_type}
   */
   readonly hostnameType?: string;
 }
@@ -7233,31 +7233,31 @@ export class PrivateDnsNameOptionsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface SecondaryInterfacesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#delete_on_termination TfLaunchTemplate#delete_on_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#delete_on_termination AwsLaunchTemplate#delete_on_termination}
   */
   readonly deleteOnTermination?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#device_index TfLaunchTemplate#device_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#device_index AwsLaunchTemplate#device_index}
   */
   readonly deviceIndex?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#interface_type TfLaunchTemplate#interface_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#interface_type AwsLaunchTemplate#interface_type}
   */
   readonly interfaceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_card_index TfLaunchTemplate#network_card_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#network_card_index AwsLaunchTemplate#network_card_index}
   */
   readonly networkCardIndex?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#private_ip_address_count TfLaunchTemplate#private_ip_address_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#private_ip_address_count AwsLaunchTemplate#private_ip_address_count}
   */
   readonly privateIpAddressCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#private_ip_addresses TfLaunchTemplate#private_ip_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#private_ip_addresses AwsLaunchTemplate#private_ip_addresses}
   */
   readonly privateIpAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#secondary_subnet_id TfLaunchTemplate#secondary_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#secondary_subnet_id AwsLaunchTemplate#secondary_subnet_id}
   */
   readonly secondarySubnetId?: string;
 }
@@ -7475,11 +7475,11 @@ export class SecondaryInterfacesPropertyList extends cdktn.ComplexList {
 }
 export interface TagSpecificationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#resource_type TfLaunchTemplate#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#resource_type AwsLaunchTemplate#resource_type}
   */
   readonly resourceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#tags TfLaunchTemplate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_template#tags AwsLaunchTemplate#tags}
   */
   readonly tags?: { [key: string]: string };
 }

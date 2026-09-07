@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfHostConfig extends cdktn.TerraformMetaArguments {
+export interface AwsHostConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#asset_id TfHost#asset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#asset_id AwsHost#asset_id}
   */
   readonly assetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#auto_placement TfHost#auto_placement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#auto_placement AwsHost#auto_placement}
   */
   readonly autoPlacement?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#availability_zone TfHost#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#availability_zone AwsHost#availability_zone}
   */
   readonly availabilityZone: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#host_recovery TfHost#host_recovery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#host_recovery AwsHost#host_recovery}
   */
   readonly hostRecovery?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#id TfHost#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#id AwsHost#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#instance_family TfHost#instance_family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#instance_family AwsHost#instance_family}
   */
   readonly instanceFamily?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#instance_type TfHost#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#instance_type AwsHost#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#outpost_arn TfHost#outpost_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#outpost_arn AwsHost#outpost_arn}
   */
   readonly outpostArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#region TfHost#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#region AwsHost#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#tags TfHost#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#tags AwsHost#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#tags_all TfHost#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#tags_all AwsHost#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#timeouts TfHost#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#timeouts AwsHost#timeouts}
   */
-  readonly timeouts?: TfHost.TimeoutsProperty;
+  readonly timeouts?: AwsHost.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host aws_ec2_host}
 */
-export class TfHost extends cdktn.TerraformResource {
+export class AwsHost extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class TfHost extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfHost resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsHost resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfHost to import
-  * @param importFromId The id of the existing TfHost that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfHost to import is found
+  * @param importToId The construct id used in the generated config for the AwsHost to import
+  * @param importFromId The id of the existing AwsHost that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsHost to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_host", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class TfHost extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfHostConfig
+  * @param options AwsHostConfig
   */
-  public constructor(scope: Construct, id: string, config: TfHostConfig) {
+  public constructor(scope: Construct, id: string, config: AwsHostConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_host',
       terraformGeneratorMetadata: {
@@ -316,11 +316,11 @@ export class TfHost extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfHost.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsHost.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfHost.TimeoutsProperty) {
+  public putTimeouts(value: AwsHost.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -348,7 +348,7 @@ export class TfHost extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfHostTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsHostTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -421,10 +421,10 @@ export class TfHost extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfHostTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsHostTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfHost.TimeoutsProperty",
+        storageClassType: "AwsHost.TimeoutsProperty",
       },
     };
 
@@ -433,7 +433,7 @@ export class TfHost extends cdktn.TerraformResource {
   }
 }
 
-export function tfHostTimeoutsPropertyToTerraform(struct?: TfHost.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsHostTimeoutsPropertyToTerraform(struct?: AwsHost.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,7 +446,7 @@ export function tfHostTimeoutsPropertyToTerraform(struct?: TfHost.TimeoutsProper
 }
 
 
-export function tfHostTimeoutsPropertyToHclTerraform(struct?: TfHost.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsHostTimeoutsPropertyToHclTerraform(struct?: AwsHost.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,18 +477,18 @@ export function tfHostTimeoutsPropertyToHclTerraform(struct?: TfHost.TimeoutsPro
 }
 
 
-export namespace TfHost {
+export namespace AwsHost {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#create TfHost#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#create AwsHost#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#delete TfHost#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#delete AwsHost#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#update TfHost#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_host#update AwsHost#update}
   */
   readonly update?: string;
 }

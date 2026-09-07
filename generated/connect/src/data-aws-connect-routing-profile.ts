@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRoutingProfileConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRoutingProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#id DataTfRoutingProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#id DataAwsRoutingProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#instance_id DataTfRoutingProfile#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#instance_id DataAwsRoutingProfile#instance_id}
   */
   readonly instanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#name DataTfRoutingProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#name DataAwsRoutingProfile#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#region DataTfRoutingProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#region DataAwsRoutingProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#routing_profile_id DataTfRoutingProfile#routing_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#routing_profile_id DataAwsRoutingProfile#routing_profile_id}
   */
   readonly routingProfileId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#tags DataTfRoutingProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#tags DataAwsRoutingProfile#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface DataTfRoutingProfileConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile aws_connect_routing_profile}
 */
-export class DataTfRoutingProfile extends cdktn.TerraformDataSource {
+export class DataAwsRoutingProfile extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataTfRoutingProfile extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRoutingProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRoutingProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRoutingProfile to import
-  * @param importFromId The id of the existing DataTfRoutingProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRoutingProfile to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRoutingProfile to import
+  * @param importFromId The id of the existing DataAwsRoutingProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_routing_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRoutingProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_routing_profile", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataTfRoutingProfile extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRoutingProfileConfig
+  * @param options DataAwsRoutingProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfRoutingProfileConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsRoutingProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_routing_profile',
       terraformGeneratorMetadata: {
@@ -145,7 +145,7 @@ export class DataTfRoutingProfile extends cdktn.TerraformDataSource {
   }
 
   // media_concurrencies - computed: true, optional: false, required: false
-  private _mediaConcurrencies = new DataTfRoutingProfile.MediaConcurrenciesPropertyList(this, "media_concurrencies", true);
+  private _mediaConcurrencies = new DataAwsRoutingProfile.MediaConcurrenciesPropertyList(this, "media_concurrencies", true);
   public get mediaConcurrencies() {
     return this._mediaConcurrencies;
   }
@@ -167,7 +167,7 @@ export class DataTfRoutingProfile extends cdktn.TerraformDataSource {
   }
 
   // queue_configs - computed: true, optional: false, required: false
-  private _queueConfigs = new DataTfRoutingProfile.QueueConfigsPropertyList(this, "queue_configs", true);
+  private _queueConfigs = new DataAwsRoutingProfile.QueueConfigsPropertyList(this, "queue_configs", true);
   public get queueConfigs() {
     return this._queueConfigs;
   }
@@ -280,7 +280,7 @@ export class DataTfRoutingProfile extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfRoutingProfileCrossChannelBehaviorPropertyToTerraform(struct?: DataTfRoutingProfile.CrossChannelBehaviorProperty): any {
+export function dataAwsRoutingProfileCrossChannelBehaviorPropertyToTerraform(struct?: DataAwsRoutingProfile.CrossChannelBehaviorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function dataTfRoutingProfileCrossChannelBehaviorPropertyToTerraform(stru
 }
 
 
-export function dataTfRoutingProfileCrossChannelBehaviorPropertyToHclTerraform(struct?: DataTfRoutingProfile.CrossChannelBehaviorProperty): any {
+export function dataAwsRoutingProfileCrossChannelBehaviorPropertyToHclTerraform(struct?: DataAwsRoutingProfile.CrossChannelBehaviorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function dataTfRoutingProfileCrossChannelBehaviorPropertyToHclTerraform(s
 }
 
 
-export function dataTfRoutingProfileMediaConcurrenciesPropertyToTerraform(struct?: DataTfRoutingProfile.MediaConcurrenciesProperty): any {
+export function dataAwsRoutingProfileMediaConcurrenciesPropertyToTerraform(struct?: DataAwsRoutingProfile.MediaConcurrenciesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function dataTfRoutingProfileMediaConcurrenciesPropertyToTerraform(struct
 }
 
 
-export function dataTfRoutingProfileMediaConcurrenciesPropertyToHclTerraform(struct?: DataTfRoutingProfile.MediaConcurrenciesProperty): any {
+export function dataAwsRoutingProfileMediaConcurrenciesPropertyToHclTerraform(struct?: DataAwsRoutingProfile.MediaConcurrenciesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function dataTfRoutingProfileMediaConcurrenciesPropertyToHclTerraform(str
 }
 
 
-export function dataTfRoutingProfileQueueConfigsPropertyToTerraform(struct?: DataTfRoutingProfile.QueueConfigsProperty): any {
+export function dataAwsRoutingProfileQueueConfigsPropertyToTerraform(struct?: DataAwsRoutingProfile.QueueConfigsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function dataTfRoutingProfileQueueConfigsPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfRoutingProfileQueueConfigsPropertyToHclTerraform(struct?: DataTfRoutingProfile.QueueConfigsProperty): any {
+export function dataAwsRoutingProfileQueueConfigsPropertyToHclTerraform(struct?: DataAwsRoutingProfile.QueueConfigsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function dataTfRoutingProfileQueueConfigsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace DataTfRoutingProfile {
+export namespace DataAwsRoutingProfile {
 export interface CrossChannelBehaviorProperty {
 }
 export class CrossChannelBehaviorPropertyOutputReference extends cdktn.ComplexObject {

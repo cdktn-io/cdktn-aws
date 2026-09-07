@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPackageAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPackageAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#domain_name TfPackageAssociation#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#domain_name AwsPackageAssociation#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#id TfPackageAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#id AwsPackageAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#package_id TfPackageAssociation#package_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#package_id AwsPackageAssociation#package_id}
   */
   readonly packageId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#region TfPackageAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#region AwsPackageAssociation#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#timeouts TfPackageAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#timeouts AwsPackageAssociation#timeouts}
   */
-  readonly timeouts?: TfPackageAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsPackageAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association aws_opensearch_package_association}
 */
-export class TfPackageAssociation extends cdktn.TerraformResource {
+export class AwsPackageAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfPackageAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPackageAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPackageAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPackageAssociation to import
-  * @param importFromId The id of the existing TfPackageAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPackageAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsPackageAssociation to import
+  * @param importFromId The id of the existing AwsPackageAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPackageAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearch_package_association", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfPackageAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPackageAssociationConfig
+  * @param options AwsPackageAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPackageAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPackageAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearch_package_association',
       terraformGeneratorMetadata: {
@@ -161,11 +161,11 @@ export class TfPackageAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPackageAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPackageAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPackageAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsPackageAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -186,7 +186,7 @@ export class TfPackageAssociation extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       package_id: cdktn.stringToTerraform(this._packageId),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfPackageAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsPackageAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -217,10 +217,10 @@ export class TfPackageAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfPackageAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPackageAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPackageAssociation.TimeoutsProperty",
+        storageClassType: "AwsPackageAssociation.TimeoutsProperty",
       },
     };
 
@@ -229,7 +229,7 @@ export class TfPackageAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfPackageAssociationTimeoutsPropertyToTerraform(struct?: TfPackageAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPackageAssociationTimeoutsPropertyToTerraform(struct?: AwsPackageAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function tfPackageAssociationTimeoutsPropertyToTerraform(struct?: TfPacka
 }
 
 
-export function tfPackageAssociationTimeoutsPropertyToHclTerraform(struct?: TfPackageAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPackageAssociationTimeoutsPropertyToHclTerraform(struct?: AwsPackageAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,14 +266,14 @@ export function tfPackageAssociationTimeoutsPropertyToHclTerraform(struct?: TfPa
 }
 
 
-export namespace TfPackageAssociation {
+export namespace AwsPackageAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#create TfPackageAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#create AwsPackageAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#delete TfPackageAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package_association#delete AwsPackageAssociation#delete}
   */
   readonly delete?: string;
 }

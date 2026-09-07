@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAccountAssignmentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAccountAssignmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#id TfAccountAssignment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#id AwsAccountAssignment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#instance_arn TfAccountAssignment#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#instance_arn AwsAccountAssignment#instance_arn}
   */
   readonly instanceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#permission_set_arn TfAccountAssignment#permission_set_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#permission_set_arn AwsAccountAssignment#permission_set_arn}
   */
   readonly permissionSetArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#principal_id TfAccountAssignment#principal_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#principal_id AwsAccountAssignment#principal_id}
   */
   readonly principalId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#principal_type TfAccountAssignment#principal_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#principal_type AwsAccountAssignment#principal_type}
   */
   readonly principalType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#region TfAccountAssignment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#region AwsAccountAssignment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#target_id TfAccountAssignment#target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#target_id AwsAccountAssignment#target_id}
   */
   readonly targetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#target_type TfAccountAssignment#target_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#target_type AwsAccountAssignment#target_type}
   */
   readonly targetType: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#timeouts TfAccountAssignment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#timeouts AwsAccountAssignment#timeouts}
   */
-  readonly timeouts?: TfAccountAssignment.TimeoutsProperty;
+  readonly timeouts?: AwsAccountAssignment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment aws_ssoadmin_account_assignment}
 */
-export class TfAccountAssignment extends cdktn.TerraformResource {
+export class AwsAccountAssignment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfAccountAssignment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAccountAssignment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAccountAssignment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAccountAssignment to import
-  * @param importFromId The id of the existing TfAccountAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAccountAssignment to import is found
+  * @param importToId The construct id used in the generated config for the AwsAccountAssignment to import
+  * @param importFromId The id of the existing AwsAccountAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAccountAssignment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_account_assignment", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfAccountAssignment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAccountAssignmentConfig
+  * @param options AwsAccountAssignmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAccountAssignmentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAccountAssignmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_account_assignment',
       terraformGeneratorMetadata: {
@@ -228,11 +228,11 @@ export class TfAccountAssignment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfAccountAssignment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsAccountAssignment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfAccountAssignment.TimeoutsProperty) {
+  public putTimeouts(value: AwsAccountAssignment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -257,7 +257,7 @@ export class TfAccountAssignment extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       target_id: cdktn.stringToTerraform(this._targetId),
       target_type: cdktn.stringToTerraform(this._targetType),
-      timeouts: tfAccountAssignmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsAccountAssignmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -312,10 +312,10 @@ export class TfAccountAssignment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfAccountAssignmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsAccountAssignmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfAccountAssignment.TimeoutsProperty",
+        storageClassType: "AwsAccountAssignment.TimeoutsProperty",
       },
     };
 
@@ -324,7 +324,7 @@ export class TfAccountAssignment extends cdktn.TerraformResource {
   }
 }
 
-export function tfAccountAssignmentTimeoutsPropertyToTerraform(struct?: TfAccountAssignment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAccountAssignmentTimeoutsPropertyToTerraform(struct?: AwsAccountAssignment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function tfAccountAssignmentTimeoutsPropertyToTerraform(struct?: TfAccoun
 }
 
 
-export function tfAccountAssignmentTimeoutsPropertyToHclTerraform(struct?: TfAccountAssignment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAccountAssignmentTimeoutsPropertyToHclTerraform(struct?: AwsAccountAssignment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,14 +361,14 @@ export function tfAccountAssignmentTimeoutsPropertyToHclTerraform(struct?: TfAcc
 }
 
 
-export namespace TfAccountAssignment {
+export namespace AwsAccountAssignment {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#create TfAccountAssignment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#create AwsAccountAssignment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#delete TfAccountAssignment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_account_assignment#delete AwsAccountAssignment#delete}
   */
   readonly delete?: string;
 }

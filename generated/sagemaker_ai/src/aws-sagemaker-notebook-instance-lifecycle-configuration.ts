@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfNotebookInstanceLifecycleConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsNotebookInstanceLifecycleConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#id TfNotebookInstanceLifecycleConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#id AwsNotebookInstanceLifecycleConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#name TfNotebookInstanceLifecycleConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#name AwsNotebookInstanceLifecycleConfiguration#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#on_create TfNotebookInstanceLifecycleConfiguration#on_create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#on_create AwsNotebookInstanceLifecycleConfiguration#on_create}
   */
   readonly onCreate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#on_start TfNotebookInstanceLifecycleConfiguration#on_start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#on_start AwsNotebookInstanceLifecycleConfiguration#on_start}
   */
   readonly onStart?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#region TfNotebookInstanceLifecycleConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#region AwsNotebookInstanceLifecycleConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#tags TfNotebookInstanceLifecycleConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#tags AwsNotebookInstanceLifecycleConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#tags_all TfNotebookInstanceLifecycleConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#tags_all AwsNotebookInstanceLifecycleConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -44,7 +44,7 @@ export interface TfNotebookInstanceLifecycleConfigurationConfig extends cdktn.Te
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration aws_sagemaker_notebook_instance_lifecycle_configuration}
 */
-export class TfNotebookInstanceLifecycleConfiguration extends cdktn.TerraformResource {
+export class AwsNotebookInstanceLifecycleConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfNotebookInstanceLifecycleConfiguration extends cdktn.TerraformRes
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfNotebookInstanceLifecycleConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsNotebookInstanceLifecycleConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfNotebookInstanceLifecycleConfiguration to import
-  * @param importFromId The id of the existing TfNotebookInstanceLifecycleConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfNotebookInstanceLifecycleConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsNotebookInstanceLifecycleConfiguration to import
+  * @param importFromId The id of the existing AwsNotebookInstanceLifecycleConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance_lifecycle_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNotebookInstanceLifecycleConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_notebook_instance_lifecycle_configuration", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfNotebookInstanceLifecycleConfiguration extends cdktn.TerraformRes
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfNotebookInstanceLifecycleConfigurationConfig = {}
+  * @param options AwsNotebookInstanceLifecycleConfigurationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfNotebookInstanceLifecycleConfigurationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsNotebookInstanceLifecycleConfigurationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_notebook_instance_lifecycle_configuration',
       terraformGeneratorMetadata: {

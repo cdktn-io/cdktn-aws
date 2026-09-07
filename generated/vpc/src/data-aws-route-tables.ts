@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRouteTablesConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRouteTablesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#id DataTfRouteTables#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#id DataAwsRouteTables#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,35 +16,35 @@ export interface DataTfRouteTablesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#region DataTfRouteTables#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#region DataAwsRouteTables#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#tags DataTfRouteTables#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#tags DataAwsRouteTables#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#vpc_id DataTfRouteTables#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#vpc_id DataAwsRouteTables#vpc_id}
   */
   readonly vpcId?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#filter DataTfRouteTables#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#filter DataAwsRouteTables#filter}
   */
-  readonly filter?: DataTfRouteTables.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsRouteTables.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#timeouts DataTfRouteTables#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#timeouts DataAwsRouteTables#timeouts}
   */
-  readonly timeouts?: DataTfRouteTables.TimeoutsProperty;
+  readonly timeouts?: DataAwsRouteTables.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables aws_route_tables}
 */
-export class DataTfRouteTables extends cdktn.TerraformDataSource {
+export class DataAwsRouteTables extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class DataTfRouteTables extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRouteTables resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRouteTables resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRouteTables to import
-  * @param importFromId The id of the existing DataTfRouteTables that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRouteTables to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRouteTables to import
+  * @param importFromId The id of the existing DataAwsRouteTables that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRouteTables to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route_tables", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class DataTfRouteTables extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRouteTablesConfig = {}
+  * @param options DataAwsRouteTablesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfRouteTablesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsRouteTablesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_route_tables',
       terraformGeneratorMetadata: {
@@ -174,11 +174,11 @@ export class DataTfRouteTables extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfRouteTables.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsRouteTables.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfRouteTables.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsRouteTables.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -190,11 +190,11 @@ export class DataTfRouteTables extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfRouteTables.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsRouteTables.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfRouteTables.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsRouteTables.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -215,8 +215,8 @@ export class DataTfRouteTables extends cdktn.TerraformDataSource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      filter: cdktn.listMapper(dataTfRouteTablesFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataTfRouteTablesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataAwsRouteTablesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataAwsRouteTablesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -247,16 +247,16 @@ export class DataTfRouteTables extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfRouteTablesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsRouteTablesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfRouteTables.FilterPropertyList",
+        storageClassType: "DataAwsRouteTables.FilterPropertyList",
       },
       timeouts: {
-        value: dataTfRouteTablesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsRouteTablesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfRouteTables.TimeoutsProperty",
+        storageClassType: "DataAwsRouteTables.TimeoutsProperty",
       },
     };
 
@@ -265,7 +265,7 @@ export class DataTfRouteTables extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfRouteTablesFilterPropertyToTerraform(struct?: DataTfRouteTables.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsRouteTablesFilterPropertyToTerraform(struct?: DataAwsRouteTables.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,7 +277,7 @@ export function dataTfRouteTablesFilterPropertyToTerraform(struct?: DataTfRouteT
 }
 
 
-export function dataTfRouteTablesFilterPropertyToHclTerraform(struct?: DataTfRouteTables.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsRouteTablesFilterPropertyToHclTerraform(struct?: DataAwsRouteTables.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function dataTfRouteTablesFilterPropertyToHclTerraform(struct?: DataTfRou
 }
 
 
-export function dataTfRouteTablesTimeoutsPropertyToTerraform(struct?: DataTfRouteTables.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsRouteTablesTimeoutsPropertyToTerraform(struct?: DataAwsRouteTables.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function dataTfRouteTablesTimeoutsPropertyToTerraform(struct?: DataTfRout
 }
 
 
-export function dataTfRouteTablesTimeoutsPropertyToHclTerraform(struct?: DataTfRouteTables.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsRouteTablesTimeoutsPropertyToHclTerraform(struct?: DataAwsRouteTables.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,14 +332,14 @@ export function dataTfRouteTablesTimeoutsPropertyToHclTerraform(struct?: DataTfR
 }
 
 
-export namespace DataTfRouteTables {
+export namespace DataAwsRouteTables {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#name DataTfRouteTables#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#name DataAwsRouteTables#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#values DataTfRouteTables#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#values DataAwsRouteTables#values}
   */
   readonly values: string[];
 }
@@ -441,7 +441,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#read DataTfRouteTables#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route_tables#read DataAwsRouteTables#read}
   */
   readonly read?: string;
 }

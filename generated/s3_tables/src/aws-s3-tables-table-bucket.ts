@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTableBucketConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTableBucketConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#encryption_configuration TfTableBucket#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#encryption_configuration AwsTableBucket#encryption_configuration}
   */
-  readonly encryptionConfiguration?: TfTableBucket.EncryptionConfigurationProperty;
+  readonly encryptionConfiguration?: AwsTableBucket.EncryptionConfigurationProperty;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#force_destroy TfTableBucket#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#force_destroy AwsTableBucket#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#maintenance_configuration TfTableBucket#maintenance_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#maintenance_configuration AwsTableBucket#maintenance_configuration}
   */
-  readonly maintenanceConfiguration?: TfTableBucket.MaintenanceConfigurationProperty;
+  readonly maintenanceConfiguration?: AwsTableBucket.MaintenanceConfigurationProperty;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#name TfTableBucket#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#name AwsTableBucket#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#region TfTableBucket#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#region AwsTableBucket#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#tags TfTableBucket#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#tags AwsTableBucket#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -37,7 +37,7 @@ export interface TfTableBucketConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket aws_s3tables_table_bucket}
 */
-export class TfTableBucket extends cdktn.TerraformResource {
+export class AwsTableBucket extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfTableBucket extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTableBucket resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTableBucket resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTableBucket to import
-  * @param importFromId The id of the existing TfTableBucket that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTableBucket to import is found
+  * @param importToId The construct id used in the generated config for the AwsTableBucket to import
+  * @param importFromId The id of the existing AwsTableBucket that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTableBucket to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3tables_table_bucket", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfTableBucket extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTableBucketConfig
+  * @param options AwsTableBucketConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTableBucketConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTableBucketConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3tables_table_bucket',
       terraformGeneratorMetadata: {
@@ -108,11 +108,11 @@ export class TfTableBucket extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: true, optional: true, required: false
-  private _encryptionConfiguration = new TfTableBucket.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
+  private _encryptionConfiguration = new AwsTableBucket.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: TfTableBucket.EncryptionConfigurationProperty) {
+  public putEncryptionConfiguration(value: AwsTableBucket.EncryptionConfigurationProperty) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -140,11 +140,11 @@ export class TfTableBucket extends cdktn.TerraformResource {
   }
 
   // maintenance_configuration - computed: true, optional: true, required: false
-  private _maintenanceConfiguration = new TfTableBucket.MaintenanceConfigurationPropertyOutputReference(this, "maintenance_configuration");
+  private _maintenanceConfiguration = new AwsTableBucket.MaintenanceConfigurationPropertyOutputReference(this, "maintenance_configuration");
   public get maintenanceConfiguration() {
     return this._maintenanceConfiguration;
   }
-  public putMaintenanceConfiguration(value: TfTableBucket.MaintenanceConfigurationProperty) {
+  public putMaintenanceConfiguration(value: AwsTableBucket.MaintenanceConfigurationProperty) {
     this._maintenanceConfiguration.internalValue = value;
   }
   public resetMaintenanceConfiguration() {
@@ -217,9 +217,9 @@ export class TfTableBucket extends cdktn.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      encryption_configuration: tfTableBucketEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
+      encryption_configuration: awsTableBucketEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
       force_destroy: cdktn.booleanToTerraform(this._forceDestroy),
-      maintenance_configuration: tfTableBucketMaintenanceConfigurationPropertyToTerraform(this._maintenanceConfiguration.internalValue),
+      maintenance_configuration: awsTableBucketMaintenanceConfigurationPropertyToTerraform(this._maintenanceConfiguration.internalValue),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
@@ -229,10 +229,10 @@ export class TfTableBucket extends cdktn.TerraformResource {
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       encryption_configuration: {
-        value: tfTableBucketEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
+        value: awsTableBucketEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTableBucket.EncryptionConfigurationProperty",
+        storageClassType: "AwsTableBucket.EncryptionConfigurationProperty",
       },
       force_destroy: {
         value: cdktn.booleanToHclTerraform(this._forceDestroy),
@@ -241,10 +241,10 @@ export class TfTableBucket extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       maintenance_configuration: {
-        value: tfTableBucketMaintenanceConfigurationPropertyToHclTerraform(this._maintenanceConfiguration.internalValue),
+        value: awsTableBucketMaintenanceConfigurationPropertyToHclTerraform(this._maintenanceConfiguration.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTableBucket.MaintenanceConfigurationProperty",
+        storageClassType: "AwsTableBucket.MaintenanceConfigurationProperty",
       },
       name: {
         value: cdktn.stringToHclTerraform(this._name),
@@ -271,7 +271,7 @@ export class TfTableBucket extends cdktn.TerraformResource {
   }
 }
 
-export function tfTableBucketEncryptionConfigurationPropertyToTerraform(struct?: TfTableBucket.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function awsTableBucketEncryptionConfigurationPropertyToTerraform(struct?: AwsTableBucket.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -283,7 +283,7 @@ export function tfTableBucketEncryptionConfigurationPropertyToTerraform(struct?:
 }
 
 
-export function tfTableBucketEncryptionConfigurationPropertyToHclTerraform(struct?: TfTableBucket.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function awsTableBucketEncryptionConfigurationPropertyToHclTerraform(struct?: AwsTableBucket.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function tfTableBucketEncryptionConfigurationPropertyToHclTerraform(struc
 }
 
 
-export function tfTableBucketSettingsPropertyToTerraform(struct?: TfTableBucket.SettingsProperty | cdktn.IResolvable): any {
+export function awsTableBucketSettingsPropertyToTerraform(struct?: AwsTableBucket.SettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,7 +320,7 @@ export function tfTableBucketSettingsPropertyToTerraform(struct?: TfTableBucket.
 }
 
 
-export function tfTableBucketSettingsPropertyToHclTerraform(struct?: TfTableBucket.SettingsProperty | cdktn.IResolvable): any {
+export function awsTableBucketSettingsPropertyToHclTerraform(struct?: AwsTableBucket.SettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,26 +345,26 @@ export function tfTableBucketSettingsPropertyToHclTerraform(struct?: TfTableBuck
 }
 
 
-export function tfTableBucketIcebergUnreferencedFileRemovalPropertyToTerraform(struct?: TfTableBucket.IcebergUnreferencedFileRemovalProperty | cdktn.IResolvable): any {
+export function awsTableBucketIcebergUnreferencedFileRemovalPropertyToTerraform(struct?: AwsTableBucket.IcebergUnreferencedFileRemovalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    settings: tfTableBucketSettingsPropertyToTerraform(struct!.settings),
+    settings: awsTableBucketSettingsPropertyToTerraform(struct!.settings),
     status: cdktn.stringToTerraform(struct!.status),
   }
 }
 
 
-export function tfTableBucketIcebergUnreferencedFileRemovalPropertyToHclTerraform(struct?: TfTableBucket.IcebergUnreferencedFileRemovalProperty | cdktn.IResolvable): any {
+export function awsTableBucketIcebergUnreferencedFileRemovalPropertyToHclTerraform(struct?: AwsTableBucket.IcebergUnreferencedFileRemovalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     settings: {
-      value: tfTableBucketSettingsPropertyToHclTerraform(struct!.settings),
+      value: awsTableBucketSettingsPropertyToHclTerraform(struct!.settings),
       isBlock: true,
       type: "struct",
       storageClassType: "SettingsProperty",
@@ -382,25 +382,25 @@ export function tfTableBucketIcebergUnreferencedFileRemovalPropertyToHclTerrafor
 }
 
 
-export function tfTableBucketMaintenanceConfigurationPropertyToTerraform(struct?: TfTableBucket.MaintenanceConfigurationProperty | cdktn.IResolvable): any {
+export function awsTableBucketMaintenanceConfigurationPropertyToTerraform(struct?: AwsTableBucket.MaintenanceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    iceberg_unreferenced_file_removal: tfTableBucketIcebergUnreferencedFileRemovalPropertyToTerraform(struct!.icebergUnreferencedFileRemoval),
+    iceberg_unreferenced_file_removal: awsTableBucketIcebergUnreferencedFileRemovalPropertyToTerraform(struct!.icebergUnreferencedFileRemoval),
   }
 }
 
 
-export function tfTableBucketMaintenanceConfigurationPropertyToHclTerraform(struct?: TfTableBucket.MaintenanceConfigurationProperty | cdktn.IResolvable): any {
+export function awsTableBucketMaintenanceConfigurationPropertyToHclTerraform(struct?: AwsTableBucket.MaintenanceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     iceberg_unreferenced_file_removal: {
-      value: tfTableBucketIcebergUnreferencedFileRemovalPropertyToHclTerraform(struct!.icebergUnreferencedFileRemoval),
+      value: awsTableBucketIcebergUnreferencedFileRemovalPropertyToHclTerraform(struct!.icebergUnreferencedFileRemoval),
       isBlock: true,
       type: "struct",
       storageClassType: "IcebergUnreferencedFileRemovalProperty",
@@ -412,14 +412,14 @@ export function tfTableBucketMaintenanceConfigurationPropertyToHclTerraform(stru
 }
 
 
-export namespace TfTableBucket {
+export namespace AwsTableBucket {
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#kms_key_arn TfTableBucket#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#kms_key_arn AwsTableBucket#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#sse_algorithm TfTableBucket#sse_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#sse_algorithm AwsTableBucket#sse_algorithm}
   */
   readonly sseAlgorithm?: string;
 }
@@ -505,11 +505,11 @@ export class EncryptionConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#non_current_days TfTableBucket#non_current_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#non_current_days AwsTableBucket#non_current_days}
   */
   readonly nonCurrentDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#unreferenced_days TfTableBucket#unreferenced_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#unreferenced_days AwsTableBucket#unreferenced_days}
   */
   readonly unreferencedDays?: number;
 }
@@ -595,11 +595,11 @@ export class SettingsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IcebergUnreferencedFileRemovalProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#settings TfTableBucket#settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#settings AwsTableBucket#settings}
   */
   readonly settings?: SettingsProperty;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#status TfTableBucket#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#status AwsTableBucket#status}
   */
   readonly status?: string;
 }
@@ -685,7 +685,7 @@ export class IcebergUnreferencedFileRemovalPropertyOutputReference extends cdktn
 }
 export interface MaintenanceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#iceberg_unreferenced_file_removal TfTableBucket#iceberg_unreferenced_file_removal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_bucket#iceberg_unreferenced_file_removal AwsTableBucket#iceberg_unreferenced_file_removal}
   */
   readonly icebergUnreferencedFileRemoval?: IcebergUnreferencedFileRemovalProperty;
 }

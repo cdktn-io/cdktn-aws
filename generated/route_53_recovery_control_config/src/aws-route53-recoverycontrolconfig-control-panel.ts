@@ -5,28 +5,28 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfControlPanelConfig extends cdktn.TerraformMetaArguments {
+export interface AwsControlPanelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel#cluster_arn TfControlPanel#cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel#cluster_arn AwsControlPanel#cluster_arn}
   */
   readonly clusterArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel#id TfControlPanel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel#id AwsControlPanel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel#name TfControlPanel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel#name AwsControlPanel#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel#tags TfControlPanel#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel#tags AwsControlPanel#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel#tags_all TfControlPanel#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel#tags_all AwsControlPanel#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -34,7 +34,7 @@ export interface TfControlPanelConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel aws_route53recoverycontrolconfig_control_panel}
 */
-export class TfControlPanel extends cdktn.TerraformResource {
+export class AwsControlPanel extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfControlPanel extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfControlPanel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsControlPanel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfControlPanel to import
-  * @param importFromId The id of the existing TfControlPanel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfControlPanel to import is found
+  * @param importToId The construct id used in the generated config for the AwsControlPanel to import
+  * @param importFromId The id of the existing AwsControlPanel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_control_panel#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsControlPanel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53recoverycontrolconfig_control_panel", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfControlPanel extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfControlPanelConfig
+  * @param options AwsControlPanelConfig
   */
-  public constructor(scope: Construct, id: string, config: TfControlPanelConfig) {
+  public constructor(scope: Construct, id: string, config: AwsControlPanelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53recoverycontrolconfig_control_panel',
       terraformGeneratorMetadata: {

@@ -5,92 +5,92 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfInfrastructureConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsInfrastructureConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#description TfInfrastructureConfiguration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#description AwsInfrastructureConfiguration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#id TfInfrastructureConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#id AwsInfrastructureConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#instance_profile_name TfInfrastructureConfiguration#instance_profile_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#instance_profile_name AwsInfrastructureConfiguration#instance_profile_name}
   */
   readonly instanceProfileName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#instance_types TfInfrastructureConfiguration#instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#instance_types AwsInfrastructureConfiguration#instance_types}
   */
   readonly instanceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#key_pair TfInfrastructureConfiguration#key_pair}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#key_pair AwsInfrastructureConfiguration#key_pair}
   */
   readonly keyPair?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#name TfInfrastructureConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#name AwsInfrastructureConfiguration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#region TfInfrastructureConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#region AwsInfrastructureConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#resource_tags TfInfrastructureConfiguration#resource_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#resource_tags AwsInfrastructureConfiguration#resource_tags}
   */
   readonly resourceTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#security_group_ids TfInfrastructureConfiguration#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#security_group_ids AwsInfrastructureConfiguration#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#sns_topic_arn TfInfrastructureConfiguration#sns_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#sns_topic_arn AwsInfrastructureConfiguration#sns_topic_arn}
   */
   readonly snsTopicArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#subnet_id TfInfrastructureConfiguration#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#subnet_id AwsInfrastructureConfiguration#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#tags TfInfrastructureConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#tags AwsInfrastructureConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#tags_all TfInfrastructureConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#tags_all AwsInfrastructureConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#terminate_instance_on_failure TfInfrastructureConfiguration#terminate_instance_on_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#terminate_instance_on_failure AwsInfrastructureConfiguration#terminate_instance_on_failure}
   */
   readonly terminateInstanceOnFailure?: boolean | cdktn.IResolvable;
   /**
   * instance_metadata_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#instance_metadata_options TfInfrastructureConfiguration#instance_metadata_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#instance_metadata_options AwsInfrastructureConfiguration#instance_metadata_options}
   */
-  readonly instanceMetadataOptions?: TfInfrastructureConfiguration.InstanceMetadataOptionsProperty;
+  readonly instanceMetadataOptions?: AwsInfrastructureConfiguration.InstanceMetadataOptionsProperty;
   /**
   * logging block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#logging TfInfrastructureConfiguration#logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#logging AwsInfrastructureConfiguration#logging}
   */
-  readonly logging?: TfInfrastructureConfiguration.LoggingProperty;
+  readonly logging?: AwsInfrastructureConfiguration.LoggingProperty;
   /**
   * placement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#placement TfInfrastructureConfiguration#placement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#placement AwsInfrastructureConfiguration#placement}
   */
-  readonly placement?: TfInfrastructureConfiguration.PlacementProperty;
+  readonly placement?: AwsInfrastructureConfiguration.PlacementProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration aws_imagebuilder_infrastructure_configuration}
 */
-export class TfInfrastructureConfiguration extends cdktn.TerraformResource {
+export class AwsInfrastructureConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -101,11 +101,11 @@ export class TfInfrastructureConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfInfrastructureConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsInfrastructureConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfInfrastructureConfiguration to import
-  * @param importFromId The id of the existing TfInfrastructureConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfInfrastructureConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsInfrastructureConfiguration to import
+  * @param importFromId The id of the existing AwsInfrastructureConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsInfrastructureConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_infrastructure_configuration", importId: importFromId, provider });
@@ -120,9 +120,9 @@ export class TfInfrastructureConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfInfrastructureConfigurationConfig
+  * @param options AwsInfrastructureConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfInfrastructureConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsInfrastructureConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_infrastructure_configuration',
       terraformGeneratorMetadata: {
@@ -395,11 +395,11 @@ export class TfInfrastructureConfiguration extends cdktn.TerraformResource {
   }
 
   // instance_metadata_options - computed: false, optional: true, required: false
-  private _instanceMetadataOptions = new TfInfrastructureConfiguration.InstanceMetadataOptionsPropertyOutputReference(this, "instance_metadata_options");
+  private _instanceMetadataOptions = new AwsInfrastructureConfiguration.InstanceMetadataOptionsPropertyOutputReference(this, "instance_metadata_options");
   public get instanceMetadataOptions() {
     return this._instanceMetadataOptions;
   }
-  public putInstanceMetadataOptions(value: TfInfrastructureConfiguration.InstanceMetadataOptionsProperty) {
+  public putInstanceMetadataOptions(value: AwsInfrastructureConfiguration.InstanceMetadataOptionsProperty) {
     this._instanceMetadataOptions.internalValue = value;
   }
   public resetInstanceMetadataOptions() {
@@ -411,11 +411,11 @@ export class TfInfrastructureConfiguration extends cdktn.TerraformResource {
   }
 
   // logging - computed: false, optional: true, required: false
-  private _logging = new TfInfrastructureConfiguration.LoggingPropertyOutputReference(this, "logging");
+  private _logging = new AwsInfrastructureConfiguration.LoggingPropertyOutputReference(this, "logging");
   public get logging() {
     return this._logging;
   }
-  public putLogging(value: TfInfrastructureConfiguration.LoggingProperty) {
+  public putLogging(value: AwsInfrastructureConfiguration.LoggingProperty) {
     this._logging.internalValue = value;
   }
   public resetLogging() {
@@ -427,11 +427,11 @@ export class TfInfrastructureConfiguration extends cdktn.TerraformResource {
   }
 
   // placement - computed: false, optional: true, required: false
-  private _placement = new TfInfrastructureConfiguration.PlacementPropertyOutputReference(this, "placement");
+  private _placement = new AwsInfrastructureConfiguration.PlacementPropertyOutputReference(this, "placement");
   public get placement() {
     return this._placement;
   }
-  public putPlacement(value: TfInfrastructureConfiguration.PlacementProperty) {
+  public putPlacement(value: AwsInfrastructureConfiguration.PlacementProperty) {
     this._placement.internalValue = value;
   }
   public resetPlacement() {
@@ -462,9 +462,9 @@ export class TfInfrastructureConfiguration extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       terminate_instance_on_failure: cdktn.booleanToTerraform(this._terminateInstanceOnFailure),
-      instance_metadata_options: tfInfrastructureConfigurationInstanceMetadataOptionsPropertyToTerraform(this._instanceMetadataOptions.internalValue),
-      logging: tfInfrastructureConfigurationLoggingPropertyToTerraform(this._logging.internalValue),
-      placement: tfInfrastructureConfigurationPlacementPropertyToTerraform(this._placement.internalValue),
+      instance_metadata_options: awsInfrastructureConfigurationInstanceMetadataOptionsPropertyToTerraform(this._instanceMetadataOptions.internalValue),
+      logging: awsInfrastructureConfigurationLoggingPropertyToTerraform(this._logging.internalValue),
+      placement: awsInfrastructureConfigurationPlacementPropertyToTerraform(this._placement.internalValue),
     };
   }
 
@@ -555,22 +555,22 @@ export class TfInfrastructureConfiguration extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       instance_metadata_options: {
-        value: tfInfrastructureConfigurationInstanceMetadataOptionsPropertyToHclTerraform(this._instanceMetadataOptions.internalValue),
+        value: awsInfrastructureConfigurationInstanceMetadataOptionsPropertyToHclTerraform(this._instanceMetadataOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfInfrastructureConfiguration.InstanceMetadataOptionsPropertyList",
+        storageClassType: "AwsInfrastructureConfiguration.InstanceMetadataOptionsPropertyList",
       },
       logging: {
-        value: tfInfrastructureConfigurationLoggingPropertyToHclTerraform(this._logging.internalValue),
+        value: awsInfrastructureConfigurationLoggingPropertyToHclTerraform(this._logging.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfInfrastructureConfiguration.LoggingPropertyList",
+        storageClassType: "AwsInfrastructureConfiguration.LoggingPropertyList",
       },
       placement: {
-        value: tfInfrastructureConfigurationPlacementPropertyToHclTerraform(this._placement.internalValue),
+        value: awsInfrastructureConfigurationPlacementPropertyToHclTerraform(this._placement.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfInfrastructureConfiguration.PlacementPropertyList",
+        storageClassType: "AwsInfrastructureConfiguration.PlacementPropertyList",
       },
     };
 
@@ -579,7 +579,7 @@ export class TfInfrastructureConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfInfrastructureConfigurationInstanceMetadataOptionsPropertyToTerraform(struct?: TfInfrastructureConfiguration.InstanceMetadataOptionsPropertyOutputReference | TfInfrastructureConfiguration.InstanceMetadataOptionsProperty): any {
+export function awsInfrastructureConfigurationInstanceMetadataOptionsPropertyToTerraform(struct?: AwsInfrastructureConfiguration.InstanceMetadataOptionsPropertyOutputReference | AwsInfrastructureConfiguration.InstanceMetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -591,7 +591,7 @@ export function tfInfrastructureConfigurationInstanceMetadataOptionsPropertyToTe
 }
 
 
-export function tfInfrastructureConfigurationInstanceMetadataOptionsPropertyToHclTerraform(struct?: TfInfrastructureConfiguration.InstanceMetadataOptionsPropertyOutputReference | TfInfrastructureConfiguration.InstanceMetadataOptionsProperty): any {
+export function awsInfrastructureConfigurationInstanceMetadataOptionsPropertyToHclTerraform(struct?: AwsInfrastructureConfiguration.InstanceMetadataOptionsPropertyOutputReference | AwsInfrastructureConfiguration.InstanceMetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,7 +616,7 @@ export function tfInfrastructureConfigurationInstanceMetadataOptionsPropertyToHc
 }
 
 
-export function tfInfrastructureConfigurationS3LogsPropertyToTerraform(struct?: TfInfrastructureConfiguration.S3LogsPropertyOutputReference | TfInfrastructureConfiguration.S3LogsProperty): any {
+export function awsInfrastructureConfigurationS3LogsPropertyToTerraform(struct?: AwsInfrastructureConfiguration.S3LogsPropertyOutputReference | AwsInfrastructureConfiguration.S3LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -628,7 +628,7 @@ export function tfInfrastructureConfigurationS3LogsPropertyToTerraform(struct?: 
 }
 
 
-export function tfInfrastructureConfigurationS3LogsPropertyToHclTerraform(struct?: TfInfrastructureConfiguration.S3LogsPropertyOutputReference | TfInfrastructureConfiguration.S3LogsProperty): any {
+export function awsInfrastructureConfigurationS3LogsPropertyToHclTerraform(struct?: AwsInfrastructureConfiguration.S3LogsPropertyOutputReference | AwsInfrastructureConfiguration.S3LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -653,25 +653,25 @@ export function tfInfrastructureConfigurationS3LogsPropertyToHclTerraform(struct
 }
 
 
-export function tfInfrastructureConfigurationLoggingPropertyToTerraform(struct?: TfInfrastructureConfiguration.LoggingPropertyOutputReference | TfInfrastructureConfiguration.LoggingProperty): any {
+export function awsInfrastructureConfigurationLoggingPropertyToTerraform(struct?: AwsInfrastructureConfiguration.LoggingPropertyOutputReference | AwsInfrastructureConfiguration.LoggingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_logs: tfInfrastructureConfigurationS3LogsPropertyToTerraform(struct!.s3Logs),
+    s3_logs: awsInfrastructureConfigurationS3LogsPropertyToTerraform(struct!.s3Logs),
   }
 }
 
 
-export function tfInfrastructureConfigurationLoggingPropertyToHclTerraform(struct?: TfInfrastructureConfiguration.LoggingPropertyOutputReference | TfInfrastructureConfiguration.LoggingProperty): any {
+export function awsInfrastructureConfigurationLoggingPropertyToHclTerraform(struct?: AwsInfrastructureConfiguration.LoggingPropertyOutputReference | AwsInfrastructureConfiguration.LoggingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_logs: {
-      value: tfInfrastructureConfigurationS3LogsPropertyToHclTerraform(struct!.s3Logs),
+      value: awsInfrastructureConfigurationS3LogsPropertyToHclTerraform(struct!.s3Logs),
       isBlock: true,
       type: "list",
       storageClassType: "S3LogsPropertyList",
@@ -683,7 +683,7 @@ export function tfInfrastructureConfigurationLoggingPropertyToHclTerraform(struc
 }
 
 
-export function tfInfrastructureConfigurationPlacementPropertyToTerraform(struct?: TfInfrastructureConfiguration.PlacementPropertyOutputReference | TfInfrastructureConfiguration.PlacementProperty): any {
+export function awsInfrastructureConfigurationPlacementPropertyToTerraform(struct?: AwsInfrastructureConfiguration.PlacementPropertyOutputReference | AwsInfrastructureConfiguration.PlacementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -697,7 +697,7 @@ export function tfInfrastructureConfigurationPlacementPropertyToTerraform(struct
 }
 
 
-export function tfInfrastructureConfigurationPlacementPropertyToHclTerraform(struct?: TfInfrastructureConfiguration.PlacementPropertyOutputReference | TfInfrastructureConfiguration.PlacementProperty): any {
+export function awsInfrastructureConfigurationPlacementPropertyToHclTerraform(struct?: AwsInfrastructureConfiguration.PlacementPropertyOutputReference | AwsInfrastructureConfiguration.PlacementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -734,14 +734,14 @@ export function tfInfrastructureConfigurationPlacementPropertyToHclTerraform(str
 }
 
 
-export namespace TfInfrastructureConfiguration {
+export namespace AwsInfrastructureConfiguration {
 export interface InstanceMetadataOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#http_put_response_hop_limit TfInfrastructureConfiguration#http_put_response_hop_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#http_put_response_hop_limit AwsInfrastructureConfiguration#http_put_response_hop_limit}
   */
   readonly httpPutResponseHopLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#http_tokens TfInfrastructureConfiguration#http_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#http_tokens AwsInfrastructureConfiguration#http_tokens}
   */
   readonly httpTokens?: string;
 }
@@ -817,11 +817,11 @@ export class InstanceMetadataOptionsPropertyOutputReference extends cdktn.Comple
 }
 export interface S3LogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#s3_bucket_name TfInfrastructureConfiguration#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#s3_bucket_name AwsInfrastructureConfiguration#s3_bucket_name}
   */
   readonly s3BucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#s3_key_prefix TfInfrastructureConfiguration#s3_key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#s3_key_prefix AwsInfrastructureConfiguration#s3_key_prefix}
   */
   readonly s3KeyPrefix?: string;
 }
@@ -896,7 +896,7 @@ export interface LoggingProperty {
   /**
   * s3_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#s3_logs TfInfrastructureConfiguration#s3_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#s3_logs AwsInfrastructureConfiguration#s3_logs}
   */
   readonly s3Logs: S3LogsProperty;
 }
@@ -947,19 +947,19 @@ export class LoggingPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PlacementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#availability_zone TfInfrastructureConfiguration#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#availability_zone AwsInfrastructureConfiguration#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#host_id TfInfrastructureConfiguration#host_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#host_id AwsInfrastructureConfiguration#host_id}
   */
   readonly hostId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#host_resource_group_arn TfInfrastructureConfiguration#host_resource_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#host_resource_group_arn AwsInfrastructureConfiguration#host_resource_group_arn}
   */
   readonly hostResourceGroupArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#tenancy TfInfrastructureConfiguration#tenancy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_infrastructure_configuration#tenancy AwsInfrastructureConfiguration#tenancy}
   */
   readonly tenancy?: string;
 }

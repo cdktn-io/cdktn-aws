@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVirtualServiceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVirtualServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#id TfVirtualService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#id AwsVirtualService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#mesh_name TfVirtualService#mesh_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#mesh_name AwsVirtualService#mesh_name}
   */
   readonly meshName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#mesh_owner TfVirtualService#mesh_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#mesh_owner AwsVirtualService#mesh_owner}
   */
   readonly meshOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#name TfVirtualService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#name AwsVirtualService#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#region TfVirtualService#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#region AwsVirtualService#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#tags TfVirtualService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#tags AwsVirtualService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#tags_all TfVirtualService#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#tags_all AwsVirtualService#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#spec TfVirtualService#spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#spec AwsVirtualService#spec}
   */
-  readonly spec: TfVirtualService.SpecProperty;
+  readonly spec: AwsVirtualService.SpecProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service aws_appmesh_virtual_service}
 */
-export class TfVirtualService extends cdktn.TerraformResource {
+export class AwsVirtualService extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfVirtualService extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVirtualService resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVirtualService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVirtualService to import
-  * @param importFromId The id of the existing TfVirtualService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVirtualService to import is found
+  * @param importToId The construct id used in the generated config for the AwsVirtualService to import
+  * @param importFromId The id of the existing AwsVirtualService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVirtualService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appmesh_virtual_service", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfVirtualService extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVirtualServiceConfig
+  * @param options AwsVirtualServiceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVirtualServiceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVirtualServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appmesh_virtual_service',
       terraformGeneratorMetadata: {
@@ -239,11 +239,11 @@ export class TfVirtualService extends cdktn.TerraformResource {
   }
 
   // spec - computed: false, optional: false, required: true
-  private _spec = new TfVirtualService.SpecPropertyOutputReference(this, "spec");
+  private _spec = new AwsVirtualService.SpecPropertyOutputReference(this, "spec");
   public get spec() {
     return this._spec;
   }
-  public putSpec(value: TfVirtualService.SpecProperty) {
+  public putSpec(value: AwsVirtualService.SpecProperty) {
     this._spec.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -264,7 +264,7 @@ export class TfVirtualService extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      spec: tfVirtualServiceSpecPropertyToTerraform(this._spec.internalValue),
+      spec: awsVirtualServiceSpecPropertyToTerraform(this._spec.internalValue),
     };
   }
 
@@ -313,10 +313,10 @@ export class TfVirtualService extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       spec: {
-        value: tfVirtualServiceSpecPropertyToHclTerraform(this._spec.internalValue),
+        value: awsVirtualServiceSpecPropertyToHclTerraform(this._spec.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfVirtualService.SpecPropertyList",
+        storageClassType: "AwsVirtualService.SpecPropertyList",
       },
     };
 
@@ -325,7 +325,7 @@ export class TfVirtualService extends cdktn.TerraformResource {
   }
 }
 
-export function tfVirtualServiceVirtualNodePropertyToTerraform(struct?: TfVirtualService.VirtualNodePropertyOutputReference | TfVirtualService.VirtualNodeProperty): any {
+export function awsVirtualServiceVirtualNodePropertyToTerraform(struct?: AwsVirtualService.VirtualNodePropertyOutputReference | AwsVirtualService.VirtualNodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function tfVirtualServiceVirtualNodePropertyToTerraform(struct?: TfVirtua
 }
 
 
-export function tfVirtualServiceVirtualNodePropertyToHclTerraform(struct?: TfVirtualService.VirtualNodePropertyOutputReference | TfVirtualService.VirtualNodeProperty): any {
+export function awsVirtualServiceVirtualNodePropertyToHclTerraform(struct?: AwsVirtualService.VirtualNodePropertyOutputReference | AwsVirtualService.VirtualNodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,7 +355,7 @@ export function tfVirtualServiceVirtualNodePropertyToHclTerraform(struct?: TfVir
 }
 
 
-export function tfVirtualServiceVirtualRouterPropertyToTerraform(struct?: TfVirtualService.VirtualRouterPropertyOutputReference | TfVirtualService.VirtualRouterProperty): any {
+export function awsVirtualServiceVirtualRouterPropertyToTerraform(struct?: AwsVirtualService.VirtualRouterPropertyOutputReference | AwsVirtualService.VirtualRouterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function tfVirtualServiceVirtualRouterPropertyToTerraform(struct?: TfVirt
 }
 
 
-export function tfVirtualServiceVirtualRouterPropertyToHclTerraform(struct?: TfVirtualService.VirtualRouterPropertyOutputReference | TfVirtualService.VirtualRouterProperty): any {
+export function awsVirtualServiceVirtualRouterPropertyToHclTerraform(struct?: AwsVirtualService.VirtualRouterPropertyOutputReference | AwsVirtualService.VirtualRouterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,32 +385,32 @@ export function tfVirtualServiceVirtualRouterPropertyToHclTerraform(struct?: TfV
 }
 
 
-export function tfVirtualServiceProviderPropertyToTerraform(struct?: TfVirtualService.ProviderPropertyOutputReference | TfVirtualService.ProviderProperty): any {
+export function awsVirtualServiceProviderPropertyToTerraform(struct?: AwsVirtualService.ProviderPropertyOutputReference | AwsVirtualService.ProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    virtual_node: tfVirtualServiceVirtualNodePropertyToTerraform(struct!.virtualNode),
-    virtual_router: tfVirtualServiceVirtualRouterPropertyToTerraform(struct!.virtualRouter),
+    virtual_node: awsVirtualServiceVirtualNodePropertyToTerraform(struct!.virtualNode),
+    virtual_router: awsVirtualServiceVirtualRouterPropertyToTerraform(struct!.virtualRouter),
   }
 }
 
 
-export function tfVirtualServiceProviderPropertyToHclTerraform(struct?: TfVirtualService.ProviderPropertyOutputReference | TfVirtualService.ProviderProperty): any {
+export function awsVirtualServiceProviderPropertyToHclTerraform(struct?: AwsVirtualService.ProviderPropertyOutputReference | AwsVirtualService.ProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     virtual_node: {
-      value: tfVirtualServiceVirtualNodePropertyToHclTerraform(struct!.virtualNode),
+      value: awsVirtualServiceVirtualNodePropertyToHclTerraform(struct!.virtualNode),
       isBlock: true,
       type: "list",
       storageClassType: "VirtualNodePropertyList",
     },
     virtual_router: {
-      value: tfVirtualServiceVirtualRouterPropertyToHclTerraform(struct!.virtualRouter),
+      value: awsVirtualServiceVirtualRouterPropertyToHclTerraform(struct!.virtualRouter),
       isBlock: true,
       type: "list",
       storageClassType: "VirtualRouterPropertyList",
@@ -422,25 +422,25 @@ export function tfVirtualServiceProviderPropertyToHclTerraform(struct?: TfVirtua
 }
 
 
-export function tfVirtualServiceSpecPropertyToTerraform(struct?: TfVirtualService.SpecPropertyOutputReference | TfVirtualService.SpecProperty): any {
+export function awsVirtualServiceSpecPropertyToTerraform(struct?: AwsVirtualService.SpecPropertyOutputReference | AwsVirtualService.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    provider: tfVirtualServiceProviderPropertyToTerraform(struct!.provider),
+    provider: awsVirtualServiceProviderPropertyToTerraform(struct!.provider),
   }
 }
 
 
-export function tfVirtualServiceSpecPropertyToHclTerraform(struct?: TfVirtualService.SpecPropertyOutputReference | TfVirtualService.SpecProperty): any {
+export function awsVirtualServiceSpecPropertyToHclTerraform(struct?: AwsVirtualService.SpecPropertyOutputReference | AwsVirtualService.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     provider: {
-      value: tfVirtualServiceProviderPropertyToHclTerraform(struct!.provider),
+      value: awsVirtualServiceProviderPropertyToHclTerraform(struct!.provider),
       isBlock: true,
       type: "list",
       storageClassType: "ProviderPropertyList",
@@ -452,10 +452,10 @@ export function tfVirtualServiceSpecPropertyToHclTerraform(struct?: TfVirtualSer
 }
 
 
-export namespace TfVirtualService {
+export namespace AwsVirtualService {
 export interface VirtualNodeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#virtual_node_name TfVirtualService#virtual_node_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#virtual_node_name AwsVirtualService#virtual_node_name}
   */
   readonly virtualNodeName: string;
 }
@@ -506,7 +506,7 @@ export class VirtualNodePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VirtualRouterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#virtual_router_name TfVirtualService#virtual_router_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#virtual_router_name AwsVirtualService#virtual_router_name}
   */
   readonly virtualRouterName: string;
 }
@@ -559,13 +559,13 @@ export interface ProviderProperty {
   /**
   * virtual_node block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#virtual_node TfVirtualService#virtual_node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#virtual_node AwsVirtualService#virtual_node}
   */
   readonly virtualNode?: VirtualNodeProperty;
   /**
   * virtual_router block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#virtual_router TfVirtualService#virtual_router}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#virtual_router AwsVirtualService#virtual_router}
   */
   readonly virtualRouter?: VirtualRouterProperty;
 }
@@ -643,7 +643,7 @@ export interface SpecProperty {
   /**
   * provider block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#provider TfVirtualService#provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_service#provider AwsVirtualService#provider}
   */
   readonly provider?: ProviderProperty;
 }

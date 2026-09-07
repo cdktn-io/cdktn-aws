@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfListenerConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsListenerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#arn DataTfListener#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#arn DataAwsListener#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#id DataTfListener#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#id DataAwsListener#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#load_balancer_arn DataTfListener#load_balancer_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#load_balancer_arn DataAwsListener#load_balancer_arn}
   */
   readonly loadBalancerArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#port DataTfListener#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#port DataAwsListener#port}
   */
   readonly port?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#region DataTfListener#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#region DataAwsListener#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#tags DataTfListener#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#tags DataAwsListener#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#timeouts DataTfListener#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#timeouts DataAwsListener#timeouts}
   */
-  readonly timeouts?: DataTfListener.TimeoutsProperty;
+  readonly timeouts?: DataAwsListener.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener aws_lb_listener}
 */
-export class DataTfListener extends cdktn.TerraformDataSource {
+export class DataAwsListener extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class DataTfListener extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfListener resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsListener resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfListener to import
-  * @param importFromId The id of the existing DataTfListener that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfListener to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsListener to import
+  * @param importFromId The id of the existing DataAwsListener that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsListener to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lb_listener", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class DataTfListener extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfListenerConfig = {}
+  * @param options DataAwsListenerConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfListenerConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsListenerConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_lb_listener',
       terraformGeneratorMetadata: {
@@ -134,7 +134,7 @@ export class DataTfListener extends cdktn.TerraformDataSource {
   }
 
   // default_action - computed: true, optional: false, required: false
-  private _defaultAction = new DataTfListener.DefaultActionPropertyList(this, "default_action", false);
+  private _defaultAction = new DataAwsListener.DefaultActionPropertyList(this, "default_action", false);
   public get defaultAction() {
     return this._defaultAction;
   }
@@ -172,7 +172,7 @@ export class DataTfListener extends cdktn.TerraformDataSource {
   }
 
   // mutual_authentication - computed: true, optional: false, required: false
-  private _mutualAuthentication = new DataTfListener.MutualAuthenticationPropertyList(this, "mutual_authentication", false);
+  private _mutualAuthentication = new DataAwsListener.MutualAuthenticationPropertyList(this, "mutual_authentication", false);
   public get mutualAuthentication() {
     return this._mutualAuthentication;
   }
@@ -236,11 +236,11 @@ export class DataTfListener extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfListener.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsListener.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfListener.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsListener.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -263,7 +263,7 @@ export class DataTfListener extends cdktn.TerraformDataSource {
       port: cdktn.numberToTerraform(this._port),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: dataTfListenerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: dataAwsListenerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -306,10 +306,10 @@ export class DataTfListener extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: dataTfListenerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsListenerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfListener.TimeoutsProperty",
+        storageClassType: "DataAwsListener.TimeoutsProperty",
       },
     };
 
@@ -318,7 +318,7 @@ export class DataTfListener extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfListenerAuthenticateCognitoPropertyToTerraform(struct?: DataTfListener.AuthenticateCognitoProperty): any {
+export function dataAwsListenerAuthenticateCognitoPropertyToTerraform(struct?: DataAwsListener.AuthenticateCognitoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function dataTfListenerAuthenticateCognitoPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfListenerAuthenticateCognitoPropertyToHclTerraform(struct?: DataTfListener.AuthenticateCognitoProperty): any {
+export function dataAwsListenerAuthenticateCognitoPropertyToHclTerraform(struct?: DataAwsListener.AuthenticateCognitoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function dataTfListenerAuthenticateCognitoPropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfListenerAuthenticateOidcPropertyToTerraform(struct?: DataTfListener.AuthenticateOidcProperty): any {
+export function dataAwsListenerAuthenticateOidcPropertyToTerraform(struct?: DataAwsListener.AuthenticateOidcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function dataTfListenerAuthenticateOidcPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfListenerAuthenticateOidcPropertyToHclTerraform(struct?: DataTfListener.AuthenticateOidcProperty): any {
+export function dataAwsListenerAuthenticateOidcPropertyToHclTerraform(struct?: DataAwsListener.AuthenticateOidcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function dataTfListenerAuthenticateOidcPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfListenerFixedResponsePropertyToTerraform(struct?: DataTfListener.FixedResponseProperty): any {
+export function dataAwsListenerFixedResponsePropertyToTerraform(struct?: DataAwsListener.FixedResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function dataTfListenerFixedResponsePropertyToTerraform(struct?: DataTfLi
 }
 
 
-export function dataTfListenerFixedResponsePropertyToHclTerraform(struct?: DataTfListener.FixedResponseProperty): any {
+export function dataAwsListenerFixedResponsePropertyToHclTerraform(struct?: DataAwsListener.FixedResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function dataTfListenerFixedResponsePropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfListenerStickinessPropertyToTerraform(struct?: DataTfListener.StickinessProperty): any {
+export function dataAwsListenerStickinessPropertyToTerraform(struct?: DataAwsListener.StickinessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function dataTfListenerStickinessPropertyToTerraform(struct?: DataTfListe
 }
 
 
-export function dataTfListenerStickinessPropertyToHclTerraform(struct?: DataTfListener.StickinessProperty): any {
+export function dataAwsListenerStickinessPropertyToHclTerraform(struct?: DataAwsListener.StickinessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,7 +402,7 @@ export function dataTfListenerStickinessPropertyToHclTerraform(struct?: DataTfLi
 }
 
 
-export function dataTfListenerTargetGroupPropertyToTerraform(struct?: DataTfListener.TargetGroupProperty): any {
+export function dataAwsListenerTargetGroupPropertyToTerraform(struct?: DataAwsListener.TargetGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function dataTfListenerTargetGroupPropertyToTerraform(struct?: DataTfList
 }
 
 
-export function dataTfListenerTargetGroupPropertyToHclTerraform(struct?: DataTfListener.TargetGroupProperty): any {
+export function dataAwsListenerTargetGroupPropertyToHclTerraform(struct?: DataAwsListener.TargetGroupProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,7 +423,7 @@ export function dataTfListenerTargetGroupPropertyToHclTerraform(struct?: DataTfL
 }
 
 
-export function dataTfListenerForwardPropertyToTerraform(struct?: DataTfListener.ForwardProperty): any {
+export function dataAwsListenerForwardPropertyToTerraform(struct?: DataAwsListener.ForwardProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function dataTfListenerForwardPropertyToTerraform(struct?: DataTfListener
 }
 
 
-export function dataTfListenerForwardPropertyToHclTerraform(struct?: DataTfListener.ForwardProperty): any {
+export function dataAwsListenerForwardPropertyToHclTerraform(struct?: DataAwsListener.ForwardProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -444,7 +444,7 @@ export function dataTfListenerForwardPropertyToHclTerraform(struct?: DataTfListe
 }
 
 
-export function dataTfListenerAdditionalClaimPropertyToTerraform(struct?: DataTfListener.AdditionalClaimProperty): any {
+export function dataAwsListenerAdditionalClaimPropertyToTerraform(struct?: DataAwsListener.AdditionalClaimProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function dataTfListenerAdditionalClaimPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfListenerAdditionalClaimPropertyToHclTerraform(struct?: DataTfListener.AdditionalClaimProperty): any {
+export function dataAwsListenerAdditionalClaimPropertyToHclTerraform(struct?: DataAwsListener.AdditionalClaimProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -465,7 +465,7 @@ export function dataTfListenerAdditionalClaimPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfListenerJwtValidationPropertyToTerraform(struct?: DataTfListener.JwtValidationProperty): any {
+export function dataAwsListenerJwtValidationPropertyToTerraform(struct?: DataAwsListener.JwtValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,7 +475,7 @@ export function dataTfListenerJwtValidationPropertyToTerraform(struct?: DataTfLi
 }
 
 
-export function dataTfListenerJwtValidationPropertyToHclTerraform(struct?: DataTfListener.JwtValidationProperty): any {
+export function dataAwsListenerJwtValidationPropertyToHclTerraform(struct?: DataAwsListener.JwtValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,7 +486,7 @@ export function dataTfListenerJwtValidationPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfListenerRedirectPropertyToTerraform(struct?: DataTfListener.RedirectProperty): any {
+export function dataAwsListenerRedirectPropertyToTerraform(struct?: DataAwsListener.RedirectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function dataTfListenerRedirectPropertyToTerraform(struct?: DataTfListene
 }
 
 
-export function dataTfListenerRedirectPropertyToHclTerraform(struct?: DataTfListener.RedirectProperty): any {
+export function dataAwsListenerRedirectPropertyToHclTerraform(struct?: DataAwsListener.RedirectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function dataTfListenerRedirectPropertyToHclTerraform(struct?: DataTfList
 }
 
 
-export function dataTfListenerDefaultActionPropertyToTerraform(struct?: DataTfListener.DefaultActionProperty): any {
+export function dataAwsListenerDefaultActionPropertyToTerraform(struct?: DataAwsListener.DefaultActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,7 +517,7 @@ export function dataTfListenerDefaultActionPropertyToTerraform(struct?: DataTfLi
 }
 
 
-export function dataTfListenerDefaultActionPropertyToHclTerraform(struct?: DataTfListener.DefaultActionProperty): any {
+export function dataAwsListenerDefaultActionPropertyToHclTerraform(struct?: DataAwsListener.DefaultActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function dataTfListenerDefaultActionPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfListenerMutualAuthenticationPropertyToTerraform(struct?: DataTfListener.MutualAuthenticationProperty): any {
+export function dataAwsListenerMutualAuthenticationPropertyToTerraform(struct?: DataAwsListener.MutualAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -538,7 +538,7 @@ export function dataTfListenerMutualAuthenticationPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfListenerMutualAuthenticationPropertyToHclTerraform(struct?: DataTfListener.MutualAuthenticationProperty): any {
+export function dataAwsListenerMutualAuthenticationPropertyToHclTerraform(struct?: DataAwsListener.MutualAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -549,7 +549,7 @@ export function dataTfListenerMutualAuthenticationPropertyToHclTerraform(struct?
 }
 
 
-export function dataTfListenerTimeoutsPropertyToTerraform(struct?: DataTfListener.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsListenerTimeoutsPropertyToTerraform(struct?: DataAwsListener.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -560,7 +560,7 @@ export function dataTfListenerTimeoutsPropertyToTerraform(struct?: DataTfListene
 }
 
 
-export function dataTfListenerTimeoutsPropertyToHclTerraform(struct?: DataTfListener.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsListenerTimeoutsPropertyToHclTerraform(struct?: DataAwsListener.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -579,7 +579,7 @@ export function dataTfListenerTimeoutsPropertyToHclTerraform(struct?: DataTfList
 }
 
 
-export namespace DataTfListener {
+export namespace DataAwsListener {
 export interface AuthenticateCognitoProperty {
 }
 export class AuthenticateCognitoPropertyOutputReference extends cdktn.ComplexObject {
@@ -1397,7 +1397,7 @@ export class MutualAuthenticationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#read DataTfListener#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb_listener#read DataAwsListener#read}
   */
   readonly read?: string;
 }

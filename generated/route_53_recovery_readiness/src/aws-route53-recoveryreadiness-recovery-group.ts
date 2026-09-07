@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRecoveryGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRecoveryGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#cells TfRecoveryGroup#cells}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#cells AwsRecoveryGroup#cells}
   */
   readonly cells?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#id TfRecoveryGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#id AwsRecoveryGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#recovery_group_name TfRecoveryGroup#recovery_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#recovery_group_name AwsRecoveryGroup#recovery_group_name}
   */
   readonly recoveryGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#tags TfRecoveryGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#tags AwsRecoveryGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#tags_all TfRecoveryGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#tags_all AwsRecoveryGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#timeouts TfRecoveryGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#timeouts AwsRecoveryGroup#timeouts}
   */
-  readonly timeouts?: TfRecoveryGroup.TimeoutsProperty;
+  readonly timeouts?: AwsRecoveryGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group aws_route53recoveryreadiness_recovery_group}
 */
-export class TfRecoveryGroup extends cdktn.TerraformResource {
+export class AwsRecoveryGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfRecoveryGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRecoveryGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRecoveryGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRecoveryGroup to import
-  * @param importFromId The id of the existing TfRecoveryGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRecoveryGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsRecoveryGroup to import
+  * @param importFromId The id of the existing AwsRecoveryGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRecoveryGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53recoveryreadiness_recovery_group", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfRecoveryGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRecoveryGroupConfig
+  * @param options AwsRecoveryGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRecoveryGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRecoveryGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53recoveryreadiness_recovery_group',
       terraformGeneratorMetadata: {
@@ -183,11 +183,11 @@ export class TfRecoveryGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfRecoveryGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsRecoveryGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfRecoveryGroup.TimeoutsProperty) {
+  public putTimeouts(value: AwsRecoveryGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -209,7 +209,7 @@ export class TfRecoveryGroup extends cdktn.TerraformResource {
       recovery_group_name: cdktn.stringToTerraform(this._recoveryGroupName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfRecoveryGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsRecoveryGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -246,10 +246,10 @@ export class TfRecoveryGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfRecoveryGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsRecoveryGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfRecoveryGroup.TimeoutsProperty",
+        storageClassType: "AwsRecoveryGroup.TimeoutsProperty",
       },
     };
 
@@ -258,7 +258,7 @@ export class TfRecoveryGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfRecoveryGroupTimeoutsPropertyToTerraform(struct?: TfRecoveryGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRecoveryGroupTimeoutsPropertyToTerraform(struct?: AwsRecoveryGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,7 +269,7 @@ export function tfRecoveryGroupTimeoutsPropertyToTerraform(struct?: TfRecoveryGr
 }
 
 
-export function tfRecoveryGroupTimeoutsPropertyToHclTerraform(struct?: TfRecoveryGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRecoveryGroupTimeoutsPropertyToHclTerraform(struct?: AwsRecoveryGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,10 +288,10 @@ export function tfRecoveryGroupTimeoutsPropertyToHclTerraform(struct?: TfRecover
 }
 
 
-export namespace TfRecoveryGroup {
+export namespace AwsRecoveryGroup {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#delete TfRecoveryGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_recovery_group#delete AwsRecoveryGroup#delete}
   */
   readonly delete?: string;
 }

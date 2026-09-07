@@ -5,88 +5,88 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVolumeConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVolumeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#availability_zone TfVolume#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#availability_zone AwsVolume#availability_zone}
   */
   readonly availabilityZone: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#encrypted TfVolume#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#encrypted AwsVolume#encrypted}
   */
   readonly encrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#final_snapshot TfVolume#final_snapshot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#final_snapshot AwsVolume#final_snapshot}
   */
   readonly finalSnapshot?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#id TfVolume#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#id AwsVolume#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#iops TfVolume#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#iops AwsVolume#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#kms_key_id TfVolume#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#kms_key_id AwsVolume#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#multi_attach_enabled TfVolume#multi_attach_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#multi_attach_enabled AwsVolume#multi_attach_enabled}
   */
   readonly multiAttachEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#outpost_arn TfVolume#outpost_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#outpost_arn AwsVolume#outpost_arn}
   */
   readonly outpostArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#region TfVolume#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#region AwsVolume#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#size TfVolume#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#size AwsVolume#size}
   */
   readonly size?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#snapshot_id TfVolume#snapshot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#snapshot_id AwsVolume#snapshot_id}
   */
   readonly snapshotId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#tags TfVolume#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#tags AwsVolume#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#tags_all TfVolume#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#tags_all AwsVolume#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#throughput TfVolume#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#throughput AwsVolume#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#type TfVolume#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#type AwsVolume#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#volume_initialization_rate TfVolume#volume_initialization_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#volume_initialization_rate AwsVolume#volume_initialization_rate}
   */
   readonly volumeInitializationRate?: number;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#timeouts TfVolume#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#timeouts AwsVolume#timeouts}
   */
-  readonly timeouts?: TfVolume.TimeoutsProperty;
+  readonly timeouts?: AwsVolume.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume aws_ebs_volume}
 */
-export class TfVolume extends cdktn.TerraformResource {
+export class AwsVolume extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -97,11 +97,11 @@ export class TfVolume extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVolume resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVolume resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVolume to import
-  * @param importFromId The id of the existing TfVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVolume to import is found
+  * @param importToId The construct id used in the generated config for the AwsVolume to import
+  * @param importFromId The id of the existing AwsVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVolume to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ebs_volume", importId: importFromId, provider });
@@ -116,9 +116,9 @@ export class TfVolume extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVolumeConfig
+  * @param options AwsVolumeConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVolumeConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVolumeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ebs_volume',
       terraformGeneratorMetadata: {
@@ -421,11 +421,11 @@ export class TfVolume extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfVolume.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsVolume.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfVolume.TimeoutsProperty) {
+  public putTimeouts(value: AwsVolume.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -458,7 +458,7 @@ export class TfVolume extends cdktn.TerraformResource {
       throughput: cdktn.numberToTerraform(this._throughput),
       type: cdktn.stringToTerraform(this._type),
       volume_initialization_rate: cdktn.numberToTerraform(this._volumeInitializationRate),
-      timeouts: tfVolumeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsVolumeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -561,10 +561,10 @@ export class TfVolume extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       timeouts: {
-        value: tfVolumeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsVolumeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfVolume.TimeoutsProperty",
+        storageClassType: "AwsVolume.TimeoutsProperty",
       },
     };
 
@@ -573,7 +573,7 @@ export class TfVolume extends cdktn.TerraformResource {
   }
 }
 
-export function tfVolumeTimeoutsPropertyToTerraform(struct?: TfVolume.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsVolumeTimeoutsPropertyToTerraform(struct?: AwsVolume.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -586,7 +586,7 @@ export function tfVolumeTimeoutsPropertyToTerraform(struct?: TfVolume.TimeoutsPr
 }
 
 
-export function tfVolumeTimeoutsPropertyToHclTerraform(struct?: TfVolume.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsVolumeTimeoutsPropertyToHclTerraform(struct?: AwsVolume.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -617,18 +617,18 @@ export function tfVolumeTimeoutsPropertyToHclTerraform(struct?: TfVolume.Timeout
 }
 
 
-export namespace TfVolume {
+export namespace AwsVolume {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#create TfVolume#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#create AwsVolume#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#delete TfVolume#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#delete AwsVolume#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#update TfVolume#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_volume#update AwsVolume#update}
   */
   readonly update?: string;
 }

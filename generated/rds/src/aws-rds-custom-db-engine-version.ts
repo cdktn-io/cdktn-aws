@@ -5,84 +5,84 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCustomDbEngineVersionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCustomDbEngineVersionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#database_installation_files_s3_bucket_name TfCustomDbEngineVersion#database_installation_files_s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#database_installation_files_s3_bucket_name AwsCustomDbEngineVersion#database_installation_files_s3_bucket_name}
   */
   readonly databaseInstallationFilesS3BucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#database_installation_files_s3_prefix TfCustomDbEngineVersion#database_installation_files_s3_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#database_installation_files_s3_prefix AwsCustomDbEngineVersion#database_installation_files_s3_prefix}
   */
   readonly databaseInstallationFilesS3Prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#description TfCustomDbEngineVersion#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#description AwsCustomDbEngineVersion#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#engine TfCustomDbEngineVersion#engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#engine AwsCustomDbEngineVersion#engine}
   */
   readonly engine: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#engine_version TfCustomDbEngineVersion#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#engine_version AwsCustomDbEngineVersion#engine_version}
   */
   readonly engineVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#filename TfCustomDbEngineVersion#filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#filename AwsCustomDbEngineVersion#filename}
   */
   readonly filename?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#id TfCustomDbEngineVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#id AwsCustomDbEngineVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#kms_key_id TfCustomDbEngineVersion#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#kms_key_id AwsCustomDbEngineVersion#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#manifest TfCustomDbEngineVersion#manifest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#manifest AwsCustomDbEngineVersion#manifest}
   */
   readonly manifest?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#manifest_hash TfCustomDbEngineVersion#manifest_hash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#manifest_hash AwsCustomDbEngineVersion#manifest_hash}
   */
   readonly manifestHash?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#region TfCustomDbEngineVersion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#region AwsCustomDbEngineVersion#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#source_image_id TfCustomDbEngineVersion#source_image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#source_image_id AwsCustomDbEngineVersion#source_image_id}
   */
   readonly sourceImageId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#status TfCustomDbEngineVersion#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#status AwsCustomDbEngineVersion#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#tags TfCustomDbEngineVersion#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#tags AwsCustomDbEngineVersion#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#tags_all TfCustomDbEngineVersion#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#tags_all AwsCustomDbEngineVersion#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#timeouts TfCustomDbEngineVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#timeouts AwsCustomDbEngineVersion#timeouts}
   */
-  readonly timeouts?: TfCustomDbEngineVersion.TimeoutsProperty;
+  readonly timeouts?: AwsCustomDbEngineVersion.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version aws_rds_custom_db_engine_version}
 */
-export class TfCustomDbEngineVersion extends cdktn.TerraformResource {
+export class AwsCustomDbEngineVersion extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -93,11 +93,11 @@ export class TfCustomDbEngineVersion extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCustomDbEngineVersion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCustomDbEngineVersion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCustomDbEngineVersion to import
-  * @param importFromId The id of the existing TfCustomDbEngineVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCustomDbEngineVersion to import is found
+  * @param importToId The construct id used in the generated config for the AwsCustomDbEngineVersion to import
+  * @param importFromId The id of the existing AwsCustomDbEngineVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCustomDbEngineVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rds_custom_db_engine_version", importId: importFromId, provider });
@@ -112,9 +112,9 @@ export class TfCustomDbEngineVersion extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCustomDbEngineVersionConfig
+  * @param options AwsCustomDbEngineVersionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCustomDbEngineVersionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCustomDbEngineVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rds_custom_db_engine_version',
       terraformGeneratorMetadata: {
@@ -417,11 +417,11 @@ export class TfCustomDbEngineVersion extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCustomDbEngineVersion.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCustomDbEngineVersion.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCustomDbEngineVersion.TimeoutsProperty) {
+  public putTimeouts(value: AwsCustomDbEngineVersion.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -453,7 +453,7 @@ export class TfCustomDbEngineVersion extends cdktn.TerraformResource {
       status: cdktn.stringToTerraform(this._status),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfCustomDbEngineVersionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsCustomDbEngineVersionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -550,10 +550,10 @@ export class TfCustomDbEngineVersion extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfCustomDbEngineVersionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCustomDbEngineVersionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCustomDbEngineVersion.TimeoutsProperty",
+        storageClassType: "AwsCustomDbEngineVersion.TimeoutsProperty",
       },
     };
 
@@ -562,7 +562,7 @@ export class TfCustomDbEngineVersion extends cdktn.TerraformResource {
   }
 }
 
-export function tfCustomDbEngineVersionTimeoutsPropertyToTerraform(struct?: TfCustomDbEngineVersion.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomDbEngineVersionTimeoutsPropertyToTerraform(struct?: AwsCustomDbEngineVersion.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -575,7 +575,7 @@ export function tfCustomDbEngineVersionTimeoutsPropertyToTerraform(struct?: TfCu
 }
 
 
-export function tfCustomDbEngineVersionTimeoutsPropertyToHclTerraform(struct?: TfCustomDbEngineVersion.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomDbEngineVersionTimeoutsPropertyToHclTerraform(struct?: AwsCustomDbEngineVersion.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -606,18 +606,18 @@ export function tfCustomDbEngineVersionTimeoutsPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfCustomDbEngineVersion {
+export namespace AwsCustomDbEngineVersion {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#create TfCustomDbEngineVersion#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#create AwsCustomDbEngineVersion#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#delete TfCustomDbEngineVersion#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#delete AwsCustomDbEngineVersion#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#update TfCustomDbEngineVersion#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_custom_db_engine_version#update AwsCustomDbEngineVersion#update}
   */
   readonly update?: string;
 }

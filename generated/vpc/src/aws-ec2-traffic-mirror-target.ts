@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEc2TrafficMirrorTargetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEc2TrafficMirrorTargetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#description TfEc2TrafficMirrorTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#description AwsEc2TrafficMirrorTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#gateway_load_balancer_endpoint_id TfEc2TrafficMirrorTarget#gateway_load_balancer_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#gateway_load_balancer_endpoint_id AwsEc2TrafficMirrorTarget#gateway_load_balancer_endpoint_id}
   */
   readonly gatewayLoadBalancerEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#id TfEc2TrafficMirrorTarget#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#id AwsEc2TrafficMirrorTarget#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#network_interface_id TfEc2TrafficMirrorTarget#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#network_interface_id AwsEc2TrafficMirrorTarget#network_interface_id}
   */
   readonly networkInterfaceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#network_load_balancer_arn TfEc2TrafficMirrorTarget#network_load_balancer_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#network_load_balancer_arn AwsEc2TrafficMirrorTarget#network_load_balancer_arn}
   */
   readonly networkLoadBalancerArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#region TfEc2TrafficMirrorTarget#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#region AwsEc2TrafficMirrorTarget#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#tags TfEc2TrafficMirrorTarget#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#tags AwsEc2TrafficMirrorTarget#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#tags_all TfEc2TrafficMirrorTarget#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#tags_all AwsEc2TrafficMirrorTarget#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -48,7 +48,7 @@ export interface TfEc2TrafficMirrorTargetConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target aws_ec2_traffic_mirror_target}
 */
-export class TfEc2TrafficMirrorTarget extends cdktn.TerraformResource {
+export class AwsEc2TrafficMirrorTarget extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfEc2TrafficMirrorTarget extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEc2TrafficMirrorTarget resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEc2TrafficMirrorTarget resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEc2TrafficMirrorTarget to import
-  * @param importFromId The id of the existing TfEc2TrafficMirrorTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEc2TrafficMirrorTarget to import is found
+  * @param importToId The construct id used in the generated config for the AwsEc2TrafficMirrorTarget to import
+  * @param importFromId The id of the existing AwsEc2TrafficMirrorTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_target#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEc2TrafficMirrorTarget to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_traffic_mirror_target", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfEc2TrafficMirrorTarget extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEc2TrafficMirrorTargetConfig = {}
+  * @param options AwsEc2TrafficMirrorTargetConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfEc2TrafficMirrorTargetConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsEc2TrafficMirrorTargetConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_traffic_mirror_target',
       terraformGeneratorMetadata: {

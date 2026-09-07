@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAutoshiftObserverNotificationStatusConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAutoshiftObserverNotificationStatusConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_autoshift_observer_notification_status#region TfAutoshiftObserverNotificationStatus#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_autoshift_observer_notification_status#region AwsAutoshiftObserverNotificationStatus#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_autoshift_observer_notification_status#status TfAutoshiftObserverNotificationStatus#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_autoshift_observer_notification_status#status AwsAutoshiftObserverNotificationStatus#status}
   */
   readonly status: string;
 }
@@ -21,7 +21,7 @@ export interface TfAutoshiftObserverNotificationStatusConfig extends cdktn.Terra
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_autoshift_observer_notification_status aws_arczonalshift_autoshift_observer_notification_status}
 */
-export class TfAutoshiftObserverNotificationStatus extends cdktn.TerraformResource {
+export class AwsAutoshiftObserverNotificationStatus extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class TfAutoshiftObserverNotificationStatus extends cdktn.TerraformResour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAutoshiftObserverNotificationStatus resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAutoshiftObserverNotificationStatus resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAutoshiftObserverNotificationStatus to import
-  * @param importFromId The id of the existing TfAutoshiftObserverNotificationStatus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_autoshift_observer_notification_status#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAutoshiftObserverNotificationStatus to import is found
+  * @param importToId The construct id used in the generated config for the AwsAutoshiftObserverNotificationStatus to import
+  * @param importFromId The id of the existing AwsAutoshiftObserverNotificationStatus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/arczonalshift_autoshift_observer_notification_status#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAutoshiftObserverNotificationStatus to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_arczonalshift_autoshift_observer_notification_status", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class TfAutoshiftObserverNotificationStatus extends cdktn.TerraformResour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAutoshiftObserverNotificationStatusConfig
+  * @param options AwsAutoshiftObserverNotificationStatusConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAutoshiftObserverNotificationStatusConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAutoshiftObserverNotificationStatusConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_arczonalshift_autoshift_observer_notification_status',
       terraformGeneratorMetadata: {

@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfIpRestrictionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsIpRestrictionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#aws_account_id TfIpRestriction#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#aws_account_id AwsIpRestriction#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#enabled TfIpRestriction#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#enabled AwsIpRestriction#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#ip_restriction_rule_map TfIpRestriction#ip_restriction_rule_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#ip_restriction_rule_map AwsIpRestriction#ip_restriction_rule_map}
   */
   readonly ipRestrictionRuleMap?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#region TfIpRestriction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#region AwsIpRestriction#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#vpc_endpoint_id_restriction_rule_map TfIpRestriction#vpc_endpoint_id_restriction_rule_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#vpc_endpoint_id_restriction_rule_map AwsIpRestriction#vpc_endpoint_id_restriction_rule_map}
   */
   readonly vpcEndpointIdRestrictionRuleMap?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#vpc_id_restriction_rule_map TfIpRestriction#vpc_id_restriction_rule_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#vpc_id_restriction_rule_map AwsIpRestriction#vpc_id_restriction_rule_map}
   */
   readonly vpcIdRestrictionRuleMap?: { [key: string]: string };
 }
@@ -37,7 +37,7 @@ export interface TfIpRestrictionConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction aws_quicksight_ip_restriction}
 */
-export class TfIpRestriction extends cdktn.TerraformResource {
+export class AwsIpRestriction extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfIpRestriction extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfIpRestriction resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsIpRestriction resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfIpRestriction to import
-  * @param importFromId The id of the existing TfIpRestriction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfIpRestriction to import is found
+  * @param importToId The construct id used in the generated config for the AwsIpRestriction to import
+  * @param importFromId The id of the existing AwsIpRestriction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_ip_restriction#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsIpRestriction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_ip_restriction", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfIpRestriction extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfIpRestrictionConfig
+  * @param options AwsIpRestrictionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfIpRestrictionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsIpRestrictionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_ip_restriction',
       terraformGeneratorMetadata: {

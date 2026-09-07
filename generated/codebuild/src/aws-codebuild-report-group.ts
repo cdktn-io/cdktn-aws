@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfReportGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsReportGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#delete_reports TfReportGroup#delete_reports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#delete_reports AwsReportGroup#delete_reports}
   */
   readonly deleteReports?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#id TfReportGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#id AwsReportGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#name TfReportGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#name AwsReportGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#region TfReportGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#region AwsReportGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#tags TfReportGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#tags AwsReportGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#tags_all TfReportGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#tags_all AwsReportGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#type TfReportGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#type AwsReportGroup#type}
   */
   readonly type: string;
   /**
   * export_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#export_config TfReportGroup#export_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#export_config AwsReportGroup#export_config}
   */
-  readonly exportConfig: TfReportGroup.ExportConfigProperty;
+  readonly exportConfig: AwsReportGroup.ExportConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group aws_codebuild_report_group}
 */
-export class TfReportGroup extends cdktn.TerraformResource {
+export class AwsReportGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfReportGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfReportGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsReportGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfReportGroup to import
-  * @param importFromId The id of the existing TfReportGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfReportGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsReportGroup to import
+  * @param importFromId The id of the existing AwsReportGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsReportGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codebuild_report_group", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfReportGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfReportGroupConfig
+  * @param options AwsReportGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfReportGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsReportGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codebuild_report_group',
       terraformGeneratorMetadata: {
@@ -229,11 +229,11 @@ export class TfReportGroup extends cdktn.TerraformResource {
   }
 
   // export_config - computed: false, optional: false, required: true
-  private _exportConfig = new TfReportGroup.ExportConfigPropertyOutputReference(this, "export_config");
+  private _exportConfig = new AwsReportGroup.ExportConfigPropertyOutputReference(this, "export_config");
   public get exportConfig() {
     return this._exportConfig;
   }
-  public putExportConfig(value: TfReportGroup.ExportConfigProperty) {
+  public putExportConfig(value: AwsReportGroup.ExportConfigProperty) {
     this._exportConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -254,7 +254,7 @@ export class TfReportGroup extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      export_config: tfReportGroupExportConfigPropertyToTerraform(this._exportConfig.internalValue),
+      export_config: awsReportGroupExportConfigPropertyToTerraform(this._exportConfig.internalValue),
     };
   }
 
@@ -303,10 +303,10 @@ export class TfReportGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       export_config: {
-        value: tfReportGroupExportConfigPropertyToHclTerraform(this._exportConfig.internalValue),
+        value: awsReportGroupExportConfigPropertyToHclTerraform(this._exportConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfReportGroup.ExportConfigPropertyList",
+        storageClassType: "AwsReportGroup.ExportConfigPropertyList",
       },
     };
 
@@ -315,7 +315,7 @@ export class TfReportGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfReportGroupS3DestinationPropertyToTerraform(struct?: TfReportGroup.S3DestinationPropertyOutputReference | TfReportGroup.S3DestinationProperty): any {
+export function awsReportGroupS3DestinationPropertyToTerraform(struct?: AwsReportGroup.S3DestinationPropertyOutputReference | AwsReportGroup.S3DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function tfReportGroupS3DestinationPropertyToTerraform(struct?: TfReportG
 }
 
 
-export function tfReportGroupS3DestinationPropertyToHclTerraform(struct?: TfReportGroup.S3DestinationPropertyOutputReference | TfReportGroup.S3DestinationProperty): any {
+export function awsReportGroupS3DestinationPropertyToHclTerraform(struct?: AwsReportGroup.S3DestinationPropertyOutputReference | AwsReportGroup.S3DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,19 +373,19 @@ export function tfReportGroupS3DestinationPropertyToHclTerraform(struct?: TfRepo
 }
 
 
-export function tfReportGroupExportConfigPropertyToTerraform(struct?: TfReportGroup.ExportConfigPropertyOutputReference | TfReportGroup.ExportConfigProperty): any {
+export function awsReportGroupExportConfigPropertyToTerraform(struct?: AwsReportGroup.ExportConfigPropertyOutputReference | AwsReportGroup.ExportConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    s3_destination: tfReportGroupS3DestinationPropertyToTerraform(struct!.s3Destination),
+    s3_destination: awsReportGroupS3DestinationPropertyToTerraform(struct!.s3Destination),
   }
 }
 
 
-export function tfReportGroupExportConfigPropertyToHclTerraform(struct?: TfReportGroup.ExportConfigPropertyOutputReference | TfReportGroup.ExportConfigProperty): any {
+export function awsReportGroupExportConfigPropertyToHclTerraform(struct?: AwsReportGroup.ExportConfigPropertyOutputReference | AwsReportGroup.ExportConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function tfReportGroupExportConfigPropertyToHclTerraform(struct?: TfRepor
       storageClassType: "string",
     },
     s3_destination: {
-      value: tfReportGroupS3DestinationPropertyToHclTerraform(struct!.s3Destination),
+      value: awsReportGroupS3DestinationPropertyToHclTerraform(struct!.s3Destination),
       isBlock: true,
       type: "list",
       storageClassType: "S3DestinationPropertyList",
@@ -410,26 +410,26 @@ export function tfReportGroupExportConfigPropertyToHclTerraform(struct?: TfRepor
 }
 
 
-export namespace TfReportGroup {
+export namespace AwsReportGroup {
 export interface S3DestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#bucket TfReportGroup#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#bucket AwsReportGroup#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#encryption_disabled TfReportGroup#encryption_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#encryption_disabled AwsReportGroup#encryption_disabled}
   */
   readonly encryptionDisabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#encryption_key TfReportGroup#encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#encryption_key AwsReportGroup#encryption_key}
   */
   readonly encryptionKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#packaging TfReportGroup#packaging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#packaging AwsReportGroup#packaging}
   */
   readonly packaging?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#path TfReportGroup#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#path AwsReportGroup#path}
   */
   readonly path?: string;
 }
@@ -565,13 +565,13 @@ export class S3DestinationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ExportConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#type TfReportGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#type AwsReportGroup#type}
   */
   readonly type: string;
   /**
   * s3_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#s3_destination TfReportGroup#s3_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_report_group#s3_destination AwsReportGroup#s3_destination}
   */
   readonly s3Destination?: S3DestinationProperty;
 }

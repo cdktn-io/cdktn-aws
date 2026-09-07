@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSecretVersionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSecretVersionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#id TfSecretVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#id AwsSecretVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface TfSecretVersionConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#region TfSecretVersion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#region AwsSecretVersion#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#secret_binary TfSecretVersion#secret_binary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#secret_binary AwsSecretVersion#secret_binary}
   */
   readonly secretBinary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#secret_id TfSecretVersion#secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#secret_id AwsSecretVersion#secret_id}
   */
   readonly secretId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#secret_string TfSecretVersion#secret_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#secret_string AwsSecretVersion#secret_string}
   */
   readonly secretString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#secret_string_wo TfSecretVersion#secret_string_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#secret_string_wo AwsSecretVersion#secret_string_wo}
   */
   readonly secretStringWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#secret_string_wo_version TfSecretVersion#secret_string_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#secret_string_wo_version AwsSecretVersion#secret_string_wo_version}
   */
   readonly secretStringWoVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#version_stages TfSecretVersion#version_stages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#version_stages AwsSecretVersion#version_stages}
   */
   readonly versionStages?: string[];
 }
@@ -48,7 +48,7 @@ export interface TfSecretVersionConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version aws_secretsmanager_secret_version}
 */
-export class TfSecretVersion extends cdktn.TerraformResource {
+export class AwsSecretVersion extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfSecretVersion extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSecretVersion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSecretVersion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSecretVersion to import
-  * @param importFromId The id of the existing TfSecretVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSecretVersion to import is found
+  * @param importToId The construct id used in the generated config for the AwsSecretVersion to import
+  * @param importFromId The id of the existing AwsSecretVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/secretsmanager_secret_version#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSecretVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_secretsmanager_secret_version", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfSecretVersion extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSecretVersionConfig
+  * @param options AwsSecretVersionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSecretVersionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSecretVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_secretsmanager_secret_version',
       terraformGeneratorMetadata: {

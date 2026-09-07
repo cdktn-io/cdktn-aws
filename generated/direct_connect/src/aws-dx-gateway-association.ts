@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGatewayAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGatewayAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#allowed_prefixes TfGatewayAssociation#allowed_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#allowed_prefixes AwsGatewayAssociation#allowed_prefixes}
   */
   readonly allowedPrefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#associated_gateway_id TfGatewayAssociation#associated_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#associated_gateway_id AwsGatewayAssociation#associated_gateway_id}
   */
   readonly associatedGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#associated_gateway_owner_account_id TfGatewayAssociation#associated_gateway_owner_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#associated_gateway_owner_account_id AwsGatewayAssociation#associated_gateway_owner_account_id}
   */
   readonly associatedGatewayOwnerAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#dx_gateway_id TfGatewayAssociation#dx_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#dx_gateway_id AwsGatewayAssociation#dx_gateway_id}
   */
   readonly dxGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#id TfGatewayAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#id AwsGatewayAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#proposal_id TfGatewayAssociation#proposal_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#proposal_id AwsGatewayAssociation#proposal_id}
   */
   readonly proposalId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#region TfGatewayAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#region AwsGatewayAssociation#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#timeouts TfGatewayAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#timeouts AwsGatewayAssociation#timeouts}
   */
-  readonly timeouts?: TfGatewayAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsGatewayAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association aws_dx_gateway_association}
 */
-export class TfGatewayAssociation extends cdktn.TerraformResource {
+export class AwsGatewayAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfGatewayAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGatewayAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGatewayAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGatewayAssociation to import
-  * @param importFromId The id of the existing TfGatewayAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGatewayAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsGatewayAssociation to import
+  * @param importFromId The id of the existing AwsGatewayAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGatewayAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dx_gateway_association", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfGatewayAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGatewayAssociationConfig
+  * @param options AwsGatewayAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGatewayAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGatewayAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dx_gateway_association',
       terraformGeneratorMetadata: {
@@ -242,11 +242,11 @@ export class TfGatewayAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfGatewayAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsGatewayAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfGatewayAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsGatewayAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -270,7 +270,7 @@ export class TfGatewayAssociation extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       proposal_id: cdktn.stringToTerraform(this._proposalId),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfGatewayAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsGatewayAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -319,10 +319,10 @@ export class TfGatewayAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfGatewayAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsGatewayAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfGatewayAssociation.TimeoutsProperty",
+        storageClassType: "AwsGatewayAssociation.TimeoutsProperty",
       },
     };
 
@@ -331,7 +331,7 @@ export class TfGatewayAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfGatewayAssociationTimeoutsPropertyToTerraform(struct?: TfGatewayAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsGatewayAssociationTimeoutsPropertyToTerraform(struct?: AwsGatewayAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -344,7 +344,7 @@ export function tfGatewayAssociationTimeoutsPropertyToTerraform(struct?: TfGatew
 }
 
 
-export function tfGatewayAssociationTimeoutsPropertyToHclTerraform(struct?: TfGatewayAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsGatewayAssociationTimeoutsPropertyToHclTerraform(struct?: AwsGatewayAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,18 +375,18 @@ export function tfGatewayAssociationTimeoutsPropertyToHclTerraform(struct?: TfGa
 }
 
 
-export namespace TfGatewayAssociation {
+export namespace AwsGatewayAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#create TfGatewayAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#create AwsGatewayAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#delete TfGatewayAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#delete AwsGatewayAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#update TfGatewayAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association#update AwsGatewayAssociation#update}
   */
   readonly update?: string;
 }

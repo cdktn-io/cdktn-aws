@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAvailabilityZoneGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAvailabilityZoneGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_availability_zone_group#group_name TfAvailabilityZoneGroup#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_availability_zone_group#group_name AwsAvailabilityZoneGroup#group_name}
   */
   readonly groupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_availability_zone_group#id TfAvailabilityZoneGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_availability_zone_group#id AwsAvailabilityZoneGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_availability_zone_group#opt_in_status TfAvailabilityZoneGroup#opt_in_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_availability_zone_group#opt_in_status AwsAvailabilityZoneGroup#opt_in_status}
   */
   readonly optInStatus: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_availability_zone_group#region TfAvailabilityZoneGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_availability_zone_group#region AwsAvailabilityZoneGroup#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface TfAvailabilityZoneGroupConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_availability_zone_group aws_ec2_availability_zone_group}
 */
-export class TfAvailabilityZoneGroup extends cdktn.TerraformResource {
+export class AwsAvailabilityZoneGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfAvailabilityZoneGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAvailabilityZoneGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAvailabilityZoneGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAvailabilityZoneGroup to import
-  * @param importFromId The id of the existing TfAvailabilityZoneGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_availability_zone_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAvailabilityZoneGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsAvailabilityZoneGroup to import
+  * @param importFromId The id of the existing AwsAvailabilityZoneGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_availability_zone_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAvailabilityZoneGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_availability_zone_group", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfAvailabilityZoneGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAvailabilityZoneGroupConfig
+  * @param options AwsAvailabilityZoneGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAvailabilityZoneGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAvailabilityZoneGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_availability_zone_group',
       terraformGeneratorMetadata: {

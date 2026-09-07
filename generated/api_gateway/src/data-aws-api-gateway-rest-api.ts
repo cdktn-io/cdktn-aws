@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRestApiConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRestApiConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_rest_api#id DataTfRestApi#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_rest_api#id DataAwsRestApi#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_rest_api#name DataTfRestApi#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_rest_api#name DataAwsRestApi#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_rest_api#region DataTfRestApi#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_rest_api#region DataAwsRestApi#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_rest_api#tags DataTfRestApi#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_rest_api#tags DataAwsRestApi#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataTfRestApiConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_rest_api aws_api_gateway_rest_api}
 */
-export class DataTfRestApi extends cdktn.TerraformDataSource {
+export class DataAwsRestApi extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfRestApi extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRestApi resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRestApi resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRestApi to import
-  * @param importFromId The id of the existing DataTfRestApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_rest_api#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRestApi to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRestApi to import
+  * @param importFromId The id of the existing DataAwsRestApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_rest_api#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRestApi to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_rest_api", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfRestApi extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRestApiConfig
+  * @param options DataAwsRestApiConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfRestApiConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsRestApiConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_rest_api',
       terraformGeneratorMetadata: {
@@ -116,7 +116,7 @@ export class DataTfRestApi extends cdktn.TerraformDataSource {
   }
 
   // endpoint_configuration - computed: true, optional: false, required: false
-  private _endpointConfiguration = new DataTfRestApi.EndpointConfigurationPropertyList(this, "endpoint_configuration", false);
+  private _endpointConfiguration = new DataAwsRestApi.EndpointConfigurationPropertyList(this, "endpoint_configuration", false);
   public get endpointConfiguration() {
     return this._endpointConfiguration;
   }
@@ -253,7 +253,7 @@ export class DataTfRestApi extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfRestApiEndpointConfigurationPropertyToTerraform(struct?: DataTfRestApi.EndpointConfigurationProperty): any {
+export function dataAwsRestApiEndpointConfigurationPropertyToTerraform(struct?: DataAwsRestApi.EndpointConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function dataTfRestApiEndpointConfigurationPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfRestApiEndpointConfigurationPropertyToHclTerraform(struct?: DataTfRestApi.EndpointConfigurationProperty): any {
+export function dataAwsRestApiEndpointConfigurationPropertyToHclTerraform(struct?: DataAwsRestApi.EndpointConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function dataTfRestApiEndpointConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataTfRestApi {
+export namespace DataAwsRestApi {
 export interface EndpointConfigurationProperty {
 }
 export class EndpointConfigurationPropertyOutputReference extends cdktn.ComplexObject {

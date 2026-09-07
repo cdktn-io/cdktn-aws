@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVpcIngressConnectionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVpcIngressConnectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#id TfVpcIngressConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#id AwsVpcIngressConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#name TfVpcIngressConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#name AwsVpcIngressConnection#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#region TfVpcIngressConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#region AwsVpcIngressConnection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#service_arn TfVpcIngressConnection#service_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#service_arn AwsVpcIngressConnection#service_arn}
   */
   readonly serviceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#tags TfVpcIngressConnection#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#tags AwsVpcIngressConnection#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#tags_all TfVpcIngressConnection#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#tags_all AwsVpcIngressConnection#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * ingress_vpc_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#ingress_vpc_configuration TfVpcIngressConnection#ingress_vpc_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#ingress_vpc_configuration AwsVpcIngressConnection#ingress_vpc_configuration}
   */
-  readonly ingressVpcConfiguration: TfVpcIngressConnection.IngressVpcConfigurationProperty;
+  readonly ingressVpcConfiguration: AwsVpcIngressConnection.IngressVpcConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection aws_apprunner_vpc_ingress_connection}
 */
-export class TfVpcIngressConnection extends cdktn.TerraformResource {
+export class AwsVpcIngressConnection extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfVpcIngressConnection extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVpcIngressConnection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVpcIngressConnection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVpcIngressConnection to import
-  * @param importFromId The id of the existing TfVpcIngressConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVpcIngressConnection to import is found
+  * @param importToId The construct id used in the generated config for the AwsVpcIngressConnection to import
+  * @param importFromId The id of the existing AwsVpcIngressConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVpcIngressConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apprunner_vpc_ingress_connection", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfVpcIngressConnection extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVpcIngressConnectionConfig
+  * @param options AwsVpcIngressConnectionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVpcIngressConnectionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVpcIngressConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apprunner_vpc_ingress_connection',
       terraformGeneratorMetadata: {
@@ -213,11 +213,11 @@ export class TfVpcIngressConnection extends cdktn.TerraformResource {
   }
 
   // ingress_vpc_configuration - computed: false, optional: false, required: true
-  private _ingressVpcConfiguration = new TfVpcIngressConnection.IngressVpcConfigurationPropertyOutputReference(this, "ingress_vpc_configuration");
+  private _ingressVpcConfiguration = new AwsVpcIngressConnection.IngressVpcConfigurationPropertyOutputReference(this, "ingress_vpc_configuration");
   public get ingressVpcConfiguration() {
     return this._ingressVpcConfiguration;
   }
-  public putIngressVpcConfiguration(value: TfVpcIngressConnection.IngressVpcConfigurationProperty) {
+  public putIngressVpcConfiguration(value: AwsVpcIngressConnection.IngressVpcConfigurationProperty) {
     this._ingressVpcConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -237,7 +237,7 @@ export class TfVpcIngressConnection extends cdktn.TerraformResource {
       service_arn: cdktn.stringToTerraform(this._serviceArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      ingress_vpc_configuration: tfVpcIngressConnectionIngressVpcConfigurationPropertyToTerraform(this._ingressVpcConfiguration.internalValue),
+      ingress_vpc_configuration: awsVpcIngressConnectionIngressVpcConfigurationPropertyToTerraform(this._ingressVpcConfiguration.internalValue),
     };
   }
 
@@ -280,10 +280,10 @@ export class TfVpcIngressConnection extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       ingress_vpc_configuration: {
-        value: tfVpcIngressConnectionIngressVpcConfigurationPropertyToHclTerraform(this._ingressVpcConfiguration.internalValue),
+        value: awsVpcIngressConnectionIngressVpcConfigurationPropertyToHclTerraform(this._ingressVpcConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfVpcIngressConnection.IngressVpcConfigurationPropertyList",
+        storageClassType: "AwsVpcIngressConnection.IngressVpcConfigurationPropertyList",
       },
     };
 
@@ -292,7 +292,7 @@ export class TfVpcIngressConnection extends cdktn.TerraformResource {
   }
 }
 
-export function tfVpcIngressConnectionIngressVpcConfigurationPropertyToTerraform(struct?: TfVpcIngressConnection.IngressVpcConfigurationPropertyOutputReference | TfVpcIngressConnection.IngressVpcConfigurationProperty): any {
+export function awsVpcIngressConnectionIngressVpcConfigurationPropertyToTerraform(struct?: AwsVpcIngressConnection.IngressVpcConfigurationPropertyOutputReference | AwsVpcIngressConnection.IngressVpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function tfVpcIngressConnectionIngressVpcConfigurationPropertyToTerraform
 }
 
 
-export function tfVpcIngressConnectionIngressVpcConfigurationPropertyToHclTerraform(struct?: TfVpcIngressConnection.IngressVpcConfigurationPropertyOutputReference | TfVpcIngressConnection.IngressVpcConfigurationProperty): any {
+export function awsVpcIngressConnectionIngressVpcConfigurationPropertyToHclTerraform(struct?: AwsVpcIngressConnection.IngressVpcConfigurationPropertyOutputReference | AwsVpcIngressConnection.IngressVpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,14 +329,14 @@ export function tfVpcIngressConnectionIngressVpcConfigurationPropertyToHclTerraf
 }
 
 
-export namespace TfVpcIngressConnection {
+export namespace AwsVpcIngressConnection {
 export interface IngressVpcConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#vpc_endpoint_id TfVpcIngressConnection#vpc_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#vpc_endpoint_id AwsVpcIngressConnection#vpc_endpoint_id}
   */
   readonly vpcEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#vpc_id TfVpcIngressConnection#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_vpc_ingress_connection#vpc_id AwsVpcIngressConnection#vpc_id}
   */
   readonly vpcId?: string;
 }

@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConfigurationProfileConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConfigurationProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#application_id TfConfigurationProfile#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#application_id AwsConfigurationProfile#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#description TfConfigurationProfile#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#description AwsConfigurationProfile#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#id TfConfigurationProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#id AwsConfigurationProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#kms_key_identifier TfConfigurationProfile#kms_key_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#kms_key_identifier AwsConfigurationProfile#kms_key_identifier}
   */
   readonly kmsKeyIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#location_uri TfConfigurationProfile#location_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#location_uri AwsConfigurationProfile#location_uri}
   */
   readonly locationUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#name TfConfigurationProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#name AwsConfigurationProfile#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#region TfConfigurationProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#region AwsConfigurationProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#retrieval_role_arn TfConfigurationProfile#retrieval_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#retrieval_role_arn AwsConfigurationProfile#retrieval_role_arn}
   */
   readonly retrievalRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#tags TfConfigurationProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#tags AwsConfigurationProfile#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#tags_all TfConfigurationProfile#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#tags_all AwsConfigurationProfile#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#type TfConfigurationProfile#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#type AwsConfigurationProfile#type}
   */
   readonly type?: string;
   /**
   * validator block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#validator TfConfigurationProfile#validator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#validator AwsConfigurationProfile#validator}
   */
-  readonly validator?: TfConfigurationProfile.ValidatorProperty[] | cdktn.IResolvable;
+  readonly validator?: AwsConfigurationProfile.ValidatorProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile aws_appconfig_configuration_profile}
 */
-export class TfConfigurationProfile extends cdktn.TerraformResource {
+export class AwsConfigurationProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class TfConfigurationProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConfigurationProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConfigurationProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConfigurationProfile to import
-  * @param importFromId The id of the existing TfConfigurationProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConfigurationProfile to import is found
+  * @param importToId The construct id used in the generated config for the AwsConfigurationProfile to import
+  * @param importFromId The id of the existing AwsConfigurationProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConfigurationProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appconfig_configuration_profile", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class TfConfigurationProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConfigurationProfileConfig
+  * @param options AwsConfigurationProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConfigurationProfileConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConfigurationProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appconfig_configuration_profile',
       terraformGeneratorMetadata: {
@@ -310,11 +310,11 @@ export class TfConfigurationProfile extends cdktn.TerraformResource {
   }
 
   // validator - computed: false, optional: true, required: false
-  private _validator = new TfConfigurationProfile.ValidatorPropertyList(this, "validator", true);
+  private _validator = new AwsConfigurationProfile.ValidatorPropertyList(this, "validator", true);
   public get validator() {
     return this._validator;
   }
-  public putValidator(value: TfConfigurationProfile.ValidatorProperty[] | cdktn.IResolvable) {
+  public putValidator(value: AwsConfigurationProfile.ValidatorProperty[] | cdktn.IResolvable) {
     this._validator.internalValue = value;
   }
   public resetValidator() {
@@ -342,7 +342,7 @@ export class TfConfigurationProfile extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      validator: cdktn.listMapper(tfConfigurationProfileValidatorPropertyToTerraform, true)(this._validator.internalValue),
+      validator: cdktn.listMapper(awsConfigurationProfileValidatorPropertyToTerraform, true)(this._validator.internalValue),
     };
   }
 
@@ -415,10 +415,10 @@ export class TfConfigurationProfile extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       validator: {
-        value: cdktn.listMapperHcl(tfConfigurationProfileValidatorPropertyToHclTerraform, true)(this._validator.internalValue),
+        value: cdktn.listMapperHcl(awsConfigurationProfileValidatorPropertyToHclTerraform, true)(this._validator.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfConfigurationProfile.ValidatorPropertyList",
+        storageClassType: "AwsConfigurationProfile.ValidatorPropertyList",
       },
     };
 
@@ -427,7 +427,7 @@ export class TfConfigurationProfile extends cdktn.TerraformResource {
   }
 }
 
-export function tfConfigurationProfileValidatorPropertyToTerraform(struct?: TfConfigurationProfile.ValidatorProperty | cdktn.IResolvable): any {
+export function awsConfigurationProfileValidatorPropertyToTerraform(struct?: AwsConfigurationProfile.ValidatorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function tfConfigurationProfileValidatorPropertyToTerraform(struct?: TfCo
 }
 
 
-export function tfConfigurationProfileValidatorPropertyToHclTerraform(struct?: TfConfigurationProfile.ValidatorProperty | cdktn.IResolvable): any {
+export function awsConfigurationProfileValidatorPropertyToHclTerraform(struct?: AwsConfigurationProfile.ValidatorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,14 +464,14 @@ export function tfConfigurationProfileValidatorPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfConfigurationProfile {
+export namespace AwsConfigurationProfile {
 export interface ValidatorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#content TfConfigurationProfile#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#content AwsConfigurationProfile#content}
   */
   readonly content?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#type TfConfigurationProfile#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_configuration_profile#type AwsConfigurationProfile#type}
   */
   readonly type: string;
 }

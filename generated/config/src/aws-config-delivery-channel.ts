@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDeliveryChannelConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDeliveryChannelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#id TfDeliveryChannel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#id AwsDeliveryChannel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#name TfDeliveryChannel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#name AwsDeliveryChannel#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#region TfDeliveryChannel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#region AwsDeliveryChannel#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#s3_bucket_name TfDeliveryChannel#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#s3_bucket_name AwsDeliveryChannel#s3_bucket_name}
   */
   readonly s3BucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#s3_key_prefix TfDeliveryChannel#s3_key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#s3_key_prefix AwsDeliveryChannel#s3_key_prefix}
   */
   readonly s3KeyPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#s3_kms_key_arn TfDeliveryChannel#s3_kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#s3_kms_key_arn AwsDeliveryChannel#s3_kms_key_arn}
   */
   readonly s3KmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#sns_topic_arn TfDeliveryChannel#sns_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#sns_topic_arn AwsDeliveryChannel#sns_topic_arn}
   */
   readonly snsTopicArn?: string;
   /**
   * snapshot_delivery_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#snapshot_delivery_properties TfDeliveryChannel#snapshot_delivery_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#snapshot_delivery_properties AwsDeliveryChannel#snapshot_delivery_properties}
   */
-  readonly snapshotDeliveryProperties?: TfDeliveryChannel.SnapshotDeliveryPropertiesProperty;
+  readonly snapshotDeliveryProperties?: AwsDeliveryChannel.SnapshotDeliveryPropertiesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel aws_config_delivery_channel}
 */
-export class TfDeliveryChannel extends cdktn.TerraformResource {
+export class AwsDeliveryChannel extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfDeliveryChannel extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDeliveryChannel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDeliveryChannel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDeliveryChannel to import
-  * @param importFromId The id of the existing TfDeliveryChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDeliveryChannel to import is found
+  * @param importToId The construct id used in the generated config for the AwsDeliveryChannel to import
+  * @param importFromId The id of the existing AwsDeliveryChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDeliveryChannel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_config_delivery_channel", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfDeliveryChannel extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDeliveryChannelConfig
+  * @param options AwsDeliveryChannelConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDeliveryChannelConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDeliveryChannelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_config_delivery_channel',
       terraformGeneratorMetadata: {
@@ -222,11 +222,11 @@ export class TfDeliveryChannel extends cdktn.TerraformResource {
   }
 
   // snapshot_delivery_properties - computed: false, optional: true, required: false
-  private _snapshotDeliveryProperties = new TfDeliveryChannel.SnapshotDeliveryPropertiesPropertyOutputReference(this, "snapshot_delivery_properties");
+  private _snapshotDeliveryProperties = new AwsDeliveryChannel.SnapshotDeliveryPropertiesPropertyOutputReference(this, "snapshot_delivery_properties");
   public get snapshotDeliveryProperties() {
     return this._snapshotDeliveryProperties;
   }
-  public putSnapshotDeliveryProperties(value: TfDeliveryChannel.SnapshotDeliveryPropertiesProperty) {
+  public putSnapshotDeliveryProperties(value: AwsDeliveryChannel.SnapshotDeliveryPropertiesProperty) {
     this._snapshotDeliveryProperties.internalValue = value;
   }
   public resetSnapshotDeliveryProperties() {
@@ -250,7 +250,7 @@ export class TfDeliveryChannel extends cdktn.TerraformResource {
       s3_key_prefix: cdktn.stringToTerraform(this._s3KeyPrefix),
       s3_kms_key_arn: cdktn.stringToTerraform(this._s3KmsKeyArn),
       sns_topic_arn: cdktn.stringToTerraform(this._snsTopicArn),
-      snapshot_delivery_properties: tfDeliveryChannelSnapshotDeliveryPropertiesPropertyToTerraform(this._snapshotDeliveryProperties.internalValue),
+      snapshot_delivery_properties: awsDeliveryChannelSnapshotDeliveryPropertiesPropertyToTerraform(this._snapshotDeliveryProperties.internalValue),
     };
   }
 
@@ -299,10 +299,10 @@ export class TfDeliveryChannel extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       snapshot_delivery_properties: {
-        value: tfDeliveryChannelSnapshotDeliveryPropertiesPropertyToHclTerraform(this._snapshotDeliveryProperties.internalValue),
+        value: awsDeliveryChannelSnapshotDeliveryPropertiesPropertyToHclTerraform(this._snapshotDeliveryProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDeliveryChannel.SnapshotDeliveryPropertiesPropertyList",
+        storageClassType: "AwsDeliveryChannel.SnapshotDeliveryPropertiesPropertyList",
       },
     };
 
@@ -311,7 +311,7 @@ export class TfDeliveryChannel extends cdktn.TerraformResource {
   }
 }
 
-export function tfDeliveryChannelSnapshotDeliveryPropertiesPropertyToTerraform(struct?: TfDeliveryChannel.SnapshotDeliveryPropertiesPropertyOutputReference | TfDeliveryChannel.SnapshotDeliveryPropertiesProperty): any {
+export function awsDeliveryChannelSnapshotDeliveryPropertiesPropertyToTerraform(struct?: AwsDeliveryChannel.SnapshotDeliveryPropertiesPropertyOutputReference | AwsDeliveryChannel.SnapshotDeliveryPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function tfDeliveryChannelSnapshotDeliveryPropertiesPropertyToTerraform(s
 }
 
 
-export function tfDeliveryChannelSnapshotDeliveryPropertiesPropertyToHclTerraform(struct?: TfDeliveryChannel.SnapshotDeliveryPropertiesPropertyOutputReference | TfDeliveryChannel.SnapshotDeliveryPropertiesProperty): any {
+export function awsDeliveryChannelSnapshotDeliveryPropertiesPropertyToHclTerraform(struct?: AwsDeliveryChannel.SnapshotDeliveryPropertiesPropertyOutputReference | AwsDeliveryChannel.SnapshotDeliveryPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,10 +341,10 @@ export function tfDeliveryChannelSnapshotDeliveryPropertiesPropertyToHclTerrafor
 }
 
 
-export namespace TfDeliveryChannel {
+export namespace AwsDeliveryChannel {
 export interface SnapshotDeliveryPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#delivery_frequency TfDeliveryChannel#delivery_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_delivery_channel#delivery_frequency AwsDeliveryChannel#delivery_frequency}
   */
   readonly deliveryFrequency?: string;
 }

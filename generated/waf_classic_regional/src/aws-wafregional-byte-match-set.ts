@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfByteMatchSetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsByteMatchSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#id TfByteMatchSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#id AwsByteMatchSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#name TfByteMatchSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#name AwsByteMatchSet#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#region TfByteMatchSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#region AwsByteMatchSet#region}
   */
   readonly region?: string;
   /**
   * byte_match_tuples block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#byte_match_tuples TfByteMatchSet#byte_match_tuples}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#byte_match_tuples AwsByteMatchSet#byte_match_tuples}
   */
-  readonly byteMatchTuples?: TfByteMatchSet.ByteMatchTuplesProperty[] | cdktn.IResolvable;
+  readonly byteMatchTuples?: AwsByteMatchSet.ByteMatchTuplesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set aws_wafregional_byte_match_set}
 */
-export class TfByteMatchSet extends cdktn.TerraformResource {
+export class AwsByteMatchSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfByteMatchSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfByteMatchSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsByteMatchSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfByteMatchSet to import
-  * @param importFromId The id of the existing TfByteMatchSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfByteMatchSet to import is found
+  * @param importToId The construct id used in the generated config for the AwsByteMatchSet to import
+  * @param importFromId The id of the existing AwsByteMatchSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsByteMatchSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafregional_byte_match_set", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfByteMatchSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfByteMatchSetConfig
+  * @param options AwsByteMatchSetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfByteMatchSetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsByteMatchSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafregional_byte_match_set',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class TfByteMatchSet extends cdktn.TerraformResource {
   }
 
   // byte_match_tuples - computed: false, optional: true, required: false
-  private _byteMatchTuples = new TfByteMatchSet.ByteMatchTuplesPropertyList(this, "byte_match_tuples", true);
+  private _byteMatchTuples = new AwsByteMatchSet.ByteMatchTuplesPropertyList(this, "byte_match_tuples", true);
   public get byteMatchTuples() {
     return this._byteMatchTuples;
   }
-  public putByteMatchTuples(value: TfByteMatchSet.ByteMatchTuplesProperty[] | cdktn.IResolvable) {
+  public putByteMatchTuples(value: AwsByteMatchSet.ByteMatchTuplesProperty[] | cdktn.IResolvable) {
     this._byteMatchTuples.internalValue = value;
   }
   public resetByteMatchTuples() {
@@ -162,7 +162,7 @@ export class TfByteMatchSet extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      byte_match_tuples: cdktn.listMapper(tfByteMatchSetByteMatchTuplesPropertyToTerraform, true)(this._byteMatchTuples.internalValue),
+      byte_match_tuples: cdktn.listMapper(awsByteMatchSetByteMatchTuplesPropertyToTerraform, true)(this._byteMatchTuples.internalValue),
     };
   }
 
@@ -187,10 +187,10 @@ export class TfByteMatchSet extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       byte_match_tuples: {
-        value: cdktn.listMapperHcl(tfByteMatchSetByteMatchTuplesPropertyToHclTerraform, true)(this._byteMatchTuples.internalValue),
+        value: cdktn.listMapperHcl(awsByteMatchSetByteMatchTuplesPropertyToHclTerraform, true)(this._byteMatchTuples.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfByteMatchSet.ByteMatchTuplesPropertyList",
+        storageClassType: "AwsByteMatchSet.ByteMatchTuplesPropertyList",
       },
     };
 
@@ -199,7 +199,7 @@ export class TfByteMatchSet extends cdktn.TerraformResource {
   }
 }
 
-export function tfByteMatchSetFieldToMatchPropertyToTerraform(struct?: TfByteMatchSet.FieldToMatchPropertyOutputReference | TfByteMatchSet.FieldToMatchProperty): any {
+export function awsByteMatchSetFieldToMatchPropertyToTerraform(struct?: AwsByteMatchSet.FieldToMatchPropertyOutputReference | AwsByteMatchSet.FieldToMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,7 +211,7 @@ export function tfByteMatchSetFieldToMatchPropertyToTerraform(struct?: TfByteMat
 }
 
 
-export function tfByteMatchSetFieldToMatchPropertyToHclTerraform(struct?: TfByteMatchSet.FieldToMatchPropertyOutputReference | TfByteMatchSet.FieldToMatchProperty): any {
+export function awsByteMatchSetFieldToMatchPropertyToHclTerraform(struct?: AwsByteMatchSet.FieldToMatchPropertyOutputReference | AwsByteMatchSet.FieldToMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function tfByteMatchSetFieldToMatchPropertyToHclTerraform(struct?: TfByte
 }
 
 
-export function tfByteMatchSetByteMatchTuplesPropertyToTerraform(struct?: TfByteMatchSet.ByteMatchTuplesProperty | cdktn.IResolvable): any {
+export function awsByteMatchSetByteMatchTuplesPropertyToTerraform(struct?: AwsByteMatchSet.ByteMatchTuplesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -245,12 +245,12 @@ export function tfByteMatchSetByteMatchTuplesPropertyToTerraform(struct?: TfByte
     positional_constraint: cdktn.stringToTerraform(struct!.positionalConstraint),
     target_string: cdktn.stringToTerraform(struct!.targetString),
     text_transformation: cdktn.stringToTerraform(struct!.textTransformation),
-    field_to_match: tfByteMatchSetFieldToMatchPropertyToTerraform(struct!.fieldToMatch),
+    field_to_match: awsByteMatchSetFieldToMatchPropertyToTerraform(struct!.fieldToMatch),
   }
 }
 
 
-export function tfByteMatchSetByteMatchTuplesPropertyToHclTerraform(struct?: TfByteMatchSet.ByteMatchTuplesProperty | cdktn.IResolvable): any {
+export function awsByteMatchSetByteMatchTuplesPropertyToHclTerraform(struct?: AwsByteMatchSet.ByteMatchTuplesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function tfByteMatchSetByteMatchTuplesPropertyToHclTerraform(struct?: TfB
       storageClassType: "string",
     },
     field_to_match: {
-      value: tfByteMatchSetFieldToMatchPropertyToHclTerraform(struct!.fieldToMatch),
+      value: awsByteMatchSetFieldToMatchPropertyToHclTerraform(struct!.fieldToMatch),
       isBlock: true,
       type: "list",
       storageClassType: "FieldToMatchPropertyList",
@@ -287,14 +287,14 @@ export function tfByteMatchSetByteMatchTuplesPropertyToHclTerraform(struct?: TfB
 }
 
 
-export namespace TfByteMatchSet {
+export namespace AwsByteMatchSet {
 export interface FieldToMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#data TfByteMatchSet#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#data AwsByteMatchSet#data}
   */
   readonly data?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#type TfByteMatchSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#type AwsByteMatchSet#type}
   */
   readonly type: string;
 }
@@ -367,21 +367,21 @@ export class FieldToMatchPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ByteMatchTuplesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#positional_constraint TfByteMatchSet#positional_constraint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#positional_constraint AwsByteMatchSet#positional_constraint}
   */
   readonly positionalConstraint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#target_string TfByteMatchSet#target_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#target_string AwsByteMatchSet#target_string}
   */
   readonly targetString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#text_transformation TfByteMatchSet#text_transformation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#text_transformation AwsByteMatchSet#text_transformation}
   */
   readonly textTransformation: string;
   /**
   * field_to_match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#field_to_match TfByteMatchSet#field_to_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_byte_match_set#field_to_match AwsByteMatchSet#field_to_match}
   */
   readonly fieldToMatch: FieldToMatchProperty;
 }

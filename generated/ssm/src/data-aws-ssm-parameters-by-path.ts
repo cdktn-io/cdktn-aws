@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfParametersByPathConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsParametersByPathConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path#id DataTfParametersByPath#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path#id DataAwsParametersByPath#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path#path DataTfParametersByPath#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path#path DataAwsParametersByPath#path}
   */
   readonly path: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path#recursive DataTfParametersByPath#recursive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path#recursive DataAwsParametersByPath#recursive}
   */
   readonly recursive?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path#region DataTfParametersByPath#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path#region DataAwsParametersByPath#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path#with_decryption DataTfParametersByPath#with_decryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path#with_decryption DataAwsParametersByPath#with_decryption}
   */
   readonly withDecryption?: boolean | cdktn.IResolvable;
 }
@@ -36,7 +36,7 @@ export interface DataTfParametersByPathConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path aws_ssm_parameters_by_path}
 */
-export class DataTfParametersByPath extends cdktn.TerraformDataSource {
+export class DataAwsParametersByPath extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfParametersByPath extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfParametersByPath resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsParametersByPath resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfParametersByPath to import
-  * @param importFromId The id of the existing DataTfParametersByPath that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfParametersByPath to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsParametersByPath to import
+  * @param importFromId The id of the existing DataAwsParametersByPath that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_parameters_by_path#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsParametersByPath to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssm_parameters_by_path", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfParametersByPath extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfParametersByPathConfig
+  * @param options DataAwsParametersByPathConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfParametersByPathConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsParametersByPathConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssm_parameters_by_path',
       terraformGeneratorMetadata: {

@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#filter_expression TfGroup#filter_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#filter_expression AwsGroup#filter_expression}
   */
   readonly filterExpression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#group_name TfGroup#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#group_name AwsGroup#group_name}
   */
   readonly groupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#id TfGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#id AwsGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,29 +24,29 @@ export interface TfGroupConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#region TfGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#region AwsGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#tags TfGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#tags AwsGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#tags_all TfGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#tags_all AwsGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * insights_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#insights_configuration TfGroup#insights_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#insights_configuration AwsGroup#insights_configuration}
   */
-  readonly insightsConfiguration?: TfGroup.InsightsConfigurationProperty;
+  readonly insightsConfiguration?: AwsGroup.InsightsConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group aws_xray_group}
 */
-export class TfGroup extends cdktn.TerraformResource {
+export class AwsGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGroup to import
-  * @param importFromId The id of the existing TfGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsGroup to import
+  * @param importFromId The id of the existing AwsGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_xray_group", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGroupConfig
+  * @param options AwsGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_xray_group',
       terraformGeneratorMetadata: {
@@ -203,11 +203,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // insights_configuration - computed: false, optional: true, required: false
-  private _insightsConfiguration = new TfGroup.InsightsConfigurationPropertyOutputReference(this, "insights_configuration");
+  private _insightsConfiguration = new AwsGroup.InsightsConfigurationPropertyOutputReference(this, "insights_configuration");
   public get insightsConfiguration() {
     return this._insightsConfiguration;
   }
-  public putInsightsConfiguration(value: TfGroup.InsightsConfigurationProperty) {
+  public putInsightsConfiguration(value: AwsGroup.InsightsConfigurationProperty) {
     this._insightsConfiguration.internalValue = value;
   }
   public resetInsightsConfiguration() {
@@ -230,7 +230,7 @@ export class TfGroup extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      insights_configuration: tfGroupInsightsConfigurationPropertyToTerraform(this._insightsConfiguration.internalValue),
+      insights_configuration: awsGroupInsightsConfigurationPropertyToTerraform(this._insightsConfiguration.internalValue),
     };
   }
 
@@ -273,10 +273,10 @@ export class TfGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       insights_configuration: {
-        value: tfGroupInsightsConfigurationPropertyToHclTerraform(this._insightsConfiguration.internalValue),
+        value: awsGroupInsightsConfigurationPropertyToHclTerraform(this._insightsConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGroup.InsightsConfigurationPropertyList",
+        storageClassType: "AwsGroup.InsightsConfigurationPropertyList",
       },
     };
 
@@ -285,7 +285,7 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfGroupInsightsConfigurationPropertyToTerraform(struct?: TfGroup.InsightsConfigurationPropertyOutputReference | TfGroup.InsightsConfigurationProperty): any {
+export function awsGroupInsightsConfigurationPropertyToTerraform(struct?: AwsGroup.InsightsConfigurationPropertyOutputReference | AwsGroup.InsightsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function tfGroupInsightsConfigurationPropertyToTerraform(struct?: TfGroup
 }
 
 
-export function tfGroupInsightsConfigurationPropertyToHclTerraform(struct?: TfGroup.InsightsConfigurationPropertyOutputReference | TfGroup.InsightsConfigurationProperty): any {
+export function awsGroupInsightsConfigurationPropertyToHclTerraform(struct?: AwsGroup.InsightsConfigurationPropertyOutputReference | AwsGroup.InsightsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,14 +322,14 @@ export function tfGroupInsightsConfigurationPropertyToHclTerraform(struct?: TfGr
 }
 
 
-export namespace TfGroup {
+export namespace AwsGroup {
 export interface InsightsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#insights_enabled TfGroup#insights_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#insights_enabled AwsGroup#insights_enabled}
   */
   readonly insightsEnabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#notifications_enabled TfGroup#notifications_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_group#notifications_enabled AwsGroup#notifications_enabled}
   */
   readonly notificationsEnabled?: boolean | cdktn.IResolvable;
 }

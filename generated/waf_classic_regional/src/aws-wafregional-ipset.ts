@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfIpsetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsIpsetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#id TfIpset#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#id AwsIpset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#name TfIpset#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#name AwsIpset#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#region TfIpset#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#region AwsIpset#region}
   */
   readonly region?: string;
   /**
   * ip_set_descriptor block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#ip_set_descriptor TfIpset#ip_set_descriptor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#ip_set_descriptor AwsIpset#ip_set_descriptor}
   */
-  readonly ipSetDescriptor?: TfIpset.IpSetDescriptorProperty[] | cdktn.IResolvable;
+  readonly ipSetDescriptor?: AwsIpset.IpSetDescriptorProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset aws_wafregional_ipset}
 */
-export class TfIpset extends cdktn.TerraformResource {
+export class AwsIpset extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfIpset extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfIpset resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsIpset resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfIpset to import
-  * @param importFromId The id of the existing TfIpset that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfIpset to import is found
+  * @param importToId The construct id used in the generated config for the AwsIpset to import
+  * @param importFromId The id of the existing AwsIpset that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsIpset to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafregional_ipset", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfIpset extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfIpsetConfig
+  * @param options AwsIpsetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfIpsetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsIpsetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafregional_ipset',
       terraformGeneratorMetadata: {
@@ -143,11 +143,11 @@ export class TfIpset extends cdktn.TerraformResource {
   }
 
   // ip_set_descriptor - computed: false, optional: true, required: false
-  private _ipSetDescriptor = new TfIpset.IpSetDescriptorPropertyList(this, "ip_set_descriptor", true);
+  private _ipSetDescriptor = new AwsIpset.IpSetDescriptorPropertyList(this, "ip_set_descriptor", true);
   public get ipSetDescriptor() {
     return this._ipSetDescriptor;
   }
-  public putIpSetDescriptor(value: TfIpset.IpSetDescriptorProperty[] | cdktn.IResolvable) {
+  public putIpSetDescriptor(value: AwsIpset.IpSetDescriptorProperty[] | cdktn.IResolvable) {
     this._ipSetDescriptor.internalValue = value;
   }
   public resetIpSetDescriptor() {
@@ -167,7 +167,7 @@ export class TfIpset extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      ip_set_descriptor: cdktn.listMapper(tfIpsetIpSetDescriptorPropertyToTerraform, true)(this._ipSetDescriptor.internalValue),
+      ip_set_descriptor: cdktn.listMapper(awsIpsetIpSetDescriptorPropertyToTerraform, true)(this._ipSetDescriptor.internalValue),
     };
   }
 
@@ -192,10 +192,10 @@ export class TfIpset extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       ip_set_descriptor: {
-        value: cdktn.listMapperHcl(tfIpsetIpSetDescriptorPropertyToHclTerraform, true)(this._ipSetDescriptor.internalValue),
+        value: cdktn.listMapperHcl(awsIpsetIpSetDescriptorPropertyToHclTerraform, true)(this._ipSetDescriptor.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfIpset.IpSetDescriptorPropertyList",
+        storageClassType: "AwsIpset.IpSetDescriptorPropertyList",
       },
     };
 
@@ -204,7 +204,7 @@ export class TfIpset extends cdktn.TerraformResource {
   }
 }
 
-export function tfIpsetIpSetDescriptorPropertyToTerraform(struct?: TfIpset.IpSetDescriptorProperty | cdktn.IResolvable): any {
+export function awsIpsetIpSetDescriptorPropertyToTerraform(struct?: AwsIpset.IpSetDescriptorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function tfIpsetIpSetDescriptorPropertyToTerraform(struct?: TfIpset.IpSet
 }
 
 
-export function tfIpsetIpSetDescriptorPropertyToHclTerraform(struct?: TfIpset.IpSetDescriptorProperty | cdktn.IResolvable): any {
+export function awsIpsetIpSetDescriptorPropertyToHclTerraform(struct?: AwsIpset.IpSetDescriptorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,14 +241,14 @@ export function tfIpsetIpSetDescriptorPropertyToHclTerraform(struct?: TfIpset.Ip
 }
 
 
-export namespace TfIpset {
+export namespace AwsIpset {
 export interface IpSetDescriptorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#type TfIpset#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#type AwsIpset#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#value TfIpset#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_ipset#value AwsIpset#value}
   */
   readonly value: string;
 }

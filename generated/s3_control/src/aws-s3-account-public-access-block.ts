@@ -5,32 +5,32 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAccountPublicAccessBlockConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAccountPublicAccessBlockConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#account_id TfAccountPublicAccessBlock#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#account_id AwsAccountPublicAccessBlock#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#block_public_acls TfAccountPublicAccessBlock#block_public_acls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#block_public_acls AwsAccountPublicAccessBlock#block_public_acls}
   */
   readonly blockPublicAcls?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#block_public_policy TfAccountPublicAccessBlock#block_public_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#block_public_policy AwsAccountPublicAccessBlock#block_public_policy}
   */
   readonly blockPublicPolicy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#id TfAccountPublicAccessBlock#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#id AwsAccountPublicAccessBlock#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#ignore_public_acls TfAccountPublicAccessBlock#ignore_public_acls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#ignore_public_acls AwsAccountPublicAccessBlock#ignore_public_acls}
   */
   readonly ignorePublicAcls?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#restrict_public_buckets TfAccountPublicAccessBlock#restrict_public_buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#restrict_public_buckets AwsAccountPublicAccessBlock#restrict_public_buckets}
   */
   readonly restrictPublicBuckets?: boolean | cdktn.IResolvable;
 }
@@ -38,7 +38,7 @@ export interface TfAccountPublicAccessBlockConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block aws_s3_account_public_access_block}
 */
-export class TfAccountPublicAccessBlock extends cdktn.TerraformResource {
+export class AwsAccountPublicAccessBlock extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfAccountPublicAccessBlock extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAccountPublicAccessBlock resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAccountPublicAccessBlock resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAccountPublicAccessBlock to import
-  * @param importFromId The id of the existing TfAccountPublicAccessBlock that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAccountPublicAccessBlock to import is found
+  * @param importToId The construct id used in the generated config for the AwsAccountPublicAccessBlock to import
+  * @param importFromId The id of the existing AwsAccountPublicAccessBlock that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAccountPublicAccessBlock to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_account_public_access_block", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfAccountPublicAccessBlock extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAccountPublicAccessBlockConfig = {}
+  * @param options AwsAccountPublicAccessBlockConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfAccountPublicAccessBlockConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsAccountPublicAccessBlockConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_account_public_access_block',
       terraformGeneratorMetadata: {

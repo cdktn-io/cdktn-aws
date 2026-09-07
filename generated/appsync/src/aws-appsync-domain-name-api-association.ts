@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDomainNameApiAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDomainNameApiAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name_api_association#api_id TfDomainNameApiAssociation#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name_api_association#api_id AwsDomainNameApiAssociation#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name_api_association#domain_name TfDomainNameApiAssociation#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name_api_association#domain_name AwsDomainNameApiAssociation#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name_api_association#id TfDomainNameApiAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name_api_association#id AwsDomainNameApiAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,7 +24,7 @@ export interface TfDomainNameApiAssociationConfig extends cdktn.TerraformMetaArg
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name_api_association#region TfDomainNameApiAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name_api_association#region AwsDomainNameApiAssociation#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface TfDomainNameApiAssociationConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name_api_association aws_appsync_domain_name_api_association}
 */
-export class TfDomainNameApiAssociation extends cdktn.TerraformResource {
+export class AwsDomainNameApiAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfDomainNameApiAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDomainNameApiAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDomainNameApiAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDomainNameApiAssociation to import
-  * @param importFromId The id of the existing TfDomainNameApiAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name_api_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDomainNameApiAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsDomainNameApiAssociation to import
+  * @param importFromId The id of the existing AwsDomainNameApiAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_domain_name_api_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDomainNameApiAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appsync_domain_name_api_association", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfDomainNameApiAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDomainNameApiAssociationConfig
+  * @param options AwsDomainNameApiAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDomainNameApiAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDomainNameApiAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appsync_domain_name_api_association',
       terraformGeneratorMetadata: {

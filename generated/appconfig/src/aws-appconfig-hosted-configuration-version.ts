@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfHostedConfigurationVersionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsHostedConfigurationVersionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#application_id TfHostedConfigurationVersion#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#application_id AwsHostedConfigurationVersion#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#configuration_profile_id TfHostedConfigurationVersion#configuration_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#configuration_profile_id AwsHostedConfigurationVersion#configuration_profile_id}
   */
   readonly configurationProfileId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#content TfHostedConfigurationVersion#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#content AwsHostedConfigurationVersion#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#content_type TfHostedConfigurationVersion#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#content_type AwsHostedConfigurationVersion#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#description TfHostedConfigurationVersion#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#description AwsHostedConfigurationVersion#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#id TfHostedConfigurationVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#id AwsHostedConfigurationVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -36,7 +36,7 @@ export interface TfHostedConfigurationVersionConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#region TfHostedConfigurationVersion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#region AwsHostedConfigurationVersion#region}
   */
   readonly region?: string;
 }
@@ -44,7 +44,7 @@ export interface TfHostedConfigurationVersionConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version aws_appconfig_hosted_configuration_version}
 */
-export class TfHostedConfigurationVersion extends cdktn.TerraformResource {
+export class AwsHostedConfigurationVersion extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfHostedConfigurationVersion extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfHostedConfigurationVersion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsHostedConfigurationVersion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfHostedConfigurationVersion to import
-  * @param importFromId The id of the existing TfHostedConfigurationVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfHostedConfigurationVersion to import is found
+  * @param importToId The construct id used in the generated config for the AwsHostedConfigurationVersion to import
+  * @param importFromId The id of the existing AwsHostedConfigurationVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_hosted_configuration_version#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsHostedConfigurationVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appconfig_hosted_configuration_version", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfHostedConfigurationVersion extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfHostedConfigurationVersionConfig
+  * @param options AwsHostedConfigurationVersionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfHostedConfigurationVersionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsHostedConfigurationVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appconfig_hosted_configuration_version',
       terraformGeneratorMetadata: {

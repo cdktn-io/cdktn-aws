@@ -5,57 +5,57 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfKxEnvironmentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsKxEnvironmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#description TfKxEnvironment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#description AwsKxEnvironment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#kms_key_id TfKxEnvironment#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#kms_key_id AwsKxEnvironment#kms_key_id}
   */
   readonly kmsKeyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#name TfKxEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#name AwsKxEnvironment#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#region TfKxEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#region AwsKxEnvironment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#tags TfKxEnvironment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#tags AwsKxEnvironment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#tags_all TfKxEnvironment#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#tags_all AwsKxEnvironment#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * custom_dns_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#custom_dns_configuration TfKxEnvironment#custom_dns_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#custom_dns_configuration AwsKxEnvironment#custom_dns_configuration}
   */
-  readonly customDnsConfiguration?: TfKxEnvironment.CustomDnsConfigurationProperty[] | cdktn.IResolvable;
+  readonly customDnsConfiguration?: AwsKxEnvironment.CustomDnsConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#timeouts TfKxEnvironment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#timeouts AwsKxEnvironment#timeouts}
   */
-  readonly timeouts?: TfKxEnvironment.TimeoutsProperty;
+  readonly timeouts?: AwsKxEnvironment.TimeoutsProperty;
   /**
   * transit_gateway_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#transit_gateway_configuration TfKxEnvironment#transit_gateway_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#transit_gateway_configuration AwsKxEnvironment#transit_gateway_configuration}
   */
-  readonly transitGatewayConfiguration?: TfKxEnvironment.TransitGatewayConfigurationProperty;
+  readonly transitGatewayConfiguration?: AwsKxEnvironment.TransitGatewayConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment aws_finspace_kx_environment}
 */
-export class TfKxEnvironment extends cdktn.TerraformResource {
+export class AwsKxEnvironment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -66,11 +66,11 @@ export class TfKxEnvironment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfKxEnvironment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsKxEnvironment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfKxEnvironment to import
-  * @param importFromId The id of the existing TfKxEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfKxEnvironment to import is found
+  * @param importToId The construct id used in the generated config for the AwsKxEnvironment to import
+  * @param importFromId The id of the existing AwsKxEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsKxEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_finspace_kx_environment", importId: importFromId, provider });
@@ -85,9 +85,9 @@ export class TfKxEnvironment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfKxEnvironmentConfig
+  * @param options AwsKxEnvironmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfKxEnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsKxEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_finspace_kx_environment',
       terraformGeneratorMetadata: {
@@ -244,11 +244,11 @@ export class TfKxEnvironment extends cdktn.TerraformResource {
   }
 
   // custom_dns_configuration - computed: false, optional: true, required: false
-  private _customDnsConfiguration = new TfKxEnvironment.CustomDnsConfigurationPropertyList(this, "custom_dns_configuration", false);
+  private _customDnsConfiguration = new AwsKxEnvironment.CustomDnsConfigurationPropertyList(this, "custom_dns_configuration", false);
   public get customDnsConfiguration() {
     return this._customDnsConfiguration;
   }
-  public putCustomDnsConfiguration(value: TfKxEnvironment.CustomDnsConfigurationProperty[] | cdktn.IResolvable) {
+  public putCustomDnsConfiguration(value: AwsKxEnvironment.CustomDnsConfigurationProperty[] | cdktn.IResolvable) {
     this._customDnsConfiguration.internalValue = value;
   }
   public resetCustomDnsConfiguration() {
@@ -260,11 +260,11 @@ export class TfKxEnvironment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfKxEnvironment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsKxEnvironment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfKxEnvironment.TimeoutsProperty) {
+  public putTimeouts(value: AwsKxEnvironment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -276,11 +276,11 @@ export class TfKxEnvironment extends cdktn.TerraformResource {
   }
 
   // transit_gateway_configuration - computed: false, optional: true, required: false
-  private _transitGatewayConfiguration = new TfKxEnvironment.TransitGatewayConfigurationPropertyOutputReference(this, "transit_gateway_configuration");
+  private _transitGatewayConfiguration = new AwsKxEnvironment.TransitGatewayConfigurationPropertyOutputReference(this, "transit_gateway_configuration");
   public get transitGatewayConfiguration() {
     return this._transitGatewayConfiguration;
   }
-  public putTransitGatewayConfiguration(value: TfKxEnvironment.TransitGatewayConfigurationProperty) {
+  public putTransitGatewayConfiguration(value: AwsKxEnvironment.TransitGatewayConfigurationProperty) {
     this._transitGatewayConfiguration.internalValue = value;
   }
   public resetTransitGatewayConfiguration() {
@@ -303,9 +303,9 @@ export class TfKxEnvironment extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      custom_dns_configuration: cdktn.listMapper(tfKxEnvironmentCustomDnsConfigurationPropertyToTerraform, true)(this._customDnsConfiguration.internalValue),
-      timeouts: tfKxEnvironmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      transit_gateway_configuration: tfKxEnvironmentTransitGatewayConfigurationPropertyToTerraform(this._transitGatewayConfiguration.internalValue),
+      custom_dns_configuration: cdktn.listMapper(awsKxEnvironmentCustomDnsConfigurationPropertyToTerraform, true)(this._customDnsConfiguration.internalValue),
+      timeouts: awsKxEnvironmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      transit_gateway_configuration: awsKxEnvironmentTransitGatewayConfigurationPropertyToTerraform(this._transitGatewayConfiguration.internalValue),
     };
   }
 
@@ -348,22 +348,22 @@ export class TfKxEnvironment extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       custom_dns_configuration: {
-        value: cdktn.listMapperHcl(tfKxEnvironmentCustomDnsConfigurationPropertyToHclTerraform, true)(this._customDnsConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsKxEnvironmentCustomDnsConfigurationPropertyToHclTerraform, true)(this._customDnsConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfKxEnvironment.CustomDnsConfigurationPropertyList",
+        storageClassType: "AwsKxEnvironment.CustomDnsConfigurationPropertyList",
       },
       timeouts: {
-        value: tfKxEnvironmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsKxEnvironmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfKxEnvironment.TimeoutsProperty",
+        storageClassType: "AwsKxEnvironment.TimeoutsProperty",
       },
       transit_gateway_configuration: {
-        value: tfKxEnvironmentTransitGatewayConfigurationPropertyToHclTerraform(this._transitGatewayConfiguration.internalValue),
+        value: awsKxEnvironmentTransitGatewayConfigurationPropertyToHclTerraform(this._transitGatewayConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfKxEnvironment.TransitGatewayConfigurationPropertyList",
+        storageClassType: "AwsKxEnvironment.TransitGatewayConfigurationPropertyList",
       },
     };
 
@@ -372,7 +372,7 @@ export class TfKxEnvironment extends cdktn.TerraformResource {
   }
 }
 
-export function tfKxEnvironmentCustomDnsConfigurationPropertyToTerraform(struct?: TfKxEnvironment.CustomDnsConfigurationProperty | cdktn.IResolvable): any {
+export function awsKxEnvironmentCustomDnsConfigurationPropertyToTerraform(struct?: AwsKxEnvironment.CustomDnsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function tfKxEnvironmentCustomDnsConfigurationPropertyToTerraform(struct?
 }
 
 
-export function tfKxEnvironmentCustomDnsConfigurationPropertyToHclTerraform(struct?: TfKxEnvironment.CustomDnsConfigurationProperty | cdktn.IResolvable): any {
+export function awsKxEnvironmentCustomDnsConfigurationPropertyToHclTerraform(struct?: AwsKxEnvironment.CustomDnsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function tfKxEnvironmentCustomDnsConfigurationPropertyToHclTerraform(stru
 }
 
 
-export function tfKxEnvironmentTimeoutsPropertyToTerraform(struct?: TfKxEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsKxEnvironmentTimeoutsPropertyToTerraform(struct?: AwsKxEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function tfKxEnvironmentTimeoutsPropertyToTerraform(struct?: TfKxEnvironm
 }
 
 
-export function tfKxEnvironmentTimeoutsPropertyToHclTerraform(struct?: TfKxEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsKxEnvironmentTimeoutsPropertyToHclTerraform(struct?: AwsKxEnvironment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -453,7 +453,7 @@ export function tfKxEnvironmentTimeoutsPropertyToHclTerraform(struct?: TfKxEnvir
 }
 
 
-export function tfKxEnvironmentIcmpTypeCodePropertyToTerraform(struct?: TfKxEnvironment.IcmpTypeCodePropertyOutputReference | TfKxEnvironment.IcmpTypeCodeProperty): any {
+export function awsKxEnvironmentIcmpTypeCodePropertyToTerraform(struct?: AwsKxEnvironment.IcmpTypeCodePropertyOutputReference | AwsKxEnvironment.IcmpTypeCodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -465,7 +465,7 @@ export function tfKxEnvironmentIcmpTypeCodePropertyToTerraform(struct?: TfKxEnvi
 }
 
 
-export function tfKxEnvironmentIcmpTypeCodePropertyToHclTerraform(struct?: TfKxEnvironment.IcmpTypeCodePropertyOutputReference | TfKxEnvironment.IcmpTypeCodeProperty): any {
+export function awsKxEnvironmentIcmpTypeCodePropertyToHclTerraform(struct?: AwsKxEnvironment.IcmpTypeCodePropertyOutputReference | AwsKxEnvironment.IcmpTypeCodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -490,7 +490,7 @@ export function tfKxEnvironmentIcmpTypeCodePropertyToHclTerraform(struct?: TfKxE
 }
 
 
-export function tfKxEnvironmentPortRangePropertyToTerraform(struct?: TfKxEnvironment.PortRangePropertyOutputReference | TfKxEnvironment.PortRangeProperty): any {
+export function awsKxEnvironmentPortRangePropertyToTerraform(struct?: AwsKxEnvironment.PortRangePropertyOutputReference | AwsKxEnvironment.PortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,7 +502,7 @@ export function tfKxEnvironmentPortRangePropertyToTerraform(struct?: TfKxEnviron
 }
 
 
-export function tfKxEnvironmentPortRangePropertyToHclTerraform(struct?: TfKxEnvironment.PortRangePropertyOutputReference | TfKxEnvironment.PortRangeProperty): any {
+export function awsKxEnvironmentPortRangePropertyToHclTerraform(struct?: AwsKxEnvironment.PortRangePropertyOutputReference | AwsKxEnvironment.PortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -527,7 +527,7 @@ export function tfKxEnvironmentPortRangePropertyToHclTerraform(struct?: TfKxEnvi
 }
 
 
-export function tfKxEnvironmentAttachmentNetworkAclConfigurationPropertyToTerraform(struct?: TfKxEnvironment.AttachmentNetworkAclConfigurationProperty | cdktn.IResolvable): any {
+export function awsKxEnvironmentAttachmentNetworkAclConfigurationPropertyToTerraform(struct?: AwsKxEnvironment.AttachmentNetworkAclConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -537,13 +537,13 @@ export function tfKxEnvironmentAttachmentNetworkAclConfigurationPropertyToTerraf
     protocol: cdktn.stringToTerraform(struct!.protocol),
     rule_action: cdktn.stringToTerraform(struct!.ruleAction),
     rule_number: cdktn.numberToTerraform(struct!.ruleNumber),
-    icmp_type_code: tfKxEnvironmentIcmpTypeCodePropertyToTerraform(struct!.icmpTypeCode),
-    port_range: tfKxEnvironmentPortRangePropertyToTerraform(struct!.portRange),
+    icmp_type_code: awsKxEnvironmentIcmpTypeCodePropertyToTerraform(struct!.icmpTypeCode),
+    port_range: awsKxEnvironmentPortRangePropertyToTerraform(struct!.portRange),
   }
 }
 
 
-export function tfKxEnvironmentAttachmentNetworkAclConfigurationPropertyToHclTerraform(struct?: TfKxEnvironment.AttachmentNetworkAclConfigurationProperty | cdktn.IResolvable): any {
+export function awsKxEnvironmentAttachmentNetworkAclConfigurationPropertyToHclTerraform(struct?: AwsKxEnvironment.AttachmentNetworkAclConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,13 +574,13 @@ export function tfKxEnvironmentAttachmentNetworkAclConfigurationPropertyToHclTer
       storageClassType: "number",
     },
     icmp_type_code: {
-      value: tfKxEnvironmentIcmpTypeCodePropertyToHclTerraform(struct!.icmpTypeCode),
+      value: awsKxEnvironmentIcmpTypeCodePropertyToHclTerraform(struct!.icmpTypeCode),
       isBlock: true,
       type: "list",
       storageClassType: "IcmpTypeCodePropertyList",
     },
     port_range: {
-      value: tfKxEnvironmentPortRangePropertyToHclTerraform(struct!.portRange),
+      value: awsKxEnvironmentPortRangePropertyToHclTerraform(struct!.portRange),
       isBlock: true,
       type: "list",
       storageClassType: "PortRangePropertyList",
@@ -592,7 +592,7 @@ export function tfKxEnvironmentAttachmentNetworkAclConfigurationPropertyToHclTer
 }
 
 
-export function tfKxEnvironmentTransitGatewayConfigurationPropertyToTerraform(struct?: TfKxEnvironment.TransitGatewayConfigurationPropertyOutputReference | TfKxEnvironment.TransitGatewayConfigurationProperty): any {
+export function awsKxEnvironmentTransitGatewayConfigurationPropertyToTerraform(struct?: AwsKxEnvironment.TransitGatewayConfigurationPropertyOutputReference | AwsKxEnvironment.TransitGatewayConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -600,12 +600,12 @@ export function tfKxEnvironmentTransitGatewayConfigurationPropertyToTerraform(st
   return {
     routable_cidr_space: cdktn.stringToTerraform(struct!.routableCidrSpace),
     transit_gateway_id: cdktn.stringToTerraform(struct!.transitGatewayId),
-    attachment_network_acl_configuration: cdktn.listMapper(tfKxEnvironmentAttachmentNetworkAclConfigurationPropertyToTerraform, true)(struct!.attachmentNetworkAclConfiguration),
+    attachment_network_acl_configuration: cdktn.listMapper(awsKxEnvironmentAttachmentNetworkAclConfigurationPropertyToTerraform, true)(struct!.attachmentNetworkAclConfiguration),
   }
 }
 
 
-export function tfKxEnvironmentTransitGatewayConfigurationPropertyToHclTerraform(struct?: TfKxEnvironment.TransitGatewayConfigurationPropertyOutputReference | TfKxEnvironment.TransitGatewayConfigurationProperty): any {
+export function awsKxEnvironmentTransitGatewayConfigurationPropertyToHclTerraform(struct?: AwsKxEnvironment.TransitGatewayConfigurationPropertyOutputReference | AwsKxEnvironment.TransitGatewayConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -624,7 +624,7 @@ export function tfKxEnvironmentTransitGatewayConfigurationPropertyToHclTerraform
       storageClassType: "string",
     },
     attachment_network_acl_configuration: {
-      value: cdktn.listMapperHcl(tfKxEnvironmentAttachmentNetworkAclConfigurationPropertyToHclTerraform, true)(struct!.attachmentNetworkAclConfiguration),
+      value: cdktn.listMapperHcl(awsKxEnvironmentAttachmentNetworkAclConfigurationPropertyToHclTerraform, true)(struct!.attachmentNetworkAclConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AttachmentNetworkAclConfigurationPropertyList",
@@ -636,14 +636,14 @@ export function tfKxEnvironmentTransitGatewayConfigurationPropertyToHclTerraform
 }
 
 
-export namespace TfKxEnvironment {
+export namespace AwsKxEnvironment {
 export interface CustomDnsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#custom_dns_server_ip TfKxEnvironment#custom_dns_server_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#custom_dns_server_ip AwsKxEnvironment#custom_dns_server_ip}
   */
   readonly customDnsServerIp: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#custom_dns_server_name TfKxEnvironment#custom_dns_server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#custom_dns_server_name AwsKxEnvironment#custom_dns_server_name}
   */
   readonly customDnsServerName: string;
 }
@@ -745,15 +745,15 @@ export class CustomDnsConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#create TfKxEnvironment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#create AwsKxEnvironment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#delete TfKxEnvironment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#delete AwsKxEnvironment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#update TfKxEnvironment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#update AwsKxEnvironment#update}
   */
   readonly update?: string;
 }
@@ -861,11 +861,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IcmpTypeCodeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#code TfKxEnvironment#code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#code AwsKxEnvironment#code}
   */
   readonly code: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#type TfKxEnvironment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#type AwsKxEnvironment#type}
   */
   readonly type: number;
 }
@@ -935,11 +935,11 @@ export class IcmpTypeCodePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#from TfKxEnvironment#from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#from AwsKxEnvironment#from}
   */
   readonly from: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#to TfKxEnvironment#to}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#to AwsKxEnvironment#to}
   */
   readonly to: number;
 }
@@ -1009,31 +1009,31 @@ export class PortRangePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AttachmentNetworkAclConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#cidr_block TfKxEnvironment#cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#cidr_block AwsKxEnvironment#cidr_block}
   */
   readonly cidrBlock: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#protocol TfKxEnvironment#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#protocol AwsKxEnvironment#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#rule_action TfKxEnvironment#rule_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#rule_action AwsKxEnvironment#rule_action}
   */
   readonly ruleAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#rule_number TfKxEnvironment#rule_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#rule_number AwsKxEnvironment#rule_number}
   */
   readonly ruleNumber: number;
   /**
   * icmp_type_code block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#icmp_type_code TfKxEnvironment#icmp_type_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#icmp_type_code AwsKxEnvironment#icmp_type_code}
   */
   readonly icmpTypeCode?: IcmpTypeCodeProperty;
   /**
   * port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#port_range TfKxEnvironment#port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#port_range AwsKxEnvironment#port_range}
   */
   readonly portRange?: PortRangeProperty;
 }
@@ -1217,17 +1217,17 @@ export class AttachmentNetworkAclConfigurationPropertyList extends cdktn.Complex
 }
 export interface TransitGatewayConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#routable_cidr_space TfKxEnvironment#routable_cidr_space}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#routable_cidr_space AwsKxEnvironment#routable_cidr_space}
   */
   readonly routableCidrSpace: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#transit_gateway_id TfKxEnvironment#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#transit_gateway_id AwsKxEnvironment#transit_gateway_id}
   */
   readonly transitGatewayId: string;
   /**
   * attachment_network_acl_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#attachment_network_acl_configuration TfKxEnvironment#attachment_network_acl_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_environment#attachment_network_acl_configuration AwsKxEnvironment#attachment_network_acl_configuration}
   */
   readonly attachmentNetworkAclConfiguration?: AttachmentNetworkAclConfigurationProperty[] | cdktn.IResolvable;
 }

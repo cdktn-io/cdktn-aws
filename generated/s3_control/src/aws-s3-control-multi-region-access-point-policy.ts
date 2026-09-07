@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMultiRegionAccessPointPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMultiRegionAccessPointPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#account_id TfMultiRegionAccessPointPolicy#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#account_id AwsMultiRegionAccessPointPolicy#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#id TfMultiRegionAccessPointPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#id AwsMultiRegionAccessPointPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,27 +20,27 @@ export interface TfMultiRegionAccessPointPolicyConfig extends cdktn.TerraformMet
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#region TfMultiRegionAccessPointPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#region AwsMultiRegionAccessPointPolicy#region}
   */
   readonly region?: string;
   /**
   * details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#details TfMultiRegionAccessPointPolicy#details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#details AwsMultiRegionAccessPointPolicy#details}
   */
-  readonly details: TfMultiRegionAccessPointPolicy.DetailsProperty;
+  readonly details: AwsMultiRegionAccessPointPolicy.DetailsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#timeouts TfMultiRegionAccessPointPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#timeouts AwsMultiRegionAccessPointPolicy#timeouts}
   */
-  readonly timeouts?: TfMultiRegionAccessPointPolicy.TimeoutsProperty;
+  readonly timeouts?: AwsMultiRegionAccessPointPolicy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy aws_s3control_multi_region_access_point_policy}
 */
-export class TfMultiRegionAccessPointPolicy extends cdktn.TerraformResource {
+export class AwsMultiRegionAccessPointPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfMultiRegionAccessPointPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMultiRegionAccessPointPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMultiRegionAccessPointPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMultiRegionAccessPointPolicy to import
-  * @param importFromId The id of the existing TfMultiRegionAccessPointPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMultiRegionAccessPointPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsMultiRegionAccessPointPolicy to import
+  * @param importFromId The id of the existing AwsMultiRegionAccessPointPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMultiRegionAccessPointPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3control_multi_region_access_point_policy", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfMultiRegionAccessPointPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMultiRegionAccessPointPolicyConfig
+  * @param options AwsMultiRegionAccessPointPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMultiRegionAccessPointPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMultiRegionAccessPointPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3control_multi_region_access_point_policy',
       terraformGeneratorMetadata: {
@@ -158,11 +158,11 @@ export class TfMultiRegionAccessPointPolicy extends cdktn.TerraformResource {
   }
 
   // details - computed: false, optional: false, required: true
-  private _details = new TfMultiRegionAccessPointPolicy.DetailsPropertyOutputReference(this, "details");
+  private _details = new AwsMultiRegionAccessPointPolicy.DetailsPropertyOutputReference(this, "details");
   public get details() {
     return this._details;
   }
-  public putDetails(value: TfMultiRegionAccessPointPolicy.DetailsProperty) {
+  public putDetails(value: AwsMultiRegionAccessPointPolicy.DetailsProperty) {
     this._details.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -171,11 +171,11 @@ export class TfMultiRegionAccessPointPolicy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfMultiRegionAccessPointPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsMultiRegionAccessPointPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfMultiRegionAccessPointPolicy.TimeoutsProperty) {
+  public putTimeouts(value: AwsMultiRegionAccessPointPolicy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -195,8 +195,8 @@ export class TfMultiRegionAccessPointPolicy extends cdktn.TerraformResource {
       account_id: cdktn.stringToTerraform(this._accountId),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      details: tfMultiRegionAccessPointPolicyDetailsPropertyToTerraform(this._details.internalValue),
-      timeouts: tfMultiRegionAccessPointPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      details: awsMultiRegionAccessPointPolicyDetailsPropertyToTerraform(this._details.internalValue),
+      timeouts: awsMultiRegionAccessPointPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -221,16 +221,16 @@ export class TfMultiRegionAccessPointPolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       details: {
-        value: tfMultiRegionAccessPointPolicyDetailsPropertyToHclTerraform(this._details.internalValue),
+        value: awsMultiRegionAccessPointPolicyDetailsPropertyToHclTerraform(this._details.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMultiRegionAccessPointPolicy.DetailsPropertyList",
+        storageClassType: "AwsMultiRegionAccessPointPolicy.DetailsPropertyList",
       },
       timeouts: {
-        value: tfMultiRegionAccessPointPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsMultiRegionAccessPointPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfMultiRegionAccessPointPolicy.TimeoutsProperty",
+        storageClassType: "AwsMultiRegionAccessPointPolicy.TimeoutsProperty",
       },
     };
 
@@ -239,7 +239,7 @@ export class TfMultiRegionAccessPointPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfMultiRegionAccessPointPolicyDetailsPropertyToTerraform(struct?: TfMultiRegionAccessPointPolicy.DetailsPropertyOutputReference | TfMultiRegionAccessPointPolicy.DetailsProperty): any {
+export function awsMultiRegionAccessPointPolicyDetailsPropertyToTerraform(struct?: AwsMultiRegionAccessPointPolicy.DetailsPropertyOutputReference | AwsMultiRegionAccessPointPolicy.DetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -251,7 +251,7 @@ export function tfMultiRegionAccessPointPolicyDetailsPropertyToTerraform(struct?
 }
 
 
-export function tfMultiRegionAccessPointPolicyDetailsPropertyToHclTerraform(struct?: TfMultiRegionAccessPointPolicy.DetailsPropertyOutputReference | TfMultiRegionAccessPointPolicy.DetailsProperty): any {
+export function awsMultiRegionAccessPointPolicyDetailsPropertyToHclTerraform(struct?: AwsMultiRegionAccessPointPolicy.DetailsPropertyOutputReference | AwsMultiRegionAccessPointPolicy.DetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,7 +276,7 @@ export function tfMultiRegionAccessPointPolicyDetailsPropertyToHclTerraform(stru
 }
 
 
-export function tfMultiRegionAccessPointPolicyTimeoutsPropertyToTerraform(struct?: TfMultiRegionAccessPointPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMultiRegionAccessPointPolicyTimeoutsPropertyToTerraform(struct?: AwsMultiRegionAccessPointPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,7 +288,7 @@ export function tfMultiRegionAccessPointPolicyTimeoutsPropertyToTerraform(struct
 }
 
 
-export function tfMultiRegionAccessPointPolicyTimeoutsPropertyToHclTerraform(struct?: TfMultiRegionAccessPointPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMultiRegionAccessPointPolicyTimeoutsPropertyToHclTerraform(struct?: AwsMultiRegionAccessPointPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,14 +313,14 @@ export function tfMultiRegionAccessPointPolicyTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace TfMultiRegionAccessPointPolicy {
+export namespace AwsMultiRegionAccessPointPolicy {
 export interface DetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#name TfMultiRegionAccessPointPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#name AwsMultiRegionAccessPointPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#policy TfMultiRegionAccessPointPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#policy AwsMultiRegionAccessPointPolicy#policy}
   */
   readonly policy: string;
 }
@@ -390,11 +390,11 @@ export class DetailsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#create TfMultiRegionAccessPointPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#create AwsMultiRegionAccessPointPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#update TfMultiRegionAccessPointPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_policy#update AwsMultiRegionAccessPointPolicy#update}
   */
   readonly update?: string;
 }

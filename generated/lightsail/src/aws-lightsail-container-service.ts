@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfContainerServiceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsContainerServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#id TfContainerService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#id AwsContainerService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#is_disabled TfContainerService#is_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#is_disabled AwsContainerService#is_disabled}
   */
   readonly isDisabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#name TfContainerService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#name AwsContainerService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#power TfContainerService#power}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#power AwsContainerService#power}
   */
   readonly power: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#region TfContainerService#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#region AwsContainerService#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#scale TfContainerService#scale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#scale AwsContainerService#scale}
   */
   readonly scale: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#tags TfContainerService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#tags AwsContainerService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#tags_all TfContainerService#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#tags_all AwsContainerService#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * private_registry_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#private_registry_access TfContainerService#private_registry_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#private_registry_access AwsContainerService#private_registry_access}
   */
-  readonly privateRegistryAccess?: TfContainerService.PrivateRegistryAccessProperty;
+  readonly privateRegistryAccess?: AwsContainerService.PrivateRegistryAccessProperty;
   /**
   * public_domain_names block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#public_domain_names TfContainerService#public_domain_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#public_domain_names AwsContainerService#public_domain_names}
   */
-  readonly publicDomainNames?: TfContainerService.PublicDomainNamesProperty;
+  readonly publicDomainNames?: AwsContainerService.PublicDomainNamesProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#timeouts TfContainerService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#timeouts AwsContainerService#timeouts}
   */
-  readonly timeouts?: TfContainerService.TimeoutsProperty;
+  readonly timeouts?: AwsContainerService.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service aws_lightsail_container_service}
 */
-export class TfContainerService extends cdktn.TerraformResource {
+export class AwsContainerService extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class TfContainerService extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfContainerService resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsContainerService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfContainerService to import
-  * @param importFromId The id of the existing TfContainerService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfContainerService to import is found
+  * @param importToId The construct id used in the generated config for the AwsContainerService to import
+  * @param importFromId The id of the existing AwsContainerService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsContainerService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_container_service", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class TfContainerService extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfContainerServiceConfig
+  * @param options AwsContainerServiceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfContainerServiceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsContainerServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lightsail_container_service',
       terraformGeneratorMetadata: {
@@ -296,11 +296,11 @@ export class TfContainerService extends cdktn.TerraformResource {
   }
 
   // private_registry_access - computed: false, optional: true, required: false
-  private _privateRegistryAccess = new TfContainerService.PrivateRegistryAccessPropertyOutputReference(this, "private_registry_access");
+  private _privateRegistryAccess = new AwsContainerService.PrivateRegistryAccessPropertyOutputReference(this, "private_registry_access");
   public get privateRegistryAccess() {
     return this._privateRegistryAccess;
   }
-  public putPrivateRegistryAccess(value: TfContainerService.PrivateRegistryAccessProperty) {
+  public putPrivateRegistryAccess(value: AwsContainerService.PrivateRegistryAccessProperty) {
     this._privateRegistryAccess.internalValue = value;
   }
   public resetPrivateRegistryAccess() {
@@ -312,11 +312,11 @@ export class TfContainerService extends cdktn.TerraformResource {
   }
 
   // public_domain_names - computed: false, optional: true, required: false
-  private _publicDomainNames = new TfContainerService.PublicDomainNamesPropertyOutputReference(this, "public_domain_names");
+  private _publicDomainNames = new AwsContainerService.PublicDomainNamesPropertyOutputReference(this, "public_domain_names");
   public get publicDomainNames() {
     return this._publicDomainNames;
   }
-  public putPublicDomainNames(value: TfContainerService.PublicDomainNamesProperty) {
+  public putPublicDomainNames(value: AwsContainerService.PublicDomainNamesProperty) {
     this._publicDomainNames.internalValue = value;
   }
   public resetPublicDomainNames() {
@@ -328,11 +328,11 @@ export class TfContainerService extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfContainerService.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsContainerService.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfContainerService.TimeoutsProperty) {
+  public putTimeouts(value: AwsContainerService.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -357,9 +357,9 @@ export class TfContainerService extends cdktn.TerraformResource {
       scale: cdktn.numberToTerraform(this._scale),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      private_registry_access: tfContainerServicePrivateRegistryAccessPropertyToTerraform(this._privateRegistryAccess.internalValue),
-      public_domain_names: tfContainerServicePublicDomainNamesPropertyToTerraform(this._publicDomainNames.internalValue),
-      timeouts: tfContainerServiceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      private_registry_access: awsContainerServicePrivateRegistryAccessPropertyToTerraform(this._privateRegistryAccess.internalValue),
+      public_domain_names: awsContainerServicePublicDomainNamesPropertyToTerraform(this._publicDomainNames.internalValue),
+      timeouts: awsContainerServiceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -414,22 +414,22 @@ export class TfContainerService extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       private_registry_access: {
-        value: tfContainerServicePrivateRegistryAccessPropertyToHclTerraform(this._privateRegistryAccess.internalValue),
+        value: awsContainerServicePrivateRegistryAccessPropertyToHclTerraform(this._privateRegistryAccess.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfContainerService.PrivateRegistryAccessPropertyList",
+        storageClassType: "AwsContainerService.PrivateRegistryAccessPropertyList",
       },
       public_domain_names: {
-        value: tfContainerServicePublicDomainNamesPropertyToHclTerraform(this._publicDomainNames.internalValue),
+        value: awsContainerServicePublicDomainNamesPropertyToHclTerraform(this._publicDomainNames.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfContainerService.PublicDomainNamesPropertyList",
+        storageClassType: "AwsContainerService.PublicDomainNamesPropertyList",
       },
       timeouts: {
-        value: tfContainerServiceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsContainerServiceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfContainerService.TimeoutsProperty",
+        storageClassType: "AwsContainerService.TimeoutsProperty",
       },
     };
 
@@ -438,7 +438,7 @@ export class TfContainerService extends cdktn.TerraformResource {
   }
 }
 
-export function tfContainerServiceEcrImagePullerRolePropertyToTerraform(struct?: TfContainerService.EcrImagePullerRolePropertyOutputReference | TfContainerService.EcrImagePullerRoleProperty): any {
+export function awsContainerServiceEcrImagePullerRolePropertyToTerraform(struct?: AwsContainerService.EcrImagePullerRolePropertyOutputReference | AwsContainerService.EcrImagePullerRoleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -449,7 +449,7 @@ export function tfContainerServiceEcrImagePullerRolePropertyToTerraform(struct?:
 }
 
 
-export function tfContainerServiceEcrImagePullerRolePropertyToHclTerraform(struct?: TfContainerService.EcrImagePullerRolePropertyOutputReference | TfContainerService.EcrImagePullerRoleProperty): any {
+export function awsContainerServiceEcrImagePullerRolePropertyToHclTerraform(struct?: AwsContainerService.EcrImagePullerRolePropertyOutputReference | AwsContainerService.EcrImagePullerRoleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -468,25 +468,25 @@ export function tfContainerServiceEcrImagePullerRolePropertyToHclTerraform(struc
 }
 
 
-export function tfContainerServicePrivateRegistryAccessPropertyToTerraform(struct?: TfContainerService.PrivateRegistryAccessPropertyOutputReference | TfContainerService.PrivateRegistryAccessProperty): any {
+export function awsContainerServicePrivateRegistryAccessPropertyToTerraform(struct?: AwsContainerService.PrivateRegistryAccessPropertyOutputReference | AwsContainerService.PrivateRegistryAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    ecr_image_puller_role: tfContainerServiceEcrImagePullerRolePropertyToTerraform(struct!.ecrImagePullerRole),
+    ecr_image_puller_role: awsContainerServiceEcrImagePullerRolePropertyToTerraform(struct!.ecrImagePullerRole),
   }
 }
 
 
-export function tfContainerServicePrivateRegistryAccessPropertyToHclTerraform(struct?: TfContainerService.PrivateRegistryAccessPropertyOutputReference | TfContainerService.PrivateRegistryAccessProperty): any {
+export function awsContainerServicePrivateRegistryAccessPropertyToHclTerraform(struct?: AwsContainerService.PrivateRegistryAccessPropertyOutputReference | AwsContainerService.PrivateRegistryAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     ecr_image_puller_role: {
-      value: tfContainerServiceEcrImagePullerRolePropertyToHclTerraform(struct!.ecrImagePullerRole),
+      value: awsContainerServiceEcrImagePullerRolePropertyToHclTerraform(struct!.ecrImagePullerRole),
       isBlock: true,
       type: "list",
       storageClassType: "EcrImagePullerRolePropertyList",
@@ -498,7 +498,7 @@ export function tfContainerServicePrivateRegistryAccessPropertyToHclTerraform(st
 }
 
 
-export function tfContainerServiceCertificatePropertyToTerraform(struct?: TfContainerService.CertificateProperty | cdktn.IResolvable): any {
+export function awsContainerServiceCertificatePropertyToTerraform(struct?: AwsContainerService.CertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -510,7 +510,7 @@ export function tfContainerServiceCertificatePropertyToTerraform(struct?: TfCont
 }
 
 
-export function tfContainerServiceCertificatePropertyToHclTerraform(struct?: TfContainerService.CertificateProperty | cdktn.IResolvable): any {
+export function awsContainerServiceCertificatePropertyToHclTerraform(struct?: AwsContainerService.CertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,25 +535,25 @@ export function tfContainerServiceCertificatePropertyToHclTerraform(struct?: TfC
 }
 
 
-export function tfContainerServicePublicDomainNamesPropertyToTerraform(struct?: TfContainerService.PublicDomainNamesPropertyOutputReference | TfContainerService.PublicDomainNamesProperty): any {
+export function awsContainerServicePublicDomainNamesPropertyToTerraform(struct?: AwsContainerService.PublicDomainNamesPropertyOutputReference | AwsContainerService.PublicDomainNamesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    certificate: cdktn.listMapper(tfContainerServiceCertificatePropertyToTerraform, true)(struct!.certificate),
+    certificate: cdktn.listMapper(awsContainerServiceCertificatePropertyToTerraform, true)(struct!.certificate),
   }
 }
 
 
-export function tfContainerServicePublicDomainNamesPropertyToHclTerraform(struct?: TfContainerService.PublicDomainNamesPropertyOutputReference | TfContainerService.PublicDomainNamesProperty): any {
+export function awsContainerServicePublicDomainNamesPropertyToHclTerraform(struct?: AwsContainerService.PublicDomainNamesPropertyOutputReference | AwsContainerService.PublicDomainNamesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     certificate: {
-      value: cdktn.listMapperHcl(tfContainerServiceCertificatePropertyToHclTerraform, true)(struct!.certificate),
+      value: cdktn.listMapperHcl(awsContainerServiceCertificatePropertyToHclTerraform, true)(struct!.certificate),
       isBlock: true,
       type: "set",
       storageClassType: "CertificatePropertyList",
@@ -565,7 +565,7 @@ export function tfContainerServicePublicDomainNamesPropertyToHclTerraform(struct
 }
 
 
-export function tfContainerServiceTimeoutsPropertyToTerraform(struct?: TfContainerService.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsContainerServiceTimeoutsPropertyToTerraform(struct?: AwsContainerService.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -578,7 +578,7 @@ export function tfContainerServiceTimeoutsPropertyToTerraform(struct?: TfContain
 }
 
 
-export function tfContainerServiceTimeoutsPropertyToHclTerraform(struct?: TfContainerService.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsContainerServiceTimeoutsPropertyToHclTerraform(struct?: AwsContainerService.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -609,10 +609,10 @@ export function tfContainerServiceTimeoutsPropertyToHclTerraform(struct?: TfCont
 }
 
 
-export namespace TfContainerService {
+export namespace AwsContainerService {
 export interface EcrImagePullerRoleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#is_active TfContainerService#is_active}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#is_active AwsContainerService#is_active}
   */
   readonly isActive?: boolean | cdktn.IResolvable;
 }
@@ -673,7 +673,7 @@ export interface PrivateRegistryAccessProperty {
   /**
   * ecr_image_puller_role block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#ecr_image_puller_role TfContainerService#ecr_image_puller_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#ecr_image_puller_role AwsContainerService#ecr_image_puller_role}
   */
   readonly ecrImagePullerRole?: EcrImagePullerRoleProperty;
 }
@@ -727,11 +727,11 @@ export class PrivateRegistryAccessPropertyOutputReference extends cdktn.ComplexO
 }
 export interface CertificateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#certificate_name TfContainerService#certificate_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#certificate_name AwsContainerService#certificate_name}
   */
   readonly certificateName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#domain_names TfContainerService#domain_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#domain_names AwsContainerService#domain_names}
   */
   readonly domainNames: string[];
 }
@@ -835,7 +835,7 @@ export interface PublicDomainNamesProperty {
   /**
   * certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#certificate TfContainerService#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#certificate AwsContainerService#certificate}
   */
   readonly certificate: CertificateProperty[] | cdktn.IResolvable;
 }
@@ -886,15 +886,15 @@ export class PublicDomainNamesPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#create TfContainerService#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#create AwsContainerService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#delete TfContainerService#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#delete AwsContainerService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#update TfContainerService#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_container_service#update AwsContainerService#update}
   */
   readonly update?: string;
 }

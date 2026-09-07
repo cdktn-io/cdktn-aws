@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCustomRoutingListenerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCustomRoutingListenerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#accelerator_arn TfCustomRoutingListener#accelerator_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#accelerator_arn AwsCustomRoutingListener#accelerator_arn}
   */
   readonly acceleratorArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#id TfCustomRoutingListener#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#id AwsCustomRoutingListener#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,21 +20,21 @@ export interface TfCustomRoutingListenerConfig extends cdktn.TerraformMetaArgume
   /**
   * port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#port_range TfCustomRoutingListener#port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#port_range AwsCustomRoutingListener#port_range}
   */
-  readonly portRange: TfCustomRoutingListener.PortRangeProperty[] | cdktn.IResolvable;
+  readonly portRange: AwsCustomRoutingListener.PortRangeProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#timeouts TfCustomRoutingListener#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#timeouts AwsCustomRoutingListener#timeouts}
   */
-  readonly timeouts?: TfCustomRoutingListener.TimeoutsProperty;
+  readonly timeouts?: AwsCustomRoutingListener.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener aws_globalaccelerator_custom_routing_listener}
 */
-export class TfCustomRoutingListener extends cdktn.TerraformResource {
+export class AwsCustomRoutingListener extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfCustomRoutingListener extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCustomRoutingListener resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCustomRoutingListener resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCustomRoutingListener to import
-  * @param importFromId The id of the existing TfCustomRoutingListener that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCustomRoutingListener to import is found
+  * @param importToId The construct id used in the generated config for the AwsCustomRoutingListener to import
+  * @param importFromId The id of the existing AwsCustomRoutingListener that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCustomRoutingListener to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_globalaccelerator_custom_routing_listener", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfCustomRoutingListener extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCustomRoutingListenerConfig
+  * @param options AwsCustomRoutingListenerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCustomRoutingListenerConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCustomRoutingListenerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_globalaccelerator_custom_routing_listener',
       terraformGeneratorMetadata: {
@@ -127,11 +127,11 @@ export class TfCustomRoutingListener extends cdktn.TerraformResource {
   }
 
   // port_range - computed: false, optional: false, required: true
-  private _portRange = new TfCustomRoutingListener.PortRangePropertyList(this, "port_range", true);
+  private _portRange = new AwsCustomRoutingListener.PortRangePropertyList(this, "port_range", true);
   public get portRange() {
     return this._portRange;
   }
-  public putPortRange(value: TfCustomRoutingListener.PortRangeProperty[] | cdktn.IResolvable) {
+  public putPortRange(value: AwsCustomRoutingListener.PortRangeProperty[] | cdktn.IResolvable) {
     this._portRange.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -140,11 +140,11 @@ export class TfCustomRoutingListener extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCustomRoutingListener.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCustomRoutingListener.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCustomRoutingListener.TimeoutsProperty) {
+  public putTimeouts(value: AwsCustomRoutingListener.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -163,8 +163,8 @@ export class TfCustomRoutingListener extends cdktn.TerraformResource {
     return {
       accelerator_arn: cdktn.stringToTerraform(this._acceleratorArn),
       id: cdktn.stringToTerraform(this._id),
-      port_range: cdktn.listMapper(tfCustomRoutingListenerPortRangePropertyToTerraform, true)(this._portRange.internalValue),
-      timeouts: tfCustomRoutingListenerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      port_range: cdktn.listMapper(awsCustomRoutingListenerPortRangePropertyToTerraform, true)(this._portRange.internalValue),
+      timeouts: awsCustomRoutingListenerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -183,16 +183,16 @@ export class TfCustomRoutingListener extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       port_range: {
-        value: cdktn.listMapperHcl(tfCustomRoutingListenerPortRangePropertyToHclTerraform, true)(this._portRange.internalValue),
+        value: cdktn.listMapperHcl(awsCustomRoutingListenerPortRangePropertyToHclTerraform, true)(this._portRange.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfCustomRoutingListener.PortRangePropertyList",
+        storageClassType: "AwsCustomRoutingListener.PortRangePropertyList",
       },
       timeouts: {
-        value: tfCustomRoutingListenerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCustomRoutingListenerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCustomRoutingListener.TimeoutsProperty",
+        storageClassType: "AwsCustomRoutingListener.TimeoutsProperty",
       },
     };
 
@@ -201,7 +201,7 @@ export class TfCustomRoutingListener extends cdktn.TerraformResource {
   }
 }
 
-export function tfCustomRoutingListenerPortRangePropertyToTerraform(struct?: TfCustomRoutingListener.PortRangeProperty | cdktn.IResolvable): any {
+export function awsCustomRoutingListenerPortRangePropertyToTerraform(struct?: AwsCustomRoutingListener.PortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -213,7 +213,7 @@ export function tfCustomRoutingListenerPortRangePropertyToTerraform(struct?: TfC
 }
 
 
-export function tfCustomRoutingListenerPortRangePropertyToHclTerraform(struct?: TfCustomRoutingListener.PortRangeProperty | cdktn.IResolvable): any {
+export function awsCustomRoutingListenerPortRangePropertyToHclTerraform(struct?: AwsCustomRoutingListener.PortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function tfCustomRoutingListenerPortRangePropertyToHclTerraform(struct?: 
 }
 
 
-export function tfCustomRoutingListenerTimeoutsPropertyToTerraform(struct?: TfCustomRoutingListener.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomRoutingListenerTimeoutsPropertyToTerraform(struct?: AwsCustomRoutingListener.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -251,7 +251,7 @@ export function tfCustomRoutingListenerTimeoutsPropertyToTerraform(struct?: TfCu
 }
 
 
-export function tfCustomRoutingListenerTimeoutsPropertyToHclTerraform(struct?: TfCustomRoutingListener.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomRoutingListenerTimeoutsPropertyToHclTerraform(struct?: AwsCustomRoutingListener.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,14 +282,14 @@ export function tfCustomRoutingListenerTimeoutsPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfCustomRoutingListener {
+export namespace AwsCustomRoutingListener {
 export interface PortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#from_port TfCustomRoutingListener#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#from_port AwsCustomRoutingListener#from_port}
   */
   readonly fromPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#to_port TfCustomRoutingListener#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#to_port AwsCustomRoutingListener#to_port}
   */
   readonly toPort?: number;
 }
@@ -397,15 +397,15 @@ export class PortRangePropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#create TfCustomRoutingListener#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#create AwsCustomRoutingListener#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#delete TfCustomRoutingListener#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#delete AwsCustomRoutingListener#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#update TfCustomRoutingListener#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_listener#update AwsCustomRoutingListener#update}
   */
   readonly update?: string;
 }

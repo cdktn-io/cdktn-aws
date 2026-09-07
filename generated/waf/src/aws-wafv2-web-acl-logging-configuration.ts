@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfWebAclLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsWebAclLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#id TfWebAclLoggingConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#id AwsWebAclLoggingConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,39 +16,39 @@ export interface TfWebAclLoggingConfigurationConfig extends cdktn.TerraformMetaA
   /**
   * AWS Kinesis Firehose Delivery Stream ARNs
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#log_destination_configs TfWebAclLoggingConfiguration#log_destination_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#log_destination_configs AwsWebAclLoggingConfiguration#log_destination_configs}
   */
   readonly logDestinationConfigs: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#region TfWebAclLoggingConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#region AwsWebAclLoggingConfiguration#region}
   */
   readonly region?: string;
   /**
   * AWS WebACL ARN
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#resource_arn TfWebAclLoggingConfiguration#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#resource_arn AwsWebAclLoggingConfiguration#resource_arn}
   */
   readonly resourceArn: string;
   /**
   * logging_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#logging_filter TfWebAclLoggingConfiguration#logging_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#logging_filter AwsWebAclLoggingConfiguration#logging_filter}
   */
-  readonly loggingFilter?: TfWebAclLoggingConfiguration.LoggingFilterProperty;
+  readonly loggingFilter?: AwsWebAclLoggingConfiguration.LoggingFilterProperty;
   /**
   * redacted_fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#redacted_fields TfWebAclLoggingConfiguration#redacted_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#redacted_fields AwsWebAclLoggingConfiguration#redacted_fields}
   */
-  readonly redactedFields?: TfWebAclLoggingConfiguration.RedactedFieldsProperty[] | cdktn.IResolvable;
+  readonly redactedFields?: AwsWebAclLoggingConfiguration.RedactedFieldsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration aws_wafv2_web_acl_logging_configuration}
 */
-export class TfWebAclLoggingConfiguration extends cdktn.TerraformResource {
+export class AwsWebAclLoggingConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfWebAclLoggingConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfWebAclLoggingConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsWebAclLoggingConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfWebAclLoggingConfiguration to import
-  * @param importFromId The id of the existing TfWebAclLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfWebAclLoggingConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsWebAclLoggingConfiguration to import
+  * @param importFromId The id of the existing AwsWebAclLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsWebAclLoggingConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafv2_web_acl_logging_configuration", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfWebAclLoggingConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfWebAclLoggingConfigurationConfig
+  * @param options AwsWebAclLoggingConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfWebAclLoggingConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsWebAclLoggingConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafv2_web_acl_logging_configuration',
       terraformGeneratorMetadata: {
@@ -167,11 +167,11 @@ export class TfWebAclLoggingConfiguration extends cdktn.TerraformResource {
   }
 
   // logging_filter - computed: false, optional: true, required: false
-  private _loggingFilter = new TfWebAclLoggingConfiguration.LoggingFilterPropertyOutputReference(this, "logging_filter");
+  private _loggingFilter = new AwsWebAclLoggingConfiguration.LoggingFilterPropertyOutputReference(this, "logging_filter");
   public get loggingFilter() {
     return this._loggingFilter;
   }
-  public putLoggingFilter(value: TfWebAclLoggingConfiguration.LoggingFilterProperty) {
+  public putLoggingFilter(value: AwsWebAclLoggingConfiguration.LoggingFilterProperty) {
     this._loggingFilter.internalValue = value;
   }
   public resetLoggingFilter() {
@@ -183,11 +183,11 @@ export class TfWebAclLoggingConfiguration extends cdktn.TerraformResource {
   }
 
   // redacted_fields - computed: false, optional: true, required: false
-  private _redactedFields = new TfWebAclLoggingConfiguration.RedactedFieldsPropertyList(this, "redacted_fields", false);
+  private _redactedFields = new AwsWebAclLoggingConfiguration.RedactedFieldsPropertyList(this, "redacted_fields", false);
   public get redactedFields() {
     return this._redactedFields;
   }
-  public putRedactedFields(value: TfWebAclLoggingConfiguration.RedactedFieldsProperty[] | cdktn.IResolvable) {
+  public putRedactedFields(value: AwsWebAclLoggingConfiguration.RedactedFieldsProperty[] | cdktn.IResolvable) {
     this._redactedFields.internalValue = value;
   }
   public resetRedactedFields() {
@@ -208,8 +208,8 @@ export class TfWebAclLoggingConfiguration extends cdktn.TerraformResource {
       log_destination_configs: cdktn.listMapper(cdktn.stringToTerraform, false)(this._logDestinationConfigs),
       region: cdktn.stringToTerraform(this._region),
       resource_arn: cdktn.stringToTerraform(this._resourceArn),
-      logging_filter: tfWebAclLoggingConfigurationLoggingFilterPropertyToTerraform(this._loggingFilter.internalValue),
-      redacted_fields: cdktn.listMapper(tfWebAclLoggingConfigurationRedactedFieldsPropertyToTerraform, true)(this._redactedFields.internalValue),
+      logging_filter: awsWebAclLoggingConfigurationLoggingFilterPropertyToTerraform(this._loggingFilter.internalValue),
+      redacted_fields: cdktn.listMapper(awsWebAclLoggingConfigurationRedactedFieldsPropertyToTerraform, true)(this._redactedFields.internalValue),
     };
   }
 
@@ -240,16 +240,16 @@ export class TfWebAclLoggingConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       logging_filter: {
-        value: tfWebAclLoggingConfigurationLoggingFilterPropertyToHclTerraform(this._loggingFilter.internalValue),
+        value: awsWebAclLoggingConfigurationLoggingFilterPropertyToHclTerraform(this._loggingFilter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfWebAclLoggingConfiguration.LoggingFilterPropertyList",
+        storageClassType: "AwsWebAclLoggingConfiguration.LoggingFilterPropertyList",
       },
       redacted_fields: {
-        value: cdktn.listMapperHcl(tfWebAclLoggingConfigurationRedactedFieldsPropertyToHclTerraform, true)(this._redactedFields.internalValue),
+        value: cdktn.listMapperHcl(awsWebAclLoggingConfigurationRedactedFieldsPropertyToHclTerraform, true)(this._redactedFields.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfWebAclLoggingConfiguration.RedactedFieldsPropertyList",
+        storageClassType: "AwsWebAclLoggingConfiguration.RedactedFieldsPropertyList",
       },
     };
 
@@ -258,7 +258,7 @@ export class TfWebAclLoggingConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfWebAclLoggingConfigurationActionConditionPropertyToTerraform(struct?: TfWebAclLoggingConfiguration.ActionConditionPropertyOutputReference | TfWebAclLoggingConfiguration.ActionConditionProperty): any {
+export function awsWebAclLoggingConfigurationActionConditionPropertyToTerraform(struct?: AwsWebAclLoggingConfiguration.ActionConditionPropertyOutputReference | AwsWebAclLoggingConfiguration.ActionConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,7 +269,7 @@ export function tfWebAclLoggingConfigurationActionConditionPropertyToTerraform(s
 }
 
 
-export function tfWebAclLoggingConfigurationActionConditionPropertyToHclTerraform(struct?: TfWebAclLoggingConfiguration.ActionConditionPropertyOutputReference | TfWebAclLoggingConfiguration.ActionConditionProperty): any {
+export function awsWebAclLoggingConfigurationActionConditionPropertyToHclTerraform(struct?: AwsWebAclLoggingConfiguration.ActionConditionPropertyOutputReference | AwsWebAclLoggingConfiguration.ActionConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,7 +288,7 @@ export function tfWebAclLoggingConfigurationActionConditionPropertyToHclTerrafor
 }
 
 
-export function tfWebAclLoggingConfigurationLabelNameConditionPropertyToTerraform(struct?: TfWebAclLoggingConfiguration.LabelNameConditionPropertyOutputReference | TfWebAclLoggingConfiguration.LabelNameConditionProperty): any {
+export function awsWebAclLoggingConfigurationLabelNameConditionPropertyToTerraform(struct?: AwsWebAclLoggingConfiguration.LabelNameConditionPropertyOutputReference | AwsWebAclLoggingConfiguration.LabelNameConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function tfWebAclLoggingConfigurationLabelNameConditionPropertyToTerrafor
 }
 
 
-export function tfWebAclLoggingConfigurationLabelNameConditionPropertyToHclTerraform(struct?: TfWebAclLoggingConfiguration.LabelNameConditionPropertyOutputReference | TfWebAclLoggingConfiguration.LabelNameConditionProperty): any {
+export function awsWebAclLoggingConfigurationLabelNameConditionPropertyToHclTerraform(struct?: AwsWebAclLoggingConfiguration.LabelNameConditionPropertyOutputReference | AwsWebAclLoggingConfiguration.LabelNameConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,32 +318,32 @@ export function tfWebAclLoggingConfigurationLabelNameConditionPropertyToHclTerra
 }
 
 
-export function tfWebAclLoggingConfigurationConditionPropertyToTerraform(struct?: TfWebAclLoggingConfiguration.ConditionProperty | cdktn.IResolvable): any {
+export function awsWebAclLoggingConfigurationConditionPropertyToTerraform(struct?: AwsWebAclLoggingConfiguration.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    action_condition: tfWebAclLoggingConfigurationActionConditionPropertyToTerraform(struct!.actionCondition),
-    label_name_condition: tfWebAclLoggingConfigurationLabelNameConditionPropertyToTerraform(struct!.labelNameCondition),
+    action_condition: awsWebAclLoggingConfigurationActionConditionPropertyToTerraform(struct!.actionCondition),
+    label_name_condition: awsWebAclLoggingConfigurationLabelNameConditionPropertyToTerraform(struct!.labelNameCondition),
   }
 }
 
 
-export function tfWebAclLoggingConfigurationConditionPropertyToHclTerraform(struct?: TfWebAclLoggingConfiguration.ConditionProperty | cdktn.IResolvable): any {
+export function awsWebAclLoggingConfigurationConditionPropertyToHclTerraform(struct?: AwsWebAclLoggingConfiguration.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     action_condition: {
-      value: tfWebAclLoggingConfigurationActionConditionPropertyToHclTerraform(struct!.actionCondition),
+      value: awsWebAclLoggingConfigurationActionConditionPropertyToHclTerraform(struct!.actionCondition),
       isBlock: true,
       type: "list",
       storageClassType: "ActionConditionPropertyList",
     },
     label_name_condition: {
-      value: tfWebAclLoggingConfigurationLabelNameConditionPropertyToHclTerraform(struct!.labelNameCondition),
+      value: awsWebAclLoggingConfigurationLabelNameConditionPropertyToHclTerraform(struct!.labelNameCondition),
       isBlock: true,
       type: "list",
       storageClassType: "LabelNameConditionPropertyList",
@@ -355,7 +355,7 @@ export function tfWebAclLoggingConfigurationConditionPropertyToHclTerraform(stru
 }
 
 
-export function tfWebAclLoggingConfigurationFilterPropertyToTerraform(struct?: TfWebAclLoggingConfiguration.FilterProperty | cdktn.IResolvable): any {
+export function awsWebAclLoggingConfigurationFilterPropertyToTerraform(struct?: AwsWebAclLoggingConfiguration.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -363,12 +363,12 @@ export function tfWebAclLoggingConfigurationFilterPropertyToTerraform(struct?: T
   return {
     behavior: cdktn.stringToTerraform(struct!.behavior),
     requirement: cdktn.stringToTerraform(struct!.requirement),
-    condition: cdktn.listMapper(tfWebAclLoggingConfigurationConditionPropertyToTerraform, true)(struct!.condition),
+    condition: cdktn.listMapper(awsWebAclLoggingConfigurationConditionPropertyToTerraform, true)(struct!.condition),
   }
 }
 
 
-export function tfWebAclLoggingConfigurationFilterPropertyToHclTerraform(struct?: TfWebAclLoggingConfiguration.FilterProperty | cdktn.IResolvable): any {
+export function awsWebAclLoggingConfigurationFilterPropertyToHclTerraform(struct?: AwsWebAclLoggingConfiguration.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function tfWebAclLoggingConfigurationFilterPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     condition: {
-      value: cdktn.listMapperHcl(tfWebAclLoggingConfigurationConditionPropertyToHclTerraform, true)(struct!.condition),
+      value: cdktn.listMapperHcl(awsWebAclLoggingConfigurationConditionPropertyToHclTerraform, true)(struct!.condition),
       isBlock: true,
       type: "set",
       storageClassType: "ConditionPropertyList",
@@ -399,19 +399,19 @@ export function tfWebAclLoggingConfigurationFilterPropertyToHclTerraform(struct?
 }
 
 
-export function tfWebAclLoggingConfigurationLoggingFilterPropertyToTerraform(struct?: TfWebAclLoggingConfiguration.LoggingFilterPropertyOutputReference | TfWebAclLoggingConfiguration.LoggingFilterProperty): any {
+export function awsWebAclLoggingConfigurationLoggingFilterPropertyToTerraform(struct?: AwsWebAclLoggingConfiguration.LoggingFilterPropertyOutputReference | AwsWebAclLoggingConfiguration.LoggingFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     default_behavior: cdktn.stringToTerraform(struct!.defaultBehavior),
-    filter: cdktn.listMapper(tfWebAclLoggingConfigurationFilterPropertyToTerraform, true)(struct!.filter),
+    filter: cdktn.listMapper(awsWebAclLoggingConfigurationFilterPropertyToTerraform, true)(struct!.filter),
   }
 }
 
 
-export function tfWebAclLoggingConfigurationLoggingFilterPropertyToHclTerraform(struct?: TfWebAclLoggingConfiguration.LoggingFilterPropertyOutputReference | TfWebAclLoggingConfiguration.LoggingFilterProperty): any {
+export function awsWebAclLoggingConfigurationLoggingFilterPropertyToHclTerraform(struct?: AwsWebAclLoggingConfiguration.LoggingFilterPropertyOutputReference | AwsWebAclLoggingConfiguration.LoggingFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,7 +424,7 @@ export function tfWebAclLoggingConfigurationLoggingFilterPropertyToHclTerraform(
       storageClassType: "string",
     },
     filter: {
-      value: cdktn.listMapperHcl(tfWebAclLoggingConfigurationFilterPropertyToHclTerraform, true)(struct!.filter),
+      value: cdktn.listMapperHcl(awsWebAclLoggingConfigurationFilterPropertyToHclTerraform, true)(struct!.filter),
       isBlock: true,
       type: "set",
       storageClassType: "FilterPropertyList",
@@ -436,7 +436,7 @@ export function tfWebAclLoggingConfigurationLoggingFilterPropertyToHclTerraform(
 }
 
 
-export function tfWebAclLoggingConfigurationMethodPropertyToTerraform(struct?: TfWebAclLoggingConfiguration.MethodPropertyOutputReference | TfWebAclLoggingConfiguration.MethodProperty): any {
+export function awsWebAclLoggingConfigurationMethodPropertyToTerraform(struct?: AwsWebAclLoggingConfiguration.MethodPropertyOutputReference | AwsWebAclLoggingConfiguration.MethodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,7 +446,7 @@ export function tfWebAclLoggingConfigurationMethodPropertyToTerraform(struct?: T
 }
 
 
-export function tfWebAclLoggingConfigurationMethodPropertyToHclTerraform(struct?: TfWebAclLoggingConfiguration.MethodPropertyOutputReference | TfWebAclLoggingConfiguration.MethodProperty): any {
+export function awsWebAclLoggingConfigurationMethodPropertyToHclTerraform(struct?: AwsWebAclLoggingConfiguration.MethodPropertyOutputReference | AwsWebAclLoggingConfiguration.MethodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -457,7 +457,7 @@ export function tfWebAclLoggingConfigurationMethodPropertyToHclTerraform(struct?
 }
 
 
-export function tfWebAclLoggingConfigurationQueryStringPropertyToTerraform(struct?: TfWebAclLoggingConfiguration.QueryStringPropertyOutputReference | TfWebAclLoggingConfiguration.QueryStringProperty): any {
+export function awsWebAclLoggingConfigurationQueryStringPropertyToTerraform(struct?: AwsWebAclLoggingConfiguration.QueryStringPropertyOutputReference | AwsWebAclLoggingConfiguration.QueryStringProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -467,7 +467,7 @@ export function tfWebAclLoggingConfigurationQueryStringPropertyToTerraform(struc
 }
 
 
-export function tfWebAclLoggingConfigurationQueryStringPropertyToHclTerraform(struct?: TfWebAclLoggingConfiguration.QueryStringPropertyOutputReference | TfWebAclLoggingConfiguration.QueryStringProperty): any {
+export function awsWebAclLoggingConfigurationQueryStringPropertyToHclTerraform(struct?: AwsWebAclLoggingConfiguration.QueryStringPropertyOutputReference | AwsWebAclLoggingConfiguration.QueryStringProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -478,7 +478,7 @@ export function tfWebAclLoggingConfigurationQueryStringPropertyToHclTerraform(st
 }
 
 
-export function tfWebAclLoggingConfigurationSingleHeaderPropertyToTerraform(struct?: TfWebAclLoggingConfiguration.SingleHeaderPropertyOutputReference | TfWebAclLoggingConfiguration.SingleHeaderProperty): any {
+export function awsWebAclLoggingConfigurationSingleHeaderPropertyToTerraform(struct?: AwsWebAclLoggingConfiguration.SingleHeaderPropertyOutputReference | AwsWebAclLoggingConfiguration.SingleHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -489,7 +489,7 @@ export function tfWebAclLoggingConfigurationSingleHeaderPropertyToTerraform(stru
 }
 
 
-export function tfWebAclLoggingConfigurationSingleHeaderPropertyToHclTerraform(struct?: TfWebAclLoggingConfiguration.SingleHeaderPropertyOutputReference | TfWebAclLoggingConfiguration.SingleHeaderProperty): any {
+export function awsWebAclLoggingConfigurationSingleHeaderPropertyToHclTerraform(struct?: AwsWebAclLoggingConfiguration.SingleHeaderPropertyOutputReference | AwsWebAclLoggingConfiguration.SingleHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function tfWebAclLoggingConfigurationSingleHeaderPropertyToHclTerraform(s
 }
 
 
-export function tfWebAclLoggingConfigurationUriPathPropertyToTerraform(struct?: TfWebAclLoggingConfiguration.UriPathPropertyOutputReference | TfWebAclLoggingConfiguration.UriPathProperty): any {
+export function awsWebAclLoggingConfigurationUriPathPropertyToTerraform(struct?: AwsWebAclLoggingConfiguration.UriPathPropertyOutputReference | AwsWebAclLoggingConfiguration.UriPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -518,7 +518,7 @@ export function tfWebAclLoggingConfigurationUriPathPropertyToTerraform(struct?: 
 }
 
 
-export function tfWebAclLoggingConfigurationUriPathPropertyToHclTerraform(struct?: TfWebAclLoggingConfiguration.UriPathPropertyOutputReference | TfWebAclLoggingConfiguration.UriPathProperty): any {
+export function awsWebAclLoggingConfigurationUriPathPropertyToHclTerraform(struct?: AwsWebAclLoggingConfiguration.UriPathPropertyOutputReference | AwsWebAclLoggingConfiguration.UriPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,46 +529,46 @@ export function tfWebAclLoggingConfigurationUriPathPropertyToHclTerraform(struct
 }
 
 
-export function tfWebAclLoggingConfigurationRedactedFieldsPropertyToTerraform(struct?: TfWebAclLoggingConfiguration.RedactedFieldsProperty | cdktn.IResolvable): any {
+export function awsWebAclLoggingConfigurationRedactedFieldsPropertyToTerraform(struct?: AwsWebAclLoggingConfiguration.RedactedFieldsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    method: tfWebAclLoggingConfigurationMethodPropertyToTerraform(struct!.method),
-    query_string: tfWebAclLoggingConfigurationQueryStringPropertyToTerraform(struct!.queryString),
-    single_header: tfWebAclLoggingConfigurationSingleHeaderPropertyToTerraform(struct!.singleHeader),
-    uri_path: tfWebAclLoggingConfigurationUriPathPropertyToTerraform(struct!.uriPath),
+    method: awsWebAclLoggingConfigurationMethodPropertyToTerraform(struct!.method),
+    query_string: awsWebAclLoggingConfigurationQueryStringPropertyToTerraform(struct!.queryString),
+    single_header: awsWebAclLoggingConfigurationSingleHeaderPropertyToTerraform(struct!.singleHeader),
+    uri_path: awsWebAclLoggingConfigurationUriPathPropertyToTerraform(struct!.uriPath),
   }
 }
 
 
-export function tfWebAclLoggingConfigurationRedactedFieldsPropertyToHclTerraform(struct?: TfWebAclLoggingConfiguration.RedactedFieldsProperty | cdktn.IResolvable): any {
+export function awsWebAclLoggingConfigurationRedactedFieldsPropertyToHclTerraform(struct?: AwsWebAclLoggingConfiguration.RedactedFieldsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     method: {
-      value: tfWebAclLoggingConfigurationMethodPropertyToHclTerraform(struct!.method),
+      value: awsWebAclLoggingConfigurationMethodPropertyToHclTerraform(struct!.method),
       isBlock: true,
       type: "list",
       storageClassType: "MethodPropertyList",
     },
     query_string: {
-      value: tfWebAclLoggingConfigurationQueryStringPropertyToHclTerraform(struct!.queryString),
+      value: awsWebAclLoggingConfigurationQueryStringPropertyToHclTerraform(struct!.queryString),
       isBlock: true,
       type: "list",
       storageClassType: "QueryStringPropertyList",
     },
     single_header: {
-      value: tfWebAclLoggingConfigurationSingleHeaderPropertyToHclTerraform(struct!.singleHeader),
+      value: awsWebAclLoggingConfigurationSingleHeaderPropertyToHclTerraform(struct!.singleHeader),
       isBlock: true,
       type: "list",
       storageClassType: "SingleHeaderPropertyList",
     },
     uri_path: {
-      value: tfWebAclLoggingConfigurationUriPathPropertyToHclTerraform(struct!.uriPath),
+      value: awsWebAclLoggingConfigurationUriPathPropertyToHclTerraform(struct!.uriPath),
       isBlock: true,
       type: "list",
       storageClassType: "UriPathPropertyList",
@@ -580,10 +580,10 @@ export function tfWebAclLoggingConfigurationRedactedFieldsPropertyToHclTerraform
 }
 
 
-export namespace TfWebAclLoggingConfiguration {
+export namespace AwsWebAclLoggingConfiguration {
 export interface ActionConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#action TfWebAclLoggingConfiguration#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#action AwsWebAclLoggingConfiguration#action}
   */
   readonly action: string;
 }
@@ -634,7 +634,7 @@ export class ActionConditionPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface LabelNameConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#label_name TfWebAclLoggingConfiguration#label_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#label_name AwsWebAclLoggingConfiguration#label_name}
   */
   readonly labelName: string;
 }
@@ -687,13 +687,13 @@ export interface ConditionProperty {
   /**
   * action_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#action_condition TfWebAclLoggingConfiguration#action_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#action_condition AwsWebAclLoggingConfiguration#action_condition}
   */
   readonly actionCondition?: ActionConditionProperty;
   /**
   * label_name_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#label_name_condition TfWebAclLoggingConfiguration#label_name_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#label_name_condition AwsWebAclLoggingConfiguration#label_name_condition}
   */
   readonly labelNameCondition?: LabelNameConditionProperty;
 }
@@ -801,17 +801,17 @@ export class ConditionPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#behavior TfWebAclLoggingConfiguration#behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#behavior AwsWebAclLoggingConfiguration#behavior}
   */
   readonly behavior: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#requirement TfWebAclLoggingConfiguration#requirement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#requirement AwsWebAclLoggingConfiguration#requirement}
   */
   readonly requirement: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#condition TfWebAclLoggingConfiguration#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#condition AwsWebAclLoggingConfiguration#condition}
   */
   readonly condition: ConditionProperty[] | cdktn.IResolvable;
 }
@@ -932,13 +932,13 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface LoggingFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#default_behavior TfWebAclLoggingConfiguration#default_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#default_behavior AwsWebAclLoggingConfiguration#default_behavior}
   */
   readonly defaultBehavior: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#filter TfWebAclLoggingConfiguration#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#filter AwsWebAclLoggingConfiguration#filter}
   */
   readonly filter: FilterProperty[] | cdktn.IResolvable;
 }
@@ -1064,7 +1064,7 @@ export class QueryStringPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SingleHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#name TfWebAclLoggingConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#name AwsWebAclLoggingConfiguration#name}
   */
   readonly name: string;
 }
@@ -1145,25 +1145,25 @@ export interface RedactedFieldsProperty {
   /**
   * method block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#method TfWebAclLoggingConfiguration#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#method AwsWebAclLoggingConfiguration#method}
   */
   readonly method?: MethodProperty;
   /**
   * query_string block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#query_string TfWebAclLoggingConfiguration#query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#query_string AwsWebAclLoggingConfiguration#query_string}
   */
   readonly queryString?: QueryStringProperty;
   /**
   * single_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#single_header TfWebAclLoggingConfiguration#single_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#single_header AwsWebAclLoggingConfiguration#single_header}
   */
   readonly singleHeader?: SingleHeaderProperty;
   /**
   * uri_path block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#uri_path TfWebAclLoggingConfiguration#uri_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_web_acl_logging_configuration#uri_path AwsWebAclLoggingConfiguration#uri_path}
   */
   readonly uriPath?: UriPathProperty;
 }

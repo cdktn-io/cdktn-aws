@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSelectionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSelectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#iam_role_arn TfSelection#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#iam_role_arn AwsSelection#iam_role_arn}
   */
   readonly iamRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#id TfSelection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#id AwsSelection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#name TfSelection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#name AwsSelection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#not_resources TfSelection#not_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#not_resources AwsSelection#not_resources}
   */
   readonly notResources?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#plan_id TfSelection#plan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#plan_id AwsSelection#plan_id}
   */
   readonly planId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#region TfSelection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#region AwsSelection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#resources TfSelection#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#resources AwsSelection#resources}
   */
   readonly resources?: string[];
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#condition TfSelection#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#condition AwsSelection#condition}
   */
-  readonly condition?: TfSelection.ConditionProperty[] | cdktn.IResolvable;
+  readonly condition?: AwsSelection.ConditionProperty[] | cdktn.IResolvable;
   /**
   * selection_tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#selection_tag TfSelection#selection_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#selection_tag AwsSelection#selection_tag}
   */
-  readonly selectionTag?: TfSelection.SelectionTagProperty[] | cdktn.IResolvable;
+  readonly selectionTag?: AwsSelection.SelectionTagProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection aws_backup_selection}
 */
-export class TfSelection extends cdktn.TerraformResource {
+export class AwsSelection extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class TfSelection extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSelection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSelection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSelection to import
-  * @param importFromId The id of the existing TfSelection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSelection to import is found
+  * @param importToId The construct id used in the generated config for the AwsSelection to import
+  * @param importFromId The id of the existing AwsSelection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSelection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_selection", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class TfSelection extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSelectionConfig
+  * @param options AwsSelectionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSelectionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSelectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_selection',
       terraformGeneratorMetadata: {
@@ -223,11 +223,11 @@ export class TfSelection extends cdktn.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new TfSelection.ConditionPropertyList(this, "condition", true);
+  private _condition = new AwsSelection.ConditionPropertyList(this, "condition", true);
   public get condition() {
     return this._condition;
   }
-  public putCondition(value: TfSelection.ConditionProperty[] | cdktn.IResolvable) {
+  public putCondition(value: AwsSelection.ConditionProperty[] | cdktn.IResolvable) {
     this._condition.internalValue = value;
   }
   public resetCondition() {
@@ -239,11 +239,11 @@ export class TfSelection extends cdktn.TerraformResource {
   }
 
   // selection_tag - computed: false, optional: true, required: false
-  private _selectionTag = new TfSelection.SelectionTagPropertyList(this, "selection_tag", true);
+  private _selectionTag = new AwsSelection.SelectionTagPropertyList(this, "selection_tag", true);
   public get selectionTag() {
     return this._selectionTag;
   }
-  public putSelectionTag(value: TfSelection.SelectionTagProperty[] | cdktn.IResolvable) {
+  public putSelectionTag(value: AwsSelection.SelectionTagProperty[] | cdktn.IResolvable) {
     this._selectionTag.internalValue = value;
   }
   public resetSelectionTag() {
@@ -267,8 +267,8 @@ export class TfSelection extends cdktn.TerraformResource {
       plan_id: cdktn.stringToTerraform(this._planId),
       region: cdktn.stringToTerraform(this._region),
       resources: cdktn.listMapper(cdktn.stringToTerraform, false)(this._resources),
-      condition: cdktn.listMapper(tfSelectionConditionPropertyToTerraform, true)(this._condition.internalValue),
-      selection_tag: cdktn.listMapper(tfSelectionSelectionTagPropertyToTerraform, true)(this._selectionTag.internalValue),
+      condition: cdktn.listMapper(awsSelectionConditionPropertyToTerraform, true)(this._condition.internalValue),
+      selection_tag: cdktn.listMapper(awsSelectionSelectionTagPropertyToTerraform, true)(this._selectionTag.internalValue),
     };
   }
 
@@ -317,16 +317,16 @@ export class TfSelection extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       condition: {
-        value: cdktn.listMapperHcl(tfSelectionConditionPropertyToHclTerraform, true)(this._condition.internalValue),
+        value: cdktn.listMapperHcl(awsSelectionConditionPropertyToHclTerraform, true)(this._condition.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfSelection.ConditionPropertyList",
+        storageClassType: "AwsSelection.ConditionPropertyList",
       },
       selection_tag: {
-        value: cdktn.listMapperHcl(tfSelectionSelectionTagPropertyToHclTerraform, true)(this._selectionTag.internalValue),
+        value: cdktn.listMapperHcl(awsSelectionSelectionTagPropertyToHclTerraform, true)(this._selectionTag.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfSelection.SelectionTagPropertyList",
+        storageClassType: "AwsSelection.SelectionTagPropertyList",
       },
     };
 
@@ -335,7 +335,7 @@ export class TfSelection extends cdktn.TerraformResource {
   }
 }
 
-export function tfSelectionStringEqualsPropertyToTerraform(struct?: TfSelection.StringEqualsProperty | cdktn.IResolvable): any {
+export function awsSelectionStringEqualsPropertyToTerraform(struct?: AwsSelection.StringEqualsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfSelectionStringEqualsPropertyToTerraform(struct?: TfSelection.
 }
 
 
-export function tfSelectionStringEqualsPropertyToHclTerraform(struct?: TfSelection.StringEqualsProperty | cdktn.IResolvable): any {
+export function awsSelectionStringEqualsPropertyToHclTerraform(struct?: AwsSelection.StringEqualsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function tfSelectionStringEqualsPropertyToHclTerraform(struct?: TfSelecti
 }
 
 
-export function tfSelectionStringLikePropertyToTerraform(struct?: TfSelection.StringLikeProperty | cdktn.IResolvable): any {
+export function awsSelectionStringLikePropertyToTerraform(struct?: AwsSelection.StringLikeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function tfSelectionStringLikePropertyToTerraform(struct?: TfSelection.St
 }
 
 
-export function tfSelectionStringLikePropertyToHclTerraform(struct?: TfSelection.StringLikeProperty | cdktn.IResolvable): any {
+export function awsSelectionStringLikePropertyToHclTerraform(struct?: AwsSelection.StringLikeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function tfSelectionStringLikePropertyToHclTerraform(struct?: TfSelection
 }
 
 
-export function tfSelectionStringNotEqualsPropertyToTerraform(struct?: TfSelection.StringNotEqualsProperty | cdktn.IResolvable): any {
+export function awsSelectionStringNotEqualsPropertyToTerraform(struct?: AwsSelection.StringNotEqualsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function tfSelectionStringNotEqualsPropertyToTerraform(struct?: TfSelecti
 }
 
 
-export function tfSelectionStringNotEqualsPropertyToHclTerraform(struct?: TfSelection.StringNotEqualsProperty | cdktn.IResolvable): any {
+export function awsSelectionStringNotEqualsPropertyToHclTerraform(struct?: AwsSelection.StringNotEqualsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,7 +446,7 @@ export function tfSelectionStringNotEqualsPropertyToHclTerraform(struct?: TfSele
 }
 
 
-export function tfSelectionStringNotLikePropertyToTerraform(struct?: TfSelection.StringNotLikeProperty | cdktn.IResolvable): any {
+export function awsSelectionStringNotLikePropertyToTerraform(struct?: AwsSelection.StringNotLikeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,7 +458,7 @@ export function tfSelectionStringNotLikePropertyToTerraform(struct?: TfSelection
 }
 
 
-export function tfSelectionStringNotLikePropertyToHclTerraform(struct?: TfSelection.StringNotLikeProperty | cdktn.IResolvable): any {
+export function awsSelectionStringNotLikePropertyToHclTerraform(struct?: AwsSelection.StringNotLikeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,46 +483,46 @@ export function tfSelectionStringNotLikePropertyToHclTerraform(struct?: TfSelect
 }
 
 
-export function tfSelectionConditionPropertyToTerraform(struct?: TfSelection.ConditionProperty | cdktn.IResolvable): any {
+export function awsSelectionConditionPropertyToTerraform(struct?: AwsSelection.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    string_equals: cdktn.listMapper(tfSelectionStringEqualsPropertyToTerraform, true)(struct!.stringEquals),
-    string_like: cdktn.listMapper(tfSelectionStringLikePropertyToTerraform, true)(struct!.stringLike),
-    string_not_equals: cdktn.listMapper(tfSelectionStringNotEqualsPropertyToTerraform, true)(struct!.stringNotEquals),
-    string_not_like: cdktn.listMapper(tfSelectionStringNotLikePropertyToTerraform, true)(struct!.stringNotLike),
+    string_equals: cdktn.listMapper(awsSelectionStringEqualsPropertyToTerraform, true)(struct!.stringEquals),
+    string_like: cdktn.listMapper(awsSelectionStringLikePropertyToTerraform, true)(struct!.stringLike),
+    string_not_equals: cdktn.listMapper(awsSelectionStringNotEqualsPropertyToTerraform, true)(struct!.stringNotEquals),
+    string_not_like: cdktn.listMapper(awsSelectionStringNotLikePropertyToTerraform, true)(struct!.stringNotLike),
   }
 }
 
 
-export function tfSelectionConditionPropertyToHclTerraform(struct?: TfSelection.ConditionProperty | cdktn.IResolvable): any {
+export function awsSelectionConditionPropertyToHclTerraform(struct?: AwsSelection.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     string_equals: {
-      value: cdktn.listMapperHcl(tfSelectionStringEqualsPropertyToHclTerraform, true)(struct!.stringEquals),
+      value: cdktn.listMapperHcl(awsSelectionStringEqualsPropertyToHclTerraform, true)(struct!.stringEquals),
       isBlock: true,
       type: "set",
       storageClassType: "StringEqualsPropertyList",
     },
     string_like: {
-      value: cdktn.listMapperHcl(tfSelectionStringLikePropertyToHclTerraform, true)(struct!.stringLike),
+      value: cdktn.listMapperHcl(awsSelectionStringLikePropertyToHclTerraform, true)(struct!.stringLike),
       isBlock: true,
       type: "set",
       storageClassType: "StringLikePropertyList",
     },
     string_not_equals: {
-      value: cdktn.listMapperHcl(tfSelectionStringNotEqualsPropertyToHclTerraform, true)(struct!.stringNotEquals),
+      value: cdktn.listMapperHcl(awsSelectionStringNotEqualsPropertyToHclTerraform, true)(struct!.stringNotEquals),
       isBlock: true,
       type: "set",
       storageClassType: "StringNotEqualsPropertyList",
     },
     string_not_like: {
-      value: cdktn.listMapperHcl(tfSelectionStringNotLikePropertyToHclTerraform, true)(struct!.stringNotLike),
+      value: cdktn.listMapperHcl(awsSelectionStringNotLikePropertyToHclTerraform, true)(struct!.stringNotLike),
       isBlock: true,
       type: "set",
       storageClassType: "StringNotLikePropertyList",
@@ -534,7 +534,7 @@ export function tfSelectionConditionPropertyToHclTerraform(struct?: TfSelection.
 }
 
 
-export function tfSelectionSelectionTagPropertyToTerraform(struct?: TfSelection.SelectionTagProperty | cdktn.IResolvable): any {
+export function awsSelectionSelectionTagPropertyToTerraform(struct?: AwsSelection.SelectionTagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function tfSelectionSelectionTagPropertyToTerraform(struct?: TfSelection.
 }
 
 
-export function tfSelectionSelectionTagPropertyToHclTerraform(struct?: TfSelection.SelectionTagProperty | cdktn.IResolvable): any {
+export function awsSelectionSelectionTagPropertyToHclTerraform(struct?: AwsSelection.SelectionTagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -578,14 +578,14 @@ export function tfSelectionSelectionTagPropertyToHclTerraform(struct?: TfSelecti
 }
 
 
-export namespace TfSelection {
+export namespace AwsSelection {
 export interface StringEqualsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#key TfSelection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#key AwsSelection#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#value TfSelection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#value AwsSelection#value}
   */
   readonly value: string;
 }
@@ -687,11 +687,11 @@ export class StringEqualsPropertyList extends cdktn.ComplexList {
 }
 export interface StringLikeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#key TfSelection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#key AwsSelection#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#value TfSelection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#value AwsSelection#value}
   */
   readonly value: string;
 }
@@ -793,11 +793,11 @@ export class StringLikePropertyList extends cdktn.ComplexList {
 }
 export interface StringNotEqualsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#key TfSelection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#key AwsSelection#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#value TfSelection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#value AwsSelection#value}
   */
   readonly value: string;
 }
@@ -899,11 +899,11 @@ export class StringNotEqualsPropertyList extends cdktn.ComplexList {
 }
 export interface StringNotLikeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#key TfSelection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#key AwsSelection#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#value TfSelection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#value AwsSelection#value}
   */
   readonly value: string;
 }
@@ -1007,25 +1007,25 @@ export interface ConditionProperty {
   /**
   * string_equals block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#string_equals TfSelection#string_equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#string_equals AwsSelection#string_equals}
   */
   readonly stringEquals?: StringEqualsProperty[] | cdktn.IResolvable;
   /**
   * string_like block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#string_like TfSelection#string_like}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#string_like AwsSelection#string_like}
   */
   readonly stringLike?: StringLikeProperty[] | cdktn.IResolvable;
   /**
   * string_not_equals block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#string_not_equals TfSelection#string_not_equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#string_not_equals AwsSelection#string_not_equals}
   */
   readonly stringNotEquals?: StringNotEqualsProperty[] | cdktn.IResolvable;
   /**
   * string_not_like block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#string_not_like TfSelection#string_not_like}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#string_not_like AwsSelection#string_not_like}
   */
   readonly stringNotLike?: StringNotLikeProperty[] | cdktn.IResolvable;
 }
@@ -1177,15 +1177,15 @@ export class ConditionPropertyList extends cdktn.ComplexList {
 }
 export interface SelectionTagProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#key TfSelection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#key AwsSelection#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#type TfSelection#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#type AwsSelection#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#value TfSelection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_selection#value AwsSelection#value}
   */
   readonly value: string;
 }

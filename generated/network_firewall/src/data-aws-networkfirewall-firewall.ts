@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfFirewallConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsFirewallConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall#arn DataTfFirewall#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall#arn DataAwsFirewall#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall#id DataTfFirewall#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall#id DataAwsFirewall#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall#name DataTfFirewall#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall#name DataAwsFirewall#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall#region DataTfFirewall#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall#region DataAwsFirewall#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall#tags DataTfFirewall#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall#tags DataAwsFirewall#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface DataTfFirewallConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall aws_networkfirewall_firewall}
 */
-export class DataTfFirewall extends cdktn.TerraformDataSource {
+export class DataAwsFirewall extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfFirewall extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfFirewall resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsFirewall resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfFirewall to import
-  * @param importFromId The id of the existing DataTfFirewall that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfFirewall to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsFirewall to import
+  * @param importFromId The id of the existing DataAwsFirewall that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkfirewall_firewall#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsFirewall to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkfirewall_firewall", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfFirewall extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfFirewallConfig = {}
+  * @param options DataAwsFirewallConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfFirewallConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsFirewallConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_networkfirewall_firewall',
       terraformGeneratorMetadata: {
@@ -117,7 +117,7 @@ export class DataTfFirewall extends cdktn.TerraformDataSource {
   }
 
   // availability_zone_mapping - computed: true, optional: false, required: false
-  private _availabilityZoneMapping = new DataTfFirewall.AvailabilityZoneMappingPropertyList(this, "availability_zone_mapping", true);
+  private _availabilityZoneMapping = new DataAwsFirewall.AvailabilityZoneMappingPropertyList(this, "availability_zone_mapping", true);
   public get availabilityZoneMapping() {
     return this._availabilityZoneMapping;
   }
@@ -138,7 +138,7 @@ export class DataTfFirewall extends cdktn.TerraformDataSource {
   }
 
   // encryption_configuration - computed: true, optional: false, required: false
-  private _encryptionConfiguration = new DataTfFirewall.EncryptionConfigurationPropertyList(this, "encryption_configuration", true);
+  private _encryptionConfiguration = new DataAwsFirewall.EncryptionConfigurationPropertyList(this, "encryption_configuration", true);
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
@@ -154,7 +154,7 @@ export class DataTfFirewall extends cdktn.TerraformDataSource {
   }
 
   // firewall_status - computed: true, optional: false, required: false
-  private _firewallStatus = new DataTfFirewall.FirewallStatusPropertyList(this, "firewall_status", false);
+  private _firewallStatus = new DataAwsFirewall.FirewallStatusPropertyList(this, "firewall_status", false);
   public get firewallStatus() {
     return this._firewallStatus;
   }
@@ -213,7 +213,7 @@ export class DataTfFirewall extends cdktn.TerraformDataSource {
   }
 
   // subnet_mapping - computed: true, optional: false, required: false
-  private _subnetMapping = new DataTfFirewall.SubnetMappingPropertyList(this, "subnet_mapping", true);
+  private _subnetMapping = new DataAwsFirewall.SubnetMappingPropertyList(this, "subnet_mapping", true);
   public get subnetMapping() {
     return this._subnetMapping;
   }
@@ -307,7 +307,7 @@ export class DataTfFirewall extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfFirewallAvailabilityZoneMappingPropertyToTerraform(struct?: DataTfFirewall.AvailabilityZoneMappingProperty): any {
+export function dataAwsFirewallAvailabilityZoneMappingPropertyToTerraform(struct?: DataAwsFirewall.AvailabilityZoneMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function dataTfFirewallAvailabilityZoneMappingPropertyToTerraform(struct?
 }
 
 
-export function dataTfFirewallAvailabilityZoneMappingPropertyToHclTerraform(struct?: DataTfFirewall.AvailabilityZoneMappingProperty): any {
+export function dataAwsFirewallAvailabilityZoneMappingPropertyToHclTerraform(struct?: DataAwsFirewall.AvailabilityZoneMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function dataTfFirewallAvailabilityZoneMappingPropertyToHclTerraform(stru
 }
 
 
-export function dataTfFirewallEncryptionConfigurationPropertyToTerraform(struct?: DataTfFirewall.EncryptionConfigurationProperty): any {
+export function dataAwsFirewallEncryptionConfigurationPropertyToTerraform(struct?: DataAwsFirewall.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,7 +338,7 @@ export function dataTfFirewallEncryptionConfigurationPropertyToTerraform(struct?
 }
 
 
-export function dataTfFirewallEncryptionConfigurationPropertyToHclTerraform(struct?: DataTfFirewall.EncryptionConfigurationProperty): any {
+export function dataAwsFirewallEncryptionConfigurationPropertyToHclTerraform(struct?: DataAwsFirewall.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function dataTfFirewallEncryptionConfigurationPropertyToHclTerraform(stru
 }
 
 
-export function dataTfFirewallIpSetReferencesPropertyToTerraform(struct?: DataTfFirewall.IpSetReferencesProperty): any {
+export function dataAwsFirewallIpSetReferencesPropertyToTerraform(struct?: DataAwsFirewall.IpSetReferencesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function dataTfFirewallIpSetReferencesPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfFirewallIpSetReferencesPropertyToHclTerraform(struct?: DataTfFirewall.IpSetReferencesProperty): any {
+export function dataAwsFirewallIpSetReferencesPropertyToHclTerraform(struct?: DataAwsFirewall.IpSetReferencesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function dataTfFirewallIpSetReferencesPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfFirewallCidrsPropertyToTerraform(struct?: DataTfFirewall.CidrsProperty): any {
+export function dataAwsFirewallCidrsPropertyToTerraform(struct?: DataAwsFirewall.CidrsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function dataTfFirewallCidrsPropertyToTerraform(struct?: DataTfFirewall.C
 }
 
 
-export function dataTfFirewallCidrsPropertyToHclTerraform(struct?: DataTfFirewall.CidrsProperty): any {
+export function dataAwsFirewallCidrsPropertyToHclTerraform(struct?: DataAwsFirewall.CidrsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function dataTfFirewallCidrsPropertyToHclTerraform(struct?: DataTfFirewal
 }
 
 
-export function dataTfFirewallCapacityUsageSummaryPropertyToTerraform(struct?: DataTfFirewall.CapacityUsageSummaryProperty): any {
+export function dataAwsFirewallCapacityUsageSummaryPropertyToTerraform(struct?: DataAwsFirewall.CapacityUsageSummaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function dataTfFirewallCapacityUsageSummaryPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfFirewallCapacityUsageSummaryPropertyToHclTerraform(struct?: DataTfFirewall.CapacityUsageSummaryProperty): any {
+export function dataAwsFirewallCapacityUsageSummaryPropertyToHclTerraform(struct?: DataAwsFirewall.CapacityUsageSummaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function dataTfFirewallCapacityUsageSummaryPropertyToHclTerraform(struct?
 }
 
 
-export function dataTfFirewallAttachmentPropertyToTerraform(struct?: DataTfFirewall.AttachmentProperty): any {
+export function dataAwsFirewallAttachmentPropertyToTerraform(struct?: DataAwsFirewall.AttachmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function dataTfFirewallAttachmentPropertyToTerraform(struct?: DataTfFirew
 }
 
 
-export function dataTfFirewallAttachmentPropertyToHclTerraform(struct?: DataTfFirewall.AttachmentProperty): any {
+export function dataAwsFirewallAttachmentPropertyToHclTerraform(struct?: DataAwsFirewall.AttachmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function dataTfFirewallAttachmentPropertyToHclTerraform(struct?: DataTfFi
 }
 
 
-export function dataTfFirewallSyncStatesPropertyToTerraform(struct?: DataTfFirewall.SyncStatesProperty): any {
+export function dataAwsFirewallSyncStatesPropertyToTerraform(struct?: DataAwsFirewall.SyncStatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -443,7 +443,7 @@ export function dataTfFirewallSyncStatesPropertyToTerraform(struct?: DataTfFirew
 }
 
 
-export function dataTfFirewallSyncStatesPropertyToHclTerraform(struct?: DataTfFirewall.SyncStatesProperty): any {
+export function dataAwsFirewallSyncStatesPropertyToHclTerraform(struct?: DataAwsFirewall.SyncStatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function dataTfFirewallSyncStatesPropertyToHclTerraform(struct?: DataTfFi
 }
 
 
-export function dataTfFirewallTransitGatewayAttachmentSyncStatesPropertyToTerraform(struct?: DataTfFirewall.TransitGatewayAttachmentSyncStatesProperty): any {
+export function dataAwsFirewallTransitGatewayAttachmentSyncStatesPropertyToTerraform(struct?: DataAwsFirewall.TransitGatewayAttachmentSyncStatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function dataTfFirewallTransitGatewayAttachmentSyncStatesPropertyToTerraf
 }
 
 
-export function dataTfFirewallTransitGatewayAttachmentSyncStatesPropertyToHclTerraform(struct?: DataTfFirewall.TransitGatewayAttachmentSyncStatesProperty): any {
+export function dataAwsFirewallTransitGatewayAttachmentSyncStatesPropertyToHclTerraform(struct?: DataAwsFirewall.TransitGatewayAttachmentSyncStatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,7 +475,7 @@ export function dataTfFirewallTransitGatewayAttachmentSyncStatesPropertyToHclTer
 }
 
 
-export function dataTfFirewallFirewallStatusPropertyToTerraform(struct?: DataTfFirewall.FirewallStatusProperty): any {
+export function dataAwsFirewallFirewallStatusPropertyToTerraform(struct?: DataAwsFirewall.FirewallStatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -485,7 +485,7 @@ export function dataTfFirewallFirewallStatusPropertyToTerraform(struct?: DataTfF
 }
 
 
-export function dataTfFirewallFirewallStatusPropertyToHclTerraform(struct?: DataTfFirewall.FirewallStatusProperty): any {
+export function dataAwsFirewallFirewallStatusPropertyToHclTerraform(struct?: DataAwsFirewall.FirewallStatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function dataTfFirewallFirewallStatusPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataTfFirewallSubnetMappingPropertyToTerraform(struct?: DataTfFirewall.SubnetMappingProperty): any {
+export function dataAwsFirewallSubnetMappingPropertyToTerraform(struct?: DataAwsFirewall.SubnetMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,7 +506,7 @@ export function dataTfFirewallSubnetMappingPropertyToTerraform(struct?: DataTfFi
 }
 
 
-export function dataTfFirewallSubnetMappingPropertyToHclTerraform(struct?: DataTfFirewall.SubnetMappingProperty): any {
+export function dataAwsFirewallSubnetMappingPropertyToHclTerraform(struct?: DataAwsFirewall.SubnetMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,7 +517,7 @@ export function dataTfFirewallSubnetMappingPropertyToHclTerraform(struct?: DataT
 }
 
 
-export namespace DataTfFirewall {
+export namespace DataAwsFirewall {
 export interface AvailabilityZoneMappingProperty {
 }
 export class AvailabilityZoneMappingPropertyOutputReference extends cdktn.ComplexObject {

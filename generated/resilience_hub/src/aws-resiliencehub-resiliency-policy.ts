@@ -5,59 +5,59 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResiliencyPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResiliencyPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
   * Specifies a high-level geographical location constraint for where resilience policy data can be stored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#data_location_constraint TfResiliencyPolicy#data_location_constraint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#data_location_constraint AwsResiliencyPolicy#data_location_constraint}
   */
   readonly dataLocationConstraint?: string;
   /**
   * The description for the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#description TfResiliencyPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#description AwsResiliencyPolicy#description}
   */
   readonly description?: string;
   /**
   * The name of the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#name TfResiliencyPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#name AwsResiliencyPolicy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#region TfResiliencyPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#region AwsResiliencyPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#tags TfResiliencyPolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#tags AwsResiliencyPolicy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * The tier for the resiliency policy, ranging from the highest severity (MissionCritical) to lowest (NonCritical).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#tier TfResiliencyPolicy#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#tier AwsResiliencyPolicy#tier}
   */
   readonly tier: string;
   /**
   * policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#policy TfResiliencyPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#policy AwsResiliencyPolicy#policy}
   */
-  readonly policy?: TfResiliencyPolicy.PolicyProperty[] | cdktn.IResolvable;
+  readonly policy?: AwsResiliencyPolicy.PolicyProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#timeouts TfResiliencyPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#timeouts AwsResiliencyPolicy#timeouts}
   */
-  readonly timeouts?: TfResiliencyPolicy.TimeoutsProperty;
+  readonly timeouts?: AwsResiliencyPolicy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy aws_resiliencehub_resiliency_policy}
 */
-export class TfResiliencyPolicy extends cdktn.TerraformResource {
+export class AwsResiliencyPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -68,11 +68,11 @@ export class TfResiliencyPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResiliencyPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResiliencyPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResiliencyPolicy to import
-  * @param importFromId The id of the existing TfResiliencyPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResiliencyPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsResiliencyPolicy to import
+  * @param importFromId The id of the existing AwsResiliencyPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResiliencyPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resiliencehub_resiliency_policy", importId: importFromId, provider });
@@ -87,9 +87,9 @@ export class TfResiliencyPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResiliencyPolicyConfig
+  * @param options AwsResiliencyPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResiliencyPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResiliencyPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resiliencehub_resiliency_policy',
       terraformGeneratorMetadata: {
@@ -226,11 +226,11 @@ export class TfResiliencyPolicy extends cdktn.TerraformResource {
   }
 
   // policy - computed: false, optional: true, required: false
-  private _policy = new TfResiliencyPolicy.PolicyPropertyList(this, "policy", false);
+  private _policy = new AwsResiliencyPolicy.PolicyPropertyList(this, "policy", false);
   public get policy() {
     return this._policy;
   }
-  public putPolicy(value: TfResiliencyPolicy.PolicyProperty[] | cdktn.IResolvable) {
+  public putPolicy(value: AwsResiliencyPolicy.PolicyProperty[] | cdktn.IResolvable) {
     this._policy.internalValue = value;
   }
   public resetPolicy() {
@@ -242,11 +242,11 @@ export class TfResiliencyPolicy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfResiliencyPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsResiliencyPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfResiliencyPolicy.TimeoutsProperty) {
+  public putTimeouts(value: AwsResiliencyPolicy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -269,8 +269,8 @@ export class TfResiliencyPolicy extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tier: cdktn.stringToTerraform(this._tier),
-      policy: cdktn.listMapper(tfResiliencyPolicyPolicyPropertyToTerraform, true)(this._policy.internalValue),
-      timeouts: tfResiliencyPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      policy: cdktn.listMapper(awsResiliencyPolicyPolicyPropertyToTerraform, true)(this._policy.internalValue),
+      timeouts: awsResiliencyPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -313,16 +313,16 @@ export class TfResiliencyPolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       policy: {
-        value: cdktn.listMapperHcl(tfResiliencyPolicyPolicyPropertyToHclTerraform, true)(this._policy.internalValue),
+        value: cdktn.listMapperHcl(awsResiliencyPolicyPolicyPropertyToHclTerraform, true)(this._policy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfResiliencyPolicy.PolicyPropertyList",
+        storageClassType: "AwsResiliencyPolicy.PolicyPropertyList",
       },
       timeouts: {
-        value: tfResiliencyPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsResiliencyPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfResiliencyPolicy.TimeoutsProperty",
+        storageClassType: "AwsResiliencyPolicy.TimeoutsProperty",
       },
     };
 
@@ -331,7 +331,7 @@ export class TfResiliencyPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfResiliencyPolicyAzPropertyToTerraform(struct?: TfResiliencyPolicy.AzProperty | cdktn.IResolvable): any {
+export function awsResiliencyPolicyAzPropertyToTerraform(struct?: AwsResiliencyPolicy.AzProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function tfResiliencyPolicyAzPropertyToTerraform(struct?: TfResiliencyPol
 }
 
 
-export function tfResiliencyPolicyAzPropertyToHclTerraform(struct?: TfResiliencyPolicy.AzProperty | cdktn.IResolvable): any {
+export function awsResiliencyPolicyAzPropertyToHclTerraform(struct?: AwsResiliencyPolicy.AzProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -368,7 +368,7 @@ export function tfResiliencyPolicyAzPropertyToHclTerraform(struct?: TfResiliency
 }
 
 
-export function tfResiliencyPolicyHardwarePropertyToTerraform(struct?: TfResiliencyPolicy.HardwareProperty | cdktn.IResolvable): any {
+export function awsResiliencyPolicyHardwarePropertyToTerraform(struct?: AwsResiliencyPolicy.HardwareProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function tfResiliencyPolicyHardwarePropertyToTerraform(struct?: TfResilie
 }
 
 
-export function tfResiliencyPolicyHardwarePropertyToHclTerraform(struct?: TfResiliencyPolicy.HardwareProperty | cdktn.IResolvable): any {
+export function awsResiliencyPolicyHardwarePropertyToHclTerraform(struct?: AwsResiliencyPolicy.HardwareProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -405,7 +405,7 @@ export function tfResiliencyPolicyHardwarePropertyToHclTerraform(struct?: TfResi
 }
 
 
-export function tfResiliencyPolicyRegionPropertyToTerraform(struct?: TfResiliencyPolicy.RegionProperty | cdktn.IResolvable): any {
+export function awsResiliencyPolicyRegionPropertyToTerraform(struct?: AwsResiliencyPolicy.RegionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function tfResiliencyPolicyRegionPropertyToTerraform(struct?: TfResilienc
 }
 
 
-export function tfResiliencyPolicyRegionPropertyToHclTerraform(struct?: TfResiliencyPolicy.RegionProperty | cdktn.IResolvable): any {
+export function awsResiliencyPolicyRegionPropertyToHclTerraform(struct?: AwsResiliencyPolicy.RegionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function tfResiliencyPolicyRegionPropertyToHclTerraform(struct?: TfResili
 }
 
 
-export function tfResiliencyPolicySoftwarePropertyToTerraform(struct?: TfResiliencyPolicy.SoftwareProperty | cdktn.IResolvable): any {
+export function awsResiliencyPolicySoftwarePropertyToTerraform(struct?: AwsResiliencyPolicy.SoftwareProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function tfResiliencyPolicySoftwarePropertyToTerraform(struct?: TfResilie
 }
 
 
-export function tfResiliencyPolicySoftwarePropertyToHclTerraform(struct?: TfResiliencyPolicy.SoftwareProperty | cdktn.IResolvable): any {
+export function awsResiliencyPolicySoftwarePropertyToHclTerraform(struct?: AwsResiliencyPolicy.SoftwareProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -479,46 +479,46 @@ export function tfResiliencyPolicySoftwarePropertyToHclTerraform(struct?: TfResi
 }
 
 
-export function tfResiliencyPolicyPolicyPropertyToTerraform(struct?: TfResiliencyPolicy.PolicyProperty | cdktn.IResolvable): any {
+export function awsResiliencyPolicyPolicyPropertyToTerraform(struct?: AwsResiliencyPolicy.PolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    az: cdktn.listMapper(tfResiliencyPolicyAzPropertyToTerraform, true)(struct!.az),
-    hardware: cdktn.listMapper(tfResiliencyPolicyHardwarePropertyToTerraform, true)(struct!.hardware),
-    region: cdktn.listMapper(tfResiliencyPolicyRegionPropertyToTerraform, true)(struct!.region),
-    software: cdktn.listMapper(tfResiliencyPolicySoftwarePropertyToTerraform, true)(struct!.softwareAttribute),
+    az: cdktn.listMapper(awsResiliencyPolicyAzPropertyToTerraform, true)(struct!.az),
+    hardware: cdktn.listMapper(awsResiliencyPolicyHardwarePropertyToTerraform, true)(struct!.hardware),
+    region: cdktn.listMapper(awsResiliencyPolicyRegionPropertyToTerraform, true)(struct!.region),
+    software: cdktn.listMapper(awsResiliencyPolicySoftwarePropertyToTerraform, true)(struct!.softwareAttribute),
   }
 }
 
 
-export function tfResiliencyPolicyPolicyPropertyToHclTerraform(struct?: TfResiliencyPolicy.PolicyProperty | cdktn.IResolvable): any {
+export function awsResiliencyPolicyPolicyPropertyToHclTerraform(struct?: AwsResiliencyPolicy.PolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     az: {
-      value: cdktn.listMapperHcl(tfResiliencyPolicyAzPropertyToHclTerraform, true)(struct!.az),
+      value: cdktn.listMapperHcl(awsResiliencyPolicyAzPropertyToHclTerraform, true)(struct!.az),
       isBlock: true,
       type: "list",
       storageClassType: "AzPropertyList",
     },
     hardware: {
-      value: cdktn.listMapperHcl(tfResiliencyPolicyHardwarePropertyToHclTerraform, true)(struct!.hardware),
+      value: cdktn.listMapperHcl(awsResiliencyPolicyHardwarePropertyToHclTerraform, true)(struct!.hardware),
       isBlock: true,
       type: "list",
       storageClassType: "HardwarePropertyList",
     },
     region: {
-      value: cdktn.listMapperHcl(tfResiliencyPolicyRegionPropertyToHclTerraform, true)(struct!.region),
+      value: cdktn.listMapperHcl(awsResiliencyPolicyRegionPropertyToHclTerraform, true)(struct!.region),
       isBlock: true,
       type: "list",
       storageClassType: "RegionPropertyList",
     },
     software: {
-      value: cdktn.listMapperHcl(tfResiliencyPolicySoftwarePropertyToHclTerraform, true)(struct!.softwareAttribute),
+      value: cdktn.listMapperHcl(awsResiliencyPolicySoftwarePropertyToHclTerraform, true)(struct!.softwareAttribute),
       isBlock: true,
       type: "list",
       storageClassType: "SoftwarePropertyList",
@@ -530,7 +530,7 @@ export function tfResiliencyPolicyPolicyPropertyToHclTerraform(struct?: TfResili
 }
 
 
-export function tfResiliencyPolicyTimeoutsPropertyToTerraform(struct?: TfResiliencyPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResiliencyPolicyTimeoutsPropertyToTerraform(struct?: AwsResiliencyPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -543,7 +543,7 @@ export function tfResiliencyPolicyTimeoutsPropertyToTerraform(struct?: TfResilie
 }
 
 
-export function tfResiliencyPolicyTimeoutsPropertyToHclTerraform(struct?: TfResiliencyPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResiliencyPolicyTimeoutsPropertyToHclTerraform(struct?: AwsResiliencyPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,18 +574,18 @@ export function tfResiliencyPolicyTimeoutsPropertyToHclTerraform(struct?: TfResi
 }
 
 
-export namespace TfResiliencyPolicy {
+export namespace AwsResiliencyPolicy {
 export interface AzProperty {
   /**
   * Recovery Point Objective (RPO) as a Go duration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rpo TfResiliencyPolicy#rpo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rpo AwsResiliencyPolicy#rpo}
   */
   readonly rpo: string;
   /**
   * Recovery Time Objective (RTO) as a Go duration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rto TfResiliencyPolicy#rto}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rto AwsResiliencyPolicy#rto}
   */
   readonly rto: string;
 }
@@ -689,13 +689,13 @@ export interface HardwareProperty {
   /**
   * Recovery Point Objective (RPO) as a Go duration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rpo TfResiliencyPolicy#rpo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rpo AwsResiliencyPolicy#rpo}
   */
   readonly rpo: string;
   /**
   * Recovery Time Objective (RTO) as a Go duration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rto TfResiliencyPolicy#rto}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rto AwsResiliencyPolicy#rto}
   */
   readonly rto: string;
 }
@@ -799,13 +799,13 @@ export interface RegionProperty {
   /**
   * Recovery Point Objective (RPO) as a Go duration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rpo TfResiliencyPolicy#rpo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rpo AwsResiliencyPolicy#rpo}
   */
   readonly rpo?: string;
   /**
   * Recovery Time Objective (RTO) as a Go duration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rto TfResiliencyPolicy#rto}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rto AwsResiliencyPolicy#rto}
   */
   readonly rto?: string;
 }
@@ -915,13 +915,13 @@ export interface SoftwareProperty {
   /**
   * Recovery Point Objective (RPO) as a Go duration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rpo TfResiliencyPolicy#rpo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rpo AwsResiliencyPolicy#rpo}
   */
   readonly rpo: string;
   /**
   * Recovery Time Objective (RTO) as a Go duration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rto TfResiliencyPolicy#rto}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#rto AwsResiliencyPolicy#rto}
   */
   readonly rto: string;
 }
@@ -1025,25 +1025,25 @@ export interface PolicyProperty {
   /**
   * az block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#az TfResiliencyPolicy#az}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#az AwsResiliencyPolicy#az}
   */
   readonly az?: AzProperty[] | cdktn.IResolvable;
   /**
   * hardware block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#hardware TfResiliencyPolicy#hardware}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#hardware AwsResiliencyPolicy#hardware}
   */
   readonly hardware?: HardwareProperty[] | cdktn.IResolvable;
   /**
   * region block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#region TfResiliencyPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#region AwsResiliencyPolicy#region}
   */
   readonly region?: RegionProperty[] | cdktn.IResolvable;
   /**
   * software block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#software TfResiliencyPolicy#software}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#software AwsResiliencyPolicy#software}
   */
   readonly softwareAttribute?: SoftwareProperty[] | cdktn.IResolvable;
 }
@@ -1197,19 +1197,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#create TfResiliencyPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#create AwsResiliencyPolicy#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#delete TfResiliencyPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#delete AwsResiliencyPolicy#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#update TfResiliencyPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resiliencehub_resiliency_policy#update AwsResiliencyPolicy#update}
   */
   readonly update?: string;
 }

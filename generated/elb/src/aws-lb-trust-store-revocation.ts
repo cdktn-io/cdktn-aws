@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTrustStoreRevocationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTrustStoreRevocationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#id TfTrustStoreRevocation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#id AwsTrustStoreRevocation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,37 +16,37 @@ export interface TfTrustStoreRevocationConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#region TfTrustStoreRevocation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#region AwsTrustStoreRevocation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#revocations_s3_bucket TfTrustStoreRevocation#revocations_s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#revocations_s3_bucket AwsTrustStoreRevocation#revocations_s3_bucket}
   */
   readonly revocationsS3Bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#revocations_s3_key TfTrustStoreRevocation#revocations_s3_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#revocations_s3_key AwsTrustStoreRevocation#revocations_s3_key}
   */
   readonly revocationsS3Key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#revocations_s3_object_version TfTrustStoreRevocation#revocations_s3_object_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#revocations_s3_object_version AwsTrustStoreRevocation#revocations_s3_object_version}
   */
   readonly revocationsS3ObjectVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#trust_store_arn TfTrustStoreRevocation#trust_store_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#trust_store_arn AwsTrustStoreRevocation#trust_store_arn}
   */
   readonly trustStoreArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#timeouts TfTrustStoreRevocation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#timeouts AwsTrustStoreRevocation#timeouts}
   */
-  readonly timeouts?: TfTrustStoreRevocation.TimeoutsProperty;
+  readonly timeouts?: AwsTrustStoreRevocation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation aws_lb_trust_store_revocation}
 */
-export class TfTrustStoreRevocation extends cdktn.TerraformResource {
+export class AwsTrustStoreRevocation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfTrustStoreRevocation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTrustStoreRevocation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTrustStoreRevocation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTrustStoreRevocation to import
-  * @param importFromId The id of the existing TfTrustStoreRevocation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTrustStoreRevocation to import is found
+  * @param importToId The construct id used in the generated config for the AwsTrustStoreRevocation to import
+  * @param importFromId The id of the existing AwsTrustStoreRevocation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTrustStoreRevocation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lb_trust_store_revocation", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfTrustStoreRevocation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTrustStoreRevocationConfig
+  * @param options AwsTrustStoreRevocationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTrustStoreRevocationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTrustStoreRevocationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lb_trust_store_revocation',
       terraformGeneratorMetadata: {
@@ -200,11 +200,11 @@ export class TfTrustStoreRevocation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTrustStoreRevocation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTrustStoreRevocation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTrustStoreRevocation.TimeoutsProperty) {
+  public putTimeouts(value: AwsTrustStoreRevocation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -227,7 +227,7 @@ export class TfTrustStoreRevocation extends cdktn.TerraformResource {
       revocations_s3_key: cdktn.stringToTerraform(this._revocationsS3Key),
       revocations_s3_object_version: cdktn.stringToTerraform(this._revocationsS3ObjectVersion),
       trust_store_arn: cdktn.stringToTerraform(this._trustStoreArn),
-      timeouts: tfTrustStoreRevocationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsTrustStoreRevocationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -270,10 +270,10 @@ export class TfTrustStoreRevocation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfTrustStoreRevocationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTrustStoreRevocationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTrustStoreRevocation.TimeoutsProperty",
+        storageClassType: "AwsTrustStoreRevocation.TimeoutsProperty",
       },
     };
 
@@ -282,7 +282,7 @@ export class TfTrustStoreRevocation extends cdktn.TerraformResource {
   }
 }
 
-export function tfTrustStoreRevocationTimeoutsPropertyToTerraform(struct?: TfTrustStoreRevocation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTrustStoreRevocationTimeoutsPropertyToTerraform(struct?: AwsTrustStoreRevocation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function tfTrustStoreRevocationTimeoutsPropertyToTerraform(struct?: TfTru
 }
 
 
-export function tfTrustStoreRevocationTimeoutsPropertyToHclTerraform(struct?: TfTrustStoreRevocation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTrustStoreRevocationTimeoutsPropertyToHclTerraform(struct?: AwsTrustStoreRevocation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,10 +312,10 @@ export function tfTrustStoreRevocationTimeoutsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfTrustStoreRevocation {
+export namespace AwsTrustStoreRevocation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#create TfTrustStoreRevocation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_trust_store_revocation#create AwsTrustStoreRevocation#create}
   */
   readonly create?: string;
 }

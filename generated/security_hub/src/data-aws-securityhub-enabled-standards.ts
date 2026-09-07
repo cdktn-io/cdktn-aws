@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfEnabledStandardsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsEnabledStandardsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_enabled_standards#region DataTfEnabledStandards#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_enabled_standards#region DataAwsEnabledStandards#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_enabled_standards#standards_subscription_arns DataTfEnabledStandards#standards_subscription_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_enabled_standards#standards_subscription_arns DataAwsEnabledStandards#standards_subscription_arns}
   */
   readonly standardsSubscriptionArns?: string[];
 }
@@ -21,7 +21,7 @@ export interface DataTfEnabledStandardsConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_enabled_standards aws_securityhub_enabled_standards}
 */
-export class DataTfEnabledStandards extends cdktn.TerraformDataSource {
+export class DataAwsEnabledStandards extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataTfEnabledStandards extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfEnabledStandards resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsEnabledStandards resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfEnabledStandards to import
-  * @param importFromId The id of the existing DataTfEnabledStandards that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_enabled_standards#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfEnabledStandards to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsEnabledStandards to import
+  * @param importFromId The id of the existing DataAwsEnabledStandards that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/securityhub_enabled_standards#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsEnabledStandards to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_enabled_standards", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataTfEnabledStandards extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfEnabledStandardsConfig = {}
+  * @param options DataAwsEnabledStandardsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfEnabledStandardsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsEnabledStandardsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_enabled_standards',
       terraformGeneratorMetadata: {
@@ -110,7 +110,7 @@ export class DataTfEnabledStandards extends cdktn.TerraformDataSource {
   }
 
   // standards_subscriptions - computed: true, optional: false, required: false
-  private _standardsSubscriptions = new DataTfEnabledStandards.StandardsSubscriptionsPropertyList(this, "standards_subscriptions", false);
+  private _standardsSubscriptions = new DataAwsEnabledStandards.StandardsSubscriptionsPropertyList(this, "standards_subscriptions", false);
   public get standardsSubscriptions() {
     return this._standardsSubscriptions;
   }
@@ -147,7 +147,7 @@ export class DataTfEnabledStandards extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfEnabledStandardsStandardsStatusReasonPropertyToTerraform(struct?: DataTfEnabledStandards.StandardsStatusReasonProperty): any {
+export function dataAwsEnabledStandardsStandardsStatusReasonPropertyToTerraform(struct?: DataAwsEnabledStandards.StandardsStatusReasonProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -157,7 +157,7 @@ export function dataTfEnabledStandardsStandardsStatusReasonPropertyToTerraform(s
 }
 
 
-export function dataTfEnabledStandardsStandardsStatusReasonPropertyToHclTerraform(struct?: DataTfEnabledStandards.StandardsStatusReasonProperty): any {
+export function dataAwsEnabledStandardsStandardsStatusReasonPropertyToHclTerraform(struct?: DataAwsEnabledStandards.StandardsStatusReasonProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -168,7 +168,7 @@ export function dataTfEnabledStandardsStandardsStatusReasonPropertyToHclTerrafor
 }
 
 
-export function dataTfEnabledStandardsStandardsSubscriptionsPropertyToTerraform(struct?: DataTfEnabledStandards.StandardsSubscriptionsProperty): any {
+export function dataAwsEnabledStandardsStandardsSubscriptionsPropertyToTerraform(struct?: DataAwsEnabledStandards.StandardsSubscriptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -178,7 +178,7 @@ export function dataTfEnabledStandardsStandardsSubscriptionsPropertyToTerraform(
 }
 
 
-export function dataTfEnabledStandardsStandardsSubscriptionsPropertyToHclTerraform(struct?: DataTfEnabledStandards.StandardsSubscriptionsProperty): any {
+export function dataAwsEnabledStandardsStandardsSubscriptionsPropertyToHclTerraform(struct?: DataAwsEnabledStandards.StandardsSubscriptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -189,7 +189,7 @@ export function dataTfEnabledStandardsStandardsSubscriptionsPropertyToHclTerrafo
 }
 
 
-export namespace DataTfEnabledStandards {
+export namespace DataAwsEnabledStandards {
 export interface StandardsStatusReasonProperty {
 }
 export class StandardsStatusReasonPropertyOutputReference extends cdktn.ComplexObject {

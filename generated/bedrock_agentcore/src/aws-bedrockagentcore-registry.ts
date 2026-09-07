@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRegistryConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRegistryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#approval_configuration TfRegistry#approval_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#approval_configuration AwsRegistry#approval_configuration}
   */
-  readonly approvalConfiguration?: TfRegistry.ApprovalConfigurationProperty[] | cdktn.IResolvable;
+  readonly approvalConfiguration?: AwsRegistry.ApprovalConfigurationProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#authorizer_type TfRegistry#authorizer_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#authorizer_type AwsRegistry#authorizer_type}
   */
   readonly authorizerType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#description TfRegistry#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#description AwsRegistry#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#name TfRegistry#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#name AwsRegistry#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#region TfRegistry#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#region AwsRegistry#region}
   */
   readonly region?: string;
   /**
   * authorizer_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#authorizer_configuration TfRegistry#authorizer_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#authorizer_configuration AwsRegistry#authorizer_configuration}
   */
-  readonly authorizerConfiguration?: TfRegistry.AuthorizerConfigurationProperty[] | cdktn.IResolvable;
+  readonly authorizerConfiguration?: AwsRegistry.AuthorizerConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#timeouts TfRegistry#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#timeouts AwsRegistry#timeouts}
   */
-  readonly timeouts?: TfRegistry.TimeoutsProperty;
+  readonly timeouts?: AwsRegistry.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry aws_bedrockagentcore_registry}
 */
-export class TfRegistry extends cdktn.TerraformResource {
+export class AwsRegistry extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class TfRegistry extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRegistry resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRegistry resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRegistry to import
-  * @param importFromId The id of the existing TfRegistry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRegistry to import is found
+  * @param importToId The construct id used in the generated config for the AwsRegistry to import
+  * @param importFromId The id of the existing AwsRegistry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRegistry to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_registry", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class TfRegistry extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRegistryConfig
+  * @param options AwsRegistryConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRegistryConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRegistryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_registry',
       terraformGeneratorMetadata: {
@@ -107,11 +107,11 @@ export class TfRegistry extends cdktn.TerraformResource {
   // ==========
 
   // approval_configuration - computed: true, optional: true, required: false
-  private _approvalConfiguration = new TfRegistry.ApprovalConfigurationPropertyList(this, "approval_configuration", false);
+  private _approvalConfiguration = new AwsRegistry.ApprovalConfigurationPropertyList(this, "approval_configuration", false);
   public get approvalConfiguration() {
     return this._approvalConfiguration;
   }
-  public putApprovalConfiguration(value: TfRegistry.ApprovalConfigurationProperty[] | cdktn.IResolvable) {
+  public putApprovalConfiguration(value: AwsRegistry.ApprovalConfigurationProperty[] | cdktn.IResolvable) {
     this._approvalConfiguration.internalValue = value;
   }
   public resetApprovalConfiguration() {
@@ -194,11 +194,11 @@ export class TfRegistry extends cdktn.TerraformResource {
   }
 
   // authorizer_configuration - computed: false, optional: true, required: false
-  private _authorizerConfiguration = new TfRegistry.AuthorizerConfigurationPropertyList(this, "authorizer_configuration", false);
+  private _authorizerConfiguration = new AwsRegistry.AuthorizerConfigurationPropertyList(this, "authorizer_configuration", false);
   public get authorizerConfiguration() {
     return this._authorizerConfiguration;
   }
-  public putAuthorizerConfiguration(value: TfRegistry.AuthorizerConfigurationProperty[] | cdktn.IResolvable) {
+  public putAuthorizerConfiguration(value: AwsRegistry.AuthorizerConfigurationProperty[] | cdktn.IResolvable) {
     this._authorizerConfiguration.internalValue = value;
   }
   public resetAuthorizerConfiguration() {
@@ -210,11 +210,11 @@ export class TfRegistry extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfRegistry.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsRegistry.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfRegistry.TimeoutsProperty) {
+  public putTimeouts(value: AwsRegistry.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -231,23 +231,23 @@ export class TfRegistry extends cdktn.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      approval_configuration: cdktn.listMapper(tfRegistryApprovalConfigurationPropertyToTerraform, false)(this._approvalConfiguration.internalValue),
+      approval_configuration: cdktn.listMapper(awsRegistryApprovalConfigurationPropertyToTerraform, false)(this._approvalConfiguration.internalValue),
       authorizer_type: cdktn.stringToTerraform(this._authorizerType),
       description: cdktn.stringToTerraform(this._description),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      authorizer_configuration: cdktn.listMapper(tfRegistryAuthorizerConfigurationPropertyToTerraform, true)(this._authorizerConfiguration.internalValue),
-      timeouts: tfRegistryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      authorizer_configuration: cdktn.listMapper(awsRegistryAuthorizerConfigurationPropertyToTerraform, true)(this._authorizerConfiguration.internalValue),
+      timeouts: awsRegistryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       approval_configuration: {
-        value: cdktn.listMapperHcl(tfRegistryApprovalConfigurationPropertyToHclTerraform, false)(this._approvalConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsRegistryApprovalConfigurationPropertyToHclTerraform, false)(this._approvalConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRegistry.ApprovalConfigurationPropertyList",
+        storageClassType: "AwsRegistry.ApprovalConfigurationPropertyList",
       },
       authorizer_type: {
         value: cdktn.stringToHclTerraform(this._authorizerType),
@@ -274,16 +274,16 @@ export class TfRegistry extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       authorizer_configuration: {
-        value: cdktn.listMapperHcl(tfRegistryAuthorizerConfigurationPropertyToHclTerraform, true)(this._authorizerConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsRegistryAuthorizerConfigurationPropertyToHclTerraform, true)(this._authorizerConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRegistry.AuthorizerConfigurationPropertyList",
+        storageClassType: "AwsRegistry.AuthorizerConfigurationPropertyList",
       },
       timeouts: {
-        value: tfRegistryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsRegistryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfRegistry.TimeoutsProperty",
+        storageClassType: "AwsRegistry.TimeoutsProperty",
       },
     };
 
@@ -292,7 +292,7 @@ export class TfRegistry extends cdktn.TerraformResource {
   }
 }
 
-export function tfRegistryApprovalConfigurationPropertyToTerraform(struct?: TfRegistry.ApprovalConfigurationProperty | cdktn.IResolvable): any {
+export function awsRegistryApprovalConfigurationPropertyToTerraform(struct?: AwsRegistry.ApprovalConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,7 +303,7 @@ export function tfRegistryApprovalConfigurationPropertyToTerraform(struct?: TfRe
 }
 
 
-export function tfRegistryApprovalConfigurationPropertyToHclTerraform(struct?: TfRegistry.ApprovalConfigurationProperty | cdktn.IResolvable): any {
+export function awsRegistryApprovalConfigurationPropertyToHclTerraform(struct?: AwsRegistry.ApprovalConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function tfRegistryApprovalConfigurationPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfRegistryHostingEnvironmentPropertyToTerraform(struct?: TfRegistry.HostingEnvironmentProperty | cdktn.IResolvable): any {
+export function awsRegistryHostingEnvironmentPropertyToTerraform(struct?: AwsRegistry.HostingEnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function tfRegistryHostingEnvironmentPropertyToTerraform(struct?: TfRegis
 }
 
 
-export function tfRegistryHostingEnvironmentPropertyToHclTerraform(struct?: TfRegistry.HostingEnvironmentProperty | cdktn.IResolvable): any {
+export function awsRegistryHostingEnvironmentPropertyToHclTerraform(struct?: AwsRegistry.HostingEnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -352,19 +352,19 @@ export function tfRegistryHostingEnvironmentPropertyToHclTerraform(struct?: TfRe
 }
 
 
-export function tfRegistryAllowedWorkloadConfigurationPropertyToTerraform(struct?: TfRegistry.AllowedWorkloadConfigurationProperty | cdktn.IResolvable): any {
+export function awsRegistryAllowedWorkloadConfigurationPropertyToTerraform(struct?: AwsRegistry.AllowedWorkloadConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     workload_identities: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.workloadIdentities),
-    hosting_environment: cdktn.listMapper(tfRegistryHostingEnvironmentPropertyToTerraform, true)(struct!.hostingEnvironment),
+    hosting_environment: cdktn.listMapper(awsRegistryHostingEnvironmentPropertyToTerraform, true)(struct!.hostingEnvironment),
   }
 }
 
 
-export function tfRegistryAllowedWorkloadConfigurationPropertyToHclTerraform(struct?: TfRegistry.AllowedWorkloadConfigurationProperty | cdktn.IResolvable): any {
+export function awsRegistryAllowedWorkloadConfigurationPropertyToHclTerraform(struct?: AwsRegistry.AllowedWorkloadConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -377,7 +377,7 @@ export function tfRegistryAllowedWorkloadConfigurationPropertyToHclTerraform(str
       storageClassType: "stringList",
     },
     hosting_environment: {
-      value: cdktn.listMapperHcl(tfRegistryHostingEnvironmentPropertyToHclTerraform, true)(struct!.hostingEnvironment),
+      value: cdktn.listMapperHcl(awsRegistryHostingEnvironmentPropertyToHclTerraform, true)(struct!.hostingEnvironment),
       isBlock: true,
       type: "list",
       storageClassType: "HostingEnvironmentPropertyList",
@@ -389,7 +389,7 @@ export function tfRegistryAllowedWorkloadConfigurationPropertyToHclTerraform(str
 }
 
 
-export function tfRegistryClaimMatchValuePropertyToTerraform(struct?: TfRegistry.ClaimMatchValueProperty | cdktn.IResolvable): any {
+export function awsRegistryClaimMatchValuePropertyToTerraform(struct?: AwsRegistry.ClaimMatchValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function tfRegistryClaimMatchValuePropertyToTerraform(struct?: TfRegistry
 }
 
 
-export function tfRegistryClaimMatchValuePropertyToHclTerraform(struct?: TfRegistry.ClaimMatchValueProperty | cdktn.IResolvable): any {
+export function awsRegistryClaimMatchValuePropertyToHclTerraform(struct?: AwsRegistry.ClaimMatchValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -426,19 +426,19 @@ export function tfRegistryClaimMatchValuePropertyToHclTerraform(struct?: TfRegis
 }
 
 
-export function tfRegistryAuthorizingClaimMatchValuePropertyToTerraform(struct?: TfRegistry.AuthorizingClaimMatchValueProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizingClaimMatchValuePropertyToTerraform(struct?: AwsRegistry.AuthorizingClaimMatchValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     claim_match_operator: cdktn.stringToTerraform(struct!.claimMatchOperator),
-    claim_match_value: cdktn.listMapper(tfRegistryClaimMatchValuePropertyToTerraform, true)(struct!.claimMatchValue),
+    claim_match_value: cdktn.listMapper(awsRegistryClaimMatchValuePropertyToTerraform, true)(struct!.claimMatchValue),
   }
 }
 
 
-export function tfRegistryAuthorizingClaimMatchValuePropertyToHclTerraform(struct?: TfRegistry.AuthorizingClaimMatchValueProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizingClaimMatchValuePropertyToHclTerraform(struct?: AwsRegistry.AuthorizingClaimMatchValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function tfRegistryAuthorizingClaimMatchValuePropertyToHclTerraform(struc
       storageClassType: "string",
     },
     claim_match_value: {
-      value: cdktn.listMapperHcl(tfRegistryClaimMatchValuePropertyToHclTerraform, true)(struct!.claimMatchValue),
+      value: cdktn.listMapperHcl(awsRegistryClaimMatchValuePropertyToHclTerraform, true)(struct!.claimMatchValue),
       isBlock: true,
       type: "list",
       storageClassType: "ClaimMatchValuePropertyList",
@@ -463,7 +463,7 @@ export function tfRegistryAuthorizingClaimMatchValuePropertyToHclTerraform(struc
 }
 
 
-export function tfRegistryCustomClaimPropertyToTerraform(struct?: TfRegistry.CustomClaimProperty | cdktn.IResolvable): any {
+export function awsRegistryCustomClaimPropertyToTerraform(struct?: AwsRegistry.CustomClaimProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,12 +471,12 @@ export function tfRegistryCustomClaimPropertyToTerraform(struct?: TfRegistry.Cus
   return {
     inbound_token_claim_name: cdktn.stringToTerraform(struct!.inboundTokenClaimName),
     inbound_token_claim_value_type: cdktn.stringToTerraform(struct!.inboundTokenClaimValueType),
-    authorizing_claim_match_value: cdktn.listMapper(tfRegistryAuthorizingClaimMatchValuePropertyToTerraform, true)(struct!.authorizingClaimMatchValue),
+    authorizing_claim_match_value: cdktn.listMapper(awsRegistryAuthorizingClaimMatchValuePropertyToTerraform, true)(struct!.authorizingClaimMatchValue),
   }
 }
 
 
-export function tfRegistryCustomClaimPropertyToHclTerraform(struct?: TfRegistry.CustomClaimProperty | cdktn.IResolvable): any {
+export function awsRegistryCustomClaimPropertyToHclTerraform(struct?: AwsRegistry.CustomClaimProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function tfRegistryCustomClaimPropertyToHclTerraform(struct?: TfRegistry.
       storageClassType: "string",
     },
     authorizing_claim_match_value: {
-      value: cdktn.listMapperHcl(tfRegistryAuthorizingClaimMatchValuePropertyToHclTerraform, true)(struct!.authorizingClaimMatchValue),
+      value: cdktn.listMapperHcl(awsRegistryAuthorizingClaimMatchValuePropertyToHclTerraform, true)(struct!.authorizingClaimMatchValue),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizingClaimMatchValuePropertyList",
@@ -507,7 +507,7 @@ export function tfRegistryCustomClaimPropertyToHclTerraform(struct?: TfRegistry.
 }
 
 
-export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToTerraform(struct?: TfRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToTerraform(struct?: AwsRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -523,7 +523,7 @@ export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpo
 }
 
 
-export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToHclTerraform(struct?: TfRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToHclTerraform(struct?: AwsRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -572,7 +572,7 @@ export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpo
 }
 
 
-export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform(struct?: TfRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform(struct?: AwsRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,7 +583,7 @@ export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpo
 }
 
 
-export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform(struct?: TfRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform(struct?: AwsRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,32 +602,32 @@ export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpo
 }
 
 
-export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToTerraform(struct?: TfRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToTerraform(struct?: AwsRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    managed_vpc_resource: cdktn.listMapper(tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
-    self_managed_lattice_resource: cdktn.listMapper(tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
+    managed_vpc_resource: cdktn.listMapper(awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
+    self_managed_lattice_resource: cdktn.listMapper(awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
   }
 }
 
 
-export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToHclTerraform(struct?: TfRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToHclTerraform(struct?: AwsRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     managed_vpc_resource: {
-      value: cdktn.listMapperHcl(tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
+      value: cdktn.listMapperHcl(awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourcePropertyList",
     },
     self_managed_lattice_resource: {
-      value: cdktn.listMapperHcl(tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
+      value: cdktn.listMapperHcl(awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourcePropertyList",
@@ -639,7 +639,7 @@ export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpo
 }
 
 
-export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToTerraform(struct?: TfRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToTerraform(struct?: AwsRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -655,7 +655,7 @@ export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpo
 }
 
 
-export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToHclTerraform(struct?: TfRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToHclTerraform(struct?: AwsRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -704,7 +704,7 @@ export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpo
 }
 
 
-export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform(struct?: TfRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform(struct?: AwsRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -715,7 +715,7 @@ export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpo
 }
 
 
-export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform(struct?: TfRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform(struct?: AwsRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -734,32 +734,32 @@ export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpo
 }
 
 
-export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToTerraform(struct?: TfRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToTerraform(struct?: AwsRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    managed_vpc_resource: cdktn.listMapper(tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
-    self_managed_lattice_resource: cdktn.listMapper(tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
+    managed_vpc_resource: cdktn.listMapper(awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToTerraform, true)(struct!.managedVpcResource),
+    self_managed_lattice_resource: cdktn.listMapper(awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToTerraform, true)(struct!.selfManagedLatticeResource),
   }
 }
 
 
-export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToHclTerraform(struct?: TfRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToHclTerraform(struct?: AwsRegistry.AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     managed_vpc_resource: {
-      value: cdktn.listMapperHcl(tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
+      value: cdktn.listMapperHcl(awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyToHclTerraform, true)(struct!.managedVpcResource),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourcePropertyList",
     },
     self_managed_lattice_resource: {
-      value: cdktn.listMapperHcl(tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
+      value: cdktn.listMapperHcl(awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyToHclTerraform, true)(struct!.selfManagedLatticeResource),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourcePropertyList",
@@ -771,19 +771,19 @@ export function tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpo
 }
 
 
-export function tfRegistryPrivateEndpointOverridesPropertyToTerraform(struct?: TfRegistry.PrivateEndpointOverridesProperty | cdktn.IResolvable): any {
+export function awsRegistryPrivateEndpointOverridesPropertyToTerraform(struct?: AwsRegistry.PrivateEndpointOverridesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     domain: cdktn.stringToTerraform(struct!.domain),
-    private_endpoint: cdktn.listMapper(tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToTerraform, true)(struct!.privateEndpoint),
+    private_endpoint: cdktn.listMapper(awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToTerraform, true)(struct!.privateEndpoint),
   }
 }
 
 
-export function tfRegistryPrivateEndpointOverridesPropertyToHclTerraform(struct?: TfRegistry.PrivateEndpointOverridesProperty | cdktn.IResolvable): any {
+export function awsRegistryPrivateEndpointOverridesPropertyToHclTerraform(struct?: AwsRegistry.PrivateEndpointOverridesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -796,7 +796,7 @@ export function tfRegistryPrivateEndpointOverridesPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     private_endpoint: {
-      value: cdktn.listMapperHcl(tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToHclTerraform, true)(struct!.privateEndpoint),
+      value: cdktn.listMapperHcl(awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyToHclTerraform, true)(struct!.privateEndpoint),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointPropertyList",
@@ -808,7 +808,7 @@ export function tfRegistryPrivateEndpointOverridesPropertyToHclTerraform(struct?
 }
 
 
-export function tfRegistryCustomJwtAuthorizerPropertyToTerraform(struct?: TfRegistry.CustomJwtAuthorizerProperty | cdktn.IResolvable): any {
+export function awsRegistryCustomJwtAuthorizerPropertyToTerraform(struct?: AwsRegistry.CustomJwtAuthorizerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -818,15 +818,15 @@ export function tfRegistryCustomJwtAuthorizerPropertyToTerraform(struct?: TfRegi
     allowed_clients: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.allowedClients),
     allowed_scopes: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.allowedScopes),
     discovery_url: cdktn.stringToTerraform(struct!.discoveryUrl),
-    allowed_workload_configuration: cdktn.listMapper(tfRegistryAllowedWorkloadConfigurationPropertyToTerraform, true)(struct!.allowedWorkloadConfiguration),
-    custom_claim: cdktn.listMapper(tfRegistryCustomClaimPropertyToTerraform, true)(struct!.customClaim),
-    private_endpoint: cdktn.listMapper(tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToTerraform, true)(struct!.privateEndpoint),
-    private_endpoint_overrides: cdktn.listMapper(tfRegistryPrivateEndpointOverridesPropertyToTerraform, true)(struct!.privateEndpointOverrides),
+    allowed_workload_configuration: cdktn.listMapper(awsRegistryAllowedWorkloadConfigurationPropertyToTerraform, true)(struct!.allowedWorkloadConfiguration),
+    custom_claim: cdktn.listMapper(awsRegistryCustomClaimPropertyToTerraform, true)(struct!.customClaim),
+    private_endpoint: cdktn.listMapper(awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToTerraform, true)(struct!.privateEndpoint),
+    private_endpoint_overrides: cdktn.listMapper(awsRegistryPrivateEndpointOverridesPropertyToTerraform, true)(struct!.privateEndpointOverrides),
   }
 }
 
 
-export function tfRegistryCustomJwtAuthorizerPropertyToHclTerraform(struct?: TfRegistry.CustomJwtAuthorizerProperty | cdktn.IResolvable): any {
+export function awsRegistryCustomJwtAuthorizerPropertyToHclTerraform(struct?: AwsRegistry.CustomJwtAuthorizerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -857,25 +857,25 @@ export function tfRegistryCustomJwtAuthorizerPropertyToHclTerraform(struct?: TfR
       storageClassType: "string",
     },
     allowed_workload_configuration: {
-      value: cdktn.listMapperHcl(tfRegistryAllowedWorkloadConfigurationPropertyToHclTerraform, true)(struct!.allowedWorkloadConfiguration),
+      value: cdktn.listMapperHcl(awsRegistryAllowedWorkloadConfigurationPropertyToHclTerraform, true)(struct!.allowedWorkloadConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AllowedWorkloadConfigurationPropertyList",
     },
     custom_claim: {
-      value: cdktn.listMapperHcl(tfRegistryCustomClaimPropertyToHclTerraform, true)(struct!.customClaim),
+      value: cdktn.listMapperHcl(awsRegistryCustomClaimPropertyToHclTerraform, true)(struct!.customClaim),
       isBlock: true,
       type: "set",
       storageClassType: "CustomClaimPropertyList",
     },
     private_endpoint: {
-      value: cdktn.listMapperHcl(tfRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToHclTerraform, true)(struct!.privateEndpoint),
+      value: cdktn.listMapperHcl(awsRegistryAuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyToHclTerraform, true)(struct!.privateEndpoint),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyList",
     },
     private_endpoint_overrides: {
-      value: cdktn.listMapperHcl(tfRegistryPrivateEndpointOverridesPropertyToHclTerraform, true)(struct!.privateEndpointOverrides),
+      value: cdktn.listMapperHcl(awsRegistryPrivateEndpointOverridesPropertyToHclTerraform, true)(struct!.privateEndpointOverrides),
       isBlock: true,
       type: "list",
       storageClassType: "PrivateEndpointOverridesPropertyList",
@@ -887,25 +887,25 @@ export function tfRegistryCustomJwtAuthorizerPropertyToHclTerraform(struct?: TfR
 }
 
 
-export function tfRegistryAuthorizerConfigurationPropertyToTerraform(struct?: TfRegistry.AuthorizerConfigurationProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationPropertyToTerraform(struct?: AwsRegistry.AuthorizerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_jwt_authorizer: cdktn.listMapper(tfRegistryCustomJwtAuthorizerPropertyToTerraform, true)(struct!.customJwtAuthorizer),
+    custom_jwt_authorizer: cdktn.listMapper(awsRegistryCustomJwtAuthorizerPropertyToTerraform, true)(struct!.customJwtAuthorizer),
   }
 }
 
 
-export function tfRegistryAuthorizerConfigurationPropertyToHclTerraform(struct?: TfRegistry.AuthorizerConfigurationProperty | cdktn.IResolvable): any {
+export function awsRegistryAuthorizerConfigurationPropertyToHclTerraform(struct?: AwsRegistry.AuthorizerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_jwt_authorizer: {
-      value: cdktn.listMapperHcl(tfRegistryCustomJwtAuthorizerPropertyToHclTerraform, true)(struct!.customJwtAuthorizer),
+      value: cdktn.listMapperHcl(awsRegistryCustomJwtAuthorizerPropertyToHclTerraform, true)(struct!.customJwtAuthorizer),
       isBlock: true,
       type: "list",
       storageClassType: "CustomJwtAuthorizerPropertyList",
@@ -917,7 +917,7 @@ export function tfRegistryAuthorizerConfigurationPropertyToHclTerraform(struct?:
 }
 
 
-export function tfRegistryTimeoutsPropertyToTerraform(struct?: TfRegistry.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRegistryTimeoutsPropertyToTerraform(struct?: AwsRegistry.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -930,7 +930,7 @@ export function tfRegistryTimeoutsPropertyToTerraform(struct?: TfRegistry.Timeou
 }
 
 
-export function tfRegistryTimeoutsPropertyToHclTerraform(struct?: TfRegistry.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRegistryTimeoutsPropertyToHclTerraform(struct?: AwsRegistry.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -961,10 +961,10 @@ export function tfRegistryTimeoutsPropertyToHclTerraform(struct?: TfRegistry.Tim
 }
 
 
-export namespace TfRegistry {
+export namespace AwsRegistry {
 export interface ApprovalConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#auto_approval TfRegistry#auto_approval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#auto_approval AwsRegistry#auto_approval}
   */
   readonly autoApproval?: boolean | cdktn.IResolvable;
 }
@@ -1050,7 +1050,7 @@ export class ApprovalConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface HostingEnvironmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#arn TfRegistry#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#arn AwsRegistry#arn}
   */
   readonly arn: string;
 }
@@ -1133,13 +1133,13 @@ export class HostingEnvironmentPropertyList extends cdktn.ComplexList {
 }
 export interface AllowedWorkloadConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#workload_identities TfRegistry#workload_identities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#workload_identities AwsRegistry#workload_identities}
   */
   readonly workloadIdentities?: string[];
   /**
   * hosting_environment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#hosting_environment TfRegistry#hosting_environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#hosting_environment AwsRegistry#hosting_environment}
   */
   readonly hostingEnvironment?: HostingEnvironmentProperty[] | cdktn.IResolvable;
 }
@@ -1247,11 +1247,11 @@ export class AllowedWorkloadConfigurationPropertyList extends cdktn.ComplexList 
 }
 export interface ClaimMatchValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#match_value_string TfRegistry#match_value_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#match_value_string AwsRegistry#match_value_string}
   */
   readonly matchValueString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#match_value_string_list TfRegistry#match_value_string_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#match_value_string_list AwsRegistry#match_value_string_list}
   */
   readonly matchValueStringList?: string[];
 }
@@ -1359,13 +1359,13 @@ export class ClaimMatchValuePropertyList extends cdktn.ComplexList {
 }
 export interface AuthorizingClaimMatchValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#claim_match_operator TfRegistry#claim_match_operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#claim_match_operator AwsRegistry#claim_match_operator}
   */
   readonly claimMatchOperator: string;
   /**
   * claim_match_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#claim_match_value TfRegistry#claim_match_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#claim_match_value AwsRegistry#claim_match_value}
   */
   readonly claimMatchValue?: ClaimMatchValueProperty[] | cdktn.IResolvable;
 }
@@ -1470,17 +1470,17 @@ export class AuthorizingClaimMatchValuePropertyList extends cdktn.ComplexList {
 }
 export interface CustomClaimProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#inbound_token_claim_name TfRegistry#inbound_token_claim_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#inbound_token_claim_name AwsRegistry#inbound_token_claim_name}
   */
   readonly inboundTokenClaimName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#inbound_token_claim_value_type TfRegistry#inbound_token_claim_value_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#inbound_token_claim_value_type AwsRegistry#inbound_token_claim_value_type}
   */
   readonly inboundTokenClaimValueType: string;
   /**
   * authorizing_claim_match_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#authorizing_claim_match_value TfRegistry#authorizing_claim_match_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#authorizing_claim_match_value AwsRegistry#authorizing_claim_match_value}
   */
   readonly authorizingClaimMatchValue?: AuthorizingClaimMatchValueProperty[] | cdktn.IResolvable;
 }
@@ -1604,27 +1604,27 @@ export class CustomClaimPropertyList extends cdktn.ComplexList {
 }
 export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#endpoint_ip_address_type TfRegistry#endpoint_ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#endpoint_ip_address_type AwsRegistry#endpoint_ip_address_type}
   */
   readonly endpointIpAddressType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#routing_domain TfRegistry#routing_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#routing_domain AwsRegistry#routing_domain}
   */
   readonly routingDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#security_group_ids TfRegistry#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#security_group_ids AwsRegistry#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#subnet_ids TfRegistry#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#subnet_ids AwsRegistry#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#tags TfRegistry#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#tags AwsRegistry#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#vpc_identifier TfRegistry#vpc_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#vpc_identifier AwsRegistry#vpc_identifier}
   */
   readonly vpcIdentifier: string;
 }
@@ -1811,7 +1811,7 @@ export class AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpc
 }
 export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#resource_configuration_identifier TfRegistry#resource_configuration_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#resource_configuration_identifier AwsRegistry#resource_configuration_identifier}
   */
   readonly resourceConfigurationIdentifier: string;
 }
@@ -1896,13 +1896,13 @@ export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProper
   /**
   * managed_vpc_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#managed_vpc_resource TfRegistry#managed_vpc_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#managed_vpc_resource AwsRegistry#managed_vpc_resource}
   */
   readonly managedVpcResource?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointManagedVpcResourceProperty[] | cdktn.IResolvable;
   /**
   * self_managed_lattice_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#self_managed_lattice_resource TfRegistry#self_managed_lattice_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#self_managed_lattice_resource AwsRegistry#self_managed_lattice_resource}
   */
   readonly selfManagedLatticeResource?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointSelfManagedLatticeResourceProperty[] | cdktn.IResolvable;
 }
@@ -2010,27 +2010,27 @@ export class AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointPropertyLi
 }
 export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#endpoint_ip_address_type TfRegistry#endpoint_ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#endpoint_ip_address_type AwsRegistry#endpoint_ip_address_type}
   */
   readonly endpointIpAddressType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#routing_domain TfRegistry#routing_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#routing_domain AwsRegistry#routing_domain}
   */
   readonly routingDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#security_group_ids TfRegistry#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#security_group_ids AwsRegistry#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#subnet_ids TfRegistry#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#subnet_ids AwsRegistry#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#tags TfRegistry#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#tags AwsRegistry#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#vpc_identifier TfRegistry#vpc_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#vpc_identifier AwsRegistry#vpc_identifier}
   */
   readonly vpcIdentifier: string;
 }
@@ -2217,7 +2217,7 @@ export class AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesP
 }
 export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#resource_configuration_identifier TfRegistry#resource_configuration_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#resource_configuration_identifier AwsRegistry#resource_configuration_identifier}
   */
   readonly resourceConfigurationIdentifier: string;
 }
@@ -2302,13 +2302,13 @@ export interface AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverri
   /**
   * managed_vpc_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#managed_vpc_resource TfRegistry#managed_vpc_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#managed_vpc_resource AwsRegistry#managed_vpc_resource}
   */
   readonly managedVpcResource?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointManagedVpcResourceProperty[] | cdktn.IResolvable;
   /**
   * self_managed_lattice_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#self_managed_lattice_resource TfRegistry#self_managed_lattice_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#self_managed_lattice_resource AwsRegistry#self_managed_lattice_resource}
   */
   readonly selfManagedLatticeResource?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointSelfManagedLatticeResourceProperty[] | cdktn.IResolvable;
 }
@@ -2416,13 +2416,13 @@ export class AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesP
 }
 export interface PrivateEndpointOverridesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#domain TfRegistry#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#domain AwsRegistry#domain}
   */
   readonly domain: string;
   /**
   * private_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#private_endpoint TfRegistry#private_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#private_endpoint AwsRegistry#private_endpoint}
   */
   readonly privateEndpoint?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointOverridesPrivateEndpointProperty[] | cdktn.IResolvable;
 }
@@ -2527,43 +2527,43 @@ export class PrivateEndpointOverridesPropertyList extends cdktn.ComplexList {
 }
 export interface CustomJwtAuthorizerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#allowed_audience TfRegistry#allowed_audience}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#allowed_audience AwsRegistry#allowed_audience}
   */
   readonly allowedAudience?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#allowed_clients TfRegistry#allowed_clients}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#allowed_clients AwsRegistry#allowed_clients}
   */
   readonly allowedClients?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#allowed_scopes TfRegistry#allowed_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#allowed_scopes AwsRegistry#allowed_scopes}
   */
   readonly allowedScopes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#discovery_url TfRegistry#discovery_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#discovery_url AwsRegistry#discovery_url}
   */
   readonly discoveryUrl: string;
   /**
   * allowed_workload_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#allowed_workload_configuration TfRegistry#allowed_workload_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#allowed_workload_configuration AwsRegistry#allowed_workload_configuration}
   */
   readonly allowedWorkloadConfiguration?: AllowedWorkloadConfigurationProperty[] | cdktn.IResolvable;
   /**
   * custom_claim block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#custom_claim TfRegistry#custom_claim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#custom_claim AwsRegistry#custom_claim}
   */
   readonly customClaim?: CustomClaimProperty[] | cdktn.IResolvable;
   /**
   * private_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#private_endpoint TfRegistry#private_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#private_endpoint AwsRegistry#private_endpoint}
   */
   readonly privateEndpoint?: AuthorizerConfigurationCustomJwtAuthorizerPrivateEndpointProperty[] | cdktn.IResolvable;
   /**
   * private_endpoint_overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#private_endpoint_overrides TfRegistry#private_endpoint_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#private_endpoint_overrides AwsRegistry#private_endpoint_overrides}
   */
   readonly privateEndpointOverrides?: PrivateEndpointOverridesProperty[] | cdktn.IResolvable;
 }
@@ -2802,7 +2802,7 @@ export interface AuthorizerConfigurationProperty {
   /**
   * custom_jwt_authorizer block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#custom_jwt_authorizer TfRegistry#custom_jwt_authorizer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#custom_jwt_authorizer AwsRegistry#custom_jwt_authorizer}
   */
   readonly customJwtAuthorizer?: CustomJwtAuthorizerProperty[] | cdktn.IResolvable;
 }
@@ -2890,19 +2890,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#create TfRegistry#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#create AwsRegistry#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#delete TfRegistry#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#delete AwsRegistry#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#update TfRegistry#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_registry#update AwsRegistry#update}
   */
   readonly update?: string;
 }

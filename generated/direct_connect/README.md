@@ -8,6 +8,6 @@ Do not edit by hand.
 
 This package is `private: true` and is never published to npm. It exists to be compiled by
 `jsii` and packed by `jsii-pacmak`; the Go distribution is
-`github.com/cdktn-io/cdktn-aws-go/awsdirectconnect`.
+`github.com/cdktn-io/cdktn-aws-go/directconnect`.
 
 Every construct here needs an `AwsProvider` in the same stack — see `@cdktn/aws-provider`.

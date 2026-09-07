@@ -5,69 +5,69 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCollaborationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCollaborationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#analytics_engine TfCollaboration#analytics_engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#analytics_engine AwsCollaboration#analytics_engine}
   */
   readonly analyticsEngine?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#creator_display_name TfCollaboration#creator_display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#creator_display_name AwsCollaboration#creator_display_name}
   */
   readonly creatorDisplayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#creator_member_abilities TfCollaboration#creator_member_abilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#creator_member_abilities AwsCollaboration#creator_member_abilities}
   */
   readonly creatorMemberAbilities: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#description TfCollaboration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#description AwsCollaboration#description}
   */
   readonly description: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#name TfCollaboration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#name AwsCollaboration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#query_log_status TfCollaboration#query_log_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#query_log_status AwsCollaboration#query_log_status}
   */
   readonly queryLogStatus: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#region TfCollaboration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#region AwsCollaboration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#tags TfCollaboration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#tags AwsCollaboration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#tags_all TfCollaboration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#tags_all AwsCollaboration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * data_encryption_metadata block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#data_encryption_metadata TfCollaboration#data_encryption_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#data_encryption_metadata AwsCollaboration#data_encryption_metadata}
   */
-  readonly dataEncryptionMetadata?: TfCollaboration.DataEncryptionMetadataProperty;
+  readonly dataEncryptionMetadata?: AwsCollaboration.DataEncryptionMetadataProperty;
   /**
   * member block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#member TfCollaboration#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#member AwsCollaboration#member}
   */
-  readonly member?: TfCollaboration.MemberProperty[] | cdktn.IResolvable;
+  readonly member?: AwsCollaboration.MemberProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#timeouts TfCollaboration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#timeouts AwsCollaboration#timeouts}
   */
-  readonly timeouts?: TfCollaboration.TimeoutsProperty;
+  readonly timeouts?: AwsCollaboration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration aws_cleanrooms_collaboration}
 */
-export class TfCollaboration extends cdktn.TerraformResource {
+export class AwsCollaboration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -78,11 +78,11 @@ export class TfCollaboration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCollaboration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCollaboration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCollaboration to import
-  * @param importFromId The id of the existing TfCollaboration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCollaboration to import is found
+  * @param importToId The construct id used in the generated config for the AwsCollaboration to import
+  * @param importFromId The id of the existing AwsCollaboration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCollaboration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cleanrooms_collaboration", importId: importFromId, provider });
@@ -97,9 +97,9 @@ export class TfCollaboration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCollaborationConfig
+  * @param options AwsCollaborationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCollaborationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCollaborationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cleanrooms_collaboration',
       terraformGeneratorMetadata: {
@@ -283,11 +283,11 @@ export class TfCollaboration extends cdktn.TerraformResource {
   }
 
   // data_encryption_metadata - computed: false, optional: true, required: false
-  private _dataEncryptionMetadata = new TfCollaboration.DataEncryptionMetadataPropertyOutputReference(this, "data_encryption_metadata");
+  private _dataEncryptionMetadata = new AwsCollaboration.DataEncryptionMetadataPropertyOutputReference(this, "data_encryption_metadata");
   public get dataEncryptionMetadata() {
     return this._dataEncryptionMetadata;
   }
-  public putDataEncryptionMetadata(value: TfCollaboration.DataEncryptionMetadataProperty) {
+  public putDataEncryptionMetadata(value: AwsCollaboration.DataEncryptionMetadataProperty) {
     this._dataEncryptionMetadata.internalValue = value;
   }
   public resetDataEncryptionMetadata() {
@@ -299,11 +299,11 @@ export class TfCollaboration extends cdktn.TerraformResource {
   }
 
   // member - computed: false, optional: true, required: false
-  private _member = new TfCollaboration.MemberPropertyList(this, "member", true);
+  private _member = new AwsCollaboration.MemberPropertyList(this, "member", true);
   public get member() {
     return this._member;
   }
-  public putMember(value: TfCollaboration.MemberProperty[] | cdktn.IResolvable) {
+  public putMember(value: AwsCollaboration.MemberProperty[] | cdktn.IResolvable) {
     this._member.internalValue = value;
   }
   public resetMember() {
@@ -315,11 +315,11 @@ export class TfCollaboration extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCollaboration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCollaboration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCollaboration.TimeoutsProperty) {
+  public putTimeouts(value: AwsCollaboration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -345,9 +345,9 @@ export class TfCollaboration extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      data_encryption_metadata: tfCollaborationDataEncryptionMetadataPropertyToTerraform(this._dataEncryptionMetadata.internalValue),
-      member: cdktn.listMapper(tfCollaborationMemberPropertyToTerraform, true)(this._member.internalValue),
-      timeouts: tfCollaborationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      data_encryption_metadata: awsCollaborationDataEncryptionMetadataPropertyToTerraform(this._dataEncryptionMetadata.internalValue),
+      member: cdktn.listMapper(awsCollaborationMemberPropertyToTerraform, true)(this._member.internalValue),
+      timeouts: awsCollaborationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -408,22 +408,22 @@ export class TfCollaboration extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       data_encryption_metadata: {
-        value: tfCollaborationDataEncryptionMetadataPropertyToHclTerraform(this._dataEncryptionMetadata.internalValue),
+        value: awsCollaborationDataEncryptionMetadataPropertyToHclTerraform(this._dataEncryptionMetadata.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCollaboration.DataEncryptionMetadataPropertyList",
+        storageClassType: "AwsCollaboration.DataEncryptionMetadataPropertyList",
       },
       member: {
-        value: cdktn.listMapperHcl(tfCollaborationMemberPropertyToHclTerraform, true)(this._member.internalValue),
+        value: cdktn.listMapperHcl(awsCollaborationMemberPropertyToHclTerraform, true)(this._member.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfCollaboration.MemberPropertyList",
+        storageClassType: "AwsCollaboration.MemberPropertyList",
       },
       timeouts: {
-        value: tfCollaborationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCollaborationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCollaboration.TimeoutsProperty",
+        storageClassType: "AwsCollaboration.TimeoutsProperty",
       },
     };
 
@@ -432,7 +432,7 @@ export class TfCollaboration extends cdktn.TerraformResource {
   }
 }
 
-export function tfCollaborationDataEncryptionMetadataPropertyToTerraform(struct?: TfCollaboration.DataEncryptionMetadataPropertyOutputReference | TfCollaboration.DataEncryptionMetadataProperty): any {
+export function awsCollaborationDataEncryptionMetadataPropertyToTerraform(struct?: AwsCollaboration.DataEncryptionMetadataPropertyOutputReference | AwsCollaboration.DataEncryptionMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,7 +446,7 @@ export function tfCollaborationDataEncryptionMetadataPropertyToTerraform(struct?
 }
 
 
-export function tfCollaborationDataEncryptionMetadataPropertyToHclTerraform(struct?: TfCollaboration.DataEncryptionMetadataPropertyOutputReference | TfCollaboration.DataEncryptionMetadataProperty): any {
+export function awsCollaborationDataEncryptionMetadataPropertyToHclTerraform(struct?: AwsCollaboration.DataEncryptionMetadataPropertyOutputReference | AwsCollaboration.DataEncryptionMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function tfCollaborationDataEncryptionMetadataPropertyToHclTerraform(stru
 }
 
 
-export function tfCollaborationMemberPropertyToTerraform(struct?: TfCollaboration.MemberProperty | cdktn.IResolvable): any {
+export function awsCollaborationMemberPropertyToTerraform(struct?: AwsCollaboration.MemberProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function tfCollaborationMemberPropertyToTerraform(struct?: TfCollaboratio
 }
 
 
-export function tfCollaborationMemberPropertyToHclTerraform(struct?: TfCollaboration.MemberProperty | cdktn.IResolvable): any {
+export function awsCollaborationMemberPropertyToHclTerraform(struct?: AwsCollaboration.MemberProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -527,7 +527,7 @@ export function tfCollaborationMemberPropertyToHclTerraform(struct?: TfCollabora
 }
 
 
-export function tfCollaborationTimeoutsPropertyToTerraform(struct?: TfCollaboration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCollaborationTimeoutsPropertyToTerraform(struct?: AwsCollaboration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -540,7 +540,7 @@ export function tfCollaborationTimeoutsPropertyToTerraform(struct?: TfCollaborat
 }
 
 
-export function tfCollaborationTimeoutsPropertyToHclTerraform(struct?: TfCollaboration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCollaborationTimeoutsPropertyToHclTerraform(struct?: AwsCollaboration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -571,22 +571,22 @@ export function tfCollaborationTimeoutsPropertyToHclTerraform(struct?: TfCollabo
 }
 
 
-export namespace TfCollaboration {
+export namespace AwsCollaboration {
 export interface DataEncryptionMetadataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#allow_clear_text TfCollaboration#allow_clear_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#allow_clear_text AwsCollaboration#allow_clear_text}
   */
   readonly allowClearText: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#allow_duplicates TfCollaboration#allow_duplicates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#allow_duplicates AwsCollaboration#allow_duplicates}
   */
   readonly allowDuplicates: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#allow_joins_on_columns_with_different_names TfCollaboration#allow_joins_on_columns_with_different_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#allow_joins_on_columns_with_different_names AwsCollaboration#allow_joins_on_columns_with_different_names}
   */
   readonly allowJoinsOnColumnsWithDifferentNames: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#preserve_nulls TfCollaboration#preserve_nulls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#preserve_nulls AwsCollaboration#preserve_nulls}
   */
   readonly preserveNulls: boolean | cdktn.IResolvable;
 }
@@ -694,15 +694,15 @@ export class DataEncryptionMetadataPropertyOutputReference extends cdktn.Complex
 }
 export interface MemberProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#account_id TfCollaboration#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#account_id AwsCollaboration#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#display_name TfCollaboration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#display_name AwsCollaboration#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#member_abilities TfCollaboration#member_abilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#member_abilities AwsCollaboration#member_abilities}
   */
   readonly memberAbilities: string[];
 }
@@ -828,15 +828,15 @@ export class MemberPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#create TfCollaboration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#create AwsCollaboration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#delete TfCollaboration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#delete AwsCollaboration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#update TfCollaboration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#update AwsCollaboration#update}
   */
   readonly update?: string;
 }

@@ -5,82 +5,82 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfNatGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface AwsNatGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#allocation_id TfNatGateway#allocation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#allocation_id AwsNatGateway#allocation_id}
   */
   readonly allocationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#availability_mode TfNatGateway#availability_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#availability_mode AwsNatGateway#availability_mode}
   */
   readonly availabilityMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#connectivity_type TfNatGateway#connectivity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#connectivity_type AwsNatGateway#connectivity_type}
   */
   readonly connectivityType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#id TfNatGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#id AwsNatGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#private_ip TfNatGateway#private_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#private_ip AwsNatGateway#private_ip}
   */
   readonly privateIp?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#region TfNatGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#region AwsNatGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#secondary_allocation_ids TfNatGateway#secondary_allocation_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#secondary_allocation_ids AwsNatGateway#secondary_allocation_ids}
   */
   readonly secondaryAllocationIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#secondary_private_ip_address_count TfNatGateway#secondary_private_ip_address_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#secondary_private_ip_address_count AwsNatGateway#secondary_private_ip_address_count}
   */
   readonly secondaryPrivateIpAddressCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#secondary_private_ip_addresses TfNatGateway#secondary_private_ip_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#secondary_private_ip_addresses AwsNatGateway#secondary_private_ip_addresses}
   */
   readonly secondaryPrivateIpAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#subnet_id TfNatGateway#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#subnet_id AwsNatGateway#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#tags TfNatGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#tags AwsNatGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#tags_all TfNatGateway#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#tags_all AwsNatGateway#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#vpc_id TfNatGateway#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#vpc_id AwsNatGateway#vpc_id}
   */
   readonly vpcId?: string;
   /**
   * availability_zone_address block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#availability_zone_address TfNatGateway#availability_zone_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#availability_zone_address AwsNatGateway#availability_zone_address}
   */
-  readonly availabilityZoneAddress?: TfNatGateway.AvailabilityZoneAddressProperty[] | cdktn.IResolvable;
+  readonly availabilityZoneAddress?: AwsNatGateway.AvailabilityZoneAddressProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#timeouts TfNatGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#timeouts AwsNatGateway#timeouts}
   */
-  readonly timeouts?: TfNatGateway.TimeoutsProperty;
+  readonly timeouts?: AwsNatGateway.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway aws_nat_gateway}
 */
-export class TfNatGateway extends cdktn.TerraformResource {
+export class AwsNatGateway extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -91,11 +91,11 @@ export class TfNatGateway extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfNatGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsNatGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfNatGateway to import
-  * @param importFromId The id of the existing TfNatGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfNatGateway to import is found
+  * @param importToId The construct id used in the generated config for the AwsNatGateway to import
+  * @param importFromId The id of the existing AwsNatGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNatGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_nat_gateway", importId: importFromId, provider });
@@ -110,9 +110,9 @@ export class TfNatGateway extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfNatGatewayConfig = {}
+  * @param options AwsNatGatewayConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfNatGatewayConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsNatGatewayConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_nat_gateway',
       terraformGeneratorMetadata: {
@@ -271,7 +271,7 @@ export class TfNatGateway extends cdktn.TerraformResource {
   }
 
   // regional_nat_gateway_address - computed: true, optional: false, required: false
-  private _regionalNatGatewayAddress = new TfNatGateway.RegionalNatGatewayAddressPropertyList(this, "regional_nat_gateway_address", true);
+  private _regionalNatGatewayAddress = new AwsNatGateway.RegionalNatGatewayAddressPropertyList(this, "regional_nat_gateway_address", true);
   public get regionalNatGatewayAddress() {
     return this._regionalNatGatewayAddress;
   }
@@ -399,11 +399,11 @@ export class TfNatGateway extends cdktn.TerraformResource {
   }
 
   // availability_zone_address - computed: false, optional: true, required: false
-  private _availabilityZoneAddress = new TfNatGateway.AvailabilityZoneAddressPropertyList(this, "availability_zone_address", true);
+  private _availabilityZoneAddress = new AwsNatGateway.AvailabilityZoneAddressPropertyList(this, "availability_zone_address", true);
   public get availabilityZoneAddress() {
     return this._availabilityZoneAddress;
   }
-  public putAvailabilityZoneAddress(value: TfNatGateway.AvailabilityZoneAddressProperty[] | cdktn.IResolvable) {
+  public putAvailabilityZoneAddress(value: AwsNatGateway.AvailabilityZoneAddressProperty[] | cdktn.IResolvable) {
     this._availabilityZoneAddress.internalValue = value;
   }
   public resetAvailabilityZoneAddress() {
@@ -415,11 +415,11 @@ export class TfNatGateway extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfNatGateway.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsNatGateway.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfNatGateway.TimeoutsProperty) {
+  public putTimeouts(value: AwsNatGateway.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -449,8 +449,8 @@ export class TfNatGateway extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      availability_zone_address: cdktn.listMapper(tfNatGatewayAvailabilityZoneAddressPropertyToTerraform, true)(this._availabilityZoneAddress.internalValue),
-      timeouts: tfNatGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      availability_zone_address: cdktn.listMapper(awsNatGatewayAvailabilityZoneAddressPropertyToTerraform, true)(this._availabilityZoneAddress.internalValue),
+      timeouts: awsNatGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -535,16 +535,16 @@ export class TfNatGateway extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       availability_zone_address: {
-        value: cdktn.listMapperHcl(tfNatGatewayAvailabilityZoneAddressPropertyToHclTerraform, true)(this._availabilityZoneAddress.internalValue),
+        value: cdktn.listMapperHcl(awsNatGatewayAvailabilityZoneAddressPropertyToHclTerraform, true)(this._availabilityZoneAddress.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfNatGateway.AvailabilityZoneAddressPropertyList",
+        storageClassType: "AwsNatGateway.AvailabilityZoneAddressPropertyList",
       },
       timeouts: {
-        value: tfNatGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsNatGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfNatGateway.TimeoutsProperty",
+        storageClassType: "AwsNatGateway.TimeoutsProperty",
       },
     };
 
@@ -553,7 +553,7 @@ export class TfNatGateway extends cdktn.TerraformResource {
   }
 }
 
-export function tfNatGatewayRegionalNatGatewayAddressPropertyToTerraform(struct?: TfNatGateway.RegionalNatGatewayAddressProperty): any {
+export function awsNatGatewayRegionalNatGatewayAddressPropertyToTerraform(struct?: AwsNatGateway.RegionalNatGatewayAddressProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function tfNatGatewayRegionalNatGatewayAddressPropertyToTerraform(struct?
 }
 
 
-export function tfNatGatewayRegionalNatGatewayAddressPropertyToHclTerraform(struct?: TfNatGateway.RegionalNatGatewayAddressProperty): any {
+export function awsNatGatewayRegionalNatGatewayAddressPropertyToHclTerraform(struct?: AwsNatGateway.RegionalNatGatewayAddressProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function tfNatGatewayRegionalNatGatewayAddressPropertyToHclTerraform(stru
 }
 
 
-export function tfNatGatewayAvailabilityZoneAddressPropertyToTerraform(struct?: TfNatGateway.AvailabilityZoneAddressProperty | cdktn.IResolvable): any {
+export function awsNatGatewayAvailabilityZoneAddressPropertyToTerraform(struct?: AwsNatGateway.AvailabilityZoneAddressProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,7 +587,7 @@ export function tfNatGatewayAvailabilityZoneAddressPropertyToTerraform(struct?: 
 }
 
 
-export function tfNatGatewayAvailabilityZoneAddressPropertyToHclTerraform(struct?: TfNatGateway.AvailabilityZoneAddressProperty | cdktn.IResolvable): any {
+export function awsNatGatewayAvailabilityZoneAddressPropertyToHclTerraform(struct?: AwsNatGateway.AvailabilityZoneAddressProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -618,7 +618,7 @@ export function tfNatGatewayAvailabilityZoneAddressPropertyToHclTerraform(struct
 }
 
 
-export function tfNatGatewayTimeoutsPropertyToTerraform(struct?: TfNatGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsNatGatewayTimeoutsPropertyToTerraform(struct?: AwsNatGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -631,7 +631,7 @@ export function tfNatGatewayTimeoutsPropertyToTerraform(struct?: TfNatGateway.Ti
 }
 
 
-export function tfNatGatewayTimeoutsPropertyToHclTerraform(struct?: TfNatGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsNatGatewayTimeoutsPropertyToHclTerraform(struct?: AwsNatGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -662,7 +662,7 @@ export function tfNatGatewayTimeoutsPropertyToHclTerraform(struct?: TfNatGateway
 }
 
 
-export namespace TfNatGateway {
+export namespace AwsNatGateway {
 export interface RegionalNatGatewayAddressProperty {
 }
 export class RegionalNatGatewayAddressPropertyOutputReference extends cdktn.ComplexObject {
@@ -749,15 +749,15 @@ export class RegionalNatGatewayAddressPropertyList extends cdktn.ComplexList {
 }
 export interface AvailabilityZoneAddressProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#allocation_ids TfNatGateway#allocation_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#allocation_ids AwsNatGateway#allocation_ids}
   */
   readonly allocationIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#availability_zone TfNatGateway#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#availability_zone AwsNatGateway#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#availability_zone_id TfNatGateway#availability_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#availability_zone_id AwsNatGateway#availability_zone_id}
   */
   readonly availabilityZoneId?: string;
 }
@@ -887,15 +887,15 @@ export class AvailabilityZoneAddressPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#create TfNatGateway#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#create AwsNatGateway#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#delete TfNatGateway#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#delete AwsNatGateway#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#update TfNatGateway#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#update AwsNatGateway#update}
   */
   readonly update?: string;
 }

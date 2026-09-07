@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDefaultNetworkAclConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDefaultNetworkAclConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#default_network_acl_id TfDefaultNetworkAcl#default_network_acl_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#default_network_acl_id AwsDefaultNetworkAcl#default_network_acl_id}
   */
   readonly defaultNetworkAclId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#id TfDefaultNetworkAcl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#id AwsDefaultNetworkAcl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,39 +20,39 @@ export interface TfDefaultNetworkAclConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#region TfDefaultNetworkAcl#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#region AwsDefaultNetworkAcl#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#subnet_ids TfDefaultNetworkAcl#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#subnet_ids AwsDefaultNetworkAcl#subnet_ids}
   */
   readonly subnetIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#tags TfDefaultNetworkAcl#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#tags AwsDefaultNetworkAcl#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#tags_all TfDefaultNetworkAcl#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#tags_all AwsDefaultNetworkAcl#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * egress block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#egress TfDefaultNetworkAcl#egress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#egress AwsDefaultNetworkAcl#egress}
   */
-  readonly egress?: TfDefaultNetworkAcl.EgressProperty[] | cdktn.IResolvable;
+  readonly egress?: AwsDefaultNetworkAcl.EgressProperty[] | cdktn.IResolvable;
   /**
   * ingress block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#ingress TfDefaultNetworkAcl#ingress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#ingress AwsDefaultNetworkAcl#ingress}
   */
-  readonly ingress?: TfDefaultNetworkAcl.IngressProperty[] | cdktn.IResolvable;
+  readonly ingress?: AwsDefaultNetworkAcl.IngressProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl aws_default_network_acl}
 */
-export class TfDefaultNetworkAcl extends cdktn.TerraformResource {
+export class AwsDefaultNetworkAcl extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfDefaultNetworkAcl extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDefaultNetworkAcl resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDefaultNetworkAcl resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDefaultNetworkAcl to import
-  * @param importFromId The id of the existing TfDefaultNetworkAcl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDefaultNetworkAcl to import is found
+  * @param importToId The construct id used in the generated config for the AwsDefaultNetworkAcl to import
+  * @param importFromId The id of the existing AwsDefaultNetworkAcl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDefaultNetworkAcl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_default_network_acl", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfDefaultNetworkAcl extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDefaultNetworkAclConfig
+  * @param options AwsDefaultNetworkAclConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDefaultNetworkAclConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDefaultNetworkAclConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_default_network_acl',
       terraformGeneratorMetadata: {
@@ -223,11 +223,11 @@ export class TfDefaultNetworkAcl extends cdktn.TerraformResource {
   }
 
   // egress - computed: false, optional: true, required: false
-  private _egress = new TfDefaultNetworkAcl.EgressPropertyList(this, "egress", true);
+  private _egress = new AwsDefaultNetworkAcl.EgressPropertyList(this, "egress", true);
   public get egress() {
     return this._egress;
   }
-  public putEgress(value: TfDefaultNetworkAcl.EgressProperty[] | cdktn.IResolvable) {
+  public putEgress(value: AwsDefaultNetworkAcl.EgressProperty[] | cdktn.IResolvable) {
     this._egress.internalValue = value;
   }
   public resetEgress() {
@@ -239,11 +239,11 @@ export class TfDefaultNetworkAcl extends cdktn.TerraformResource {
   }
 
   // ingress - computed: false, optional: true, required: false
-  private _ingress = new TfDefaultNetworkAcl.IngressPropertyList(this, "ingress", true);
+  private _ingress = new AwsDefaultNetworkAcl.IngressPropertyList(this, "ingress", true);
   public get ingress() {
     return this._ingress;
   }
-  public putIngress(value: TfDefaultNetworkAcl.IngressProperty[] | cdktn.IResolvable) {
+  public putIngress(value: AwsDefaultNetworkAcl.IngressProperty[] | cdktn.IResolvable) {
     this._ingress.internalValue = value;
   }
   public resetIngress() {
@@ -266,8 +266,8 @@ export class TfDefaultNetworkAcl extends cdktn.TerraformResource {
       subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      egress: cdktn.listMapper(tfDefaultNetworkAclEgressPropertyToTerraform, true)(this._egress.internalValue),
-      ingress: cdktn.listMapper(tfDefaultNetworkAclIngressPropertyToTerraform, true)(this._ingress.internalValue),
+      egress: cdktn.listMapper(awsDefaultNetworkAclEgressPropertyToTerraform, true)(this._egress.internalValue),
+      ingress: cdktn.listMapper(awsDefaultNetworkAclIngressPropertyToTerraform, true)(this._ingress.internalValue),
     };
   }
 
@@ -310,16 +310,16 @@ export class TfDefaultNetworkAcl extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       egress: {
-        value: cdktn.listMapperHcl(tfDefaultNetworkAclEgressPropertyToHclTerraform, true)(this._egress.internalValue),
+        value: cdktn.listMapperHcl(awsDefaultNetworkAclEgressPropertyToHclTerraform, true)(this._egress.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDefaultNetworkAcl.EgressPropertyList",
+        storageClassType: "AwsDefaultNetworkAcl.EgressPropertyList",
       },
       ingress: {
-        value: cdktn.listMapperHcl(tfDefaultNetworkAclIngressPropertyToHclTerraform, true)(this._ingress.internalValue),
+        value: cdktn.listMapperHcl(awsDefaultNetworkAclIngressPropertyToHclTerraform, true)(this._ingress.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDefaultNetworkAcl.IngressPropertyList",
+        storageClassType: "AwsDefaultNetworkAcl.IngressPropertyList",
       },
     };
 
@@ -328,7 +328,7 @@ export class TfDefaultNetworkAcl extends cdktn.TerraformResource {
   }
 }
 
-export function tfDefaultNetworkAclEgressPropertyToTerraform(struct?: TfDefaultNetworkAcl.EgressProperty | cdktn.IResolvable): any {
+export function awsDefaultNetworkAclEgressPropertyToTerraform(struct?: AwsDefaultNetworkAcl.EgressProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfDefaultNetworkAclEgressPropertyToTerraform(struct?: TfDefaultN
 }
 
 
-export function tfDefaultNetworkAclEgressPropertyToHclTerraform(struct?: TfDefaultNetworkAcl.EgressProperty | cdktn.IResolvable): any {
+export function awsDefaultNetworkAclEgressPropertyToHclTerraform(struct?: AwsDefaultNetworkAcl.EgressProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function tfDefaultNetworkAclEgressPropertyToHclTerraform(struct?: TfDefau
 }
 
 
-export function tfDefaultNetworkAclIngressPropertyToTerraform(struct?: TfDefaultNetworkAcl.IngressProperty | cdktn.IResolvable): any {
+export function awsDefaultNetworkAclIngressPropertyToTerraform(struct?: AwsDefaultNetworkAcl.IngressProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function tfDefaultNetworkAclIngressPropertyToTerraform(struct?: TfDefault
 }
 
 
-export function tfDefaultNetworkAclIngressPropertyToHclTerraform(struct?: TfDefaultNetworkAcl.IngressProperty | cdktn.IResolvable): any {
+export function awsDefaultNetworkAclIngressPropertyToHclTerraform(struct?: AwsDefaultNetworkAcl.IngressProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,42 +500,42 @@ export function tfDefaultNetworkAclIngressPropertyToHclTerraform(struct?: TfDefa
 }
 
 
-export namespace TfDefaultNetworkAcl {
+export namespace AwsDefaultNetworkAcl {
 export interface EgressProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#action TfDefaultNetworkAcl#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#action AwsDefaultNetworkAcl#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#cidr_block TfDefaultNetworkAcl#cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#cidr_block AwsDefaultNetworkAcl#cidr_block}
   */
   readonly cidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#from_port TfDefaultNetworkAcl#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#from_port AwsDefaultNetworkAcl#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#icmp_code TfDefaultNetworkAcl#icmp_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#icmp_code AwsDefaultNetworkAcl#icmp_code}
   */
   readonly icmpCode?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#icmp_type TfDefaultNetworkAcl#icmp_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#icmp_type AwsDefaultNetworkAcl#icmp_type}
   */
   readonly icmpType?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#ipv6_cidr_block TfDefaultNetworkAcl#ipv6_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#ipv6_cidr_block AwsDefaultNetworkAcl#ipv6_cidr_block}
   */
   readonly ipv6CidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#protocol TfDefaultNetworkAcl#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#protocol AwsDefaultNetworkAcl#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#rule_no TfDefaultNetworkAcl#rule_no}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#rule_no AwsDefaultNetworkAcl#rule_no}
   */
   readonly ruleNo: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#to_port TfDefaultNetworkAcl#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#to_port AwsDefaultNetworkAcl#to_port}
   */
   readonly toPort: number;
 }
@@ -782,39 +782,39 @@ export class EgressPropertyList extends cdktn.ComplexList {
 }
 export interface IngressProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#action TfDefaultNetworkAcl#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#action AwsDefaultNetworkAcl#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#cidr_block TfDefaultNetworkAcl#cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#cidr_block AwsDefaultNetworkAcl#cidr_block}
   */
   readonly cidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#from_port TfDefaultNetworkAcl#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#from_port AwsDefaultNetworkAcl#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#icmp_code TfDefaultNetworkAcl#icmp_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#icmp_code AwsDefaultNetworkAcl#icmp_code}
   */
   readonly icmpCode?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#icmp_type TfDefaultNetworkAcl#icmp_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#icmp_type AwsDefaultNetworkAcl#icmp_type}
   */
   readonly icmpType?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#ipv6_cidr_block TfDefaultNetworkAcl#ipv6_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#ipv6_cidr_block AwsDefaultNetworkAcl#ipv6_cidr_block}
   */
   readonly ipv6CidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#protocol TfDefaultNetworkAcl#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#protocol AwsDefaultNetworkAcl#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#rule_no TfDefaultNetworkAcl#rule_no}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#rule_no AwsDefaultNetworkAcl#rule_no}
   */
   readonly ruleNo: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#to_port TfDefaultNetworkAcl#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#to_port AwsDefaultNetworkAcl#to_port}
   */
   readonly toPort: number;
 }

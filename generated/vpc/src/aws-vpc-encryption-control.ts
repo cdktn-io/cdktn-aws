@@ -5,69 +5,69 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEncryptionControlConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEncryptionControlConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#egress_only_internet_gateway_exclusion TfEncryptionControl#egress_only_internet_gateway_exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#egress_only_internet_gateway_exclusion AwsEncryptionControl#egress_only_internet_gateway_exclusion}
   */
   readonly egressOnlyInternetGatewayExclusion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#elastic_file_system_exclusion TfEncryptionControl#elastic_file_system_exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#elastic_file_system_exclusion AwsEncryptionControl#elastic_file_system_exclusion}
   */
   readonly elasticFileSystemExclusion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#internet_gateway_exclusion TfEncryptionControl#internet_gateway_exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#internet_gateway_exclusion AwsEncryptionControl#internet_gateway_exclusion}
   */
   readonly internetGatewayExclusion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#lambda_exclusion TfEncryptionControl#lambda_exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#lambda_exclusion AwsEncryptionControl#lambda_exclusion}
   */
   readonly lambdaExclusion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#mode TfEncryptionControl#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#mode AwsEncryptionControl#mode}
   */
   readonly mode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#nat_gateway_exclusion TfEncryptionControl#nat_gateway_exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#nat_gateway_exclusion AwsEncryptionControl#nat_gateway_exclusion}
   */
   readonly natGatewayExclusion?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#region TfEncryptionControl#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#region AwsEncryptionControl#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#tags TfEncryptionControl#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#tags AwsEncryptionControl#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#virtual_private_gateway_exclusion TfEncryptionControl#virtual_private_gateway_exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#virtual_private_gateway_exclusion AwsEncryptionControl#virtual_private_gateway_exclusion}
   */
   readonly virtualPrivateGatewayExclusion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#vpc_id TfEncryptionControl#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#vpc_id AwsEncryptionControl#vpc_id}
   */
   readonly vpcId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#vpc_lattice_exclusion TfEncryptionControl#vpc_lattice_exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#vpc_lattice_exclusion AwsEncryptionControl#vpc_lattice_exclusion}
   */
   readonly vpcLatticeExclusion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#vpc_peering_exclusion TfEncryptionControl#vpc_peering_exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#vpc_peering_exclusion AwsEncryptionControl#vpc_peering_exclusion}
   */
   readonly vpcPeeringExclusion?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#timeouts TfEncryptionControl#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#timeouts AwsEncryptionControl#timeouts}
   */
-  readonly timeouts?: TfEncryptionControl.TimeoutsProperty;
+  readonly timeouts?: AwsEncryptionControl.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control aws_vpc_encryption_control}
 */
-export class TfEncryptionControl extends cdktn.TerraformResource {
+export class AwsEncryptionControl extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -78,11 +78,11 @@ export class TfEncryptionControl extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEncryptionControl resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEncryptionControl resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEncryptionControl to import
-  * @param importFromId The id of the existing TfEncryptionControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEncryptionControl to import is found
+  * @param importToId The construct id used in the generated config for the AwsEncryptionControl to import
+  * @param importFromId The id of the existing AwsEncryptionControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEncryptionControl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_encryption_control", importId: importFromId, provider });
@@ -97,9 +97,9 @@ export class TfEncryptionControl extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEncryptionControlConfig
+  * @param options AwsEncryptionControlConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEncryptionControlConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEncryptionControlConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_encryption_control',
       terraformGeneratorMetadata: {
@@ -249,7 +249,7 @@ export class TfEncryptionControl extends cdktn.TerraformResource {
   }
 
   // resource_exclusions - computed: true, optional: false, required: false
-  private _resourceExclusions = new TfEncryptionControl.ResourceExclusionsPropertyOutputReference(this, "resource_exclusions");
+  private _resourceExclusions = new AwsEncryptionControl.ResourceExclusionsPropertyOutputReference(this, "resource_exclusions");
   public get resourceExclusions() {
     return this._resourceExclusions;
   }
@@ -348,11 +348,11 @@ export class TfEncryptionControl extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfEncryptionControl.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsEncryptionControl.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfEncryptionControl.TimeoutsProperty) {
+  public putTimeouts(value: AwsEncryptionControl.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -381,7 +381,7 @@ export class TfEncryptionControl extends cdktn.TerraformResource {
       vpc_id: cdktn.stringToTerraform(this._vpcId),
       vpc_lattice_exclusion: cdktn.stringToTerraform(this._vpcLatticeExclusion),
       vpc_peering_exclusion: cdktn.stringToTerraform(this._vpcPeeringExclusion),
-      timeouts: tfEncryptionControlTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsEncryptionControlTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -460,10 +460,10 @@ export class TfEncryptionControl extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfEncryptionControlTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsEncryptionControlTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfEncryptionControl.TimeoutsProperty",
+        storageClassType: "AwsEncryptionControl.TimeoutsProperty",
       },
     };
 
@@ -472,7 +472,7 @@ export class TfEncryptionControl extends cdktn.TerraformResource {
   }
 }
 
-export function tfEncryptionControlEgressOnlyInternetGatewayPropertyToTerraform(struct?: TfEncryptionControl.EgressOnlyInternetGatewayProperty): any {
+export function awsEncryptionControlEgressOnlyInternetGatewayPropertyToTerraform(struct?: AwsEncryptionControl.EgressOnlyInternetGatewayProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,7 +482,7 @@ export function tfEncryptionControlEgressOnlyInternetGatewayPropertyToTerraform(
 }
 
 
-export function tfEncryptionControlEgressOnlyInternetGatewayPropertyToHclTerraform(struct?: TfEncryptionControl.EgressOnlyInternetGatewayProperty): any {
+export function awsEncryptionControlEgressOnlyInternetGatewayPropertyToHclTerraform(struct?: AwsEncryptionControl.EgressOnlyInternetGatewayProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function tfEncryptionControlEgressOnlyInternetGatewayPropertyToHclTerrafo
 }
 
 
-export function tfEncryptionControlElasticFileSystemPropertyToTerraform(struct?: TfEncryptionControl.ElasticFileSystemProperty): any {
+export function awsEncryptionControlElasticFileSystemPropertyToTerraform(struct?: AwsEncryptionControl.ElasticFileSystemProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,7 +503,7 @@ export function tfEncryptionControlElasticFileSystemPropertyToTerraform(struct?:
 }
 
 
-export function tfEncryptionControlElasticFileSystemPropertyToHclTerraform(struct?: TfEncryptionControl.ElasticFileSystemProperty): any {
+export function awsEncryptionControlElasticFileSystemPropertyToHclTerraform(struct?: AwsEncryptionControl.ElasticFileSystemProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -514,7 +514,7 @@ export function tfEncryptionControlElasticFileSystemPropertyToHclTerraform(struc
 }
 
 
-export function tfEncryptionControlInternetGatewayPropertyToTerraform(struct?: TfEncryptionControl.InternetGatewayProperty): any {
+export function awsEncryptionControlInternetGatewayPropertyToTerraform(struct?: AwsEncryptionControl.InternetGatewayProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -524,7 +524,7 @@ export function tfEncryptionControlInternetGatewayPropertyToTerraform(struct?: T
 }
 
 
-export function tfEncryptionControlInternetGatewayPropertyToHclTerraform(struct?: TfEncryptionControl.InternetGatewayProperty): any {
+export function awsEncryptionControlInternetGatewayPropertyToHclTerraform(struct?: AwsEncryptionControl.InternetGatewayProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,7 +535,7 @@ export function tfEncryptionControlInternetGatewayPropertyToHclTerraform(struct?
 }
 
 
-export function tfEncryptionControlLambdaPropertyToTerraform(struct?: TfEncryptionControl.LambdaProperty): any {
+export function awsEncryptionControlLambdaPropertyToTerraform(struct?: AwsEncryptionControl.LambdaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -545,7 +545,7 @@ export function tfEncryptionControlLambdaPropertyToTerraform(struct?: TfEncrypti
 }
 
 
-export function tfEncryptionControlLambdaPropertyToHclTerraform(struct?: TfEncryptionControl.LambdaProperty): any {
+export function awsEncryptionControlLambdaPropertyToHclTerraform(struct?: AwsEncryptionControl.LambdaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,7 +556,7 @@ export function tfEncryptionControlLambdaPropertyToHclTerraform(struct?: TfEncry
 }
 
 
-export function tfEncryptionControlNatGatewayPropertyToTerraform(struct?: TfEncryptionControl.NatGatewayProperty): any {
+export function awsEncryptionControlNatGatewayPropertyToTerraform(struct?: AwsEncryptionControl.NatGatewayProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -566,7 +566,7 @@ export function tfEncryptionControlNatGatewayPropertyToTerraform(struct?: TfEncr
 }
 
 
-export function tfEncryptionControlNatGatewayPropertyToHclTerraform(struct?: TfEncryptionControl.NatGatewayProperty): any {
+export function awsEncryptionControlNatGatewayPropertyToHclTerraform(struct?: AwsEncryptionControl.NatGatewayProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -577,7 +577,7 @@ export function tfEncryptionControlNatGatewayPropertyToHclTerraform(struct?: TfE
 }
 
 
-export function tfEncryptionControlVirtualPrivateGatewayPropertyToTerraform(struct?: TfEncryptionControl.VirtualPrivateGatewayProperty): any {
+export function awsEncryptionControlVirtualPrivateGatewayPropertyToTerraform(struct?: AwsEncryptionControl.VirtualPrivateGatewayProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,7 +587,7 @@ export function tfEncryptionControlVirtualPrivateGatewayPropertyToTerraform(stru
 }
 
 
-export function tfEncryptionControlVirtualPrivateGatewayPropertyToHclTerraform(struct?: TfEncryptionControl.VirtualPrivateGatewayProperty): any {
+export function awsEncryptionControlVirtualPrivateGatewayPropertyToHclTerraform(struct?: AwsEncryptionControl.VirtualPrivateGatewayProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -598,7 +598,7 @@ export function tfEncryptionControlVirtualPrivateGatewayPropertyToHclTerraform(s
 }
 
 
-export function tfEncryptionControlVpcLatticePropertyToTerraform(struct?: TfEncryptionControl.VpcLatticeProperty): any {
+export function awsEncryptionControlVpcLatticePropertyToTerraform(struct?: AwsEncryptionControl.VpcLatticeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,7 +608,7 @@ export function tfEncryptionControlVpcLatticePropertyToTerraform(struct?: TfEncr
 }
 
 
-export function tfEncryptionControlVpcLatticePropertyToHclTerraform(struct?: TfEncryptionControl.VpcLatticeProperty): any {
+export function awsEncryptionControlVpcLatticePropertyToHclTerraform(struct?: AwsEncryptionControl.VpcLatticeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -619,7 +619,7 @@ export function tfEncryptionControlVpcLatticePropertyToHclTerraform(struct?: TfE
 }
 
 
-export function tfEncryptionControlVpcPeeringPropertyToTerraform(struct?: TfEncryptionControl.VpcPeeringProperty): any {
+export function awsEncryptionControlVpcPeeringPropertyToTerraform(struct?: AwsEncryptionControl.VpcPeeringProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -629,7 +629,7 @@ export function tfEncryptionControlVpcPeeringPropertyToTerraform(struct?: TfEncr
 }
 
 
-export function tfEncryptionControlVpcPeeringPropertyToHclTerraform(struct?: TfEncryptionControl.VpcPeeringProperty): any {
+export function awsEncryptionControlVpcPeeringPropertyToHclTerraform(struct?: AwsEncryptionControl.VpcPeeringProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -640,7 +640,7 @@ export function tfEncryptionControlVpcPeeringPropertyToHclTerraform(struct?: TfE
 }
 
 
-export function tfEncryptionControlResourceExclusionsPropertyToTerraform(struct?: TfEncryptionControl.ResourceExclusionsProperty): any {
+export function awsEncryptionControlResourceExclusionsPropertyToTerraform(struct?: AwsEncryptionControl.ResourceExclusionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -650,7 +650,7 @@ export function tfEncryptionControlResourceExclusionsPropertyToTerraform(struct?
 }
 
 
-export function tfEncryptionControlResourceExclusionsPropertyToHclTerraform(struct?: TfEncryptionControl.ResourceExclusionsProperty): any {
+export function awsEncryptionControlResourceExclusionsPropertyToHclTerraform(struct?: AwsEncryptionControl.ResourceExclusionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -661,7 +661,7 @@ export function tfEncryptionControlResourceExclusionsPropertyToHclTerraform(stru
 }
 
 
-export function tfEncryptionControlTimeoutsPropertyToTerraform(struct?: TfEncryptionControl.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsEncryptionControlTimeoutsPropertyToTerraform(struct?: AwsEncryptionControl.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -674,7 +674,7 @@ export function tfEncryptionControlTimeoutsPropertyToTerraform(struct?: TfEncryp
 }
 
 
-export function tfEncryptionControlTimeoutsPropertyToHclTerraform(struct?: TfEncryptionControl.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsEncryptionControlTimeoutsPropertyToHclTerraform(struct?: AwsEncryptionControl.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -705,7 +705,7 @@ export function tfEncryptionControlTimeoutsPropertyToHclTerraform(struct?: TfEnc
 }
 
 
-export namespace TfEncryptionControl {
+export namespace AwsEncryptionControl {
 export interface EgressOnlyInternetGatewayProperty {
 }
 export class EgressOnlyInternetGatewayPropertyOutputReference extends cdktn.ComplexObject {
@@ -1090,19 +1090,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#create TfEncryptionControl#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#create AwsEncryptionControl#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#delete TfEncryptionControl#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#delete AwsEncryptionControl#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#update TfEncryptionControl#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_encryption_control#update AwsEncryptionControl#update}
   */
   readonly update?: string;
 }

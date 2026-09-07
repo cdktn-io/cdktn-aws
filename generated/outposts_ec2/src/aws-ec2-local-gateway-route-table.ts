@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLocalGatewayRouteTableConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLocalGatewayRouteTableConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#local_gateway_id TfLocalGatewayRouteTable#local_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#local_gateway_id AwsLocalGatewayRouteTable#local_gateway_id}
   */
   readonly localGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#mode TfLocalGatewayRouteTable#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#mode AwsLocalGatewayRouteTable#mode}
   */
   readonly mode: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#region TfLocalGatewayRouteTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#region AwsLocalGatewayRouteTable#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#tags TfLocalGatewayRouteTable#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#tags AwsLocalGatewayRouteTable#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#timeouts TfLocalGatewayRouteTable#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#timeouts AwsLocalGatewayRouteTable#timeouts}
   */
-  readonly timeouts?: TfLocalGatewayRouteTable.TimeoutsProperty;
+  readonly timeouts?: AwsLocalGatewayRouteTable.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table aws_ec2_local_gateway_route_table}
 */
-export class TfLocalGatewayRouteTable extends cdktn.TerraformResource {
+export class AwsLocalGatewayRouteTable extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class TfLocalGatewayRouteTable extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLocalGatewayRouteTable resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLocalGatewayRouteTable resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLocalGatewayRouteTable to import
-  * @param importFromId The id of the existing TfLocalGatewayRouteTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLocalGatewayRouteTable to import is found
+  * @param importToId The construct id used in the generated config for the AwsLocalGatewayRouteTable to import
+  * @param importFromId The id of the existing AwsLocalGatewayRouteTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLocalGatewayRouteTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_local_gateway_route_table", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class TfLocalGatewayRouteTable extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLocalGatewayRouteTableConfig
+  * @param options AwsLocalGatewayRouteTableConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLocalGatewayRouteTableConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLocalGatewayRouteTableConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_local_gateway_route_table',
       terraformGeneratorMetadata: {
@@ -184,11 +184,11 @@ export class TfLocalGatewayRouteTable extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfLocalGatewayRouteTable.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsLocalGatewayRouteTable.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfLocalGatewayRouteTable.TimeoutsProperty) {
+  public putTimeouts(value: AwsLocalGatewayRouteTable.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -209,7 +209,7 @@ export class TfLocalGatewayRouteTable extends cdktn.TerraformResource {
       mode: cdktn.stringToTerraform(this._mode),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: tfLocalGatewayRouteTableTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsLocalGatewayRouteTableTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -240,10 +240,10 @@ export class TfLocalGatewayRouteTable extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfLocalGatewayRouteTableTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsLocalGatewayRouteTableTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfLocalGatewayRouteTable.TimeoutsProperty",
+        storageClassType: "AwsLocalGatewayRouteTable.TimeoutsProperty",
       },
     };
 
@@ -252,7 +252,7 @@ export class TfLocalGatewayRouteTable extends cdktn.TerraformResource {
   }
 }
 
-export function tfLocalGatewayRouteTableTimeoutsPropertyToTerraform(struct?: TfLocalGatewayRouteTable.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsLocalGatewayRouteTableTimeoutsPropertyToTerraform(struct?: AwsLocalGatewayRouteTable.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,7 +264,7 @@ export function tfLocalGatewayRouteTableTimeoutsPropertyToTerraform(struct?: TfL
 }
 
 
-export function tfLocalGatewayRouteTableTimeoutsPropertyToHclTerraform(struct?: TfLocalGatewayRouteTable.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsLocalGatewayRouteTableTimeoutsPropertyToHclTerraform(struct?: AwsLocalGatewayRouteTable.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,18 +289,18 @@ export function tfLocalGatewayRouteTableTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfLocalGatewayRouteTable {
+export namespace AwsLocalGatewayRouteTable {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#create TfLocalGatewayRouteTable#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#create AwsLocalGatewayRouteTable#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#delete TfLocalGatewayRouteTable#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_local_gateway_route_table#delete AwsLocalGatewayRouteTable#delete}
   */
   readonly delete?: string;
 }

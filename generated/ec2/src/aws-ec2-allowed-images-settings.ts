@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAllowedImagesSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAllowedImagesSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#region TfAllowedImagesSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#region AwsAllowedImagesSettings#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#state TfAllowedImagesSettings#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#state AwsAllowedImagesSettings#state}
   */
   readonly state: string;
   /**
   * image_criterion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#image_criterion TfAllowedImagesSettings#image_criterion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#image_criterion AwsAllowedImagesSettings#image_criterion}
   */
-  readonly imageCriterion?: TfAllowedImagesSettings.ImageCriterionProperty[] | cdktn.IResolvable;
+  readonly imageCriterion?: AwsAllowedImagesSettings.ImageCriterionProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings aws_ec2_allowed_images_settings}
 */
-export class TfAllowedImagesSettings extends cdktn.TerraformResource {
+export class AwsAllowedImagesSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class TfAllowedImagesSettings extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAllowedImagesSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAllowedImagesSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAllowedImagesSettings to import
-  * @param importFromId The id of the existing TfAllowedImagesSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAllowedImagesSettings to import is found
+  * @param importToId The construct id used in the generated config for the AwsAllowedImagesSettings to import
+  * @param importFromId The id of the existing AwsAllowedImagesSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAllowedImagesSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_allowed_images_settings", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class TfAllowedImagesSettings extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAllowedImagesSettingsConfig
+  * @param options AwsAllowedImagesSettingsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAllowedImagesSettingsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAllowedImagesSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_allowed_images_settings',
       terraformGeneratorMetadata: {
@@ -114,11 +114,11 @@ export class TfAllowedImagesSettings extends cdktn.TerraformResource {
   }
 
   // image_criterion - computed: false, optional: true, required: false
-  private _imageCriterion = new TfAllowedImagesSettings.ImageCriterionPropertyList(this, "image_criterion", false);
+  private _imageCriterion = new AwsAllowedImagesSettings.ImageCriterionPropertyList(this, "image_criterion", false);
   public get imageCriterion() {
     return this._imageCriterion;
   }
-  public putImageCriterion(value: TfAllowedImagesSettings.ImageCriterionProperty[] | cdktn.IResolvable) {
+  public putImageCriterion(value: AwsAllowedImagesSettings.ImageCriterionProperty[] | cdktn.IResolvable) {
     this._imageCriterion.internalValue = value;
   }
   public resetImageCriterion() {
@@ -137,7 +137,7 @@ export class TfAllowedImagesSettings extends cdktn.TerraformResource {
     return {
       region: cdktn.stringToTerraform(this._region),
       state: cdktn.stringToTerraform(this._state),
-      image_criterion: cdktn.listMapper(tfAllowedImagesSettingsImageCriterionPropertyToTerraform, true)(this._imageCriterion.internalValue),
+      image_criterion: cdktn.listMapper(awsAllowedImagesSettingsImageCriterionPropertyToTerraform, true)(this._imageCriterion.internalValue),
     };
   }
 
@@ -156,10 +156,10 @@ export class TfAllowedImagesSettings extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       image_criterion: {
-        value: cdktn.listMapperHcl(tfAllowedImagesSettingsImageCriterionPropertyToHclTerraform, true)(this._imageCriterion.internalValue),
+        value: cdktn.listMapperHcl(awsAllowedImagesSettingsImageCriterionPropertyToHclTerraform, true)(this._imageCriterion.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAllowedImagesSettings.ImageCriterionPropertyList",
+        storageClassType: "AwsAllowedImagesSettings.ImageCriterionPropertyList",
       },
     };
 
@@ -168,7 +168,7 @@ export class TfAllowedImagesSettings extends cdktn.TerraformResource {
   }
 }
 
-export function tfAllowedImagesSettingsCreationDateConditionPropertyToTerraform(struct?: TfAllowedImagesSettings.CreationDateConditionProperty | cdktn.IResolvable): any {
+export function awsAllowedImagesSettingsCreationDateConditionPropertyToTerraform(struct?: AwsAllowedImagesSettings.CreationDateConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -179,7 +179,7 @@ export function tfAllowedImagesSettingsCreationDateConditionPropertyToTerraform(
 }
 
 
-export function tfAllowedImagesSettingsCreationDateConditionPropertyToHclTerraform(struct?: TfAllowedImagesSettings.CreationDateConditionProperty | cdktn.IResolvable): any {
+export function awsAllowedImagesSettingsCreationDateConditionPropertyToHclTerraform(struct?: AwsAllowedImagesSettings.CreationDateConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -198,7 +198,7 @@ export function tfAllowedImagesSettingsCreationDateConditionPropertyToHclTerrafo
 }
 
 
-export function tfAllowedImagesSettingsDeprecationTimeConditionPropertyToTerraform(struct?: TfAllowedImagesSettings.DeprecationTimeConditionProperty | cdktn.IResolvable): any {
+export function awsAllowedImagesSettingsDeprecationTimeConditionPropertyToTerraform(struct?: AwsAllowedImagesSettings.DeprecationTimeConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -209,7 +209,7 @@ export function tfAllowedImagesSettingsDeprecationTimeConditionPropertyToTerrafo
 }
 
 
-export function tfAllowedImagesSettingsDeprecationTimeConditionPropertyToHclTerraform(struct?: TfAllowedImagesSettings.DeprecationTimeConditionProperty | cdktn.IResolvable): any {
+export function awsAllowedImagesSettingsDeprecationTimeConditionPropertyToHclTerraform(struct?: AwsAllowedImagesSettings.DeprecationTimeConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -228,7 +228,7 @@ export function tfAllowedImagesSettingsDeprecationTimeConditionPropertyToHclTerr
 }
 
 
-export function tfAllowedImagesSettingsImageCriterionPropertyToTerraform(struct?: TfAllowedImagesSettings.ImageCriterionProperty | cdktn.IResolvable): any {
+export function awsAllowedImagesSettingsImageCriterionPropertyToTerraform(struct?: AwsAllowedImagesSettings.ImageCriterionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -237,13 +237,13 @@ export function tfAllowedImagesSettingsImageCriterionPropertyToTerraform(struct?
     image_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.imageNames),
     image_providers: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.imageProviders),
     marketplace_product_codes: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.marketplaceProductCodes),
-    creation_date_condition: cdktn.listMapper(tfAllowedImagesSettingsCreationDateConditionPropertyToTerraform, true)(struct!.creationDateCondition),
-    deprecation_time_condition: cdktn.listMapper(tfAllowedImagesSettingsDeprecationTimeConditionPropertyToTerraform, true)(struct!.deprecationTimeCondition),
+    creation_date_condition: cdktn.listMapper(awsAllowedImagesSettingsCreationDateConditionPropertyToTerraform, true)(struct!.creationDateCondition),
+    deprecation_time_condition: cdktn.listMapper(awsAllowedImagesSettingsDeprecationTimeConditionPropertyToTerraform, true)(struct!.deprecationTimeCondition),
   }
 }
 
 
-export function tfAllowedImagesSettingsImageCriterionPropertyToHclTerraform(struct?: TfAllowedImagesSettings.ImageCriterionProperty | cdktn.IResolvable): any {
+export function awsAllowedImagesSettingsImageCriterionPropertyToHclTerraform(struct?: AwsAllowedImagesSettings.ImageCriterionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,13 +268,13 @@ export function tfAllowedImagesSettingsImageCriterionPropertyToHclTerraform(stru
       storageClassType: "stringList",
     },
     creation_date_condition: {
-      value: cdktn.listMapperHcl(tfAllowedImagesSettingsCreationDateConditionPropertyToHclTerraform, true)(struct!.creationDateCondition),
+      value: cdktn.listMapperHcl(awsAllowedImagesSettingsCreationDateConditionPropertyToHclTerraform, true)(struct!.creationDateCondition),
       isBlock: true,
       type: "list",
       storageClassType: "CreationDateConditionPropertyList",
     },
     deprecation_time_condition: {
-      value: cdktn.listMapperHcl(tfAllowedImagesSettingsDeprecationTimeConditionPropertyToHclTerraform, true)(struct!.deprecationTimeCondition),
+      value: cdktn.listMapperHcl(awsAllowedImagesSettingsDeprecationTimeConditionPropertyToHclTerraform, true)(struct!.deprecationTimeCondition),
       isBlock: true,
       type: "list",
       storageClassType: "DeprecationTimeConditionPropertyList",
@@ -286,10 +286,10 @@ export function tfAllowedImagesSettingsImageCriterionPropertyToHclTerraform(stru
 }
 
 
-export namespace TfAllowedImagesSettings {
+export namespace AwsAllowedImagesSettings {
 export interface CreationDateConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#maximum_days_since_created TfAllowedImagesSettings#maximum_days_since_created}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#maximum_days_since_created AwsAllowedImagesSettings#maximum_days_since_created}
   */
   readonly maximumDaysSinceCreated?: number;
 }
@@ -375,7 +375,7 @@ export class CreationDateConditionPropertyList extends cdktn.ComplexList {
 }
 export interface DeprecationTimeConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#maximum_days_since_deprecated TfAllowedImagesSettings#maximum_days_since_deprecated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#maximum_days_since_deprecated AwsAllowedImagesSettings#maximum_days_since_deprecated}
   */
   readonly maximumDaysSinceDeprecated?: number;
 }
@@ -461,27 +461,27 @@ export class DeprecationTimeConditionPropertyList extends cdktn.ComplexList {
 }
 export interface ImageCriterionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#image_names TfAllowedImagesSettings#image_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#image_names AwsAllowedImagesSettings#image_names}
   */
   readonly imageNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#image_providers TfAllowedImagesSettings#image_providers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#image_providers AwsAllowedImagesSettings#image_providers}
   */
   readonly imageProviders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#marketplace_product_codes TfAllowedImagesSettings#marketplace_product_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#marketplace_product_codes AwsAllowedImagesSettings#marketplace_product_codes}
   */
   readonly marketplaceProductCodes?: string[];
   /**
   * creation_date_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#creation_date_condition TfAllowedImagesSettings#creation_date_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#creation_date_condition AwsAllowedImagesSettings#creation_date_condition}
   */
   readonly creationDateCondition?: CreationDateConditionProperty[] | cdktn.IResolvable;
   /**
   * deprecation_time_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#deprecation_time_condition TfAllowedImagesSettings#deprecation_time_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_allowed_images_settings#deprecation_time_condition AwsAllowedImagesSettings#deprecation_time_condition}
   */
   readonly deprecationTimeCondition?: DeprecationTimeConditionProperty[] | cdktn.IResolvable;
 }

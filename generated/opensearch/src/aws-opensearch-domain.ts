@@ -5,156 +5,156 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDomainConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDomainConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#access_policies TfDomain#access_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#access_policies AwsDomain#access_policies}
   */
   readonly accessPolicies?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#advanced_options TfDomain#advanced_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#advanced_options AwsDomain#advanced_options}
   */
   readonly advancedOptions?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#domain_name TfDomain#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#domain_name AwsDomain#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#engine_version TfDomain#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#engine_version AwsDomain#engine_version}
   */
   readonly engineVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#id TfDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#id AwsDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#ip_address_type TfDomain#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#ip_address_type AwsDomain#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#region TfDomain#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#region AwsDomain#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#tags TfDomain#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#tags AwsDomain#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#tags_all TfDomain#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#tags_all AwsDomain#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * advanced_security_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#advanced_security_options TfDomain#advanced_security_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#advanced_security_options AwsDomain#advanced_security_options}
   */
-  readonly advancedSecurityOptions?: TfDomain.AdvancedSecurityOptionsProperty;
+  readonly advancedSecurityOptions?: AwsDomain.AdvancedSecurityOptionsProperty;
   /**
   * aiml_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#aiml_options TfDomain#aiml_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#aiml_options AwsDomain#aiml_options}
   */
-  readonly aimlOptions?: TfDomain.AimlOptionsProperty;
+  readonly aimlOptions?: AwsDomain.AimlOptionsProperty;
   /**
   * auto_tune_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#auto_tune_options TfDomain#auto_tune_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#auto_tune_options AwsDomain#auto_tune_options}
   */
-  readonly autoTuneOptions?: TfDomain.AutoTuneOptionsProperty;
+  readonly autoTuneOptions?: AwsDomain.AutoTuneOptionsProperty;
   /**
   * cluster_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#cluster_config TfDomain#cluster_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#cluster_config AwsDomain#cluster_config}
   */
-  readonly clusterConfig?: TfDomain.ClusterConfigProperty;
+  readonly clusterConfig?: AwsDomain.ClusterConfigProperty;
   /**
   * cognito_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#cognito_options TfDomain#cognito_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#cognito_options AwsDomain#cognito_options}
   */
-  readonly cognitoOptions?: TfDomain.CognitoOptionsProperty;
+  readonly cognitoOptions?: AwsDomain.CognitoOptionsProperty;
   /**
   * deployment_strategy_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#deployment_strategy_options TfDomain#deployment_strategy_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#deployment_strategy_options AwsDomain#deployment_strategy_options}
   */
-  readonly deploymentStrategyOptions?: TfDomain.DeploymentStrategyOptionsProperty;
+  readonly deploymentStrategyOptions?: AwsDomain.DeploymentStrategyOptionsProperty;
   /**
   * domain_endpoint_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#domain_endpoint_options TfDomain#domain_endpoint_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#domain_endpoint_options AwsDomain#domain_endpoint_options}
   */
-  readonly domainEndpointOptions?: TfDomain.DomainEndpointOptionsProperty;
+  readonly domainEndpointOptions?: AwsDomain.DomainEndpointOptionsProperty;
   /**
   * ebs_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#ebs_options TfDomain#ebs_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#ebs_options AwsDomain#ebs_options}
   */
-  readonly ebsOptions?: TfDomain.EbsOptionsProperty;
+  readonly ebsOptions?: AwsDomain.EbsOptionsProperty;
   /**
   * encrypt_at_rest block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#encrypt_at_rest TfDomain#encrypt_at_rest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#encrypt_at_rest AwsDomain#encrypt_at_rest}
   */
-  readonly encryptAtRest?: TfDomain.EncryptAtRestProperty;
+  readonly encryptAtRest?: AwsDomain.EncryptAtRestProperty;
   /**
   * identity_center_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#identity_center_options TfDomain#identity_center_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#identity_center_options AwsDomain#identity_center_options}
   */
-  readonly identityCenterOptions?: TfDomain.IdentityCenterOptionsProperty;
+  readonly identityCenterOptions?: AwsDomain.IdentityCenterOptionsProperty;
   /**
   * log_publishing_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#log_publishing_options TfDomain#log_publishing_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#log_publishing_options AwsDomain#log_publishing_options}
   */
-  readonly logPublishingOptions?: TfDomain.LogPublishingOptionsProperty[] | cdktn.IResolvable;
+  readonly logPublishingOptions?: AwsDomain.LogPublishingOptionsProperty[] | cdktn.IResolvable;
   /**
   * node_to_node_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#node_to_node_encryption TfDomain#node_to_node_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#node_to_node_encryption AwsDomain#node_to_node_encryption}
   */
-  readonly nodeToNodeEncryption?: TfDomain.NodeToNodeEncryptionProperty;
+  readonly nodeToNodeEncryption?: AwsDomain.NodeToNodeEncryptionProperty;
   /**
   * off_peak_window_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#off_peak_window_options TfDomain#off_peak_window_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#off_peak_window_options AwsDomain#off_peak_window_options}
   */
-  readonly offPeakWindowOptions?: TfDomain.OffPeakWindowOptionsProperty;
+  readonly offPeakWindowOptions?: AwsDomain.OffPeakWindowOptionsProperty;
   /**
   * snapshot_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#snapshot_options TfDomain#snapshot_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#snapshot_options AwsDomain#snapshot_options}
   */
-  readonly snapshotOptions?: TfDomain.SnapshotOptionsProperty;
+  readonly snapshotOptions?: AwsDomain.SnapshotOptionsProperty;
   /**
   * software_update_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#software_update_options TfDomain#software_update_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#software_update_options AwsDomain#software_update_options}
   */
-  readonly softwareUpdateOptions?: TfDomain.SoftwareUpdateOptionsProperty;
+  readonly softwareUpdateOptions?: AwsDomain.SoftwareUpdateOptionsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#timeouts TfDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#timeouts AwsDomain#timeouts}
   */
-  readonly timeouts?: TfDomain.TimeoutsProperty;
+  readonly timeouts?: AwsDomain.TimeoutsProperty;
   /**
   * vpc_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#vpc_options TfDomain#vpc_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#vpc_options AwsDomain#vpc_options}
   */
-  readonly vpcOptions?: TfDomain.VpcOptionsProperty;
+  readonly vpcOptions?: AwsDomain.VpcOptionsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain aws_opensearch_domain}
 */
-export class TfDomain extends cdktn.TerraformResource {
+export class AwsDomain extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -165,11 +165,11 @@ export class TfDomain extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDomain to import
-  * @param importFromId The id of the existing TfDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDomain to import is found
+  * @param importToId The construct id used in the generated config for the AwsDomain to import
+  * @param importFromId The id of the existing AwsDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearch_domain", importId: importFromId, provider });
@@ -184,9 +184,9 @@ export class TfDomain extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDomainConfig
+  * @param options AwsDomainConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDomainConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearch_domain',
       terraformGeneratorMetadata: {
@@ -411,11 +411,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // advanced_security_options - computed: false, optional: true, required: false
-  private _advancedSecurityOptions = new TfDomain.AdvancedSecurityOptionsPropertyOutputReference(this, "advanced_security_options");
+  private _advancedSecurityOptions = new AwsDomain.AdvancedSecurityOptionsPropertyOutputReference(this, "advanced_security_options");
   public get advancedSecurityOptions() {
     return this._advancedSecurityOptions;
   }
-  public putAdvancedSecurityOptions(value: TfDomain.AdvancedSecurityOptionsProperty) {
+  public putAdvancedSecurityOptions(value: AwsDomain.AdvancedSecurityOptionsProperty) {
     this._advancedSecurityOptions.internalValue = value;
   }
   public resetAdvancedSecurityOptions() {
@@ -427,11 +427,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // aiml_options - computed: false, optional: true, required: false
-  private _aimlOptions = new TfDomain.AimlOptionsPropertyOutputReference(this, "aiml_options");
+  private _aimlOptions = new AwsDomain.AimlOptionsPropertyOutputReference(this, "aiml_options");
   public get aimlOptions() {
     return this._aimlOptions;
   }
-  public putAimlOptions(value: TfDomain.AimlOptionsProperty) {
+  public putAimlOptions(value: AwsDomain.AimlOptionsProperty) {
     this._aimlOptions.internalValue = value;
   }
   public resetAimlOptions() {
@@ -443,11 +443,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // auto_tune_options - computed: false, optional: true, required: false
-  private _autoTuneOptions = new TfDomain.AutoTuneOptionsPropertyOutputReference(this, "auto_tune_options");
+  private _autoTuneOptions = new AwsDomain.AutoTuneOptionsPropertyOutputReference(this, "auto_tune_options");
   public get autoTuneOptions() {
     return this._autoTuneOptions;
   }
-  public putAutoTuneOptions(value: TfDomain.AutoTuneOptionsProperty) {
+  public putAutoTuneOptions(value: AwsDomain.AutoTuneOptionsProperty) {
     this._autoTuneOptions.internalValue = value;
   }
   public resetAutoTuneOptions() {
@@ -459,11 +459,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // cluster_config - computed: false, optional: true, required: false
-  private _clusterConfig = new TfDomain.ClusterConfigPropertyOutputReference(this, "cluster_config");
+  private _clusterConfig = new AwsDomain.ClusterConfigPropertyOutputReference(this, "cluster_config");
   public get clusterConfig() {
     return this._clusterConfig;
   }
-  public putClusterConfig(value: TfDomain.ClusterConfigProperty) {
+  public putClusterConfig(value: AwsDomain.ClusterConfigProperty) {
     this._clusterConfig.internalValue = value;
   }
   public resetClusterConfig() {
@@ -475,11 +475,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // cognito_options - computed: false, optional: true, required: false
-  private _cognitoOptions = new TfDomain.CognitoOptionsPropertyOutputReference(this, "cognito_options");
+  private _cognitoOptions = new AwsDomain.CognitoOptionsPropertyOutputReference(this, "cognito_options");
   public get cognitoOptions() {
     return this._cognitoOptions;
   }
-  public putCognitoOptions(value: TfDomain.CognitoOptionsProperty) {
+  public putCognitoOptions(value: AwsDomain.CognitoOptionsProperty) {
     this._cognitoOptions.internalValue = value;
   }
   public resetCognitoOptions() {
@@ -491,11 +491,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // deployment_strategy_options - computed: false, optional: true, required: false
-  private _deploymentStrategyOptions = new TfDomain.DeploymentStrategyOptionsPropertyOutputReference(this, "deployment_strategy_options");
+  private _deploymentStrategyOptions = new AwsDomain.DeploymentStrategyOptionsPropertyOutputReference(this, "deployment_strategy_options");
   public get deploymentStrategyOptions() {
     return this._deploymentStrategyOptions;
   }
-  public putDeploymentStrategyOptions(value: TfDomain.DeploymentStrategyOptionsProperty) {
+  public putDeploymentStrategyOptions(value: AwsDomain.DeploymentStrategyOptionsProperty) {
     this._deploymentStrategyOptions.internalValue = value;
   }
   public resetDeploymentStrategyOptions() {
@@ -507,11 +507,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // domain_endpoint_options - computed: false, optional: true, required: false
-  private _domainEndpointOptions = new TfDomain.DomainEndpointOptionsPropertyOutputReference(this, "domain_endpoint_options");
+  private _domainEndpointOptions = new AwsDomain.DomainEndpointOptionsPropertyOutputReference(this, "domain_endpoint_options");
   public get domainEndpointOptions() {
     return this._domainEndpointOptions;
   }
-  public putDomainEndpointOptions(value: TfDomain.DomainEndpointOptionsProperty) {
+  public putDomainEndpointOptions(value: AwsDomain.DomainEndpointOptionsProperty) {
     this._domainEndpointOptions.internalValue = value;
   }
   public resetDomainEndpointOptions() {
@@ -523,11 +523,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // ebs_options - computed: false, optional: true, required: false
-  private _ebsOptions = new TfDomain.EbsOptionsPropertyOutputReference(this, "ebs_options");
+  private _ebsOptions = new AwsDomain.EbsOptionsPropertyOutputReference(this, "ebs_options");
   public get ebsOptions() {
     return this._ebsOptions;
   }
-  public putEbsOptions(value: TfDomain.EbsOptionsProperty) {
+  public putEbsOptions(value: AwsDomain.EbsOptionsProperty) {
     this._ebsOptions.internalValue = value;
   }
   public resetEbsOptions() {
@@ -539,11 +539,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // encrypt_at_rest - computed: false, optional: true, required: false
-  private _encryptAtRest = new TfDomain.EncryptAtRestPropertyOutputReference(this, "encrypt_at_rest");
+  private _encryptAtRest = new AwsDomain.EncryptAtRestPropertyOutputReference(this, "encrypt_at_rest");
   public get encryptAtRest() {
     return this._encryptAtRest;
   }
-  public putEncryptAtRest(value: TfDomain.EncryptAtRestProperty) {
+  public putEncryptAtRest(value: AwsDomain.EncryptAtRestProperty) {
     this._encryptAtRest.internalValue = value;
   }
   public resetEncryptAtRest() {
@@ -555,11 +555,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // identity_center_options - computed: false, optional: true, required: false
-  private _identityCenterOptions = new TfDomain.IdentityCenterOptionsPropertyOutputReference(this, "identity_center_options");
+  private _identityCenterOptions = new AwsDomain.IdentityCenterOptionsPropertyOutputReference(this, "identity_center_options");
   public get identityCenterOptions() {
     return this._identityCenterOptions;
   }
-  public putIdentityCenterOptions(value: TfDomain.IdentityCenterOptionsProperty) {
+  public putIdentityCenterOptions(value: AwsDomain.IdentityCenterOptionsProperty) {
     this._identityCenterOptions.internalValue = value;
   }
   public resetIdentityCenterOptions() {
@@ -571,11 +571,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // log_publishing_options - computed: false, optional: true, required: false
-  private _logPublishingOptions = new TfDomain.LogPublishingOptionsPropertyList(this, "log_publishing_options", true);
+  private _logPublishingOptions = new AwsDomain.LogPublishingOptionsPropertyList(this, "log_publishing_options", true);
   public get logPublishingOptions() {
     return this._logPublishingOptions;
   }
-  public putLogPublishingOptions(value: TfDomain.LogPublishingOptionsProperty[] | cdktn.IResolvable) {
+  public putLogPublishingOptions(value: AwsDomain.LogPublishingOptionsProperty[] | cdktn.IResolvable) {
     this._logPublishingOptions.internalValue = value;
   }
   public resetLogPublishingOptions() {
@@ -587,11 +587,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // node_to_node_encryption - computed: false, optional: true, required: false
-  private _nodeToNodeEncryption = new TfDomain.NodeToNodeEncryptionPropertyOutputReference(this, "node_to_node_encryption");
+  private _nodeToNodeEncryption = new AwsDomain.NodeToNodeEncryptionPropertyOutputReference(this, "node_to_node_encryption");
   public get nodeToNodeEncryption() {
     return this._nodeToNodeEncryption;
   }
-  public putNodeToNodeEncryption(value: TfDomain.NodeToNodeEncryptionProperty) {
+  public putNodeToNodeEncryption(value: AwsDomain.NodeToNodeEncryptionProperty) {
     this._nodeToNodeEncryption.internalValue = value;
   }
   public resetNodeToNodeEncryption() {
@@ -603,11 +603,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // off_peak_window_options - computed: false, optional: true, required: false
-  private _offPeakWindowOptions = new TfDomain.OffPeakWindowOptionsPropertyOutputReference(this, "off_peak_window_options");
+  private _offPeakWindowOptions = new AwsDomain.OffPeakWindowOptionsPropertyOutputReference(this, "off_peak_window_options");
   public get offPeakWindowOptions() {
     return this._offPeakWindowOptions;
   }
-  public putOffPeakWindowOptions(value: TfDomain.OffPeakWindowOptionsProperty) {
+  public putOffPeakWindowOptions(value: AwsDomain.OffPeakWindowOptionsProperty) {
     this._offPeakWindowOptions.internalValue = value;
   }
   public resetOffPeakWindowOptions() {
@@ -619,11 +619,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // snapshot_options - computed: false, optional: true, required: false
-  private _snapshotOptions = new TfDomain.SnapshotOptionsPropertyOutputReference(this, "snapshot_options");
+  private _snapshotOptions = new AwsDomain.SnapshotOptionsPropertyOutputReference(this, "snapshot_options");
   public get snapshotOptions() {
     return this._snapshotOptions;
   }
-  public putSnapshotOptions(value: TfDomain.SnapshotOptionsProperty) {
+  public putSnapshotOptions(value: AwsDomain.SnapshotOptionsProperty) {
     this._snapshotOptions.internalValue = value;
   }
   public resetSnapshotOptions() {
@@ -635,11 +635,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // software_update_options - computed: false, optional: true, required: false
-  private _softwareUpdateOptions = new TfDomain.SoftwareUpdateOptionsPropertyOutputReference(this, "software_update_options");
+  private _softwareUpdateOptions = new AwsDomain.SoftwareUpdateOptionsPropertyOutputReference(this, "software_update_options");
   public get softwareUpdateOptions() {
     return this._softwareUpdateOptions;
   }
-  public putSoftwareUpdateOptions(value: TfDomain.SoftwareUpdateOptionsProperty) {
+  public putSoftwareUpdateOptions(value: AwsDomain.SoftwareUpdateOptionsProperty) {
     this._softwareUpdateOptions.internalValue = value;
   }
   public resetSoftwareUpdateOptions() {
@@ -651,11 +651,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDomain.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDomain.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDomain.TimeoutsProperty) {
+  public putTimeouts(value: AwsDomain.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -667,11 +667,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // vpc_options - computed: false, optional: true, required: false
-  private _vpcOptions = new TfDomain.VpcOptionsPropertyOutputReference(this, "vpc_options");
+  private _vpcOptions = new AwsDomain.VpcOptionsPropertyOutputReference(this, "vpc_options");
   public get vpcOptions() {
     return this._vpcOptions;
   }
-  public putVpcOptions(value: TfDomain.VpcOptionsProperty) {
+  public putVpcOptions(value: AwsDomain.VpcOptionsProperty) {
     this._vpcOptions.internalValue = value;
   }
   public resetVpcOptions() {
@@ -697,23 +697,23 @@ export class TfDomain extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      advanced_security_options: tfDomainAdvancedSecurityOptionsPropertyToTerraform(this._advancedSecurityOptions.internalValue),
-      aiml_options: tfDomainAimlOptionsPropertyToTerraform(this._aimlOptions.internalValue),
-      auto_tune_options: tfDomainAutoTuneOptionsPropertyToTerraform(this._autoTuneOptions.internalValue),
-      cluster_config: tfDomainClusterConfigPropertyToTerraform(this._clusterConfig.internalValue),
-      cognito_options: tfDomainCognitoOptionsPropertyToTerraform(this._cognitoOptions.internalValue),
-      deployment_strategy_options: tfDomainDeploymentStrategyOptionsPropertyToTerraform(this._deploymentStrategyOptions.internalValue),
-      domain_endpoint_options: tfDomainDomainEndpointOptionsPropertyToTerraform(this._domainEndpointOptions.internalValue),
-      ebs_options: tfDomainEbsOptionsPropertyToTerraform(this._ebsOptions.internalValue),
-      encrypt_at_rest: tfDomainEncryptAtRestPropertyToTerraform(this._encryptAtRest.internalValue),
-      identity_center_options: tfDomainIdentityCenterOptionsPropertyToTerraform(this._identityCenterOptions.internalValue),
-      log_publishing_options: cdktn.listMapper(tfDomainLogPublishingOptionsPropertyToTerraform, true)(this._logPublishingOptions.internalValue),
-      node_to_node_encryption: tfDomainNodeToNodeEncryptionPropertyToTerraform(this._nodeToNodeEncryption.internalValue),
-      off_peak_window_options: tfDomainOffPeakWindowOptionsPropertyToTerraform(this._offPeakWindowOptions.internalValue),
-      snapshot_options: tfDomainSnapshotOptionsPropertyToTerraform(this._snapshotOptions.internalValue),
-      software_update_options: tfDomainSoftwareUpdateOptionsPropertyToTerraform(this._softwareUpdateOptions.internalValue),
-      timeouts: tfDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_options: tfDomainVpcOptionsPropertyToTerraform(this._vpcOptions.internalValue),
+      advanced_security_options: awsDomainAdvancedSecurityOptionsPropertyToTerraform(this._advancedSecurityOptions.internalValue),
+      aiml_options: awsDomainAimlOptionsPropertyToTerraform(this._aimlOptions.internalValue),
+      auto_tune_options: awsDomainAutoTuneOptionsPropertyToTerraform(this._autoTuneOptions.internalValue),
+      cluster_config: awsDomainClusterConfigPropertyToTerraform(this._clusterConfig.internalValue),
+      cognito_options: awsDomainCognitoOptionsPropertyToTerraform(this._cognitoOptions.internalValue),
+      deployment_strategy_options: awsDomainDeploymentStrategyOptionsPropertyToTerraform(this._deploymentStrategyOptions.internalValue),
+      domain_endpoint_options: awsDomainDomainEndpointOptionsPropertyToTerraform(this._domainEndpointOptions.internalValue),
+      ebs_options: awsDomainEbsOptionsPropertyToTerraform(this._ebsOptions.internalValue),
+      encrypt_at_rest: awsDomainEncryptAtRestPropertyToTerraform(this._encryptAtRest.internalValue),
+      identity_center_options: awsDomainIdentityCenterOptionsPropertyToTerraform(this._identityCenterOptions.internalValue),
+      log_publishing_options: cdktn.listMapper(awsDomainLogPublishingOptionsPropertyToTerraform, true)(this._logPublishingOptions.internalValue),
+      node_to_node_encryption: awsDomainNodeToNodeEncryptionPropertyToTerraform(this._nodeToNodeEncryption.internalValue),
+      off_peak_window_options: awsDomainOffPeakWindowOptionsPropertyToTerraform(this._offPeakWindowOptions.internalValue),
+      snapshot_options: awsDomainSnapshotOptionsPropertyToTerraform(this._snapshotOptions.internalValue),
+      software_update_options: awsDomainSoftwareUpdateOptionsPropertyToTerraform(this._softwareUpdateOptions.internalValue),
+      timeouts: awsDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_options: awsDomainVpcOptionsPropertyToTerraform(this._vpcOptions.internalValue),
     };
   }
 
@@ -774,106 +774,106 @@ export class TfDomain extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       advanced_security_options: {
-        value: tfDomainAdvancedSecurityOptionsPropertyToHclTerraform(this._advancedSecurityOptions.internalValue),
+        value: awsDomainAdvancedSecurityOptionsPropertyToHclTerraform(this._advancedSecurityOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.AdvancedSecurityOptionsPropertyList",
+        storageClassType: "AwsDomain.AdvancedSecurityOptionsPropertyList",
       },
       aiml_options: {
-        value: tfDomainAimlOptionsPropertyToHclTerraform(this._aimlOptions.internalValue),
+        value: awsDomainAimlOptionsPropertyToHclTerraform(this._aimlOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.AimlOptionsPropertyList",
+        storageClassType: "AwsDomain.AimlOptionsPropertyList",
       },
       auto_tune_options: {
-        value: tfDomainAutoTuneOptionsPropertyToHclTerraform(this._autoTuneOptions.internalValue),
+        value: awsDomainAutoTuneOptionsPropertyToHclTerraform(this._autoTuneOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.AutoTuneOptionsPropertyList",
+        storageClassType: "AwsDomain.AutoTuneOptionsPropertyList",
       },
       cluster_config: {
-        value: tfDomainClusterConfigPropertyToHclTerraform(this._clusterConfig.internalValue),
+        value: awsDomainClusterConfigPropertyToHclTerraform(this._clusterConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.ClusterConfigPropertyList",
+        storageClassType: "AwsDomain.ClusterConfigPropertyList",
       },
       cognito_options: {
-        value: tfDomainCognitoOptionsPropertyToHclTerraform(this._cognitoOptions.internalValue),
+        value: awsDomainCognitoOptionsPropertyToHclTerraform(this._cognitoOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.CognitoOptionsPropertyList",
+        storageClassType: "AwsDomain.CognitoOptionsPropertyList",
       },
       deployment_strategy_options: {
-        value: tfDomainDeploymentStrategyOptionsPropertyToHclTerraform(this._deploymentStrategyOptions.internalValue),
+        value: awsDomainDeploymentStrategyOptionsPropertyToHclTerraform(this._deploymentStrategyOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.DeploymentStrategyOptionsPropertyList",
+        storageClassType: "AwsDomain.DeploymentStrategyOptionsPropertyList",
       },
       domain_endpoint_options: {
-        value: tfDomainDomainEndpointOptionsPropertyToHclTerraform(this._domainEndpointOptions.internalValue),
+        value: awsDomainDomainEndpointOptionsPropertyToHclTerraform(this._domainEndpointOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.DomainEndpointOptionsPropertyList",
+        storageClassType: "AwsDomain.DomainEndpointOptionsPropertyList",
       },
       ebs_options: {
-        value: tfDomainEbsOptionsPropertyToHclTerraform(this._ebsOptions.internalValue),
+        value: awsDomainEbsOptionsPropertyToHclTerraform(this._ebsOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.EbsOptionsPropertyList",
+        storageClassType: "AwsDomain.EbsOptionsPropertyList",
       },
       encrypt_at_rest: {
-        value: tfDomainEncryptAtRestPropertyToHclTerraform(this._encryptAtRest.internalValue),
+        value: awsDomainEncryptAtRestPropertyToHclTerraform(this._encryptAtRest.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.EncryptAtRestPropertyList",
+        storageClassType: "AwsDomain.EncryptAtRestPropertyList",
       },
       identity_center_options: {
-        value: tfDomainIdentityCenterOptionsPropertyToHclTerraform(this._identityCenterOptions.internalValue),
+        value: awsDomainIdentityCenterOptionsPropertyToHclTerraform(this._identityCenterOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.IdentityCenterOptionsPropertyList",
+        storageClassType: "AwsDomain.IdentityCenterOptionsPropertyList",
       },
       log_publishing_options: {
-        value: cdktn.listMapperHcl(tfDomainLogPublishingOptionsPropertyToHclTerraform, true)(this._logPublishingOptions.internalValue),
+        value: cdktn.listMapperHcl(awsDomainLogPublishingOptionsPropertyToHclTerraform, true)(this._logPublishingOptions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDomain.LogPublishingOptionsPropertyList",
+        storageClassType: "AwsDomain.LogPublishingOptionsPropertyList",
       },
       node_to_node_encryption: {
-        value: tfDomainNodeToNodeEncryptionPropertyToHclTerraform(this._nodeToNodeEncryption.internalValue),
+        value: awsDomainNodeToNodeEncryptionPropertyToHclTerraform(this._nodeToNodeEncryption.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.NodeToNodeEncryptionPropertyList",
+        storageClassType: "AwsDomain.NodeToNodeEncryptionPropertyList",
       },
       off_peak_window_options: {
-        value: tfDomainOffPeakWindowOptionsPropertyToHclTerraform(this._offPeakWindowOptions.internalValue),
+        value: awsDomainOffPeakWindowOptionsPropertyToHclTerraform(this._offPeakWindowOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.OffPeakWindowOptionsPropertyList",
+        storageClassType: "AwsDomain.OffPeakWindowOptionsPropertyList",
       },
       snapshot_options: {
-        value: tfDomainSnapshotOptionsPropertyToHclTerraform(this._snapshotOptions.internalValue),
+        value: awsDomainSnapshotOptionsPropertyToHclTerraform(this._snapshotOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.SnapshotOptionsPropertyList",
+        storageClassType: "AwsDomain.SnapshotOptionsPropertyList",
       },
       software_update_options: {
-        value: tfDomainSoftwareUpdateOptionsPropertyToHclTerraform(this._softwareUpdateOptions.internalValue),
+        value: awsDomainSoftwareUpdateOptionsPropertyToHclTerraform(this._softwareUpdateOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.SoftwareUpdateOptionsPropertyList",
+        storageClassType: "AwsDomain.SoftwareUpdateOptionsPropertyList",
       },
       timeouts: {
-        value: tfDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDomain.TimeoutsProperty",
+        storageClassType: "AwsDomain.TimeoutsProperty",
       },
       vpc_options: {
-        value: tfDomainVpcOptionsPropertyToHclTerraform(this._vpcOptions.internalValue),
+        value: awsDomainVpcOptionsPropertyToHclTerraform(this._vpcOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.VpcOptionsPropertyList",
+        storageClassType: "AwsDomain.VpcOptionsPropertyList",
       },
     };
 
@@ -882,7 +882,7 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 }
 
-export function tfDomainJwtOptionsPropertyToTerraform(struct?: TfDomain.JwtOptionsPropertyOutputReference | TfDomain.JwtOptionsProperty): any {
+export function awsDomainJwtOptionsPropertyToTerraform(struct?: AwsDomain.JwtOptionsPropertyOutputReference | AwsDomain.JwtOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -897,7 +897,7 @@ export function tfDomainJwtOptionsPropertyToTerraform(struct?: TfDomain.JwtOptio
 }
 
 
-export function tfDomainJwtOptionsPropertyToHclTerraform(struct?: TfDomain.JwtOptionsPropertyOutputReference | TfDomain.JwtOptionsProperty): any {
+export function awsDomainJwtOptionsPropertyToHclTerraform(struct?: AwsDomain.JwtOptionsPropertyOutputReference | AwsDomain.JwtOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -940,7 +940,7 @@ export function tfDomainJwtOptionsPropertyToHclTerraform(struct?: TfDomain.JwtOp
 }
 
 
-export function tfDomainMasterUserOptionsPropertyToTerraform(struct?: TfDomain.MasterUserOptionsPropertyOutputReference | TfDomain.MasterUserOptionsProperty): any {
+export function awsDomainMasterUserOptionsPropertyToTerraform(struct?: AwsDomain.MasterUserOptionsPropertyOutputReference | AwsDomain.MasterUserOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -953,7 +953,7 @@ export function tfDomainMasterUserOptionsPropertyToTerraform(struct?: TfDomain.M
 }
 
 
-export function tfDomainMasterUserOptionsPropertyToHclTerraform(struct?: TfDomain.MasterUserOptionsPropertyOutputReference | TfDomain.MasterUserOptionsProperty): any {
+export function awsDomainMasterUserOptionsPropertyToHclTerraform(struct?: AwsDomain.MasterUserOptionsPropertyOutputReference | AwsDomain.MasterUserOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -984,7 +984,7 @@ export function tfDomainMasterUserOptionsPropertyToHclTerraform(struct?: TfDomai
 }
 
 
-export function tfDomainAdvancedSecurityOptionsPropertyToTerraform(struct?: TfDomain.AdvancedSecurityOptionsPropertyOutputReference | TfDomain.AdvancedSecurityOptionsProperty): any {
+export function awsDomainAdvancedSecurityOptionsPropertyToTerraform(struct?: AwsDomain.AdvancedSecurityOptionsPropertyOutputReference | AwsDomain.AdvancedSecurityOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -993,13 +993,13 @@ export function tfDomainAdvancedSecurityOptionsPropertyToTerraform(struct?: TfDo
     anonymous_auth_enabled: cdktn.booleanToTerraform(struct!.anonymousAuthEnabled),
     enabled: cdktn.booleanToTerraform(struct!.enabled),
     internal_user_database_enabled: cdktn.booleanToTerraform(struct!.internalUserDatabaseEnabled),
-    jwt_options: tfDomainJwtOptionsPropertyToTerraform(struct!.jwtOptions),
-    master_user_options: tfDomainMasterUserOptionsPropertyToTerraform(struct!.masterUserOptions),
+    jwt_options: awsDomainJwtOptionsPropertyToTerraform(struct!.jwtOptions),
+    master_user_options: awsDomainMasterUserOptionsPropertyToTerraform(struct!.masterUserOptions),
   }
 }
 
 
-export function tfDomainAdvancedSecurityOptionsPropertyToHclTerraform(struct?: TfDomain.AdvancedSecurityOptionsPropertyOutputReference | TfDomain.AdvancedSecurityOptionsProperty): any {
+export function awsDomainAdvancedSecurityOptionsPropertyToHclTerraform(struct?: AwsDomain.AdvancedSecurityOptionsPropertyOutputReference | AwsDomain.AdvancedSecurityOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1024,13 +1024,13 @@ export function tfDomainAdvancedSecurityOptionsPropertyToHclTerraform(struct?: T
       storageClassType: "boolean",
     },
     jwt_options: {
-      value: tfDomainJwtOptionsPropertyToHclTerraform(struct!.jwtOptions),
+      value: awsDomainJwtOptionsPropertyToHclTerraform(struct!.jwtOptions),
       isBlock: true,
       type: "list",
       storageClassType: "JwtOptionsPropertyList",
     },
     master_user_options: {
-      value: tfDomainMasterUserOptionsPropertyToHclTerraform(struct!.masterUserOptions),
+      value: awsDomainMasterUserOptionsPropertyToHclTerraform(struct!.masterUserOptions),
       isBlock: true,
       type: "list",
       storageClassType: "MasterUserOptionsPropertyList",
@@ -1042,7 +1042,7 @@ export function tfDomainAdvancedSecurityOptionsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDomainNaturalLanguageQueryGenerationOptionsPropertyToTerraform(struct?: TfDomain.NaturalLanguageQueryGenerationOptionsPropertyOutputReference | TfDomain.NaturalLanguageQueryGenerationOptionsProperty): any {
+export function awsDomainNaturalLanguageQueryGenerationOptionsPropertyToTerraform(struct?: AwsDomain.NaturalLanguageQueryGenerationOptionsPropertyOutputReference | AwsDomain.NaturalLanguageQueryGenerationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1053,7 +1053,7 @@ export function tfDomainNaturalLanguageQueryGenerationOptionsPropertyToTerraform
 }
 
 
-export function tfDomainNaturalLanguageQueryGenerationOptionsPropertyToHclTerraform(struct?: TfDomain.NaturalLanguageQueryGenerationOptionsPropertyOutputReference | TfDomain.NaturalLanguageQueryGenerationOptionsProperty): any {
+export function awsDomainNaturalLanguageQueryGenerationOptionsPropertyToHclTerraform(struct?: AwsDomain.NaturalLanguageQueryGenerationOptionsPropertyOutputReference | AwsDomain.NaturalLanguageQueryGenerationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1072,7 +1072,7 @@ export function tfDomainNaturalLanguageQueryGenerationOptionsPropertyToHclTerraf
 }
 
 
-export function tfDomainS3VectorsEnginePropertyToTerraform(struct?: TfDomain.S3VectorsEnginePropertyOutputReference | TfDomain.S3VectorsEngineProperty): any {
+export function awsDomainS3VectorsEnginePropertyToTerraform(struct?: AwsDomain.S3VectorsEnginePropertyOutputReference | AwsDomain.S3VectorsEngineProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1083,7 +1083,7 @@ export function tfDomainS3VectorsEnginePropertyToTerraform(struct?: TfDomain.S3V
 }
 
 
-export function tfDomainS3VectorsEnginePropertyToHclTerraform(struct?: TfDomain.S3VectorsEnginePropertyOutputReference | TfDomain.S3VectorsEngineProperty): any {
+export function awsDomainS3VectorsEnginePropertyToHclTerraform(struct?: AwsDomain.S3VectorsEnginePropertyOutputReference | AwsDomain.S3VectorsEngineProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1102,7 +1102,7 @@ export function tfDomainS3VectorsEnginePropertyToHclTerraform(struct?: TfDomain.
 }
 
 
-export function tfDomainServerlessVectorAccelerationPropertyToTerraform(struct?: TfDomain.ServerlessVectorAccelerationPropertyOutputReference | TfDomain.ServerlessVectorAccelerationProperty): any {
+export function awsDomainServerlessVectorAccelerationPropertyToTerraform(struct?: AwsDomain.ServerlessVectorAccelerationPropertyOutputReference | AwsDomain.ServerlessVectorAccelerationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1113,7 +1113,7 @@ export function tfDomainServerlessVectorAccelerationPropertyToTerraform(struct?:
 }
 
 
-export function tfDomainServerlessVectorAccelerationPropertyToHclTerraform(struct?: TfDomain.ServerlessVectorAccelerationPropertyOutputReference | TfDomain.ServerlessVectorAccelerationProperty): any {
+export function awsDomainServerlessVectorAccelerationPropertyToHclTerraform(struct?: AwsDomain.ServerlessVectorAccelerationPropertyOutputReference | AwsDomain.ServerlessVectorAccelerationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1132,39 +1132,39 @@ export function tfDomainServerlessVectorAccelerationPropertyToHclTerraform(struc
 }
 
 
-export function tfDomainAimlOptionsPropertyToTerraform(struct?: TfDomain.AimlOptionsPropertyOutputReference | TfDomain.AimlOptionsProperty): any {
+export function awsDomainAimlOptionsPropertyToTerraform(struct?: AwsDomain.AimlOptionsPropertyOutputReference | AwsDomain.AimlOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    natural_language_query_generation_options: tfDomainNaturalLanguageQueryGenerationOptionsPropertyToTerraform(struct!.naturalLanguageQueryGenerationOptions),
-    s3_vectors_engine: tfDomainS3VectorsEnginePropertyToTerraform(struct!.s3VectorsEngine),
-    serverless_vector_acceleration: tfDomainServerlessVectorAccelerationPropertyToTerraform(struct!.serverlessVectorAcceleration),
+    natural_language_query_generation_options: awsDomainNaturalLanguageQueryGenerationOptionsPropertyToTerraform(struct!.naturalLanguageQueryGenerationOptions),
+    s3_vectors_engine: awsDomainS3VectorsEnginePropertyToTerraform(struct!.s3VectorsEngine),
+    serverless_vector_acceleration: awsDomainServerlessVectorAccelerationPropertyToTerraform(struct!.serverlessVectorAcceleration),
   }
 }
 
 
-export function tfDomainAimlOptionsPropertyToHclTerraform(struct?: TfDomain.AimlOptionsPropertyOutputReference | TfDomain.AimlOptionsProperty): any {
+export function awsDomainAimlOptionsPropertyToHclTerraform(struct?: AwsDomain.AimlOptionsPropertyOutputReference | AwsDomain.AimlOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     natural_language_query_generation_options: {
-      value: tfDomainNaturalLanguageQueryGenerationOptionsPropertyToHclTerraform(struct!.naturalLanguageQueryGenerationOptions),
+      value: awsDomainNaturalLanguageQueryGenerationOptionsPropertyToHclTerraform(struct!.naturalLanguageQueryGenerationOptions),
       isBlock: true,
       type: "list",
       storageClassType: "NaturalLanguageQueryGenerationOptionsPropertyList",
     },
     s3_vectors_engine: {
-      value: tfDomainS3VectorsEnginePropertyToHclTerraform(struct!.s3VectorsEngine),
+      value: awsDomainS3VectorsEnginePropertyToHclTerraform(struct!.s3VectorsEngine),
       isBlock: true,
       type: "list",
       storageClassType: "S3VectorsEnginePropertyList",
     },
     serverless_vector_acceleration: {
-      value: tfDomainServerlessVectorAccelerationPropertyToHclTerraform(struct!.serverlessVectorAcceleration),
+      value: awsDomainServerlessVectorAccelerationPropertyToHclTerraform(struct!.serverlessVectorAcceleration),
       isBlock: true,
       type: "list",
       storageClassType: "ServerlessVectorAccelerationPropertyList",
@@ -1176,7 +1176,7 @@ export function tfDomainAimlOptionsPropertyToHclTerraform(struct?: TfDomain.Aiml
 }
 
 
-export function tfDomainDurationPropertyToTerraform(struct?: TfDomain.DurationPropertyOutputReference | TfDomain.DurationProperty): any {
+export function awsDomainDurationPropertyToTerraform(struct?: AwsDomain.DurationPropertyOutputReference | AwsDomain.DurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1188,7 +1188,7 @@ export function tfDomainDurationPropertyToTerraform(struct?: TfDomain.DurationPr
 }
 
 
-export function tfDomainDurationPropertyToHclTerraform(struct?: TfDomain.DurationPropertyOutputReference | TfDomain.DurationProperty): any {
+export function awsDomainDurationPropertyToHclTerraform(struct?: AwsDomain.DurationPropertyOutputReference | AwsDomain.DurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1213,7 +1213,7 @@ export function tfDomainDurationPropertyToHclTerraform(struct?: TfDomain.Duratio
 }
 
 
-export function tfDomainMaintenanceSchedulePropertyToTerraform(struct?: TfDomain.MaintenanceScheduleProperty | cdktn.IResolvable): any {
+export function awsDomainMaintenanceSchedulePropertyToTerraform(struct?: AwsDomain.MaintenanceScheduleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1221,12 +1221,12 @@ export function tfDomainMaintenanceSchedulePropertyToTerraform(struct?: TfDomain
   return {
     cron_expression_for_recurrence: cdktn.stringToTerraform(struct!.cronExpressionForRecurrence),
     start_at: cdktn.stringToTerraform(struct!.startAt),
-    duration: tfDomainDurationPropertyToTerraform(struct!.duration),
+    duration: awsDomainDurationPropertyToTerraform(struct!.duration),
   }
 }
 
 
-export function tfDomainMaintenanceSchedulePropertyToHclTerraform(struct?: TfDomain.MaintenanceScheduleProperty | cdktn.IResolvable): any {
+export function awsDomainMaintenanceSchedulePropertyToHclTerraform(struct?: AwsDomain.MaintenanceScheduleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1245,7 +1245,7 @@ export function tfDomainMaintenanceSchedulePropertyToHclTerraform(struct?: TfDom
       storageClassType: "string",
     },
     duration: {
-      value: tfDomainDurationPropertyToHclTerraform(struct!.duration),
+      value: awsDomainDurationPropertyToHclTerraform(struct!.duration),
       isBlock: true,
       type: "list",
       storageClassType: "DurationPropertyList",
@@ -1257,7 +1257,7 @@ export function tfDomainMaintenanceSchedulePropertyToHclTerraform(struct?: TfDom
 }
 
 
-export function tfDomainAutoTuneOptionsPropertyToTerraform(struct?: TfDomain.AutoTuneOptionsPropertyOutputReference | TfDomain.AutoTuneOptionsProperty): any {
+export function awsDomainAutoTuneOptionsPropertyToTerraform(struct?: AwsDomain.AutoTuneOptionsPropertyOutputReference | AwsDomain.AutoTuneOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1266,12 +1266,12 @@ export function tfDomainAutoTuneOptionsPropertyToTerraform(struct?: TfDomain.Aut
     desired_state: cdktn.stringToTerraform(struct!.desiredState),
     rollback_on_disable: cdktn.stringToTerraform(struct!.rollbackOnDisable),
     use_off_peak_window: cdktn.booleanToTerraform(struct!.useOffPeakWindow),
-    maintenance_schedule: cdktn.listMapper(tfDomainMaintenanceSchedulePropertyToTerraform, true)(struct!.maintenanceSchedule),
+    maintenance_schedule: cdktn.listMapper(awsDomainMaintenanceSchedulePropertyToTerraform, true)(struct!.maintenanceSchedule),
   }
 }
 
 
-export function tfDomainAutoTuneOptionsPropertyToHclTerraform(struct?: TfDomain.AutoTuneOptionsPropertyOutputReference | TfDomain.AutoTuneOptionsProperty): any {
+export function awsDomainAutoTuneOptionsPropertyToHclTerraform(struct?: AwsDomain.AutoTuneOptionsPropertyOutputReference | AwsDomain.AutoTuneOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1296,7 +1296,7 @@ export function tfDomainAutoTuneOptionsPropertyToHclTerraform(struct?: TfDomain.
       storageClassType: "boolean",
     },
     maintenance_schedule: {
-      value: cdktn.listMapperHcl(tfDomainMaintenanceSchedulePropertyToHclTerraform, true)(struct!.maintenanceSchedule),
+      value: cdktn.listMapperHcl(awsDomainMaintenanceSchedulePropertyToHclTerraform, true)(struct!.maintenanceSchedule),
       isBlock: true,
       type: "set",
       storageClassType: "MaintenanceSchedulePropertyList",
@@ -1308,7 +1308,7 @@ export function tfDomainAutoTuneOptionsPropertyToHclTerraform(struct?: TfDomain.
 }
 
 
-export function tfDomainColdStorageOptionsPropertyToTerraform(struct?: TfDomain.ColdStorageOptionsPropertyOutputReference | TfDomain.ColdStorageOptionsProperty): any {
+export function awsDomainColdStorageOptionsPropertyToTerraform(struct?: AwsDomain.ColdStorageOptionsPropertyOutputReference | AwsDomain.ColdStorageOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1319,7 +1319,7 @@ export function tfDomainColdStorageOptionsPropertyToTerraform(struct?: TfDomain.
 }
 
 
-export function tfDomainColdStorageOptionsPropertyToHclTerraform(struct?: TfDomain.ColdStorageOptionsPropertyOutputReference | TfDomain.ColdStorageOptionsProperty): any {
+export function awsDomainColdStorageOptionsPropertyToHclTerraform(struct?: AwsDomain.ColdStorageOptionsPropertyOutputReference | AwsDomain.ColdStorageOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1338,7 +1338,7 @@ export function tfDomainColdStorageOptionsPropertyToHclTerraform(struct?: TfDoma
 }
 
 
-export function tfDomainNodeConfigPropertyToTerraform(struct?: TfDomain.NodeConfigPropertyOutputReference | TfDomain.NodeConfigProperty): any {
+export function awsDomainNodeConfigPropertyToTerraform(struct?: AwsDomain.NodeConfigPropertyOutputReference | AwsDomain.NodeConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1351,7 +1351,7 @@ export function tfDomainNodeConfigPropertyToTerraform(struct?: TfDomain.NodeConf
 }
 
 
-export function tfDomainNodeConfigPropertyToHclTerraform(struct?: TfDomain.NodeConfigPropertyOutputReference | TfDomain.NodeConfigProperty): any {
+export function awsDomainNodeConfigPropertyToHclTerraform(struct?: AwsDomain.NodeConfigPropertyOutputReference | AwsDomain.NodeConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1382,19 +1382,19 @@ export function tfDomainNodeConfigPropertyToHclTerraform(struct?: TfDomain.NodeC
 }
 
 
-export function tfDomainNodeOptionsPropertyToTerraform(struct?: TfDomain.NodeOptionsProperty | cdktn.IResolvable): any {
+export function awsDomainNodeOptionsPropertyToTerraform(struct?: AwsDomain.NodeOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     node_type: cdktn.stringToTerraform(struct!.nodeType),
-    node_config: tfDomainNodeConfigPropertyToTerraform(struct!.nodeConfig),
+    node_config: awsDomainNodeConfigPropertyToTerraform(struct!.nodeConfig),
   }
 }
 
 
-export function tfDomainNodeOptionsPropertyToHclTerraform(struct?: TfDomain.NodeOptionsProperty | cdktn.IResolvable): any {
+export function awsDomainNodeOptionsPropertyToHclTerraform(struct?: AwsDomain.NodeOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1407,7 +1407,7 @@ export function tfDomainNodeOptionsPropertyToHclTerraform(struct?: TfDomain.Node
       storageClassType: "string",
     },
     node_config: {
-      value: tfDomainNodeConfigPropertyToHclTerraform(struct!.nodeConfig),
+      value: awsDomainNodeConfigPropertyToHclTerraform(struct!.nodeConfig),
       isBlock: true,
       type: "list",
       storageClassType: "NodeConfigPropertyList",
@@ -1419,7 +1419,7 @@ export function tfDomainNodeOptionsPropertyToHclTerraform(struct?: TfDomain.Node
 }
 
 
-export function tfDomainZoneAwarenessConfigPropertyToTerraform(struct?: TfDomain.ZoneAwarenessConfigPropertyOutputReference | TfDomain.ZoneAwarenessConfigProperty): any {
+export function awsDomainZoneAwarenessConfigPropertyToTerraform(struct?: AwsDomain.ZoneAwarenessConfigPropertyOutputReference | AwsDomain.ZoneAwarenessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1430,7 +1430,7 @@ export function tfDomainZoneAwarenessConfigPropertyToTerraform(struct?: TfDomain
 }
 
 
-export function tfDomainZoneAwarenessConfigPropertyToHclTerraform(struct?: TfDomain.ZoneAwarenessConfigPropertyOutputReference | TfDomain.ZoneAwarenessConfigProperty): any {
+export function awsDomainZoneAwarenessConfigPropertyToHclTerraform(struct?: AwsDomain.ZoneAwarenessConfigPropertyOutputReference | AwsDomain.ZoneAwarenessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1449,7 +1449,7 @@ export function tfDomainZoneAwarenessConfigPropertyToHclTerraform(struct?: TfDom
 }
 
 
-export function tfDomainClusterConfigPropertyToTerraform(struct?: TfDomain.ClusterConfigPropertyOutputReference | TfDomain.ClusterConfigProperty): any {
+export function awsDomainClusterConfigPropertyToTerraform(struct?: AwsDomain.ClusterConfigPropertyOutputReference | AwsDomain.ClusterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1465,14 +1465,14 @@ export function tfDomainClusterConfigPropertyToTerraform(struct?: TfDomain.Clust
     warm_enabled: cdktn.booleanToTerraform(struct!.warmEnabled),
     warm_type: cdktn.stringToTerraform(struct!.warmType),
     zone_awareness_enabled: cdktn.booleanToTerraform(struct!.zoneAwarenessEnabled),
-    cold_storage_options: tfDomainColdStorageOptionsPropertyToTerraform(struct!.coldStorageOptions),
-    node_options: cdktn.listMapper(tfDomainNodeOptionsPropertyToTerraform, true)(struct!.nodeOptions),
-    zone_awareness_config: tfDomainZoneAwarenessConfigPropertyToTerraform(struct!.zoneAwarenessConfig),
+    cold_storage_options: awsDomainColdStorageOptionsPropertyToTerraform(struct!.coldStorageOptions),
+    node_options: cdktn.listMapper(awsDomainNodeOptionsPropertyToTerraform, true)(struct!.nodeOptions),
+    zone_awareness_config: awsDomainZoneAwarenessConfigPropertyToTerraform(struct!.zoneAwarenessConfig),
   }
 }
 
 
-export function tfDomainClusterConfigPropertyToHclTerraform(struct?: TfDomain.ClusterConfigPropertyOutputReference | TfDomain.ClusterConfigProperty): any {
+export function awsDomainClusterConfigPropertyToHclTerraform(struct?: AwsDomain.ClusterConfigPropertyOutputReference | AwsDomain.ClusterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1539,19 +1539,19 @@ export function tfDomainClusterConfigPropertyToHclTerraform(struct?: TfDomain.Cl
       storageClassType: "boolean",
     },
     cold_storage_options: {
-      value: tfDomainColdStorageOptionsPropertyToHclTerraform(struct!.coldStorageOptions),
+      value: awsDomainColdStorageOptionsPropertyToHclTerraform(struct!.coldStorageOptions),
       isBlock: true,
       type: "list",
       storageClassType: "ColdStorageOptionsPropertyList",
     },
     node_options: {
-      value: cdktn.listMapperHcl(tfDomainNodeOptionsPropertyToHclTerraform, true)(struct!.nodeOptions),
+      value: cdktn.listMapperHcl(awsDomainNodeOptionsPropertyToHclTerraform, true)(struct!.nodeOptions),
       isBlock: true,
       type: "list",
       storageClassType: "NodeOptionsPropertyList",
     },
     zone_awareness_config: {
-      value: tfDomainZoneAwarenessConfigPropertyToHclTerraform(struct!.zoneAwarenessConfig),
+      value: awsDomainZoneAwarenessConfigPropertyToHclTerraform(struct!.zoneAwarenessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ZoneAwarenessConfigPropertyList",
@@ -1563,7 +1563,7 @@ export function tfDomainClusterConfigPropertyToHclTerraform(struct?: TfDomain.Cl
 }
 
 
-export function tfDomainCognitoOptionsPropertyToTerraform(struct?: TfDomain.CognitoOptionsPropertyOutputReference | TfDomain.CognitoOptionsProperty): any {
+export function awsDomainCognitoOptionsPropertyToTerraform(struct?: AwsDomain.CognitoOptionsPropertyOutputReference | AwsDomain.CognitoOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1577,7 +1577,7 @@ export function tfDomainCognitoOptionsPropertyToTerraform(struct?: TfDomain.Cogn
 }
 
 
-export function tfDomainCognitoOptionsPropertyToHclTerraform(struct?: TfDomain.CognitoOptionsPropertyOutputReference | TfDomain.CognitoOptionsProperty): any {
+export function awsDomainCognitoOptionsPropertyToHclTerraform(struct?: AwsDomain.CognitoOptionsPropertyOutputReference | AwsDomain.CognitoOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1614,7 +1614,7 @@ export function tfDomainCognitoOptionsPropertyToHclTerraform(struct?: TfDomain.C
 }
 
 
-export function tfDomainDeploymentStrategyOptionsPropertyToTerraform(struct?: TfDomain.DeploymentStrategyOptionsPropertyOutputReference | TfDomain.DeploymentStrategyOptionsProperty): any {
+export function awsDomainDeploymentStrategyOptionsPropertyToTerraform(struct?: AwsDomain.DeploymentStrategyOptionsPropertyOutputReference | AwsDomain.DeploymentStrategyOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1625,7 +1625,7 @@ export function tfDomainDeploymentStrategyOptionsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDomainDeploymentStrategyOptionsPropertyToHclTerraform(struct?: TfDomain.DeploymentStrategyOptionsPropertyOutputReference | TfDomain.DeploymentStrategyOptionsProperty): any {
+export function awsDomainDeploymentStrategyOptionsPropertyToHclTerraform(struct?: AwsDomain.DeploymentStrategyOptionsPropertyOutputReference | AwsDomain.DeploymentStrategyOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1644,7 +1644,7 @@ export function tfDomainDeploymentStrategyOptionsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfDomainDomainEndpointOptionsPropertyToTerraform(struct?: TfDomain.DomainEndpointOptionsPropertyOutputReference | TfDomain.DomainEndpointOptionsProperty): any {
+export function awsDomainDomainEndpointOptionsPropertyToTerraform(struct?: AwsDomain.DomainEndpointOptionsPropertyOutputReference | AwsDomain.DomainEndpointOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1659,7 +1659,7 @@ export function tfDomainDomainEndpointOptionsPropertyToTerraform(struct?: TfDoma
 }
 
 
-export function tfDomainDomainEndpointOptionsPropertyToHclTerraform(struct?: TfDomain.DomainEndpointOptionsPropertyOutputReference | TfDomain.DomainEndpointOptionsProperty): any {
+export function awsDomainDomainEndpointOptionsPropertyToHclTerraform(struct?: AwsDomain.DomainEndpointOptionsPropertyOutputReference | AwsDomain.DomainEndpointOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1702,7 +1702,7 @@ export function tfDomainDomainEndpointOptionsPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDomainEbsOptionsPropertyToTerraform(struct?: TfDomain.EbsOptionsPropertyOutputReference | TfDomain.EbsOptionsProperty): any {
+export function awsDomainEbsOptionsPropertyToTerraform(struct?: AwsDomain.EbsOptionsPropertyOutputReference | AwsDomain.EbsOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1717,7 +1717,7 @@ export function tfDomainEbsOptionsPropertyToTerraform(struct?: TfDomain.EbsOptio
 }
 
 
-export function tfDomainEbsOptionsPropertyToHclTerraform(struct?: TfDomain.EbsOptionsPropertyOutputReference | TfDomain.EbsOptionsProperty): any {
+export function awsDomainEbsOptionsPropertyToHclTerraform(struct?: AwsDomain.EbsOptionsPropertyOutputReference | AwsDomain.EbsOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1760,7 +1760,7 @@ export function tfDomainEbsOptionsPropertyToHclTerraform(struct?: TfDomain.EbsOp
 }
 
 
-export function tfDomainEncryptAtRestPropertyToTerraform(struct?: TfDomain.EncryptAtRestPropertyOutputReference | TfDomain.EncryptAtRestProperty): any {
+export function awsDomainEncryptAtRestPropertyToTerraform(struct?: AwsDomain.EncryptAtRestPropertyOutputReference | AwsDomain.EncryptAtRestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1772,7 +1772,7 @@ export function tfDomainEncryptAtRestPropertyToTerraform(struct?: TfDomain.Encry
 }
 
 
-export function tfDomainEncryptAtRestPropertyToHclTerraform(struct?: TfDomain.EncryptAtRestPropertyOutputReference | TfDomain.EncryptAtRestProperty): any {
+export function awsDomainEncryptAtRestPropertyToHclTerraform(struct?: AwsDomain.EncryptAtRestPropertyOutputReference | AwsDomain.EncryptAtRestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1797,7 +1797,7 @@ export function tfDomainEncryptAtRestPropertyToHclTerraform(struct?: TfDomain.En
 }
 
 
-export function tfDomainIdentityCenterOptionsPropertyToTerraform(struct?: TfDomain.IdentityCenterOptionsPropertyOutputReference | TfDomain.IdentityCenterOptionsProperty): any {
+export function awsDomainIdentityCenterOptionsPropertyToTerraform(struct?: AwsDomain.IdentityCenterOptionsPropertyOutputReference | AwsDomain.IdentityCenterOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1811,7 +1811,7 @@ export function tfDomainIdentityCenterOptionsPropertyToTerraform(struct?: TfDoma
 }
 
 
-export function tfDomainIdentityCenterOptionsPropertyToHclTerraform(struct?: TfDomain.IdentityCenterOptionsPropertyOutputReference | TfDomain.IdentityCenterOptionsProperty): any {
+export function awsDomainIdentityCenterOptionsPropertyToHclTerraform(struct?: AwsDomain.IdentityCenterOptionsPropertyOutputReference | AwsDomain.IdentityCenterOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1848,7 +1848,7 @@ export function tfDomainIdentityCenterOptionsPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDomainLogPublishingOptionsPropertyToTerraform(struct?: TfDomain.LogPublishingOptionsProperty | cdktn.IResolvable): any {
+export function awsDomainLogPublishingOptionsPropertyToTerraform(struct?: AwsDomain.LogPublishingOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1861,7 +1861,7 @@ export function tfDomainLogPublishingOptionsPropertyToTerraform(struct?: TfDomai
 }
 
 
-export function tfDomainLogPublishingOptionsPropertyToHclTerraform(struct?: TfDomain.LogPublishingOptionsProperty | cdktn.IResolvable): any {
+export function awsDomainLogPublishingOptionsPropertyToHclTerraform(struct?: AwsDomain.LogPublishingOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1892,7 +1892,7 @@ export function tfDomainLogPublishingOptionsPropertyToHclTerraform(struct?: TfDo
 }
 
 
-export function tfDomainNodeToNodeEncryptionPropertyToTerraform(struct?: TfDomain.NodeToNodeEncryptionPropertyOutputReference | TfDomain.NodeToNodeEncryptionProperty): any {
+export function awsDomainNodeToNodeEncryptionPropertyToTerraform(struct?: AwsDomain.NodeToNodeEncryptionPropertyOutputReference | AwsDomain.NodeToNodeEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1903,7 +1903,7 @@ export function tfDomainNodeToNodeEncryptionPropertyToTerraform(struct?: TfDomai
 }
 
 
-export function tfDomainNodeToNodeEncryptionPropertyToHclTerraform(struct?: TfDomain.NodeToNodeEncryptionPropertyOutputReference | TfDomain.NodeToNodeEncryptionProperty): any {
+export function awsDomainNodeToNodeEncryptionPropertyToHclTerraform(struct?: AwsDomain.NodeToNodeEncryptionPropertyOutputReference | AwsDomain.NodeToNodeEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1922,7 +1922,7 @@ export function tfDomainNodeToNodeEncryptionPropertyToHclTerraform(struct?: TfDo
 }
 
 
-export function tfDomainWindowStartTimePropertyToTerraform(struct?: TfDomain.WindowStartTimePropertyOutputReference | TfDomain.WindowStartTimeProperty): any {
+export function awsDomainWindowStartTimePropertyToTerraform(struct?: AwsDomain.WindowStartTimePropertyOutputReference | AwsDomain.WindowStartTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1934,7 +1934,7 @@ export function tfDomainWindowStartTimePropertyToTerraform(struct?: TfDomain.Win
 }
 
 
-export function tfDomainWindowStartTimePropertyToHclTerraform(struct?: TfDomain.WindowStartTimePropertyOutputReference | TfDomain.WindowStartTimeProperty): any {
+export function awsDomainWindowStartTimePropertyToHclTerraform(struct?: AwsDomain.WindowStartTimePropertyOutputReference | AwsDomain.WindowStartTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1959,25 +1959,25 @@ export function tfDomainWindowStartTimePropertyToHclTerraform(struct?: TfDomain.
 }
 
 
-export function tfDomainOffPeakWindowPropertyToTerraform(struct?: TfDomain.OffPeakWindowPropertyOutputReference | TfDomain.OffPeakWindowProperty): any {
+export function awsDomainOffPeakWindowPropertyToTerraform(struct?: AwsDomain.OffPeakWindowPropertyOutputReference | AwsDomain.OffPeakWindowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    window_start_time: tfDomainWindowStartTimePropertyToTerraform(struct!.windowStartTime),
+    window_start_time: awsDomainWindowStartTimePropertyToTerraform(struct!.windowStartTime),
   }
 }
 
 
-export function tfDomainOffPeakWindowPropertyToHclTerraform(struct?: TfDomain.OffPeakWindowPropertyOutputReference | TfDomain.OffPeakWindowProperty): any {
+export function awsDomainOffPeakWindowPropertyToHclTerraform(struct?: AwsDomain.OffPeakWindowPropertyOutputReference | AwsDomain.OffPeakWindowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     window_start_time: {
-      value: tfDomainWindowStartTimePropertyToHclTerraform(struct!.windowStartTime),
+      value: awsDomainWindowStartTimePropertyToHclTerraform(struct!.windowStartTime),
       isBlock: true,
       type: "list",
       storageClassType: "WindowStartTimePropertyList",
@@ -1989,19 +1989,19 @@ export function tfDomainOffPeakWindowPropertyToHclTerraform(struct?: TfDomain.Of
 }
 
 
-export function tfDomainOffPeakWindowOptionsPropertyToTerraform(struct?: TfDomain.OffPeakWindowOptionsPropertyOutputReference | TfDomain.OffPeakWindowOptionsProperty): any {
+export function awsDomainOffPeakWindowOptionsPropertyToTerraform(struct?: AwsDomain.OffPeakWindowOptionsPropertyOutputReference | AwsDomain.OffPeakWindowOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    off_peak_window: tfDomainOffPeakWindowPropertyToTerraform(struct!.offPeakWindow),
+    off_peak_window: awsDomainOffPeakWindowPropertyToTerraform(struct!.offPeakWindow),
   }
 }
 
 
-export function tfDomainOffPeakWindowOptionsPropertyToHclTerraform(struct?: TfDomain.OffPeakWindowOptionsPropertyOutputReference | TfDomain.OffPeakWindowOptionsProperty): any {
+export function awsDomainOffPeakWindowOptionsPropertyToHclTerraform(struct?: AwsDomain.OffPeakWindowOptionsPropertyOutputReference | AwsDomain.OffPeakWindowOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2014,7 +2014,7 @@ export function tfDomainOffPeakWindowOptionsPropertyToHclTerraform(struct?: TfDo
       storageClassType: "boolean",
     },
     off_peak_window: {
-      value: tfDomainOffPeakWindowPropertyToHclTerraform(struct!.offPeakWindow),
+      value: awsDomainOffPeakWindowPropertyToHclTerraform(struct!.offPeakWindow),
       isBlock: true,
       type: "list",
       storageClassType: "OffPeakWindowPropertyList",
@@ -2026,7 +2026,7 @@ export function tfDomainOffPeakWindowOptionsPropertyToHclTerraform(struct?: TfDo
 }
 
 
-export function tfDomainSnapshotOptionsPropertyToTerraform(struct?: TfDomain.SnapshotOptionsPropertyOutputReference | TfDomain.SnapshotOptionsProperty): any {
+export function awsDomainSnapshotOptionsPropertyToTerraform(struct?: AwsDomain.SnapshotOptionsPropertyOutputReference | AwsDomain.SnapshotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2037,7 +2037,7 @@ export function tfDomainSnapshotOptionsPropertyToTerraform(struct?: TfDomain.Sna
 }
 
 
-export function tfDomainSnapshotOptionsPropertyToHclTerraform(struct?: TfDomain.SnapshotOptionsPropertyOutputReference | TfDomain.SnapshotOptionsProperty): any {
+export function awsDomainSnapshotOptionsPropertyToHclTerraform(struct?: AwsDomain.SnapshotOptionsPropertyOutputReference | AwsDomain.SnapshotOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2056,7 +2056,7 @@ export function tfDomainSnapshotOptionsPropertyToHclTerraform(struct?: TfDomain.
 }
 
 
-export function tfDomainSoftwareUpdateOptionsPropertyToTerraform(struct?: TfDomain.SoftwareUpdateOptionsPropertyOutputReference | TfDomain.SoftwareUpdateOptionsProperty): any {
+export function awsDomainSoftwareUpdateOptionsPropertyToTerraform(struct?: AwsDomain.SoftwareUpdateOptionsPropertyOutputReference | AwsDomain.SoftwareUpdateOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2067,7 +2067,7 @@ export function tfDomainSoftwareUpdateOptionsPropertyToTerraform(struct?: TfDoma
 }
 
 
-export function tfDomainSoftwareUpdateOptionsPropertyToHclTerraform(struct?: TfDomain.SoftwareUpdateOptionsPropertyOutputReference | TfDomain.SoftwareUpdateOptionsProperty): any {
+export function awsDomainSoftwareUpdateOptionsPropertyToHclTerraform(struct?: AwsDomain.SoftwareUpdateOptionsPropertyOutputReference | AwsDomain.SoftwareUpdateOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2086,7 +2086,7 @@ export function tfDomainSoftwareUpdateOptionsPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDomainTimeoutsPropertyToTerraform(struct?: TfDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDomainTimeoutsPropertyToTerraform(struct?: AwsDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2099,7 +2099,7 @@ export function tfDomainTimeoutsPropertyToTerraform(struct?: TfDomain.TimeoutsPr
 }
 
 
-export function tfDomainTimeoutsPropertyToHclTerraform(struct?: TfDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDomainTimeoutsPropertyToHclTerraform(struct?: AwsDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2130,7 +2130,7 @@ export function tfDomainTimeoutsPropertyToHclTerraform(struct?: TfDomain.Timeout
 }
 
 
-export function tfDomainVpcOptionsPropertyToTerraform(struct?: TfDomain.VpcOptionsPropertyOutputReference | TfDomain.VpcOptionsProperty): any {
+export function awsDomainVpcOptionsPropertyToTerraform(struct?: AwsDomain.VpcOptionsPropertyOutputReference | AwsDomain.VpcOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2142,7 +2142,7 @@ export function tfDomainVpcOptionsPropertyToTerraform(struct?: TfDomain.VpcOptio
 }
 
 
-export function tfDomainVpcOptionsPropertyToHclTerraform(struct?: TfDomain.VpcOptionsPropertyOutputReference | TfDomain.VpcOptionsProperty): any {
+export function awsDomainVpcOptionsPropertyToHclTerraform(struct?: AwsDomain.VpcOptionsPropertyOutputReference | AwsDomain.VpcOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2167,26 +2167,26 @@ export function tfDomainVpcOptionsPropertyToHclTerraform(struct?: TfDomain.VpcOp
 }
 
 
-export namespace TfDomain {
+export namespace AwsDomain {
 export interface JwtOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled TfDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled AwsDomain#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#jwks_url TfDomain#jwks_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#jwks_url AwsDomain#jwks_url}
   */
   readonly jwksUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#public_key TfDomain#public_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#public_key AwsDomain#public_key}
   */
   readonly publicKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#roles_key TfDomain#roles_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#roles_key AwsDomain#roles_key}
   */
   readonly rolesKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#subject_key TfDomain#subject_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#subject_key AwsDomain#subject_key}
   */
   readonly subjectKey?: string;
 }
@@ -2328,15 +2328,15 @@ export class JwtOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MasterUserOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#master_user_arn TfDomain#master_user_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#master_user_arn AwsDomain#master_user_arn}
   */
   readonly masterUserArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#master_user_name TfDomain#master_user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#master_user_name AwsDomain#master_user_name}
   */
   readonly masterUserName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#master_user_password TfDomain#master_user_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#master_user_password AwsDomain#master_user_password}
   */
   readonly masterUserPassword?: string;
 }
@@ -2434,27 +2434,27 @@ export class MasterUserOptionsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface AdvancedSecurityOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#anonymous_auth_enabled TfDomain#anonymous_auth_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#anonymous_auth_enabled AwsDomain#anonymous_auth_enabled}
   */
   readonly anonymousAuthEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled TfDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled AwsDomain#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#internal_user_database_enabled TfDomain#internal_user_database_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#internal_user_database_enabled AwsDomain#internal_user_database_enabled}
   */
   readonly internalUserDatabaseEnabled?: boolean | cdktn.IResolvable;
   /**
   * jwt_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#jwt_options TfDomain#jwt_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#jwt_options AwsDomain#jwt_options}
   */
   readonly jwtOptions?: JwtOptionsProperty;
   /**
   * master_user_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#master_user_options TfDomain#master_user_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#master_user_options AwsDomain#master_user_options}
   */
   readonly masterUserOptions?: MasterUserOptionsProperty;
 }
@@ -2593,7 +2593,7 @@ export class AdvancedSecurityOptionsPropertyOutputReference extends cdktn.Comple
 }
 export interface NaturalLanguageQueryGenerationOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#desired_state TfDomain#desired_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#desired_state AwsDomain#desired_state}
   */
   readonly desiredState?: string;
 }
@@ -2647,7 +2647,7 @@ export class NaturalLanguageQueryGenerationOptionsPropertyOutputReference extend
 }
 export interface S3VectorsEngineProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled TfDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled AwsDomain#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -2701,7 +2701,7 @@ export class S3VectorsEnginePropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface ServerlessVectorAccelerationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled TfDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled AwsDomain#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -2757,19 +2757,19 @@ export interface AimlOptionsProperty {
   /**
   * natural_language_query_generation_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#natural_language_query_generation_options TfDomain#natural_language_query_generation_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#natural_language_query_generation_options AwsDomain#natural_language_query_generation_options}
   */
   readonly naturalLanguageQueryGenerationOptions?: NaturalLanguageQueryGenerationOptionsProperty;
   /**
   * s3_vectors_engine block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#s3_vectors_engine TfDomain#s3_vectors_engine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#s3_vectors_engine AwsDomain#s3_vectors_engine}
   */
   readonly s3VectorsEngine?: S3VectorsEngineProperty;
   /**
   * serverless_vector_acceleration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#serverless_vector_acceleration TfDomain#serverless_vector_acceleration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#serverless_vector_acceleration AwsDomain#serverless_vector_acceleration}
   */
   readonly serverlessVectorAcceleration?: ServerlessVectorAccelerationProperty;
 }
@@ -2867,11 +2867,11 @@ export class AimlOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#unit TfDomain#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#unit AwsDomain#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#value TfDomain#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#value AwsDomain#value}
   */
   readonly value: number;
 }
@@ -2941,17 +2941,17 @@ export class DurationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MaintenanceScheduleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#cron_expression_for_recurrence TfDomain#cron_expression_for_recurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#cron_expression_for_recurrence AwsDomain#cron_expression_for_recurrence}
   */
   readonly cronExpressionForRecurrence: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#start_at TfDomain#start_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#start_at AwsDomain#start_at}
   */
   readonly startAt: string;
   /**
   * duration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#duration TfDomain#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#duration AwsDomain#duration}
   */
   readonly duration: DurationProperty;
 }
@@ -3072,21 +3072,21 @@ export class MaintenanceSchedulePropertyList extends cdktn.ComplexList {
 }
 export interface AutoTuneOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#desired_state TfDomain#desired_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#desired_state AwsDomain#desired_state}
   */
   readonly desiredState: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#rollback_on_disable TfDomain#rollback_on_disable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#rollback_on_disable AwsDomain#rollback_on_disable}
   */
   readonly rollbackOnDisable?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#use_off_peak_window TfDomain#use_off_peak_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#use_off_peak_window AwsDomain#use_off_peak_window}
   */
   readonly useOffPeakWindow?: boolean | cdktn.IResolvable;
   /**
   * maintenance_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#maintenance_schedule TfDomain#maintenance_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#maintenance_schedule AwsDomain#maintenance_schedule}
   */
   readonly maintenanceSchedule?: MaintenanceScheduleProperty[] | cdktn.IResolvable;
 }
@@ -3203,7 +3203,7 @@ export class AutoTuneOptionsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface ColdStorageOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled TfDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled AwsDomain#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -3257,15 +3257,15 @@ export class ColdStorageOptionsPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface NodeConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#count TfDomain#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#count AwsDomain#count}
   */
   readonly count?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled TfDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled AwsDomain#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#type TfDomain#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#type AwsDomain#type}
   */
   readonly type?: string;
 }
@@ -3363,13 +3363,13 @@ export class NodeConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NodeOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#node_type TfDomain#node_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#node_type AwsDomain#node_type}
   */
   readonly nodeType?: string;
   /**
   * node_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#node_config TfDomain#node_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#node_config AwsDomain#node_config}
   */
   readonly nodeConfig?: NodeConfigProperty;
 }
@@ -3477,7 +3477,7 @@ export class NodeOptionsPropertyList extends cdktn.ComplexList {
 }
 export interface ZoneAwarenessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#availability_zone_count TfDomain#availability_zone_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#availability_zone_count AwsDomain#availability_zone_count}
   */
   readonly availabilityZoneCount?: number;
 }
@@ -3531,61 +3531,61 @@ export class ZoneAwarenessConfigPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface ClusterConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#dedicated_master_count TfDomain#dedicated_master_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#dedicated_master_count AwsDomain#dedicated_master_count}
   */
   readonly dedicatedMasterCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#dedicated_master_enabled TfDomain#dedicated_master_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#dedicated_master_enabled AwsDomain#dedicated_master_enabled}
   */
   readonly dedicatedMasterEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#dedicated_master_type TfDomain#dedicated_master_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#dedicated_master_type AwsDomain#dedicated_master_type}
   */
   readonly dedicatedMasterType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#instance_count TfDomain#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#instance_count AwsDomain#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#instance_type TfDomain#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#instance_type AwsDomain#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#multi_az_with_standby_enabled TfDomain#multi_az_with_standby_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#multi_az_with_standby_enabled AwsDomain#multi_az_with_standby_enabled}
   */
   readonly multiAzWithStandbyEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#warm_count TfDomain#warm_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#warm_count AwsDomain#warm_count}
   */
   readonly warmCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#warm_enabled TfDomain#warm_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#warm_enabled AwsDomain#warm_enabled}
   */
   readonly warmEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#warm_type TfDomain#warm_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#warm_type AwsDomain#warm_type}
   */
   readonly warmType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#zone_awareness_enabled TfDomain#zone_awareness_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#zone_awareness_enabled AwsDomain#zone_awareness_enabled}
   */
   readonly zoneAwarenessEnabled?: boolean | cdktn.IResolvable;
   /**
   * cold_storage_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#cold_storage_options TfDomain#cold_storage_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#cold_storage_options AwsDomain#cold_storage_options}
   */
   readonly coldStorageOptions?: ColdStorageOptionsProperty;
   /**
   * node_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#node_options TfDomain#node_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#node_options AwsDomain#node_options}
   */
   readonly nodeOptions?: NodeOptionsProperty[] | cdktn.IResolvable;
   /**
   * zone_awareness_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#zone_awareness_config TfDomain#zone_awareness_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#zone_awareness_config AwsDomain#zone_awareness_config}
   */
   readonly zoneAwarenessConfig?: ZoneAwarenessConfigProperty;
 }
@@ -3903,19 +3903,19 @@ export class ClusterConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CognitoOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled TfDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled AwsDomain#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#identity_pool_id TfDomain#identity_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#identity_pool_id AwsDomain#identity_pool_id}
   */
   readonly identityPoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#role_arn TfDomain#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#role_arn AwsDomain#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#user_pool_id TfDomain#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#user_pool_id AwsDomain#user_pool_id}
   */
   readonly userPoolId: string;
 }
@@ -4026,7 +4026,7 @@ export class CognitoOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DeploymentStrategyOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#deployment_strategy TfDomain#deployment_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#deployment_strategy AwsDomain#deployment_strategy}
   */
   readonly deploymentStrategy: string;
 }
@@ -4077,23 +4077,23 @@ export class DeploymentStrategyOptionsPropertyOutputReference extends cdktn.Comp
 }
 export interface DomainEndpointOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#custom_endpoint TfDomain#custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#custom_endpoint AwsDomain#custom_endpoint}
   */
   readonly customEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#custom_endpoint_certificate_arn TfDomain#custom_endpoint_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#custom_endpoint_certificate_arn AwsDomain#custom_endpoint_certificate_arn}
   */
   readonly customEndpointCertificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#custom_endpoint_enabled TfDomain#custom_endpoint_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#custom_endpoint_enabled AwsDomain#custom_endpoint_enabled}
   */
   readonly customEndpointEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enforce_https TfDomain#enforce_https}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enforce_https AwsDomain#enforce_https}
   */
   readonly enforceHttps?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#tls_security_policy TfDomain#tls_security_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#tls_security_policy AwsDomain#tls_security_policy}
   */
   readonly tlsSecurityPolicy?: string;
 }
@@ -4235,23 +4235,23 @@ export class DomainEndpointOptionsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface EbsOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#ebs_enabled TfDomain#ebs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#ebs_enabled AwsDomain#ebs_enabled}
   */
   readonly ebsEnabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#iops TfDomain#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#iops AwsDomain#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#throughput TfDomain#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#throughput AwsDomain#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#volume_size TfDomain#volume_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#volume_size AwsDomain#volume_size}
   */
   readonly volumeSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#volume_type TfDomain#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#volume_type AwsDomain#volume_type}
   */
   readonly volumeType?: string;
 }
@@ -4390,11 +4390,11 @@ export class EbsOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EncryptAtRestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled TfDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled AwsDomain#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#kms_key_id TfDomain#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#kms_key_id AwsDomain#kms_key_id}
   */
   readonly kmsKeyId?: string;
 }
@@ -4467,19 +4467,19 @@ export class EncryptAtRestPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IdentityCenterOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled_api_access TfDomain#enabled_api_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled_api_access AwsDomain#enabled_api_access}
   */
   readonly enabledApiAccess?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#identity_center_instance_arn TfDomain#identity_center_instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#identity_center_instance_arn AwsDomain#identity_center_instance_arn}
   */
   readonly identityCenterInstanceArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#roles_key TfDomain#roles_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#roles_key AwsDomain#roles_key}
   */
   readonly rolesKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#subject_key TfDomain#subject_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#subject_key AwsDomain#subject_key}
   */
   readonly subjectKey?: string;
 }
@@ -4599,15 +4599,15 @@ export class IdentityCenterOptionsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface LogPublishingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#cloudwatch_log_group_arn TfDomain#cloudwatch_log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#cloudwatch_log_group_arn AwsDomain#cloudwatch_log_group_arn}
   */
   readonly cloudwatchLogGroupArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled TfDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled AwsDomain#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#log_type TfDomain#log_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#log_type AwsDomain#log_type}
   */
   readonly logType: string;
 }
@@ -4731,7 +4731,7 @@ export class LogPublishingOptionsPropertyList extends cdktn.ComplexList {
 }
 export interface NodeToNodeEncryptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled TfDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled AwsDomain#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
 }
@@ -4782,11 +4782,11 @@ export class NodeToNodeEncryptionPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface WindowStartTimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#hours TfDomain#hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#hours AwsDomain#hours}
   */
   readonly hours?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#minutes TfDomain#minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#minutes AwsDomain#minutes}
   */
   readonly minutes?: number;
 }
@@ -4864,7 +4864,7 @@ export interface OffPeakWindowProperty {
   /**
   * window_start_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#window_start_time TfDomain#window_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#window_start_time AwsDomain#window_start_time}
   */
   readonly windowStartTime?: WindowStartTimeProperty;
 }
@@ -4918,13 +4918,13 @@ export class OffPeakWindowPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OffPeakWindowOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled TfDomain#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#enabled AwsDomain#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * off_peak_window block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#off_peak_window TfDomain#off_peak_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#off_peak_window AwsDomain#off_peak_window}
   */
   readonly offPeakWindow?: OffPeakWindowProperty;
 }
@@ -5000,7 +5000,7 @@ export class OffPeakWindowOptionsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface SnapshotOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#automated_snapshot_start_hour TfDomain#automated_snapshot_start_hour}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#automated_snapshot_start_hour AwsDomain#automated_snapshot_start_hour}
   */
   readonly automatedSnapshotStartHour: number;
 }
@@ -5051,7 +5051,7 @@ export class SnapshotOptionsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface SoftwareUpdateOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#auto_software_update_enabled TfDomain#auto_software_update_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#auto_software_update_enabled AwsDomain#auto_software_update_enabled}
   */
   readonly autoSoftwareUpdateEnabled?: boolean | cdktn.IResolvable;
 }
@@ -5105,15 +5105,15 @@ export class SoftwareUpdateOptionsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#create TfDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#create AwsDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#delete TfDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#delete AwsDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#update TfDomain#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#update AwsDomain#update}
   */
   readonly update?: string;
 }
@@ -5221,11 +5221,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#security_group_ids TfDomain#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#security_group_ids AwsDomain#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#subnet_ids TfDomain#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain#subnet_ids AwsDomain#subnet_ids}
   */
   readonly subnetIds?: string[];
 }

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLocationNfsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLocationNfsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#id TfLocationNfs#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#id AwsLocationNfs#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,43 +16,43 @@ export interface TfLocationNfsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#region TfLocationNfs#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#region AwsLocationNfs#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#server_hostname TfLocationNfs#server_hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#server_hostname AwsLocationNfs#server_hostname}
   */
   readonly serverHostname: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#subdirectory TfLocationNfs#subdirectory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#subdirectory AwsLocationNfs#subdirectory}
   */
   readonly subdirectory: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#tags TfLocationNfs#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#tags AwsLocationNfs#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#tags_all TfLocationNfs#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#tags_all AwsLocationNfs#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * mount_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#mount_options TfLocationNfs#mount_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#mount_options AwsLocationNfs#mount_options}
   */
-  readonly mountOptions?: TfLocationNfs.MountOptionsProperty;
+  readonly mountOptions?: AwsLocationNfs.MountOptionsProperty;
   /**
   * on_prem_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#on_prem_config TfLocationNfs#on_prem_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#on_prem_config AwsLocationNfs#on_prem_config}
   */
-  readonly onPremConfig: TfLocationNfs.OnPremConfigProperty;
+  readonly onPremConfig: AwsLocationNfs.OnPremConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs aws_datasync_location_nfs}
 */
-export class TfLocationNfs extends cdktn.TerraformResource {
+export class AwsLocationNfs extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfLocationNfs extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLocationNfs resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLocationNfs resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLocationNfs to import
-  * @param importFromId The id of the existing TfLocationNfs that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLocationNfs to import is found
+  * @param importToId The construct id used in the generated config for the AwsLocationNfs to import
+  * @param importFromId The id of the existing AwsLocationNfs that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLocationNfs to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datasync_location_nfs", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfLocationNfs extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLocationNfsConfig
+  * @param options AwsLocationNfsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLocationNfsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLocationNfsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datasync_location_nfs',
       terraformGeneratorMetadata: {
@@ -215,11 +215,11 @@ export class TfLocationNfs extends cdktn.TerraformResource {
   }
 
   // mount_options - computed: false, optional: true, required: false
-  private _mountOptions = new TfLocationNfs.MountOptionsPropertyOutputReference(this, "mount_options");
+  private _mountOptions = new AwsLocationNfs.MountOptionsPropertyOutputReference(this, "mount_options");
   public get mountOptions() {
     return this._mountOptions;
   }
-  public putMountOptions(value: TfLocationNfs.MountOptionsProperty) {
+  public putMountOptions(value: AwsLocationNfs.MountOptionsProperty) {
     this._mountOptions.internalValue = value;
   }
   public resetMountOptions() {
@@ -231,11 +231,11 @@ export class TfLocationNfs extends cdktn.TerraformResource {
   }
 
   // on_prem_config - computed: false, optional: false, required: true
-  private _onPremConfig = new TfLocationNfs.OnPremConfigPropertyOutputReference(this, "on_prem_config");
+  private _onPremConfig = new AwsLocationNfs.OnPremConfigPropertyOutputReference(this, "on_prem_config");
   public get onPremConfig() {
     return this._onPremConfig;
   }
-  public putOnPremConfig(value: TfLocationNfs.OnPremConfigProperty) {
+  public putOnPremConfig(value: AwsLocationNfs.OnPremConfigProperty) {
     this._onPremConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -255,8 +255,8 @@ export class TfLocationNfs extends cdktn.TerraformResource {
       subdirectory: cdktn.stringToTerraform(this._subdirectory),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      mount_options: tfLocationNfsMountOptionsPropertyToTerraform(this._mountOptions.internalValue),
-      on_prem_config: tfLocationNfsOnPremConfigPropertyToTerraform(this._onPremConfig.internalValue),
+      mount_options: awsLocationNfsMountOptionsPropertyToTerraform(this._mountOptions.internalValue),
+      on_prem_config: awsLocationNfsOnPremConfigPropertyToTerraform(this._onPremConfig.internalValue),
     };
   }
 
@@ -299,16 +299,16 @@ export class TfLocationNfs extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       mount_options: {
-        value: tfLocationNfsMountOptionsPropertyToHclTerraform(this._mountOptions.internalValue),
+        value: awsLocationNfsMountOptionsPropertyToHclTerraform(this._mountOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLocationNfs.MountOptionsPropertyList",
+        storageClassType: "AwsLocationNfs.MountOptionsPropertyList",
       },
       on_prem_config: {
-        value: tfLocationNfsOnPremConfigPropertyToHclTerraform(this._onPremConfig.internalValue),
+        value: awsLocationNfsOnPremConfigPropertyToHclTerraform(this._onPremConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLocationNfs.OnPremConfigPropertyList",
+        storageClassType: "AwsLocationNfs.OnPremConfigPropertyList",
       },
     };
 
@@ -317,7 +317,7 @@ export class TfLocationNfs extends cdktn.TerraformResource {
   }
 }
 
-export function tfLocationNfsMountOptionsPropertyToTerraform(struct?: TfLocationNfs.MountOptionsPropertyOutputReference | TfLocationNfs.MountOptionsProperty): any {
+export function awsLocationNfsMountOptionsPropertyToTerraform(struct?: AwsLocationNfs.MountOptionsPropertyOutputReference | AwsLocationNfs.MountOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function tfLocationNfsMountOptionsPropertyToTerraform(struct?: TfLocation
 }
 
 
-export function tfLocationNfsMountOptionsPropertyToHclTerraform(struct?: TfLocationNfs.MountOptionsPropertyOutputReference | TfLocationNfs.MountOptionsProperty): any {
+export function awsLocationNfsMountOptionsPropertyToHclTerraform(struct?: AwsLocationNfs.MountOptionsPropertyOutputReference | AwsLocationNfs.MountOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfLocationNfsMountOptionsPropertyToHclTerraform(struct?: TfLocat
 }
 
 
-export function tfLocationNfsOnPremConfigPropertyToTerraform(struct?: TfLocationNfs.OnPremConfigPropertyOutputReference | TfLocationNfs.OnPremConfigProperty): any {
+export function awsLocationNfsOnPremConfigPropertyToTerraform(struct?: AwsLocationNfs.OnPremConfigPropertyOutputReference | AwsLocationNfs.OnPremConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,7 +358,7 @@ export function tfLocationNfsOnPremConfigPropertyToTerraform(struct?: TfLocation
 }
 
 
-export function tfLocationNfsOnPremConfigPropertyToHclTerraform(struct?: TfLocationNfs.OnPremConfigPropertyOutputReference | TfLocationNfs.OnPremConfigProperty): any {
+export function awsLocationNfsOnPremConfigPropertyToHclTerraform(struct?: AwsLocationNfs.OnPremConfigPropertyOutputReference | AwsLocationNfs.OnPremConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -377,10 +377,10 @@ export function tfLocationNfsOnPremConfigPropertyToHclTerraform(struct?: TfLocat
 }
 
 
-export namespace TfLocationNfs {
+export namespace AwsLocationNfs {
 export interface MountOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#version TfLocationNfs#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#version AwsLocationNfs#version}
   */
   readonly version?: string;
 }
@@ -434,7 +434,7 @@ export class MountOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OnPremConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#agent_arns TfLocationNfs#agent_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_nfs#agent_arns AwsLocationNfs#agent_arns}
   */
   readonly agentArns: string[];
 }

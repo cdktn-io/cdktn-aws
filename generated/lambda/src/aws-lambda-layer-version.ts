@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLayerVersionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLayerVersionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#compatible_architectures TfLayerVersion#compatible_architectures}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#compatible_architectures AwsLayerVersion#compatible_architectures}
   */
   readonly compatibleArchitectures?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#compatible_runtimes TfLayerVersion#compatible_runtimes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#compatible_runtimes AwsLayerVersion#compatible_runtimes}
   */
   readonly compatibleRuntimes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#description TfLayerVersion#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#description AwsLayerVersion#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#filename TfLayerVersion#filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#filename AwsLayerVersion#filename}
   */
   readonly filename?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#id TfLayerVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#id AwsLayerVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#layer_name TfLayerVersion#layer_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#layer_name AwsLayerVersion#layer_name}
   */
   readonly layerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#license_info TfLayerVersion#license_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#license_info AwsLayerVersion#license_info}
   */
   readonly licenseInfo?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#region TfLayerVersion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#region AwsLayerVersion#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#s3_bucket TfLayerVersion#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#s3_bucket AwsLayerVersion#s3_bucket}
   */
   readonly s3Bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#s3_key TfLayerVersion#s3_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#s3_key AwsLayerVersion#s3_key}
   */
   readonly s3Key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#s3_object_version TfLayerVersion#s3_object_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#s3_object_version AwsLayerVersion#s3_object_version}
   */
   readonly s3ObjectVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#skip_destroy TfLayerVersion#skip_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#skip_destroy AwsLayerVersion#skip_destroy}
   */
   readonly skipDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#source_code_hash TfLayerVersion#source_code_hash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#source_code_hash AwsLayerVersion#source_code_hash}
   */
   readonly sourceCodeHash?: string;
 }
@@ -68,7 +68,7 @@ export interface TfLayerVersionConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version aws_lambda_layer_version}
 */
-export class TfLayerVersion extends cdktn.TerraformResource {
+export class AwsLayerVersion extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfLayerVersion extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLayerVersion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLayerVersion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLayerVersion to import
-  * @param importFromId The id of the existing TfLayerVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLayerVersion to import is found
+  * @param importToId The construct id used in the generated config for the AwsLayerVersion to import
+  * @param importFromId The id of the existing AwsLayerVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_layer_version#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLayerVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_layer_version", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfLayerVersion extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLayerVersionConfig
+  * @param options AwsLayerVersionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLayerVersionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLayerVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_layer_version',
       terraformGeneratorMetadata: {

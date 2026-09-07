@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGroupMembershipConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGroupMembershipConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#aws_account_id TfGroupMembership#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#aws_account_id AwsGroupMembership#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#group_name TfGroupMembership#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#group_name AwsGroupMembership#group_name}
   */
   readonly groupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#id TfGroupMembership#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#id AwsGroupMembership#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#member_name TfGroupMembership#member_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#member_name AwsGroupMembership#member_name}
   */
   readonly memberName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#namespace TfGroupMembership#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#namespace AwsGroupMembership#namespace}
   */
   readonly namespace?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#region TfGroupMembership#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#region AwsGroupMembership#region}
   */
   readonly region?: string;
 }
@@ -40,7 +40,7 @@ export interface TfGroupMembershipConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership aws_quicksight_group_membership}
 */
-export class TfGroupMembership extends cdktn.TerraformResource {
+export class AwsGroupMembership extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfGroupMembership extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGroupMembership resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGroupMembership resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGroupMembership to import
-  * @param importFromId The id of the existing TfGroupMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGroupMembership to import is found
+  * @param importToId The construct id used in the generated config for the AwsGroupMembership to import
+  * @param importFromId The id of the existing AwsGroupMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_group_membership#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGroupMembership to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_group_membership", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfGroupMembership extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGroupMembershipConfig
+  * @param options AwsGroupMembershipConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGroupMembershipConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGroupMembershipConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_group_membership',
       terraformGeneratorMetadata: {

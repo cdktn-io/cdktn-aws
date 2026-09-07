@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAccessGrantsInstanceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAccessGrantsInstanceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grants_instance#account_id TfAccessGrantsInstance#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grants_instance#account_id AwsAccessGrantsInstance#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grants_instance#identity_center_arn TfAccessGrantsInstance#identity_center_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grants_instance#identity_center_arn AwsAccessGrantsInstance#identity_center_arn}
   */
   readonly identityCenterArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grants_instance#region TfAccessGrantsInstance#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grants_instance#region AwsAccessGrantsInstance#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grants_instance#tags TfAccessGrantsInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grants_instance#tags AwsAccessGrantsInstance#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -29,7 +29,7 @@ export interface TfAccessGrantsInstanceConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grants_instance aws_s3control_access_grants_instance}
 */
-export class TfAccessGrantsInstance extends cdktn.TerraformResource {
+export class AwsAccessGrantsInstance extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class TfAccessGrantsInstance extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAccessGrantsInstance resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAccessGrantsInstance resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAccessGrantsInstance to import
-  * @param importFromId The id of the existing TfAccessGrantsInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grants_instance#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAccessGrantsInstance to import is found
+  * @param importToId The construct id used in the generated config for the AwsAccessGrantsInstance to import
+  * @param importFromId The id of the existing AwsAccessGrantsInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grants_instance#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAccessGrantsInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3control_access_grants_instance", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class TfAccessGrantsInstance extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAccessGrantsInstanceConfig = {}
+  * @param options AwsAccessGrantsInstanceConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfAccessGrantsInstanceConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsAccessGrantsInstanceConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_s3control_access_grants_instance',
       terraformGeneratorMetadata: {

@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRoleMembershipConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRoleMembershipConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership#aws_account_id TfRoleMembership#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership#aws_account_id AwsRoleMembership#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership#member_name TfRoleMembership#member_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership#member_name AwsRoleMembership#member_name}
   */
   readonly memberName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership#namespace TfRoleMembership#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership#namespace AwsRoleMembership#namespace}
   */
   readonly namespace?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership#region TfRoleMembership#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership#region AwsRoleMembership#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership#role TfRoleMembership#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership#role AwsRoleMembership#role}
   */
   readonly role: string;
 }
@@ -33,7 +33,7 @@ export interface TfRoleMembershipConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership aws_quicksight_role_membership}
 */
-export class TfRoleMembership extends cdktn.TerraformResource {
+export class AwsRoleMembership extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfRoleMembership extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRoleMembership resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRoleMembership resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRoleMembership to import
-  * @param importFromId The id of the existing TfRoleMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRoleMembership to import is found
+  * @param importToId The construct id used in the generated config for the AwsRoleMembership to import
+  * @param importFromId The id of the existing AwsRoleMembership that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_role_membership#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRoleMembership to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_role_membership", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfRoleMembership extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRoleMembershipConfig
+  * @param options AwsRoleMembershipConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRoleMembershipConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRoleMembershipConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_role_membership',
       terraformGeneratorMetadata: {

@@ -5,102 +5,102 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDirectoryConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDirectoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#directory_id TfDirectory#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#directory_id AwsDirectory#directory_id}
   */
   readonly directoryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#id TfDirectory#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#id AwsDirectory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#ip_group_ids TfDirectory#ip_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#ip_group_ids AwsDirectory#ip_group_ids}
   */
   readonly ipGroupIds?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#region TfDirectory#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#region AwsDirectory#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#subnet_ids TfDirectory#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#subnet_ids AwsDirectory#subnet_ids}
   */
   readonly subnetIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#tags TfDirectory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#tags AwsDirectory#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#tags_all TfDirectory#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#tags_all AwsDirectory#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#tenancy TfDirectory#tenancy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#tenancy AwsDirectory#tenancy}
   */
   readonly tenancy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#user_identity_type TfDirectory#user_identity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#user_identity_type AwsDirectory#user_identity_type}
   */
   readonly userIdentityType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#workspace_directory_description TfDirectory#workspace_directory_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#workspace_directory_description AwsDirectory#workspace_directory_description}
   */
   readonly workspaceDirectoryDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#workspace_directory_name TfDirectory#workspace_directory_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#workspace_directory_name AwsDirectory#workspace_directory_name}
   */
   readonly workspaceDirectoryName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#workspace_type TfDirectory#workspace_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#workspace_type AwsDirectory#workspace_type}
   */
   readonly workspaceType?: string;
   /**
   * active_directory_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#active_directory_config TfDirectory#active_directory_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#active_directory_config AwsDirectory#active_directory_config}
   */
-  readonly activeDirectoryConfig?: TfDirectory.ActiveDirectoryConfigProperty;
+  readonly activeDirectoryConfig?: AwsDirectory.ActiveDirectoryConfigProperty;
   /**
   * certificate_based_auth_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#certificate_based_auth_properties TfDirectory#certificate_based_auth_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#certificate_based_auth_properties AwsDirectory#certificate_based_auth_properties}
   */
-  readonly certificateBasedAuthProperties?: TfDirectory.CertificateBasedAuthPropertiesProperty;
+  readonly certificateBasedAuthProperties?: AwsDirectory.CertificateBasedAuthPropertiesProperty;
   /**
   * saml_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#saml_properties TfDirectory#saml_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#saml_properties AwsDirectory#saml_properties}
   */
-  readonly samlProperties?: TfDirectory.SamlPropertiesProperty;
+  readonly samlProperties?: AwsDirectory.SamlPropertiesProperty;
   /**
   * self_service_permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#self_service_permissions TfDirectory#self_service_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#self_service_permissions AwsDirectory#self_service_permissions}
   */
-  readonly selfServicePermissions?: TfDirectory.SelfServicePermissionsProperty;
+  readonly selfServicePermissions?: AwsDirectory.SelfServicePermissionsProperty;
   /**
   * workspace_access_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#workspace_access_properties TfDirectory#workspace_access_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#workspace_access_properties AwsDirectory#workspace_access_properties}
   */
-  readonly workspaceAccessProperties?: TfDirectory.WorkspaceAccessPropertiesProperty;
+  readonly workspaceAccessProperties?: AwsDirectory.WorkspaceAccessPropertiesProperty;
   /**
   * workspace_creation_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#workspace_creation_properties TfDirectory#workspace_creation_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#workspace_creation_properties AwsDirectory#workspace_creation_properties}
   */
-  readonly workspaceCreationProperties?: TfDirectory.WorkspaceCreationPropertiesProperty;
+  readonly workspaceCreationProperties?: AwsDirectory.WorkspaceCreationPropertiesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory aws_workspaces_directory}
 */
-export class TfDirectory extends cdktn.TerraformResource {
+export class AwsDirectory extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -111,11 +111,11 @@ export class TfDirectory extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDirectory resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDirectory resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDirectory to import
-  * @param importFromId The id of the existing TfDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDirectory to import is found
+  * @param importToId The construct id used in the generated config for the AwsDirectory to import
+  * @param importFromId The id of the existing AwsDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDirectory to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspaces_directory", importId: importFromId, provider });
@@ -130,9 +130,9 @@ export class TfDirectory extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDirectoryConfig = {}
+  * @param options AwsDirectoryConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDirectoryConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsDirectoryConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_workspaces_directory',
       terraformGeneratorMetadata: {
@@ -405,11 +405,11 @@ export class TfDirectory extends cdktn.TerraformResource {
   }
 
   // active_directory_config - computed: false, optional: true, required: false
-  private _activeDirectoryConfig = new TfDirectory.ActiveDirectoryConfigPropertyOutputReference(this, "active_directory_config");
+  private _activeDirectoryConfig = new AwsDirectory.ActiveDirectoryConfigPropertyOutputReference(this, "active_directory_config");
   public get activeDirectoryConfig() {
     return this._activeDirectoryConfig;
   }
-  public putActiveDirectoryConfig(value: TfDirectory.ActiveDirectoryConfigProperty) {
+  public putActiveDirectoryConfig(value: AwsDirectory.ActiveDirectoryConfigProperty) {
     this._activeDirectoryConfig.internalValue = value;
   }
   public resetActiveDirectoryConfig() {
@@ -421,11 +421,11 @@ export class TfDirectory extends cdktn.TerraformResource {
   }
 
   // certificate_based_auth_properties - computed: false, optional: true, required: false
-  private _certificateBasedAuthProperties = new TfDirectory.CertificateBasedAuthPropertiesPropertyOutputReference(this, "certificate_based_auth_properties");
+  private _certificateBasedAuthProperties = new AwsDirectory.CertificateBasedAuthPropertiesPropertyOutputReference(this, "certificate_based_auth_properties");
   public get certificateBasedAuthProperties() {
     return this._certificateBasedAuthProperties;
   }
-  public putCertificateBasedAuthProperties(value: TfDirectory.CertificateBasedAuthPropertiesProperty) {
+  public putCertificateBasedAuthProperties(value: AwsDirectory.CertificateBasedAuthPropertiesProperty) {
     this._certificateBasedAuthProperties.internalValue = value;
   }
   public resetCertificateBasedAuthProperties() {
@@ -437,11 +437,11 @@ export class TfDirectory extends cdktn.TerraformResource {
   }
 
   // saml_properties - computed: false, optional: true, required: false
-  private _samlProperties = new TfDirectory.SamlPropertiesPropertyOutputReference(this, "saml_properties");
+  private _samlProperties = new AwsDirectory.SamlPropertiesPropertyOutputReference(this, "saml_properties");
   public get samlProperties() {
     return this._samlProperties;
   }
-  public putSamlProperties(value: TfDirectory.SamlPropertiesProperty) {
+  public putSamlProperties(value: AwsDirectory.SamlPropertiesProperty) {
     this._samlProperties.internalValue = value;
   }
   public resetSamlProperties() {
@@ -453,11 +453,11 @@ export class TfDirectory extends cdktn.TerraformResource {
   }
 
   // self_service_permissions - computed: false, optional: true, required: false
-  private _selfServicePermissions = new TfDirectory.SelfServicePermissionsPropertyOutputReference(this, "self_service_permissions");
+  private _selfServicePermissions = new AwsDirectory.SelfServicePermissionsPropertyOutputReference(this, "self_service_permissions");
   public get selfServicePermissions() {
     return this._selfServicePermissions;
   }
-  public putSelfServicePermissions(value: TfDirectory.SelfServicePermissionsProperty) {
+  public putSelfServicePermissions(value: AwsDirectory.SelfServicePermissionsProperty) {
     this._selfServicePermissions.internalValue = value;
   }
   public resetSelfServicePermissions() {
@@ -469,11 +469,11 @@ export class TfDirectory extends cdktn.TerraformResource {
   }
 
   // workspace_access_properties - computed: false, optional: true, required: false
-  private _workspaceAccessProperties = new TfDirectory.WorkspaceAccessPropertiesPropertyOutputReference(this, "workspace_access_properties");
+  private _workspaceAccessProperties = new AwsDirectory.WorkspaceAccessPropertiesPropertyOutputReference(this, "workspace_access_properties");
   public get workspaceAccessProperties() {
     return this._workspaceAccessProperties;
   }
-  public putWorkspaceAccessProperties(value: TfDirectory.WorkspaceAccessPropertiesProperty) {
+  public putWorkspaceAccessProperties(value: AwsDirectory.WorkspaceAccessPropertiesProperty) {
     this._workspaceAccessProperties.internalValue = value;
   }
   public resetWorkspaceAccessProperties() {
@@ -485,11 +485,11 @@ export class TfDirectory extends cdktn.TerraformResource {
   }
 
   // workspace_creation_properties - computed: false, optional: true, required: false
-  private _workspaceCreationProperties = new TfDirectory.WorkspaceCreationPropertiesPropertyOutputReference(this, "workspace_creation_properties");
+  private _workspaceCreationProperties = new AwsDirectory.WorkspaceCreationPropertiesPropertyOutputReference(this, "workspace_creation_properties");
   public get workspaceCreationProperties() {
     return this._workspaceCreationProperties;
   }
-  public putWorkspaceCreationProperties(value: TfDirectory.WorkspaceCreationPropertiesProperty) {
+  public putWorkspaceCreationProperties(value: AwsDirectory.WorkspaceCreationPropertiesProperty) {
     this._workspaceCreationProperties.internalValue = value;
   }
   public resetWorkspaceCreationProperties() {
@@ -518,12 +518,12 @@ export class TfDirectory extends cdktn.TerraformResource {
       workspace_directory_description: cdktn.stringToTerraform(this._workspaceDirectoryDescription),
       workspace_directory_name: cdktn.stringToTerraform(this._workspaceDirectoryName),
       workspace_type: cdktn.stringToTerraform(this._workspaceType),
-      active_directory_config: tfDirectoryActiveDirectoryConfigPropertyToTerraform(this._activeDirectoryConfig.internalValue),
-      certificate_based_auth_properties: tfDirectoryCertificateBasedAuthPropertiesPropertyToTerraform(this._certificateBasedAuthProperties.internalValue),
-      saml_properties: tfDirectorySamlPropertiesPropertyToTerraform(this._samlProperties.internalValue),
-      self_service_permissions: tfDirectorySelfServicePermissionsPropertyToTerraform(this._selfServicePermissions.internalValue),
-      workspace_access_properties: tfDirectoryWorkspaceAccessPropertiesPropertyToTerraform(this._workspaceAccessProperties.internalValue),
-      workspace_creation_properties: tfDirectoryWorkspaceCreationPropertiesPropertyToTerraform(this._workspaceCreationProperties.internalValue),
+      active_directory_config: awsDirectoryActiveDirectoryConfigPropertyToTerraform(this._activeDirectoryConfig.internalValue),
+      certificate_based_auth_properties: awsDirectoryCertificateBasedAuthPropertiesPropertyToTerraform(this._certificateBasedAuthProperties.internalValue),
+      saml_properties: awsDirectorySamlPropertiesPropertyToTerraform(this._samlProperties.internalValue),
+      self_service_permissions: awsDirectorySelfServicePermissionsPropertyToTerraform(this._selfServicePermissions.internalValue),
+      workspace_access_properties: awsDirectoryWorkspaceAccessPropertiesPropertyToTerraform(this._workspaceAccessProperties.internalValue),
+      workspace_creation_properties: awsDirectoryWorkspaceCreationPropertiesPropertyToTerraform(this._workspaceCreationProperties.internalValue),
     };
   }
 
@@ -602,40 +602,40 @@ export class TfDirectory extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       active_directory_config: {
-        value: tfDirectoryActiveDirectoryConfigPropertyToHclTerraform(this._activeDirectoryConfig.internalValue),
+        value: awsDirectoryActiveDirectoryConfigPropertyToHclTerraform(this._activeDirectoryConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDirectory.ActiveDirectoryConfigPropertyList",
+        storageClassType: "AwsDirectory.ActiveDirectoryConfigPropertyList",
       },
       certificate_based_auth_properties: {
-        value: tfDirectoryCertificateBasedAuthPropertiesPropertyToHclTerraform(this._certificateBasedAuthProperties.internalValue),
+        value: awsDirectoryCertificateBasedAuthPropertiesPropertyToHclTerraform(this._certificateBasedAuthProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDirectory.CertificateBasedAuthPropertiesPropertyList",
+        storageClassType: "AwsDirectory.CertificateBasedAuthPropertiesPropertyList",
       },
       saml_properties: {
-        value: tfDirectorySamlPropertiesPropertyToHclTerraform(this._samlProperties.internalValue),
+        value: awsDirectorySamlPropertiesPropertyToHclTerraform(this._samlProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDirectory.SamlPropertiesPropertyList",
+        storageClassType: "AwsDirectory.SamlPropertiesPropertyList",
       },
       self_service_permissions: {
-        value: tfDirectorySelfServicePermissionsPropertyToHclTerraform(this._selfServicePermissions.internalValue),
+        value: awsDirectorySelfServicePermissionsPropertyToHclTerraform(this._selfServicePermissions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDirectory.SelfServicePermissionsPropertyList",
+        storageClassType: "AwsDirectory.SelfServicePermissionsPropertyList",
       },
       workspace_access_properties: {
-        value: tfDirectoryWorkspaceAccessPropertiesPropertyToHclTerraform(this._workspaceAccessProperties.internalValue),
+        value: awsDirectoryWorkspaceAccessPropertiesPropertyToHclTerraform(this._workspaceAccessProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDirectory.WorkspaceAccessPropertiesPropertyList",
+        storageClassType: "AwsDirectory.WorkspaceAccessPropertiesPropertyList",
       },
       workspace_creation_properties: {
-        value: tfDirectoryWorkspaceCreationPropertiesPropertyToHclTerraform(this._workspaceCreationProperties.internalValue),
+        value: awsDirectoryWorkspaceCreationPropertiesPropertyToHclTerraform(this._workspaceCreationProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDirectory.WorkspaceCreationPropertiesPropertyList",
+        storageClassType: "AwsDirectory.WorkspaceCreationPropertiesPropertyList",
       },
     };
 
@@ -644,7 +644,7 @@ export class TfDirectory extends cdktn.TerraformResource {
   }
 }
 
-export function tfDirectoryActiveDirectoryConfigPropertyToTerraform(struct?: TfDirectory.ActiveDirectoryConfigPropertyOutputReference | TfDirectory.ActiveDirectoryConfigProperty): any {
+export function awsDirectoryActiveDirectoryConfigPropertyToTerraform(struct?: AwsDirectory.ActiveDirectoryConfigPropertyOutputReference | AwsDirectory.ActiveDirectoryConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -656,7 +656,7 @@ export function tfDirectoryActiveDirectoryConfigPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDirectoryActiveDirectoryConfigPropertyToHclTerraform(struct?: TfDirectory.ActiveDirectoryConfigPropertyOutputReference | TfDirectory.ActiveDirectoryConfigProperty): any {
+export function awsDirectoryActiveDirectoryConfigPropertyToHclTerraform(struct?: AwsDirectory.ActiveDirectoryConfigPropertyOutputReference | AwsDirectory.ActiveDirectoryConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -681,7 +681,7 @@ export function tfDirectoryActiveDirectoryConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDirectoryCertificateBasedAuthPropertiesPropertyToTerraform(struct?: TfDirectory.CertificateBasedAuthPropertiesPropertyOutputReference | TfDirectory.CertificateBasedAuthPropertiesProperty): any {
+export function awsDirectoryCertificateBasedAuthPropertiesPropertyToTerraform(struct?: AwsDirectory.CertificateBasedAuthPropertiesPropertyOutputReference | AwsDirectory.CertificateBasedAuthPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -693,7 +693,7 @@ export function tfDirectoryCertificateBasedAuthPropertiesPropertyToTerraform(str
 }
 
 
-export function tfDirectoryCertificateBasedAuthPropertiesPropertyToHclTerraform(struct?: TfDirectory.CertificateBasedAuthPropertiesPropertyOutputReference | TfDirectory.CertificateBasedAuthPropertiesProperty): any {
+export function awsDirectoryCertificateBasedAuthPropertiesPropertyToHclTerraform(struct?: AwsDirectory.CertificateBasedAuthPropertiesPropertyOutputReference | AwsDirectory.CertificateBasedAuthPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -718,7 +718,7 @@ export function tfDirectoryCertificateBasedAuthPropertiesPropertyToHclTerraform(
 }
 
 
-export function tfDirectorySamlPropertiesPropertyToTerraform(struct?: TfDirectory.SamlPropertiesPropertyOutputReference | TfDirectory.SamlPropertiesProperty): any {
+export function awsDirectorySamlPropertiesPropertyToTerraform(struct?: AwsDirectory.SamlPropertiesPropertyOutputReference | AwsDirectory.SamlPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -731,7 +731,7 @@ export function tfDirectorySamlPropertiesPropertyToTerraform(struct?: TfDirector
 }
 
 
-export function tfDirectorySamlPropertiesPropertyToHclTerraform(struct?: TfDirectory.SamlPropertiesPropertyOutputReference | TfDirectory.SamlPropertiesProperty): any {
+export function awsDirectorySamlPropertiesPropertyToHclTerraform(struct?: AwsDirectory.SamlPropertiesPropertyOutputReference | AwsDirectory.SamlPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -762,7 +762,7 @@ export function tfDirectorySamlPropertiesPropertyToHclTerraform(struct?: TfDirec
 }
 
 
-export function tfDirectorySelfServicePermissionsPropertyToTerraform(struct?: TfDirectory.SelfServicePermissionsPropertyOutputReference | TfDirectory.SelfServicePermissionsProperty): any {
+export function awsDirectorySelfServicePermissionsPropertyToTerraform(struct?: AwsDirectory.SelfServicePermissionsPropertyOutputReference | AwsDirectory.SelfServicePermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -777,7 +777,7 @@ export function tfDirectorySelfServicePermissionsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDirectorySelfServicePermissionsPropertyToHclTerraform(struct?: TfDirectory.SelfServicePermissionsPropertyOutputReference | TfDirectory.SelfServicePermissionsProperty): any {
+export function awsDirectorySelfServicePermissionsPropertyToHclTerraform(struct?: AwsDirectory.SelfServicePermissionsPropertyOutputReference | AwsDirectory.SelfServicePermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -820,7 +820,7 @@ export function tfDirectorySelfServicePermissionsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfDirectoryAccessEndpointsPropertyToTerraform(struct?: TfDirectory.AccessEndpointsProperty | cdktn.IResolvable): any {
+export function awsDirectoryAccessEndpointsPropertyToTerraform(struct?: AwsDirectory.AccessEndpointsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -832,7 +832,7 @@ export function tfDirectoryAccessEndpointsPropertyToTerraform(struct?: TfDirecto
 }
 
 
-export function tfDirectoryAccessEndpointsPropertyToHclTerraform(struct?: TfDirectory.AccessEndpointsProperty | cdktn.IResolvable): any {
+export function awsDirectoryAccessEndpointsPropertyToHclTerraform(struct?: AwsDirectory.AccessEndpointsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -857,19 +857,19 @@ export function tfDirectoryAccessEndpointsPropertyToHclTerraform(struct?: TfDire
 }
 
 
-export function tfDirectoryAccessEndpointConfigPropertyToTerraform(struct?: TfDirectory.AccessEndpointConfigPropertyOutputReference | TfDirectory.AccessEndpointConfigProperty): any {
+export function awsDirectoryAccessEndpointConfigPropertyToTerraform(struct?: AwsDirectory.AccessEndpointConfigPropertyOutputReference | AwsDirectory.AccessEndpointConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     internet_fallback_protocols: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.internetFallbackProtocols),
-    access_endpoints: cdktn.listMapper(tfDirectoryAccessEndpointsPropertyToTerraform, true)(struct!.accessEndpoints),
+    access_endpoints: cdktn.listMapper(awsDirectoryAccessEndpointsPropertyToTerraform, true)(struct!.accessEndpoints),
   }
 }
 
 
-export function tfDirectoryAccessEndpointConfigPropertyToHclTerraform(struct?: TfDirectory.AccessEndpointConfigPropertyOutputReference | TfDirectory.AccessEndpointConfigProperty): any {
+export function awsDirectoryAccessEndpointConfigPropertyToHclTerraform(struct?: AwsDirectory.AccessEndpointConfigPropertyOutputReference | AwsDirectory.AccessEndpointConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -882,7 +882,7 @@ export function tfDirectoryAccessEndpointConfigPropertyToHclTerraform(struct?: T
       storageClassType: "stringList",
     },
     access_endpoints: {
-      value: cdktn.listMapperHcl(tfDirectoryAccessEndpointsPropertyToHclTerraform, true)(struct!.accessEndpoints),
+      value: cdktn.listMapperHcl(awsDirectoryAccessEndpointsPropertyToHclTerraform, true)(struct!.accessEndpoints),
       isBlock: true,
       type: "set",
       storageClassType: "AccessEndpointsPropertyList",
@@ -894,7 +894,7 @@ export function tfDirectoryAccessEndpointConfigPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDirectoryWorkspaceAccessPropertiesPropertyToTerraform(struct?: TfDirectory.WorkspaceAccessPropertiesPropertyOutputReference | TfDirectory.WorkspaceAccessPropertiesProperty): any {
+export function awsDirectoryWorkspaceAccessPropertiesPropertyToTerraform(struct?: AwsDirectory.WorkspaceAccessPropertiesPropertyOutputReference | AwsDirectory.WorkspaceAccessPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -908,12 +908,12 @@ export function tfDirectoryWorkspaceAccessPropertiesPropertyToTerraform(struct?:
     device_type_web: cdktn.stringToTerraform(struct!.deviceTypeWeb),
     device_type_windows: cdktn.stringToTerraform(struct!.deviceTypeWindows),
     device_type_zeroclient: cdktn.stringToTerraform(struct!.deviceTypeZeroclient),
-    access_endpoint_config: tfDirectoryAccessEndpointConfigPropertyToTerraform(struct!.accessEndpointConfig),
+    access_endpoint_config: awsDirectoryAccessEndpointConfigPropertyToTerraform(struct!.accessEndpointConfig),
   }
 }
 
 
-export function tfDirectoryWorkspaceAccessPropertiesPropertyToHclTerraform(struct?: TfDirectory.WorkspaceAccessPropertiesPropertyOutputReference | TfDirectory.WorkspaceAccessPropertiesProperty): any {
+export function awsDirectoryWorkspaceAccessPropertiesPropertyToHclTerraform(struct?: AwsDirectory.WorkspaceAccessPropertiesPropertyOutputReference | AwsDirectory.WorkspaceAccessPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -968,7 +968,7 @@ export function tfDirectoryWorkspaceAccessPropertiesPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     access_endpoint_config: {
-      value: tfDirectoryAccessEndpointConfigPropertyToHclTerraform(struct!.accessEndpointConfig),
+      value: awsDirectoryAccessEndpointConfigPropertyToHclTerraform(struct!.accessEndpointConfig),
       isBlock: true,
       type: "list",
       storageClassType: "AccessEndpointConfigPropertyList",
@@ -980,7 +980,7 @@ export function tfDirectoryWorkspaceAccessPropertiesPropertyToHclTerraform(struc
 }
 
 
-export function tfDirectoryWorkspaceCreationPropertiesPropertyToTerraform(struct?: TfDirectory.WorkspaceCreationPropertiesPropertyOutputReference | TfDirectory.WorkspaceCreationPropertiesProperty): any {
+export function awsDirectoryWorkspaceCreationPropertiesPropertyToTerraform(struct?: AwsDirectory.WorkspaceCreationPropertiesPropertyOutputReference | AwsDirectory.WorkspaceCreationPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -995,7 +995,7 @@ export function tfDirectoryWorkspaceCreationPropertiesPropertyToTerraform(struct
 }
 
 
-export function tfDirectoryWorkspaceCreationPropertiesPropertyToHclTerraform(struct?: TfDirectory.WorkspaceCreationPropertiesPropertyOutputReference | TfDirectory.WorkspaceCreationPropertiesProperty): any {
+export function awsDirectoryWorkspaceCreationPropertiesPropertyToHclTerraform(struct?: AwsDirectory.WorkspaceCreationPropertiesPropertyOutputReference | AwsDirectory.WorkspaceCreationPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1038,14 +1038,14 @@ export function tfDirectoryWorkspaceCreationPropertiesPropertyToHclTerraform(str
 }
 
 
-export namespace TfDirectory {
+export namespace AwsDirectory {
 export interface ActiveDirectoryConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#domain_name TfDirectory#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#domain_name AwsDirectory#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#service_account_secret_arn TfDirectory#service_account_secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#service_account_secret_arn AwsDirectory#service_account_secret_arn}
   */
   readonly serviceAccountSecretArn: string;
 }
@@ -1115,11 +1115,11 @@ export class ActiveDirectoryConfigPropertyOutputReference extends cdktn.ComplexO
 }
 export interface CertificateBasedAuthPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#certificate_authority_arn TfDirectory#certificate_authority_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#certificate_authority_arn AwsDirectory#certificate_authority_arn}
   */
   readonly certificateAuthorityArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#status TfDirectory#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#status AwsDirectory#status}
   */
   readonly status?: string;
 }
@@ -1195,15 +1195,15 @@ export class CertificateBasedAuthPropertiesPropertyOutputReference extends cdktn
 }
 export interface SamlPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#relay_state_parameter_name TfDirectory#relay_state_parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#relay_state_parameter_name AwsDirectory#relay_state_parameter_name}
   */
   readonly relayStateParameterName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#status TfDirectory#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#status AwsDirectory#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#user_access_url TfDirectory#user_access_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#user_access_url AwsDirectory#user_access_url}
   */
   readonly userAccessUrl?: string;
 }
@@ -1301,23 +1301,23 @@ export class SamlPropertiesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SelfServicePermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#change_compute_type TfDirectory#change_compute_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#change_compute_type AwsDirectory#change_compute_type}
   */
   readonly changeComputeType?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#increase_volume_size TfDirectory#increase_volume_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#increase_volume_size AwsDirectory#increase_volume_size}
   */
   readonly increaseVolumeSize?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#rebuild_workspace TfDirectory#rebuild_workspace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#rebuild_workspace AwsDirectory#rebuild_workspace}
   */
   readonly rebuildWorkspace?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#restart_workspace TfDirectory#restart_workspace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#restart_workspace AwsDirectory#restart_workspace}
   */
   readonly restartWorkspace?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#switch_running_mode TfDirectory#switch_running_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#switch_running_mode AwsDirectory#switch_running_mode}
   */
   readonly switchRunningMode?: boolean | cdktn.IResolvable;
 }
@@ -1459,11 +1459,11 @@ export class SelfServicePermissionsPropertyOutputReference extends cdktn.Complex
 }
 export interface AccessEndpointsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#access_endpoint_type TfDirectory#access_endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#access_endpoint_type AwsDirectory#access_endpoint_type}
   */
   readonly accessEndpointType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#vpc_endpoint_id TfDirectory#vpc_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#vpc_endpoint_id AwsDirectory#vpc_endpoint_id}
   */
   readonly vpcEndpointId: string;
 }
@@ -1565,13 +1565,13 @@ export class AccessEndpointsPropertyList extends cdktn.ComplexList {
 }
 export interface AccessEndpointConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#internet_fallback_protocols TfDirectory#internet_fallback_protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#internet_fallback_protocols AwsDirectory#internet_fallback_protocols}
   */
   readonly internetFallbackProtocols?: string[];
   /**
   * access_endpoints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#access_endpoints TfDirectory#access_endpoints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#access_endpoints AwsDirectory#access_endpoints}
   */
   readonly accessEndpoints: AccessEndpointsProperty[] | cdktn.IResolvable;
 }
@@ -1644,41 +1644,41 @@ export class AccessEndpointConfigPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface WorkspaceAccessPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_android TfDirectory#device_type_android}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_android AwsDirectory#device_type_android}
   */
   readonly deviceTypeAndroid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_chromeos TfDirectory#device_type_chromeos}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_chromeos AwsDirectory#device_type_chromeos}
   */
   readonly deviceTypeChromeos?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_ios TfDirectory#device_type_ios}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_ios AwsDirectory#device_type_ios}
   */
   readonly deviceTypeIos?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_linux TfDirectory#device_type_linux}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_linux AwsDirectory#device_type_linux}
   */
   readonly deviceTypeLinux?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_osx TfDirectory#device_type_osx}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_osx AwsDirectory#device_type_osx}
   */
   readonly deviceTypeOsx?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_web TfDirectory#device_type_web}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_web AwsDirectory#device_type_web}
   */
   readonly deviceTypeWeb?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_windows TfDirectory#device_type_windows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_windows AwsDirectory#device_type_windows}
   */
   readonly deviceTypeWindows?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_zeroclient TfDirectory#device_type_zeroclient}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#device_type_zeroclient AwsDirectory#device_type_zeroclient}
   */
   readonly deviceTypeZeroclient?: string;
   /**
   * access_endpoint_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#access_endpoint_config TfDirectory#access_endpoint_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#access_endpoint_config AwsDirectory#access_endpoint_config}
   */
   readonly accessEndpointConfig?: AccessEndpointConfigProperty;
 }
@@ -1908,23 +1908,23 @@ export class WorkspaceAccessPropertiesPropertyOutputReference extends cdktn.Comp
 }
 export interface WorkspaceCreationPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#custom_security_group_id TfDirectory#custom_security_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#custom_security_group_id AwsDirectory#custom_security_group_id}
   */
   readonly customSecurityGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#default_ou TfDirectory#default_ou}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#default_ou AwsDirectory#default_ou}
   */
   readonly defaultOu?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#enable_internet_access TfDirectory#enable_internet_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#enable_internet_access AwsDirectory#enable_internet_access}
   */
   readonly enableInternetAccess?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#enable_maintenance_mode TfDirectory#enable_maintenance_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#enable_maintenance_mode AwsDirectory#enable_maintenance_mode}
   */
   readonly enableMaintenanceMode?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#user_enabled_as_local_administrator TfDirectory#user_enabled_as_local_administrator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_directory#user_enabled_as_local_administrator AwsDirectory#user_enabled_as_local_administrator}
   */
   readonly userEnabledAsLocalAdministrator?: boolean | cdktn.IResolvable;
 }

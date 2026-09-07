@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDbOptionGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDbOptionGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#engine_name TfDbOptionGroup#engine_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#engine_name AwsDbOptionGroup#engine_name}
   */
   readonly engineName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#id TfDbOptionGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#id AwsDbOptionGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#major_engine_version TfDbOptionGroup#major_engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#major_engine_version AwsDbOptionGroup#major_engine_version}
   */
   readonly majorEngineVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#name TfDbOptionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#name AwsDbOptionGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#name_prefix TfDbOptionGroup#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#name_prefix AwsDbOptionGroup#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#option_group_description TfDbOptionGroup#option_group_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#option_group_description AwsDbOptionGroup#option_group_description}
   */
   readonly optionGroupDescription?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#region TfDbOptionGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#region AwsDbOptionGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#skip_destroy TfDbOptionGroup#skip_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#skip_destroy AwsDbOptionGroup#skip_destroy}
   */
   readonly skipDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#tags TfDbOptionGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#tags AwsDbOptionGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#tags_all TfDbOptionGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#tags_all AwsDbOptionGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#option TfDbOptionGroup#option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#option AwsDbOptionGroup#option}
   */
-  readonly option?: TfDbOptionGroup.OptionProperty[] | cdktn.IResolvable;
+  readonly option?: AwsDbOptionGroup.OptionProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#timeouts TfDbOptionGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#timeouts AwsDbOptionGroup#timeouts}
   */
-  readonly timeouts?: TfDbOptionGroup.TimeoutsProperty;
+  readonly timeouts?: AwsDbOptionGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group aws_db_option_group}
 */
-export class TfDbOptionGroup extends cdktn.TerraformResource {
+export class AwsDbOptionGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfDbOptionGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDbOptionGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDbOptionGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDbOptionGroup to import
-  * @param importFromId The id of the existing TfDbOptionGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDbOptionGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsDbOptionGroup to import
+  * @param importFromId The id of the existing AwsDbOptionGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDbOptionGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_db_option_group", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfDbOptionGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDbOptionGroupConfig
+  * @param options AwsDbOptionGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDbOptionGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDbOptionGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_db_option_group',
       terraformGeneratorMetadata: {
@@ -294,11 +294,11 @@ export class TfDbOptionGroup extends cdktn.TerraformResource {
   }
 
   // option - computed: false, optional: true, required: false
-  private _option = new TfDbOptionGroup.OptionPropertyList(this, "option", true);
+  private _option = new AwsDbOptionGroup.OptionPropertyList(this, "option", true);
   public get option() {
     return this._option;
   }
-  public putOption(value: TfDbOptionGroup.OptionProperty[] | cdktn.IResolvable) {
+  public putOption(value: AwsDbOptionGroup.OptionProperty[] | cdktn.IResolvable) {
     this._option.internalValue = value;
   }
   public resetOption() {
@@ -310,11 +310,11 @@ export class TfDbOptionGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDbOptionGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDbOptionGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDbOptionGroup.TimeoutsProperty) {
+  public putTimeouts(value: AwsDbOptionGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -341,8 +341,8 @@ export class TfDbOptionGroup extends cdktn.TerraformResource {
       skip_destroy: cdktn.booleanToTerraform(this._skipDestroy),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      option: cdktn.listMapper(tfDbOptionGroupOptionPropertyToTerraform, true)(this._option.internalValue),
-      timeouts: tfDbOptionGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      option: cdktn.listMapper(awsDbOptionGroupOptionPropertyToTerraform, true)(this._option.internalValue),
+      timeouts: awsDbOptionGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -409,16 +409,16 @@ export class TfDbOptionGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       option: {
-        value: cdktn.listMapperHcl(tfDbOptionGroupOptionPropertyToHclTerraform, true)(this._option.internalValue),
+        value: cdktn.listMapperHcl(awsDbOptionGroupOptionPropertyToHclTerraform, true)(this._option.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDbOptionGroup.OptionPropertyList",
+        storageClassType: "AwsDbOptionGroup.OptionPropertyList",
       },
       timeouts: {
-        value: tfDbOptionGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDbOptionGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDbOptionGroup.TimeoutsProperty",
+        storageClassType: "AwsDbOptionGroup.TimeoutsProperty",
       },
     };
 
@@ -427,7 +427,7 @@ export class TfDbOptionGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfDbOptionGroupOptionSettingsPropertyToTerraform(struct?: TfDbOptionGroup.OptionSettingsProperty | cdktn.IResolvable): any {
+export function awsDbOptionGroupOptionSettingsPropertyToTerraform(struct?: AwsDbOptionGroup.OptionSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function tfDbOptionGroupOptionSettingsPropertyToTerraform(struct?: TfDbOp
 }
 
 
-export function tfDbOptionGroupOptionSettingsPropertyToHclTerraform(struct?: TfDbOptionGroup.OptionSettingsProperty | cdktn.IResolvable): any {
+export function awsDbOptionGroupOptionSettingsPropertyToHclTerraform(struct?: AwsDbOptionGroup.OptionSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function tfDbOptionGroupOptionSettingsPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDbOptionGroupOptionPropertyToTerraform(struct?: TfDbOptionGroup.OptionProperty | cdktn.IResolvable): any {
+export function awsDbOptionGroupOptionPropertyToTerraform(struct?: AwsDbOptionGroup.OptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,12 +475,12 @@ export function tfDbOptionGroupOptionPropertyToTerraform(struct?: TfDbOptionGrou
     port: cdktn.numberToTerraform(struct!.port),
     version: cdktn.stringToTerraform(struct!.version),
     vpc_security_group_memberships: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.vpcSecurityGroupMemberships),
-    option_settings: cdktn.listMapper(tfDbOptionGroupOptionSettingsPropertyToTerraform, true)(struct!.optionSettings),
+    option_settings: cdktn.listMapper(awsDbOptionGroupOptionSettingsPropertyToTerraform, true)(struct!.optionSettings),
   }
 }
 
 
-export function tfDbOptionGroupOptionPropertyToHclTerraform(struct?: TfDbOptionGroup.OptionProperty | cdktn.IResolvable): any {
+export function awsDbOptionGroupOptionPropertyToHclTerraform(struct?: AwsDbOptionGroup.OptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,7 +517,7 @@ export function tfDbOptionGroupOptionPropertyToHclTerraform(struct?: TfDbOptionG
       storageClassType: "stringList",
     },
     option_settings: {
-      value: cdktn.listMapperHcl(tfDbOptionGroupOptionSettingsPropertyToHclTerraform, true)(struct!.optionSettings),
+      value: cdktn.listMapperHcl(awsDbOptionGroupOptionSettingsPropertyToHclTerraform, true)(struct!.optionSettings),
       isBlock: true,
       type: "set",
       storageClassType: "OptionSettingsPropertyList",
@@ -529,7 +529,7 @@ export function tfDbOptionGroupOptionPropertyToHclTerraform(struct?: TfDbOptionG
 }
 
 
-export function tfDbOptionGroupTimeoutsPropertyToTerraform(struct?: TfDbOptionGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDbOptionGroupTimeoutsPropertyToTerraform(struct?: AwsDbOptionGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -540,7 +540,7 @@ export function tfDbOptionGroupTimeoutsPropertyToTerraform(struct?: TfDbOptionGr
 }
 
 
-export function tfDbOptionGroupTimeoutsPropertyToHclTerraform(struct?: TfDbOptionGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDbOptionGroupTimeoutsPropertyToHclTerraform(struct?: AwsDbOptionGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -559,14 +559,14 @@ export function tfDbOptionGroupTimeoutsPropertyToHclTerraform(struct?: TfDbOptio
 }
 
 
-export namespace TfDbOptionGroup {
+export namespace AwsDbOptionGroup {
 export interface OptionSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#name TfDbOptionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#name AwsDbOptionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#value TfDbOptionGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#value AwsDbOptionGroup#value}
   */
   readonly value: string;
 }
@@ -668,29 +668,29 @@ export class OptionSettingsPropertyList extends cdktn.ComplexList {
 }
 export interface OptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#db_security_group_memberships TfDbOptionGroup#db_security_group_memberships}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#db_security_group_memberships AwsDbOptionGroup#db_security_group_memberships}
   */
   readonly dbSecurityGroupMemberships?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#option_name TfDbOptionGroup#option_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#option_name AwsDbOptionGroup#option_name}
   */
   readonly optionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#port TfDbOptionGroup#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#port AwsDbOptionGroup#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#version TfDbOptionGroup#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#version AwsDbOptionGroup#version}
   */
   readonly version?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#vpc_security_group_memberships TfDbOptionGroup#vpc_security_group_memberships}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#vpc_security_group_memberships AwsDbOptionGroup#vpc_security_group_memberships}
   */
   readonly vpcSecurityGroupMemberships?: string[];
   /**
   * option_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#option_settings TfDbOptionGroup#option_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#option_settings AwsDbOptionGroup#option_settings}
   */
   readonly optionSettings?: OptionSettingsProperty[] | cdktn.IResolvable;
 }
@@ -883,7 +883,7 @@ export class OptionPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#delete TfDbOptionGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#delete AwsDbOptionGroup#delete}
   */
   readonly delete?: string;
 }

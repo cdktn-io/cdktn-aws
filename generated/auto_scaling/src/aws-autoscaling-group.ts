@@ -5,222 +5,222 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#availability_zones TfGroup#availability_zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#availability_zones AwsGroup#availability_zones}
   */
   readonly availabilityZones?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_rebalance TfGroup#capacity_rebalance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_rebalance AwsGroup#capacity_rebalance}
   */
   readonly capacityRebalance?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#context TfGroup#context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#context AwsGroup#context}
   */
   readonly context?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#default_cooldown TfGroup#default_cooldown}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#default_cooldown AwsGroup#default_cooldown}
   */
   readonly defaultCooldown?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#default_instance_warmup TfGroup#default_instance_warmup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#default_instance_warmup AwsGroup#default_instance_warmup}
   */
   readonly defaultInstanceWarmup?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#desired_capacity TfGroup#desired_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#desired_capacity AwsGroup#desired_capacity}
   */
   readonly desiredCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#desired_capacity_type TfGroup#desired_capacity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#desired_capacity_type AwsGroup#desired_capacity_type}
   */
   readonly desiredCapacityType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#enabled_metrics TfGroup#enabled_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#enabled_metrics AwsGroup#enabled_metrics}
   */
   readonly enabledMetrics?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#force_delete TfGroup#force_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#force_delete AwsGroup#force_delete}
   */
   readonly forceDelete?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#force_delete_warm_pool TfGroup#force_delete_warm_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#force_delete_warm_pool AwsGroup#force_delete_warm_pool}
   */
   readonly forceDeleteWarmPool?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#health_check_grace_period TfGroup#health_check_grace_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#health_check_grace_period AwsGroup#health_check_grace_period}
   */
   readonly healthCheckGracePeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#health_check_type TfGroup#health_check_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#health_check_type AwsGroup#health_check_type}
   */
   readonly healthCheckType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#id TfGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#id AwsGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#ignore_failed_scaling_activities TfGroup#ignore_failed_scaling_activities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#ignore_failed_scaling_activities AwsGroup#ignore_failed_scaling_activities}
   */
   readonly ignoreFailedScalingActivities?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_configuration TfGroup#launch_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_configuration AwsGroup#launch_configuration}
   */
   readonly launchConfiguration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#load_balancers TfGroup#load_balancers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#load_balancers AwsGroup#load_balancers}
   */
   readonly loadBalancers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max_instance_lifetime TfGroup#max_instance_lifetime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max_instance_lifetime AwsGroup#max_instance_lifetime}
   */
   readonly maxInstanceLifetime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max_size TfGroup#max_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max_size AwsGroup#max_size}
   */
   readonly maxSize: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#metrics_granularity TfGroup#metrics_granularity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#metrics_granularity AwsGroup#metrics_granularity}
   */
   readonly metricsGranularity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min_elb_capacity TfGroup#min_elb_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min_elb_capacity AwsGroup#min_elb_capacity}
   */
   readonly minElbCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min_size TfGroup#min_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min_size AwsGroup#min_size}
   */
   readonly minSize: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#name TfGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#name AwsGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#name_prefix TfGroup#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#name_prefix AwsGroup#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#placement_group TfGroup#placement_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#placement_group AwsGroup#placement_group}
   */
   readonly placementGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#protect_from_scale_in TfGroup#protect_from_scale_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#protect_from_scale_in AwsGroup#protect_from_scale_in}
   */
   readonly protectFromScaleIn?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#region TfGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#region AwsGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#service_linked_role_arn TfGroup#service_linked_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#service_linked_role_arn AwsGroup#service_linked_role_arn}
   */
   readonly serviceLinkedRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#suspended_processes TfGroup#suspended_processes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#suspended_processes AwsGroup#suspended_processes}
   */
   readonly suspendedProcesses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#target_group_arns TfGroup#target_group_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#target_group_arns AwsGroup#target_group_arns}
   */
   readonly targetGroupArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#termination_policies TfGroup#termination_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#termination_policies AwsGroup#termination_policies}
   */
   readonly terminationPolicies?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#vpc_zone_identifier TfGroup#vpc_zone_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#vpc_zone_identifier AwsGroup#vpc_zone_identifier}
   */
   readonly vpcZoneIdentifier?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#wait_for_capacity_timeout TfGroup#wait_for_capacity_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#wait_for_capacity_timeout AwsGroup#wait_for_capacity_timeout}
   */
   readonly waitForCapacityTimeout?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#wait_for_elb_capacity TfGroup#wait_for_elb_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#wait_for_elb_capacity AwsGroup#wait_for_elb_capacity}
   */
   readonly waitForElbCapacity?: number;
   /**
   * availability_zone_distribution block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#availability_zone_distribution TfGroup#availability_zone_distribution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#availability_zone_distribution AwsGroup#availability_zone_distribution}
   */
-  readonly availabilityZoneDistribution?: TfGroup.AvailabilityZoneDistributionProperty;
+  readonly availabilityZoneDistribution?: AwsGroup.AvailabilityZoneDistributionProperty;
   /**
   * capacity_reservation_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_reservation_specification TfGroup#capacity_reservation_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_reservation_specification AwsGroup#capacity_reservation_specification}
   */
-  readonly capacityReservationSpecification?: TfGroup.CapacityReservationSpecificationProperty;
+  readonly capacityReservationSpecification?: AwsGroup.CapacityReservationSpecificationProperty;
   /**
   * initial_lifecycle_hook block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#initial_lifecycle_hook TfGroup#initial_lifecycle_hook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#initial_lifecycle_hook AwsGroup#initial_lifecycle_hook}
   */
-  readonly initialLifecycleHook?: TfGroup.InitialLifecycleHookProperty[] | cdktn.IResolvable;
+  readonly initialLifecycleHook?: AwsGroup.InitialLifecycleHookProperty[] | cdktn.IResolvable;
   /**
   * instance_lifecycle_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_lifecycle_policy TfGroup#instance_lifecycle_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_lifecycle_policy AwsGroup#instance_lifecycle_policy}
   */
-  readonly instanceLifecyclePolicy?: TfGroup.InstanceLifecyclePolicyProperty;
+  readonly instanceLifecyclePolicy?: AwsGroup.InstanceLifecyclePolicyProperty;
   /**
   * instance_maintenance_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_maintenance_policy TfGroup#instance_maintenance_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_maintenance_policy AwsGroup#instance_maintenance_policy}
   */
-  readonly instanceMaintenancePolicy?: TfGroup.InstanceMaintenancePolicyProperty;
+  readonly instanceMaintenancePolicy?: AwsGroup.InstanceMaintenancePolicyProperty;
   /**
   * instance_refresh block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_refresh TfGroup#instance_refresh}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_refresh AwsGroup#instance_refresh}
   */
-  readonly instanceRefresh?: TfGroup.InstanceRefreshProperty;
+  readonly instanceRefresh?: AwsGroup.InstanceRefreshProperty;
   /**
   * launch_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template TfGroup#launch_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template AwsGroup#launch_template}
   */
-  readonly launchTemplate?: TfGroup.LaunchTemplateProperty;
+  readonly launchTemplate?: AwsGroup.LaunchTemplateProperty;
   /**
   * mixed_instances_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#mixed_instances_policy TfGroup#mixed_instances_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#mixed_instances_policy AwsGroup#mixed_instances_policy}
   */
-  readonly mixedInstancesPolicy?: TfGroup.MixedInstancesPolicyProperty;
+  readonly mixedInstancesPolicy?: AwsGroup.MixedInstancesPolicyProperty;
   /**
   * tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#tag TfGroup#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#tag AwsGroup#tag}
   */
-  readonly tag?: TfGroup.TagProperty[] | cdktn.IResolvable;
+  readonly tag?: AwsGroup.TagProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#timeouts TfGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#timeouts AwsGroup#timeouts}
   */
-  readonly timeouts?: TfGroup.TimeoutsProperty;
+  readonly timeouts?: AwsGroup.TimeoutsProperty;
   /**
   * traffic_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#traffic_source TfGroup#traffic_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#traffic_source AwsGroup#traffic_source}
   */
-  readonly trafficSource?: TfGroup.TrafficSourceProperty[] | cdktn.IResolvable;
+  readonly trafficSource?: AwsGroup.TrafficSourceProperty[] | cdktn.IResolvable;
   /**
   * warm_pool block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#warm_pool TfGroup#warm_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#warm_pool AwsGroup#warm_pool}
   */
-  readonly warmPool?: TfGroup.WarmPoolProperty;
+  readonly warmPool?: AwsGroup.WarmPoolProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group aws_autoscaling_group}
 */
-export class TfGroup extends cdktn.TerraformResource {
+export class AwsGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -231,11 +231,11 @@ export class TfGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGroup to import
-  * @param importFromId The id of the existing TfGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsGroup to import
+  * @param importFromId The id of the existing AwsGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_autoscaling_group", importId: importFromId, provider });
@@ -250,9 +250,9 @@ export class TfGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGroupConfig
+  * @param options AwsGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_autoscaling_group',
       terraformGeneratorMetadata: {
@@ -857,11 +857,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // availability_zone_distribution - computed: false, optional: true, required: false
-  private _availabilityZoneDistribution = new TfGroup.AvailabilityZoneDistributionPropertyOutputReference(this, "availability_zone_distribution");
+  private _availabilityZoneDistribution = new AwsGroup.AvailabilityZoneDistributionPropertyOutputReference(this, "availability_zone_distribution");
   public get availabilityZoneDistribution() {
     return this._availabilityZoneDistribution;
   }
-  public putAvailabilityZoneDistribution(value: TfGroup.AvailabilityZoneDistributionProperty) {
+  public putAvailabilityZoneDistribution(value: AwsGroup.AvailabilityZoneDistributionProperty) {
     this._availabilityZoneDistribution.internalValue = value;
   }
   public resetAvailabilityZoneDistribution() {
@@ -873,11 +873,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // capacity_reservation_specification - computed: false, optional: true, required: false
-  private _capacityReservationSpecification = new TfGroup.CapacityReservationSpecificationPropertyOutputReference(this, "capacity_reservation_specification");
+  private _capacityReservationSpecification = new AwsGroup.CapacityReservationSpecificationPropertyOutputReference(this, "capacity_reservation_specification");
   public get capacityReservationSpecification() {
     return this._capacityReservationSpecification;
   }
-  public putCapacityReservationSpecification(value: TfGroup.CapacityReservationSpecificationProperty) {
+  public putCapacityReservationSpecification(value: AwsGroup.CapacityReservationSpecificationProperty) {
     this._capacityReservationSpecification.internalValue = value;
   }
   public resetCapacityReservationSpecification() {
@@ -889,11 +889,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // initial_lifecycle_hook - computed: false, optional: true, required: false
-  private _initialLifecycleHook = new TfGroup.InitialLifecycleHookPropertyList(this, "initial_lifecycle_hook", true);
+  private _initialLifecycleHook = new AwsGroup.InitialLifecycleHookPropertyList(this, "initial_lifecycle_hook", true);
   public get initialLifecycleHook() {
     return this._initialLifecycleHook;
   }
-  public putInitialLifecycleHook(value: TfGroup.InitialLifecycleHookProperty[] | cdktn.IResolvable) {
+  public putInitialLifecycleHook(value: AwsGroup.InitialLifecycleHookProperty[] | cdktn.IResolvable) {
     this._initialLifecycleHook.internalValue = value;
   }
   public resetInitialLifecycleHook() {
@@ -905,11 +905,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // instance_lifecycle_policy - computed: false, optional: true, required: false
-  private _instanceLifecyclePolicy = new TfGroup.InstanceLifecyclePolicyPropertyOutputReference(this, "instance_lifecycle_policy");
+  private _instanceLifecyclePolicy = new AwsGroup.InstanceLifecyclePolicyPropertyOutputReference(this, "instance_lifecycle_policy");
   public get instanceLifecyclePolicy() {
     return this._instanceLifecyclePolicy;
   }
-  public putInstanceLifecyclePolicy(value: TfGroup.InstanceLifecyclePolicyProperty) {
+  public putInstanceLifecyclePolicy(value: AwsGroup.InstanceLifecyclePolicyProperty) {
     this._instanceLifecyclePolicy.internalValue = value;
   }
   public resetInstanceLifecyclePolicy() {
@@ -921,11 +921,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // instance_maintenance_policy - computed: false, optional: true, required: false
-  private _instanceMaintenancePolicy = new TfGroup.InstanceMaintenancePolicyPropertyOutputReference(this, "instance_maintenance_policy");
+  private _instanceMaintenancePolicy = new AwsGroup.InstanceMaintenancePolicyPropertyOutputReference(this, "instance_maintenance_policy");
   public get instanceMaintenancePolicy() {
     return this._instanceMaintenancePolicy;
   }
-  public putInstanceMaintenancePolicy(value: TfGroup.InstanceMaintenancePolicyProperty) {
+  public putInstanceMaintenancePolicy(value: AwsGroup.InstanceMaintenancePolicyProperty) {
     this._instanceMaintenancePolicy.internalValue = value;
   }
   public resetInstanceMaintenancePolicy() {
@@ -937,11 +937,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // instance_refresh - computed: false, optional: true, required: false
-  private _instanceRefresh = new TfGroup.InstanceRefreshPropertyOutputReference(this, "instance_refresh");
+  private _instanceRefresh = new AwsGroup.InstanceRefreshPropertyOutputReference(this, "instance_refresh");
   public get instanceRefresh() {
     return this._instanceRefresh;
   }
-  public putInstanceRefresh(value: TfGroup.InstanceRefreshProperty) {
+  public putInstanceRefresh(value: AwsGroup.InstanceRefreshProperty) {
     this._instanceRefresh.internalValue = value;
   }
   public resetInstanceRefresh() {
@@ -953,11 +953,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // launch_template - computed: false, optional: true, required: false
-  private _launchTemplate = new TfGroup.LaunchTemplatePropertyOutputReference(this, "launch_template");
+  private _launchTemplate = new AwsGroup.LaunchTemplatePropertyOutputReference(this, "launch_template");
   public get launchTemplate() {
     return this._launchTemplate;
   }
-  public putLaunchTemplate(value: TfGroup.LaunchTemplateProperty) {
+  public putLaunchTemplate(value: AwsGroup.LaunchTemplateProperty) {
     this._launchTemplate.internalValue = value;
   }
   public resetLaunchTemplate() {
@@ -969,11 +969,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // mixed_instances_policy - computed: false, optional: true, required: false
-  private _mixedInstancesPolicy = new TfGroup.MixedInstancesPolicyPropertyOutputReference(this, "mixed_instances_policy");
+  private _mixedInstancesPolicy = new AwsGroup.MixedInstancesPolicyPropertyOutputReference(this, "mixed_instances_policy");
   public get mixedInstancesPolicy() {
     return this._mixedInstancesPolicy;
   }
-  public putMixedInstancesPolicy(value: TfGroup.MixedInstancesPolicyProperty) {
+  public putMixedInstancesPolicy(value: AwsGroup.MixedInstancesPolicyProperty) {
     this._mixedInstancesPolicy.internalValue = value;
   }
   public resetMixedInstancesPolicy() {
@@ -985,11 +985,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag = new TfGroup.TagPropertyList(this, "tag", true);
+  private _tag = new AwsGroup.TagPropertyList(this, "tag", true);
   public get tag() {
     return this._tag;
   }
-  public putTag(value: TfGroup.TagProperty[] | cdktn.IResolvable) {
+  public putTag(value: AwsGroup.TagProperty[] | cdktn.IResolvable) {
     this._tag.internalValue = value;
   }
   public resetTag() {
@@ -1001,11 +1001,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfGroup.TimeoutsProperty) {
+  public putTimeouts(value: AwsGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -1017,11 +1017,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // traffic_source - computed: false, optional: true, required: false
-  private _trafficSource = new TfGroup.TrafficSourcePropertyList(this, "traffic_source", true);
+  private _trafficSource = new AwsGroup.TrafficSourcePropertyList(this, "traffic_source", true);
   public get trafficSource() {
     return this._trafficSource;
   }
-  public putTrafficSource(value: TfGroup.TrafficSourceProperty[] | cdktn.IResolvable) {
+  public putTrafficSource(value: AwsGroup.TrafficSourceProperty[] | cdktn.IResolvable) {
     this._trafficSource.internalValue = value;
   }
   public resetTrafficSource() {
@@ -1033,11 +1033,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // warm_pool - computed: false, optional: true, required: false
-  private _warmPool = new TfGroup.WarmPoolPropertyOutputReference(this, "warm_pool");
+  private _warmPool = new AwsGroup.WarmPoolPropertyOutputReference(this, "warm_pool");
   public get warmPool() {
     return this._warmPool;
   }
-  public putWarmPool(value: TfGroup.WarmPoolProperty) {
+  public putWarmPool(value: AwsGroup.WarmPoolProperty) {
     this._warmPool.internalValue = value;
   }
   public resetWarmPool() {
@@ -1087,18 +1087,18 @@ export class TfGroup extends cdktn.TerraformResource {
       vpc_zone_identifier: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcZoneIdentifier),
       wait_for_capacity_timeout: cdktn.stringToTerraform(this._waitForCapacityTimeout),
       wait_for_elb_capacity: cdktn.numberToTerraform(this._waitForElbCapacity),
-      availability_zone_distribution: tfGroupAvailabilityZoneDistributionPropertyToTerraform(this._availabilityZoneDistribution.internalValue),
-      capacity_reservation_specification: tfGroupCapacityReservationSpecificationPropertyToTerraform(this._capacityReservationSpecification.internalValue),
-      initial_lifecycle_hook: cdktn.listMapper(tfGroupInitialLifecycleHookPropertyToTerraform, true)(this._initialLifecycleHook.internalValue),
-      instance_lifecycle_policy: tfGroupInstanceLifecyclePolicyPropertyToTerraform(this._instanceLifecyclePolicy.internalValue),
-      instance_maintenance_policy: tfGroupInstanceMaintenancePolicyPropertyToTerraform(this._instanceMaintenancePolicy.internalValue),
-      instance_refresh: tfGroupInstanceRefreshPropertyToTerraform(this._instanceRefresh.internalValue),
-      launch_template: tfGroupLaunchTemplatePropertyToTerraform(this._launchTemplate.internalValue),
-      mixed_instances_policy: tfGroupMixedInstancesPolicyPropertyToTerraform(this._mixedInstancesPolicy.internalValue),
-      tag: cdktn.listMapper(tfGroupTagPropertyToTerraform, true)(this._tag.internalValue),
-      timeouts: tfGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      traffic_source: cdktn.listMapper(tfGroupTrafficSourcePropertyToTerraform, true)(this._trafficSource.internalValue),
-      warm_pool: tfGroupWarmPoolPropertyToTerraform(this._warmPool.internalValue),
+      availability_zone_distribution: awsGroupAvailabilityZoneDistributionPropertyToTerraform(this._availabilityZoneDistribution.internalValue),
+      capacity_reservation_specification: awsGroupCapacityReservationSpecificationPropertyToTerraform(this._capacityReservationSpecification.internalValue),
+      initial_lifecycle_hook: cdktn.listMapper(awsGroupInitialLifecycleHookPropertyToTerraform, true)(this._initialLifecycleHook.internalValue),
+      instance_lifecycle_policy: awsGroupInstanceLifecyclePolicyPropertyToTerraform(this._instanceLifecyclePolicy.internalValue),
+      instance_maintenance_policy: awsGroupInstanceMaintenancePolicyPropertyToTerraform(this._instanceMaintenancePolicy.internalValue),
+      instance_refresh: awsGroupInstanceRefreshPropertyToTerraform(this._instanceRefresh.internalValue),
+      launch_template: awsGroupLaunchTemplatePropertyToTerraform(this._launchTemplate.internalValue),
+      mixed_instances_policy: awsGroupMixedInstancesPolicyPropertyToTerraform(this._mixedInstancesPolicy.internalValue),
+      tag: cdktn.listMapper(awsGroupTagPropertyToTerraform, true)(this._tag.internalValue),
+      timeouts: awsGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      traffic_source: cdktn.listMapper(awsGroupTrafficSourcePropertyToTerraform, true)(this._trafficSource.internalValue),
+      warm_pool: awsGroupWarmPoolPropertyToTerraform(this._warmPool.internalValue),
     };
   }
 
@@ -1303,76 +1303,76 @@ export class TfGroup extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       availability_zone_distribution: {
-        value: tfGroupAvailabilityZoneDistributionPropertyToHclTerraform(this._availabilityZoneDistribution.internalValue),
+        value: awsGroupAvailabilityZoneDistributionPropertyToHclTerraform(this._availabilityZoneDistribution.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGroup.AvailabilityZoneDistributionPropertyList",
+        storageClassType: "AwsGroup.AvailabilityZoneDistributionPropertyList",
       },
       capacity_reservation_specification: {
-        value: tfGroupCapacityReservationSpecificationPropertyToHclTerraform(this._capacityReservationSpecification.internalValue),
+        value: awsGroupCapacityReservationSpecificationPropertyToHclTerraform(this._capacityReservationSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGroup.CapacityReservationSpecificationPropertyList",
+        storageClassType: "AwsGroup.CapacityReservationSpecificationPropertyList",
       },
       initial_lifecycle_hook: {
-        value: cdktn.listMapperHcl(tfGroupInitialLifecycleHookPropertyToHclTerraform, true)(this._initialLifecycleHook.internalValue),
+        value: cdktn.listMapperHcl(awsGroupInitialLifecycleHookPropertyToHclTerraform, true)(this._initialLifecycleHook.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfGroup.InitialLifecycleHookPropertyList",
+        storageClassType: "AwsGroup.InitialLifecycleHookPropertyList",
       },
       instance_lifecycle_policy: {
-        value: tfGroupInstanceLifecyclePolicyPropertyToHclTerraform(this._instanceLifecyclePolicy.internalValue),
+        value: awsGroupInstanceLifecyclePolicyPropertyToHclTerraform(this._instanceLifecyclePolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGroup.InstanceLifecyclePolicyPropertyList",
+        storageClassType: "AwsGroup.InstanceLifecyclePolicyPropertyList",
       },
       instance_maintenance_policy: {
-        value: tfGroupInstanceMaintenancePolicyPropertyToHclTerraform(this._instanceMaintenancePolicy.internalValue),
+        value: awsGroupInstanceMaintenancePolicyPropertyToHclTerraform(this._instanceMaintenancePolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGroup.InstanceMaintenancePolicyPropertyList",
+        storageClassType: "AwsGroup.InstanceMaintenancePolicyPropertyList",
       },
       instance_refresh: {
-        value: tfGroupInstanceRefreshPropertyToHclTerraform(this._instanceRefresh.internalValue),
+        value: awsGroupInstanceRefreshPropertyToHclTerraform(this._instanceRefresh.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGroup.InstanceRefreshPropertyList",
+        storageClassType: "AwsGroup.InstanceRefreshPropertyList",
       },
       launch_template: {
-        value: tfGroupLaunchTemplatePropertyToHclTerraform(this._launchTemplate.internalValue),
+        value: awsGroupLaunchTemplatePropertyToHclTerraform(this._launchTemplate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGroup.LaunchTemplatePropertyList",
+        storageClassType: "AwsGroup.LaunchTemplatePropertyList",
       },
       mixed_instances_policy: {
-        value: tfGroupMixedInstancesPolicyPropertyToHclTerraform(this._mixedInstancesPolicy.internalValue),
+        value: awsGroupMixedInstancesPolicyPropertyToHclTerraform(this._mixedInstancesPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGroup.MixedInstancesPolicyPropertyList",
+        storageClassType: "AwsGroup.MixedInstancesPolicyPropertyList",
       },
       tag: {
-        value: cdktn.listMapperHcl(tfGroupTagPropertyToHclTerraform, true)(this._tag.internalValue),
+        value: cdktn.listMapperHcl(awsGroupTagPropertyToHclTerraform, true)(this._tag.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfGroup.TagPropertyList",
+        storageClassType: "AwsGroup.TagPropertyList",
       },
       timeouts: {
-        value: tfGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfGroup.TimeoutsProperty",
+        storageClassType: "AwsGroup.TimeoutsProperty",
       },
       traffic_source: {
-        value: cdktn.listMapperHcl(tfGroupTrafficSourcePropertyToHclTerraform, true)(this._trafficSource.internalValue),
+        value: cdktn.listMapperHcl(awsGroupTrafficSourcePropertyToHclTerraform, true)(this._trafficSource.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfGroup.TrafficSourcePropertyList",
+        storageClassType: "AwsGroup.TrafficSourcePropertyList",
       },
       warm_pool: {
-        value: tfGroupWarmPoolPropertyToHclTerraform(this._warmPool.internalValue),
+        value: awsGroupWarmPoolPropertyToHclTerraform(this._warmPool.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGroup.WarmPoolPropertyList",
+        storageClassType: "AwsGroup.WarmPoolPropertyList",
       },
     };
 
@@ -1381,7 +1381,7 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfGroupAvailabilityZoneDistributionPropertyToTerraform(struct?: TfGroup.AvailabilityZoneDistributionPropertyOutputReference | TfGroup.AvailabilityZoneDistributionProperty): any {
+export function awsGroupAvailabilityZoneDistributionPropertyToTerraform(struct?: AwsGroup.AvailabilityZoneDistributionPropertyOutputReference | AwsGroup.AvailabilityZoneDistributionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1392,7 +1392,7 @@ export function tfGroupAvailabilityZoneDistributionPropertyToTerraform(struct?: 
 }
 
 
-export function tfGroupAvailabilityZoneDistributionPropertyToHclTerraform(struct?: TfGroup.AvailabilityZoneDistributionPropertyOutputReference | TfGroup.AvailabilityZoneDistributionProperty): any {
+export function awsGroupAvailabilityZoneDistributionPropertyToHclTerraform(struct?: AwsGroup.AvailabilityZoneDistributionPropertyOutputReference | AwsGroup.AvailabilityZoneDistributionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1411,7 +1411,7 @@ export function tfGroupAvailabilityZoneDistributionPropertyToHclTerraform(struct
 }
 
 
-export function tfGroupCapacityReservationTargetPropertyToTerraform(struct?: TfGroup.CapacityReservationTargetPropertyOutputReference | TfGroup.CapacityReservationTargetProperty): any {
+export function awsGroupCapacityReservationTargetPropertyToTerraform(struct?: AwsGroup.CapacityReservationTargetPropertyOutputReference | AwsGroup.CapacityReservationTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1423,7 +1423,7 @@ export function tfGroupCapacityReservationTargetPropertyToTerraform(struct?: TfG
 }
 
 
-export function tfGroupCapacityReservationTargetPropertyToHclTerraform(struct?: TfGroup.CapacityReservationTargetPropertyOutputReference | TfGroup.CapacityReservationTargetProperty): any {
+export function awsGroupCapacityReservationTargetPropertyToHclTerraform(struct?: AwsGroup.CapacityReservationTargetPropertyOutputReference | AwsGroup.CapacityReservationTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1448,19 +1448,19 @@ export function tfGroupCapacityReservationTargetPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfGroupCapacityReservationSpecificationPropertyToTerraform(struct?: TfGroup.CapacityReservationSpecificationPropertyOutputReference | TfGroup.CapacityReservationSpecificationProperty): any {
+export function awsGroupCapacityReservationSpecificationPropertyToTerraform(struct?: AwsGroup.CapacityReservationSpecificationPropertyOutputReference | AwsGroup.CapacityReservationSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     capacity_reservation_preference: cdktn.stringToTerraform(struct!.capacityReservationPreference),
-    capacity_reservation_target: tfGroupCapacityReservationTargetPropertyToTerraform(struct!.capacityReservationTarget),
+    capacity_reservation_target: awsGroupCapacityReservationTargetPropertyToTerraform(struct!.capacityReservationTarget),
   }
 }
 
 
-export function tfGroupCapacityReservationSpecificationPropertyToHclTerraform(struct?: TfGroup.CapacityReservationSpecificationPropertyOutputReference | TfGroup.CapacityReservationSpecificationProperty): any {
+export function awsGroupCapacityReservationSpecificationPropertyToHclTerraform(struct?: AwsGroup.CapacityReservationSpecificationPropertyOutputReference | AwsGroup.CapacityReservationSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1473,7 +1473,7 @@ export function tfGroupCapacityReservationSpecificationPropertyToHclTerraform(st
       storageClassType: "string",
     },
     capacity_reservation_target: {
-      value: tfGroupCapacityReservationTargetPropertyToHclTerraform(struct!.capacityReservationTarget),
+      value: awsGroupCapacityReservationTargetPropertyToHclTerraform(struct!.capacityReservationTarget),
       isBlock: true,
       type: "list",
       storageClassType: "CapacityReservationTargetPropertyList",
@@ -1485,7 +1485,7 @@ export function tfGroupCapacityReservationSpecificationPropertyToHclTerraform(st
 }
 
 
-export function tfGroupInitialLifecycleHookPropertyToTerraform(struct?: TfGroup.InitialLifecycleHookProperty | cdktn.IResolvable): any {
+export function awsGroupInitialLifecycleHookPropertyToTerraform(struct?: AwsGroup.InitialLifecycleHookProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1502,7 +1502,7 @@ export function tfGroupInitialLifecycleHookPropertyToTerraform(struct?: TfGroup.
 }
 
 
-export function tfGroupInitialLifecycleHookPropertyToHclTerraform(struct?: TfGroup.InitialLifecycleHookProperty | cdktn.IResolvable): any {
+export function awsGroupInitialLifecycleHookPropertyToHclTerraform(struct?: AwsGroup.InitialLifecycleHookProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1557,7 +1557,7 @@ export function tfGroupInitialLifecycleHookPropertyToHclTerraform(struct?: TfGro
 }
 
 
-export function tfGroupRetentionTriggersPropertyToTerraform(struct?: TfGroup.RetentionTriggersPropertyOutputReference | TfGroup.RetentionTriggersProperty): any {
+export function awsGroupRetentionTriggersPropertyToTerraform(struct?: AwsGroup.RetentionTriggersPropertyOutputReference | AwsGroup.RetentionTriggersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1568,7 +1568,7 @@ export function tfGroupRetentionTriggersPropertyToTerraform(struct?: TfGroup.Ret
 }
 
 
-export function tfGroupRetentionTriggersPropertyToHclTerraform(struct?: TfGroup.RetentionTriggersPropertyOutputReference | TfGroup.RetentionTriggersProperty): any {
+export function awsGroupRetentionTriggersPropertyToHclTerraform(struct?: AwsGroup.RetentionTriggersPropertyOutputReference | AwsGroup.RetentionTriggersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1587,25 +1587,25 @@ export function tfGroupRetentionTriggersPropertyToHclTerraform(struct?: TfGroup.
 }
 
 
-export function tfGroupInstanceLifecyclePolicyPropertyToTerraform(struct?: TfGroup.InstanceLifecyclePolicyPropertyOutputReference | TfGroup.InstanceLifecyclePolicyProperty): any {
+export function awsGroupInstanceLifecyclePolicyPropertyToTerraform(struct?: AwsGroup.InstanceLifecyclePolicyPropertyOutputReference | AwsGroup.InstanceLifecyclePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    retention_triggers: tfGroupRetentionTriggersPropertyToTerraform(struct!.retentionTriggers),
+    retention_triggers: awsGroupRetentionTriggersPropertyToTerraform(struct!.retentionTriggers),
   }
 }
 
 
-export function tfGroupInstanceLifecyclePolicyPropertyToHclTerraform(struct?: TfGroup.InstanceLifecyclePolicyPropertyOutputReference | TfGroup.InstanceLifecyclePolicyProperty): any {
+export function awsGroupInstanceLifecyclePolicyPropertyToHclTerraform(struct?: AwsGroup.InstanceLifecyclePolicyPropertyOutputReference | AwsGroup.InstanceLifecyclePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     retention_triggers: {
-      value: tfGroupRetentionTriggersPropertyToHclTerraform(struct!.retentionTriggers),
+      value: awsGroupRetentionTriggersPropertyToHclTerraform(struct!.retentionTriggers),
       isBlock: true,
       type: "list",
       storageClassType: "RetentionTriggersPropertyList",
@@ -1617,7 +1617,7 @@ export function tfGroupInstanceLifecyclePolicyPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfGroupInstanceMaintenancePolicyPropertyToTerraform(struct?: TfGroup.InstanceMaintenancePolicyPropertyOutputReference | TfGroup.InstanceMaintenancePolicyProperty): any {
+export function awsGroupInstanceMaintenancePolicyPropertyToTerraform(struct?: AwsGroup.InstanceMaintenancePolicyPropertyOutputReference | AwsGroup.InstanceMaintenancePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1629,7 +1629,7 @@ export function tfGroupInstanceMaintenancePolicyPropertyToTerraform(struct?: TfG
 }
 
 
-export function tfGroupInstanceMaintenancePolicyPropertyToHclTerraform(struct?: TfGroup.InstanceMaintenancePolicyPropertyOutputReference | TfGroup.InstanceMaintenancePolicyProperty): any {
+export function awsGroupInstanceMaintenancePolicyPropertyToHclTerraform(struct?: AwsGroup.InstanceMaintenancePolicyPropertyOutputReference | AwsGroup.InstanceMaintenancePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1654,7 +1654,7 @@ export function tfGroupInstanceMaintenancePolicyPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfGroupAlarmSpecificationPropertyToTerraform(struct?: TfGroup.AlarmSpecificationPropertyOutputReference | TfGroup.AlarmSpecificationProperty): any {
+export function awsGroupAlarmSpecificationPropertyToTerraform(struct?: AwsGroup.AlarmSpecificationPropertyOutputReference | AwsGroup.AlarmSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1665,7 +1665,7 @@ export function tfGroupAlarmSpecificationPropertyToTerraform(struct?: TfGroup.Al
 }
 
 
-export function tfGroupAlarmSpecificationPropertyToHclTerraform(struct?: TfGroup.AlarmSpecificationPropertyOutputReference | TfGroup.AlarmSpecificationProperty): any {
+export function awsGroupAlarmSpecificationPropertyToHclTerraform(struct?: AwsGroup.AlarmSpecificationPropertyOutputReference | AwsGroup.AlarmSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1684,7 +1684,7 @@ export function tfGroupAlarmSpecificationPropertyToHclTerraform(struct?: TfGroup
 }
 
 
-export function tfGroupPreferencesPropertyToTerraform(struct?: TfGroup.PreferencesPropertyOutputReference | TfGroup.PreferencesProperty): any {
+export function awsGroupPreferencesPropertyToTerraform(struct?: AwsGroup.PreferencesPropertyOutputReference | AwsGroup.PreferencesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1699,12 +1699,12 @@ export function tfGroupPreferencesPropertyToTerraform(struct?: TfGroup.Preferenc
     scale_in_protected_instances: cdktn.stringToTerraform(struct!.scaleInProtectedInstances),
     skip_matching: cdktn.booleanToTerraform(struct!.skipMatching),
     standby_instances: cdktn.stringToTerraform(struct!.standbyInstances),
-    alarm_specification: tfGroupAlarmSpecificationPropertyToTerraform(struct!.alarmSpecification),
+    alarm_specification: awsGroupAlarmSpecificationPropertyToTerraform(struct!.alarmSpecification),
   }
 }
 
 
-export function tfGroupPreferencesPropertyToHclTerraform(struct?: TfGroup.PreferencesPropertyOutputReference | TfGroup.PreferencesProperty): any {
+export function awsGroupPreferencesPropertyToHclTerraform(struct?: AwsGroup.PreferencesPropertyOutputReference | AwsGroup.PreferencesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1765,7 +1765,7 @@ export function tfGroupPreferencesPropertyToHclTerraform(struct?: TfGroup.Prefer
       storageClassType: "string",
     },
     alarm_specification: {
-      value: tfGroupAlarmSpecificationPropertyToHclTerraform(struct!.alarmSpecification),
+      value: awsGroupAlarmSpecificationPropertyToHclTerraform(struct!.alarmSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "AlarmSpecificationPropertyList",
@@ -1777,7 +1777,7 @@ export function tfGroupPreferencesPropertyToHclTerraform(struct?: TfGroup.Prefer
 }
 
 
-export function tfGroupInstanceRefreshPropertyToTerraform(struct?: TfGroup.InstanceRefreshPropertyOutputReference | TfGroup.InstanceRefreshProperty): any {
+export function awsGroupInstanceRefreshPropertyToTerraform(struct?: AwsGroup.InstanceRefreshPropertyOutputReference | AwsGroup.InstanceRefreshProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1785,12 +1785,12 @@ export function tfGroupInstanceRefreshPropertyToTerraform(struct?: TfGroup.Insta
   return {
     strategy: cdktn.stringToTerraform(struct!.strategy),
     triggers: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.triggers),
-    preferences: tfGroupPreferencesPropertyToTerraform(struct!.preferences),
+    preferences: awsGroupPreferencesPropertyToTerraform(struct!.preferences),
   }
 }
 
 
-export function tfGroupInstanceRefreshPropertyToHclTerraform(struct?: TfGroup.InstanceRefreshPropertyOutputReference | TfGroup.InstanceRefreshProperty): any {
+export function awsGroupInstanceRefreshPropertyToHclTerraform(struct?: AwsGroup.InstanceRefreshPropertyOutputReference | AwsGroup.InstanceRefreshProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1809,7 +1809,7 @@ export function tfGroupInstanceRefreshPropertyToHclTerraform(struct?: TfGroup.In
       storageClassType: "stringList",
     },
     preferences: {
-      value: tfGroupPreferencesPropertyToHclTerraform(struct!.preferences),
+      value: awsGroupPreferencesPropertyToHclTerraform(struct!.preferences),
       isBlock: true,
       type: "list",
       storageClassType: "PreferencesPropertyList",
@@ -1821,7 +1821,7 @@ export function tfGroupInstanceRefreshPropertyToHclTerraform(struct?: TfGroup.In
 }
 
 
-export function tfGroupLaunchTemplatePropertyToTerraform(struct?: TfGroup.LaunchTemplatePropertyOutputReference | TfGroup.LaunchTemplateProperty): any {
+export function awsGroupLaunchTemplatePropertyToTerraform(struct?: AwsGroup.LaunchTemplatePropertyOutputReference | AwsGroup.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1834,7 +1834,7 @@ export function tfGroupLaunchTemplatePropertyToTerraform(struct?: TfGroup.Launch
 }
 
 
-export function tfGroupLaunchTemplatePropertyToHclTerraform(struct?: TfGroup.LaunchTemplatePropertyOutputReference | TfGroup.LaunchTemplateProperty): any {
+export function awsGroupLaunchTemplatePropertyToHclTerraform(struct?: AwsGroup.LaunchTemplatePropertyOutputReference | AwsGroup.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1865,7 +1865,7 @@ export function tfGroupLaunchTemplatePropertyToHclTerraform(struct?: TfGroup.Lau
 }
 
 
-export function tfGroupInstancesDistributionPropertyToTerraform(struct?: TfGroup.InstancesDistributionPropertyOutputReference | TfGroup.InstancesDistributionProperty): any {
+export function awsGroupInstancesDistributionPropertyToTerraform(struct?: AwsGroup.InstancesDistributionPropertyOutputReference | AwsGroup.InstancesDistributionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1881,7 +1881,7 @@ export function tfGroupInstancesDistributionPropertyToTerraform(struct?: TfGroup
 }
 
 
-export function tfGroupInstancesDistributionPropertyToHclTerraform(struct?: TfGroup.InstancesDistributionPropertyOutputReference | TfGroup.InstancesDistributionProperty): any {
+export function awsGroupInstancesDistributionPropertyToHclTerraform(struct?: AwsGroup.InstancesDistributionPropertyOutputReference | AwsGroup.InstancesDistributionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1930,7 +1930,7 @@ export function tfGroupInstancesDistributionPropertyToHclTerraform(struct?: TfGr
 }
 
 
-export function tfGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyToTerraform(struct?: TfGroup.MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyOutputReference | TfGroup.MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationProperty): any {
+export function awsGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyToTerraform(struct?: AwsGroup.MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyOutputReference | AwsGroup.MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1943,7 +1943,7 @@ export function tfGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecifica
 }
 
 
-export function tfGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyToHclTerraform(struct?: TfGroup.MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyOutputReference | TfGroup.MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationProperty): any {
+export function awsGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyToHclTerraform(struct?: AwsGroup.MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyOutputReference | AwsGroup.MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1974,7 +1974,7 @@ export function tfGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecifica
 }
 
 
-export function tfGroupAcceleratorCountPropertyToTerraform(struct?: TfGroup.AcceleratorCountPropertyOutputReference | TfGroup.AcceleratorCountProperty): any {
+export function awsGroupAcceleratorCountPropertyToTerraform(struct?: AwsGroup.AcceleratorCountPropertyOutputReference | AwsGroup.AcceleratorCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1986,7 +1986,7 @@ export function tfGroupAcceleratorCountPropertyToTerraform(struct?: TfGroup.Acce
 }
 
 
-export function tfGroupAcceleratorCountPropertyToHclTerraform(struct?: TfGroup.AcceleratorCountPropertyOutputReference | TfGroup.AcceleratorCountProperty): any {
+export function awsGroupAcceleratorCountPropertyToHclTerraform(struct?: AwsGroup.AcceleratorCountPropertyOutputReference | AwsGroup.AcceleratorCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2011,7 +2011,7 @@ export function tfGroupAcceleratorCountPropertyToHclTerraform(struct?: TfGroup.A
 }
 
 
-export function tfGroupAcceleratorTotalMemoryMibPropertyToTerraform(struct?: TfGroup.AcceleratorTotalMemoryMibPropertyOutputReference | TfGroup.AcceleratorTotalMemoryMibProperty): any {
+export function awsGroupAcceleratorTotalMemoryMibPropertyToTerraform(struct?: AwsGroup.AcceleratorTotalMemoryMibPropertyOutputReference | AwsGroup.AcceleratorTotalMemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2023,7 +2023,7 @@ export function tfGroupAcceleratorTotalMemoryMibPropertyToTerraform(struct?: TfG
 }
 
 
-export function tfGroupAcceleratorTotalMemoryMibPropertyToHclTerraform(struct?: TfGroup.AcceleratorTotalMemoryMibPropertyOutputReference | TfGroup.AcceleratorTotalMemoryMibProperty): any {
+export function awsGroupAcceleratorTotalMemoryMibPropertyToHclTerraform(struct?: AwsGroup.AcceleratorTotalMemoryMibPropertyOutputReference | AwsGroup.AcceleratorTotalMemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2048,7 +2048,7 @@ export function tfGroupAcceleratorTotalMemoryMibPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfGroupBaselineEbsBandwidthMbpsPropertyToTerraform(struct?: TfGroup.BaselineEbsBandwidthMbpsPropertyOutputReference | TfGroup.BaselineEbsBandwidthMbpsProperty): any {
+export function awsGroupBaselineEbsBandwidthMbpsPropertyToTerraform(struct?: AwsGroup.BaselineEbsBandwidthMbpsPropertyOutputReference | AwsGroup.BaselineEbsBandwidthMbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2060,7 +2060,7 @@ export function tfGroupBaselineEbsBandwidthMbpsPropertyToTerraform(struct?: TfGr
 }
 
 
-export function tfGroupBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct?: TfGroup.BaselineEbsBandwidthMbpsPropertyOutputReference | TfGroup.BaselineEbsBandwidthMbpsProperty): any {
+export function awsGroupBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct?: AwsGroup.BaselineEbsBandwidthMbpsPropertyOutputReference | AwsGroup.BaselineEbsBandwidthMbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2085,7 +2085,7 @@ export function tfGroupBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfGroupMemoryGibPerVcpuPropertyToTerraform(struct?: TfGroup.MemoryGibPerVcpuPropertyOutputReference | TfGroup.MemoryGibPerVcpuProperty): any {
+export function awsGroupMemoryGibPerVcpuPropertyToTerraform(struct?: AwsGroup.MemoryGibPerVcpuPropertyOutputReference | AwsGroup.MemoryGibPerVcpuProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2097,7 +2097,7 @@ export function tfGroupMemoryGibPerVcpuPropertyToTerraform(struct?: TfGroup.Memo
 }
 
 
-export function tfGroupMemoryGibPerVcpuPropertyToHclTerraform(struct?: TfGroup.MemoryGibPerVcpuPropertyOutputReference | TfGroup.MemoryGibPerVcpuProperty): any {
+export function awsGroupMemoryGibPerVcpuPropertyToHclTerraform(struct?: AwsGroup.MemoryGibPerVcpuPropertyOutputReference | AwsGroup.MemoryGibPerVcpuProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2122,7 +2122,7 @@ export function tfGroupMemoryGibPerVcpuPropertyToHclTerraform(struct?: TfGroup.M
 }
 
 
-export function tfGroupMemoryMibPropertyToTerraform(struct?: TfGroup.MemoryMibPropertyOutputReference | TfGroup.MemoryMibProperty): any {
+export function awsGroupMemoryMibPropertyToTerraform(struct?: AwsGroup.MemoryMibPropertyOutputReference | AwsGroup.MemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2134,7 +2134,7 @@ export function tfGroupMemoryMibPropertyToTerraform(struct?: TfGroup.MemoryMibPr
 }
 
 
-export function tfGroupMemoryMibPropertyToHclTerraform(struct?: TfGroup.MemoryMibPropertyOutputReference | TfGroup.MemoryMibProperty): any {
+export function awsGroupMemoryMibPropertyToHclTerraform(struct?: AwsGroup.MemoryMibPropertyOutputReference | AwsGroup.MemoryMibProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2159,7 +2159,7 @@ export function tfGroupMemoryMibPropertyToHclTerraform(struct?: TfGroup.MemoryMi
 }
 
 
-export function tfGroupNetworkBandwidthGbpsPropertyToTerraform(struct?: TfGroup.NetworkBandwidthGbpsPropertyOutputReference | TfGroup.NetworkBandwidthGbpsProperty): any {
+export function awsGroupNetworkBandwidthGbpsPropertyToTerraform(struct?: AwsGroup.NetworkBandwidthGbpsPropertyOutputReference | AwsGroup.NetworkBandwidthGbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2171,7 +2171,7 @@ export function tfGroupNetworkBandwidthGbpsPropertyToTerraform(struct?: TfGroup.
 }
 
 
-export function tfGroupNetworkBandwidthGbpsPropertyToHclTerraform(struct?: TfGroup.NetworkBandwidthGbpsPropertyOutputReference | TfGroup.NetworkBandwidthGbpsProperty): any {
+export function awsGroupNetworkBandwidthGbpsPropertyToHclTerraform(struct?: AwsGroup.NetworkBandwidthGbpsPropertyOutputReference | AwsGroup.NetworkBandwidthGbpsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2196,7 +2196,7 @@ export function tfGroupNetworkBandwidthGbpsPropertyToHclTerraform(struct?: TfGro
 }
 
 
-export function tfGroupNetworkInterfaceCountPropertyToTerraform(struct?: TfGroup.NetworkInterfaceCountPropertyOutputReference | TfGroup.NetworkInterfaceCountProperty): any {
+export function awsGroupNetworkInterfaceCountPropertyToTerraform(struct?: AwsGroup.NetworkInterfaceCountPropertyOutputReference | AwsGroup.NetworkInterfaceCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2208,7 +2208,7 @@ export function tfGroupNetworkInterfaceCountPropertyToTerraform(struct?: TfGroup
 }
 
 
-export function tfGroupNetworkInterfaceCountPropertyToHclTerraform(struct?: TfGroup.NetworkInterfaceCountPropertyOutputReference | TfGroup.NetworkInterfaceCountProperty): any {
+export function awsGroupNetworkInterfaceCountPropertyToHclTerraform(struct?: AwsGroup.NetworkInterfaceCountPropertyOutputReference | AwsGroup.NetworkInterfaceCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2233,7 +2233,7 @@ export function tfGroupNetworkInterfaceCountPropertyToHclTerraform(struct?: TfGr
 }
 
 
-export function tfGroupTotalLocalStorageGbPropertyToTerraform(struct?: TfGroup.TotalLocalStorageGbPropertyOutputReference | TfGroup.TotalLocalStorageGbProperty): any {
+export function awsGroupTotalLocalStorageGbPropertyToTerraform(struct?: AwsGroup.TotalLocalStorageGbPropertyOutputReference | AwsGroup.TotalLocalStorageGbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2245,7 +2245,7 @@ export function tfGroupTotalLocalStorageGbPropertyToTerraform(struct?: TfGroup.T
 }
 
 
-export function tfGroupTotalLocalStorageGbPropertyToHclTerraform(struct?: TfGroup.TotalLocalStorageGbPropertyOutputReference | TfGroup.TotalLocalStorageGbProperty): any {
+export function awsGroupTotalLocalStorageGbPropertyToHclTerraform(struct?: AwsGroup.TotalLocalStorageGbPropertyOutputReference | AwsGroup.TotalLocalStorageGbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2270,7 +2270,7 @@ export function tfGroupTotalLocalStorageGbPropertyToHclTerraform(struct?: TfGrou
 }
 
 
-export function tfGroupVcpuCountPropertyToTerraform(struct?: TfGroup.VcpuCountPropertyOutputReference | TfGroup.VcpuCountProperty): any {
+export function awsGroupVcpuCountPropertyToTerraform(struct?: AwsGroup.VcpuCountPropertyOutputReference | AwsGroup.VcpuCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2282,7 +2282,7 @@ export function tfGroupVcpuCountPropertyToTerraform(struct?: TfGroup.VcpuCountPr
 }
 
 
-export function tfGroupVcpuCountPropertyToHclTerraform(struct?: TfGroup.VcpuCountPropertyOutputReference | TfGroup.VcpuCountProperty): any {
+export function awsGroupVcpuCountPropertyToHclTerraform(struct?: AwsGroup.VcpuCountPropertyOutputReference | AwsGroup.VcpuCountProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2307,7 +2307,7 @@ export function tfGroupVcpuCountPropertyToHclTerraform(struct?: TfGroup.VcpuCoun
 }
 
 
-export function tfGroupInstanceRequirementsPropertyToTerraform(struct?: TfGroup.InstanceRequirementsPropertyOutputReference | TfGroup.InstanceRequirementsProperty): any {
+export function awsGroupInstanceRequirementsPropertyToTerraform(struct?: AwsGroup.InstanceRequirementsPropertyOutputReference | AwsGroup.InstanceRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2328,20 +2328,20 @@ export function tfGroupInstanceRequirementsPropertyToTerraform(struct?: TfGroup.
     on_demand_max_price_percentage_over_lowest_price: cdktn.numberToTerraform(struct!.onDemandMaxPricePercentageOverLowestPrice),
     require_hibernate_support: cdktn.booleanToTerraform(struct!.requireHibernateSupport),
     spot_max_price_percentage_over_lowest_price: cdktn.numberToTerraform(struct!.spotMaxPricePercentageOverLowestPrice),
-    accelerator_count: tfGroupAcceleratorCountPropertyToTerraform(struct!.acceleratorCount),
-    accelerator_total_memory_mib: tfGroupAcceleratorTotalMemoryMibPropertyToTerraform(struct!.acceleratorTotalMemoryMib),
-    baseline_ebs_bandwidth_mbps: tfGroupBaselineEbsBandwidthMbpsPropertyToTerraform(struct!.baselineEbsBandwidthMbps),
-    memory_gib_per_vcpu: tfGroupMemoryGibPerVcpuPropertyToTerraform(struct!.memoryGibPerVcpu),
-    memory_mib: tfGroupMemoryMibPropertyToTerraform(struct!.memoryMib),
-    network_bandwidth_gbps: tfGroupNetworkBandwidthGbpsPropertyToTerraform(struct!.networkBandwidthGbps),
-    network_interface_count: tfGroupNetworkInterfaceCountPropertyToTerraform(struct!.networkInterfaceCount),
-    total_local_storage_gb: tfGroupTotalLocalStorageGbPropertyToTerraform(struct!.totalLocalStorageGb),
-    vcpu_count: tfGroupVcpuCountPropertyToTerraform(struct!.vcpuCount),
+    accelerator_count: awsGroupAcceleratorCountPropertyToTerraform(struct!.acceleratorCount),
+    accelerator_total_memory_mib: awsGroupAcceleratorTotalMemoryMibPropertyToTerraform(struct!.acceleratorTotalMemoryMib),
+    baseline_ebs_bandwidth_mbps: awsGroupBaselineEbsBandwidthMbpsPropertyToTerraform(struct!.baselineEbsBandwidthMbps),
+    memory_gib_per_vcpu: awsGroupMemoryGibPerVcpuPropertyToTerraform(struct!.memoryGibPerVcpu),
+    memory_mib: awsGroupMemoryMibPropertyToTerraform(struct!.memoryMib),
+    network_bandwidth_gbps: awsGroupNetworkBandwidthGbpsPropertyToTerraform(struct!.networkBandwidthGbps),
+    network_interface_count: awsGroupNetworkInterfaceCountPropertyToTerraform(struct!.networkInterfaceCount),
+    total_local_storage_gb: awsGroupTotalLocalStorageGbPropertyToTerraform(struct!.totalLocalStorageGb),
+    vcpu_count: awsGroupVcpuCountPropertyToTerraform(struct!.vcpuCount),
   }
 }
 
 
-export function tfGroupInstanceRequirementsPropertyToHclTerraform(struct?: TfGroup.InstanceRequirementsPropertyOutputReference | TfGroup.InstanceRequirementsProperty): any {
+export function awsGroupInstanceRequirementsPropertyToHclTerraform(struct?: AwsGroup.InstanceRequirementsPropertyOutputReference | AwsGroup.InstanceRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2438,55 +2438,55 @@ export function tfGroupInstanceRequirementsPropertyToHclTerraform(struct?: TfGro
       storageClassType: "number",
     },
     accelerator_count: {
-      value: tfGroupAcceleratorCountPropertyToHclTerraform(struct!.acceleratorCount),
+      value: awsGroupAcceleratorCountPropertyToHclTerraform(struct!.acceleratorCount),
       isBlock: true,
       type: "list",
       storageClassType: "AcceleratorCountPropertyList",
     },
     accelerator_total_memory_mib: {
-      value: tfGroupAcceleratorTotalMemoryMibPropertyToHclTerraform(struct!.acceleratorTotalMemoryMib),
+      value: awsGroupAcceleratorTotalMemoryMibPropertyToHclTerraform(struct!.acceleratorTotalMemoryMib),
       isBlock: true,
       type: "list",
       storageClassType: "AcceleratorTotalMemoryMibPropertyList",
     },
     baseline_ebs_bandwidth_mbps: {
-      value: tfGroupBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct!.baselineEbsBandwidthMbps),
+      value: awsGroupBaselineEbsBandwidthMbpsPropertyToHclTerraform(struct!.baselineEbsBandwidthMbps),
       isBlock: true,
       type: "list",
       storageClassType: "BaselineEbsBandwidthMbpsPropertyList",
     },
     memory_gib_per_vcpu: {
-      value: tfGroupMemoryGibPerVcpuPropertyToHclTerraform(struct!.memoryGibPerVcpu),
+      value: awsGroupMemoryGibPerVcpuPropertyToHclTerraform(struct!.memoryGibPerVcpu),
       isBlock: true,
       type: "list",
       storageClassType: "MemoryGibPerVcpuPropertyList",
     },
     memory_mib: {
-      value: tfGroupMemoryMibPropertyToHclTerraform(struct!.memoryMib),
+      value: awsGroupMemoryMibPropertyToHclTerraform(struct!.memoryMib),
       isBlock: true,
       type: "list",
       storageClassType: "MemoryMibPropertyList",
     },
     network_bandwidth_gbps: {
-      value: tfGroupNetworkBandwidthGbpsPropertyToHclTerraform(struct!.networkBandwidthGbps),
+      value: awsGroupNetworkBandwidthGbpsPropertyToHclTerraform(struct!.networkBandwidthGbps),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkBandwidthGbpsPropertyList",
     },
     network_interface_count: {
-      value: tfGroupNetworkInterfaceCountPropertyToHclTerraform(struct!.networkInterfaceCount),
+      value: awsGroupNetworkInterfaceCountPropertyToHclTerraform(struct!.networkInterfaceCount),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkInterfaceCountPropertyList",
     },
     total_local_storage_gb: {
-      value: tfGroupTotalLocalStorageGbPropertyToHclTerraform(struct!.totalLocalStorageGb),
+      value: awsGroupTotalLocalStorageGbPropertyToHclTerraform(struct!.totalLocalStorageGb),
       isBlock: true,
       type: "list",
       storageClassType: "TotalLocalStorageGbPropertyList",
     },
     vcpu_count: {
-      value: tfGroupVcpuCountPropertyToHclTerraform(struct!.vcpuCount),
+      value: awsGroupVcpuCountPropertyToHclTerraform(struct!.vcpuCount),
       isBlock: true,
       type: "list",
       storageClassType: "VcpuCountPropertyList",
@@ -2498,7 +2498,7 @@ export function tfGroupInstanceRequirementsPropertyToHclTerraform(struct?: TfGro
 }
 
 
-export function tfGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyToTerraform(struct?: TfGroup.MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyOutputReference | TfGroup.MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationProperty): any {
+export function awsGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyToTerraform(struct?: AwsGroup.MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyOutputReference | AwsGroup.MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2511,7 +2511,7 @@ export function tfGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateS
 }
 
 
-export function tfGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyToHclTerraform(struct?: TfGroup.MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyOutputReference | TfGroup.MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationProperty): any {
+export function awsGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyToHclTerraform(struct?: AwsGroup.MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyOutputReference | AwsGroup.MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2542,7 +2542,7 @@ export function tfGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateS
 }
 
 
-export function tfGroupOverridePropertyToTerraform(struct?: TfGroup.OverrideProperty | cdktn.IResolvable): any {
+export function awsGroupOverridePropertyToTerraform(struct?: AwsGroup.OverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2550,13 +2550,13 @@ export function tfGroupOverridePropertyToTerraform(struct?: TfGroup.OverrideProp
   return {
     instance_type: cdktn.stringToTerraform(struct!.instanceType),
     weighted_capacity: cdktn.stringToTerraform(struct!.weightedCapacity),
-    instance_requirements: tfGroupInstanceRequirementsPropertyToTerraform(struct!.instanceRequirements),
-    launch_template_specification: tfGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyToTerraform(struct!.launchTemplateSpecification),
+    instance_requirements: awsGroupInstanceRequirementsPropertyToTerraform(struct!.instanceRequirements),
+    launch_template_specification: awsGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyToTerraform(struct!.launchTemplateSpecification),
   }
 }
 
 
-export function tfGroupOverridePropertyToHclTerraform(struct?: TfGroup.OverrideProperty | cdktn.IResolvable): any {
+export function awsGroupOverridePropertyToHclTerraform(struct?: AwsGroup.OverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2575,13 +2575,13 @@ export function tfGroupOverridePropertyToHclTerraform(struct?: TfGroup.OverrideP
       storageClassType: "string",
     },
     instance_requirements: {
-      value: tfGroupInstanceRequirementsPropertyToHclTerraform(struct!.instanceRequirements),
+      value: awsGroupInstanceRequirementsPropertyToHclTerraform(struct!.instanceRequirements),
       isBlock: true,
       type: "list",
       storageClassType: "InstanceRequirementsPropertyList",
     },
     launch_template_specification: {
-      value: tfGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyToHclTerraform(struct!.launchTemplateSpecification),
+      value: awsGroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyToHclTerraform(struct!.launchTemplateSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationPropertyList",
@@ -2593,32 +2593,32 @@ export function tfGroupOverridePropertyToHclTerraform(struct?: TfGroup.OverrideP
 }
 
 
-export function tfGroupMixedInstancesPolicyLaunchTemplatePropertyToTerraform(struct?: TfGroup.MixedInstancesPolicyLaunchTemplatePropertyOutputReference | TfGroup.MixedInstancesPolicyLaunchTemplateProperty): any {
+export function awsGroupMixedInstancesPolicyLaunchTemplatePropertyToTerraform(struct?: AwsGroup.MixedInstancesPolicyLaunchTemplatePropertyOutputReference | AwsGroup.MixedInstancesPolicyLaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    launch_template_specification: tfGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyToTerraform(struct!.launchTemplateSpecification),
-    override: cdktn.listMapper(tfGroupOverridePropertyToTerraform, true)(struct!.override),
+    launch_template_specification: awsGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyToTerraform(struct!.launchTemplateSpecification),
+    override: cdktn.listMapper(awsGroupOverridePropertyToTerraform, true)(struct!.override),
   }
 }
 
 
-export function tfGroupMixedInstancesPolicyLaunchTemplatePropertyToHclTerraform(struct?: TfGroup.MixedInstancesPolicyLaunchTemplatePropertyOutputReference | TfGroup.MixedInstancesPolicyLaunchTemplateProperty): any {
+export function awsGroupMixedInstancesPolicyLaunchTemplatePropertyToHclTerraform(struct?: AwsGroup.MixedInstancesPolicyLaunchTemplatePropertyOutputReference | AwsGroup.MixedInstancesPolicyLaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     launch_template_specification: {
-      value: tfGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyToHclTerraform(struct!.launchTemplateSpecification),
+      value: awsGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyToHclTerraform(struct!.launchTemplateSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationPropertyList",
     },
     override: {
-      value: cdktn.listMapperHcl(tfGroupOverridePropertyToHclTerraform, true)(struct!.override),
+      value: cdktn.listMapperHcl(awsGroupOverridePropertyToHclTerraform, true)(struct!.override),
       isBlock: true,
       type: "list",
       storageClassType: "OverridePropertyList",
@@ -2630,32 +2630,32 @@ export function tfGroupMixedInstancesPolicyLaunchTemplatePropertyToHclTerraform(
 }
 
 
-export function tfGroupMixedInstancesPolicyPropertyToTerraform(struct?: TfGroup.MixedInstancesPolicyPropertyOutputReference | TfGroup.MixedInstancesPolicyProperty): any {
+export function awsGroupMixedInstancesPolicyPropertyToTerraform(struct?: AwsGroup.MixedInstancesPolicyPropertyOutputReference | AwsGroup.MixedInstancesPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    instances_distribution: tfGroupInstancesDistributionPropertyToTerraform(struct!.instancesDistribution),
-    launch_template: tfGroupMixedInstancesPolicyLaunchTemplatePropertyToTerraform(struct!.launchTemplate),
+    instances_distribution: awsGroupInstancesDistributionPropertyToTerraform(struct!.instancesDistribution),
+    launch_template: awsGroupMixedInstancesPolicyLaunchTemplatePropertyToTerraform(struct!.launchTemplate),
   }
 }
 
 
-export function tfGroupMixedInstancesPolicyPropertyToHclTerraform(struct?: TfGroup.MixedInstancesPolicyPropertyOutputReference | TfGroup.MixedInstancesPolicyProperty): any {
+export function awsGroupMixedInstancesPolicyPropertyToHclTerraform(struct?: AwsGroup.MixedInstancesPolicyPropertyOutputReference | AwsGroup.MixedInstancesPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     instances_distribution: {
-      value: tfGroupInstancesDistributionPropertyToHclTerraform(struct!.instancesDistribution),
+      value: awsGroupInstancesDistributionPropertyToHclTerraform(struct!.instancesDistribution),
       isBlock: true,
       type: "list",
       storageClassType: "InstancesDistributionPropertyList",
     },
     launch_template: {
-      value: tfGroupMixedInstancesPolicyLaunchTemplatePropertyToHclTerraform(struct!.launchTemplate),
+      value: awsGroupMixedInstancesPolicyLaunchTemplatePropertyToHclTerraform(struct!.launchTemplate),
       isBlock: true,
       type: "list",
       storageClassType: "MixedInstancesPolicyLaunchTemplatePropertyList",
@@ -2667,7 +2667,7 @@ export function tfGroupMixedInstancesPolicyPropertyToHclTerraform(struct?: TfGro
 }
 
 
-export function tfGroupTagPropertyToTerraform(struct?: TfGroup.TagProperty | cdktn.IResolvable): any {
+export function awsGroupTagPropertyToTerraform(struct?: AwsGroup.TagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2680,7 +2680,7 @@ export function tfGroupTagPropertyToTerraform(struct?: TfGroup.TagProperty | cdk
 }
 
 
-export function tfGroupTagPropertyToHclTerraform(struct?: TfGroup.TagProperty | cdktn.IResolvable): any {
+export function awsGroupTagPropertyToHclTerraform(struct?: AwsGroup.TagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2711,7 +2711,7 @@ export function tfGroupTagPropertyToHclTerraform(struct?: TfGroup.TagProperty | 
 }
 
 
-export function tfGroupTimeoutsPropertyToTerraform(struct?: TfGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsGroupTimeoutsPropertyToTerraform(struct?: AwsGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2723,7 +2723,7 @@ export function tfGroupTimeoutsPropertyToTerraform(struct?: TfGroup.TimeoutsProp
 }
 
 
-export function tfGroupTimeoutsPropertyToHclTerraform(struct?: TfGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsGroupTimeoutsPropertyToHclTerraform(struct?: AwsGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2748,7 +2748,7 @@ export function tfGroupTimeoutsPropertyToHclTerraform(struct?: TfGroup.TimeoutsP
 }
 
 
-export function tfGroupTrafficSourcePropertyToTerraform(struct?: TfGroup.TrafficSourceProperty | cdktn.IResolvable): any {
+export function awsGroupTrafficSourcePropertyToTerraform(struct?: AwsGroup.TrafficSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2760,7 +2760,7 @@ export function tfGroupTrafficSourcePropertyToTerraform(struct?: TfGroup.Traffic
 }
 
 
-export function tfGroupTrafficSourcePropertyToHclTerraform(struct?: TfGroup.TrafficSourceProperty | cdktn.IResolvable): any {
+export function awsGroupTrafficSourcePropertyToHclTerraform(struct?: AwsGroup.TrafficSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2785,7 +2785,7 @@ export function tfGroupTrafficSourcePropertyToHclTerraform(struct?: TfGroup.Traf
 }
 
 
-export function tfGroupInstanceReusePolicyPropertyToTerraform(struct?: TfGroup.InstanceReusePolicyPropertyOutputReference | TfGroup.InstanceReusePolicyProperty): any {
+export function awsGroupInstanceReusePolicyPropertyToTerraform(struct?: AwsGroup.InstanceReusePolicyPropertyOutputReference | AwsGroup.InstanceReusePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2796,7 +2796,7 @@ export function tfGroupInstanceReusePolicyPropertyToTerraform(struct?: TfGroup.I
 }
 
 
-export function tfGroupInstanceReusePolicyPropertyToHclTerraform(struct?: TfGroup.InstanceReusePolicyPropertyOutputReference | TfGroup.InstanceReusePolicyProperty): any {
+export function awsGroupInstanceReusePolicyPropertyToHclTerraform(struct?: AwsGroup.InstanceReusePolicyPropertyOutputReference | AwsGroup.InstanceReusePolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2815,7 +2815,7 @@ export function tfGroupInstanceReusePolicyPropertyToHclTerraform(struct?: TfGrou
 }
 
 
-export function tfGroupWarmPoolPropertyToTerraform(struct?: TfGroup.WarmPoolPropertyOutputReference | TfGroup.WarmPoolProperty): any {
+export function awsGroupWarmPoolPropertyToTerraform(struct?: AwsGroup.WarmPoolPropertyOutputReference | AwsGroup.WarmPoolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2824,12 +2824,12 @@ export function tfGroupWarmPoolPropertyToTerraform(struct?: TfGroup.WarmPoolProp
     max_group_prepared_capacity: cdktn.numberToTerraform(struct!.maxGroupPreparedCapacity),
     min_size: cdktn.numberToTerraform(struct!.minSize),
     pool_state: cdktn.stringToTerraform(struct!.poolState),
-    instance_reuse_policy: tfGroupInstanceReusePolicyPropertyToTerraform(struct!.instanceReusePolicy),
+    instance_reuse_policy: awsGroupInstanceReusePolicyPropertyToTerraform(struct!.instanceReusePolicy),
   }
 }
 
 
-export function tfGroupWarmPoolPropertyToHclTerraform(struct?: TfGroup.WarmPoolPropertyOutputReference | TfGroup.WarmPoolProperty): any {
+export function awsGroupWarmPoolPropertyToHclTerraform(struct?: AwsGroup.WarmPoolPropertyOutputReference | AwsGroup.WarmPoolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2854,7 +2854,7 @@ export function tfGroupWarmPoolPropertyToHclTerraform(struct?: TfGroup.WarmPoolP
       storageClassType: "string",
     },
     instance_reuse_policy: {
-      value: tfGroupInstanceReusePolicyPropertyToHclTerraform(struct!.instanceReusePolicy),
+      value: awsGroupInstanceReusePolicyPropertyToHclTerraform(struct!.instanceReusePolicy),
       isBlock: true,
       type: "list",
       storageClassType: "InstanceReusePolicyPropertyList",
@@ -2866,10 +2866,10 @@ export function tfGroupWarmPoolPropertyToHclTerraform(struct?: TfGroup.WarmPoolP
 }
 
 
-export namespace TfGroup {
+export namespace AwsGroup {
 export interface AvailabilityZoneDistributionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_distribution_strategy TfGroup#capacity_distribution_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_distribution_strategy AwsGroup#capacity_distribution_strategy}
   */
   readonly capacityDistributionStrategy?: string;
 }
@@ -2923,11 +2923,11 @@ export class AvailabilityZoneDistributionPropertyOutputReference extends cdktn.C
 }
 export interface CapacityReservationTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_reservation_ids TfGroup#capacity_reservation_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_reservation_ids AwsGroup#capacity_reservation_ids}
   */
   readonly capacityReservationIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_reservation_resource_group_arns TfGroup#capacity_reservation_resource_group_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_reservation_resource_group_arns AwsGroup#capacity_reservation_resource_group_arns}
   */
   readonly capacityReservationResourceGroupArns?: string[];
 }
@@ -3003,13 +3003,13 @@ export class CapacityReservationTargetPropertyOutputReference extends cdktn.Comp
 }
 export interface CapacityReservationSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_reservation_preference TfGroup#capacity_reservation_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_reservation_preference AwsGroup#capacity_reservation_preference}
   */
   readonly capacityReservationPreference?: string;
   /**
   * capacity_reservation_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_reservation_target TfGroup#capacity_reservation_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#capacity_reservation_target AwsGroup#capacity_reservation_target}
   */
   readonly capacityReservationTarget?: CapacityReservationTargetProperty;
 }
@@ -3085,31 +3085,31 @@ export class CapacityReservationSpecificationPropertyOutputReference extends cdk
 }
 export interface InitialLifecycleHookProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#default_result TfGroup#default_result}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#default_result AwsGroup#default_result}
   */
   readonly defaultResult?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#heartbeat_timeout TfGroup#heartbeat_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#heartbeat_timeout AwsGroup#heartbeat_timeout}
   */
   readonly heartbeatTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#lifecycle_transition TfGroup#lifecycle_transition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#lifecycle_transition AwsGroup#lifecycle_transition}
   */
   readonly lifecycleTransition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#name TfGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#name AwsGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#notification_metadata TfGroup#notification_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#notification_metadata AwsGroup#notification_metadata}
   */
   readonly notificationMetadata?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#notification_target_arn TfGroup#notification_target_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#notification_target_arn AwsGroup#notification_target_arn}
   */
   readonly notificationTargetArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#role_arn TfGroup#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#role_arn AwsGroup#role_arn}
   */
   readonly roleArn?: string;
 }
@@ -3321,7 +3321,7 @@ export class InitialLifecycleHookPropertyList extends cdktn.ComplexList {
 }
 export interface RetentionTriggersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#terminate_hook_abandon TfGroup#terminate_hook_abandon}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#terminate_hook_abandon AwsGroup#terminate_hook_abandon}
   */
   readonly terminateHookAbandon?: string;
 }
@@ -3377,7 +3377,7 @@ export interface InstanceLifecyclePolicyProperty {
   /**
   * retention_triggers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#retention_triggers TfGroup#retention_triggers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#retention_triggers AwsGroup#retention_triggers}
   */
   readonly retentionTriggers?: RetentionTriggersProperty;
 }
@@ -3431,11 +3431,11 @@ export class InstanceLifecyclePolicyPropertyOutputReference extends cdktn.Comple
 }
 export interface InstanceMaintenancePolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max_healthy_percentage TfGroup#max_healthy_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max_healthy_percentage AwsGroup#max_healthy_percentage}
   */
   readonly maxHealthyPercentage: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min_healthy_percentage TfGroup#min_healthy_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min_healthy_percentage AwsGroup#min_healthy_percentage}
   */
   readonly minHealthyPercentage: number;
 }
@@ -3505,7 +3505,7 @@ export class InstanceMaintenancePolicyPropertyOutputReference extends cdktn.Comp
 }
 export interface AlarmSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#alarms TfGroup#alarms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#alarms AwsGroup#alarms}
   */
   readonly alarms?: string[];
 }
@@ -3559,45 +3559,45 @@ export class AlarmSpecificationPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface PreferencesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#auto_rollback TfGroup#auto_rollback}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#auto_rollback AwsGroup#auto_rollback}
   */
   readonly autoRollback?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#checkpoint_delay TfGroup#checkpoint_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#checkpoint_delay AwsGroup#checkpoint_delay}
   */
   readonly checkpointDelay?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#checkpoint_percentages TfGroup#checkpoint_percentages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#checkpoint_percentages AwsGroup#checkpoint_percentages}
   */
   readonly checkpointPercentages?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_warmup TfGroup#instance_warmup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_warmup AwsGroup#instance_warmup}
   */
   readonly instanceWarmup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max_healthy_percentage TfGroup#max_healthy_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max_healthy_percentage AwsGroup#max_healthy_percentage}
   */
   readonly maxHealthyPercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min_healthy_percentage TfGroup#min_healthy_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min_healthy_percentage AwsGroup#min_healthy_percentage}
   */
   readonly minHealthyPercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#scale_in_protected_instances TfGroup#scale_in_protected_instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#scale_in_protected_instances AwsGroup#scale_in_protected_instances}
   */
   readonly scaleInProtectedInstances?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#skip_matching TfGroup#skip_matching}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#skip_matching AwsGroup#skip_matching}
   */
   readonly skipMatching?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#standby_instances TfGroup#standby_instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#standby_instances AwsGroup#standby_instances}
   */
   readonly standbyInstances?: string;
   /**
   * alarm_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#alarm_specification TfGroup#alarm_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#alarm_specification AwsGroup#alarm_specification}
   */
   readonly alarmSpecification?: AlarmSpecificationProperty;
 }
@@ -3849,17 +3849,17 @@ export class PreferencesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface InstanceRefreshProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#strategy TfGroup#strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#strategy AwsGroup#strategy}
   */
   readonly strategy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#triggers TfGroup#triggers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#triggers AwsGroup#triggers}
   */
   readonly triggers?: string[];
   /**
   * preferences block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#preferences TfGroup#preferences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#preferences AwsGroup#preferences}
   */
   readonly preferences?: PreferencesProperty;
 }
@@ -3954,18 +3954,18 @@ export class InstanceRefreshPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface LaunchTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#id TfGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#id AwsGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#name TfGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#name AwsGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#version TfGroup#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#version AwsGroup#version}
   */
   readonly version?: string;
 }
@@ -4063,27 +4063,27 @@ export class LaunchTemplatePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface InstancesDistributionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#on_demand_allocation_strategy TfGroup#on_demand_allocation_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#on_demand_allocation_strategy AwsGroup#on_demand_allocation_strategy}
   */
   readonly onDemandAllocationStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#on_demand_base_capacity TfGroup#on_demand_base_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#on_demand_base_capacity AwsGroup#on_demand_base_capacity}
   */
   readonly onDemandBaseCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#on_demand_percentage_above_base_capacity TfGroup#on_demand_percentage_above_base_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#on_demand_percentage_above_base_capacity AwsGroup#on_demand_percentage_above_base_capacity}
   */
   readonly onDemandPercentageAboveBaseCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#spot_allocation_strategy TfGroup#spot_allocation_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#spot_allocation_strategy AwsGroup#spot_allocation_strategy}
   */
   readonly spotAllocationStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#spot_instance_pools TfGroup#spot_instance_pools}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#spot_instance_pools AwsGroup#spot_instance_pools}
   */
   readonly spotInstancePools?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#spot_max_price TfGroup#spot_max_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#spot_max_price AwsGroup#spot_max_price}
   */
   readonly spotMaxPrice?: string;
 }
@@ -4247,15 +4247,15 @@ export class InstancesDistributionPropertyOutputReference extends cdktn.ComplexO
 }
 export interface MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template_id TfGroup#launch_template_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template_id AwsGroup#launch_template_id}
   */
   readonly launchTemplateId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template_name TfGroup#launch_template_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template_name AwsGroup#launch_template_name}
   */
   readonly launchTemplateName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#version TfGroup#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#version AwsGroup#version}
   */
   readonly version?: string;
 }
@@ -4353,11 +4353,11 @@ export class MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationProper
 }
 export interface AcceleratorCountProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max TfGroup#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max AwsGroup#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min TfGroup#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min AwsGroup#min}
   */
   readonly min?: number;
 }
@@ -4433,11 +4433,11 @@ export class AcceleratorCountPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface AcceleratorTotalMemoryMibProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max TfGroup#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max AwsGroup#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min TfGroup#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min AwsGroup#min}
   */
   readonly min?: number;
 }
@@ -4513,11 +4513,11 @@ export class AcceleratorTotalMemoryMibPropertyOutputReference extends cdktn.Comp
 }
 export interface BaselineEbsBandwidthMbpsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max TfGroup#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max AwsGroup#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min TfGroup#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min AwsGroup#min}
   */
   readonly min?: number;
 }
@@ -4593,11 +4593,11 @@ export class BaselineEbsBandwidthMbpsPropertyOutputReference extends cdktn.Compl
 }
 export interface MemoryGibPerVcpuProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max TfGroup#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max AwsGroup#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min TfGroup#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min AwsGroup#min}
   */
   readonly min?: number;
 }
@@ -4673,11 +4673,11 @@ export class MemoryGibPerVcpuPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface MemoryMibProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max TfGroup#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max AwsGroup#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min TfGroup#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min AwsGroup#min}
   */
   readonly min?: number;
 }
@@ -4753,11 +4753,11 @@ export class MemoryMibPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NetworkBandwidthGbpsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max TfGroup#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max AwsGroup#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min TfGroup#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min AwsGroup#min}
   */
   readonly min?: number;
 }
@@ -4833,11 +4833,11 @@ export class NetworkBandwidthGbpsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface NetworkInterfaceCountProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max TfGroup#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max AwsGroup#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min TfGroup#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min AwsGroup#min}
   */
   readonly min?: number;
 }
@@ -4913,11 +4913,11 @@ export class NetworkInterfaceCountPropertyOutputReference extends cdktn.ComplexO
 }
 export interface TotalLocalStorageGbProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max TfGroup#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max AwsGroup#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min TfGroup#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min AwsGroup#min}
   */
   readonly min?: number;
 }
@@ -4993,11 +4993,11 @@ export class TotalLocalStorageGbPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface VcpuCountProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max TfGroup#max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max AwsGroup#max}
   */
   readonly max?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min TfGroup#min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min AwsGroup#min}
   */
   readonly min?: number;
 }
@@ -5073,117 +5073,117 @@ export class VcpuCountPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface InstanceRequirementsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#accelerator_manufacturers TfGroup#accelerator_manufacturers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#accelerator_manufacturers AwsGroup#accelerator_manufacturers}
   */
   readonly acceleratorManufacturers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#accelerator_names TfGroup#accelerator_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#accelerator_names AwsGroup#accelerator_names}
   */
   readonly acceleratorNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#accelerator_types TfGroup#accelerator_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#accelerator_types AwsGroup#accelerator_types}
   */
   readonly acceleratorTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#allowed_instance_types TfGroup#allowed_instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#allowed_instance_types AwsGroup#allowed_instance_types}
   */
   readonly allowedInstanceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#bare_metal TfGroup#bare_metal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#bare_metal AwsGroup#bare_metal}
   */
   readonly bareMetal?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#burstable_performance TfGroup#burstable_performance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#burstable_performance AwsGroup#burstable_performance}
   */
   readonly burstablePerformance?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#cpu_manufacturers TfGroup#cpu_manufacturers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#cpu_manufacturers AwsGroup#cpu_manufacturers}
   */
   readonly cpuManufacturers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#excluded_instance_types TfGroup#excluded_instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#excluded_instance_types AwsGroup#excluded_instance_types}
   */
   readonly excludedInstanceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_generations TfGroup#instance_generations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_generations AwsGroup#instance_generations}
   */
   readonly instanceGenerations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#local_storage TfGroup#local_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#local_storage AwsGroup#local_storage}
   */
   readonly localStorage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#local_storage_types TfGroup#local_storage_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#local_storage_types AwsGroup#local_storage_types}
   */
   readonly localStorageTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max_spot_price_as_percentage_of_optimal_on_demand_price TfGroup#max_spot_price_as_percentage_of_optimal_on_demand_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max_spot_price_as_percentage_of_optimal_on_demand_price AwsGroup#max_spot_price_as_percentage_of_optimal_on_demand_price}
   */
   readonly maxSpotPriceAsPercentageOfOptimalOnDemandPrice?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#on_demand_max_price_percentage_over_lowest_price TfGroup#on_demand_max_price_percentage_over_lowest_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#on_demand_max_price_percentage_over_lowest_price AwsGroup#on_demand_max_price_percentage_over_lowest_price}
   */
   readonly onDemandMaxPricePercentageOverLowestPrice?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#require_hibernate_support TfGroup#require_hibernate_support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#require_hibernate_support AwsGroup#require_hibernate_support}
   */
   readonly requireHibernateSupport?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#spot_max_price_percentage_over_lowest_price TfGroup#spot_max_price_percentage_over_lowest_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#spot_max_price_percentage_over_lowest_price AwsGroup#spot_max_price_percentage_over_lowest_price}
   */
   readonly spotMaxPricePercentageOverLowestPrice?: number;
   /**
   * accelerator_count block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#accelerator_count TfGroup#accelerator_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#accelerator_count AwsGroup#accelerator_count}
   */
   readonly acceleratorCount?: AcceleratorCountProperty;
   /**
   * accelerator_total_memory_mib block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#accelerator_total_memory_mib TfGroup#accelerator_total_memory_mib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#accelerator_total_memory_mib AwsGroup#accelerator_total_memory_mib}
   */
   readonly acceleratorTotalMemoryMib?: AcceleratorTotalMemoryMibProperty;
   /**
   * baseline_ebs_bandwidth_mbps block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#baseline_ebs_bandwidth_mbps TfGroup#baseline_ebs_bandwidth_mbps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#baseline_ebs_bandwidth_mbps AwsGroup#baseline_ebs_bandwidth_mbps}
   */
   readonly baselineEbsBandwidthMbps?: BaselineEbsBandwidthMbpsProperty;
   /**
   * memory_gib_per_vcpu block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#memory_gib_per_vcpu TfGroup#memory_gib_per_vcpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#memory_gib_per_vcpu AwsGroup#memory_gib_per_vcpu}
   */
   readonly memoryGibPerVcpu?: MemoryGibPerVcpuProperty;
   /**
   * memory_mib block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#memory_mib TfGroup#memory_mib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#memory_mib AwsGroup#memory_mib}
   */
   readonly memoryMib?: MemoryMibProperty;
   /**
   * network_bandwidth_gbps block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#network_bandwidth_gbps TfGroup#network_bandwidth_gbps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#network_bandwidth_gbps AwsGroup#network_bandwidth_gbps}
   */
   readonly networkBandwidthGbps?: NetworkBandwidthGbpsProperty;
   /**
   * network_interface_count block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#network_interface_count TfGroup#network_interface_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#network_interface_count AwsGroup#network_interface_count}
   */
   readonly networkInterfaceCount?: NetworkInterfaceCountProperty;
   /**
   * total_local_storage_gb block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#total_local_storage_gb TfGroup#total_local_storage_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#total_local_storage_gb AwsGroup#total_local_storage_gb}
   */
   readonly totalLocalStorageGb?: TotalLocalStorageGbProperty;
   /**
   * vcpu_count block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#vcpu_count TfGroup#vcpu_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#vcpu_count AwsGroup#vcpu_count}
   */
   readonly vcpuCount?: VcpuCountProperty;
 }
@@ -5743,15 +5743,15 @@ export class InstanceRequirementsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template_id TfGroup#launch_template_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template_id AwsGroup#launch_template_id}
   */
   readonly launchTemplateId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template_name TfGroup#launch_template_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template_name AwsGroup#launch_template_name}
   */
   readonly launchTemplateName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#version TfGroup#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#version AwsGroup#version}
   */
   readonly version?: string;
 }
@@ -5849,23 +5849,23 @@ export class MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificati
 }
 export interface OverrideProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_type TfGroup#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_type AwsGroup#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#weighted_capacity TfGroup#weighted_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#weighted_capacity AwsGroup#weighted_capacity}
   */
   readonly weightedCapacity?: string;
   /**
   * instance_requirements block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_requirements TfGroup#instance_requirements}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_requirements AwsGroup#instance_requirements}
   */
   readonly instanceRequirements?: InstanceRequirementsProperty;
   /**
   * launch_template_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template_specification TfGroup#launch_template_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template_specification AwsGroup#launch_template_specification}
   */
   readonly launchTemplateSpecification?: MixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationProperty;
 }
@@ -6019,13 +6019,13 @@ export interface MixedInstancesPolicyLaunchTemplateProperty {
   /**
   * launch_template_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template_specification TfGroup#launch_template_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template_specification AwsGroup#launch_template_specification}
   */
   readonly launchTemplateSpecification: MixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationProperty;
   /**
   * override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#override TfGroup#override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#override AwsGroup#override}
   */
   readonly override?: OverrideProperty[] | cdktn.IResolvable;
 }
@@ -6100,13 +6100,13 @@ export interface MixedInstancesPolicyProperty {
   /**
   * instances_distribution block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instances_distribution TfGroup#instances_distribution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instances_distribution AwsGroup#instances_distribution}
   */
   readonly instancesDistribution?: InstancesDistributionProperty;
   /**
   * launch_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template TfGroup#launch_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#launch_template AwsGroup#launch_template}
   */
   readonly launchTemplate: MixedInstancesPolicyLaunchTemplateProperty;
 }
@@ -6179,15 +6179,15 @@ export class MixedInstancesPolicyPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TagProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#key TfGroup#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#key AwsGroup#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#propagate_at_launch TfGroup#propagate_at_launch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#propagate_at_launch AwsGroup#propagate_at_launch}
   */
   readonly propagateAtLaunch: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#value TfGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#value AwsGroup#value}
   */
   readonly value: string;
 }
@@ -6308,11 +6308,11 @@ export class TagPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#delete TfGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#delete AwsGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#update TfGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#update AwsGroup#update}
   */
   readonly update?: string;
 }
@@ -6398,11 +6398,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TrafficSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#identifier TfGroup#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#identifier AwsGroup#identifier}
   */
   readonly identifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#type TfGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#type AwsGroup#type}
   */
   readonly type?: string;
 }
@@ -6507,7 +6507,7 @@ export class TrafficSourcePropertyList extends cdktn.ComplexList {
 }
 export interface InstanceReusePolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#reuse_on_scale_in TfGroup#reuse_on_scale_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#reuse_on_scale_in AwsGroup#reuse_on_scale_in}
   */
   readonly reuseOnScaleIn?: boolean | cdktn.IResolvable;
 }
@@ -6561,21 +6561,21 @@ export class InstanceReusePolicyPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface WarmPoolProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max_group_prepared_capacity TfGroup#max_group_prepared_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#max_group_prepared_capacity AwsGroup#max_group_prepared_capacity}
   */
   readonly maxGroupPreparedCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min_size TfGroup#min_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#min_size AwsGroup#min_size}
   */
   readonly minSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#pool_state TfGroup#pool_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#pool_state AwsGroup#pool_state}
   */
   readonly poolState?: string;
   /**
   * instance_reuse_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_reuse_policy TfGroup#instance_reuse_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscaling_group#instance_reuse_policy AwsGroup#instance_reuse_policy}
   */
   readonly instanceReusePolicy?: InstanceReusePolicyProperty;
 }

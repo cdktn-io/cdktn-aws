@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSnapshotScheduleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSnapshotScheduleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#definitions TfSnapshotSchedule#definitions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#definitions AwsSnapshotSchedule#definitions}
   */
   readonly definitions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#description TfSnapshotSchedule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#description AwsSnapshotSchedule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#force_destroy TfSnapshotSchedule#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#force_destroy AwsSnapshotSchedule#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#id TfSnapshotSchedule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#id AwsSnapshotSchedule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#identifier TfSnapshotSchedule#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#identifier AwsSnapshotSchedule#identifier}
   */
   readonly identifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#identifier_prefix TfSnapshotSchedule#identifier_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#identifier_prefix AwsSnapshotSchedule#identifier_prefix}
   */
   readonly identifierPrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#region TfSnapshotSchedule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#region AwsSnapshotSchedule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#tags TfSnapshotSchedule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#tags AwsSnapshotSchedule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#tags_all TfSnapshotSchedule#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#tags_all AwsSnapshotSchedule#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -52,7 +52,7 @@ export interface TfSnapshotScheduleConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule aws_redshift_snapshot_schedule}
 */
-export class TfSnapshotSchedule extends cdktn.TerraformResource {
+export class AwsSnapshotSchedule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfSnapshotSchedule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSnapshotSchedule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSnapshotSchedule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSnapshotSchedule to import
-  * @param importFromId The id of the existing TfSnapshotSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSnapshotSchedule to import is found
+  * @param importToId The construct id used in the generated config for the AwsSnapshotSchedule to import
+  * @param importFromId The id of the existing AwsSnapshotSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_snapshot_schedule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSnapshotSchedule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_snapshot_schedule", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfSnapshotSchedule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSnapshotScheduleConfig
+  * @param options AwsSnapshotScheduleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSnapshotScheduleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSnapshotScheduleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_snapshot_schedule',
       terraformGeneratorMetadata: {

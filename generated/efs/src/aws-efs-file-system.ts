@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFileSystemConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFileSystemConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#availability_zone_name TfFileSystem#availability_zone_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#availability_zone_name AwsFileSystem#availability_zone_name}
   */
   readonly availabilityZoneName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#creation_token TfFileSystem#creation_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#creation_token AwsFileSystem#creation_token}
   */
   readonly creationToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#encrypted TfFileSystem#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#encrypted AwsFileSystem#encrypted}
   */
   readonly encrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#id TfFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#id AwsFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#kms_key_id TfFileSystem#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#kms_key_id AwsFileSystem#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#performance_mode TfFileSystem#performance_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#performance_mode AwsFileSystem#performance_mode}
   */
   readonly performanceMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#provisioned_throughput_in_mibps TfFileSystem#provisioned_throughput_in_mibps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#provisioned_throughput_in_mibps AwsFileSystem#provisioned_throughput_in_mibps}
   */
   readonly provisionedThroughputInMibps?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#region TfFileSystem#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#region AwsFileSystem#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#tags TfFileSystem#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#tags AwsFileSystem#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#tags_all TfFileSystem#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#tags_all AwsFileSystem#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#throughput_mode TfFileSystem#throughput_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#throughput_mode AwsFileSystem#throughput_mode}
   */
   readonly throughputMode?: string;
   /**
   * lifecycle_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#lifecycle_policy TfFileSystem#lifecycle_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#lifecycle_policy AwsFileSystem#lifecycle_policy}
   */
-  readonly lifecyclePolicy?: TfFileSystem.LifecyclePolicyProperty[] | cdktn.IResolvable;
+  readonly lifecyclePolicy?: AwsFileSystem.LifecyclePolicyProperty[] | cdktn.IResolvable;
   /**
   * protection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#protection TfFileSystem#protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#protection AwsFileSystem#protection}
   */
-  readonly protection?: TfFileSystem.ProtectionProperty;
+  readonly protection?: AwsFileSystem.ProtectionProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system aws_efs_file_system}
 */
-export class TfFileSystem extends cdktn.TerraformResource {
+export class AwsFileSystem extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class TfFileSystem extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFileSystem resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFileSystem resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFileSystem to import
-  * @param importFromId The id of the existing TfFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFileSystem to import is found
+  * @param importToId The construct id used in the generated config for the AwsFileSystem to import
+  * @param importFromId The id of the existing AwsFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFileSystem to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_efs_file_system", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class TfFileSystem extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFileSystemConfig = {}
+  * @param options AwsFileSystemConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfFileSystemConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsFileSystemConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_efs_file_system',
       terraformGeneratorMetadata: {
@@ -298,7 +298,7 @@ export class TfFileSystem extends cdktn.TerraformResource {
   }
 
   // size_in_bytes - computed: true, optional: false, required: false
-  private _sizeInBytes = new TfFileSystem.SizeInBytesPropertyList(this, "size_in_bytes", false);
+  private _sizeInBytes = new AwsFileSystem.SizeInBytesPropertyList(this, "size_in_bytes", false);
   public get sizeInBytes() {
     return this._sizeInBytes;
   }
@@ -352,11 +352,11 @@ export class TfFileSystem extends cdktn.TerraformResource {
   }
 
   // lifecycle_policy - computed: false, optional: true, required: false
-  private _lifecyclePolicy = new TfFileSystem.LifecyclePolicyPropertyList(this, "lifecycle_policy", false);
+  private _lifecyclePolicy = new AwsFileSystem.LifecyclePolicyPropertyList(this, "lifecycle_policy", false);
   public get lifecyclePolicy() {
     return this._lifecyclePolicy;
   }
-  public putLifecyclePolicy(value: TfFileSystem.LifecyclePolicyProperty[] | cdktn.IResolvable) {
+  public putLifecyclePolicy(value: AwsFileSystem.LifecyclePolicyProperty[] | cdktn.IResolvable) {
     this._lifecyclePolicy.internalValue = value;
   }
   public resetLifecyclePolicy() {
@@ -368,11 +368,11 @@ export class TfFileSystem extends cdktn.TerraformResource {
   }
 
   // protection - computed: false, optional: true, required: false
-  private _protection = new TfFileSystem.ProtectionPropertyOutputReference(this, "protection");
+  private _protection = new AwsFileSystem.ProtectionPropertyOutputReference(this, "protection");
   public get protection() {
     return this._protection;
   }
-  public putProtection(value: TfFileSystem.ProtectionProperty) {
+  public putProtection(value: AwsFileSystem.ProtectionProperty) {
     this._protection.internalValue = value;
   }
   public resetProtection() {
@@ -400,8 +400,8 @@ export class TfFileSystem extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       throughput_mode: cdktn.stringToTerraform(this._throughputMode),
-      lifecycle_policy: cdktn.listMapper(tfFileSystemLifecyclePolicyPropertyToTerraform, true)(this._lifecyclePolicy.internalValue),
-      protection: tfFileSystemProtectionPropertyToTerraform(this._protection.internalValue),
+      lifecycle_policy: cdktn.listMapper(awsFileSystemLifecyclePolicyPropertyToTerraform, true)(this._lifecyclePolicy.internalValue),
+      protection: awsFileSystemProtectionPropertyToTerraform(this._protection.internalValue),
     };
   }
 
@@ -474,16 +474,16 @@ export class TfFileSystem extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       lifecycle_policy: {
-        value: cdktn.listMapperHcl(tfFileSystemLifecyclePolicyPropertyToHclTerraform, true)(this._lifecyclePolicy.internalValue),
+        value: cdktn.listMapperHcl(awsFileSystemLifecyclePolicyPropertyToHclTerraform, true)(this._lifecyclePolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFileSystem.LifecyclePolicyPropertyList",
+        storageClassType: "AwsFileSystem.LifecyclePolicyPropertyList",
       },
       protection: {
-        value: tfFileSystemProtectionPropertyToHclTerraform(this._protection.internalValue),
+        value: awsFileSystemProtectionPropertyToHclTerraform(this._protection.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFileSystem.ProtectionPropertyList",
+        storageClassType: "AwsFileSystem.ProtectionPropertyList",
       },
     };
 
@@ -492,7 +492,7 @@ export class TfFileSystem extends cdktn.TerraformResource {
   }
 }
 
-export function tfFileSystemSizeInBytesPropertyToTerraform(struct?: TfFileSystem.SizeInBytesProperty): any {
+export function awsFileSystemSizeInBytesPropertyToTerraform(struct?: AwsFileSystem.SizeInBytesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,7 +502,7 @@ export function tfFileSystemSizeInBytesPropertyToTerraform(struct?: TfFileSystem
 }
 
 
-export function tfFileSystemSizeInBytesPropertyToHclTerraform(struct?: TfFileSystem.SizeInBytesProperty): any {
+export function awsFileSystemSizeInBytesPropertyToHclTerraform(struct?: AwsFileSystem.SizeInBytesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -513,7 +513,7 @@ export function tfFileSystemSizeInBytesPropertyToHclTerraform(struct?: TfFileSys
 }
 
 
-export function tfFileSystemLifecyclePolicyPropertyToTerraform(struct?: TfFileSystem.LifecyclePolicyProperty | cdktn.IResolvable): any {
+export function awsFileSystemLifecyclePolicyPropertyToTerraform(struct?: AwsFileSystem.LifecyclePolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -526,7 +526,7 @@ export function tfFileSystemLifecyclePolicyPropertyToTerraform(struct?: TfFileSy
 }
 
 
-export function tfFileSystemLifecyclePolicyPropertyToHclTerraform(struct?: TfFileSystem.LifecyclePolicyProperty | cdktn.IResolvable): any {
+export function awsFileSystemLifecyclePolicyPropertyToHclTerraform(struct?: AwsFileSystem.LifecyclePolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -557,7 +557,7 @@ export function tfFileSystemLifecyclePolicyPropertyToHclTerraform(struct?: TfFil
 }
 
 
-export function tfFileSystemProtectionPropertyToTerraform(struct?: TfFileSystem.ProtectionPropertyOutputReference | TfFileSystem.ProtectionProperty): any {
+export function awsFileSystemProtectionPropertyToTerraform(struct?: AwsFileSystem.ProtectionPropertyOutputReference | AwsFileSystem.ProtectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -568,7 +568,7 @@ export function tfFileSystemProtectionPropertyToTerraform(struct?: TfFileSystem.
 }
 
 
-export function tfFileSystemProtectionPropertyToHclTerraform(struct?: TfFileSystem.ProtectionPropertyOutputReference | TfFileSystem.ProtectionProperty): any {
+export function awsFileSystemProtectionPropertyToHclTerraform(struct?: AwsFileSystem.ProtectionPropertyOutputReference | AwsFileSystem.ProtectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,7 +587,7 @@ export function tfFileSystemProtectionPropertyToHclTerraform(struct?: TfFileSyst
 }
 
 
-export namespace TfFileSystem {
+export namespace AwsFileSystem {
 export interface SizeInBytesProperty {
 }
 export class SizeInBytesPropertyOutputReference extends cdktn.ComplexObject {
@@ -654,15 +654,15 @@ export class SizeInBytesPropertyList extends cdktn.ComplexList {
 }
 export interface LifecyclePolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#transition_to_archive TfFileSystem#transition_to_archive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#transition_to_archive AwsFileSystem#transition_to_archive}
   */
   readonly transitionToArchive?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#transition_to_ia TfFileSystem#transition_to_ia}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#transition_to_ia AwsFileSystem#transition_to_ia}
   */
   readonly transitionToIa?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#transition_to_primary_storage_class TfFileSystem#transition_to_primary_storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#transition_to_primary_storage_class AwsFileSystem#transition_to_primary_storage_class}
   */
   readonly transitionToPrimaryStorageClass?: string;
 }
@@ -792,7 +792,7 @@ export class LifecyclePolicyPropertyList extends cdktn.ComplexList {
 }
 export interface ProtectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#replication_overwrite TfFileSystem#replication_overwrite}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_file_system#replication_overwrite AwsFileSystem#replication_overwrite}
   */
   readonly replicationOverwrite?: string;
 }

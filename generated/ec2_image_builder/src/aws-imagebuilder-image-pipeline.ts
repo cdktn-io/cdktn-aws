@@ -5,100 +5,100 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfImagePipelineConfig extends cdktn.TerraformMetaArguments {
+export interface AwsImagePipelineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#container_recipe_arn TfImagePipeline#container_recipe_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#container_recipe_arn AwsImagePipeline#container_recipe_arn}
   */
   readonly containerRecipeArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#description TfImagePipeline#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#description AwsImagePipeline#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#distribution_configuration_arn TfImagePipeline#distribution_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#distribution_configuration_arn AwsImagePipeline#distribution_configuration_arn}
   */
   readonly distributionConfigurationArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#enhanced_image_metadata_enabled TfImagePipeline#enhanced_image_metadata_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#enhanced_image_metadata_enabled AwsImagePipeline#enhanced_image_metadata_enabled}
   */
   readonly enhancedImageMetadataEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#execution_role TfImagePipeline#execution_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#execution_role AwsImagePipeline#execution_role}
   */
   readonly executionRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#id TfImagePipeline#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#id AwsImagePipeline#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#image_recipe_arn TfImagePipeline#image_recipe_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#image_recipe_arn AwsImagePipeline#image_recipe_arn}
   */
   readonly imageRecipeArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#infrastructure_configuration_arn TfImagePipeline#infrastructure_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#infrastructure_configuration_arn AwsImagePipeline#infrastructure_configuration_arn}
   */
   readonly infrastructureConfigurationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#name TfImagePipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#name AwsImagePipeline#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#region TfImagePipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#region AwsImagePipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#status TfImagePipeline#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#status AwsImagePipeline#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#tags TfImagePipeline#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#tags AwsImagePipeline#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#tags_all TfImagePipeline#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#tags_all AwsImagePipeline#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * image_scanning_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#image_scanning_configuration TfImagePipeline#image_scanning_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#image_scanning_configuration AwsImagePipeline#image_scanning_configuration}
   */
-  readonly imageScanningConfiguration?: TfImagePipeline.ImageScanningConfigurationProperty;
+  readonly imageScanningConfiguration?: AwsImagePipeline.ImageScanningConfigurationProperty;
   /**
   * image_tests_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#image_tests_configuration TfImagePipeline#image_tests_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#image_tests_configuration AwsImagePipeline#image_tests_configuration}
   */
-  readonly imageTestsConfiguration?: TfImagePipeline.ImageTestsConfigurationProperty;
+  readonly imageTestsConfiguration?: AwsImagePipeline.ImageTestsConfigurationProperty;
   /**
   * logging_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#logging_configuration TfImagePipeline#logging_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#logging_configuration AwsImagePipeline#logging_configuration}
   */
-  readonly loggingConfiguration?: TfImagePipeline.LoggingConfigurationProperty;
+  readonly loggingConfiguration?: AwsImagePipeline.LoggingConfigurationProperty;
   /**
   * schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#schedule TfImagePipeline#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#schedule AwsImagePipeline#schedule}
   */
-  readonly schedule?: TfImagePipeline.ScheduleProperty;
+  readonly schedule?: AwsImagePipeline.ScheduleProperty;
   /**
   * workflow block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#workflow TfImagePipeline#workflow}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#workflow AwsImagePipeline#workflow}
   */
-  readonly workflow?: TfImagePipeline.WorkflowProperty[] | cdktn.IResolvable;
+  readonly workflow?: AwsImagePipeline.WorkflowProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline aws_imagebuilder_image_pipeline}
 */
-export class TfImagePipeline extends cdktn.TerraformResource {
+export class AwsImagePipeline extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -109,11 +109,11 @@ export class TfImagePipeline extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfImagePipeline resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsImagePipeline resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfImagePipeline to import
-  * @param importFromId The id of the existing TfImagePipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfImagePipeline to import is found
+  * @param importToId The construct id used in the generated config for the AwsImagePipeline to import
+  * @param importFromId The id of the existing AwsImagePipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsImagePipeline to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_image_pipeline", importId: importFromId, provider });
@@ -128,9 +128,9 @@ export class TfImagePipeline extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfImagePipelineConfig
+  * @param options AwsImagePipelineConfig
   */
-  public constructor(scope: Construct, id: string, config: TfImagePipelineConfig) {
+  public constructor(scope: Construct, id: string, config: AwsImagePipelineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_image_pipeline',
       terraformGeneratorMetadata: {
@@ -403,11 +403,11 @@ export class TfImagePipeline extends cdktn.TerraformResource {
   }
 
   // image_scanning_configuration - computed: false, optional: true, required: false
-  private _imageScanningConfiguration = new TfImagePipeline.ImageScanningConfigurationPropertyOutputReference(this, "image_scanning_configuration");
+  private _imageScanningConfiguration = new AwsImagePipeline.ImageScanningConfigurationPropertyOutputReference(this, "image_scanning_configuration");
   public get imageScanningConfiguration() {
     return this._imageScanningConfiguration;
   }
-  public putImageScanningConfiguration(value: TfImagePipeline.ImageScanningConfigurationProperty) {
+  public putImageScanningConfiguration(value: AwsImagePipeline.ImageScanningConfigurationProperty) {
     this._imageScanningConfiguration.internalValue = value;
   }
   public resetImageScanningConfiguration() {
@@ -419,11 +419,11 @@ export class TfImagePipeline extends cdktn.TerraformResource {
   }
 
   // image_tests_configuration - computed: false, optional: true, required: false
-  private _imageTestsConfiguration = new TfImagePipeline.ImageTestsConfigurationPropertyOutputReference(this, "image_tests_configuration");
+  private _imageTestsConfiguration = new AwsImagePipeline.ImageTestsConfigurationPropertyOutputReference(this, "image_tests_configuration");
   public get imageTestsConfiguration() {
     return this._imageTestsConfiguration;
   }
-  public putImageTestsConfiguration(value: TfImagePipeline.ImageTestsConfigurationProperty) {
+  public putImageTestsConfiguration(value: AwsImagePipeline.ImageTestsConfigurationProperty) {
     this._imageTestsConfiguration.internalValue = value;
   }
   public resetImageTestsConfiguration() {
@@ -435,11 +435,11 @@ export class TfImagePipeline extends cdktn.TerraformResource {
   }
 
   // logging_configuration - computed: false, optional: true, required: false
-  private _loggingConfiguration = new TfImagePipeline.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
+  private _loggingConfiguration = new AwsImagePipeline.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
   public get loggingConfiguration() {
     return this._loggingConfiguration;
   }
-  public putLoggingConfiguration(value: TfImagePipeline.LoggingConfigurationProperty) {
+  public putLoggingConfiguration(value: AwsImagePipeline.LoggingConfigurationProperty) {
     this._loggingConfiguration.internalValue = value;
   }
   public resetLoggingConfiguration() {
@@ -451,11 +451,11 @@ export class TfImagePipeline extends cdktn.TerraformResource {
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule = new TfImagePipeline.SchedulePropertyOutputReference(this, "schedule");
+  private _schedule = new AwsImagePipeline.SchedulePropertyOutputReference(this, "schedule");
   public get schedule() {
     return this._schedule;
   }
-  public putSchedule(value: TfImagePipeline.ScheduleProperty) {
+  public putSchedule(value: AwsImagePipeline.ScheduleProperty) {
     this._schedule.internalValue = value;
   }
   public resetSchedule() {
@@ -467,11 +467,11 @@ export class TfImagePipeline extends cdktn.TerraformResource {
   }
 
   // workflow - computed: false, optional: true, required: false
-  private _workflow = new TfImagePipeline.WorkflowPropertyList(this, "workflow", false);
+  private _workflow = new AwsImagePipeline.WorkflowPropertyList(this, "workflow", false);
   public get workflow() {
     return this._workflow;
   }
-  public putWorkflow(value: TfImagePipeline.WorkflowProperty[] | cdktn.IResolvable) {
+  public putWorkflow(value: AwsImagePipeline.WorkflowProperty[] | cdktn.IResolvable) {
     this._workflow.internalValue = value;
   }
   public resetWorkflow() {
@@ -501,11 +501,11 @@ export class TfImagePipeline extends cdktn.TerraformResource {
       status: cdktn.stringToTerraform(this._status),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      image_scanning_configuration: tfImagePipelineImageScanningConfigurationPropertyToTerraform(this._imageScanningConfiguration.internalValue),
-      image_tests_configuration: tfImagePipelineImageTestsConfigurationPropertyToTerraform(this._imageTestsConfiguration.internalValue),
-      logging_configuration: tfImagePipelineLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
-      schedule: tfImagePipelineSchedulePropertyToTerraform(this._schedule.internalValue),
-      workflow: cdktn.listMapper(tfImagePipelineWorkflowPropertyToTerraform, true)(this._workflow.internalValue),
+      image_scanning_configuration: awsImagePipelineImageScanningConfigurationPropertyToTerraform(this._imageScanningConfiguration.internalValue),
+      image_tests_configuration: awsImagePipelineImageTestsConfigurationPropertyToTerraform(this._imageTestsConfiguration.internalValue),
+      logging_configuration: awsImagePipelineLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
+      schedule: awsImagePipelineSchedulePropertyToTerraform(this._schedule.internalValue),
+      workflow: cdktn.listMapper(awsImagePipelineWorkflowPropertyToTerraform, true)(this._workflow.internalValue),
     };
   }
 
@@ -590,34 +590,34 @@ export class TfImagePipeline extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       image_scanning_configuration: {
-        value: tfImagePipelineImageScanningConfigurationPropertyToHclTerraform(this._imageScanningConfiguration.internalValue),
+        value: awsImagePipelineImageScanningConfigurationPropertyToHclTerraform(this._imageScanningConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfImagePipeline.ImageScanningConfigurationPropertyList",
+        storageClassType: "AwsImagePipeline.ImageScanningConfigurationPropertyList",
       },
       image_tests_configuration: {
-        value: tfImagePipelineImageTestsConfigurationPropertyToHclTerraform(this._imageTestsConfiguration.internalValue),
+        value: awsImagePipelineImageTestsConfigurationPropertyToHclTerraform(this._imageTestsConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfImagePipeline.ImageTestsConfigurationPropertyList",
+        storageClassType: "AwsImagePipeline.ImageTestsConfigurationPropertyList",
       },
       logging_configuration: {
-        value: tfImagePipelineLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
+        value: awsImagePipelineLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfImagePipeline.LoggingConfigurationPropertyList",
+        storageClassType: "AwsImagePipeline.LoggingConfigurationPropertyList",
       },
       schedule: {
-        value: tfImagePipelineSchedulePropertyToHclTerraform(this._schedule.internalValue),
+        value: awsImagePipelineSchedulePropertyToHclTerraform(this._schedule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfImagePipeline.SchedulePropertyList",
+        storageClassType: "AwsImagePipeline.SchedulePropertyList",
       },
       workflow: {
-        value: cdktn.listMapperHcl(tfImagePipelineWorkflowPropertyToHclTerraform, true)(this._workflow.internalValue),
+        value: cdktn.listMapperHcl(awsImagePipelineWorkflowPropertyToHclTerraform, true)(this._workflow.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfImagePipeline.WorkflowPropertyList",
+        storageClassType: "AwsImagePipeline.WorkflowPropertyList",
       },
     };
 
@@ -626,7 +626,7 @@ export class TfImagePipeline extends cdktn.TerraformResource {
   }
 }
 
-export function tfImagePipelineEcrConfigurationPropertyToTerraform(struct?: TfImagePipeline.EcrConfigurationPropertyOutputReference | TfImagePipeline.EcrConfigurationProperty): any {
+export function awsImagePipelineEcrConfigurationPropertyToTerraform(struct?: AwsImagePipeline.EcrConfigurationPropertyOutputReference | AwsImagePipeline.EcrConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -638,7 +638,7 @@ export function tfImagePipelineEcrConfigurationPropertyToTerraform(struct?: TfIm
 }
 
 
-export function tfImagePipelineEcrConfigurationPropertyToHclTerraform(struct?: TfImagePipeline.EcrConfigurationPropertyOutputReference | TfImagePipeline.EcrConfigurationProperty): any {
+export function awsImagePipelineEcrConfigurationPropertyToHclTerraform(struct?: AwsImagePipeline.EcrConfigurationPropertyOutputReference | AwsImagePipeline.EcrConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -663,19 +663,19 @@ export function tfImagePipelineEcrConfigurationPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfImagePipelineImageScanningConfigurationPropertyToTerraform(struct?: TfImagePipeline.ImageScanningConfigurationPropertyOutputReference | TfImagePipeline.ImageScanningConfigurationProperty): any {
+export function awsImagePipelineImageScanningConfigurationPropertyToTerraform(struct?: AwsImagePipeline.ImageScanningConfigurationPropertyOutputReference | AwsImagePipeline.ImageScanningConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     image_scanning_enabled: cdktn.booleanToTerraform(struct!.imageScanningEnabled),
-    ecr_configuration: tfImagePipelineEcrConfigurationPropertyToTerraform(struct!.ecrConfiguration),
+    ecr_configuration: awsImagePipelineEcrConfigurationPropertyToTerraform(struct!.ecrConfiguration),
   }
 }
 
 
-export function tfImagePipelineImageScanningConfigurationPropertyToHclTerraform(struct?: TfImagePipeline.ImageScanningConfigurationPropertyOutputReference | TfImagePipeline.ImageScanningConfigurationProperty): any {
+export function awsImagePipelineImageScanningConfigurationPropertyToHclTerraform(struct?: AwsImagePipeline.ImageScanningConfigurationPropertyOutputReference | AwsImagePipeline.ImageScanningConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -688,7 +688,7 @@ export function tfImagePipelineImageScanningConfigurationPropertyToHclTerraform(
       storageClassType: "boolean",
     },
     ecr_configuration: {
-      value: tfImagePipelineEcrConfigurationPropertyToHclTerraform(struct!.ecrConfiguration),
+      value: awsImagePipelineEcrConfigurationPropertyToHclTerraform(struct!.ecrConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "EcrConfigurationPropertyList",
@@ -700,7 +700,7 @@ export function tfImagePipelineImageScanningConfigurationPropertyToHclTerraform(
 }
 
 
-export function tfImagePipelineImageTestsConfigurationPropertyToTerraform(struct?: TfImagePipeline.ImageTestsConfigurationPropertyOutputReference | TfImagePipeline.ImageTestsConfigurationProperty): any {
+export function awsImagePipelineImageTestsConfigurationPropertyToTerraform(struct?: AwsImagePipeline.ImageTestsConfigurationPropertyOutputReference | AwsImagePipeline.ImageTestsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -712,7 +712,7 @@ export function tfImagePipelineImageTestsConfigurationPropertyToTerraform(struct
 }
 
 
-export function tfImagePipelineImageTestsConfigurationPropertyToHclTerraform(struct?: TfImagePipeline.ImageTestsConfigurationPropertyOutputReference | TfImagePipeline.ImageTestsConfigurationProperty): any {
+export function awsImagePipelineImageTestsConfigurationPropertyToHclTerraform(struct?: AwsImagePipeline.ImageTestsConfigurationPropertyOutputReference | AwsImagePipeline.ImageTestsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -737,7 +737,7 @@ export function tfImagePipelineImageTestsConfigurationPropertyToHclTerraform(str
 }
 
 
-export function tfImagePipelineLoggingConfigurationPropertyToTerraform(struct?: TfImagePipeline.LoggingConfigurationPropertyOutputReference | TfImagePipeline.LoggingConfigurationProperty): any {
+export function awsImagePipelineLoggingConfigurationPropertyToTerraform(struct?: AwsImagePipeline.LoggingConfigurationPropertyOutputReference | AwsImagePipeline.LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -749,7 +749,7 @@ export function tfImagePipelineLoggingConfigurationPropertyToTerraform(struct?: 
 }
 
 
-export function tfImagePipelineLoggingConfigurationPropertyToHclTerraform(struct?: TfImagePipeline.LoggingConfigurationPropertyOutputReference | TfImagePipeline.LoggingConfigurationProperty): any {
+export function awsImagePipelineLoggingConfigurationPropertyToHclTerraform(struct?: AwsImagePipeline.LoggingConfigurationPropertyOutputReference | AwsImagePipeline.LoggingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -774,7 +774,7 @@ export function tfImagePipelineLoggingConfigurationPropertyToHclTerraform(struct
 }
 
 
-export function tfImagePipelineSchedulePropertyToTerraform(struct?: TfImagePipeline.SchedulePropertyOutputReference | TfImagePipeline.ScheduleProperty): any {
+export function awsImagePipelineSchedulePropertyToTerraform(struct?: AwsImagePipeline.SchedulePropertyOutputReference | AwsImagePipeline.ScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -787,7 +787,7 @@ export function tfImagePipelineSchedulePropertyToTerraform(struct?: TfImagePipel
 }
 
 
-export function tfImagePipelineSchedulePropertyToHclTerraform(struct?: TfImagePipeline.SchedulePropertyOutputReference | TfImagePipeline.ScheduleProperty): any {
+export function awsImagePipelineSchedulePropertyToHclTerraform(struct?: AwsImagePipeline.SchedulePropertyOutputReference | AwsImagePipeline.ScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -818,7 +818,7 @@ export function tfImagePipelineSchedulePropertyToHclTerraform(struct?: TfImagePi
 }
 
 
-export function tfImagePipelineParameterPropertyToTerraform(struct?: TfImagePipeline.ParameterProperty | cdktn.IResolvable): any {
+export function awsImagePipelineParameterPropertyToTerraform(struct?: AwsImagePipeline.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -830,7 +830,7 @@ export function tfImagePipelineParameterPropertyToTerraform(struct?: TfImagePipe
 }
 
 
-export function tfImagePipelineParameterPropertyToHclTerraform(struct?: TfImagePipeline.ParameterProperty | cdktn.IResolvable): any {
+export function awsImagePipelineParameterPropertyToHclTerraform(struct?: AwsImagePipeline.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -855,7 +855,7 @@ export function tfImagePipelineParameterPropertyToHclTerraform(struct?: TfImageP
 }
 
 
-export function tfImagePipelineWorkflowPropertyToTerraform(struct?: TfImagePipeline.WorkflowProperty | cdktn.IResolvable): any {
+export function awsImagePipelineWorkflowPropertyToTerraform(struct?: AwsImagePipeline.WorkflowProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -864,12 +864,12 @@ export function tfImagePipelineWorkflowPropertyToTerraform(struct?: TfImagePipel
     on_failure: cdktn.stringToTerraform(struct!.onFailure),
     parallel_group: cdktn.stringToTerraform(struct!.parallelGroup),
     workflow_arn: cdktn.stringToTerraform(struct!.workflowArn),
-    parameter: cdktn.listMapper(tfImagePipelineParameterPropertyToTerraform, true)(struct!.parameter),
+    parameter: cdktn.listMapper(awsImagePipelineParameterPropertyToTerraform, true)(struct!.parameter),
   }
 }
 
 
-export function tfImagePipelineWorkflowPropertyToHclTerraform(struct?: TfImagePipeline.WorkflowProperty | cdktn.IResolvable): any {
+export function awsImagePipelineWorkflowPropertyToHclTerraform(struct?: AwsImagePipeline.WorkflowProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -894,7 +894,7 @@ export function tfImagePipelineWorkflowPropertyToHclTerraform(struct?: TfImagePi
       storageClassType: "string",
     },
     parameter: {
-      value: cdktn.listMapperHcl(tfImagePipelineParameterPropertyToHclTerraform, true)(struct!.parameter),
+      value: cdktn.listMapperHcl(awsImagePipelineParameterPropertyToHclTerraform, true)(struct!.parameter),
       isBlock: true,
       type: "set",
       storageClassType: "ParameterPropertyList",
@@ -906,14 +906,14 @@ export function tfImagePipelineWorkflowPropertyToHclTerraform(struct?: TfImagePi
 }
 
 
-export namespace TfImagePipeline {
+export namespace AwsImagePipeline {
 export interface EcrConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#container_tags TfImagePipeline#container_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#container_tags AwsImagePipeline#container_tags}
   */
   readonly containerTags?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#repository_name TfImagePipeline#repository_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#repository_name AwsImagePipeline#repository_name}
   */
   readonly repositoryName?: string;
 }
@@ -989,13 +989,13 @@ export class EcrConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ImageScanningConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#image_scanning_enabled TfImagePipeline#image_scanning_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#image_scanning_enabled AwsImagePipeline#image_scanning_enabled}
   */
   readonly imageScanningEnabled?: boolean | cdktn.IResolvable;
   /**
   * ecr_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#ecr_configuration TfImagePipeline#ecr_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#ecr_configuration AwsImagePipeline#ecr_configuration}
   */
   readonly ecrConfiguration?: EcrConfigurationProperty;
 }
@@ -1071,11 +1071,11 @@ export class ImageScanningConfigurationPropertyOutputReference extends cdktn.Com
 }
 export interface ImageTestsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#image_tests_enabled TfImagePipeline#image_tests_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#image_tests_enabled AwsImagePipeline#image_tests_enabled}
   */
   readonly imageTestsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#timeout_minutes TfImagePipeline#timeout_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#timeout_minutes AwsImagePipeline#timeout_minutes}
   */
   readonly timeoutMinutes?: number;
 }
@@ -1151,11 +1151,11 @@ export class ImageTestsConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface LoggingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#image_log_group_name TfImagePipeline#image_log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#image_log_group_name AwsImagePipeline#image_log_group_name}
   */
   readonly imageLogGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#pipeline_log_group_name TfImagePipeline#pipeline_log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#pipeline_log_group_name AwsImagePipeline#pipeline_log_group_name}
   */
   readonly pipelineLogGroupName?: string;
 }
@@ -1231,15 +1231,15 @@ export class LoggingConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface ScheduleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#pipeline_execution_start_condition TfImagePipeline#pipeline_execution_start_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#pipeline_execution_start_condition AwsImagePipeline#pipeline_execution_start_condition}
   */
   readonly pipelineExecutionStartCondition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#schedule_expression TfImagePipeline#schedule_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#schedule_expression AwsImagePipeline#schedule_expression}
   */
   readonly scheduleExpression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#timezone TfImagePipeline#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#timezone AwsImagePipeline#timezone}
   */
   readonly timezone?: string;
 }
@@ -1334,11 +1334,11 @@ export class SchedulePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#name TfImagePipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#name AwsImagePipeline#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#value TfImagePipeline#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#value AwsImagePipeline#value}
   */
   readonly value: string;
 }
@@ -1440,21 +1440,21 @@ export class ParameterPropertyList extends cdktn.ComplexList {
 }
 export interface WorkflowProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#on_failure TfImagePipeline#on_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#on_failure AwsImagePipeline#on_failure}
   */
   readonly onFailure?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#parallel_group TfImagePipeline#parallel_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#parallel_group AwsImagePipeline#parallel_group}
   */
   readonly parallelGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#workflow_arn TfImagePipeline#workflow_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#workflow_arn AwsImagePipeline#workflow_arn}
   */
   readonly workflowArn: string;
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#parameter TfImagePipeline#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_image_pipeline#parameter AwsImagePipeline#parameter}
   */
   readonly parameter?: ParameterProperty[] | cdktn.IResolvable;
 }

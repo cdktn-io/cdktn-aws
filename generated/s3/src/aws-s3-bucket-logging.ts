@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBucketLoggingConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBucketLoggingConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#bucket TfBucketLogging#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#bucket AwsBucketLogging#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#expected_bucket_owner TfBucketLogging#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#expected_bucket_owner AwsBucketLogging#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#id TfBucketLogging#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#id AwsBucketLogging#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,35 +24,35 @@ export interface TfBucketLoggingConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#region TfBucketLogging#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#region AwsBucketLogging#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#target_bucket TfBucketLogging#target_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#target_bucket AwsBucketLogging#target_bucket}
   */
   readonly targetBucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#target_prefix TfBucketLogging#target_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#target_prefix AwsBucketLogging#target_prefix}
   */
   readonly targetPrefix: string;
   /**
   * target_grant block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#target_grant TfBucketLogging#target_grant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#target_grant AwsBucketLogging#target_grant}
   */
-  readonly targetGrant?: TfBucketLogging.TargetGrantProperty[] | cdktn.IResolvable;
+  readonly targetGrant?: AwsBucketLogging.TargetGrantProperty[] | cdktn.IResolvable;
   /**
   * target_object_key_format block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#target_object_key_format TfBucketLogging#target_object_key_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#target_object_key_format AwsBucketLogging#target_object_key_format}
   */
-  readonly targetObjectKeyFormat?: TfBucketLogging.TargetObjectKeyFormatProperty;
+  readonly targetObjectKeyFormat?: AwsBucketLogging.TargetObjectKeyFormatProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging aws_s3_bucket_logging}
 */
-export class TfBucketLogging extends cdktn.TerraformResource {
+export class AwsBucketLogging extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfBucketLogging extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBucketLogging resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBucketLogging resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBucketLogging to import
-  * @param importFromId The id of the existing TfBucketLogging that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBucketLogging to import is found
+  * @param importToId The construct id used in the generated config for the AwsBucketLogging to import
+  * @param importFromId The id of the existing AwsBucketLogging that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBucketLogging to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_logging", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfBucketLogging extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBucketLoggingConfig
+  * @param options AwsBucketLoggingConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBucketLoggingConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBucketLoggingConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_logging',
       terraformGeneratorMetadata: {
@@ -202,11 +202,11 @@ export class TfBucketLogging extends cdktn.TerraformResource {
   }
 
   // target_grant - computed: false, optional: true, required: false
-  private _targetGrant = new TfBucketLogging.TargetGrantPropertyList(this, "target_grant", true);
+  private _targetGrant = new AwsBucketLogging.TargetGrantPropertyList(this, "target_grant", true);
   public get targetGrant() {
     return this._targetGrant;
   }
-  public putTargetGrant(value: TfBucketLogging.TargetGrantProperty[] | cdktn.IResolvable) {
+  public putTargetGrant(value: AwsBucketLogging.TargetGrantProperty[] | cdktn.IResolvable) {
     this._targetGrant.internalValue = value;
   }
   public resetTargetGrant() {
@@ -218,11 +218,11 @@ export class TfBucketLogging extends cdktn.TerraformResource {
   }
 
   // target_object_key_format - computed: false, optional: true, required: false
-  private _targetObjectKeyFormat = new TfBucketLogging.TargetObjectKeyFormatPropertyOutputReference(this, "target_object_key_format");
+  private _targetObjectKeyFormat = new AwsBucketLogging.TargetObjectKeyFormatPropertyOutputReference(this, "target_object_key_format");
   public get targetObjectKeyFormat() {
     return this._targetObjectKeyFormat;
   }
-  public putTargetObjectKeyFormat(value: TfBucketLogging.TargetObjectKeyFormatProperty) {
+  public putTargetObjectKeyFormat(value: AwsBucketLogging.TargetObjectKeyFormatProperty) {
     this._targetObjectKeyFormat.internalValue = value;
   }
   public resetTargetObjectKeyFormat() {
@@ -245,8 +245,8 @@ export class TfBucketLogging extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       target_bucket: cdktn.stringToTerraform(this._targetBucket),
       target_prefix: cdktn.stringToTerraform(this._targetPrefix),
-      target_grant: cdktn.listMapper(tfBucketLoggingTargetGrantPropertyToTerraform, true)(this._targetGrant.internalValue),
-      target_object_key_format: tfBucketLoggingTargetObjectKeyFormatPropertyToTerraform(this._targetObjectKeyFormat.internalValue),
+      target_grant: cdktn.listMapper(awsBucketLoggingTargetGrantPropertyToTerraform, true)(this._targetGrant.internalValue),
+      target_object_key_format: awsBucketLoggingTargetObjectKeyFormatPropertyToTerraform(this._targetObjectKeyFormat.internalValue),
     };
   }
 
@@ -289,16 +289,16 @@ export class TfBucketLogging extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       target_grant: {
-        value: cdktn.listMapperHcl(tfBucketLoggingTargetGrantPropertyToHclTerraform, true)(this._targetGrant.internalValue),
+        value: cdktn.listMapperHcl(awsBucketLoggingTargetGrantPropertyToHclTerraform, true)(this._targetGrant.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfBucketLogging.TargetGrantPropertyList",
+        storageClassType: "AwsBucketLogging.TargetGrantPropertyList",
       },
       target_object_key_format: {
-        value: tfBucketLoggingTargetObjectKeyFormatPropertyToHclTerraform(this._targetObjectKeyFormat.internalValue),
+        value: awsBucketLoggingTargetObjectKeyFormatPropertyToHclTerraform(this._targetObjectKeyFormat.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBucketLogging.TargetObjectKeyFormatPropertyList",
+        storageClassType: "AwsBucketLogging.TargetObjectKeyFormatPropertyList",
       },
     };
 
@@ -307,7 +307,7 @@ export class TfBucketLogging extends cdktn.TerraformResource {
   }
 }
 
-export function tfBucketLoggingGranteePropertyToTerraform(struct?: TfBucketLogging.GranteePropertyOutputReference | TfBucketLogging.GranteeProperty): any {
+export function awsBucketLoggingGranteePropertyToTerraform(struct?: AwsBucketLogging.GranteePropertyOutputReference | AwsBucketLogging.GranteeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,7 +321,7 @@ export function tfBucketLoggingGranteePropertyToTerraform(struct?: TfBucketLoggi
 }
 
 
-export function tfBucketLoggingGranteePropertyToHclTerraform(struct?: TfBucketLogging.GranteePropertyOutputReference | TfBucketLogging.GranteeProperty): any {
+export function awsBucketLoggingGranteePropertyToHclTerraform(struct?: AwsBucketLogging.GranteePropertyOutputReference | AwsBucketLogging.GranteeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,19 +358,19 @@ export function tfBucketLoggingGranteePropertyToHclTerraform(struct?: TfBucketLo
 }
 
 
-export function tfBucketLoggingTargetGrantPropertyToTerraform(struct?: TfBucketLogging.TargetGrantProperty | cdktn.IResolvable): any {
+export function awsBucketLoggingTargetGrantPropertyToTerraform(struct?: AwsBucketLogging.TargetGrantProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     permission: cdktn.stringToTerraform(struct!.permission),
-    grantee: tfBucketLoggingGranteePropertyToTerraform(struct!.grantee),
+    grantee: awsBucketLoggingGranteePropertyToTerraform(struct!.grantee),
   }
 }
 
 
-export function tfBucketLoggingTargetGrantPropertyToHclTerraform(struct?: TfBucketLogging.TargetGrantProperty | cdktn.IResolvable): any {
+export function awsBucketLoggingTargetGrantPropertyToHclTerraform(struct?: AwsBucketLogging.TargetGrantProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -383,7 +383,7 @@ export function tfBucketLoggingTargetGrantPropertyToHclTerraform(struct?: TfBuck
       storageClassType: "string",
     },
     grantee: {
-      value: tfBucketLoggingGranteePropertyToHclTerraform(struct!.grantee),
+      value: awsBucketLoggingGranteePropertyToHclTerraform(struct!.grantee),
       isBlock: true,
       type: "list",
       storageClassType: "GranteePropertyList",
@@ -395,7 +395,7 @@ export function tfBucketLoggingTargetGrantPropertyToHclTerraform(struct?: TfBuck
 }
 
 
-export function tfBucketLoggingPartitionedPrefixPropertyToTerraform(struct?: TfBucketLogging.PartitionedPrefixPropertyOutputReference | TfBucketLogging.PartitionedPrefixProperty): any {
+export function awsBucketLoggingPartitionedPrefixPropertyToTerraform(struct?: AwsBucketLogging.PartitionedPrefixPropertyOutputReference | AwsBucketLogging.PartitionedPrefixProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -406,7 +406,7 @@ export function tfBucketLoggingPartitionedPrefixPropertyToTerraform(struct?: TfB
 }
 
 
-export function tfBucketLoggingPartitionedPrefixPropertyToHclTerraform(struct?: TfBucketLogging.PartitionedPrefixPropertyOutputReference | TfBucketLogging.PartitionedPrefixProperty): any {
+export function awsBucketLoggingPartitionedPrefixPropertyToHclTerraform(struct?: AwsBucketLogging.PartitionedPrefixPropertyOutputReference | AwsBucketLogging.PartitionedPrefixProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -425,7 +425,7 @@ export function tfBucketLoggingPartitionedPrefixPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfBucketLoggingSimplePrefixPropertyToTerraform(struct?: TfBucketLogging.SimplePrefixPropertyOutputReference | TfBucketLogging.SimplePrefixProperty): any {
+export function awsBucketLoggingSimplePrefixPropertyToTerraform(struct?: AwsBucketLogging.SimplePrefixPropertyOutputReference | AwsBucketLogging.SimplePrefixProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function tfBucketLoggingSimplePrefixPropertyToTerraform(struct?: TfBucket
 }
 
 
-export function tfBucketLoggingSimplePrefixPropertyToHclTerraform(struct?: TfBucketLogging.SimplePrefixPropertyOutputReference | TfBucketLogging.SimplePrefixProperty): any {
+export function awsBucketLoggingSimplePrefixPropertyToHclTerraform(struct?: AwsBucketLogging.SimplePrefixPropertyOutputReference | AwsBucketLogging.SimplePrefixProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,32 +446,32 @@ export function tfBucketLoggingSimplePrefixPropertyToHclTerraform(struct?: TfBuc
 }
 
 
-export function tfBucketLoggingTargetObjectKeyFormatPropertyToTerraform(struct?: TfBucketLogging.TargetObjectKeyFormatPropertyOutputReference | TfBucketLogging.TargetObjectKeyFormatProperty): any {
+export function awsBucketLoggingTargetObjectKeyFormatPropertyToTerraform(struct?: AwsBucketLogging.TargetObjectKeyFormatPropertyOutputReference | AwsBucketLogging.TargetObjectKeyFormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    partitioned_prefix: tfBucketLoggingPartitionedPrefixPropertyToTerraform(struct!.partitionedPrefix),
-    simple_prefix: tfBucketLoggingSimplePrefixPropertyToTerraform(struct!.simplePrefix),
+    partitioned_prefix: awsBucketLoggingPartitionedPrefixPropertyToTerraform(struct!.partitionedPrefix),
+    simple_prefix: awsBucketLoggingSimplePrefixPropertyToTerraform(struct!.simplePrefix),
   }
 }
 
 
-export function tfBucketLoggingTargetObjectKeyFormatPropertyToHclTerraform(struct?: TfBucketLogging.TargetObjectKeyFormatPropertyOutputReference | TfBucketLogging.TargetObjectKeyFormatProperty): any {
+export function awsBucketLoggingTargetObjectKeyFormatPropertyToHclTerraform(struct?: AwsBucketLogging.TargetObjectKeyFormatPropertyOutputReference | AwsBucketLogging.TargetObjectKeyFormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     partitioned_prefix: {
-      value: tfBucketLoggingPartitionedPrefixPropertyToHclTerraform(struct!.partitionedPrefix),
+      value: awsBucketLoggingPartitionedPrefixPropertyToHclTerraform(struct!.partitionedPrefix),
       isBlock: true,
       type: "list",
       storageClassType: "PartitionedPrefixPropertyList",
     },
     simple_prefix: {
-      value: tfBucketLoggingSimplePrefixPropertyToHclTerraform(struct!.simplePrefix),
+      value: awsBucketLoggingSimplePrefixPropertyToHclTerraform(struct!.simplePrefix),
       isBlock: true,
       type: "list",
       storageClassType: "SimplePrefixPropertyList",
@@ -483,25 +483,25 @@ export function tfBucketLoggingTargetObjectKeyFormatPropertyToHclTerraform(struc
 }
 
 
-export namespace TfBucketLogging {
+export namespace AwsBucketLogging {
 export interface GranteeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#email_address TfBucketLogging#email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#email_address AwsBucketLogging#email_address}
   */
   readonly emailAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#id TfBucketLogging#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#id AwsBucketLogging#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#type TfBucketLogging#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#type AwsBucketLogging#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#uri TfBucketLogging#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#uri AwsBucketLogging#uri}
   */
   readonly uri?: string;
 }
@@ -623,13 +623,13 @@ export class GranteePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TargetGrantProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#permission TfBucketLogging#permission}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#permission AwsBucketLogging#permission}
   */
   readonly permission: string;
   /**
   * grantee block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#grantee TfBucketLogging#grantee}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#grantee AwsBucketLogging#grantee}
   */
   readonly grantee: GranteeProperty;
 }
@@ -731,7 +731,7 @@ export class TargetGrantPropertyList extends cdktn.ComplexList {
 }
 export interface PartitionedPrefixProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#partition_date_source TfBucketLogging#partition_date_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#partition_date_source AwsBucketLogging#partition_date_source}
   */
   readonly partitionDateSource: string;
 }
@@ -812,13 +812,13 @@ export interface TargetObjectKeyFormatProperty {
   /**
   * partitioned_prefix block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#partitioned_prefix TfBucketLogging#partitioned_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#partitioned_prefix AwsBucketLogging#partitioned_prefix}
   */
   readonly partitionedPrefix?: PartitionedPrefixProperty;
   /**
   * simple_prefix block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#simple_prefix TfBucketLogging#simple_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_logging#simple_prefix AwsBucketLogging#simple_prefix}
   */
   readonly simplePrefix?: SimplePrefixProperty;
 }

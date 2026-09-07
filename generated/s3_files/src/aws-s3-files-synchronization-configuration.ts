@@ -5,43 +5,43 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSynchronizationConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSynchronizationConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
   * File system ID
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#file_system_id TfSynchronizationConfiguration#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#file_system_id AwsSynchronizationConfiguration#file_system_id}
   */
   readonly fileSystemId: string;
   /**
   * Latest version number for optimistic locking
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#latest_version_number TfSynchronizationConfiguration#latest_version_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#latest_version_number AwsSynchronizationConfiguration#latest_version_number}
   */
   readonly latestVersionNumber?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#region TfSynchronizationConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#region AwsSynchronizationConfiguration#region}
   */
   readonly region?: string;
   /**
   * expiration_data_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#expiration_data_rule TfSynchronizationConfiguration#expiration_data_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#expiration_data_rule AwsSynchronizationConfiguration#expiration_data_rule}
   */
-  readonly expirationDataRule?: TfSynchronizationConfiguration.ExpirationDataRuleProperty[] | cdktn.IResolvable;
+  readonly expirationDataRule?: AwsSynchronizationConfiguration.ExpirationDataRuleProperty[] | cdktn.IResolvable;
   /**
   * import_data_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#import_data_rule TfSynchronizationConfiguration#import_data_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#import_data_rule AwsSynchronizationConfiguration#import_data_rule}
   */
-  readonly importDataRule?: TfSynchronizationConfiguration.ImportDataRuleProperty[] | cdktn.IResolvable;
+  readonly importDataRule?: AwsSynchronizationConfiguration.ImportDataRuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration aws_s3files_synchronization_configuration}
 */
-export class TfSynchronizationConfiguration extends cdktn.TerraformResource {
+export class AwsSynchronizationConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class TfSynchronizationConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSynchronizationConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSynchronizationConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSynchronizationConfiguration to import
-  * @param importFromId The id of the existing TfSynchronizationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSynchronizationConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsSynchronizationConfiguration to import
+  * @param importFromId The id of the existing AwsSynchronizationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSynchronizationConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3files_synchronization_configuration", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class TfSynchronizationConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSynchronizationConfigurationConfig
+  * @param options AwsSynchronizationConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSynchronizationConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSynchronizationConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3files_synchronization_configuration',
       terraformGeneratorMetadata: {
@@ -146,11 +146,11 @@ export class TfSynchronizationConfiguration extends cdktn.TerraformResource {
   }
 
   // expiration_data_rule - computed: false, optional: true, required: false
-  private _expirationDataRule = new TfSynchronizationConfiguration.ExpirationDataRulePropertyList(this, "expiration_data_rule", true);
+  private _expirationDataRule = new AwsSynchronizationConfiguration.ExpirationDataRulePropertyList(this, "expiration_data_rule", true);
   public get expirationDataRule() {
     return this._expirationDataRule;
   }
-  public putExpirationDataRule(value: TfSynchronizationConfiguration.ExpirationDataRuleProperty[] | cdktn.IResolvable) {
+  public putExpirationDataRule(value: AwsSynchronizationConfiguration.ExpirationDataRuleProperty[] | cdktn.IResolvable) {
     this._expirationDataRule.internalValue = value;
   }
   public resetExpirationDataRule() {
@@ -162,11 +162,11 @@ export class TfSynchronizationConfiguration extends cdktn.TerraformResource {
   }
 
   // import_data_rule - computed: false, optional: true, required: false
-  private _importDataRule = new TfSynchronizationConfiguration.ImportDataRulePropertyList(this, "import_data_rule", true);
+  private _importDataRule = new AwsSynchronizationConfiguration.ImportDataRulePropertyList(this, "import_data_rule", true);
   public get importDataRule() {
     return this._importDataRule;
   }
-  public putImportDataRule(value: TfSynchronizationConfiguration.ImportDataRuleProperty[] | cdktn.IResolvable) {
+  public putImportDataRule(value: AwsSynchronizationConfiguration.ImportDataRuleProperty[] | cdktn.IResolvable) {
     this._importDataRule.internalValue = value;
   }
   public resetImportDataRule() {
@@ -186,8 +186,8 @@ export class TfSynchronizationConfiguration extends cdktn.TerraformResource {
       file_system_id: cdktn.stringToTerraform(this._fileSystemId),
       latest_version_number: cdktn.numberToTerraform(this._latestVersionNumber),
       region: cdktn.stringToTerraform(this._region),
-      expiration_data_rule: cdktn.listMapper(tfSynchronizationConfigurationExpirationDataRulePropertyToTerraform, true)(this._expirationDataRule.internalValue),
-      import_data_rule: cdktn.listMapper(tfSynchronizationConfigurationImportDataRulePropertyToTerraform, true)(this._importDataRule.internalValue),
+      expiration_data_rule: cdktn.listMapper(awsSynchronizationConfigurationExpirationDataRulePropertyToTerraform, true)(this._expirationDataRule.internalValue),
+      import_data_rule: cdktn.listMapper(awsSynchronizationConfigurationImportDataRulePropertyToTerraform, true)(this._importDataRule.internalValue),
     };
   }
 
@@ -212,16 +212,16 @@ export class TfSynchronizationConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       expiration_data_rule: {
-        value: cdktn.listMapperHcl(tfSynchronizationConfigurationExpirationDataRulePropertyToHclTerraform, true)(this._expirationDataRule.internalValue),
+        value: cdktn.listMapperHcl(awsSynchronizationConfigurationExpirationDataRulePropertyToHclTerraform, true)(this._expirationDataRule.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfSynchronizationConfiguration.ExpirationDataRulePropertyList",
+        storageClassType: "AwsSynchronizationConfiguration.ExpirationDataRulePropertyList",
       },
       import_data_rule: {
-        value: cdktn.listMapperHcl(tfSynchronizationConfigurationImportDataRulePropertyToHclTerraform, true)(this._importDataRule.internalValue),
+        value: cdktn.listMapperHcl(awsSynchronizationConfigurationImportDataRulePropertyToHclTerraform, true)(this._importDataRule.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfSynchronizationConfiguration.ImportDataRulePropertyList",
+        storageClassType: "AwsSynchronizationConfiguration.ImportDataRulePropertyList",
       },
     };
 
@@ -230,7 +230,7 @@ export class TfSynchronizationConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfSynchronizationConfigurationExpirationDataRulePropertyToTerraform(struct?: TfSynchronizationConfiguration.ExpirationDataRuleProperty | cdktn.IResolvable): any {
+export function awsSynchronizationConfigurationExpirationDataRulePropertyToTerraform(struct?: AwsSynchronizationConfiguration.ExpirationDataRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function tfSynchronizationConfigurationExpirationDataRulePropertyToTerraf
 }
 
 
-export function tfSynchronizationConfigurationExpirationDataRulePropertyToHclTerraform(struct?: TfSynchronizationConfiguration.ExpirationDataRuleProperty | cdktn.IResolvable): any {
+export function awsSynchronizationConfigurationExpirationDataRulePropertyToHclTerraform(struct?: AwsSynchronizationConfiguration.ExpirationDataRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -260,7 +260,7 @@ export function tfSynchronizationConfigurationExpirationDataRulePropertyToHclTer
 }
 
 
-export function tfSynchronizationConfigurationImportDataRulePropertyToTerraform(struct?: TfSynchronizationConfiguration.ImportDataRuleProperty | cdktn.IResolvable): any {
+export function awsSynchronizationConfigurationImportDataRulePropertyToTerraform(struct?: AwsSynchronizationConfiguration.ImportDataRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -273,7 +273,7 @@ export function tfSynchronizationConfigurationImportDataRulePropertyToTerraform(
 }
 
 
-export function tfSynchronizationConfigurationImportDataRulePropertyToHclTerraform(struct?: TfSynchronizationConfiguration.ImportDataRuleProperty | cdktn.IResolvable): any {
+export function awsSynchronizationConfigurationImportDataRulePropertyToHclTerraform(struct?: AwsSynchronizationConfiguration.ImportDataRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,12 +304,12 @@ export function tfSynchronizationConfigurationImportDataRulePropertyToHclTerrafo
 }
 
 
-export namespace TfSynchronizationConfiguration {
+export namespace AwsSynchronizationConfiguration {
 export interface ExpirationDataRuleProperty {
   /**
   * Days after last access before data expires
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#days_after_last_access TfSynchronizationConfiguration#days_after_last_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#days_after_last_access AwsSynchronizationConfiguration#days_after_last_access}
   */
   readonly daysAfterLastAccess: number;
 }
@@ -394,19 +394,19 @@ export interface ImportDataRuleProperty {
   /**
   * S3 prefix for import
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#prefix TfSynchronizationConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#prefix AwsSynchronizationConfiguration#prefix}
   */
   readonly prefix: string;
   /**
   * Maximum file size to import
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#size_less_than TfSynchronizationConfiguration#size_less_than}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#size_less_than AwsSynchronizationConfiguration#size_less_than}
   */
   readonly sizeLessThan: number;
   /**
   * Import trigger type
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#trigger TfSynchronizationConfiguration#trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3files_synchronization_configuration#trigger AwsSynchronizationConfiguration#trigger}
   */
   readonly trigger: string;
 }

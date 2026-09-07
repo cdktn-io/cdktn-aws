@@ -5,51 +5,51 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAccessGrantConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAccessGrantConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#access_grants_location_id TfAccessGrant#access_grants_location_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#access_grants_location_id AwsAccessGrant#access_grants_location_id}
   */
   readonly accessGrantsLocationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#account_id TfAccessGrant#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#account_id AwsAccessGrant#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#permission TfAccessGrant#permission}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#permission AwsAccessGrant#permission}
   */
   readonly permission: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#region TfAccessGrant#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#region AwsAccessGrant#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#s3_prefix_type TfAccessGrant#s3_prefix_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#s3_prefix_type AwsAccessGrant#s3_prefix_type}
   */
   readonly s3PrefixType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#tags TfAccessGrant#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#tags AwsAccessGrant#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * access_grants_location_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#access_grants_location_configuration TfAccessGrant#access_grants_location_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#access_grants_location_configuration AwsAccessGrant#access_grants_location_configuration}
   */
-  readonly accessGrantsLocationConfiguration?: TfAccessGrant.AccessGrantsLocationConfigurationProperty[] | cdktn.IResolvable;
+  readonly accessGrantsLocationConfiguration?: AwsAccessGrant.AccessGrantsLocationConfigurationProperty[] | cdktn.IResolvable;
   /**
   * grantee block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#grantee TfAccessGrant#grantee}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#grantee AwsAccessGrant#grantee}
   */
-  readonly grantee?: TfAccessGrant.GranteeProperty[] | cdktn.IResolvable;
+  readonly grantee?: AwsAccessGrant.GranteeProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant aws_s3control_access_grant}
 */
-export class TfAccessGrant extends cdktn.TerraformResource {
+export class AwsAccessGrant extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -60,11 +60,11 @@ export class TfAccessGrant extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAccessGrant resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAccessGrant resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAccessGrant to import
-  * @param importFromId The id of the existing TfAccessGrant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAccessGrant to import is found
+  * @param importToId The construct id used in the generated config for the AwsAccessGrant to import
+  * @param importFromId The id of the existing AwsAccessGrant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAccessGrant to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3control_access_grant", importId: importFromId, provider });
@@ -79,9 +79,9 @@ export class TfAccessGrant extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAccessGrantConfig
+  * @param options AwsAccessGrantConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAccessGrantConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAccessGrantConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3control_access_grant',
       terraformGeneratorMetadata: {
@@ -228,11 +228,11 @@ export class TfAccessGrant extends cdktn.TerraformResource {
   }
 
   // access_grants_location_configuration - computed: false, optional: true, required: false
-  private _accessGrantsLocationConfiguration = new TfAccessGrant.AccessGrantsLocationConfigurationPropertyList(this, "access_grants_location_configuration", false);
+  private _accessGrantsLocationConfiguration = new AwsAccessGrant.AccessGrantsLocationConfigurationPropertyList(this, "access_grants_location_configuration", false);
   public get accessGrantsLocationConfiguration() {
     return this._accessGrantsLocationConfiguration;
   }
-  public putAccessGrantsLocationConfiguration(value: TfAccessGrant.AccessGrantsLocationConfigurationProperty[] | cdktn.IResolvable) {
+  public putAccessGrantsLocationConfiguration(value: AwsAccessGrant.AccessGrantsLocationConfigurationProperty[] | cdktn.IResolvable) {
     this._accessGrantsLocationConfiguration.internalValue = value;
   }
   public resetAccessGrantsLocationConfiguration() {
@@ -244,11 +244,11 @@ export class TfAccessGrant extends cdktn.TerraformResource {
   }
 
   // grantee - computed: false, optional: true, required: false
-  private _grantee = new TfAccessGrant.GranteePropertyList(this, "grantee", false);
+  private _grantee = new AwsAccessGrant.GranteePropertyList(this, "grantee", false);
   public get grantee() {
     return this._grantee;
   }
-  public putGrantee(value: TfAccessGrant.GranteeProperty[] | cdktn.IResolvable) {
+  public putGrantee(value: AwsAccessGrant.GranteeProperty[] | cdktn.IResolvable) {
     this._grantee.internalValue = value;
   }
   public resetGrantee() {
@@ -271,8 +271,8 @@ export class TfAccessGrant extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       s3_prefix_type: cdktn.stringToTerraform(this._s3PrefixType),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      access_grants_location_configuration: cdktn.listMapper(tfAccessGrantAccessGrantsLocationConfigurationPropertyToTerraform, true)(this._accessGrantsLocationConfiguration.internalValue),
-      grantee: cdktn.listMapper(tfAccessGrantGranteePropertyToTerraform, true)(this._grantee.internalValue),
+      access_grants_location_configuration: cdktn.listMapper(awsAccessGrantAccessGrantsLocationConfigurationPropertyToTerraform, true)(this._accessGrantsLocationConfiguration.internalValue),
+      grantee: cdktn.listMapper(awsAccessGrantGranteePropertyToTerraform, true)(this._grantee.internalValue),
     };
   }
 
@@ -315,16 +315,16 @@ export class TfAccessGrant extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       access_grants_location_configuration: {
-        value: cdktn.listMapperHcl(tfAccessGrantAccessGrantsLocationConfigurationPropertyToHclTerraform, true)(this._accessGrantsLocationConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsAccessGrantAccessGrantsLocationConfigurationPropertyToHclTerraform, true)(this._accessGrantsLocationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAccessGrant.AccessGrantsLocationConfigurationPropertyList",
+        storageClassType: "AwsAccessGrant.AccessGrantsLocationConfigurationPropertyList",
       },
       grantee: {
-        value: cdktn.listMapperHcl(tfAccessGrantGranteePropertyToHclTerraform, true)(this._grantee.internalValue),
+        value: cdktn.listMapperHcl(awsAccessGrantGranteePropertyToHclTerraform, true)(this._grantee.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAccessGrant.GranteePropertyList",
+        storageClassType: "AwsAccessGrant.GranteePropertyList",
       },
     };
 
@@ -333,7 +333,7 @@ export class TfAccessGrant extends cdktn.TerraformResource {
   }
 }
 
-export function tfAccessGrantAccessGrantsLocationConfigurationPropertyToTerraform(struct?: TfAccessGrant.AccessGrantsLocationConfigurationProperty | cdktn.IResolvable): any {
+export function awsAccessGrantAccessGrantsLocationConfigurationPropertyToTerraform(struct?: AwsAccessGrant.AccessGrantsLocationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -344,7 +344,7 @@ export function tfAccessGrantAccessGrantsLocationConfigurationPropertyToTerrafor
 }
 
 
-export function tfAccessGrantAccessGrantsLocationConfigurationPropertyToHclTerraform(struct?: TfAccessGrant.AccessGrantsLocationConfigurationProperty | cdktn.IResolvable): any {
+export function awsAccessGrantAccessGrantsLocationConfigurationPropertyToHclTerraform(struct?: AwsAccessGrant.AccessGrantsLocationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -363,7 +363,7 @@ export function tfAccessGrantAccessGrantsLocationConfigurationPropertyToHclTerra
 }
 
 
-export function tfAccessGrantGranteePropertyToTerraform(struct?: TfAccessGrant.GranteeProperty | cdktn.IResolvable): any {
+export function awsAccessGrantGranteePropertyToTerraform(struct?: AwsAccessGrant.GranteeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,7 +375,7 @@ export function tfAccessGrantGranteePropertyToTerraform(struct?: TfAccessGrant.G
 }
 
 
-export function tfAccessGrantGranteePropertyToHclTerraform(struct?: TfAccessGrant.GranteeProperty | cdktn.IResolvable): any {
+export function awsAccessGrantGranteePropertyToHclTerraform(struct?: AwsAccessGrant.GranteeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -400,10 +400,10 @@ export function tfAccessGrantGranteePropertyToHclTerraform(struct?: TfAccessGran
 }
 
 
-export namespace TfAccessGrant {
+export namespace AwsAccessGrant {
 export interface AccessGrantsLocationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#s3_sub_prefix TfAccessGrant#s3_sub_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#s3_sub_prefix AwsAccessGrant#s3_sub_prefix}
   */
   readonly s3SubPrefix?: string;
 }
@@ -489,11 +489,11 @@ export class AccessGrantsLocationConfigurationPropertyList extends cdktn.Complex
 }
 export interface GranteeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#grantee_identifier TfAccessGrant#grantee_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#grantee_identifier AwsAccessGrant#grantee_identifier}
   */
   readonly granteeIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#grantee_type TfAccessGrant#grantee_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_access_grant#grantee_type AwsAccessGrant#grantee_type}
   */
   readonly granteeType: string;
 }

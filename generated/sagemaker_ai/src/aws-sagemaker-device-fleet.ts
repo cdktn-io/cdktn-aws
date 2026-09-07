@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDeviceFleetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDeviceFleetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#description TfDeviceFleet#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#description AwsDeviceFleet#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#device_fleet_name TfDeviceFleet#device_fleet_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#device_fleet_name AwsDeviceFleet#device_fleet_name}
   */
   readonly deviceFleetName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#enable_iot_role_alias TfDeviceFleet#enable_iot_role_alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#enable_iot_role_alias AwsDeviceFleet#enable_iot_role_alias}
   */
   readonly enableIotRoleAlias?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#id TfDeviceFleet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#id AwsDeviceFleet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,33 +28,33 @@ export interface TfDeviceFleetConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#region TfDeviceFleet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#region AwsDeviceFleet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#role_arn TfDeviceFleet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#role_arn AwsDeviceFleet#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#tags TfDeviceFleet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#tags AwsDeviceFleet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#tags_all TfDeviceFleet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#tags_all AwsDeviceFleet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * output_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#output_config TfDeviceFleet#output_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#output_config AwsDeviceFleet#output_config}
   */
-  readonly outputConfig: TfDeviceFleet.OutputConfigProperty;
+  readonly outputConfig: AwsDeviceFleet.OutputConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet aws_sagemaker_device_fleet}
 */
-export class TfDeviceFleet extends cdktn.TerraformResource {
+export class AwsDeviceFleet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfDeviceFleet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDeviceFleet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDeviceFleet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDeviceFleet to import
-  * @param importFromId The id of the existing TfDeviceFleet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDeviceFleet to import is found
+  * @param importToId The construct id used in the generated config for the AwsDeviceFleet to import
+  * @param importFromId The id of the existing AwsDeviceFleet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDeviceFleet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_device_fleet", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfDeviceFleet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDeviceFleetConfig
+  * @param options AwsDeviceFleetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDeviceFleetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDeviceFleetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_device_fleet',
       terraformGeneratorMetadata: {
@@ -250,11 +250,11 @@ export class TfDeviceFleet extends cdktn.TerraformResource {
   }
 
   // output_config - computed: false, optional: false, required: true
-  private _outputConfig = new TfDeviceFleet.OutputConfigPropertyOutputReference(this, "output_config");
+  private _outputConfig = new AwsDeviceFleet.OutputConfigPropertyOutputReference(this, "output_config");
   public get outputConfig() {
     return this._outputConfig;
   }
-  public putOutputConfig(value: TfDeviceFleet.OutputConfigProperty) {
+  public putOutputConfig(value: AwsDeviceFleet.OutputConfigProperty) {
     this._outputConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -276,7 +276,7 @@ export class TfDeviceFleet extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      output_config: tfDeviceFleetOutputConfigPropertyToTerraform(this._outputConfig.internalValue),
+      output_config: awsDeviceFleetOutputConfigPropertyToTerraform(this._outputConfig.internalValue),
     };
   }
 
@@ -331,10 +331,10 @@ export class TfDeviceFleet extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       output_config: {
-        value: tfDeviceFleetOutputConfigPropertyToHclTerraform(this._outputConfig.internalValue),
+        value: awsDeviceFleetOutputConfigPropertyToHclTerraform(this._outputConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDeviceFleet.OutputConfigPropertyList",
+        storageClassType: "AwsDeviceFleet.OutputConfigPropertyList",
       },
     };
 
@@ -343,7 +343,7 @@ export class TfDeviceFleet extends cdktn.TerraformResource {
   }
 }
 
-export function tfDeviceFleetOutputConfigPropertyToTerraform(struct?: TfDeviceFleet.OutputConfigPropertyOutputReference | TfDeviceFleet.OutputConfigProperty): any {
+export function awsDeviceFleetOutputConfigPropertyToTerraform(struct?: AwsDeviceFleet.OutputConfigPropertyOutputReference | AwsDeviceFleet.OutputConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,7 +355,7 @@ export function tfDeviceFleetOutputConfigPropertyToTerraform(struct?: TfDeviceFl
 }
 
 
-export function tfDeviceFleetOutputConfigPropertyToHclTerraform(struct?: TfDeviceFleet.OutputConfigPropertyOutputReference | TfDeviceFleet.OutputConfigProperty): any {
+export function awsDeviceFleetOutputConfigPropertyToHclTerraform(struct?: AwsDeviceFleet.OutputConfigPropertyOutputReference | AwsDeviceFleet.OutputConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,14 +380,14 @@ export function tfDeviceFleetOutputConfigPropertyToHclTerraform(struct?: TfDevic
 }
 
 
-export namespace TfDeviceFleet {
+export namespace AwsDeviceFleet {
 export interface OutputConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#kms_key_id TfDeviceFleet#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#kms_key_id AwsDeviceFleet#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#s3_output_location TfDeviceFleet#s3_output_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_device_fleet#s3_output_location AwsDeviceFleet#s3_output_location}
   */
   readonly s3OutputLocation: string;
 }

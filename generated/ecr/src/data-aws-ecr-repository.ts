@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRepositoryConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRepositoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository#id DataTfRepository#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository#id DataAwsRepository#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository#name DataTfRepository#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository#name DataAwsRepository#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository#region DataTfRepository#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository#region DataAwsRepository#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository#registry_id DataTfRepository#registry_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository#registry_id DataAwsRepository#registry_id}
   */
   readonly registryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository#tags DataTfRepository#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository#tags DataAwsRepository#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface DataTfRepositoryConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository aws_ecr_repository}
 */
-export class DataTfRepository extends cdktn.TerraformDataSource {
+export class DataAwsRepository extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfRepository extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRepository resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRepository resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRepository to import
-  * @param importFromId The id of the existing DataTfRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRepository to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRepository to import
+  * @param importFromId The id of the existing DataAwsRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecr_repository#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRepository to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecr_repository", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfRepository extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRepositoryConfig
+  * @param options DataAwsRepositoryConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfRepositoryConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsRepositoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecr_repository',
       terraformGeneratorMetadata: {
@@ -101,7 +101,7 @@ export class DataTfRepository extends cdktn.TerraformDataSource {
   }
 
   // encryption_configuration - computed: true, optional: false, required: false
-  private _encryptionConfiguration = new DataTfRepository.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
+  private _encryptionConfiguration = new DataAwsRepository.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
@@ -123,7 +123,7 @@ export class DataTfRepository extends cdktn.TerraformDataSource {
   }
 
   // image_scanning_configuration - computed: true, optional: false, required: false
-  private _imageScanningConfiguration = new DataTfRepository.ImageScanningConfigurationPropertyList(this, "image_scanning_configuration", false);
+  private _imageScanningConfiguration = new DataAwsRepository.ImageScanningConfigurationPropertyList(this, "image_scanning_configuration", false);
   public get imageScanningConfiguration() {
     return this._imageScanningConfiguration;
   }
@@ -134,7 +134,7 @@ export class DataTfRepository extends cdktn.TerraformDataSource {
   }
 
   // image_tag_mutability_exclusion_filter - computed: true, optional: false, required: false
-  private _imageTagMutabilityExclusionFilter = new DataTfRepository.ImageTagMutabilityExclusionFilterPropertyList(this, "image_tag_mutability_exclusion_filter", false);
+  private _imageTagMutabilityExclusionFilter = new DataAwsRepository.ImageTagMutabilityExclusionFilterPropertyList(this, "image_tag_mutability_exclusion_filter", false);
   public get imageTagMutabilityExclusionFilter() {
     return this._imageTagMutabilityExclusionFilter;
   }
@@ -263,7 +263,7 @@ export class DataTfRepository extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfRepositoryEncryptionConfigurationPropertyToTerraform(struct?: DataTfRepository.EncryptionConfigurationProperty): any {
+export function dataAwsRepositoryEncryptionConfigurationPropertyToTerraform(struct?: DataAwsRepository.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -273,7 +273,7 @@ export function dataTfRepositoryEncryptionConfigurationPropertyToTerraform(struc
 }
 
 
-export function dataTfRepositoryEncryptionConfigurationPropertyToHclTerraform(struct?: DataTfRepository.EncryptionConfigurationProperty): any {
+export function dataAwsRepositoryEncryptionConfigurationPropertyToHclTerraform(struct?: DataAwsRepository.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function dataTfRepositoryEncryptionConfigurationPropertyToHclTerraform(st
 }
 
 
-export function dataTfRepositoryImageScanningConfigurationPropertyToTerraform(struct?: DataTfRepository.ImageScanningConfigurationProperty): any {
+export function dataAwsRepositoryImageScanningConfigurationPropertyToTerraform(struct?: DataAwsRepository.ImageScanningConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function dataTfRepositoryImageScanningConfigurationPropertyToTerraform(st
 }
 
 
-export function dataTfRepositoryImageScanningConfigurationPropertyToHclTerraform(struct?: DataTfRepository.ImageScanningConfigurationProperty): any {
+export function dataAwsRepositoryImageScanningConfigurationPropertyToHclTerraform(struct?: DataAwsRepository.ImageScanningConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function dataTfRepositoryImageScanningConfigurationPropertyToHclTerraform
 }
 
 
-export function dataTfRepositoryImageTagMutabilityExclusionFilterPropertyToTerraform(struct?: DataTfRepository.ImageTagMutabilityExclusionFilterProperty): any {
+export function dataAwsRepositoryImageTagMutabilityExclusionFilterPropertyToTerraform(struct?: DataAwsRepository.ImageTagMutabilityExclusionFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function dataTfRepositoryImageTagMutabilityExclusionFilterPropertyToTerra
 }
 
 
-export function dataTfRepositoryImageTagMutabilityExclusionFilterPropertyToHclTerraform(struct?: DataTfRepository.ImageTagMutabilityExclusionFilterProperty): any {
+export function dataAwsRepositoryImageTagMutabilityExclusionFilterPropertyToHclTerraform(struct?: DataAwsRepository.ImageTagMutabilityExclusionFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function dataTfRepositoryImageTagMutabilityExclusionFilterPropertyToHclTe
 }
 
 
-export namespace DataTfRepository {
+export namespace DataAwsRepository {
 export interface EncryptionConfigurationProperty {
 }
 export class EncryptionConfigurationPropertyOutputReference extends cdktn.ComplexObject {

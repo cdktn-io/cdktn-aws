@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPipelineConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPipelineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#id TfPipeline#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#id AwsPipeline#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_definition TfPipeline#pipeline_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_definition AwsPipeline#pipeline_definition}
   */
   readonly pipelineDefinition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_description TfPipeline#pipeline_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_description AwsPipeline#pipeline_description}
   */
   readonly pipelineDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_display_name TfPipeline#pipeline_display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_display_name AwsPipeline#pipeline_display_name}
   */
   readonly pipelineDisplayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_name TfPipeline#pipeline_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_name AwsPipeline#pipeline_name}
   */
   readonly pipelineName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#region TfPipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#region AwsPipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#role_arn TfPipeline#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#role_arn AwsPipeline#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#tags TfPipeline#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#tags AwsPipeline#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#tags_all TfPipeline#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#tags_all AwsPipeline#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * parallelism_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#parallelism_configuration TfPipeline#parallelism_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#parallelism_configuration AwsPipeline#parallelism_configuration}
   */
-  readonly parallelismConfiguration?: TfPipeline.ParallelismConfigurationProperty;
+  readonly parallelismConfiguration?: AwsPipeline.ParallelismConfigurationProperty;
   /**
   * pipeline_definition_s3_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_definition_s3_location TfPipeline#pipeline_definition_s3_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_definition_s3_location AwsPipeline#pipeline_definition_s3_location}
   */
-  readonly pipelineDefinitionS3Location?: TfPipeline.PipelineDefinitionS3LocationProperty;
+  readonly pipelineDefinitionS3Location?: AwsPipeline.PipelineDefinitionS3LocationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline aws_sagemaker_pipeline}
 */
-export class TfPipeline extends cdktn.TerraformResource {
+export class AwsPipeline extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPipeline resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPipeline resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPipeline to import
-  * @param importFromId The id of the existing TfPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPipeline to import is found
+  * @param importToId The construct id used in the generated config for the AwsPipeline to import
+  * @param importFromId The id of the existing AwsPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPipeline to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_pipeline", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class TfPipeline extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPipelineConfig
+  * @param options AwsPipelineConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPipelineConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPipelineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_pipeline',
       terraformGeneratorMetadata: {
@@ -273,11 +273,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 
   // parallelism_configuration - computed: false, optional: true, required: false
-  private _parallelismConfiguration = new TfPipeline.ParallelismConfigurationPropertyOutputReference(this, "parallelism_configuration");
+  private _parallelismConfiguration = new AwsPipeline.ParallelismConfigurationPropertyOutputReference(this, "parallelism_configuration");
   public get parallelismConfiguration() {
     return this._parallelismConfiguration;
   }
-  public putParallelismConfiguration(value: TfPipeline.ParallelismConfigurationProperty) {
+  public putParallelismConfiguration(value: AwsPipeline.ParallelismConfigurationProperty) {
     this._parallelismConfiguration.internalValue = value;
   }
   public resetParallelismConfiguration() {
@@ -289,11 +289,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 
   // pipeline_definition_s3_location - computed: false, optional: true, required: false
-  private _pipelineDefinitionS3Location = new TfPipeline.PipelineDefinitionS3LocationPropertyOutputReference(this, "pipeline_definition_s3_location");
+  private _pipelineDefinitionS3Location = new AwsPipeline.PipelineDefinitionS3LocationPropertyOutputReference(this, "pipeline_definition_s3_location");
   public get pipelineDefinitionS3Location() {
     return this._pipelineDefinitionS3Location;
   }
-  public putPipelineDefinitionS3Location(value: TfPipeline.PipelineDefinitionS3LocationProperty) {
+  public putPipelineDefinitionS3Location(value: AwsPipeline.PipelineDefinitionS3LocationProperty) {
     this._pipelineDefinitionS3Location.internalValue = value;
   }
   public resetPipelineDefinitionS3Location() {
@@ -319,8 +319,8 @@ export class TfPipeline extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      parallelism_configuration: tfPipelineParallelismConfigurationPropertyToTerraform(this._parallelismConfiguration.internalValue),
-      pipeline_definition_s3_location: tfPipelinePipelineDefinitionS3LocationPropertyToTerraform(this._pipelineDefinitionS3Location.internalValue),
+      parallelism_configuration: awsPipelineParallelismConfigurationPropertyToTerraform(this._parallelismConfiguration.internalValue),
+      pipeline_definition_s3_location: awsPipelinePipelineDefinitionS3LocationPropertyToTerraform(this._pipelineDefinitionS3Location.internalValue),
     };
   }
 
@@ -381,16 +381,16 @@ export class TfPipeline extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       parallelism_configuration: {
-        value: tfPipelineParallelismConfigurationPropertyToHclTerraform(this._parallelismConfiguration.internalValue),
+        value: awsPipelineParallelismConfigurationPropertyToHclTerraform(this._parallelismConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipeline.ParallelismConfigurationPropertyList",
+        storageClassType: "AwsPipeline.ParallelismConfigurationPropertyList",
       },
       pipeline_definition_s3_location: {
-        value: tfPipelinePipelineDefinitionS3LocationPropertyToHclTerraform(this._pipelineDefinitionS3Location.internalValue),
+        value: awsPipelinePipelineDefinitionS3LocationPropertyToHclTerraform(this._pipelineDefinitionS3Location.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipeline.PipelineDefinitionS3LocationPropertyList",
+        storageClassType: "AwsPipeline.PipelineDefinitionS3LocationPropertyList",
       },
     };
 
@@ -399,7 +399,7 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 }
 
-export function tfPipelineParallelismConfigurationPropertyToTerraform(struct?: TfPipeline.ParallelismConfigurationPropertyOutputReference | TfPipeline.ParallelismConfigurationProperty): any {
+export function awsPipelineParallelismConfigurationPropertyToTerraform(struct?: AwsPipeline.ParallelismConfigurationPropertyOutputReference | AwsPipeline.ParallelismConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,7 +410,7 @@ export function tfPipelineParallelismConfigurationPropertyToTerraform(struct?: T
 }
 
 
-export function tfPipelineParallelismConfigurationPropertyToHclTerraform(struct?: TfPipeline.ParallelismConfigurationPropertyOutputReference | TfPipeline.ParallelismConfigurationProperty): any {
+export function awsPipelineParallelismConfigurationPropertyToHclTerraform(struct?: AwsPipeline.ParallelismConfigurationPropertyOutputReference | AwsPipeline.ParallelismConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,7 +429,7 @@ export function tfPipelineParallelismConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export function tfPipelinePipelineDefinitionS3LocationPropertyToTerraform(struct?: TfPipeline.PipelineDefinitionS3LocationPropertyOutputReference | TfPipeline.PipelineDefinitionS3LocationProperty): any {
+export function awsPipelinePipelineDefinitionS3LocationPropertyToTerraform(struct?: AwsPipeline.PipelineDefinitionS3LocationPropertyOutputReference | AwsPipeline.PipelineDefinitionS3LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function tfPipelinePipelineDefinitionS3LocationPropertyToTerraform(struct
 }
 
 
-export function tfPipelinePipelineDefinitionS3LocationPropertyToHclTerraform(struct?: TfPipeline.PipelineDefinitionS3LocationPropertyOutputReference | TfPipeline.PipelineDefinitionS3LocationProperty): any {
+export function awsPipelinePipelineDefinitionS3LocationPropertyToHclTerraform(struct?: AwsPipeline.PipelineDefinitionS3LocationPropertyOutputReference | AwsPipeline.PipelineDefinitionS3LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,10 +473,10 @@ export function tfPipelinePipelineDefinitionS3LocationPropertyToHclTerraform(str
 }
 
 
-export namespace TfPipeline {
+export namespace AwsPipeline {
 export interface ParallelismConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#max_parallel_execution_steps TfPipeline#max_parallel_execution_steps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#max_parallel_execution_steps AwsPipeline#max_parallel_execution_steps}
   */
   readonly maxParallelExecutionSteps: number;
 }
@@ -527,15 +527,15 @@ export class ParallelismConfigurationPropertyOutputReference extends cdktn.Compl
 }
 export interface PipelineDefinitionS3LocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#bucket TfPipeline#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#bucket AwsPipeline#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#object_key TfPipeline#object_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#object_key AwsPipeline#object_key}
   */
   readonly objectKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#version_id TfPipeline#version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#version_id AwsPipeline#version_id}
   */
   readonly versionId?: string;
 }

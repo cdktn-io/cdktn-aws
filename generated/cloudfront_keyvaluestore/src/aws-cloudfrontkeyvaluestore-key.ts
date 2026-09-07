@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfKeyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsKeyConfig extends cdktn.TerraformMetaArguments {
   /**
   * The key to put.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_key#key TfKey#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_key#key AwsKey#key}
   */
   readonly key: string;
   /**
   * The Amazon Resource Name (ARN) of the Key Value Store.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_key#key_value_store_arn TfKey#key_value_store_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_key#key_value_store_arn AwsKey#key_value_store_arn}
   */
   readonly keyValueStoreArn: string;
   /**
   * The value to put.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_key#value TfKey#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_key#value AwsKey#value}
   */
   readonly value: string;
 }
@@ -29,7 +29,7 @@ export interface TfKeyConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_key aws_cloudfrontkeyvaluestore_key}
 */
-export class TfKey extends cdktn.TerraformResource {
+export class AwsKey extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class TfKey extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfKey resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsKey resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfKey to import
-  * @param importFromId The id of the existing TfKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_key#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfKey to import is found
+  * @param importToId The construct id used in the generated config for the AwsKey to import
+  * @param importFromId The id of the existing AwsKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfrontkeyvaluestore_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfrontkeyvaluestore_key", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class TfKey extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfKeyConfig
+  * @param options AwsKeyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfKeyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfrontkeyvaluestore_key',
       terraformGeneratorMetadata: {

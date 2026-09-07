@@ -25,7 +25,7 @@
     "targets": {
       "go": {
         "moduleName": "github.com/cdktn-io/cdktn-aws-go",
-        "packageName": "awsappintegrations"
+        "packageName": "appintegrations"
       }
     }
   },

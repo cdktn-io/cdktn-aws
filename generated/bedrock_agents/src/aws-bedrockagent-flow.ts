@@ -5,51 +5,51 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFlowConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFlowConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#customer_encryption_key_arn TfFlow#customer_encryption_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#customer_encryption_key_arn AwsFlow#customer_encryption_key_arn}
   */
   readonly customerEncryptionKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#description TfFlow#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#description AwsFlow#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#execution_role_arn TfFlow#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#execution_role_arn AwsFlow#execution_role_arn}
   */
   readonly executionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name TfFlow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name AwsFlow#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#region TfFlow#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#region AwsFlow#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#tags TfFlow#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#tags AwsFlow#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#definition TfFlow#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#definition AwsFlow#definition}
   */
-  readonly definition?: TfFlow.DefinitionProperty[] | cdktn.IResolvable;
+  readonly definition?: AwsFlow.DefinitionProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#timeouts TfFlow#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#timeouts AwsFlow#timeouts}
   */
-  readonly timeouts?: TfFlow.TimeoutsProperty;
+  readonly timeouts?: AwsFlow.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow aws_bedrockagent_flow}
 */
-export class TfFlow extends cdktn.TerraformResource {
+export class AwsFlow extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -60,11 +60,11 @@ export class TfFlow extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFlow resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFlow resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFlow to import
-  * @param importFromId The id of the existing TfFlow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFlow to import is found
+  * @param importToId The construct id used in the generated config for the AwsFlow to import
+  * @param importFromId The id of the existing AwsFlow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFlow to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagent_flow", importId: importFromId, provider });
@@ -79,9 +79,9 @@ export class TfFlow extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFlowConfig
+  * @param options AwsFlowConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFlowConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFlowConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagent_flow',
       terraformGeneratorMetadata: {
@@ -238,11 +238,11 @@ export class TfFlow extends cdktn.TerraformResource {
   }
 
   // definition - computed: false, optional: true, required: false
-  private _definition = new TfFlow.DefinitionPropertyList(this, "definition", false);
+  private _definition = new AwsFlow.DefinitionPropertyList(this, "definition", false);
   public get definition() {
     return this._definition;
   }
-  public putDefinition(value: TfFlow.DefinitionProperty[] | cdktn.IResolvable) {
+  public putDefinition(value: AwsFlow.DefinitionProperty[] | cdktn.IResolvable) {
     this._definition.internalValue = value;
   }
   public resetDefinition() {
@@ -254,11 +254,11 @@ export class TfFlow extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfFlow.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsFlow.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfFlow.TimeoutsProperty) {
+  public putTimeouts(value: AwsFlow.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -281,8 +281,8 @@ export class TfFlow extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      definition: cdktn.listMapper(tfFlowDefinitionPropertyToTerraform, true)(this._definition.internalValue),
-      timeouts: tfFlowTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      definition: cdktn.listMapper(awsFlowDefinitionPropertyToTerraform, true)(this._definition.internalValue),
+      timeouts: awsFlowTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -325,16 +325,16 @@ export class TfFlow extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       definition: {
-        value: cdktn.listMapperHcl(tfFlowDefinitionPropertyToHclTerraform, true)(this._definition.internalValue),
+        value: cdktn.listMapperHcl(awsFlowDefinitionPropertyToHclTerraform, true)(this._definition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFlow.DefinitionPropertyList",
+        storageClassType: "AwsFlow.DefinitionPropertyList",
       },
       timeouts: {
-        value: tfFlowTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsFlowTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfFlow.TimeoutsProperty",
+        storageClassType: "AwsFlow.TimeoutsProperty",
       },
     };
 
@@ -343,7 +343,7 @@ export class TfFlow extends cdktn.TerraformResource {
   }
 }
 
-export function tfFlowConditionalPropertyToTerraform(struct?: TfFlow.ConditionalProperty | cdktn.IResolvable): any {
+export function awsFlowConditionalPropertyToTerraform(struct?: AwsFlow.ConditionalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function tfFlowConditionalPropertyToTerraform(struct?: TfFlow.Conditional
 }
 
 
-export function tfFlowConditionalPropertyToHclTerraform(struct?: TfFlow.ConditionalProperty | cdktn.IResolvable): any {
+export function awsFlowConditionalPropertyToHclTerraform(struct?: AwsFlow.ConditionalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,7 +373,7 @@ export function tfFlowConditionalPropertyToHclTerraform(struct?: TfFlow.Conditio
 }
 
 
-export function tfFlowDataPropertyToTerraform(struct?: TfFlow.DataProperty | cdktn.IResolvable): any {
+export function awsFlowDataPropertyToTerraform(struct?: AwsFlow.DataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function tfFlowDataPropertyToTerraform(struct?: TfFlow.DataProperty | cdk
 }
 
 
-export function tfFlowDataPropertyToHclTerraform(struct?: TfFlow.DataProperty | cdktn.IResolvable): any {
+export function awsFlowDataPropertyToHclTerraform(struct?: AwsFlow.DataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,32 +410,32 @@ export function tfFlowDataPropertyToHclTerraform(struct?: TfFlow.DataProperty | 
 }
 
 
-export function tfFlowDefinitionConnectionConfigurationPropertyToTerraform(struct?: TfFlow.DefinitionConnectionConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionConnectionConfigurationPropertyToTerraform(struct?: AwsFlow.DefinitionConnectionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    conditional: cdktn.listMapper(tfFlowConditionalPropertyToTerraform, true)(struct!.conditional),
-    data: cdktn.listMapper(tfFlowDataPropertyToTerraform, true)(struct!.data),
+    conditional: cdktn.listMapper(awsFlowConditionalPropertyToTerraform, true)(struct!.conditional),
+    data: cdktn.listMapper(awsFlowDataPropertyToTerraform, true)(struct!.data),
   }
 }
 
 
-export function tfFlowDefinitionConnectionConfigurationPropertyToHclTerraform(struct?: TfFlow.DefinitionConnectionConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionConnectionConfigurationPropertyToHclTerraform(struct?: AwsFlow.DefinitionConnectionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     conditional: {
-      value: cdktn.listMapperHcl(tfFlowConditionalPropertyToHclTerraform, true)(struct!.conditional),
+      value: cdktn.listMapperHcl(awsFlowConditionalPropertyToHclTerraform, true)(struct!.conditional),
       isBlock: true,
       type: "list",
       storageClassType: "ConditionalPropertyList",
     },
     data: {
-      value: cdktn.listMapperHcl(tfFlowDataPropertyToHclTerraform, true)(struct!.data),
+      value: cdktn.listMapperHcl(awsFlowDataPropertyToHclTerraform, true)(struct!.data),
       isBlock: true,
       type: "list",
       storageClassType: "DataPropertyList",
@@ -447,7 +447,7 @@ export function tfFlowDefinitionConnectionConfigurationPropertyToHclTerraform(st
 }
 
 
-export function tfFlowConnectionPropertyToTerraform(struct?: TfFlow.ConnectionProperty | cdktn.IResolvable): any {
+export function awsFlowConnectionPropertyToTerraform(struct?: AwsFlow.ConnectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -457,12 +457,12 @@ export function tfFlowConnectionPropertyToTerraform(struct?: TfFlow.ConnectionPr
     source: cdktn.stringToTerraform(struct!.source),
     target: cdktn.stringToTerraform(struct!.target),
     type: cdktn.stringToTerraform(struct!.type),
-    configuration: cdktn.listMapper(tfFlowDefinitionConnectionConfigurationPropertyToTerraform, true)(struct!.configuration),
+    configuration: cdktn.listMapper(awsFlowDefinitionConnectionConfigurationPropertyToTerraform, true)(struct!.configuration),
   }
 }
 
 
-export function tfFlowConnectionPropertyToHclTerraform(struct?: TfFlow.ConnectionProperty | cdktn.IResolvable): any {
+export function awsFlowConnectionPropertyToHclTerraform(struct?: AwsFlow.ConnectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function tfFlowConnectionPropertyToHclTerraform(struct?: TfFlow.Connectio
       storageClassType: "string",
     },
     configuration: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionConnectionConfigurationPropertyToHclTerraform, true)(struct!.configuration),
+      value: cdktn.listMapperHcl(awsFlowDefinitionConnectionConfigurationPropertyToHclTerraform, true)(struct!.configuration),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionConnectionConfigurationPropertyList",
@@ -505,7 +505,7 @@ export function tfFlowConnectionPropertyToHclTerraform(struct?: TfFlow.Connectio
 }
 
 
-export function tfFlowAgentPropertyToTerraform(struct?: TfFlow.AgentProperty | cdktn.IResolvable): any {
+export function awsFlowAgentPropertyToTerraform(struct?: AwsFlow.AgentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -516,7 +516,7 @@ export function tfFlowAgentPropertyToTerraform(struct?: TfFlow.AgentProperty | c
 }
 
 
-export function tfFlowAgentPropertyToHclTerraform(struct?: TfFlow.AgentProperty | cdktn.IResolvable): any {
+export function awsFlowAgentPropertyToHclTerraform(struct?: AwsFlow.AgentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,7 +535,7 @@ export function tfFlowAgentPropertyToHclTerraform(struct?: TfFlow.AgentProperty 
 }
 
 
-export function tfFlowCollectorPropertyToTerraform(struct?: TfFlow.CollectorProperty | cdktn.IResolvable): any {
+export function awsFlowCollectorPropertyToTerraform(struct?: AwsFlow.CollectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -545,7 +545,7 @@ export function tfFlowCollectorPropertyToTerraform(struct?: TfFlow.CollectorProp
 }
 
 
-export function tfFlowCollectorPropertyToHclTerraform(struct?: TfFlow.CollectorProperty | cdktn.IResolvable): any {
+export function awsFlowCollectorPropertyToHclTerraform(struct?: AwsFlow.CollectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,7 +556,7 @@ export function tfFlowCollectorPropertyToHclTerraform(struct?: TfFlow.CollectorP
 }
 
 
-export function tfFlowDefinitionNodeConfigurationConditionConditionPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationConditionConditionProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationConditionConditionPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationConditionConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -568,7 +568,7 @@ export function tfFlowDefinitionNodeConfigurationConditionConditionPropertyToTer
 }
 
 
-export function tfFlowDefinitionNodeConfigurationConditionConditionPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationConditionConditionProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationConditionConditionPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationConditionConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -593,25 +593,25 @@ export function tfFlowDefinitionNodeConfigurationConditionConditionPropertyToHcl
 }
 
 
-export function tfFlowDefinitionNodeConfigurationConditionPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationConditionProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationConditionPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    condition: cdktn.listMapper(tfFlowDefinitionNodeConfigurationConditionConditionPropertyToTerraform, true)(struct!.condition),
+    condition: cdktn.listMapper(awsFlowDefinitionNodeConfigurationConditionConditionPropertyToTerraform, true)(struct!.condition),
   }
 }
 
 
-export function tfFlowDefinitionNodeConfigurationConditionPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationConditionProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationConditionPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     condition: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationConditionConditionPropertyToHclTerraform, true)(struct!.condition),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationConditionConditionPropertyToHclTerraform, true)(struct!.condition),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationConditionConditionPropertyList",
@@ -623,7 +623,7 @@ export function tfFlowDefinitionNodeConfigurationConditionPropertyToHclTerraform
 }
 
 
-export function tfFlowInlineCodePropertyToTerraform(struct?: TfFlow.InlineCodeProperty | cdktn.IResolvable): any {
+export function awsFlowInlineCodePropertyToTerraform(struct?: AwsFlow.InlineCodeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -635,7 +635,7 @@ export function tfFlowInlineCodePropertyToTerraform(struct?: TfFlow.InlineCodePr
 }
 
 
-export function tfFlowInlineCodePropertyToHclTerraform(struct?: TfFlow.InlineCodeProperty | cdktn.IResolvable): any {
+export function awsFlowInlineCodePropertyToHclTerraform(struct?: AwsFlow.InlineCodeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,7 +660,7 @@ export function tfFlowInlineCodePropertyToHclTerraform(struct?: TfFlow.InlineCod
 }
 
 
-export function tfFlowDefinitionNodeConfigurationInputPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationInputProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationInputPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationInputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -670,7 +670,7 @@ export function tfFlowDefinitionNodeConfigurationInputPropertyToTerraform(struct
 }
 
 
-export function tfFlowDefinitionNodeConfigurationInputPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationInputProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationInputPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationInputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -681,7 +681,7 @@ export function tfFlowDefinitionNodeConfigurationInputPropertyToHclTerraform(str
 }
 
 
-export function tfFlowIteratorPropertyToTerraform(struct?: TfFlow.IteratorProperty | cdktn.IResolvable): any {
+export function awsFlowIteratorPropertyToTerraform(struct?: AwsFlow.IteratorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -691,7 +691,7 @@ export function tfFlowIteratorPropertyToTerraform(struct?: TfFlow.IteratorProper
 }
 
 
-export function tfFlowIteratorPropertyToHclTerraform(struct?: TfFlow.IteratorProperty | cdktn.IResolvable): any {
+export function awsFlowIteratorPropertyToHclTerraform(struct?: AwsFlow.IteratorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -702,7 +702,7 @@ export function tfFlowIteratorPropertyToHclTerraform(struct?: TfFlow.IteratorPro
 }
 
 
-export function tfFlowDefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,7 +714,7 @@ export function tfFlowDefinitionNodeConfigurationKnowledgeBaseGuardrailConfigura
 }
 
 
-export function tfFlowDefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -739,7 +739,7 @@ export function tfFlowDefinitionNodeConfigurationKnowledgeBaseGuardrailConfigura
 }
 
 
-export function tfFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -753,7 +753,7 @@ export function tfFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigura
 }
 
 
-export function tfFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -790,25 +790,25 @@ export function tfFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigura
 }
 
 
-export function tfFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    text: cdktn.listMapper(tfFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextPropertyToTerraform, true)(struct!.text),
+    text: cdktn.listMapper(awsFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextPropertyToTerraform, true)(struct!.text),
   }
 }
 
 
-export function tfFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     text: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextPropertyToHclTerraform, true)(struct!.text),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextPropertyToHclTerraform, true)(struct!.text),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextPropertyList",
@@ -820,7 +820,7 @@ export function tfFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigura
 }
 
 
-export function tfFlowKnowledgeBasePropertyToTerraform(struct?: TfFlow.KnowledgeBaseProperty | cdktn.IResolvable): any {
+export function awsFlowKnowledgeBasePropertyToTerraform(struct?: AwsFlow.KnowledgeBaseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -829,13 +829,13 @@ export function tfFlowKnowledgeBasePropertyToTerraform(struct?: TfFlow.Knowledge
     knowledge_base_id: cdktn.stringToTerraform(struct!.knowledgeBaseId),
     model_id: cdktn.stringToTerraform(struct!.modelId),
     number_of_results: cdktn.numberToTerraform(struct!.numberOfResults),
-    guardrail_configuration: cdktn.listMapper(tfFlowDefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationPropertyToTerraform, true)(struct!.guardrailConfiguration),
-    inference_configuration: cdktn.listMapper(tfFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationPropertyToTerraform, true)(struct!.inferenceConfiguration),
+    guardrail_configuration: cdktn.listMapper(awsFlowDefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationPropertyToTerraform, true)(struct!.guardrailConfiguration),
+    inference_configuration: cdktn.listMapper(awsFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationPropertyToTerraform, true)(struct!.inferenceConfiguration),
   }
 }
 
 
-export function tfFlowKnowledgeBasePropertyToHclTerraform(struct?: TfFlow.KnowledgeBaseProperty | cdktn.IResolvable): any {
+export function awsFlowKnowledgeBasePropertyToHclTerraform(struct?: AwsFlow.KnowledgeBaseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -860,13 +860,13 @@ export function tfFlowKnowledgeBasePropertyToHclTerraform(struct?: TfFlow.Knowle
       storageClassType: "number",
     },
     guardrail_configuration: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationPropertyToHclTerraform, true)(struct!.guardrailConfiguration),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationPropertyToHclTerraform, true)(struct!.guardrailConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationPropertyList",
     },
     inference_configuration: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationPropertyToHclTerraform, true)(struct!.inferenceConfiguration),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationPropertyToHclTerraform, true)(struct!.inferenceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationPropertyList",
@@ -878,7 +878,7 @@ export function tfFlowKnowledgeBasePropertyToHclTerraform(struct?: TfFlow.Knowle
 }
 
 
-export function tfFlowLambdaFunctionPropertyToTerraform(struct?: TfFlow.LambdaFunctionProperty | cdktn.IResolvable): any {
+export function awsFlowLambdaFunctionPropertyToTerraform(struct?: AwsFlow.LambdaFunctionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -889,7 +889,7 @@ export function tfFlowLambdaFunctionPropertyToTerraform(struct?: TfFlow.LambdaFu
 }
 
 
-export function tfFlowLambdaFunctionPropertyToHclTerraform(struct?: TfFlow.LambdaFunctionProperty | cdktn.IResolvable): any {
+export function awsFlowLambdaFunctionPropertyToHclTerraform(struct?: AwsFlow.LambdaFunctionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -908,7 +908,7 @@ export function tfFlowLambdaFunctionPropertyToHclTerraform(struct?: TfFlow.Lambd
 }
 
 
-export function tfFlowLexPropertyToTerraform(struct?: TfFlow.LexProperty | cdktn.IResolvable): any {
+export function awsFlowLexPropertyToTerraform(struct?: AwsFlow.LexProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -920,7 +920,7 @@ export function tfFlowLexPropertyToTerraform(struct?: TfFlow.LexProperty | cdktn
 }
 
 
-export function tfFlowLexPropertyToHclTerraform(struct?: TfFlow.LexProperty | cdktn.IResolvable): any {
+export function awsFlowLexPropertyToHclTerraform(struct?: AwsFlow.LexProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -945,7 +945,7 @@ export function tfFlowLexPropertyToHclTerraform(struct?: TfFlow.LexProperty | cd
 }
 
 
-export function tfFlowDefinitionNodeConfigurationOutputPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationOutputProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationOutputPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationOutputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -955,7 +955,7 @@ export function tfFlowDefinitionNodeConfigurationOutputPropertyToTerraform(struc
 }
 
 
-export function tfFlowDefinitionNodeConfigurationOutputPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationOutputProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationOutputPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationOutputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -966,7 +966,7 @@ export function tfFlowDefinitionNodeConfigurationOutputPropertyToHclTerraform(st
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptGuardrailConfigurationPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptGuardrailConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptGuardrailConfigurationPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptGuardrailConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -978,7 +978,7 @@ export function tfFlowDefinitionNodeConfigurationPromptGuardrailConfigurationPro
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptGuardrailConfigurationPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptGuardrailConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptGuardrailConfigurationPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptGuardrailConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1003,7 +1003,7 @@ export function tfFlowDefinitionNodeConfigurationPromptGuardrailConfigurationPro
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1017,7 +1017,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1054,25 +1054,25 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    text: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextPropertyToTerraform, true)(struct!.text),
+    text: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextPropertyToTerraform, true)(struct!.text),
   }
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     text: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextPropertyToHclTerraform, true)(struct!.text),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextPropertyToHclTerraform, true)(struct!.text),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextPropertyList",
@@ -1084,7 +1084,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariablePropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariableProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariablePropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1095,7 +1095,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariablePropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariableProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariablePropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1114,7 +1114,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1125,7 +1125,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1144,19 +1144,19 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowContentPropertyToTerraform(struct?: TfFlow.ContentProperty | cdktn.IResolvable): any {
+export function awsFlowContentPropertyToTerraform(struct?: AwsFlow.ContentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     text: cdktn.stringToTerraform(struct!.text),
-    cache_point: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointPropertyToTerraform, true)(struct!.cachePoint),
+    cache_point: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointPropertyToTerraform, true)(struct!.cachePoint),
   }
 }
 
 
-export function tfFlowContentPropertyToHclTerraform(struct?: TfFlow.ContentProperty | cdktn.IResolvable): any {
+export function awsFlowContentPropertyToHclTerraform(struct?: AwsFlow.ContentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1169,7 +1169,7 @@ export function tfFlowContentPropertyToHclTerraform(struct?: TfFlow.ContentPrope
       storageClassType: "string",
     },
     cache_point: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointPropertyList",
@@ -1181,19 +1181,19 @@ export function tfFlowContentPropertyToHclTerraform(struct?: TfFlow.ContentPrope
 }
 
 
-export function tfFlowMessagePropertyToTerraform(struct?: TfFlow.MessageProperty | cdktn.IResolvable): any {
+export function awsFlowMessagePropertyToTerraform(struct?: AwsFlow.MessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     role: cdktn.stringToTerraform(struct!.role),
-    content: cdktn.listMapper(tfFlowContentPropertyToTerraform, true)(struct!.content),
+    content: cdktn.listMapper(awsFlowContentPropertyToTerraform, true)(struct!.content),
   }
 }
 
 
-export function tfFlowMessagePropertyToHclTerraform(struct?: TfFlow.MessageProperty | cdktn.IResolvable): any {
+export function awsFlowMessagePropertyToHclTerraform(struct?: AwsFlow.MessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1206,7 +1206,7 @@ export function tfFlowMessagePropertyToHclTerraform(struct?: TfFlow.MessagePrope
       storageClassType: "string",
     },
     content: {
-      value: cdktn.listMapperHcl(tfFlowContentPropertyToHclTerraform, true)(struct!.content),
+      value: cdktn.listMapperHcl(awsFlowContentPropertyToHclTerraform, true)(struct!.content),
       isBlock: true,
       type: "list",
       storageClassType: "ContentPropertyList",
@@ -1218,7 +1218,7 @@ export function tfFlowMessagePropertyToHclTerraform(struct?: TfFlow.MessagePrope
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1229,7 +1229,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1248,19 +1248,19 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowSystemPropertyToTerraform(struct?: TfFlow.SystemProperty | cdktn.IResolvable): any {
+export function awsFlowSystemPropertyToTerraform(struct?: AwsFlow.SystemProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     text: cdktn.stringToTerraform(struct!.text),
-    cache_point: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointPropertyToTerraform, true)(struct!.cachePoint),
+    cache_point: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointPropertyToTerraform, true)(struct!.cachePoint),
   }
 }
 
 
-export function tfFlowSystemPropertyToHclTerraform(struct?: TfFlow.SystemProperty | cdktn.IResolvable): any {
+export function awsFlowSystemPropertyToHclTerraform(struct?: AwsFlow.SystemProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1273,7 +1273,7 @@ export function tfFlowSystemPropertyToHclTerraform(struct?: TfFlow.SystemPropert
       storageClassType: "string",
     },
     cache_point: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointPropertyList",
@@ -1285,7 +1285,7 @@ export function tfFlowSystemPropertyToHclTerraform(struct?: TfFlow.SystemPropert
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1296,7 +1296,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1315,7 +1315,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowInputSchemaPropertyToTerraform(struct?: TfFlow.InputSchemaProperty | cdktn.IResolvable): any {
+export function awsFlowInputSchemaPropertyToTerraform(struct?: AwsFlow.InputSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1326,7 +1326,7 @@ export function tfFlowInputSchemaPropertyToTerraform(struct?: TfFlow.InputSchema
 }
 
 
-export function tfFlowInputSchemaPropertyToHclTerraform(struct?: TfFlow.InputSchemaProperty | cdktn.IResolvable): any {
+export function awsFlowInputSchemaPropertyToHclTerraform(struct?: AwsFlow.InputSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1345,7 +1345,7 @@ export function tfFlowInputSchemaPropertyToHclTerraform(struct?: TfFlow.InputSch
 }
 
 
-export function tfFlowToolSpecPropertyToTerraform(struct?: TfFlow.ToolSpecProperty | cdktn.IResolvable): any {
+export function awsFlowToolSpecPropertyToTerraform(struct?: AwsFlow.ToolSpecProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1353,12 +1353,12 @@ export function tfFlowToolSpecPropertyToTerraform(struct?: TfFlow.ToolSpecProper
   return {
     description: cdktn.stringToTerraform(struct!.description),
     name: cdktn.stringToTerraform(struct!.name),
-    input_schema: cdktn.listMapper(tfFlowInputSchemaPropertyToTerraform, true)(struct!.inputSchema),
+    input_schema: cdktn.listMapper(awsFlowInputSchemaPropertyToTerraform, true)(struct!.inputSchema),
   }
 }
 
 
-export function tfFlowToolSpecPropertyToHclTerraform(struct?: TfFlow.ToolSpecProperty | cdktn.IResolvable): any {
+export function awsFlowToolSpecPropertyToHclTerraform(struct?: AwsFlow.ToolSpecProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1377,7 +1377,7 @@ export function tfFlowToolSpecPropertyToHclTerraform(struct?: TfFlow.ToolSpecPro
       storageClassType: "string",
     },
     input_schema: {
-      value: cdktn.listMapperHcl(tfFlowInputSchemaPropertyToHclTerraform, true)(struct!.inputSchema),
+      value: cdktn.listMapperHcl(awsFlowInputSchemaPropertyToHclTerraform, true)(struct!.inputSchema),
       isBlock: true,
       type: "list",
       storageClassType: "InputSchemaPropertyList",
@@ -1389,32 +1389,32 @@ export function tfFlowToolSpecPropertyToHclTerraform(struct?: TfFlow.ToolSpecPro
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cache_point: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointPropertyToTerraform, true)(struct!.cachePoint),
-    tool_spec: cdktn.listMapper(tfFlowToolSpecPropertyToTerraform, true)(struct!.toolSpec),
+    cache_point: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointPropertyToTerraform, true)(struct!.cachePoint),
+    tool_spec: cdktn.listMapper(awsFlowToolSpecPropertyToTerraform, true)(struct!.toolSpec),
   }
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cache_point: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointPropertyList",
     },
     tool_spec: {
-      value: cdktn.listMapperHcl(tfFlowToolSpecPropertyToHclTerraform, true)(struct!.toolSpec),
+      value: cdktn.listMapperHcl(awsFlowToolSpecPropertyToHclTerraform, true)(struct!.toolSpec),
       isBlock: true,
       type: "list",
       storageClassType: "ToolSpecPropertyList",
@@ -1426,7 +1426,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowAnyPropertyToTerraform(struct?: TfFlow.AnyProperty | cdktn.IResolvable): any {
+export function awsFlowAnyPropertyToTerraform(struct?: AwsFlow.AnyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1436,7 +1436,7 @@ export function tfFlowAnyPropertyToTerraform(struct?: TfFlow.AnyProperty | cdktn
 }
 
 
-export function tfFlowAnyPropertyToHclTerraform(struct?: TfFlow.AnyProperty | cdktn.IResolvable): any {
+export function awsFlowAnyPropertyToHclTerraform(struct?: AwsFlow.AnyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1447,7 +1447,7 @@ export function tfFlowAnyPropertyToHclTerraform(struct?: TfFlow.AnyProperty | cd
 }
 
 
-export function tfFlowAutoPropertyToTerraform(struct?: TfFlow.AutoProperty | cdktn.IResolvable): any {
+export function awsFlowAutoPropertyToTerraform(struct?: AwsFlow.AutoProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1457,7 +1457,7 @@ export function tfFlowAutoPropertyToTerraform(struct?: TfFlow.AutoProperty | cdk
 }
 
 
-export function tfFlowAutoPropertyToHclTerraform(struct?: TfFlow.AutoProperty | cdktn.IResolvable): any {
+export function awsFlowAutoPropertyToHclTerraform(struct?: AwsFlow.AutoProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1468,7 +1468,7 @@ export function tfFlowAutoPropertyToHclTerraform(struct?: TfFlow.AutoProperty | 
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1479,7 +1479,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1498,39 +1498,39 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowToolChoicePropertyToTerraform(struct?: TfFlow.ToolChoiceProperty | cdktn.IResolvable): any {
+export function awsFlowToolChoicePropertyToTerraform(struct?: AwsFlow.ToolChoiceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    any: cdktn.listMapper(tfFlowAnyPropertyToTerraform, true)(struct!.any),
-    auto: cdktn.listMapper(tfFlowAutoPropertyToTerraform, true)(struct!.auto),
-    tool: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToTerraform, true)(struct!.tool),
+    any: cdktn.listMapper(awsFlowAnyPropertyToTerraform, true)(struct!.any),
+    auto: cdktn.listMapper(awsFlowAutoPropertyToTerraform, true)(struct!.auto),
+    tool: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToTerraform, true)(struct!.tool),
   }
 }
 
 
-export function tfFlowToolChoicePropertyToHclTerraform(struct?: TfFlow.ToolChoiceProperty | cdktn.IResolvable): any {
+export function awsFlowToolChoicePropertyToHclTerraform(struct?: AwsFlow.ToolChoiceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     any: {
-      value: cdktn.listMapperHcl(tfFlowAnyPropertyToHclTerraform, true)(struct!.any),
+      value: cdktn.listMapperHcl(awsFlowAnyPropertyToHclTerraform, true)(struct!.any),
       isBlock: true,
       type: "list",
       storageClassType: "AnyPropertyList",
     },
     auto: {
-      value: cdktn.listMapperHcl(tfFlowAutoPropertyToHclTerraform, true)(struct!.auto),
+      value: cdktn.listMapperHcl(awsFlowAutoPropertyToHclTerraform, true)(struct!.auto),
       isBlock: true,
       type: "list",
       storageClassType: "AutoPropertyList",
     },
     tool: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToHclTerraform, true)(struct!.tool),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToHclTerraform, true)(struct!.tool),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyList",
@@ -1542,32 +1542,32 @@ export function tfFlowToolChoicePropertyToHclTerraform(struct?: TfFlow.ToolChoic
 }
 
 
-export function tfFlowToolConfigurationPropertyToTerraform(struct?: TfFlow.ToolConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowToolConfigurationPropertyToTerraform(struct?: AwsFlow.ToolConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    tool: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolPropertyToTerraform, true)(struct!.tool),
-    tool_choice: cdktn.listMapper(tfFlowToolChoicePropertyToTerraform, true)(struct!.toolChoice),
+    tool: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolPropertyToTerraform, true)(struct!.tool),
+    tool_choice: cdktn.listMapper(awsFlowToolChoicePropertyToTerraform, true)(struct!.toolChoice),
   }
 }
 
 
-export function tfFlowToolConfigurationPropertyToHclTerraform(struct?: TfFlow.ToolConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowToolConfigurationPropertyToHclTerraform(struct?: AwsFlow.ToolConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     tool: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolPropertyToHclTerraform, true)(struct!.tool),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolPropertyToHclTerraform, true)(struct!.tool),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolPropertyList",
     },
     tool_choice: {
-      value: cdktn.listMapperHcl(tfFlowToolChoicePropertyToHclTerraform, true)(struct!.toolChoice),
+      value: cdktn.listMapperHcl(awsFlowToolChoicePropertyToHclTerraform, true)(struct!.toolChoice),
       isBlock: true,
       type: "list",
       storageClassType: "ToolChoicePropertyList",
@@ -1579,46 +1579,46 @@ export function tfFlowToolConfigurationPropertyToHclTerraform(struct?: TfFlow.To
 }
 
 
-export function tfFlowChatPropertyToTerraform(struct?: TfFlow.ChatProperty | cdktn.IResolvable): any {
+export function awsFlowChatPropertyToTerraform(struct?: AwsFlow.ChatProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    input_variable: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariablePropertyToTerraform, true)(struct!.inputVariable),
-    message: cdktn.listMapper(tfFlowMessagePropertyToTerraform, true)(struct!.message),
-    system: cdktn.listMapper(tfFlowSystemPropertyToTerraform, true)(struct!.systemAttribute),
-    tool_configuration: cdktn.listMapper(tfFlowToolConfigurationPropertyToTerraform, true)(struct!.toolConfiguration),
+    input_variable: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariablePropertyToTerraform, true)(struct!.inputVariable),
+    message: cdktn.listMapper(awsFlowMessagePropertyToTerraform, true)(struct!.message),
+    system: cdktn.listMapper(awsFlowSystemPropertyToTerraform, true)(struct!.systemAttribute),
+    tool_configuration: cdktn.listMapper(awsFlowToolConfigurationPropertyToTerraform, true)(struct!.toolConfiguration),
   }
 }
 
 
-export function tfFlowChatPropertyToHclTerraform(struct?: TfFlow.ChatProperty | cdktn.IResolvable): any {
+export function awsFlowChatPropertyToHclTerraform(struct?: AwsFlow.ChatProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     input_variable: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariablePropertyToHclTerraform, true)(struct!.inputVariable),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariablePropertyToHclTerraform, true)(struct!.inputVariable),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariablePropertyList",
     },
     message: {
-      value: cdktn.listMapperHcl(tfFlowMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsFlowMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "list",
       storageClassType: "MessagePropertyList",
     },
     system: {
-      value: cdktn.listMapperHcl(tfFlowSystemPropertyToHclTerraform, true)(struct!.systemAttribute),
+      value: cdktn.listMapperHcl(awsFlowSystemPropertyToHclTerraform, true)(struct!.systemAttribute),
       isBlock: true,
       type: "list",
       storageClassType: "SystemPropertyList",
     },
     tool_configuration: {
-      value: cdktn.listMapperHcl(tfFlowToolConfigurationPropertyToHclTerraform, true)(struct!.toolConfiguration),
+      value: cdktn.listMapperHcl(awsFlowToolConfigurationPropertyToHclTerraform, true)(struct!.toolConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ToolConfigurationPropertyList",
@@ -1630,7 +1630,7 @@ export function tfFlowChatPropertyToHclTerraform(struct?: TfFlow.ChatProperty | 
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1641,7 +1641,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1660,7 +1660,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariablePropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariableProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariablePropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1671,7 +1671,7 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariablePropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariableProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariablePropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1690,20 +1690,20 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     text: cdktn.stringToTerraform(struct!.text),
-    cache_point: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointPropertyToTerraform, true)(struct!.cachePoint),
-    input_variable: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariablePropertyToTerraform, true)(struct!.inputVariable),
+    cache_point: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointPropertyToTerraform, true)(struct!.cachePoint),
+    input_variable: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariablePropertyToTerraform, true)(struct!.inputVariable),
   }
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1716,13 +1716,13 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
       storageClassType: "string",
     },
     cache_point: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointPropertyList",
     },
     input_variable: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariablePropertyToHclTerraform, true)(struct!.inputVariable),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariablePropertyToHclTerraform, true)(struct!.inputVariable),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariablePropertyList",
@@ -1734,32 +1734,32 @@ export function tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInline
 }
 
 
-export function tfFlowTemplateConfigurationPropertyToTerraform(struct?: TfFlow.TemplateConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowTemplateConfigurationPropertyToTerraform(struct?: AwsFlow.TemplateConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    chat: cdktn.listMapper(tfFlowChatPropertyToTerraform, true)(struct!.chat),
-    text: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextPropertyToTerraform, true)(struct!.text),
+    chat: cdktn.listMapper(awsFlowChatPropertyToTerraform, true)(struct!.chat),
+    text: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextPropertyToTerraform, true)(struct!.text),
   }
 }
 
 
-export function tfFlowTemplateConfigurationPropertyToHclTerraform(struct?: TfFlow.TemplateConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowTemplateConfigurationPropertyToHclTerraform(struct?: AwsFlow.TemplateConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     chat: {
-      value: cdktn.listMapperHcl(tfFlowChatPropertyToHclTerraform, true)(struct!.chat),
+      value: cdktn.listMapperHcl(awsFlowChatPropertyToHclTerraform, true)(struct!.chat),
       isBlock: true,
       type: "list",
       storageClassType: "ChatPropertyList",
     },
     text: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextPropertyToHclTerraform, true)(struct!.text),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextPropertyToHclTerraform, true)(struct!.text),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextPropertyList",
@@ -1771,7 +1771,7 @@ export function tfFlowTemplateConfigurationPropertyToHclTerraform(struct?: TfFlo
 }
 
 
-export function tfFlowInlinePropertyToTerraform(struct?: TfFlow.InlineProperty | cdktn.IResolvable): any {
+export function awsFlowInlinePropertyToTerraform(struct?: AwsFlow.InlineProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1780,13 +1780,13 @@ export function tfFlowInlinePropertyToTerraform(struct?: TfFlow.InlineProperty |
     additional_model_request_fields: cdktn.stringToTerraform(struct!.additionalModelRequestFields),
     model_id: cdktn.stringToTerraform(struct!.modelId),
     template_type: cdktn.stringToTerraform(struct!.templateType),
-    inference_configuration: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationPropertyToTerraform, true)(struct!.inferenceConfiguration),
-    template_configuration: cdktn.listMapper(tfFlowTemplateConfigurationPropertyToTerraform, true)(struct!.templateConfiguration),
+    inference_configuration: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationPropertyToTerraform, true)(struct!.inferenceConfiguration),
+    template_configuration: cdktn.listMapper(awsFlowTemplateConfigurationPropertyToTerraform, true)(struct!.templateConfiguration),
   }
 }
 
 
-export function tfFlowInlinePropertyToHclTerraform(struct?: TfFlow.InlineProperty | cdktn.IResolvable): any {
+export function awsFlowInlinePropertyToHclTerraform(struct?: AwsFlow.InlineProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1811,13 +1811,13 @@ export function tfFlowInlinePropertyToHclTerraform(struct?: TfFlow.InlinePropert
       storageClassType: "string",
     },
     inference_configuration: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationPropertyToHclTerraform, true)(struct!.inferenceConfiguration),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationPropertyToHclTerraform, true)(struct!.inferenceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationPropertyList",
     },
     template_configuration: {
-      value: cdktn.listMapperHcl(tfFlowTemplateConfigurationPropertyToHclTerraform, true)(struct!.templateConfiguration),
+      value: cdktn.listMapperHcl(awsFlowTemplateConfigurationPropertyToHclTerraform, true)(struct!.templateConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "TemplateConfigurationPropertyList",
@@ -1829,7 +1829,7 @@ export function tfFlowInlinePropertyToHclTerraform(struct?: TfFlow.InlinePropert
 }
 
 
-export function tfFlowResourcePropertyToTerraform(struct?: TfFlow.ResourceProperty | cdktn.IResolvable): any {
+export function awsFlowResourcePropertyToTerraform(struct?: AwsFlow.ResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1840,7 +1840,7 @@ export function tfFlowResourcePropertyToTerraform(struct?: TfFlow.ResourceProper
 }
 
 
-export function tfFlowResourcePropertyToHclTerraform(struct?: TfFlow.ResourceProperty | cdktn.IResolvable): any {
+export function awsFlowResourcePropertyToHclTerraform(struct?: AwsFlow.ResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1859,32 +1859,32 @@ export function tfFlowResourcePropertyToHclTerraform(struct?: TfFlow.ResourcePro
 }
 
 
-export function tfFlowSourceConfigurationPropertyToTerraform(struct?: TfFlow.SourceConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowSourceConfigurationPropertyToTerraform(struct?: AwsFlow.SourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    inline: cdktn.listMapper(tfFlowInlinePropertyToTerraform, true)(struct!.inline),
-    resource: cdktn.listMapper(tfFlowResourcePropertyToTerraform, true)(struct!.resource),
+    inline: cdktn.listMapper(awsFlowInlinePropertyToTerraform, true)(struct!.inline),
+    resource: cdktn.listMapper(awsFlowResourcePropertyToTerraform, true)(struct!.resource),
   }
 }
 
 
-export function tfFlowSourceConfigurationPropertyToHclTerraform(struct?: TfFlow.SourceConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowSourceConfigurationPropertyToHclTerraform(struct?: AwsFlow.SourceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     inline: {
-      value: cdktn.listMapperHcl(tfFlowInlinePropertyToHclTerraform, true)(struct!.inline),
+      value: cdktn.listMapperHcl(awsFlowInlinePropertyToHclTerraform, true)(struct!.inline),
       isBlock: true,
       type: "list",
       storageClassType: "InlinePropertyList",
     },
     resource: {
-      value: cdktn.listMapperHcl(tfFlowResourcePropertyToHclTerraform, true)(struct!.resource),
+      value: cdktn.listMapperHcl(awsFlowResourcePropertyToHclTerraform, true)(struct!.resource),
       isBlock: true,
       type: "list",
       storageClassType: "ResourcePropertyList",
@@ -1896,32 +1896,32 @@ export function tfFlowSourceConfigurationPropertyToHclTerraform(struct?: TfFlow.
 }
 
 
-export function tfFlowPromptPropertyToTerraform(struct?: TfFlow.PromptProperty | cdktn.IResolvable): any {
+export function awsFlowPromptPropertyToTerraform(struct?: AwsFlow.PromptProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    guardrail_configuration: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPromptGuardrailConfigurationPropertyToTerraform, true)(struct!.guardrailConfiguration),
-    source_configuration: cdktn.listMapper(tfFlowSourceConfigurationPropertyToTerraform, true)(struct!.sourceConfiguration),
+    guardrail_configuration: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPromptGuardrailConfigurationPropertyToTerraform, true)(struct!.guardrailConfiguration),
+    source_configuration: cdktn.listMapper(awsFlowSourceConfigurationPropertyToTerraform, true)(struct!.sourceConfiguration),
   }
 }
 
 
-export function tfFlowPromptPropertyToHclTerraform(struct?: TfFlow.PromptProperty | cdktn.IResolvable): any {
+export function awsFlowPromptPropertyToHclTerraform(struct?: AwsFlow.PromptProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     guardrail_configuration: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPromptGuardrailConfigurationPropertyToHclTerraform, true)(struct!.guardrailConfiguration),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPromptGuardrailConfigurationPropertyToHclTerraform, true)(struct!.guardrailConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPromptGuardrailConfigurationPropertyList",
     },
     source_configuration: {
-      value: cdktn.listMapperHcl(tfFlowSourceConfigurationPropertyToHclTerraform, true)(struct!.sourceConfiguration),
+      value: cdktn.listMapperHcl(awsFlowSourceConfigurationPropertyToHclTerraform, true)(struct!.sourceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SourceConfigurationPropertyList",
@@ -1933,7 +1933,7 @@ export function tfFlowPromptPropertyToHclTerraform(struct?: TfFlow.PromptPropert
 }
 
 
-export function tfFlowDefinitionNodeConfigurationRetrievalServiceConfigurationS3PropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationRetrievalServiceConfigurationS3Property | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationRetrievalServiceConfigurationS3PropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationRetrievalServiceConfigurationS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1944,7 +1944,7 @@ export function tfFlowDefinitionNodeConfigurationRetrievalServiceConfigurationS3
 }
 
 
-export function tfFlowDefinitionNodeConfigurationRetrievalServiceConfigurationS3PropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationRetrievalServiceConfigurationS3Property | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationRetrievalServiceConfigurationS3PropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationRetrievalServiceConfigurationS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1963,25 +1963,25 @@ export function tfFlowDefinitionNodeConfigurationRetrievalServiceConfigurationS3
 }
 
 
-export function tfFlowDefinitionNodeConfigurationRetrievalServiceConfigurationPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationRetrievalServiceConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationRetrievalServiceConfigurationPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationRetrievalServiceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3: cdktn.listMapper(tfFlowDefinitionNodeConfigurationRetrievalServiceConfigurationS3PropertyToTerraform, true)(struct!.s3),
+    s3: cdktn.listMapper(awsFlowDefinitionNodeConfigurationRetrievalServiceConfigurationS3PropertyToTerraform, true)(struct!.s3),
   }
 }
 
 
-export function tfFlowDefinitionNodeConfigurationRetrievalServiceConfigurationPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationRetrievalServiceConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationRetrievalServiceConfigurationPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationRetrievalServiceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationRetrievalServiceConfigurationS3PropertyToHclTerraform, true)(struct!.s3),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationRetrievalServiceConfigurationS3PropertyToHclTerraform, true)(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationRetrievalServiceConfigurationS3PropertyList",
@@ -1993,25 +1993,25 @@ export function tfFlowDefinitionNodeConfigurationRetrievalServiceConfigurationPr
 }
 
 
-export function tfFlowRetrievalPropertyToTerraform(struct?: TfFlow.RetrievalProperty | cdktn.IResolvable): any {
+export function awsFlowRetrievalPropertyToTerraform(struct?: AwsFlow.RetrievalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    service_configuration: cdktn.listMapper(tfFlowDefinitionNodeConfigurationRetrievalServiceConfigurationPropertyToTerraform, true)(struct!.serviceConfiguration),
+    service_configuration: cdktn.listMapper(awsFlowDefinitionNodeConfigurationRetrievalServiceConfigurationPropertyToTerraform, true)(struct!.serviceConfiguration),
   }
 }
 
 
-export function tfFlowRetrievalPropertyToHclTerraform(struct?: TfFlow.RetrievalProperty | cdktn.IResolvable): any {
+export function awsFlowRetrievalPropertyToHclTerraform(struct?: AwsFlow.RetrievalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     service_configuration: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationRetrievalServiceConfigurationPropertyToHclTerraform, true)(struct!.serviceConfiguration),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationRetrievalServiceConfigurationPropertyToHclTerraform, true)(struct!.serviceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationRetrievalServiceConfigurationPropertyList",
@@ -2023,7 +2023,7 @@ export function tfFlowRetrievalPropertyToHclTerraform(struct?: TfFlow.RetrievalP
 }
 
 
-export function tfFlowDefinitionNodeConfigurationStorageServiceConfigurationS3PropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationStorageServiceConfigurationS3Property | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationStorageServiceConfigurationS3PropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationStorageServiceConfigurationS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2034,7 +2034,7 @@ export function tfFlowDefinitionNodeConfigurationStorageServiceConfigurationS3Pr
 }
 
 
-export function tfFlowDefinitionNodeConfigurationStorageServiceConfigurationS3PropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationStorageServiceConfigurationS3Property | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationStorageServiceConfigurationS3PropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationStorageServiceConfigurationS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2053,25 +2053,25 @@ export function tfFlowDefinitionNodeConfigurationStorageServiceConfigurationS3Pr
 }
 
 
-export function tfFlowDefinitionNodeConfigurationStorageServiceConfigurationPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationStorageServiceConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationStorageServiceConfigurationPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationStorageServiceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3: cdktn.listMapper(tfFlowDefinitionNodeConfigurationStorageServiceConfigurationS3PropertyToTerraform, true)(struct!.s3),
+    s3: cdktn.listMapper(awsFlowDefinitionNodeConfigurationStorageServiceConfigurationS3PropertyToTerraform, true)(struct!.s3),
   }
 }
 
 
-export function tfFlowDefinitionNodeConfigurationStorageServiceConfigurationPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationStorageServiceConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationStorageServiceConfigurationPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationStorageServiceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationStorageServiceConfigurationS3PropertyToHclTerraform, true)(struct!.s3),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationStorageServiceConfigurationS3PropertyToHclTerraform, true)(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationStorageServiceConfigurationS3PropertyList",
@@ -2083,25 +2083,25 @@ export function tfFlowDefinitionNodeConfigurationStorageServiceConfigurationProp
 }
 
 
-export function tfFlowStoragePropertyToTerraform(struct?: TfFlow.StorageProperty | cdktn.IResolvable): any {
+export function awsFlowStoragePropertyToTerraform(struct?: AwsFlow.StorageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    service_configuration: cdktn.listMapper(tfFlowDefinitionNodeConfigurationStorageServiceConfigurationPropertyToTerraform, true)(struct!.serviceConfiguration),
+    service_configuration: cdktn.listMapper(awsFlowDefinitionNodeConfigurationStorageServiceConfigurationPropertyToTerraform, true)(struct!.serviceConfiguration),
   }
 }
 
 
-export function tfFlowStoragePropertyToHclTerraform(struct?: TfFlow.StorageProperty | cdktn.IResolvable): any {
+export function awsFlowStoragePropertyToHclTerraform(struct?: AwsFlow.StorageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     service_configuration: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationStorageServiceConfigurationPropertyToHclTerraform, true)(struct!.serviceConfiguration),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationStorageServiceConfigurationPropertyToHclTerraform, true)(struct!.serviceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationStorageServiceConfigurationPropertyList",
@@ -2113,109 +2113,109 @@ export function tfFlowStoragePropertyToHclTerraform(struct?: TfFlow.StoragePrope
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPropertyToTerraform(struct?: TfFlow.DefinitionNodeConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPropertyToTerraform(struct?: AwsFlow.DefinitionNodeConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    agent: cdktn.listMapper(tfFlowAgentPropertyToTerraform, true)(struct!.agent),
-    collector: cdktn.listMapper(tfFlowCollectorPropertyToTerraform, true)(struct!.collector),
-    condition: cdktn.listMapper(tfFlowDefinitionNodeConfigurationConditionPropertyToTerraform, true)(struct!.condition),
-    inline_code: cdktn.listMapper(tfFlowInlineCodePropertyToTerraform, true)(struct!.inlineCode),
-    input: cdktn.listMapper(tfFlowDefinitionNodeConfigurationInputPropertyToTerraform, true)(struct!.input),
-    iterator: cdktn.listMapper(tfFlowIteratorPropertyToTerraform, true)(struct!.iterator),
-    knowledge_base: cdktn.listMapper(tfFlowKnowledgeBasePropertyToTerraform, true)(struct!.knowledgeBase),
-    lambda_function: cdktn.listMapper(tfFlowLambdaFunctionPropertyToTerraform, true)(struct!.lambdaFunction),
-    lex: cdktn.listMapper(tfFlowLexPropertyToTerraform, true)(struct!.lex),
-    output: cdktn.listMapper(tfFlowDefinitionNodeConfigurationOutputPropertyToTerraform, true)(struct!.output),
-    prompt: cdktn.listMapper(tfFlowPromptPropertyToTerraform, true)(struct!.prompt),
-    retrieval: cdktn.listMapper(tfFlowRetrievalPropertyToTerraform, true)(struct!.retrieval),
-    storage: cdktn.listMapper(tfFlowStoragePropertyToTerraform, true)(struct!.storage),
+    agent: cdktn.listMapper(awsFlowAgentPropertyToTerraform, true)(struct!.agent),
+    collector: cdktn.listMapper(awsFlowCollectorPropertyToTerraform, true)(struct!.collector),
+    condition: cdktn.listMapper(awsFlowDefinitionNodeConfigurationConditionPropertyToTerraform, true)(struct!.condition),
+    inline_code: cdktn.listMapper(awsFlowInlineCodePropertyToTerraform, true)(struct!.inlineCode),
+    input: cdktn.listMapper(awsFlowDefinitionNodeConfigurationInputPropertyToTerraform, true)(struct!.input),
+    iterator: cdktn.listMapper(awsFlowIteratorPropertyToTerraform, true)(struct!.iterator),
+    knowledge_base: cdktn.listMapper(awsFlowKnowledgeBasePropertyToTerraform, true)(struct!.knowledgeBase),
+    lambda_function: cdktn.listMapper(awsFlowLambdaFunctionPropertyToTerraform, true)(struct!.lambdaFunction),
+    lex: cdktn.listMapper(awsFlowLexPropertyToTerraform, true)(struct!.lex),
+    output: cdktn.listMapper(awsFlowDefinitionNodeConfigurationOutputPropertyToTerraform, true)(struct!.output),
+    prompt: cdktn.listMapper(awsFlowPromptPropertyToTerraform, true)(struct!.prompt),
+    retrieval: cdktn.listMapper(awsFlowRetrievalPropertyToTerraform, true)(struct!.retrieval),
+    storage: cdktn.listMapper(awsFlowStoragePropertyToTerraform, true)(struct!.storage),
   }
 }
 
 
-export function tfFlowDefinitionNodeConfigurationPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeConfigurationProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeConfigurationPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     agent: {
-      value: cdktn.listMapperHcl(tfFlowAgentPropertyToHclTerraform, true)(struct!.agent),
+      value: cdktn.listMapperHcl(awsFlowAgentPropertyToHclTerraform, true)(struct!.agent),
       isBlock: true,
       type: "list",
       storageClassType: "AgentPropertyList",
     },
     collector: {
-      value: cdktn.listMapperHcl(tfFlowCollectorPropertyToHclTerraform, true)(struct!.collector),
+      value: cdktn.listMapperHcl(awsFlowCollectorPropertyToHclTerraform, true)(struct!.collector),
       isBlock: true,
       type: "list",
       storageClassType: "CollectorPropertyList",
     },
     condition: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationConditionPropertyToHclTerraform, true)(struct!.condition),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationConditionPropertyToHclTerraform, true)(struct!.condition),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationConditionPropertyList",
     },
     inline_code: {
-      value: cdktn.listMapperHcl(tfFlowInlineCodePropertyToHclTerraform, true)(struct!.inlineCode),
+      value: cdktn.listMapperHcl(awsFlowInlineCodePropertyToHclTerraform, true)(struct!.inlineCode),
       isBlock: true,
       type: "list",
       storageClassType: "InlineCodePropertyList",
     },
     input: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationInputPropertyToHclTerraform, true)(struct!.input),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationInputPropertyToHclTerraform, true)(struct!.input),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationInputPropertyList",
     },
     iterator: {
-      value: cdktn.listMapperHcl(tfFlowIteratorPropertyToHclTerraform, true)(struct!.iterator),
+      value: cdktn.listMapperHcl(awsFlowIteratorPropertyToHclTerraform, true)(struct!.iterator),
       isBlock: true,
       type: "list",
       storageClassType: "IteratorPropertyList",
     },
     knowledge_base: {
-      value: cdktn.listMapperHcl(tfFlowKnowledgeBasePropertyToHclTerraform, true)(struct!.knowledgeBase),
+      value: cdktn.listMapperHcl(awsFlowKnowledgeBasePropertyToHclTerraform, true)(struct!.knowledgeBase),
       isBlock: true,
       type: "list",
       storageClassType: "KnowledgeBasePropertyList",
     },
     lambda_function: {
-      value: cdktn.listMapperHcl(tfFlowLambdaFunctionPropertyToHclTerraform, true)(struct!.lambdaFunction),
+      value: cdktn.listMapperHcl(awsFlowLambdaFunctionPropertyToHclTerraform, true)(struct!.lambdaFunction),
       isBlock: true,
       type: "list",
       storageClassType: "LambdaFunctionPropertyList",
     },
     lex: {
-      value: cdktn.listMapperHcl(tfFlowLexPropertyToHclTerraform, true)(struct!.lex),
+      value: cdktn.listMapperHcl(awsFlowLexPropertyToHclTerraform, true)(struct!.lex),
       isBlock: true,
       type: "list",
       storageClassType: "LexPropertyList",
     },
     output: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationOutputPropertyToHclTerraform, true)(struct!.output),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationOutputPropertyToHclTerraform, true)(struct!.output),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationOutputPropertyList",
     },
     prompt: {
-      value: cdktn.listMapperHcl(tfFlowPromptPropertyToHclTerraform, true)(struct!.prompt),
+      value: cdktn.listMapperHcl(awsFlowPromptPropertyToHclTerraform, true)(struct!.prompt),
       isBlock: true,
       type: "list",
       storageClassType: "PromptPropertyList",
     },
     retrieval: {
-      value: cdktn.listMapperHcl(tfFlowRetrievalPropertyToHclTerraform, true)(struct!.retrieval),
+      value: cdktn.listMapperHcl(awsFlowRetrievalPropertyToHclTerraform, true)(struct!.retrieval),
       isBlock: true,
       type: "list",
       storageClassType: "RetrievalPropertyList",
     },
     storage: {
-      value: cdktn.listMapperHcl(tfFlowStoragePropertyToHclTerraform, true)(struct!.storage),
+      value: cdktn.listMapperHcl(awsFlowStoragePropertyToHclTerraform, true)(struct!.storage),
       isBlock: true,
       type: "list",
       storageClassType: "StoragePropertyList",
@@ -2227,7 +2227,7 @@ export function tfFlowDefinitionNodeConfigurationPropertyToHclTerraform(struct?:
 }
 
 
-export function tfFlowDefinitionNodeInputPropertyToTerraform(struct?: TfFlow.DefinitionNodeInputProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeInputPropertyToTerraform(struct?: AwsFlow.DefinitionNodeInputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2241,7 +2241,7 @@ export function tfFlowDefinitionNodeInputPropertyToTerraform(struct?: TfFlow.Def
 }
 
 
-export function tfFlowDefinitionNodeInputPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeInputProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeInputPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeInputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2278,7 +2278,7 @@ export function tfFlowDefinitionNodeInputPropertyToHclTerraform(struct?: TfFlow.
 }
 
 
-export function tfFlowDefinitionNodeOutputPropertyToTerraform(struct?: TfFlow.DefinitionNodeOutputProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeOutputPropertyToTerraform(struct?: AwsFlow.DefinitionNodeOutputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2290,7 +2290,7 @@ export function tfFlowDefinitionNodeOutputPropertyToTerraform(struct?: TfFlow.De
 }
 
 
-export function tfFlowDefinitionNodeOutputPropertyToHclTerraform(struct?: TfFlow.DefinitionNodeOutputProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionNodeOutputPropertyToHclTerraform(struct?: AwsFlow.DefinitionNodeOutputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2315,7 +2315,7 @@ export function tfFlowDefinitionNodeOutputPropertyToHclTerraform(struct?: TfFlow
 }
 
 
-export function tfFlowNodePropertyToTerraform(struct?: TfFlow.NodeProperty | cdktn.IResolvable): any {
+export function awsFlowNodePropertyToTerraform(struct?: AwsFlow.NodeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2323,14 +2323,14 @@ export function tfFlowNodePropertyToTerraform(struct?: TfFlow.NodeProperty | cdk
   return {
     name: cdktn.stringToTerraform(struct!.name),
     type: cdktn.stringToTerraform(struct!.type),
-    configuration: cdktn.listMapper(tfFlowDefinitionNodeConfigurationPropertyToTerraform, true)(struct!.configuration),
-    input: cdktn.listMapper(tfFlowDefinitionNodeInputPropertyToTerraform, true)(struct!.input),
-    output: cdktn.listMapper(tfFlowDefinitionNodeOutputPropertyToTerraform, true)(struct!.output),
+    configuration: cdktn.listMapper(awsFlowDefinitionNodeConfigurationPropertyToTerraform, true)(struct!.configuration),
+    input: cdktn.listMapper(awsFlowDefinitionNodeInputPropertyToTerraform, true)(struct!.input),
+    output: cdktn.listMapper(awsFlowDefinitionNodeOutputPropertyToTerraform, true)(struct!.output),
   }
 }
 
 
-export function tfFlowNodePropertyToHclTerraform(struct?: TfFlow.NodeProperty | cdktn.IResolvable): any {
+export function awsFlowNodePropertyToHclTerraform(struct?: AwsFlow.NodeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2349,19 +2349,19 @@ export function tfFlowNodePropertyToHclTerraform(struct?: TfFlow.NodeProperty | 
       storageClassType: "string",
     },
     configuration: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeConfigurationPropertyToHclTerraform, true)(struct!.configuration),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeConfigurationPropertyToHclTerraform, true)(struct!.configuration),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeConfigurationPropertyList",
     },
     input: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeInputPropertyToHclTerraform, true)(struct!.input),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeInputPropertyToHclTerraform, true)(struct!.input),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeInputPropertyList",
     },
     output: {
-      value: cdktn.listMapperHcl(tfFlowDefinitionNodeOutputPropertyToHclTerraform, true)(struct!.output),
+      value: cdktn.listMapperHcl(awsFlowDefinitionNodeOutputPropertyToHclTerraform, true)(struct!.output),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionNodeOutputPropertyList",
@@ -2373,32 +2373,32 @@ export function tfFlowNodePropertyToHclTerraform(struct?: TfFlow.NodeProperty | 
 }
 
 
-export function tfFlowDefinitionPropertyToTerraform(struct?: TfFlow.DefinitionProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionPropertyToTerraform(struct?: AwsFlow.DefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    connection: cdktn.listMapper(tfFlowConnectionPropertyToTerraform, true)(struct!.connection),
-    node: cdktn.listMapper(tfFlowNodePropertyToTerraform, true)(struct!.nodeAttribute),
+    connection: cdktn.listMapper(awsFlowConnectionPropertyToTerraform, true)(struct!.connection),
+    node: cdktn.listMapper(awsFlowNodePropertyToTerraform, true)(struct!.nodeAttribute),
   }
 }
 
 
-export function tfFlowDefinitionPropertyToHclTerraform(struct?: TfFlow.DefinitionProperty | cdktn.IResolvable): any {
+export function awsFlowDefinitionPropertyToHclTerraform(struct?: AwsFlow.DefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     connection: {
-      value: cdktn.listMapperHcl(tfFlowConnectionPropertyToHclTerraform, true)(struct!.connection),
+      value: cdktn.listMapperHcl(awsFlowConnectionPropertyToHclTerraform, true)(struct!.connection),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectionPropertyList",
     },
     node: {
-      value: cdktn.listMapperHcl(tfFlowNodePropertyToHclTerraform, true)(struct!.nodeAttribute),
+      value: cdktn.listMapperHcl(awsFlowNodePropertyToHclTerraform, true)(struct!.nodeAttribute),
       isBlock: true,
       type: "list",
       storageClassType: "NodePropertyList",
@@ -2410,7 +2410,7 @@ export function tfFlowDefinitionPropertyToHclTerraform(struct?: TfFlow.Definitio
 }
 
 
-export function tfFlowTimeoutsPropertyToTerraform(struct?: TfFlow.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFlowTimeoutsPropertyToTerraform(struct?: AwsFlow.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2423,7 +2423,7 @@ export function tfFlowTimeoutsPropertyToTerraform(struct?: TfFlow.TimeoutsProper
 }
 
 
-export function tfFlowTimeoutsPropertyToHclTerraform(struct?: TfFlow.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFlowTimeoutsPropertyToHclTerraform(struct?: AwsFlow.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2454,10 +2454,10 @@ export function tfFlowTimeoutsPropertyToHclTerraform(struct?: TfFlow.TimeoutsPro
 }
 
 
-export namespace TfFlow {
+export namespace AwsFlow {
 export interface ConditionalProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#condition TfFlow#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#condition AwsFlow#condition}
   */
   readonly condition: string;
 }
@@ -2540,11 +2540,11 @@ export class ConditionalPropertyList extends cdktn.ComplexList {
 }
 export interface DataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#source_output TfFlow#source_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#source_output AwsFlow#source_output}
   */
   readonly sourceOutput: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#target_input TfFlow#target_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#target_input AwsFlow#target_input}
   */
   readonly targetInput: string;
 }
@@ -2648,13 +2648,13 @@ export interface DefinitionConnectionConfigurationProperty {
   /**
   * conditional block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#conditional TfFlow#conditional}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#conditional AwsFlow#conditional}
   */
   readonly conditional?: ConditionalProperty[] | cdktn.IResolvable;
   /**
   * data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#data TfFlow#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#data AwsFlow#data}
   */
   readonly data?: DataProperty[] | cdktn.IResolvable;
 }
@@ -2762,25 +2762,25 @@ export class DefinitionConnectionConfigurationPropertyList extends cdktn.Complex
 }
 export interface ConnectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name TfFlow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name AwsFlow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#source TfFlow#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#source AwsFlow#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#target TfFlow#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#target AwsFlow#target}
   */
   readonly target: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type TfFlow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type AwsFlow#type}
   */
   readonly type: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#configuration TfFlow#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#configuration AwsFlow#configuration}
   */
   readonly configuration?: DefinitionConnectionConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -2942,7 +2942,7 @@ export class ConnectionPropertyList extends cdktn.ComplexList {
 }
 export interface AgentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#agent_alias_arn TfFlow#agent_alias_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#agent_alias_arn AwsFlow#agent_alias_arn}
   */
   readonly agentAliasArn: string;
 }
@@ -3085,11 +3085,11 @@ export class CollectorPropertyList extends cdktn.ComplexList {
 }
 export interface DefinitionNodeConfigurationConditionConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#expression TfFlow#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#expression AwsFlow#expression}
   */
   readonly expression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name TfFlow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name AwsFlow#name}
   */
   readonly name: string;
 }
@@ -3196,7 +3196,7 @@ export interface DefinitionNodeConfigurationConditionProperty {
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#condition TfFlow#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#condition AwsFlow#condition}
   */
   readonly condition?: DefinitionNodeConfigurationConditionConditionProperty[] | cdktn.IResolvable;
 }
@@ -3282,11 +3282,11 @@ export class DefinitionNodeConfigurationConditionPropertyList extends cdktn.Comp
 }
 export interface InlineCodeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#code TfFlow#code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#code AwsFlow#code}
   */
   readonly code: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#language TfFlow#language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#language AwsFlow#language}
   */
   readonly language: string;
 }
@@ -3508,11 +3508,11 @@ export class IteratorPropertyList extends cdktn.ComplexList {
 }
 export interface DefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#guardrail_identifier TfFlow#guardrail_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#guardrail_identifier AwsFlow#guardrail_identifier}
   */
   readonly guardrailIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#guardrail_version TfFlow#guardrail_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#guardrail_version AwsFlow#guardrail_version}
   */
   readonly guardrailVersion: string;
 }
@@ -3614,19 +3614,19 @@ export class DefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationPrope
 }
 export interface DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#max_tokens TfFlow#max_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#max_tokens AwsFlow#max_tokens}
   */
   readonly maxTokens?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#stop_sequences TfFlow#stop_sequences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#stop_sequences AwsFlow#stop_sequences}
   */
   readonly stopSequences?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#temperature TfFlow#temperature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#temperature AwsFlow#temperature}
   */
   readonly temperature?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#top_p TfFlow#top_p}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#top_p AwsFlow#top_p}
   */
   readonly topP?: number;
 }
@@ -3780,7 +3780,7 @@ export interface DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationP
   /**
   * text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#text TfFlow#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#text AwsFlow#text}
   */
   readonly text?: DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationTextProperty[] | cdktn.IResolvable;
 }
@@ -3866,27 +3866,27 @@ export class DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationPrope
 }
 export interface KnowledgeBaseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#knowledge_base_id TfFlow#knowledge_base_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#knowledge_base_id AwsFlow#knowledge_base_id}
   */
   readonly knowledgeBaseId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#model_id TfFlow#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#model_id AwsFlow#model_id}
   */
   readonly modelId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#number_of_results TfFlow#number_of_results}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#number_of_results AwsFlow#number_of_results}
   */
   readonly numberOfResults?: number;
   /**
   * guardrail_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#guardrail_configuration TfFlow#guardrail_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#guardrail_configuration AwsFlow#guardrail_configuration}
   */
   readonly guardrailConfiguration?: DefinitionNodeConfigurationKnowledgeBaseGuardrailConfigurationProperty[] | cdktn.IResolvable;
   /**
   * inference_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#inference_configuration TfFlow#inference_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#inference_configuration AwsFlow#inference_configuration}
   */
   readonly inferenceConfiguration?: DefinitionNodeConfigurationKnowledgeBaseInferenceConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -4054,7 +4054,7 @@ export class KnowledgeBasePropertyList extends cdktn.ComplexList {
 }
 export interface LambdaFunctionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#lambda_arn TfFlow#lambda_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#lambda_arn AwsFlow#lambda_arn}
   */
   readonly lambdaArn: string;
 }
@@ -4137,11 +4137,11 @@ export class LambdaFunctionPropertyList extends cdktn.ComplexList {
 }
 export interface LexProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#bot_alias_arn TfFlow#bot_alias_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#bot_alias_arn AwsFlow#bot_alias_arn}
   */
   readonly botAliasArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#locale_id TfFlow#locale_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#locale_id AwsFlow#locale_id}
   */
   readonly localeId: string;
 }
@@ -4303,11 +4303,11 @@ export class DefinitionNodeConfigurationOutputPropertyList extends cdktn.Complex
 }
 export interface DefinitionNodeConfigurationPromptGuardrailConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#guardrail_identifier TfFlow#guardrail_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#guardrail_identifier AwsFlow#guardrail_identifier}
   */
   readonly guardrailIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#guardrail_version TfFlow#guardrail_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#guardrail_version AwsFlow#guardrail_version}
   */
   readonly guardrailVersion: string;
 }
@@ -4409,19 +4409,19 @@ export class DefinitionNodeConfigurationPromptGuardrailConfigurationPropertyList
 }
 export interface DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#max_tokens TfFlow#max_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#max_tokens AwsFlow#max_tokens}
   */
   readonly maxTokens?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#stop_sequences TfFlow#stop_sequences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#stop_sequences AwsFlow#stop_sequences}
   */
   readonly stopSequences?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#temperature TfFlow#temperature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#temperature AwsFlow#temperature}
   */
   readonly temperature?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#top_p TfFlow#top_p}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#top_p AwsFlow#top_p}
   */
   readonly topP?: number;
 }
@@ -4575,7 +4575,7 @@ export interface DefinitionNodeConfigurationPromptSourceConfigurationInlineInfer
   /**
   * text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#text TfFlow#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#text AwsFlow#text}
   */
   readonly text?: DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationTextProperty[] | cdktn.IResolvable;
 }
@@ -4661,7 +4661,7 @@ export class DefinitionNodeConfigurationPromptSourceConfigurationInlineInference
 }
 export interface DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name TfFlow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name AwsFlow#name}
   */
   readonly name: string;
 }
@@ -4744,7 +4744,7 @@ export class DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateC
 }
 export interface DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type TfFlow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type AwsFlow#type}
   */
   readonly type: string;
 }
@@ -4827,13 +4827,13 @@ export class DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateC
 }
 export interface ContentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#text TfFlow#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#text AwsFlow#text}
   */
   readonly text?: string;
   /**
   * cache_point block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#cache_point TfFlow#cache_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#cache_point AwsFlow#cache_point}
   */
   readonly cachePoint?: DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatMessageContentCachePointProperty[] | cdktn.IResolvable;
 }
@@ -4941,13 +4941,13 @@ export class ContentPropertyList extends cdktn.ComplexList {
 }
 export interface MessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#role TfFlow#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#role AwsFlow#role}
   */
   readonly role: string;
   /**
   * content block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#content TfFlow#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#content AwsFlow#content}
   */
   readonly content?: ContentProperty[] | cdktn.IResolvable;
 }
@@ -5052,7 +5052,7 @@ export class MessagePropertyList extends cdktn.ComplexList {
 }
 export interface DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type TfFlow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type AwsFlow#type}
   */
   readonly type: string;
 }
@@ -5135,13 +5135,13 @@ export class DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateC
 }
 export interface SystemProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#text TfFlow#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#text AwsFlow#text}
   */
   readonly text?: string;
   /**
   * cache_point block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#cache_point TfFlow#cache_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#cache_point AwsFlow#cache_point}
   */
   readonly cachePoint?: DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatSystemCachePointProperty[] | cdktn.IResolvable;
 }
@@ -5249,7 +5249,7 @@ export class SystemPropertyList extends cdktn.ComplexList {
 }
 export interface DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type TfFlow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type AwsFlow#type}
   */
   readonly type: string;
 }
@@ -5332,7 +5332,7 @@ export class DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateC
 }
 export interface InputSchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#json TfFlow#json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#json AwsFlow#json}
   */
   readonly json?: string;
 }
@@ -5418,17 +5418,17 @@ export class InputSchemaPropertyList extends cdktn.ComplexList {
 }
 export interface ToolSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#description TfFlow#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#description AwsFlow#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name TfFlow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name AwsFlow#name}
   */
   readonly name: string;
   /**
   * input_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#input_schema TfFlow#input_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#input_schema AwsFlow#input_schema}
   */
   readonly inputSchema?: InputSchemaProperty[] | cdktn.IResolvable;
 }
@@ -5557,13 +5557,13 @@ export interface DefinitionNodeConfigurationPromptSourceConfigurationInlineTempl
   /**
   * cache_point block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#cache_point TfFlow#cache_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#cache_point AwsFlow#cache_point}
   */
   readonly cachePoint?: DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolCachePointProperty[] | cdktn.IResolvable;
   /**
   * tool_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#tool_spec TfFlow#tool_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#tool_spec AwsFlow#tool_spec}
   */
   readonly toolSpec?: ToolSpecProperty[] | cdktn.IResolvable;
 }
@@ -5791,7 +5791,7 @@ export class AutoPropertyList extends cdktn.ComplexList {
 }
 export interface DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name TfFlow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name AwsFlow#name}
   */
   readonly name: string;
 }
@@ -5876,19 +5876,19 @@ export interface ToolChoiceProperty {
   /**
   * any block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#any TfFlow#any}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#any AwsFlow#any}
   */
   readonly any?: AnyProperty[] | cdktn.IResolvable;
   /**
   * auto block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#auto TfFlow#auto}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#auto AwsFlow#auto}
   */
   readonly auto?: AutoProperty[] | cdktn.IResolvable;
   /**
   * tool block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#tool TfFlow#tool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#tool AwsFlow#tool}
   */
   readonly tool?: DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolChoiceToolProperty[] | cdktn.IResolvable;
 }
@@ -6020,13 +6020,13 @@ export interface ToolConfigurationProperty {
   /**
   * tool block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#tool TfFlow#tool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#tool AwsFlow#tool}
   */
   readonly tool?: DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatToolConfigurationToolProperty[] | cdktn.IResolvable;
   /**
   * tool_choice block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#tool_choice TfFlow#tool_choice}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#tool_choice AwsFlow#tool_choice}
   */
   readonly toolChoice?: ToolChoiceProperty[] | cdktn.IResolvable;
 }
@@ -6136,25 +6136,25 @@ export interface ChatProperty {
   /**
   * input_variable block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#input_variable TfFlow#input_variable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#input_variable AwsFlow#input_variable}
   */
   readonly inputVariable?: DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationChatInputVariableProperty[] | cdktn.IResolvable;
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#message TfFlow#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#message AwsFlow#message}
   */
   readonly message?: MessageProperty[] | cdktn.IResolvable;
   /**
   * system block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#system TfFlow#system}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#system AwsFlow#system}
   */
   readonly systemAttribute?: SystemProperty[] | cdktn.IResolvable;
   /**
   * tool_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#tool_configuration TfFlow#tool_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#tool_configuration AwsFlow#tool_configuration}
   */
   readonly toolConfiguration?: ToolConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -6306,7 +6306,7 @@ export class ChatPropertyList extends cdktn.ComplexList {
 }
 export interface DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type TfFlow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type AwsFlow#type}
   */
   readonly type: string;
 }
@@ -6389,7 +6389,7 @@ export class DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateC
 }
 export interface DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name TfFlow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name AwsFlow#name}
   */
   readonly name: string;
 }
@@ -6472,19 +6472,19 @@ export class DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateC
 }
 export interface DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#text TfFlow#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#text AwsFlow#text}
   */
   readonly text: string;
   /**
   * cache_point block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#cache_point TfFlow#cache_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#cache_point AwsFlow#cache_point}
   */
   readonly cachePoint?: DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextCachePointProperty[] | cdktn.IResolvable;
   /**
   * input_variable block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#input_variable TfFlow#input_variable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#input_variable AwsFlow#input_variable}
   */
   readonly inputVariable?: DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextInputVariableProperty[] | cdktn.IResolvable;
 }
@@ -6613,13 +6613,13 @@ export interface TemplateConfigurationProperty {
   /**
   * chat block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#chat TfFlow#chat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#chat AwsFlow#chat}
   */
   readonly chat?: ChatProperty[] | cdktn.IResolvable;
   /**
   * text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#text TfFlow#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#text AwsFlow#text}
   */
   readonly text?: DefinitionNodeConfigurationPromptSourceConfigurationInlineTemplateConfigurationTextProperty[] | cdktn.IResolvable;
 }
@@ -6727,27 +6727,27 @@ export class TemplateConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface InlineProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#additional_model_request_fields TfFlow#additional_model_request_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#additional_model_request_fields AwsFlow#additional_model_request_fields}
   */
   readonly additionalModelRequestFields?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#model_id TfFlow#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#model_id AwsFlow#model_id}
   */
   readonly modelId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#template_type TfFlow#template_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#template_type AwsFlow#template_type}
   */
   readonly templateType: string;
   /**
   * inference_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#inference_configuration TfFlow#inference_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#inference_configuration AwsFlow#inference_configuration}
   */
   readonly inferenceConfiguration?: DefinitionNodeConfigurationPromptSourceConfigurationInlineInferenceConfigurationProperty[] | cdktn.IResolvable;
   /**
   * template_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#template_configuration TfFlow#template_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#template_configuration AwsFlow#template_configuration}
   */
   readonly templateConfiguration?: TemplateConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -6915,7 +6915,7 @@ export class InlinePropertyList extends cdktn.ComplexList {
 }
 export interface ResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#prompt_arn TfFlow#prompt_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#prompt_arn AwsFlow#prompt_arn}
   */
   readonly promptArn: string;
 }
@@ -7000,13 +7000,13 @@ export interface SourceConfigurationProperty {
   /**
   * inline block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#inline TfFlow#inline}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#inline AwsFlow#inline}
   */
   readonly inline?: InlineProperty[] | cdktn.IResolvable;
   /**
   * resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#resource TfFlow#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#resource AwsFlow#resource}
   */
   readonly resource?: ResourceProperty[] | cdktn.IResolvable;
 }
@@ -7116,13 +7116,13 @@ export interface PromptProperty {
   /**
   * guardrail_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#guardrail_configuration TfFlow#guardrail_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#guardrail_configuration AwsFlow#guardrail_configuration}
   */
   readonly guardrailConfiguration?: DefinitionNodeConfigurationPromptGuardrailConfigurationProperty[] | cdktn.IResolvable;
   /**
   * source_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#source_configuration TfFlow#source_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#source_configuration AwsFlow#source_configuration}
   */
   readonly sourceConfiguration?: SourceConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -7230,7 +7230,7 @@ export class PromptPropertyList extends cdktn.ComplexList {
 }
 export interface DefinitionNodeConfigurationRetrievalServiceConfigurationS3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#bucket_name TfFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#bucket_name AwsFlow#bucket_name}
   */
   readonly bucketName: string;
 }
@@ -7315,7 +7315,7 @@ export interface DefinitionNodeConfigurationRetrievalServiceConfigurationPropert
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#s3 TfFlow#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#s3 AwsFlow#s3}
   */
   readonly s3?: DefinitionNodeConfigurationRetrievalServiceConfigurationS3Property[] | cdktn.IResolvable;
 }
@@ -7403,7 +7403,7 @@ export interface RetrievalProperty {
   /**
   * service_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#service_configuration TfFlow#service_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#service_configuration AwsFlow#service_configuration}
   */
   readonly serviceConfiguration?: DefinitionNodeConfigurationRetrievalServiceConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -7489,7 +7489,7 @@ export class RetrievalPropertyList extends cdktn.ComplexList {
 }
 export interface DefinitionNodeConfigurationStorageServiceConfigurationS3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#bucket_name TfFlow#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#bucket_name AwsFlow#bucket_name}
   */
   readonly bucketName: string;
 }
@@ -7574,7 +7574,7 @@ export interface DefinitionNodeConfigurationStorageServiceConfigurationProperty 
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#s3 TfFlow#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#s3 AwsFlow#s3}
   */
   readonly s3?: DefinitionNodeConfigurationStorageServiceConfigurationS3Property[] | cdktn.IResolvable;
 }
@@ -7662,7 +7662,7 @@ export interface StorageProperty {
   /**
   * service_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#service_configuration TfFlow#service_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#service_configuration AwsFlow#service_configuration}
   */
   readonly serviceConfiguration?: DefinitionNodeConfigurationStorageServiceConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -7750,79 +7750,79 @@ export interface DefinitionNodeConfigurationProperty {
   /**
   * agent block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#agent TfFlow#agent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#agent AwsFlow#agent}
   */
   readonly agent?: AgentProperty[] | cdktn.IResolvable;
   /**
   * collector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#collector TfFlow#collector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#collector AwsFlow#collector}
   */
   readonly collector?: CollectorProperty[] | cdktn.IResolvable;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#condition TfFlow#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#condition AwsFlow#condition}
   */
   readonly condition?: DefinitionNodeConfigurationConditionProperty[] | cdktn.IResolvable;
   /**
   * inline_code block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#inline_code TfFlow#inline_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#inline_code AwsFlow#inline_code}
   */
   readonly inlineCode?: InlineCodeProperty[] | cdktn.IResolvable;
   /**
   * input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#input TfFlow#input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#input AwsFlow#input}
   */
   readonly input?: DefinitionNodeConfigurationInputProperty[] | cdktn.IResolvable;
   /**
   * iterator block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#iterator TfFlow#iterator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#iterator AwsFlow#iterator}
   */
   readonly iterator?: IteratorProperty[] | cdktn.IResolvable;
   /**
   * knowledge_base block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#knowledge_base TfFlow#knowledge_base}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#knowledge_base AwsFlow#knowledge_base}
   */
   readonly knowledgeBase?: KnowledgeBaseProperty[] | cdktn.IResolvable;
   /**
   * lambda_function block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#lambda_function TfFlow#lambda_function}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#lambda_function AwsFlow#lambda_function}
   */
   readonly lambdaFunction?: LambdaFunctionProperty[] | cdktn.IResolvable;
   /**
   * lex block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#lex TfFlow#lex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#lex AwsFlow#lex}
   */
   readonly lex?: LexProperty[] | cdktn.IResolvable;
   /**
   * output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#output TfFlow#output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#output AwsFlow#output}
   */
   readonly output?: DefinitionNodeConfigurationOutputProperty[] | cdktn.IResolvable;
   /**
   * prompt block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#prompt TfFlow#prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#prompt AwsFlow#prompt}
   */
   readonly prompt?: PromptProperty[] | cdktn.IResolvable;
   /**
   * retrieval block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#retrieval TfFlow#retrieval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#retrieval AwsFlow#retrieval}
   */
   readonly retrieval?: RetrievalProperty[] | cdktn.IResolvable;
   /**
   * storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#storage TfFlow#storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#storage AwsFlow#storage}
   */
   readonly storage?: StorageProperty[] | cdktn.IResolvable;
 }
@@ -8172,19 +8172,19 @@ export class DefinitionNodeConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface DefinitionNodeInputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#category TfFlow#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#category AwsFlow#category}
   */
   readonly category?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#expression TfFlow#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#expression AwsFlow#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name TfFlow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name AwsFlow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type TfFlow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type AwsFlow#type}
   */
   readonly type: string;
 }
@@ -8327,11 +8327,11 @@ export class DefinitionNodeInputPropertyList extends cdktn.ComplexList {
 }
 export interface DefinitionNodeOutputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name TfFlow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name AwsFlow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type TfFlow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type AwsFlow#type}
   */
   readonly type: string;
 }
@@ -8433,29 +8433,29 @@ export class DefinitionNodeOutputPropertyList extends cdktn.ComplexList {
 }
 export interface NodeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name TfFlow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#name AwsFlow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type TfFlow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#type AwsFlow#type}
   */
   readonly type: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#configuration TfFlow#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#configuration AwsFlow#configuration}
   */
   readonly configuration?: DefinitionNodeConfigurationProperty[] | cdktn.IResolvable;
   /**
   * input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#input TfFlow#input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#input AwsFlow#input}
   */
   readonly input?: DefinitionNodeInputProperty[] | cdktn.IResolvable;
   /**
   * output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#output TfFlow#output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#output AwsFlow#output}
   */
   readonly output?: DefinitionNodeOutputProperty[] | cdktn.IResolvable;
 }
@@ -8625,13 +8625,13 @@ export interface DefinitionProperty {
   /**
   * connection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#connection TfFlow#connection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#connection AwsFlow#connection}
   */
   readonly connection?: ConnectionProperty[] | cdktn.IResolvable;
   /**
   * node block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#node TfFlow#node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#node AwsFlow#node}
   */
   readonly nodeAttribute?: NodeProperty[] | cdktn.IResolvable;
 }
@@ -8741,19 +8741,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#create TfFlow#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#create AwsFlow#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#delete TfFlow#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#delete AwsFlow#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#update TfFlow#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_flow#update AwsFlow#update}
   */
   readonly update?: string;
 }

@@ -5,94 +5,94 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfIntentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsIntentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#create_version TfIntent#create_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#create_version AwsIntent#create_version}
   */
   readonly createVersion?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#description TfIntent#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#description AwsIntent#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#id TfIntent#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#id AwsIntent#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#name TfIntent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#name AwsIntent#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#parent_intent_signature TfIntent#parent_intent_signature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#parent_intent_signature AwsIntent#parent_intent_signature}
   */
   readonly parentIntentSignature?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#region TfIntent#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#region AwsIntent#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#sample_utterances TfIntent#sample_utterances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#sample_utterances AwsIntent#sample_utterances}
   */
   readonly sampleUtterances?: string[];
   /**
   * conclusion_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#conclusion_statement TfIntent#conclusion_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#conclusion_statement AwsIntent#conclusion_statement}
   */
-  readonly conclusionStatement?: TfIntent.ConclusionStatementProperty;
+  readonly conclusionStatement?: AwsIntent.ConclusionStatementProperty;
   /**
   * confirmation_prompt block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#confirmation_prompt TfIntent#confirmation_prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#confirmation_prompt AwsIntent#confirmation_prompt}
   */
-  readonly confirmationPrompt?: TfIntent.ConfirmationPromptProperty;
+  readonly confirmationPrompt?: AwsIntent.ConfirmationPromptProperty;
   /**
   * dialog_code_hook block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#dialog_code_hook TfIntent#dialog_code_hook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#dialog_code_hook AwsIntent#dialog_code_hook}
   */
-  readonly dialogCodeHook?: TfIntent.DialogCodeHookProperty;
+  readonly dialogCodeHook?: AwsIntent.DialogCodeHookProperty;
   /**
   * follow_up_prompt block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#follow_up_prompt TfIntent#follow_up_prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#follow_up_prompt AwsIntent#follow_up_prompt}
   */
-  readonly followUpPrompt?: TfIntent.FollowUpPromptProperty;
+  readonly followUpPrompt?: AwsIntent.FollowUpPromptProperty;
   /**
   * fulfillment_activity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#fulfillment_activity TfIntent#fulfillment_activity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#fulfillment_activity AwsIntent#fulfillment_activity}
   */
-  readonly fulfillmentActivity: TfIntent.FulfillmentActivityProperty;
+  readonly fulfillmentActivity: AwsIntent.FulfillmentActivityProperty;
   /**
   * rejection_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#rejection_statement TfIntent#rejection_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#rejection_statement AwsIntent#rejection_statement}
   */
-  readonly rejectionStatement?: TfIntent.RejectionStatementProperty;
+  readonly rejectionStatement?: AwsIntent.RejectionStatementProperty;
   /**
   * slot block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#slot TfIntent#slot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#slot AwsIntent#slot}
   */
-  readonly slot?: TfIntent.SlotProperty[] | cdktn.IResolvable;
+  readonly slot?: AwsIntent.SlotProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#timeouts TfIntent#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#timeouts AwsIntent#timeouts}
   */
-  readonly timeouts?: TfIntent.TimeoutsProperty;
+  readonly timeouts?: AwsIntent.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent aws_lex_intent}
 */
-export class TfIntent extends cdktn.TerraformResource {
+export class AwsIntent extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -103,11 +103,11 @@ export class TfIntent extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfIntent resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsIntent resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfIntent to import
-  * @param importFromId The id of the existing TfIntent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfIntent to import is found
+  * @param importToId The construct id used in the generated config for the AwsIntent to import
+  * @param importFromId The id of the existing AwsIntent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsIntent to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lex_intent", importId: importFromId, provider });
@@ -122,9 +122,9 @@ export class TfIntent extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfIntentConfig
+  * @param options AwsIntentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfIntentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsIntentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lex_intent',
       terraformGeneratorMetadata: {
@@ -296,11 +296,11 @@ export class TfIntent extends cdktn.TerraformResource {
   }
 
   // conclusion_statement - computed: false, optional: true, required: false
-  private _conclusionStatement = new TfIntent.ConclusionStatementPropertyOutputReference(this, "conclusion_statement");
+  private _conclusionStatement = new AwsIntent.ConclusionStatementPropertyOutputReference(this, "conclusion_statement");
   public get conclusionStatement() {
     return this._conclusionStatement;
   }
-  public putConclusionStatement(value: TfIntent.ConclusionStatementProperty) {
+  public putConclusionStatement(value: AwsIntent.ConclusionStatementProperty) {
     this._conclusionStatement.internalValue = value;
   }
   public resetConclusionStatement() {
@@ -312,11 +312,11 @@ export class TfIntent extends cdktn.TerraformResource {
   }
 
   // confirmation_prompt - computed: false, optional: true, required: false
-  private _confirmationPrompt = new TfIntent.ConfirmationPromptPropertyOutputReference(this, "confirmation_prompt");
+  private _confirmationPrompt = new AwsIntent.ConfirmationPromptPropertyOutputReference(this, "confirmation_prompt");
   public get confirmationPrompt() {
     return this._confirmationPrompt;
   }
-  public putConfirmationPrompt(value: TfIntent.ConfirmationPromptProperty) {
+  public putConfirmationPrompt(value: AwsIntent.ConfirmationPromptProperty) {
     this._confirmationPrompt.internalValue = value;
   }
   public resetConfirmationPrompt() {
@@ -328,11 +328,11 @@ export class TfIntent extends cdktn.TerraformResource {
   }
 
   // dialog_code_hook - computed: false, optional: true, required: false
-  private _dialogCodeHook = new TfIntent.DialogCodeHookPropertyOutputReference(this, "dialog_code_hook");
+  private _dialogCodeHook = new AwsIntent.DialogCodeHookPropertyOutputReference(this, "dialog_code_hook");
   public get dialogCodeHook() {
     return this._dialogCodeHook;
   }
-  public putDialogCodeHook(value: TfIntent.DialogCodeHookProperty) {
+  public putDialogCodeHook(value: AwsIntent.DialogCodeHookProperty) {
     this._dialogCodeHook.internalValue = value;
   }
   public resetDialogCodeHook() {
@@ -344,11 +344,11 @@ export class TfIntent extends cdktn.TerraformResource {
   }
 
   // follow_up_prompt - computed: false, optional: true, required: false
-  private _followUpPrompt = new TfIntent.FollowUpPromptPropertyOutputReference(this, "follow_up_prompt");
+  private _followUpPrompt = new AwsIntent.FollowUpPromptPropertyOutputReference(this, "follow_up_prompt");
   public get followUpPrompt() {
     return this._followUpPrompt;
   }
-  public putFollowUpPrompt(value: TfIntent.FollowUpPromptProperty) {
+  public putFollowUpPrompt(value: AwsIntent.FollowUpPromptProperty) {
     this._followUpPrompt.internalValue = value;
   }
   public resetFollowUpPrompt() {
@@ -360,11 +360,11 @@ export class TfIntent extends cdktn.TerraformResource {
   }
 
   // fulfillment_activity - computed: false, optional: false, required: true
-  private _fulfillmentActivity = new TfIntent.FulfillmentActivityPropertyOutputReference(this, "fulfillment_activity");
+  private _fulfillmentActivity = new AwsIntent.FulfillmentActivityPropertyOutputReference(this, "fulfillment_activity");
   public get fulfillmentActivity() {
     return this._fulfillmentActivity;
   }
-  public putFulfillmentActivity(value: TfIntent.FulfillmentActivityProperty) {
+  public putFulfillmentActivity(value: AwsIntent.FulfillmentActivityProperty) {
     this._fulfillmentActivity.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -373,11 +373,11 @@ export class TfIntent extends cdktn.TerraformResource {
   }
 
   // rejection_statement - computed: false, optional: true, required: false
-  private _rejectionStatement = new TfIntent.RejectionStatementPropertyOutputReference(this, "rejection_statement");
+  private _rejectionStatement = new AwsIntent.RejectionStatementPropertyOutputReference(this, "rejection_statement");
   public get rejectionStatement() {
     return this._rejectionStatement;
   }
-  public putRejectionStatement(value: TfIntent.RejectionStatementProperty) {
+  public putRejectionStatement(value: AwsIntent.RejectionStatementProperty) {
     this._rejectionStatement.internalValue = value;
   }
   public resetRejectionStatement() {
@@ -389,11 +389,11 @@ export class TfIntent extends cdktn.TerraformResource {
   }
 
   // slot - computed: false, optional: true, required: false
-  private _slot = new TfIntent.SlotPropertyList(this, "slot", true);
+  private _slot = new AwsIntent.SlotPropertyList(this, "slot", true);
   public get slot() {
     return this._slot;
   }
-  public putSlot(value: TfIntent.SlotProperty[] | cdktn.IResolvable) {
+  public putSlot(value: AwsIntent.SlotProperty[] | cdktn.IResolvable) {
     this._slot.internalValue = value;
   }
   public resetSlot() {
@@ -405,11 +405,11 @@ export class TfIntent extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfIntent.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsIntent.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfIntent.TimeoutsProperty) {
+  public putTimeouts(value: AwsIntent.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -433,14 +433,14 @@ export class TfIntent extends cdktn.TerraformResource {
       parent_intent_signature: cdktn.stringToTerraform(this._parentIntentSignature),
       region: cdktn.stringToTerraform(this._region),
       sample_utterances: cdktn.listMapper(cdktn.stringToTerraform, false)(this._sampleUtterances),
-      conclusion_statement: tfIntentConclusionStatementPropertyToTerraform(this._conclusionStatement.internalValue),
-      confirmation_prompt: tfIntentConfirmationPromptPropertyToTerraform(this._confirmationPrompt.internalValue),
-      dialog_code_hook: tfIntentDialogCodeHookPropertyToTerraform(this._dialogCodeHook.internalValue),
-      follow_up_prompt: tfIntentFollowUpPromptPropertyToTerraform(this._followUpPrompt.internalValue),
-      fulfillment_activity: tfIntentFulfillmentActivityPropertyToTerraform(this._fulfillmentActivity.internalValue),
-      rejection_statement: tfIntentRejectionStatementPropertyToTerraform(this._rejectionStatement.internalValue),
-      slot: cdktn.listMapper(tfIntentSlotPropertyToTerraform, true)(this._slot.internalValue),
-      timeouts: tfIntentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      conclusion_statement: awsIntentConclusionStatementPropertyToTerraform(this._conclusionStatement.internalValue),
+      confirmation_prompt: awsIntentConfirmationPromptPropertyToTerraform(this._confirmationPrompt.internalValue),
+      dialog_code_hook: awsIntentDialogCodeHookPropertyToTerraform(this._dialogCodeHook.internalValue),
+      follow_up_prompt: awsIntentFollowUpPromptPropertyToTerraform(this._followUpPrompt.internalValue),
+      fulfillment_activity: awsIntentFulfillmentActivityPropertyToTerraform(this._fulfillmentActivity.internalValue),
+      rejection_statement: awsIntentRejectionStatementPropertyToTerraform(this._rejectionStatement.internalValue),
+      slot: cdktn.listMapper(awsIntentSlotPropertyToTerraform, true)(this._slot.internalValue),
+      timeouts: awsIntentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -489,52 +489,52 @@ export class TfIntent extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       conclusion_statement: {
-        value: tfIntentConclusionStatementPropertyToHclTerraform(this._conclusionStatement.internalValue),
+        value: awsIntentConclusionStatementPropertyToHclTerraform(this._conclusionStatement.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfIntent.ConclusionStatementPropertyList",
+        storageClassType: "AwsIntent.ConclusionStatementPropertyList",
       },
       confirmation_prompt: {
-        value: tfIntentConfirmationPromptPropertyToHclTerraform(this._confirmationPrompt.internalValue),
+        value: awsIntentConfirmationPromptPropertyToHclTerraform(this._confirmationPrompt.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfIntent.ConfirmationPromptPropertyList",
+        storageClassType: "AwsIntent.ConfirmationPromptPropertyList",
       },
       dialog_code_hook: {
-        value: tfIntentDialogCodeHookPropertyToHclTerraform(this._dialogCodeHook.internalValue),
+        value: awsIntentDialogCodeHookPropertyToHclTerraform(this._dialogCodeHook.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfIntent.DialogCodeHookPropertyList",
+        storageClassType: "AwsIntent.DialogCodeHookPropertyList",
       },
       follow_up_prompt: {
-        value: tfIntentFollowUpPromptPropertyToHclTerraform(this._followUpPrompt.internalValue),
+        value: awsIntentFollowUpPromptPropertyToHclTerraform(this._followUpPrompt.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfIntent.FollowUpPromptPropertyList",
+        storageClassType: "AwsIntent.FollowUpPromptPropertyList",
       },
       fulfillment_activity: {
-        value: tfIntentFulfillmentActivityPropertyToHclTerraform(this._fulfillmentActivity.internalValue),
+        value: awsIntentFulfillmentActivityPropertyToHclTerraform(this._fulfillmentActivity.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfIntent.FulfillmentActivityPropertyList",
+        storageClassType: "AwsIntent.FulfillmentActivityPropertyList",
       },
       rejection_statement: {
-        value: tfIntentRejectionStatementPropertyToHclTerraform(this._rejectionStatement.internalValue),
+        value: awsIntentRejectionStatementPropertyToHclTerraform(this._rejectionStatement.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfIntent.RejectionStatementPropertyList",
+        storageClassType: "AwsIntent.RejectionStatementPropertyList",
       },
       slot: {
-        value: cdktn.listMapperHcl(tfIntentSlotPropertyToHclTerraform, true)(this._slot.internalValue),
+        value: cdktn.listMapperHcl(awsIntentSlotPropertyToHclTerraform, true)(this._slot.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfIntent.SlotPropertyList",
+        storageClassType: "AwsIntent.SlotPropertyList",
       },
       timeouts: {
-        value: tfIntentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsIntentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfIntent.TimeoutsProperty",
+        storageClassType: "AwsIntent.TimeoutsProperty",
       },
     };
 
@@ -543,7 +543,7 @@ export class TfIntent extends cdktn.TerraformResource {
   }
 }
 
-export function tfIntentConclusionStatementMessagePropertyToTerraform(struct?: TfIntent.ConclusionStatementMessageProperty | cdktn.IResolvable): any {
+export function awsIntentConclusionStatementMessagePropertyToTerraform(struct?: AwsIntent.ConclusionStatementMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,7 +556,7 @@ export function tfIntentConclusionStatementMessagePropertyToTerraform(struct?: T
 }
 
 
-export function tfIntentConclusionStatementMessagePropertyToHclTerraform(struct?: TfIntent.ConclusionStatementMessageProperty | cdktn.IResolvable): any {
+export function awsIntentConclusionStatementMessagePropertyToHclTerraform(struct?: AwsIntent.ConclusionStatementMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,19 +587,19 @@ export function tfIntentConclusionStatementMessagePropertyToHclTerraform(struct?
 }
 
 
-export function tfIntentConclusionStatementPropertyToTerraform(struct?: TfIntent.ConclusionStatementPropertyOutputReference | TfIntent.ConclusionStatementProperty): any {
+export function awsIntentConclusionStatementPropertyToTerraform(struct?: AwsIntent.ConclusionStatementPropertyOutputReference | AwsIntent.ConclusionStatementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     response_card: cdktn.stringToTerraform(struct!.responseCard),
-    message: cdktn.listMapper(tfIntentConclusionStatementMessagePropertyToTerraform, true)(struct!.message),
+    message: cdktn.listMapper(awsIntentConclusionStatementMessagePropertyToTerraform, true)(struct!.message),
   }
 }
 
 
-export function tfIntentConclusionStatementPropertyToHclTerraform(struct?: TfIntent.ConclusionStatementPropertyOutputReference | TfIntent.ConclusionStatementProperty): any {
+export function awsIntentConclusionStatementPropertyToHclTerraform(struct?: AwsIntent.ConclusionStatementPropertyOutputReference | AwsIntent.ConclusionStatementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,7 +612,7 @@ export function tfIntentConclusionStatementPropertyToHclTerraform(struct?: TfInt
       storageClassType: "string",
     },
     message: {
-      value: cdktn.listMapperHcl(tfIntentConclusionStatementMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsIntentConclusionStatementMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "set",
       storageClassType: "ConclusionStatementMessagePropertyList",
@@ -624,7 +624,7 @@ export function tfIntentConclusionStatementPropertyToHclTerraform(struct?: TfInt
 }
 
 
-export function tfIntentConfirmationPromptMessagePropertyToTerraform(struct?: TfIntent.ConfirmationPromptMessageProperty | cdktn.IResolvable): any {
+export function awsIntentConfirmationPromptMessagePropertyToTerraform(struct?: AwsIntent.ConfirmationPromptMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function tfIntentConfirmationPromptMessagePropertyToTerraform(struct?: Tf
 }
 
 
-export function tfIntentConfirmationPromptMessagePropertyToHclTerraform(struct?: TfIntent.ConfirmationPromptMessageProperty | cdktn.IResolvable): any {
+export function awsIntentConfirmationPromptMessagePropertyToHclTerraform(struct?: AwsIntent.ConfirmationPromptMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function tfIntentConfirmationPromptMessagePropertyToHclTerraform(struct?:
 }
 
 
-export function tfIntentConfirmationPromptPropertyToTerraform(struct?: TfIntent.ConfirmationPromptPropertyOutputReference | TfIntent.ConfirmationPromptProperty): any {
+export function awsIntentConfirmationPromptPropertyToTerraform(struct?: AwsIntent.ConfirmationPromptPropertyOutputReference | AwsIntent.ConfirmationPromptProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -676,12 +676,12 @@ export function tfIntentConfirmationPromptPropertyToTerraform(struct?: TfIntent.
   return {
     max_attempts: cdktn.numberToTerraform(struct!.maxAttempts),
     response_card: cdktn.stringToTerraform(struct!.responseCard),
-    message: cdktn.listMapper(tfIntentConfirmationPromptMessagePropertyToTerraform, true)(struct!.message),
+    message: cdktn.listMapper(awsIntentConfirmationPromptMessagePropertyToTerraform, true)(struct!.message),
   }
 }
 
 
-export function tfIntentConfirmationPromptPropertyToHclTerraform(struct?: TfIntent.ConfirmationPromptPropertyOutputReference | TfIntent.ConfirmationPromptProperty): any {
+export function awsIntentConfirmationPromptPropertyToHclTerraform(struct?: AwsIntent.ConfirmationPromptPropertyOutputReference | AwsIntent.ConfirmationPromptProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -700,7 +700,7 @@ export function tfIntentConfirmationPromptPropertyToHclTerraform(struct?: TfInte
       storageClassType: "string",
     },
     message: {
-      value: cdktn.listMapperHcl(tfIntentConfirmationPromptMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsIntentConfirmationPromptMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "set",
       storageClassType: "ConfirmationPromptMessagePropertyList",
@@ -712,7 +712,7 @@ export function tfIntentConfirmationPromptPropertyToHclTerraform(struct?: TfInte
 }
 
 
-export function tfIntentDialogCodeHookPropertyToTerraform(struct?: TfIntent.DialogCodeHookPropertyOutputReference | TfIntent.DialogCodeHookProperty): any {
+export function awsIntentDialogCodeHookPropertyToTerraform(struct?: AwsIntent.DialogCodeHookPropertyOutputReference | AwsIntent.DialogCodeHookProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -724,7 +724,7 @@ export function tfIntentDialogCodeHookPropertyToTerraform(struct?: TfIntent.Dial
 }
 
 
-export function tfIntentDialogCodeHookPropertyToHclTerraform(struct?: TfIntent.DialogCodeHookPropertyOutputReference | TfIntent.DialogCodeHookProperty): any {
+export function awsIntentDialogCodeHookPropertyToHclTerraform(struct?: AwsIntent.DialogCodeHookPropertyOutputReference | AwsIntent.DialogCodeHookProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -749,7 +749,7 @@ export function tfIntentDialogCodeHookPropertyToHclTerraform(struct?: TfIntent.D
 }
 
 
-export function tfIntentFollowUpPromptPromptMessagePropertyToTerraform(struct?: TfIntent.FollowUpPromptPromptMessageProperty | cdktn.IResolvable): any {
+export function awsIntentFollowUpPromptPromptMessagePropertyToTerraform(struct?: AwsIntent.FollowUpPromptPromptMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -762,7 +762,7 @@ export function tfIntentFollowUpPromptPromptMessagePropertyToTerraform(struct?: 
 }
 
 
-export function tfIntentFollowUpPromptPromptMessagePropertyToHclTerraform(struct?: TfIntent.FollowUpPromptPromptMessageProperty | cdktn.IResolvable): any {
+export function awsIntentFollowUpPromptPromptMessagePropertyToHclTerraform(struct?: AwsIntent.FollowUpPromptPromptMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -793,7 +793,7 @@ export function tfIntentFollowUpPromptPromptMessagePropertyToHclTerraform(struct
 }
 
 
-export function tfIntentPromptPropertyToTerraform(struct?: TfIntent.PromptPropertyOutputReference | TfIntent.PromptProperty): any {
+export function awsIntentPromptPropertyToTerraform(struct?: AwsIntent.PromptPropertyOutputReference | AwsIntent.PromptProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -801,12 +801,12 @@ export function tfIntentPromptPropertyToTerraform(struct?: TfIntent.PromptProper
   return {
     max_attempts: cdktn.numberToTerraform(struct!.maxAttempts),
     response_card: cdktn.stringToTerraform(struct!.responseCard),
-    message: cdktn.listMapper(tfIntentFollowUpPromptPromptMessagePropertyToTerraform, true)(struct!.message),
+    message: cdktn.listMapper(awsIntentFollowUpPromptPromptMessagePropertyToTerraform, true)(struct!.message),
   }
 }
 
 
-export function tfIntentPromptPropertyToHclTerraform(struct?: TfIntent.PromptPropertyOutputReference | TfIntent.PromptProperty): any {
+export function awsIntentPromptPropertyToHclTerraform(struct?: AwsIntent.PromptPropertyOutputReference | AwsIntent.PromptProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -825,7 +825,7 @@ export function tfIntentPromptPropertyToHclTerraform(struct?: TfIntent.PromptPro
       storageClassType: "string",
     },
     message: {
-      value: cdktn.listMapperHcl(tfIntentFollowUpPromptPromptMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsIntentFollowUpPromptPromptMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "set",
       storageClassType: "FollowUpPromptPromptMessagePropertyList",
@@ -837,7 +837,7 @@ export function tfIntentPromptPropertyToHclTerraform(struct?: TfIntent.PromptPro
 }
 
 
-export function tfIntentFollowUpPromptRejectionStatementMessagePropertyToTerraform(struct?: TfIntent.FollowUpPromptRejectionStatementMessageProperty | cdktn.IResolvable): any {
+export function awsIntentFollowUpPromptRejectionStatementMessagePropertyToTerraform(struct?: AwsIntent.FollowUpPromptRejectionStatementMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -850,7 +850,7 @@ export function tfIntentFollowUpPromptRejectionStatementMessagePropertyToTerrafo
 }
 
 
-export function tfIntentFollowUpPromptRejectionStatementMessagePropertyToHclTerraform(struct?: TfIntent.FollowUpPromptRejectionStatementMessageProperty | cdktn.IResolvable): any {
+export function awsIntentFollowUpPromptRejectionStatementMessagePropertyToHclTerraform(struct?: AwsIntent.FollowUpPromptRejectionStatementMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -881,19 +881,19 @@ export function tfIntentFollowUpPromptRejectionStatementMessagePropertyToHclTerr
 }
 
 
-export function tfIntentFollowUpPromptRejectionStatementPropertyToTerraform(struct?: TfIntent.FollowUpPromptRejectionStatementPropertyOutputReference | TfIntent.FollowUpPromptRejectionStatementProperty): any {
+export function awsIntentFollowUpPromptRejectionStatementPropertyToTerraform(struct?: AwsIntent.FollowUpPromptRejectionStatementPropertyOutputReference | AwsIntent.FollowUpPromptRejectionStatementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     response_card: cdktn.stringToTerraform(struct!.responseCard),
-    message: cdktn.listMapper(tfIntentFollowUpPromptRejectionStatementMessagePropertyToTerraform, true)(struct!.message),
+    message: cdktn.listMapper(awsIntentFollowUpPromptRejectionStatementMessagePropertyToTerraform, true)(struct!.message),
   }
 }
 
 
-export function tfIntentFollowUpPromptRejectionStatementPropertyToHclTerraform(struct?: TfIntent.FollowUpPromptRejectionStatementPropertyOutputReference | TfIntent.FollowUpPromptRejectionStatementProperty): any {
+export function awsIntentFollowUpPromptRejectionStatementPropertyToHclTerraform(struct?: AwsIntent.FollowUpPromptRejectionStatementPropertyOutputReference | AwsIntent.FollowUpPromptRejectionStatementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -906,7 +906,7 @@ export function tfIntentFollowUpPromptRejectionStatementPropertyToHclTerraform(s
       storageClassType: "string",
     },
     message: {
-      value: cdktn.listMapperHcl(tfIntentFollowUpPromptRejectionStatementMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsIntentFollowUpPromptRejectionStatementMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "set",
       storageClassType: "FollowUpPromptRejectionStatementMessagePropertyList",
@@ -918,32 +918,32 @@ export function tfIntentFollowUpPromptRejectionStatementPropertyToHclTerraform(s
 }
 
 
-export function tfIntentFollowUpPromptPropertyToTerraform(struct?: TfIntent.FollowUpPromptPropertyOutputReference | TfIntent.FollowUpPromptProperty): any {
+export function awsIntentFollowUpPromptPropertyToTerraform(struct?: AwsIntent.FollowUpPromptPropertyOutputReference | AwsIntent.FollowUpPromptProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    prompt: tfIntentPromptPropertyToTerraform(struct!.prompt),
-    rejection_statement: tfIntentFollowUpPromptRejectionStatementPropertyToTerraform(struct!.rejectionStatement),
+    prompt: awsIntentPromptPropertyToTerraform(struct!.prompt),
+    rejection_statement: awsIntentFollowUpPromptRejectionStatementPropertyToTerraform(struct!.rejectionStatement),
   }
 }
 
 
-export function tfIntentFollowUpPromptPropertyToHclTerraform(struct?: TfIntent.FollowUpPromptPropertyOutputReference | TfIntent.FollowUpPromptProperty): any {
+export function awsIntentFollowUpPromptPropertyToHclTerraform(struct?: AwsIntent.FollowUpPromptPropertyOutputReference | AwsIntent.FollowUpPromptProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     prompt: {
-      value: tfIntentPromptPropertyToHclTerraform(struct!.prompt),
+      value: awsIntentPromptPropertyToHclTerraform(struct!.prompt),
       isBlock: true,
       type: "list",
       storageClassType: "PromptPropertyList",
     },
     rejection_statement: {
-      value: tfIntentFollowUpPromptRejectionStatementPropertyToHclTerraform(struct!.rejectionStatement),
+      value: awsIntentFollowUpPromptRejectionStatementPropertyToHclTerraform(struct!.rejectionStatement),
       isBlock: true,
       type: "list",
       storageClassType: "FollowUpPromptRejectionStatementPropertyList",
@@ -955,7 +955,7 @@ export function tfIntentFollowUpPromptPropertyToHclTerraform(struct?: TfIntent.F
 }
 
 
-export function tfIntentCodeHookPropertyToTerraform(struct?: TfIntent.CodeHookPropertyOutputReference | TfIntent.CodeHookProperty): any {
+export function awsIntentCodeHookPropertyToTerraform(struct?: AwsIntent.CodeHookPropertyOutputReference | AwsIntent.CodeHookProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -967,7 +967,7 @@ export function tfIntentCodeHookPropertyToTerraform(struct?: TfIntent.CodeHookPr
 }
 
 
-export function tfIntentCodeHookPropertyToHclTerraform(struct?: TfIntent.CodeHookPropertyOutputReference | TfIntent.CodeHookProperty): any {
+export function awsIntentCodeHookPropertyToHclTerraform(struct?: AwsIntent.CodeHookPropertyOutputReference | AwsIntent.CodeHookProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -992,19 +992,19 @@ export function tfIntentCodeHookPropertyToHclTerraform(struct?: TfIntent.CodeHoo
 }
 
 
-export function tfIntentFulfillmentActivityPropertyToTerraform(struct?: TfIntent.FulfillmentActivityPropertyOutputReference | TfIntent.FulfillmentActivityProperty): any {
+export function awsIntentFulfillmentActivityPropertyToTerraform(struct?: AwsIntent.FulfillmentActivityPropertyOutputReference | AwsIntent.FulfillmentActivityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    code_hook: tfIntentCodeHookPropertyToTerraform(struct!.codeHook),
+    code_hook: awsIntentCodeHookPropertyToTerraform(struct!.codeHook),
   }
 }
 
 
-export function tfIntentFulfillmentActivityPropertyToHclTerraform(struct?: TfIntent.FulfillmentActivityPropertyOutputReference | TfIntent.FulfillmentActivityProperty): any {
+export function awsIntentFulfillmentActivityPropertyToHclTerraform(struct?: AwsIntent.FulfillmentActivityPropertyOutputReference | AwsIntent.FulfillmentActivityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1017,7 +1017,7 @@ export function tfIntentFulfillmentActivityPropertyToHclTerraform(struct?: TfInt
       storageClassType: "string",
     },
     code_hook: {
-      value: tfIntentCodeHookPropertyToHclTerraform(struct!.codeHook),
+      value: awsIntentCodeHookPropertyToHclTerraform(struct!.codeHook),
       isBlock: true,
       type: "list",
       storageClassType: "CodeHookPropertyList",
@@ -1029,7 +1029,7 @@ export function tfIntentFulfillmentActivityPropertyToHclTerraform(struct?: TfInt
 }
 
 
-export function tfIntentRejectionStatementMessagePropertyToTerraform(struct?: TfIntent.RejectionStatementMessageProperty | cdktn.IResolvable): any {
+export function awsIntentRejectionStatementMessagePropertyToTerraform(struct?: AwsIntent.RejectionStatementMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1042,7 +1042,7 @@ export function tfIntentRejectionStatementMessagePropertyToTerraform(struct?: Tf
 }
 
 
-export function tfIntentRejectionStatementMessagePropertyToHclTerraform(struct?: TfIntent.RejectionStatementMessageProperty | cdktn.IResolvable): any {
+export function awsIntentRejectionStatementMessagePropertyToHclTerraform(struct?: AwsIntent.RejectionStatementMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1073,19 +1073,19 @@ export function tfIntentRejectionStatementMessagePropertyToHclTerraform(struct?:
 }
 
 
-export function tfIntentRejectionStatementPropertyToTerraform(struct?: TfIntent.RejectionStatementPropertyOutputReference | TfIntent.RejectionStatementProperty): any {
+export function awsIntentRejectionStatementPropertyToTerraform(struct?: AwsIntent.RejectionStatementPropertyOutputReference | AwsIntent.RejectionStatementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     response_card: cdktn.stringToTerraform(struct!.responseCard),
-    message: cdktn.listMapper(tfIntentRejectionStatementMessagePropertyToTerraform, true)(struct!.message),
+    message: cdktn.listMapper(awsIntentRejectionStatementMessagePropertyToTerraform, true)(struct!.message),
   }
 }
 
 
-export function tfIntentRejectionStatementPropertyToHclTerraform(struct?: TfIntent.RejectionStatementPropertyOutputReference | TfIntent.RejectionStatementProperty): any {
+export function awsIntentRejectionStatementPropertyToHclTerraform(struct?: AwsIntent.RejectionStatementPropertyOutputReference | AwsIntent.RejectionStatementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1098,7 +1098,7 @@ export function tfIntentRejectionStatementPropertyToHclTerraform(struct?: TfInte
       storageClassType: "string",
     },
     message: {
-      value: cdktn.listMapperHcl(tfIntentRejectionStatementMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsIntentRejectionStatementMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "set",
       storageClassType: "RejectionStatementMessagePropertyList",
@@ -1110,7 +1110,7 @@ export function tfIntentRejectionStatementPropertyToHclTerraform(struct?: TfInte
 }
 
 
-export function tfIntentSlotValueElicitationPromptMessagePropertyToTerraform(struct?: TfIntent.SlotValueElicitationPromptMessageProperty | cdktn.IResolvable): any {
+export function awsIntentSlotValueElicitationPromptMessagePropertyToTerraform(struct?: AwsIntent.SlotValueElicitationPromptMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1123,7 +1123,7 @@ export function tfIntentSlotValueElicitationPromptMessagePropertyToTerraform(str
 }
 
 
-export function tfIntentSlotValueElicitationPromptMessagePropertyToHclTerraform(struct?: TfIntent.SlotValueElicitationPromptMessageProperty | cdktn.IResolvable): any {
+export function awsIntentSlotValueElicitationPromptMessagePropertyToHclTerraform(struct?: AwsIntent.SlotValueElicitationPromptMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1154,7 +1154,7 @@ export function tfIntentSlotValueElicitationPromptMessagePropertyToHclTerraform(
 }
 
 
-export function tfIntentValueElicitationPromptPropertyToTerraform(struct?: TfIntent.ValueElicitationPromptPropertyOutputReference | TfIntent.ValueElicitationPromptProperty): any {
+export function awsIntentValueElicitationPromptPropertyToTerraform(struct?: AwsIntent.ValueElicitationPromptPropertyOutputReference | AwsIntent.ValueElicitationPromptProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1162,12 +1162,12 @@ export function tfIntentValueElicitationPromptPropertyToTerraform(struct?: TfInt
   return {
     max_attempts: cdktn.numberToTerraform(struct!.maxAttempts),
     response_card: cdktn.stringToTerraform(struct!.responseCard),
-    message: cdktn.listMapper(tfIntentSlotValueElicitationPromptMessagePropertyToTerraform, true)(struct!.message),
+    message: cdktn.listMapper(awsIntentSlotValueElicitationPromptMessagePropertyToTerraform, true)(struct!.message),
   }
 }
 
 
-export function tfIntentValueElicitationPromptPropertyToHclTerraform(struct?: TfIntent.ValueElicitationPromptPropertyOutputReference | TfIntent.ValueElicitationPromptProperty): any {
+export function awsIntentValueElicitationPromptPropertyToHclTerraform(struct?: AwsIntent.ValueElicitationPromptPropertyOutputReference | AwsIntent.ValueElicitationPromptProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1186,7 +1186,7 @@ export function tfIntentValueElicitationPromptPropertyToHclTerraform(struct?: Tf
       storageClassType: "string",
     },
     message: {
-      value: cdktn.listMapperHcl(tfIntentSlotValueElicitationPromptMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsIntentSlotValueElicitationPromptMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "set",
       storageClassType: "SlotValueElicitationPromptMessagePropertyList",
@@ -1198,7 +1198,7 @@ export function tfIntentValueElicitationPromptPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfIntentSlotPropertyToTerraform(struct?: TfIntent.SlotProperty | cdktn.IResolvable): any {
+export function awsIntentSlotPropertyToTerraform(struct?: AwsIntent.SlotProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1212,12 +1212,12 @@ export function tfIntentSlotPropertyToTerraform(struct?: TfIntent.SlotProperty |
     slot_constraint: cdktn.stringToTerraform(struct!.slotConstraint),
     slot_type: cdktn.stringToTerraform(struct!.slotType),
     slot_type_version: cdktn.stringToTerraform(struct!.slotTypeVersion),
-    value_elicitation_prompt: tfIntentValueElicitationPromptPropertyToTerraform(struct!.valueElicitationPrompt),
+    value_elicitation_prompt: awsIntentValueElicitationPromptPropertyToTerraform(struct!.valueElicitationPrompt),
   }
 }
 
 
-export function tfIntentSlotPropertyToHclTerraform(struct?: TfIntent.SlotProperty | cdktn.IResolvable): any {
+export function awsIntentSlotPropertyToHclTerraform(struct?: AwsIntent.SlotProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1272,7 +1272,7 @@ export function tfIntentSlotPropertyToHclTerraform(struct?: TfIntent.SlotPropert
       storageClassType: "string",
     },
     value_elicitation_prompt: {
-      value: tfIntentValueElicitationPromptPropertyToHclTerraform(struct!.valueElicitationPrompt),
+      value: awsIntentValueElicitationPromptPropertyToHclTerraform(struct!.valueElicitationPrompt),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationPromptPropertyList",
@@ -1284,7 +1284,7 @@ export function tfIntentSlotPropertyToHclTerraform(struct?: TfIntent.SlotPropert
 }
 
 
-export function tfIntentTimeoutsPropertyToTerraform(struct?: TfIntent.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsIntentTimeoutsPropertyToTerraform(struct?: AwsIntent.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1297,7 +1297,7 @@ export function tfIntentTimeoutsPropertyToTerraform(struct?: TfIntent.TimeoutsPr
 }
 
 
-export function tfIntentTimeoutsPropertyToHclTerraform(struct?: TfIntent.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsIntentTimeoutsPropertyToHclTerraform(struct?: AwsIntent.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1328,18 +1328,18 @@ export function tfIntentTimeoutsPropertyToHclTerraform(struct?: TfIntent.Timeout
 }
 
 
-export namespace TfIntent {
+export namespace AwsIntent {
 export interface ConclusionStatementMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content TfIntent#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content AwsIntent#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content_type TfIntent#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content_type AwsIntent#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#group_number TfIntent#group_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#group_number AwsIntent#group_number}
   */
   readonly groupNumber?: number;
 }
@@ -1463,13 +1463,13 @@ export class ConclusionStatementMessagePropertyList extends cdktn.ComplexList {
 }
 export interface ConclusionStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card TfIntent#response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card AwsIntent#response_card}
   */
   readonly responseCard?: string;
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message TfIntent#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message AwsIntent#message}
   */
   readonly message: ConclusionStatementMessageProperty[] | cdktn.IResolvable;
 }
@@ -1542,15 +1542,15 @@ export class ConclusionStatementPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface ConfirmationPromptMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content TfIntent#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content AwsIntent#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content_type TfIntent#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content_type AwsIntent#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#group_number TfIntent#group_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#group_number AwsIntent#group_number}
   */
   readonly groupNumber?: number;
 }
@@ -1674,17 +1674,17 @@ export class ConfirmationPromptMessagePropertyList extends cdktn.ComplexList {
 }
 export interface ConfirmationPromptProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#max_attempts TfIntent#max_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#max_attempts AwsIntent#max_attempts}
   */
   readonly maxAttempts: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card TfIntent#response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card AwsIntent#response_card}
   */
   readonly responseCard?: string;
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message TfIntent#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message AwsIntent#message}
   */
   readonly message: ConfirmationPromptMessageProperty[] | cdktn.IResolvable;
 }
@@ -1776,11 +1776,11 @@ export class ConfirmationPromptPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface DialogCodeHookProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message_version TfIntent#message_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message_version AwsIntent#message_version}
   */
   readonly messageVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#uri TfIntent#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#uri AwsIntent#uri}
   */
   readonly uri: string;
 }
@@ -1850,15 +1850,15 @@ export class DialogCodeHookPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FollowUpPromptPromptMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content TfIntent#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content AwsIntent#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content_type TfIntent#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content_type AwsIntent#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#group_number TfIntent#group_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#group_number AwsIntent#group_number}
   */
   readonly groupNumber?: number;
 }
@@ -1982,17 +1982,17 @@ export class FollowUpPromptPromptMessagePropertyList extends cdktn.ComplexList {
 }
 export interface PromptProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#max_attempts TfIntent#max_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#max_attempts AwsIntent#max_attempts}
   */
   readonly maxAttempts: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card TfIntent#response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card AwsIntent#response_card}
   */
   readonly responseCard?: string;
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message TfIntent#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message AwsIntent#message}
   */
   readonly message: FollowUpPromptPromptMessageProperty[] | cdktn.IResolvable;
 }
@@ -2084,15 +2084,15 @@ export class PromptPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FollowUpPromptRejectionStatementMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content TfIntent#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content AwsIntent#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content_type TfIntent#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content_type AwsIntent#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#group_number TfIntent#group_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#group_number AwsIntent#group_number}
   */
   readonly groupNumber?: number;
 }
@@ -2216,13 +2216,13 @@ export class FollowUpPromptRejectionStatementMessagePropertyList extends cdktn.C
 }
 export interface FollowUpPromptRejectionStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card TfIntent#response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card AwsIntent#response_card}
   */
   readonly responseCard?: string;
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message TfIntent#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message AwsIntent#message}
   */
   readonly message: FollowUpPromptRejectionStatementMessageProperty[] | cdktn.IResolvable;
 }
@@ -2297,13 +2297,13 @@ export interface FollowUpPromptProperty {
   /**
   * prompt block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#prompt TfIntent#prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#prompt AwsIntent#prompt}
   */
   readonly prompt: PromptProperty;
   /**
   * rejection_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#rejection_statement TfIntent#rejection_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#rejection_statement AwsIntent#rejection_statement}
   */
   readonly rejectionStatement: FollowUpPromptRejectionStatementProperty;
 }
@@ -2373,11 +2373,11 @@ export class FollowUpPromptPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CodeHookProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message_version TfIntent#message_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message_version AwsIntent#message_version}
   */
   readonly messageVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#uri TfIntent#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#uri AwsIntent#uri}
   */
   readonly uri: string;
 }
@@ -2447,13 +2447,13 @@ export class CodeHookPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FulfillmentActivityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#type TfIntent#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#type AwsIntent#type}
   */
   readonly type: string;
   /**
   * code_hook block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#code_hook TfIntent#code_hook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#code_hook AwsIntent#code_hook}
   */
   readonly codeHook?: CodeHookProperty;
 }
@@ -2526,15 +2526,15 @@ export class FulfillmentActivityPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface RejectionStatementMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content TfIntent#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content AwsIntent#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content_type TfIntent#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content_type AwsIntent#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#group_number TfIntent#group_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#group_number AwsIntent#group_number}
   */
   readonly groupNumber?: number;
 }
@@ -2658,13 +2658,13 @@ export class RejectionStatementMessagePropertyList extends cdktn.ComplexList {
 }
 export interface RejectionStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card TfIntent#response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card AwsIntent#response_card}
   */
   readonly responseCard?: string;
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message TfIntent#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message AwsIntent#message}
   */
   readonly message: RejectionStatementMessageProperty[] | cdktn.IResolvable;
 }
@@ -2737,15 +2737,15 @@ export class RejectionStatementPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface SlotValueElicitationPromptMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content TfIntent#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content AwsIntent#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content_type TfIntent#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#content_type AwsIntent#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#group_number TfIntent#group_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#group_number AwsIntent#group_number}
   */
   readonly groupNumber?: number;
 }
@@ -2869,17 +2869,17 @@ export class SlotValueElicitationPromptMessagePropertyList extends cdktn.Complex
 }
 export interface ValueElicitationPromptProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#max_attempts TfIntent#max_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#max_attempts AwsIntent#max_attempts}
   */
   readonly maxAttempts: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card TfIntent#response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card AwsIntent#response_card}
   */
   readonly responseCard?: string;
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message TfIntent#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#message AwsIntent#message}
   */
   readonly message: SlotValueElicitationPromptMessageProperty[] | cdktn.IResolvable;
 }
@@ -2971,41 +2971,41 @@ export class ValueElicitationPromptPropertyOutputReference extends cdktn.Complex
 }
 export interface SlotProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#description TfIntent#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#description AwsIntent#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#name TfIntent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#name AwsIntent#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#priority TfIntent#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#priority AwsIntent#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card TfIntent#response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#response_card AwsIntent#response_card}
   */
   readonly responseCard?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#sample_utterances TfIntent#sample_utterances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#sample_utterances AwsIntent#sample_utterances}
   */
   readonly sampleUtterances?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#slot_constraint TfIntent#slot_constraint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#slot_constraint AwsIntent#slot_constraint}
   */
   readonly slotConstraint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#slot_type TfIntent#slot_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#slot_type AwsIntent#slot_type}
   */
   readonly slotType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#slot_type_version TfIntent#slot_type_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#slot_type_version AwsIntent#slot_type_version}
   */
   readonly slotTypeVersion?: string;
   /**
   * value_elicitation_prompt block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#value_elicitation_prompt TfIntent#value_elicitation_prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#value_elicitation_prompt AwsIntent#value_elicitation_prompt}
   */
   readonly valueElicitationPrompt?: ValueElicitationPromptProperty;
 }
@@ -3258,15 +3258,15 @@ export class SlotPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#create TfIntent#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#create AwsIntent#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#delete TfIntent#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#delete AwsIntent#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#update TfIntent#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_intent#update AwsIntent#update}
   */
   readonly update?: string;
 }

@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDomainSamlOptionsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDomainSamlOptionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#domain_name TfDomainSamlOptions#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#domain_name AwsDomainSamlOptions#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#id TfDomainSamlOptions#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#id AwsDomainSamlOptions#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,27 +20,27 @@ export interface TfDomainSamlOptionsConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#region TfDomainSamlOptions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#region AwsDomainSamlOptions#region}
   */
   readonly region?: string;
   /**
   * saml_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#saml_options TfDomainSamlOptions#saml_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#saml_options AwsDomainSamlOptions#saml_options}
   */
-  readonly samlOptions?: TfDomainSamlOptions.SamlOptionsProperty;
+  readonly samlOptions?: AwsDomainSamlOptions.SamlOptionsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#timeouts TfDomainSamlOptions#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#timeouts AwsDomainSamlOptions#timeouts}
   */
-  readonly timeouts?: TfDomainSamlOptions.TimeoutsProperty;
+  readonly timeouts?: AwsDomainSamlOptions.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options aws_opensearch_domain_saml_options}
 */
-export class TfDomainSamlOptions extends cdktn.TerraformResource {
+export class AwsDomainSamlOptions extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfDomainSamlOptions extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDomainSamlOptions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDomainSamlOptions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDomainSamlOptions to import
-  * @param importFromId The id of the existing TfDomainSamlOptions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDomainSamlOptions to import is found
+  * @param importToId The construct id used in the generated config for the AwsDomainSamlOptions to import
+  * @param importFromId The id of the existing AwsDomainSamlOptions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDomainSamlOptions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearch_domain_saml_options", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfDomainSamlOptions extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDomainSamlOptionsConfig
+  * @param options AwsDomainSamlOptionsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDomainSamlOptionsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDomainSamlOptionsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearch_domain_saml_options',
       terraformGeneratorMetadata: {
@@ -145,11 +145,11 @@ export class TfDomainSamlOptions extends cdktn.TerraformResource {
   }
 
   // saml_options - computed: false, optional: true, required: false
-  private _samlOptions = new TfDomainSamlOptions.SamlOptionsPropertyOutputReference(this, "saml_options");
+  private _samlOptions = new AwsDomainSamlOptions.SamlOptionsPropertyOutputReference(this, "saml_options");
   public get samlOptions() {
     return this._samlOptions;
   }
-  public putSamlOptions(value: TfDomainSamlOptions.SamlOptionsProperty) {
+  public putSamlOptions(value: AwsDomainSamlOptions.SamlOptionsProperty) {
     this._samlOptions.internalValue = value;
   }
   public resetSamlOptions() {
@@ -161,11 +161,11 @@ export class TfDomainSamlOptions extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDomainSamlOptions.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDomainSamlOptions.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDomainSamlOptions.TimeoutsProperty) {
+  public putTimeouts(value: AwsDomainSamlOptions.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -185,8 +185,8 @@ export class TfDomainSamlOptions extends cdktn.TerraformResource {
       domain_name: cdktn.stringToTerraform(this._domainName),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      saml_options: tfDomainSamlOptionsSamlOptionsPropertyToTerraform(this._samlOptions.internalValue),
-      timeouts: tfDomainSamlOptionsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      saml_options: awsDomainSamlOptionsSamlOptionsPropertyToTerraform(this._samlOptions.internalValue),
+      timeouts: awsDomainSamlOptionsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -211,16 +211,16 @@ export class TfDomainSamlOptions extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       saml_options: {
-        value: tfDomainSamlOptionsSamlOptionsPropertyToHclTerraform(this._samlOptions.internalValue),
+        value: awsDomainSamlOptionsSamlOptionsPropertyToHclTerraform(this._samlOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomainSamlOptions.SamlOptionsPropertyList",
+        storageClassType: "AwsDomainSamlOptions.SamlOptionsPropertyList",
       },
       timeouts: {
-        value: tfDomainSamlOptionsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDomainSamlOptionsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDomainSamlOptions.TimeoutsProperty",
+        storageClassType: "AwsDomainSamlOptions.TimeoutsProperty",
       },
     };
 
@@ -229,7 +229,7 @@ export class TfDomainSamlOptions extends cdktn.TerraformResource {
   }
 }
 
-export function tfDomainSamlOptionsIdpPropertyToTerraform(struct?: TfDomainSamlOptions.IdpPropertyOutputReference | TfDomainSamlOptions.IdpProperty): any {
+export function awsDomainSamlOptionsIdpPropertyToTerraform(struct?: AwsDomainSamlOptions.IdpPropertyOutputReference | AwsDomainSamlOptions.IdpProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function tfDomainSamlOptionsIdpPropertyToTerraform(struct?: TfDomainSamlO
 }
 
 
-export function tfDomainSamlOptionsIdpPropertyToHclTerraform(struct?: TfDomainSamlOptions.IdpPropertyOutputReference | TfDomainSamlOptions.IdpProperty): any {
+export function awsDomainSamlOptionsIdpPropertyToHclTerraform(struct?: AwsDomainSamlOptions.IdpPropertyOutputReference | AwsDomainSamlOptions.IdpProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function tfDomainSamlOptionsIdpPropertyToHclTerraform(struct?: TfDomainSa
 }
 
 
-export function tfDomainSamlOptionsSamlOptionsPropertyToTerraform(struct?: TfDomainSamlOptions.SamlOptionsPropertyOutputReference | TfDomainSamlOptions.SamlOptionsProperty): any {
+export function awsDomainSamlOptionsSamlOptionsPropertyToTerraform(struct?: AwsDomainSamlOptions.SamlOptionsPropertyOutputReference | AwsDomainSamlOptions.SamlOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,12 +278,12 @@ export function tfDomainSamlOptionsSamlOptionsPropertyToTerraform(struct?: TfDom
     roles_key: cdktn.stringToTerraform(struct!.rolesKey),
     session_timeout_minutes: cdktn.numberToTerraform(struct!.sessionTimeoutMinutes),
     subject_key: cdktn.stringToTerraform(struct!.subjectKey),
-    idp: tfDomainSamlOptionsIdpPropertyToTerraform(struct!.idp),
+    idp: awsDomainSamlOptionsIdpPropertyToTerraform(struct!.idp),
   }
 }
 
 
-export function tfDomainSamlOptionsSamlOptionsPropertyToHclTerraform(struct?: TfDomainSamlOptions.SamlOptionsPropertyOutputReference | TfDomainSamlOptions.SamlOptionsProperty): any {
+export function awsDomainSamlOptionsSamlOptionsPropertyToHclTerraform(struct?: AwsDomainSamlOptions.SamlOptionsPropertyOutputReference | AwsDomainSamlOptions.SamlOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function tfDomainSamlOptionsSamlOptionsPropertyToHclTerraform(struct?: Tf
       storageClassType: "string",
     },
     idp: {
-      value: tfDomainSamlOptionsIdpPropertyToHclTerraform(struct!.idp),
+      value: awsDomainSamlOptionsIdpPropertyToHclTerraform(struct!.idp),
       isBlock: true,
       type: "list",
       storageClassType: "IdpPropertyList",
@@ -338,7 +338,7 @@ export function tfDomainSamlOptionsSamlOptionsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDomainSamlOptionsTimeoutsPropertyToTerraform(struct?: TfDomainSamlOptions.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDomainSamlOptionsTimeoutsPropertyToTerraform(struct?: AwsDomainSamlOptions.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function tfDomainSamlOptionsTimeoutsPropertyToTerraform(struct?: TfDomain
 }
 
 
-export function tfDomainSamlOptionsTimeoutsPropertyToHclTerraform(struct?: TfDomainSamlOptions.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDomainSamlOptionsTimeoutsPropertyToHclTerraform(struct?: AwsDomainSamlOptions.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,14 +375,14 @@ export function tfDomainSamlOptionsTimeoutsPropertyToHclTerraform(struct?: TfDom
 }
 
 
-export namespace TfDomainSamlOptions {
+export namespace AwsDomainSamlOptions {
 export interface IdpProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#entity_id TfDomainSamlOptions#entity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#entity_id AwsDomainSamlOptions#entity_id}
   */
   readonly entityId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#metadata_content TfDomainSamlOptions#metadata_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#metadata_content AwsDomainSamlOptions#metadata_content}
   */
   readonly metadataContent: string;
 }
@@ -452,33 +452,33 @@ export class IdpPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SamlOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#enabled TfDomainSamlOptions#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#enabled AwsDomainSamlOptions#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#master_backend_role TfDomainSamlOptions#master_backend_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#master_backend_role AwsDomainSamlOptions#master_backend_role}
   */
   readonly masterBackendRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#master_user_name TfDomainSamlOptions#master_user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#master_user_name AwsDomainSamlOptions#master_user_name}
   */
   readonly masterUserName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#roles_key TfDomainSamlOptions#roles_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#roles_key AwsDomainSamlOptions#roles_key}
   */
   readonly rolesKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#session_timeout_minutes TfDomainSamlOptions#session_timeout_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#session_timeout_minutes AwsDomainSamlOptions#session_timeout_minutes}
   */
   readonly sessionTimeoutMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#subject_key TfDomainSamlOptions#subject_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#subject_key AwsDomainSamlOptions#subject_key}
   */
   readonly subjectKey?: string;
   /**
   * idp block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#idp TfDomainSamlOptions#idp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#idp AwsDomainSamlOptions#idp}
   */
   readonly idp?: IdpProperty;
 }
@@ -664,11 +664,11 @@ export class SamlOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#delete TfDomainSamlOptions#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#delete AwsDomainSamlOptions#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#update TfDomainSamlOptions#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_domain_saml_options#update AwsDomainSamlOptions#update}
   */
   readonly update?: string;
 }

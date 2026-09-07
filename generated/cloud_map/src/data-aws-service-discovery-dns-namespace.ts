@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfDnsNamespaceConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsDnsNamespaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace#id DataTfDnsNamespace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace#id DataAwsDnsNamespace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace#name DataTfDnsNamespace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace#name DataAwsDnsNamespace#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace#region DataTfDnsNamespace#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace#region DataAwsDnsNamespace#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace#tags DataTfDnsNamespace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace#tags DataAwsDnsNamespace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace#type DataTfDnsNamespace#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace#type DataAwsDnsNamespace#type}
   */
   readonly type: string;
 }
@@ -36,7 +36,7 @@ export interface DataTfDnsNamespaceConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace aws_service_discovery_dns_namespace}
 */
-export class DataTfDnsNamespace extends cdktn.TerraformDataSource {
+export class DataAwsDnsNamespace extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfDnsNamespace extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfDnsNamespace resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsDnsNamespace resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfDnsNamespace to import
-  * @param importFromId The id of the existing DataTfDnsNamespace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfDnsNamespace to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsDnsNamespace to import
+  * @param importFromId The id of the existing DataAwsDnsNamespace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/service_discovery_dns_namespace#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsDnsNamespace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_service_discovery_dns_namespace", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfDnsNamespace extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfDnsNamespaceConfig
+  * @param options DataAwsDnsNamespaceConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfDnsNamespaceConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsDnsNamespaceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_service_discovery_dns_namespace',
       terraformGeneratorMetadata: {

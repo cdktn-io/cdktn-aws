@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVaultNotificationsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVaultNotificationsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications#backup_vault_events TfVaultNotifications#backup_vault_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications#backup_vault_events AwsVaultNotifications#backup_vault_events}
   */
   readonly backupVaultEvents: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications#backup_vault_name TfVaultNotifications#backup_vault_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications#backup_vault_name AwsVaultNotifications#backup_vault_name}
   */
   readonly backupVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications#id TfVaultNotifications#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications#id AwsVaultNotifications#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface TfVaultNotificationsConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications#region TfVaultNotifications#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications#region AwsVaultNotifications#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications#sns_topic_arn TfVaultNotifications#sns_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications#sns_topic_arn AwsVaultNotifications#sns_topic_arn}
   */
   readonly snsTopicArn: string;
 }
@@ -36,7 +36,7 @@ export interface TfVaultNotificationsConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications aws_backup_vault_notifications}
 */
-export class TfVaultNotifications extends cdktn.TerraformResource {
+export class AwsVaultNotifications extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfVaultNotifications extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVaultNotifications resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVaultNotifications resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVaultNotifications to import
-  * @param importFromId The id of the existing TfVaultNotifications that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVaultNotifications to import is found
+  * @param importToId The construct id used in the generated config for the AwsVaultNotifications to import
+  * @param importFromId The id of the existing AwsVaultNotifications that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_notifications#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVaultNotifications to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_vault_notifications", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfVaultNotifications extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVaultNotificationsConfig
+  * @param options AwsVaultNotificationsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVaultNotificationsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVaultNotificationsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_vault_notifications',
       terraformGeneratorMetadata: {

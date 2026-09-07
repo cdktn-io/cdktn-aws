@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfNotificationChannelConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsNotificationChannelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_notification_channel#id DataTfNotificationChannel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_notification_channel#id DataAwsNotificationChannel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,27 +16,27 @@ export interface DataTfNotificationChannelConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_notification_channel#region DataTfNotificationChannel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_notification_channel#region DataAwsNotificationChannel#region}
   */
   readonly region?: string;
   /**
   * filters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_notification_channel#filters DataTfNotificationChannel#filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_notification_channel#filters DataAwsNotificationChannel#filters}
   */
-  readonly filters?: DataTfNotificationChannel.FiltersProperty[] | cdktn.IResolvable;
+  readonly filters?: DataAwsNotificationChannel.FiltersProperty[] | cdktn.IResolvable;
   /**
   * sns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_notification_channel#sns DataTfNotificationChannel#sns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_notification_channel#sns DataAwsNotificationChannel#sns}
   */
-  readonly sns?: DataTfNotificationChannel.SnsProperty[] | cdktn.IResolvable;
+  readonly sns?: DataAwsNotificationChannel.SnsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_notification_channel aws_devopsguru_notification_channel}
 */
-export class DataTfNotificationChannel extends cdktn.TerraformDataSource {
+export class DataAwsNotificationChannel extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfNotificationChannel extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfNotificationChannel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsNotificationChannel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfNotificationChannel to import
-  * @param importFromId The id of the existing DataTfNotificationChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_notification_channel#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfNotificationChannel to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsNotificationChannel to import
+  * @param importFromId The id of the existing DataAwsNotificationChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/devopsguru_notification_channel#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsNotificationChannel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_devopsguru_notification_channel", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfNotificationChannel extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfNotificationChannelConfig
+  * @param options DataAwsNotificationChannelConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfNotificationChannelConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsNotificationChannelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_devopsguru_notification_channel',
       terraformGeneratorMetadata: {
@@ -124,11 +124,11 @@ export class DataTfNotificationChannel extends cdktn.TerraformDataSource {
   }
 
   // filters - computed: false, optional: true, required: false
-  private _filters = new DataTfNotificationChannel.FiltersPropertyList(this, "filters", false);
+  private _filters = new DataAwsNotificationChannel.FiltersPropertyList(this, "filters", false);
   public get filters() {
     return this._filters;
   }
-  public putFilters(value: DataTfNotificationChannel.FiltersProperty[] | cdktn.IResolvable) {
+  public putFilters(value: DataAwsNotificationChannel.FiltersProperty[] | cdktn.IResolvable) {
     this._filters.internalValue = value;
   }
   public resetFilters() {
@@ -140,11 +140,11 @@ export class DataTfNotificationChannel extends cdktn.TerraformDataSource {
   }
 
   // sns - computed: false, optional: true, required: false
-  private _sns = new DataTfNotificationChannel.SnsPropertyList(this, "sns", false);
+  private _sns = new DataAwsNotificationChannel.SnsPropertyList(this, "sns", false);
   public get sns() {
     return this._sns;
   }
-  public putSns(value: DataTfNotificationChannel.SnsProperty[] | cdktn.IResolvable) {
+  public putSns(value: DataAwsNotificationChannel.SnsProperty[] | cdktn.IResolvable) {
     this._sns.internalValue = value;
   }
   public resetSns() {
@@ -163,8 +163,8 @@ export class DataTfNotificationChannel extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filters: cdktn.listMapper(dataTfNotificationChannelFiltersPropertyToTerraform, true)(this._filters.internalValue),
-      sns: cdktn.listMapper(dataTfNotificationChannelSnsPropertyToTerraform, true)(this._sns.internalValue),
+      filters: cdktn.listMapper(dataAwsNotificationChannelFiltersPropertyToTerraform, true)(this._filters.internalValue),
+      sns: cdktn.listMapper(dataAwsNotificationChannelSnsPropertyToTerraform, true)(this._sns.internalValue),
     };
   }
 
@@ -183,16 +183,16 @@ export class DataTfNotificationChannel extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filters: {
-        value: cdktn.listMapperHcl(dataTfNotificationChannelFiltersPropertyToHclTerraform, true)(this._filters.internalValue),
+        value: cdktn.listMapperHcl(dataAwsNotificationChannelFiltersPropertyToHclTerraform, true)(this._filters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfNotificationChannel.FiltersPropertyList",
+        storageClassType: "DataAwsNotificationChannel.FiltersPropertyList",
       },
       sns: {
-        value: cdktn.listMapperHcl(dataTfNotificationChannelSnsPropertyToHclTerraform, true)(this._sns.internalValue),
+        value: cdktn.listMapperHcl(dataAwsNotificationChannelSnsPropertyToHclTerraform, true)(this._sns.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfNotificationChannel.SnsPropertyList",
+        storageClassType: "DataAwsNotificationChannel.SnsPropertyList",
       },
     };
 
@@ -201,7 +201,7 @@ export class DataTfNotificationChannel extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfNotificationChannelFiltersPropertyToTerraform(struct?: DataTfNotificationChannel.FiltersProperty | cdktn.IResolvable): any {
+export function dataAwsNotificationChannelFiltersPropertyToTerraform(struct?: DataAwsNotificationChannel.FiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,7 +211,7 @@ export function dataTfNotificationChannelFiltersPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfNotificationChannelFiltersPropertyToHclTerraform(struct?: DataTfNotificationChannel.FiltersProperty | cdktn.IResolvable): any {
+export function dataAwsNotificationChannelFiltersPropertyToHclTerraform(struct?: DataAwsNotificationChannel.FiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -222,7 +222,7 @@ export function dataTfNotificationChannelFiltersPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataTfNotificationChannelSnsPropertyToTerraform(struct?: DataTfNotificationChannel.SnsProperty | cdktn.IResolvable): any {
+export function dataAwsNotificationChannelSnsPropertyToTerraform(struct?: DataAwsNotificationChannel.SnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -232,7 +232,7 @@ export function dataTfNotificationChannelSnsPropertyToTerraform(struct?: DataTfN
 }
 
 
-export function dataTfNotificationChannelSnsPropertyToHclTerraform(struct?: DataTfNotificationChannel.SnsProperty | cdktn.IResolvable): any {
+export function dataAwsNotificationChannelSnsPropertyToHclTerraform(struct?: DataAwsNotificationChannel.SnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -243,7 +243,7 @@ export function dataTfNotificationChannelSnsPropertyToHclTerraform(struct?: Data
 }
 
 
-export namespace DataTfNotificationChannel {
+export namespace DataAwsNotificationChannel {
 export interface FiltersProperty {
 }
 export class FiltersPropertyOutputReference extends cdktn.ComplexObject {

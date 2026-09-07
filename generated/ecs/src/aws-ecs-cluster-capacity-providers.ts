@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClusterCapacityProvidersConfig extends cdktn.TerraformMetaArguments {
+export interface AwsClusterCapacityProvidersConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#capacity_providers TfClusterCapacityProviders#capacity_providers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#capacity_providers AwsClusterCapacityProviders#capacity_providers}
   */
   readonly capacityProviders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#cluster_name TfClusterCapacityProviders#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#cluster_name AwsClusterCapacityProviders#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#id TfClusterCapacityProviders#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#id AwsClusterCapacityProviders#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,21 +24,21 @@ export interface TfClusterCapacityProvidersConfig extends cdktn.TerraformMetaArg
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#region TfClusterCapacityProviders#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#region AwsClusterCapacityProviders#region}
   */
   readonly region?: string;
   /**
   * default_capacity_provider_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#default_capacity_provider_strategy TfClusterCapacityProviders#default_capacity_provider_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#default_capacity_provider_strategy AwsClusterCapacityProviders#default_capacity_provider_strategy}
   */
-  readonly defaultCapacityProviderStrategy?: TfClusterCapacityProviders.DefaultCapacityProviderStrategyProperty[] | cdktn.IResolvable;
+  readonly defaultCapacityProviderStrategy?: AwsClusterCapacityProviders.DefaultCapacityProviderStrategyProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers aws_ecs_cluster_capacity_providers}
 */
-export class TfClusterCapacityProviders extends cdktn.TerraformResource {
+export class AwsClusterCapacityProviders extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfClusterCapacityProviders extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfClusterCapacityProviders resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsClusterCapacityProviders resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfClusterCapacityProviders to import
-  * @param importFromId The id of the existing TfClusterCapacityProviders that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfClusterCapacityProviders to import is found
+  * @param importToId The construct id used in the generated config for the AwsClusterCapacityProviders to import
+  * @param importFromId The id of the existing AwsClusterCapacityProviders that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsClusterCapacityProviders to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_cluster_capacity_providers", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfClusterCapacityProviders extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClusterCapacityProvidersConfig
+  * @param options AwsClusterCapacityProvidersConfig
   */
-  public constructor(scope: Construct, id: string, config: TfClusterCapacityProvidersConfig) {
+  public constructor(scope: Construct, id: string, config: AwsClusterCapacityProvidersConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_cluster_capacity_providers',
       terraformGeneratorMetadata: {
@@ -159,11 +159,11 @@ export class TfClusterCapacityProviders extends cdktn.TerraformResource {
   }
 
   // default_capacity_provider_strategy - computed: false, optional: true, required: false
-  private _defaultCapacityProviderStrategy = new TfClusterCapacityProviders.DefaultCapacityProviderStrategyPropertyList(this, "default_capacity_provider_strategy", true);
+  private _defaultCapacityProviderStrategy = new AwsClusterCapacityProviders.DefaultCapacityProviderStrategyPropertyList(this, "default_capacity_provider_strategy", true);
   public get defaultCapacityProviderStrategy() {
     return this._defaultCapacityProviderStrategy;
   }
-  public putDefaultCapacityProviderStrategy(value: TfClusterCapacityProviders.DefaultCapacityProviderStrategyProperty[] | cdktn.IResolvable) {
+  public putDefaultCapacityProviderStrategy(value: AwsClusterCapacityProviders.DefaultCapacityProviderStrategyProperty[] | cdktn.IResolvable) {
     this._defaultCapacityProviderStrategy.internalValue = value;
   }
   public resetDefaultCapacityProviderStrategy() {
@@ -184,7 +184,7 @@ export class TfClusterCapacityProviders extends cdktn.TerraformResource {
       cluster_name: cdktn.stringToTerraform(this._clusterName),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      default_capacity_provider_strategy: cdktn.listMapper(tfClusterCapacityProvidersDefaultCapacityProviderStrategyPropertyToTerraform, true)(this._defaultCapacityProviderStrategy.internalValue),
+      default_capacity_provider_strategy: cdktn.listMapper(awsClusterCapacityProvidersDefaultCapacityProviderStrategyPropertyToTerraform, true)(this._defaultCapacityProviderStrategy.internalValue),
     };
   }
 
@@ -215,10 +215,10 @@ export class TfClusterCapacityProviders extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       default_capacity_provider_strategy: {
-        value: cdktn.listMapperHcl(tfClusterCapacityProvidersDefaultCapacityProviderStrategyPropertyToHclTerraform, true)(this._defaultCapacityProviderStrategy.internalValue),
+        value: cdktn.listMapperHcl(awsClusterCapacityProvidersDefaultCapacityProviderStrategyPropertyToHclTerraform, true)(this._defaultCapacityProviderStrategy.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfClusterCapacityProviders.DefaultCapacityProviderStrategyPropertyList",
+        storageClassType: "AwsClusterCapacityProviders.DefaultCapacityProviderStrategyPropertyList",
       },
     };
 
@@ -227,7 +227,7 @@ export class TfClusterCapacityProviders extends cdktn.TerraformResource {
   }
 }
 
-export function tfClusterCapacityProvidersDefaultCapacityProviderStrategyPropertyToTerraform(struct?: TfClusterCapacityProviders.DefaultCapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function awsClusterCapacityProvidersDefaultCapacityProviderStrategyPropertyToTerraform(struct?: AwsClusterCapacityProviders.DefaultCapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,7 +240,7 @@ export function tfClusterCapacityProvidersDefaultCapacityProviderStrategyPropert
 }
 
 
-export function tfClusterCapacityProvidersDefaultCapacityProviderStrategyPropertyToHclTerraform(struct?: TfClusterCapacityProviders.DefaultCapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function awsClusterCapacityProvidersDefaultCapacityProviderStrategyPropertyToHclTerraform(struct?: AwsClusterCapacityProviders.DefaultCapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,18 +271,18 @@ export function tfClusterCapacityProvidersDefaultCapacityProviderStrategyPropert
 }
 
 
-export namespace TfClusterCapacityProviders {
+export namespace AwsClusterCapacityProviders {
 export interface DefaultCapacityProviderStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#base TfClusterCapacityProviders#base}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#base AwsClusterCapacityProviders#base}
   */
   readonly base?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#capacity_provider TfClusterCapacityProviders#capacity_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#capacity_provider AwsClusterCapacityProviders#capacity_provider}
   */
   readonly capacityProvider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#weight TfClusterCapacityProviders#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster_capacity_providers#weight AwsClusterCapacityProviders#weight}
   */
   readonly weight?: number;
 }

@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfListenerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsListenerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#accelerator_arn TfListener#accelerator_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#accelerator_arn AwsListener#accelerator_arn}
   */
   readonly acceleratorArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#client_affinity TfListener#client_affinity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#client_affinity AwsListener#client_affinity}
   */
   readonly clientAffinity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#id TfListener#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#id AwsListener#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#protocol TfListener#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#protocol AwsListener#protocol}
   */
   readonly protocol: string;
   /**
   * port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#port_range TfListener#port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#port_range AwsListener#port_range}
   */
-  readonly portRange: TfListener.PortRangeProperty[] | cdktn.IResolvable;
+  readonly portRange: AwsListener.PortRangeProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#timeouts TfListener#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#timeouts AwsListener#timeouts}
   */
-  readonly timeouts?: TfListener.TimeoutsProperty;
+  readonly timeouts?: AwsListener.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener aws_globalaccelerator_listener}
 */
-export class TfListener extends cdktn.TerraformResource {
+export class AwsListener extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfListener extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfListener resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsListener resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfListener to import
-  * @param importFromId The id of the existing TfListener that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfListener to import is found
+  * @param importToId The construct id used in the generated config for the AwsListener to import
+  * @param importFromId The id of the existing AwsListener that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsListener to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_globalaccelerator_listener", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfListener extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfListenerConfig
+  * @param options AwsListenerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfListenerConfig) {
+  public constructor(scope: Construct, id: string, config: AwsListenerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_globalaccelerator_listener',
       terraformGeneratorMetadata: {
@@ -166,11 +166,11 @@ export class TfListener extends cdktn.TerraformResource {
   }
 
   // port_range - computed: false, optional: false, required: true
-  private _portRange = new TfListener.PortRangePropertyList(this, "port_range", true);
+  private _portRange = new AwsListener.PortRangePropertyList(this, "port_range", true);
   public get portRange() {
     return this._portRange;
   }
-  public putPortRange(value: TfListener.PortRangeProperty[] | cdktn.IResolvable) {
+  public putPortRange(value: AwsListener.PortRangeProperty[] | cdktn.IResolvable) {
     this._portRange.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -179,11 +179,11 @@ export class TfListener extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfListener.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsListener.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfListener.TimeoutsProperty) {
+  public putTimeouts(value: AwsListener.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -204,8 +204,8 @@ export class TfListener extends cdktn.TerraformResource {
       client_affinity: cdktn.stringToTerraform(this._clientAffinity),
       id: cdktn.stringToTerraform(this._id),
       protocol: cdktn.stringToTerraform(this._protocol),
-      port_range: cdktn.listMapper(tfListenerPortRangePropertyToTerraform, true)(this._portRange.internalValue),
-      timeouts: tfListenerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      port_range: cdktn.listMapper(awsListenerPortRangePropertyToTerraform, true)(this._portRange.internalValue),
+      timeouts: awsListenerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -236,16 +236,16 @@ export class TfListener extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       port_range: {
-        value: cdktn.listMapperHcl(tfListenerPortRangePropertyToHclTerraform, true)(this._portRange.internalValue),
+        value: cdktn.listMapperHcl(awsListenerPortRangePropertyToHclTerraform, true)(this._portRange.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfListener.PortRangePropertyList",
+        storageClassType: "AwsListener.PortRangePropertyList",
       },
       timeouts: {
-        value: tfListenerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsListenerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfListener.TimeoutsProperty",
+        storageClassType: "AwsListener.TimeoutsProperty",
       },
     };
 
@@ -254,7 +254,7 @@ export class TfListener extends cdktn.TerraformResource {
   }
 }
 
-export function tfListenerPortRangePropertyToTerraform(struct?: TfListener.PortRangeProperty | cdktn.IResolvable): any {
+export function awsListenerPortRangePropertyToTerraform(struct?: AwsListener.PortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function tfListenerPortRangePropertyToTerraform(struct?: TfListener.PortR
 }
 
 
-export function tfListenerPortRangePropertyToHclTerraform(struct?: TfListener.PortRangeProperty | cdktn.IResolvable): any {
+export function awsListenerPortRangePropertyToHclTerraform(struct?: AwsListener.PortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -291,7 +291,7 @@ export function tfListenerPortRangePropertyToHclTerraform(struct?: TfListener.Po
 }
 
 
-export function tfListenerTimeoutsPropertyToTerraform(struct?: TfListener.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsListenerTimeoutsPropertyToTerraform(struct?: AwsListener.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function tfListenerTimeoutsPropertyToTerraform(struct?: TfListener.Timeou
 }
 
 
-export function tfListenerTimeoutsPropertyToHclTerraform(struct?: TfListener.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsListenerTimeoutsPropertyToHclTerraform(struct?: AwsListener.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,14 +335,14 @@ export function tfListenerTimeoutsPropertyToHclTerraform(struct?: TfListener.Tim
 }
 
 
-export namespace TfListener {
+export namespace AwsListener {
 export interface PortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#from_port TfListener#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#from_port AwsListener#from_port}
   */
   readonly fromPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#to_port TfListener#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#to_port AwsListener#to_port}
   */
   readonly toPort?: number;
 }
@@ -450,15 +450,15 @@ export class PortRangePropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#create TfListener#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#create AwsListener#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#delete TfListener#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#delete AwsListener#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#update TfListener#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_listener#update AwsListener#update}
   */
   readonly update?: string;
 }

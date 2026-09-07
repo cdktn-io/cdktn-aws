@@ -34,6 +34,12 @@ const goRepo = process.env.CDKTN_AWS_GO_ROOT ?? path.resolve(repoRoot, "..", "cd
 const MODULE_NAME = "github.com/cdktn-io/cdktn-aws-go";
 /** jsii's own constraint on `targets.go.packageName`. */
 const JSII_GO_PACKAGE_NAME = /^[a-z][a-z0-9]*$/;
+/** go.dev/ref/spec#Keywords — none of which can be a package name. */
+const GO_KEYWORDS = [
+  "break", "case", "chan", "const", "continue", "default", "defer", "else", "fallthrough", "for",
+  "func", "go", "goto", "if", "import", "interface", "map", "package", "range", "return", "select",
+  "struct", "switch", "type", "var",
+];
 
 const groupDirs = fs
   .readdirSync(generatedDir, { withFileTypes: true })
@@ -75,11 +81,14 @@ describe("emitted package manifests", () => {
     expect(manifests.get(group)!.jsii?.targets?.go?.moduleName).toBe(MODULE_NAME);
   });
 
-  it.each(groupDirs)("%s: jsii go packageName is aws + slug with underscores stripped", (group) => {
+  it.each(groupDirs)("%s: jsii go packageName is the slug with underscores stripped", (group) => {
     const packageName = manifests.get(group)!.jsii?.targets?.go?.packageName;
-    expect(packageName).toBe(`aws${group.replace(/_/g, "")}`);
+    expect(packageName).toBe(group.replace(/_/g, ""));
     // Independently of the rule, jsii itself rejects anything else.
     expect(packageName).toMatch(JSII_GO_PACKAGE_NAME);
+    // And Go rejects an import of a package named after a keyword, which the `aws` prefix used to
+    // make unreachable (0.3.0, docs/v030-naming.md).
+    expect(GO_KEYWORDS).not.toContain(packageName);
   });
 
   it("every Go package name is unique across the fleet", () => {

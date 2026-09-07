@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFeatureConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFeatureConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#default_variation TfFeature#default_variation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#default_variation AwsFeature#default_variation}
   */
   readonly defaultVariation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#description TfFeature#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#description AwsFeature#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#entity_overrides TfFeature#entity_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#entity_overrides AwsFeature#entity_overrides}
   */
   readonly entityOverrides?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#evaluation_strategy TfFeature#evaluation_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#evaluation_strategy AwsFeature#evaluation_strategy}
   */
   readonly evaluationStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#id TfFeature#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#id AwsFeature#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#name TfFeature#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#name AwsFeature#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#project TfFeature#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#project AwsFeature#project}
   */
   readonly project: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#region TfFeature#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#region AwsFeature#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#tags TfFeature#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#tags AwsFeature#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#tags_all TfFeature#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#tags_all AwsFeature#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#timeouts TfFeature#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#timeouts AwsFeature#timeouts}
   */
-  readonly timeouts?: TfFeature.TimeoutsProperty;
+  readonly timeouts?: AwsFeature.TimeoutsProperty;
   /**
   * variations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#variations TfFeature#variations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#variations AwsFeature#variations}
   */
-  readonly variations: TfFeature.VariationsProperty[] | cdktn.IResolvable;
+  readonly variations: AwsFeature.VariationsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature aws_evidently_feature}
 */
-export class TfFeature extends cdktn.TerraformResource {
+export class AwsFeature extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfFeature extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFeature resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFeature resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFeature to import
-  * @param importFromId The id of the existing TfFeature that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFeature to import is found
+  * @param importToId The construct id used in the generated config for the AwsFeature to import
+  * @param importFromId The id of the existing AwsFeature that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFeature to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_evidently_feature", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfFeature extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFeatureConfig
+  * @param options AwsFeatureConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFeatureConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFeatureConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_evidently_feature',
       terraformGeneratorMetadata: {
@@ -193,7 +193,7 @@ export class TfFeature extends cdktn.TerraformResource {
   }
 
   // evaluation_rules - computed: true, optional: false, required: false
-  private _evaluationRules = new TfFeature.EvaluationRulesPropertyList(this, "evaluation_rules", true);
+  private _evaluationRules = new AwsFeature.EvaluationRulesPropertyList(this, "evaluation_rules", true);
   public get evaluationRules() {
     return this._evaluationRules;
   }
@@ -320,11 +320,11 @@ export class TfFeature extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfFeature.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsFeature.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfFeature.TimeoutsProperty) {
+  public putTimeouts(value: AwsFeature.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -336,11 +336,11 @@ export class TfFeature extends cdktn.TerraformResource {
   }
 
   // variations - computed: false, optional: false, required: true
-  private _variations = new TfFeature.VariationsPropertyList(this, "variations", true);
+  private _variations = new AwsFeature.VariationsPropertyList(this, "variations", true);
   public get variations() {
     return this._variations;
   }
-  public putVariations(value: TfFeature.VariationsProperty[] | cdktn.IResolvable) {
+  public putVariations(value: AwsFeature.VariationsProperty[] | cdktn.IResolvable) {
     this._variations.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -364,8 +364,8 @@ export class TfFeature extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfFeatureTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      variations: cdktn.listMapper(tfFeatureVariationsPropertyToTerraform, true)(this._variations.internalValue),
+      timeouts: awsFeatureTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      variations: cdktn.listMapper(awsFeatureVariationsPropertyToTerraform, true)(this._variations.internalValue),
     };
   }
 
@@ -432,16 +432,16 @@ export class TfFeature extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfFeatureTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsFeatureTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfFeature.TimeoutsProperty",
+        storageClassType: "AwsFeature.TimeoutsProperty",
       },
       variations: {
-        value: cdktn.listMapperHcl(tfFeatureVariationsPropertyToHclTerraform, true)(this._variations.internalValue),
+        value: cdktn.listMapperHcl(awsFeatureVariationsPropertyToHclTerraform, true)(this._variations.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfFeature.VariationsPropertyList",
+        storageClassType: "AwsFeature.VariationsPropertyList",
       },
     };
 
@@ -450,7 +450,7 @@ export class TfFeature extends cdktn.TerraformResource {
   }
 }
 
-export function tfFeatureEvaluationRulesPropertyToTerraform(struct?: TfFeature.EvaluationRulesProperty): any {
+export function awsFeatureEvaluationRulesPropertyToTerraform(struct?: AwsFeature.EvaluationRulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function tfFeatureEvaluationRulesPropertyToTerraform(struct?: TfFeature.E
 }
 
 
-export function tfFeatureEvaluationRulesPropertyToHclTerraform(struct?: TfFeature.EvaluationRulesProperty): any {
+export function awsFeatureEvaluationRulesPropertyToHclTerraform(struct?: AwsFeature.EvaluationRulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,7 +471,7 @@ export function tfFeatureEvaluationRulesPropertyToHclTerraform(struct?: TfFeatur
 }
 
 
-export function tfFeatureTimeoutsPropertyToTerraform(struct?: TfFeature.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFeatureTimeoutsPropertyToTerraform(struct?: AwsFeature.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -484,7 +484,7 @@ export function tfFeatureTimeoutsPropertyToTerraform(struct?: TfFeature.Timeouts
 }
 
 
-export function tfFeatureTimeoutsPropertyToHclTerraform(struct?: TfFeature.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFeatureTimeoutsPropertyToHclTerraform(struct?: AwsFeature.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -515,7 +515,7 @@ export function tfFeatureTimeoutsPropertyToHclTerraform(struct?: TfFeature.Timeo
 }
 
 
-export function tfFeatureValuePropertyToTerraform(struct?: TfFeature.ValuePropertyOutputReference | TfFeature.ValueProperty): any {
+export function awsFeatureValuePropertyToTerraform(struct?: AwsFeature.ValuePropertyOutputReference | AwsFeature.ValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,7 +529,7 @@ export function tfFeatureValuePropertyToTerraform(struct?: TfFeature.ValueProper
 }
 
 
-export function tfFeatureValuePropertyToHclTerraform(struct?: TfFeature.ValuePropertyOutputReference | TfFeature.ValueProperty): any {
+export function awsFeatureValuePropertyToHclTerraform(struct?: AwsFeature.ValuePropertyOutputReference | AwsFeature.ValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -566,19 +566,19 @@ export function tfFeatureValuePropertyToHclTerraform(struct?: TfFeature.ValuePro
 }
 
 
-export function tfFeatureVariationsPropertyToTerraform(struct?: TfFeature.VariationsProperty | cdktn.IResolvable): any {
+export function awsFeatureVariationsPropertyToTerraform(struct?: AwsFeature.VariationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    value: tfFeatureValuePropertyToTerraform(struct!.value),
+    value: awsFeatureValuePropertyToTerraform(struct!.value),
   }
 }
 
 
-export function tfFeatureVariationsPropertyToHclTerraform(struct?: TfFeature.VariationsProperty | cdktn.IResolvable): any {
+export function awsFeatureVariationsPropertyToHclTerraform(struct?: AwsFeature.VariationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -591,7 +591,7 @@ export function tfFeatureVariationsPropertyToHclTerraform(struct?: TfFeature.Var
       storageClassType: "string",
     },
     value: {
-      value: tfFeatureValuePropertyToHclTerraform(struct!.value),
+      value: awsFeatureValuePropertyToHclTerraform(struct!.value),
       isBlock: true,
       type: "list",
       storageClassType: "ValuePropertyList",
@@ -603,7 +603,7 @@ export function tfFeatureVariationsPropertyToHclTerraform(struct?: TfFeature.Var
 }
 
 
-export namespace TfFeature {
+export namespace AwsFeature {
 export interface EvaluationRulesProperty {
 }
 export class EvaluationRulesPropertyOutputReference extends cdktn.ComplexObject {
@@ -665,15 +665,15 @@ export class EvaluationRulesPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#create TfFeature#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#create AwsFeature#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#delete TfFeature#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#delete AwsFeature#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#update TfFeature#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#update AwsFeature#update}
   */
   readonly update?: string;
 }
@@ -781,19 +781,19 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#bool_value TfFeature#bool_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#bool_value AwsFeature#bool_value}
   */
   readonly boolValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#double_value TfFeature#double_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#double_value AwsFeature#double_value}
   */
   readonly doubleValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#long_value TfFeature#long_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#long_value AwsFeature#long_value}
   */
   readonly longValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#string_value TfFeature#string_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#string_value AwsFeature#string_value}
   */
   readonly stringValue?: string;
 }
@@ -913,13 +913,13 @@ export class ValuePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VariationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#name TfFeature#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#name AwsFeature#name}
   */
   readonly name: string;
   /**
   * value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#value TfFeature#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_feature#value AwsFeature#value}
   */
   readonly value: ValueProperty;
 }

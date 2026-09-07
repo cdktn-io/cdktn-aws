@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfUploadBufferConfig extends cdktn.TerraformMetaArguments {
+export interface AwsUploadBufferConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer#disk_id TfUploadBuffer#disk_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer#disk_id AwsUploadBuffer#disk_id}
   */
   readonly diskId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer#disk_path TfUploadBuffer#disk_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer#disk_path AwsUploadBuffer#disk_path}
   */
   readonly diskPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer#gateway_arn TfUploadBuffer#gateway_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer#gateway_arn AwsUploadBuffer#gateway_arn}
   */
   readonly gatewayArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer#id TfUploadBuffer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer#id AwsUploadBuffer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,7 +28,7 @@ export interface TfUploadBufferConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer#region TfUploadBuffer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer#region AwsUploadBuffer#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface TfUploadBufferConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer aws_storagegateway_upload_buffer}
 */
-export class TfUploadBuffer extends cdktn.TerraformResource {
+export class AwsUploadBuffer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfUploadBuffer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfUploadBuffer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsUploadBuffer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfUploadBuffer to import
-  * @param importFromId The id of the existing TfUploadBuffer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfUploadBuffer to import is found
+  * @param importToId The construct id used in the generated config for the AwsUploadBuffer to import
+  * @param importFromId The id of the existing AwsUploadBuffer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_upload_buffer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsUploadBuffer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_storagegateway_upload_buffer", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfUploadBuffer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfUploadBufferConfig
+  * @param options AwsUploadBufferConfig
   */
-  public constructor(scope: Construct, id: string, config: TfUploadBufferConfig) {
+  public constructor(scope: Construct, id: string, config: AwsUploadBufferConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_storagegateway_upload_buffer',
       terraformGeneratorMetadata: {

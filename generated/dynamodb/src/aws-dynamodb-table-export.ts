@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTableExportConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTableExportConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#export_format TfTableExport#export_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#export_format AwsTableExport#export_format}
   */
   readonly exportFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#export_time TfTableExport#export_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#export_time AwsTableExport#export_time}
   */
   readonly exportTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#export_type TfTableExport#export_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#export_type AwsTableExport#export_type}
   */
   readonly exportType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#id TfTableExport#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#id AwsTableExport#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,51 +28,51 @@ export interface TfTableExportConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#region TfTableExport#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#region AwsTableExport#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#s3_bucket TfTableExport#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#s3_bucket AwsTableExport#s3_bucket}
   */
   readonly s3Bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#s3_bucket_owner TfTableExport#s3_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#s3_bucket_owner AwsTableExport#s3_bucket_owner}
   */
   readonly s3BucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#s3_prefix TfTableExport#s3_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#s3_prefix AwsTableExport#s3_prefix}
   */
   readonly s3Prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#s3_sse_algorithm TfTableExport#s3_sse_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#s3_sse_algorithm AwsTableExport#s3_sse_algorithm}
   */
   readonly s3SseAlgorithm?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#s3_sse_kms_key_id TfTableExport#s3_sse_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#s3_sse_kms_key_id AwsTableExport#s3_sse_kms_key_id}
   */
   readonly s3SseKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#table_arn TfTableExport#table_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#table_arn AwsTableExport#table_arn}
   */
   readonly tableArn: string;
   /**
   * incremental_export_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#incremental_export_specification TfTableExport#incremental_export_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#incremental_export_specification AwsTableExport#incremental_export_specification}
   */
-  readonly incrementalExportSpecification?: TfTableExport.IncrementalExportSpecificationProperty;
+  readonly incrementalExportSpecification?: AwsTableExport.IncrementalExportSpecificationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#timeouts TfTableExport#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#timeouts AwsTableExport#timeouts}
   */
-  readonly timeouts?: TfTableExport.TimeoutsProperty;
+  readonly timeouts?: AwsTableExport.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export aws_dynamodb_table_export}
 */
-export class TfTableExport extends cdktn.TerraformResource {
+export class AwsTableExport extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class TfTableExport extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTableExport resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTableExport resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTableExport to import
-  * @param importFromId The id of the existing TfTableExport that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTableExport to import is found
+  * @param importToId The construct id used in the generated config for the AwsTableExport to import
+  * @param importFromId The id of the existing AwsTableExport that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTableExport to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dynamodb_table_export", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class TfTableExport extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTableExportConfig
+  * @param options AwsTableExportConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTableExportConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTableExportConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dynamodb_table_export',
       terraformGeneratorMetadata: {
@@ -345,11 +345,11 @@ export class TfTableExport extends cdktn.TerraformResource {
   }
 
   // incremental_export_specification - computed: false, optional: true, required: false
-  private _incrementalExportSpecification = new TfTableExport.IncrementalExportSpecificationPropertyOutputReference(this, "incremental_export_specification");
+  private _incrementalExportSpecification = new AwsTableExport.IncrementalExportSpecificationPropertyOutputReference(this, "incremental_export_specification");
   public get incrementalExportSpecification() {
     return this._incrementalExportSpecification;
   }
-  public putIncrementalExportSpecification(value: TfTableExport.IncrementalExportSpecificationProperty) {
+  public putIncrementalExportSpecification(value: AwsTableExport.IncrementalExportSpecificationProperty) {
     this._incrementalExportSpecification.internalValue = value;
   }
   public resetIncrementalExportSpecification() {
@@ -361,11 +361,11 @@ export class TfTableExport extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTableExport.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTableExport.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTableExport.TimeoutsProperty) {
+  public putTimeouts(value: AwsTableExport.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -393,8 +393,8 @@ export class TfTableExport extends cdktn.TerraformResource {
       s3_sse_algorithm: cdktn.stringToTerraform(this._s3SseAlgorithm),
       s3_sse_kms_key_id: cdktn.stringToTerraform(this._s3SseKmsKeyId),
       table_arn: cdktn.stringToTerraform(this._tableArn),
-      incremental_export_specification: tfTableExportIncrementalExportSpecificationPropertyToTerraform(this._incrementalExportSpecification.internalValue),
-      timeouts: tfTableExportTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      incremental_export_specification: awsTableExportIncrementalExportSpecificationPropertyToTerraform(this._incrementalExportSpecification.internalValue),
+      timeouts: awsTableExportTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -467,16 +467,16 @@ export class TfTableExport extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       incremental_export_specification: {
-        value: tfTableExportIncrementalExportSpecificationPropertyToHclTerraform(this._incrementalExportSpecification.internalValue),
+        value: awsTableExportIncrementalExportSpecificationPropertyToHclTerraform(this._incrementalExportSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTableExport.IncrementalExportSpecificationPropertyList",
+        storageClassType: "AwsTableExport.IncrementalExportSpecificationPropertyList",
       },
       timeouts: {
-        value: tfTableExportTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTableExportTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTableExport.TimeoutsProperty",
+        storageClassType: "AwsTableExport.TimeoutsProperty",
       },
     };
 
@@ -485,7 +485,7 @@ export class TfTableExport extends cdktn.TerraformResource {
   }
 }
 
-export function tfTableExportIncrementalExportSpecificationPropertyToTerraform(struct?: TfTableExport.IncrementalExportSpecificationPropertyOutputReference | TfTableExport.IncrementalExportSpecificationProperty): any {
+export function awsTableExportIncrementalExportSpecificationPropertyToTerraform(struct?: AwsTableExport.IncrementalExportSpecificationPropertyOutputReference | AwsTableExport.IncrementalExportSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -498,7 +498,7 @@ export function tfTableExportIncrementalExportSpecificationPropertyToTerraform(s
 }
 
 
-export function tfTableExportIncrementalExportSpecificationPropertyToHclTerraform(struct?: TfTableExport.IncrementalExportSpecificationPropertyOutputReference | TfTableExport.IncrementalExportSpecificationProperty): any {
+export function awsTableExportIncrementalExportSpecificationPropertyToHclTerraform(struct?: AwsTableExport.IncrementalExportSpecificationPropertyOutputReference | AwsTableExport.IncrementalExportSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,7 +529,7 @@ export function tfTableExportIncrementalExportSpecificationPropertyToHclTerrafor
 }
 
 
-export function tfTableExportTimeoutsPropertyToTerraform(struct?: TfTableExport.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTableExportTimeoutsPropertyToTerraform(struct?: AwsTableExport.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -541,7 +541,7 @@ export function tfTableExportTimeoutsPropertyToTerraform(struct?: TfTableExport.
 }
 
 
-export function tfTableExportTimeoutsPropertyToHclTerraform(struct?: TfTableExport.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTableExportTimeoutsPropertyToHclTerraform(struct?: AwsTableExport.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -566,18 +566,18 @@ export function tfTableExportTimeoutsPropertyToHclTerraform(struct?: TfTableExpo
 }
 
 
-export namespace TfTableExport {
+export namespace AwsTableExport {
 export interface IncrementalExportSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#export_from_time TfTableExport#export_from_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#export_from_time AwsTableExport#export_from_time}
   */
   readonly exportFromTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#export_to_time TfTableExport#export_to_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#export_to_time AwsTableExport#export_to_time}
   */
   readonly exportToTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#export_view_type TfTableExport#export_view_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#export_view_type AwsTableExport#export_view_type}
   */
   readonly exportViewType?: string;
 }
@@ -675,11 +675,11 @@ export class IncrementalExportSpecificationPropertyOutputReference extends cdktn
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#create TfTableExport#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#create AwsTableExport#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#delete TfTableExport#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_export#delete AwsTableExport#delete}
   */
   readonly delete?: string;
 }

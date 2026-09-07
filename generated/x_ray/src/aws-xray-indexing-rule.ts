@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfIndexingRuleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsIndexingRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule#name TfIndexingRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule#name AwsIndexingRule#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule#region TfIndexingRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule#region AwsIndexingRule#region}
   */
   readonly region?: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule#rule TfIndexingRule#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule#rule AwsIndexingRule#rule}
   */
-  readonly rule?: TfIndexingRule.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: AwsIndexingRule.RuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule aws_xray_indexing_rule}
 */
-export class TfIndexingRule extends cdktn.TerraformResource {
+export class AwsIndexingRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class TfIndexingRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfIndexingRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsIndexingRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfIndexingRule to import
-  * @param importFromId The id of the existing TfIndexingRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfIndexingRule to import is found
+  * @param importToId The construct id used in the generated config for the AwsIndexingRule to import
+  * @param importFromId The id of the existing AwsIndexingRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsIndexingRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_xray_indexing_rule", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class TfIndexingRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfIndexingRuleConfig
+  * @param options AwsIndexingRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfIndexingRuleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsIndexingRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_xray_indexing_rule',
       terraformGeneratorMetadata: {
@@ -114,11 +114,11 @@ export class TfIndexingRule extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new TfIndexingRule.RulePropertyList(this, "rule", false);
+  private _rule = new AwsIndexingRule.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: TfIndexingRule.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: AwsIndexingRule.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -137,7 +137,7 @@ export class TfIndexingRule extends cdktn.TerraformResource {
     return {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      rule: cdktn.listMapper(tfIndexingRuleRulePropertyToTerraform, true)(this._rule.internalValue),
+      rule: cdktn.listMapper(awsIndexingRuleRulePropertyToTerraform, true)(this._rule.internalValue),
     };
   }
 
@@ -156,10 +156,10 @@ export class TfIndexingRule extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       rule: {
-        value: cdktn.listMapperHcl(tfIndexingRuleRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(awsIndexingRuleRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfIndexingRule.RulePropertyList",
+        storageClassType: "AwsIndexingRule.RulePropertyList",
       },
     };
 
@@ -168,7 +168,7 @@ export class TfIndexingRule extends cdktn.TerraformResource {
   }
 }
 
-export function tfIndexingRuleProbabilisticPropertyToTerraform(struct?: TfIndexingRule.ProbabilisticProperty | cdktn.IResolvable): any {
+export function awsIndexingRuleProbabilisticPropertyToTerraform(struct?: AwsIndexingRule.ProbabilisticProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -179,7 +179,7 @@ export function tfIndexingRuleProbabilisticPropertyToTerraform(struct?: TfIndexi
 }
 
 
-export function tfIndexingRuleProbabilisticPropertyToHclTerraform(struct?: TfIndexingRule.ProbabilisticProperty | cdktn.IResolvable): any {
+export function awsIndexingRuleProbabilisticPropertyToHclTerraform(struct?: AwsIndexingRule.ProbabilisticProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -198,25 +198,25 @@ export function tfIndexingRuleProbabilisticPropertyToHclTerraform(struct?: TfInd
 }
 
 
-export function tfIndexingRuleRulePropertyToTerraform(struct?: TfIndexingRule.RuleProperty | cdktn.IResolvable): any {
+export function awsIndexingRuleRulePropertyToTerraform(struct?: AwsIndexingRule.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    probabilistic: cdktn.listMapper(tfIndexingRuleProbabilisticPropertyToTerraform, true)(struct!.probabilistic),
+    probabilistic: cdktn.listMapper(awsIndexingRuleProbabilisticPropertyToTerraform, true)(struct!.probabilistic),
   }
 }
 
 
-export function tfIndexingRuleRulePropertyToHclTerraform(struct?: TfIndexingRule.RuleProperty | cdktn.IResolvable): any {
+export function awsIndexingRuleRulePropertyToHclTerraform(struct?: AwsIndexingRule.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     probabilistic: {
-      value: cdktn.listMapperHcl(tfIndexingRuleProbabilisticPropertyToHclTerraform, true)(struct!.probabilistic),
+      value: cdktn.listMapperHcl(awsIndexingRuleProbabilisticPropertyToHclTerraform, true)(struct!.probabilistic),
       isBlock: true,
       type: "list",
       storageClassType: "ProbabilisticPropertyList",
@@ -228,10 +228,10 @@ export function tfIndexingRuleRulePropertyToHclTerraform(struct?: TfIndexingRule
 }
 
 
-export namespace TfIndexingRule {
+export namespace AwsIndexingRule {
 export interface ProbabilisticProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule#desired_sampling_percentage TfIndexingRule#desired_sampling_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule#desired_sampling_percentage AwsIndexingRule#desired_sampling_percentage}
   */
   readonly desiredSamplingPercentage: number;
 }
@@ -321,7 +321,7 @@ export interface RuleProperty {
   /**
   * probabilistic block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule#probabilistic TfIndexingRule#probabilistic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/xray_indexing_rule#probabilistic AwsIndexingRule#probabilistic}
   */
   readonly probabilistic?: ProbabilisticProperty[] | cdktn.IResolvable;
 }

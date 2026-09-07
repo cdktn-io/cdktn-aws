@@ -5,100 +5,100 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFleetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFleetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#build_id TfFleet#build_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#build_id AwsFleet#build_id}
   */
   readonly buildId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#description TfFleet#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#description AwsFleet#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#ec2_instance_type TfFleet#ec2_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#ec2_instance_type AwsFleet#ec2_instance_type}
   */
   readonly ec2InstanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#fleet_type TfFleet#fleet_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#fleet_type AwsFleet#fleet_type}
   */
   readonly fleetType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#id TfFleet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#id AwsFleet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#instance_role_arn TfFleet#instance_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#instance_role_arn AwsFleet#instance_role_arn}
   */
   readonly instanceRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#metric_groups TfFleet#metric_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#metric_groups AwsFleet#metric_groups}
   */
   readonly metricGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#name TfFleet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#name AwsFleet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#new_game_session_protection_policy TfFleet#new_game_session_protection_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#new_game_session_protection_policy AwsFleet#new_game_session_protection_policy}
   */
   readonly newGameSessionProtectionPolicy?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#region TfFleet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#region AwsFleet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#script_id TfFleet#script_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#script_id AwsFleet#script_id}
   */
   readonly scriptId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#tags TfFleet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#tags AwsFleet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#tags_all TfFleet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#tags_all AwsFleet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * certificate_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#certificate_configuration TfFleet#certificate_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#certificate_configuration AwsFleet#certificate_configuration}
   */
-  readonly certificateConfiguration?: TfFleet.CertificateConfigurationProperty;
+  readonly certificateConfiguration?: AwsFleet.CertificateConfigurationProperty;
   /**
   * ec2_inbound_permission block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#ec2_inbound_permission TfFleet#ec2_inbound_permission}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#ec2_inbound_permission AwsFleet#ec2_inbound_permission}
   */
-  readonly ec2InboundPermission?: TfFleet.Ec2InboundPermissionProperty[] | cdktn.IResolvable;
+  readonly ec2InboundPermission?: AwsFleet.Ec2InboundPermissionProperty[] | cdktn.IResolvable;
   /**
   * resource_creation_limit_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#resource_creation_limit_policy TfFleet#resource_creation_limit_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#resource_creation_limit_policy AwsFleet#resource_creation_limit_policy}
   */
-  readonly resourceCreationLimitPolicy?: TfFleet.ResourceCreationLimitPolicyProperty;
+  readonly resourceCreationLimitPolicy?: AwsFleet.ResourceCreationLimitPolicyProperty;
   /**
   * runtime_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#runtime_configuration TfFleet#runtime_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#runtime_configuration AwsFleet#runtime_configuration}
   */
-  readonly runtimeConfiguration?: TfFleet.RuntimeConfigurationProperty;
+  readonly runtimeConfiguration?: AwsFleet.RuntimeConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#timeouts TfFleet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#timeouts AwsFleet#timeouts}
   */
-  readonly timeouts?: TfFleet.TimeoutsProperty;
+  readonly timeouts?: AwsFleet.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet aws_gamelift_fleet}
 */
-export class TfFleet extends cdktn.TerraformResource {
+export class AwsFleet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -109,11 +109,11 @@ export class TfFleet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFleet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFleet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFleet to import
-  * @param importFromId The id of the existing TfFleet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFleet to import is found
+  * @param importToId The construct id used in the generated config for the AwsFleet to import
+  * @param importFromId The id of the existing AwsFleet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFleet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_gamelift_fleet", importId: importFromId, provider });
@@ -128,9 +128,9 @@ export class TfFleet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFleetConfig
+  * @param options AwsFleetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFleetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFleetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_gamelift_fleet',
       terraformGeneratorMetadata: {
@@ -398,11 +398,11 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 
   // certificate_configuration - computed: false, optional: true, required: false
-  private _certificateConfiguration = new TfFleet.CertificateConfigurationPropertyOutputReference(this, "certificate_configuration");
+  private _certificateConfiguration = new AwsFleet.CertificateConfigurationPropertyOutputReference(this, "certificate_configuration");
   public get certificateConfiguration() {
     return this._certificateConfiguration;
   }
-  public putCertificateConfiguration(value: TfFleet.CertificateConfigurationProperty) {
+  public putCertificateConfiguration(value: AwsFleet.CertificateConfigurationProperty) {
     this._certificateConfiguration.internalValue = value;
   }
   public resetCertificateConfiguration() {
@@ -414,11 +414,11 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 
   // ec2_inbound_permission - computed: false, optional: true, required: false
-  private _ec2InboundPermission = new TfFleet.Ec2InboundPermissionPropertyList(this, "ec2_inbound_permission", true);
+  private _ec2InboundPermission = new AwsFleet.Ec2InboundPermissionPropertyList(this, "ec2_inbound_permission", true);
   public get ec2InboundPermission() {
     return this._ec2InboundPermission;
   }
-  public putEc2InboundPermission(value: TfFleet.Ec2InboundPermissionProperty[] | cdktn.IResolvable) {
+  public putEc2InboundPermission(value: AwsFleet.Ec2InboundPermissionProperty[] | cdktn.IResolvable) {
     this._ec2InboundPermission.internalValue = value;
   }
   public resetEc2InboundPermission() {
@@ -430,11 +430,11 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 
   // resource_creation_limit_policy - computed: false, optional: true, required: false
-  private _resourceCreationLimitPolicy = new TfFleet.ResourceCreationLimitPolicyPropertyOutputReference(this, "resource_creation_limit_policy");
+  private _resourceCreationLimitPolicy = new AwsFleet.ResourceCreationLimitPolicyPropertyOutputReference(this, "resource_creation_limit_policy");
   public get resourceCreationLimitPolicy() {
     return this._resourceCreationLimitPolicy;
   }
-  public putResourceCreationLimitPolicy(value: TfFleet.ResourceCreationLimitPolicyProperty) {
+  public putResourceCreationLimitPolicy(value: AwsFleet.ResourceCreationLimitPolicyProperty) {
     this._resourceCreationLimitPolicy.internalValue = value;
   }
   public resetResourceCreationLimitPolicy() {
@@ -446,11 +446,11 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 
   // runtime_configuration - computed: false, optional: true, required: false
-  private _runtimeConfiguration = new TfFleet.RuntimeConfigurationPropertyOutputReference(this, "runtime_configuration");
+  private _runtimeConfiguration = new AwsFleet.RuntimeConfigurationPropertyOutputReference(this, "runtime_configuration");
   public get runtimeConfiguration() {
     return this._runtimeConfiguration;
   }
-  public putRuntimeConfiguration(value: TfFleet.RuntimeConfigurationProperty) {
+  public putRuntimeConfiguration(value: AwsFleet.RuntimeConfigurationProperty) {
     this._runtimeConfiguration.internalValue = value;
   }
   public resetRuntimeConfiguration() {
@@ -462,11 +462,11 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfFleet.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsFleet.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfFleet.TimeoutsProperty) {
+  public putTimeouts(value: AwsFleet.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -496,11 +496,11 @@ export class TfFleet extends cdktn.TerraformResource {
       script_id: cdktn.stringToTerraform(this._scriptId),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      certificate_configuration: tfFleetCertificateConfigurationPropertyToTerraform(this._certificateConfiguration.internalValue),
-      ec2_inbound_permission: cdktn.listMapper(tfFleetEc2InboundPermissionPropertyToTerraform, true)(this._ec2InboundPermission.internalValue),
-      resource_creation_limit_policy: tfFleetResourceCreationLimitPolicyPropertyToTerraform(this._resourceCreationLimitPolicy.internalValue),
-      runtime_configuration: tfFleetRuntimeConfigurationPropertyToTerraform(this._runtimeConfiguration.internalValue),
-      timeouts: tfFleetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      certificate_configuration: awsFleetCertificateConfigurationPropertyToTerraform(this._certificateConfiguration.internalValue),
+      ec2_inbound_permission: cdktn.listMapper(awsFleetEc2InboundPermissionPropertyToTerraform, true)(this._ec2InboundPermission.internalValue),
+      resource_creation_limit_policy: awsFleetResourceCreationLimitPolicyPropertyToTerraform(this._resourceCreationLimitPolicy.internalValue),
+      runtime_configuration: awsFleetRuntimeConfigurationPropertyToTerraform(this._runtimeConfiguration.internalValue),
+      timeouts: awsFleetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -585,34 +585,34 @@ export class TfFleet extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       certificate_configuration: {
-        value: tfFleetCertificateConfigurationPropertyToHclTerraform(this._certificateConfiguration.internalValue),
+        value: awsFleetCertificateConfigurationPropertyToHclTerraform(this._certificateConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFleet.CertificateConfigurationPropertyList",
+        storageClassType: "AwsFleet.CertificateConfigurationPropertyList",
       },
       ec2_inbound_permission: {
-        value: cdktn.listMapperHcl(tfFleetEc2InboundPermissionPropertyToHclTerraform, true)(this._ec2InboundPermission.internalValue),
+        value: cdktn.listMapperHcl(awsFleetEc2InboundPermissionPropertyToHclTerraform, true)(this._ec2InboundPermission.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfFleet.Ec2InboundPermissionPropertyList",
+        storageClassType: "AwsFleet.Ec2InboundPermissionPropertyList",
       },
       resource_creation_limit_policy: {
-        value: tfFleetResourceCreationLimitPolicyPropertyToHclTerraform(this._resourceCreationLimitPolicy.internalValue),
+        value: awsFleetResourceCreationLimitPolicyPropertyToHclTerraform(this._resourceCreationLimitPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFleet.ResourceCreationLimitPolicyPropertyList",
+        storageClassType: "AwsFleet.ResourceCreationLimitPolicyPropertyList",
       },
       runtime_configuration: {
-        value: tfFleetRuntimeConfigurationPropertyToHclTerraform(this._runtimeConfiguration.internalValue),
+        value: awsFleetRuntimeConfigurationPropertyToHclTerraform(this._runtimeConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFleet.RuntimeConfigurationPropertyList",
+        storageClassType: "AwsFleet.RuntimeConfigurationPropertyList",
       },
       timeouts: {
-        value: tfFleetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsFleetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfFleet.TimeoutsProperty",
+        storageClassType: "AwsFleet.TimeoutsProperty",
       },
     };
 
@@ -621,7 +621,7 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 }
 
-export function tfFleetCertificateConfigurationPropertyToTerraform(struct?: TfFleet.CertificateConfigurationPropertyOutputReference | TfFleet.CertificateConfigurationProperty): any {
+export function awsFleetCertificateConfigurationPropertyToTerraform(struct?: AwsFleet.CertificateConfigurationPropertyOutputReference | AwsFleet.CertificateConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -632,7 +632,7 @@ export function tfFleetCertificateConfigurationPropertyToTerraform(struct?: TfFl
 }
 
 
-export function tfFleetCertificateConfigurationPropertyToHclTerraform(struct?: TfFleet.CertificateConfigurationPropertyOutputReference | TfFleet.CertificateConfigurationProperty): any {
+export function awsFleetCertificateConfigurationPropertyToHclTerraform(struct?: AwsFleet.CertificateConfigurationPropertyOutputReference | AwsFleet.CertificateConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -651,7 +651,7 @@ export function tfFleetCertificateConfigurationPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfFleetEc2InboundPermissionPropertyToTerraform(struct?: TfFleet.Ec2InboundPermissionProperty | cdktn.IResolvable): any {
+export function awsFleetEc2InboundPermissionPropertyToTerraform(struct?: AwsFleet.Ec2InboundPermissionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -665,7 +665,7 @@ export function tfFleetEc2InboundPermissionPropertyToTerraform(struct?: TfFleet.
 }
 
 
-export function tfFleetEc2InboundPermissionPropertyToHclTerraform(struct?: TfFleet.Ec2InboundPermissionProperty | cdktn.IResolvable): any {
+export function awsFleetEc2InboundPermissionPropertyToHclTerraform(struct?: AwsFleet.Ec2InboundPermissionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -702,7 +702,7 @@ export function tfFleetEc2InboundPermissionPropertyToHclTerraform(struct?: TfFle
 }
 
 
-export function tfFleetResourceCreationLimitPolicyPropertyToTerraform(struct?: TfFleet.ResourceCreationLimitPolicyPropertyOutputReference | TfFleet.ResourceCreationLimitPolicyProperty): any {
+export function awsFleetResourceCreationLimitPolicyPropertyToTerraform(struct?: AwsFleet.ResourceCreationLimitPolicyPropertyOutputReference | AwsFleet.ResourceCreationLimitPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,7 +714,7 @@ export function tfFleetResourceCreationLimitPolicyPropertyToTerraform(struct?: T
 }
 
 
-export function tfFleetResourceCreationLimitPolicyPropertyToHclTerraform(struct?: TfFleet.ResourceCreationLimitPolicyPropertyOutputReference | TfFleet.ResourceCreationLimitPolicyProperty): any {
+export function awsFleetResourceCreationLimitPolicyPropertyToHclTerraform(struct?: AwsFleet.ResourceCreationLimitPolicyPropertyOutputReference | AwsFleet.ResourceCreationLimitPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -739,7 +739,7 @@ export function tfFleetResourceCreationLimitPolicyPropertyToHclTerraform(struct?
 }
 
 
-export function tfFleetServerProcessPropertyToTerraform(struct?: TfFleet.ServerProcessProperty | cdktn.IResolvable): any {
+export function awsFleetServerProcessPropertyToTerraform(struct?: AwsFleet.ServerProcessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,7 +752,7 @@ export function tfFleetServerProcessPropertyToTerraform(struct?: TfFleet.ServerP
 }
 
 
-export function tfFleetServerProcessPropertyToHclTerraform(struct?: TfFleet.ServerProcessProperty | cdktn.IResolvable): any {
+export function awsFleetServerProcessPropertyToHclTerraform(struct?: AwsFleet.ServerProcessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -783,7 +783,7 @@ export function tfFleetServerProcessPropertyToHclTerraform(struct?: TfFleet.Serv
 }
 
 
-export function tfFleetRuntimeConfigurationPropertyToTerraform(struct?: TfFleet.RuntimeConfigurationPropertyOutputReference | TfFleet.RuntimeConfigurationProperty): any {
+export function awsFleetRuntimeConfigurationPropertyToTerraform(struct?: AwsFleet.RuntimeConfigurationPropertyOutputReference | AwsFleet.RuntimeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -791,12 +791,12 @@ export function tfFleetRuntimeConfigurationPropertyToTerraform(struct?: TfFleet.
   return {
     game_session_activation_timeout_seconds: cdktn.numberToTerraform(struct!.gameSessionActivationTimeoutSeconds),
     max_concurrent_game_session_activations: cdktn.numberToTerraform(struct!.maxConcurrentGameSessionActivations),
-    server_process: cdktn.listMapper(tfFleetServerProcessPropertyToTerraform, true)(struct!.serverProcess),
+    server_process: cdktn.listMapper(awsFleetServerProcessPropertyToTerraform, true)(struct!.serverProcess),
   }
 }
 
 
-export function tfFleetRuntimeConfigurationPropertyToHclTerraform(struct?: TfFleet.RuntimeConfigurationPropertyOutputReference | TfFleet.RuntimeConfigurationProperty): any {
+export function awsFleetRuntimeConfigurationPropertyToHclTerraform(struct?: AwsFleet.RuntimeConfigurationPropertyOutputReference | AwsFleet.RuntimeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -815,7 +815,7 @@ export function tfFleetRuntimeConfigurationPropertyToHclTerraform(struct?: TfFle
       storageClassType: "number",
     },
     server_process: {
-      value: cdktn.listMapperHcl(tfFleetServerProcessPropertyToHclTerraform, true)(struct!.serverProcess),
+      value: cdktn.listMapperHcl(awsFleetServerProcessPropertyToHclTerraform, true)(struct!.serverProcess),
       isBlock: true,
       type: "list",
       storageClassType: "ServerProcessPropertyList",
@@ -827,7 +827,7 @@ export function tfFleetRuntimeConfigurationPropertyToHclTerraform(struct?: TfFle
 }
 
 
-export function tfFleetTimeoutsPropertyToTerraform(struct?: TfFleet.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFleetTimeoutsPropertyToTerraform(struct?: AwsFleet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -839,7 +839,7 @@ export function tfFleetTimeoutsPropertyToTerraform(struct?: TfFleet.TimeoutsProp
 }
 
 
-export function tfFleetTimeoutsPropertyToHclTerraform(struct?: TfFleet.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFleetTimeoutsPropertyToHclTerraform(struct?: AwsFleet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -864,10 +864,10 @@ export function tfFleetTimeoutsPropertyToHclTerraform(struct?: TfFleet.TimeoutsP
 }
 
 
-export namespace TfFleet {
+export namespace AwsFleet {
 export interface CertificateConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#certificate_type TfFleet#certificate_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#certificate_type AwsFleet#certificate_type}
   */
   readonly certificateType?: string;
 }
@@ -921,19 +921,19 @@ export class CertificateConfigurationPropertyOutputReference extends cdktn.Compl
 }
 export interface Ec2InboundPermissionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#from_port TfFleet#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#from_port AwsFleet#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#ip_range TfFleet#ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#ip_range AwsFleet#ip_range}
   */
   readonly ipRange: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#protocol TfFleet#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#protocol AwsFleet#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#to_port TfFleet#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#to_port AwsFleet#to_port}
   */
   readonly toPort: number;
 }
@@ -1073,11 +1073,11 @@ export class Ec2InboundPermissionPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceCreationLimitPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#new_game_sessions_per_creator TfFleet#new_game_sessions_per_creator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#new_game_sessions_per_creator AwsFleet#new_game_sessions_per_creator}
   */
   readonly newGameSessionsPerCreator?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#policy_period_in_minutes TfFleet#policy_period_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#policy_period_in_minutes AwsFleet#policy_period_in_minutes}
   */
   readonly policyPeriodInMinutes?: number;
 }
@@ -1153,15 +1153,15 @@ export class ResourceCreationLimitPolicyPropertyOutputReference extends cdktn.Co
 }
 export interface ServerProcessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#concurrent_executions TfFleet#concurrent_executions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#concurrent_executions AwsFleet#concurrent_executions}
   */
   readonly concurrentExecutions: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#launch_path TfFleet#launch_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#launch_path AwsFleet#launch_path}
   */
   readonly launchPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#parameters TfFleet#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#parameters AwsFleet#parameters}
   */
   readonly parameters?: string;
 }
@@ -1285,17 +1285,17 @@ export class ServerProcessPropertyList extends cdktn.ComplexList {
 }
 export interface RuntimeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#game_session_activation_timeout_seconds TfFleet#game_session_activation_timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#game_session_activation_timeout_seconds AwsFleet#game_session_activation_timeout_seconds}
   */
   readonly gameSessionActivationTimeoutSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#max_concurrent_game_session_activations TfFleet#max_concurrent_game_session_activations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#max_concurrent_game_session_activations AwsFleet#max_concurrent_game_session_activations}
   */
   readonly maxConcurrentGameSessionActivations?: number;
   /**
   * server_process block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#server_process TfFleet#server_process}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#server_process AwsFleet#server_process}
   */
   readonly serverProcess?: ServerProcessProperty[] | cdktn.IResolvable;
 }
@@ -1393,11 +1393,11 @@ export class RuntimeConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#create TfFleet#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#create AwsFleet#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#delete TfFleet#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_fleet#delete AwsFleet#delete}
   */
   readonly delete?: string;
 }

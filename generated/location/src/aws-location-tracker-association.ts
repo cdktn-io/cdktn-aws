@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTrackerAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTrackerAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#consumer_arn TfTrackerAssociation#consumer_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#consumer_arn AwsTrackerAssociation#consumer_arn}
   */
   readonly consumerArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#id TfTrackerAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#id AwsTrackerAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,25 +20,25 @@ export interface TfTrackerAssociationConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#region TfTrackerAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#region AwsTrackerAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#tracker_name TfTrackerAssociation#tracker_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#tracker_name AwsTrackerAssociation#tracker_name}
   */
   readonly trackerName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#timeouts TfTrackerAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#timeouts AwsTrackerAssociation#timeouts}
   */
-  readonly timeouts?: TfTrackerAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsTrackerAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association aws_location_tracker_association}
 */
-export class TfTrackerAssociation extends cdktn.TerraformResource {
+export class AwsTrackerAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfTrackerAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTrackerAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTrackerAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTrackerAssociation to import
-  * @param importFromId The id of the existing TfTrackerAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTrackerAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsTrackerAssociation to import
+  * @param importFromId The id of the existing AwsTrackerAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTrackerAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_location_tracker_association", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfTrackerAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTrackerAssociationConfig
+  * @param options AwsTrackerAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTrackerAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTrackerAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_location_tracker_association',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class TfTrackerAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTrackerAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTrackerAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTrackerAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsTrackerAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -181,7 +181,7 @@ export class TfTrackerAssociation extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tracker_name: cdktn.stringToTerraform(this._trackerName),
-      timeouts: tfTrackerAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsTrackerAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class TfTrackerAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfTrackerAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTrackerAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTrackerAssociation.TimeoutsProperty",
+        storageClassType: "AwsTrackerAssociation.TimeoutsProperty",
       },
     };
 
@@ -224,7 +224,7 @@ export class TfTrackerAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfTrackerAssociationTimeoutsPropertyToTerraform(struct?: TfTrackerAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTrackerAssociationTimeoutsPropertyToTerraform(struct?: AwsTrackerAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function tfTrackerAssociationTimeoutsPropertyToTerraform(struct?: TfTrack
 }
 
 
-export function tfTrackerAssociationTimeoutsPropertyToHclTerraform(struct?: TfTrackerAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTrackerAssociationTimeoutsPropertyToHclTerraform(struct?: AwsTrackerAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,14 +261,14 @@ export function tfTrackerAssociationTimeoutsPropertyToHclTerraform(struct?: TfTr
 }
 
 
-export namespace TfTrackerAssociation {
+export namespace AwsTrackerAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#create TfTrackerAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#create AwsTrackerAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#delete TfTrackerAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_tracker_association#delete AwsTrackerAssociation#delete}
   */
   readonly delete?: string;
 }

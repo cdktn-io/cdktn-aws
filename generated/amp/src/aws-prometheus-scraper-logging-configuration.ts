@@ -5,39 +5,39 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfScraperLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsScraperLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#region TfScraperLoggingConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#region AwsScraperLoggingConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#scraper_components TfScraperLoggingConfiguration#scraper_components}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#scraper_components AwsScraperLoggingConfiguration#scraper_components}
   */
   readonly scraperComponents?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#scraper_id TfScraperLoggingConfiguration#scraper_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#scraper_id AwsScraperLoggingConfiguration#scraper_id}
   */
   readonly scraperId: string;
   /**
   * logging_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#logging_destination TfScraperLoggingConfiguration#logging_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#logging_destination AwsScraperLoggingConfiguration#logging_destination}
   */
-  readonly loggingDestination?: TfScraperLoggingConfiguration.LoggingDestinationProperty[] | cdktn.IResolvable;
+  readonly loggingDestination?: AwsScraperLoggingConfiguration.LoggingDestinationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#timeouts TfScraperLoggingConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#timeouts AwsScraperLoggingConfiguration#timeouts}
   */
-  readonly timeouts?: TfScraperLoggingConfiguration.TimeoutsProperty;
+  readonly timeouts?: AwsScraperLoggingConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration aws_prometheus_scraper_logging_configuration}
 */
-export class TfScraperLoggingConfiguration extends cdktn.TerraformResource {
+export class AwsScraperLoggingConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfScraperLoggingConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfScraperLoggingConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsScraperLoggingConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfScraperLoggingConfiguration to import
-  * @param importFromId The id of the existing TfScraperLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfScraperLoggingConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsScraperLoggingConfiguration to import
+  * @param importFromId The id of the existing AwsScraperLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsScraperLoggingConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_prometheus_scraper_logging_configuration", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfScraperLoggingConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfScraperLoggingConfigurationConfig
+  * @param options AwsScraperLoggingConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfScraperLoggingConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsScraperLoggingConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_prometheus_scraper_logging_configuration',
       terraformGeneratorMetadata: {
@@ -142,11 +142,11 @@ export class TfScraperLoggingConfiguration extends cdktn.TerraformResource {
   }
 
   // logging_destination - computed: false, optional: true, required: false
-  private _loggingDestination = new TfScraperLoggingConfiguration.LoggingDestinationPropertyList(this, "logging_destination", false);
+  private _loggingDestination = new AwsScraperLoggingConfiguration.LoggingDestinationPropertyList(this, "logging_destination", false);
   public get loggingDestination() {
     return this._loggingDestination;
   }
-  public putLoggingDestination(value: TfScraperLoggingConfiguration.LoggingDestinationProperty[] | cdktn.IResolvable) {
+  public putLoggingDestination(value: AwsScraperLoggingConfiguration.LoggingDestinationProperty[] | cdktn.IResolvable) {
     this._loggingDestination.internalValue = value;
   }
   public resetLoggingDestination() {
@@ -158,11 +158,11 @@ export class TfScraperLoggingConfiguration extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfScraperLoggingConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsScraperLoggingConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfScraperLoggingConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: AwsScraperLoggingConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -182,8 +182,8 @@ export class TfScraperLoggingConfiguration extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       scraper_components: cdktn.listMapper(cdktn.stringToTerraform, false)(this._scraperComponents),
       scraper_id: cdktn.stringToTerraform(this._scraperId),
-      logging_destination: cdktn.listMapper(tfScraperLoggingConfigurationLoggingDestinationPropertyToTerraform, true)(this._loggingDestination.internalValue),
-      timeouts: tfScraperLoggingConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      logging_destination: cdktn.listMapper(awsScraperLoggingConfigurationLoggingDestinationPropertyToTerraform, true)(this._loggingDestination.internalValue),
+      timeouts: awsScraperLoggingConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -208,16 +208,16 @@ export class TfScraperLoggingConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       logging_destination: {
-        value: cdktn.listMapperHcl(tfScraperLoggingConfigurationLoggingDestinationPropertyToHclTerraform, true)(this._loggingDestination.internalValue),
+        value: cdktn.listMapperHcl(awsScraperLoggingConfigurationLoggingDestinationPropertyToHclTerraform, true)(this._loggingDestination.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfScraperLoggingConfiguration.LoggingDestinationPropertyList",
+        storageClassType: "AwsScraperLoggingConfiguration.LoggingDestinationPropertyList",
       },
       timeouts: {
-        value: tfScraperLoggingConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsScraperLoggingConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfScraperLoggingConfiguration.TimeoutsProperty",
+        storageClassType: "AwsScraperLoggingConfiguration.TimeoutsProperty",
       },
     };
 
@@ -226,7 +226,7 @@ export class TfScraperLoggingConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfScraperLoggingConfigurationCloudwatchLogsPropertyToTerraform(struct?: TfScraperLoggingConfiguration.CloudwatchLogsProperty | cdktn.IResolvable): any {
+export function awsScraperLoggingConfigurationCloudwatchLogsPropertyToTerraform(struct?: AwsScraperLoggingConfiguration.CloudwatchLogsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -237,7 +237,7 @@ export function tfScraperLoggingConfigurationCloudwatchLogsPropertyToTerraform(s
 }
 
 
-export function tfScraperLoggingConfigurationCloudwatchLogsPropertyToHclTerraform(struct?: TfScraperLoggingConfiguration.CloudwatchLogsProperty | cdktn.IResolvable): any {
+export function awsScraperLoggingConfigurationCloudwatchLogsPropertyToHclTerraform(struct?: AwsScraperLoggingConfiguration.CloudwatchLogsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,25 +256,25 @@ export function tfScraperLoggingConfigurationCloudwatchLogsPropertyToHclTerrafor
 }
 
 
-export function tfScraperLoggingConfigurationLoggingDestinationPropertyToTerraform(struct?: TfScraperLoggingConfiguration.LoggingDestinationProperty | cdktn.IResolvable): any {
+export function awsScraperLoggingConfigurationLoggingDestinationPropertyToTerraform(struct?: AwsScraperLoggingConfiguration.LoggingDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_logs: cdktn.listMapper(tfScraperLoggingConfigurationCloudwatchLogsPropertyToTerraform, true)(struct!.cloudwatchLogs),
+    cloudwatch_logs: cdktn.listMapper(awsScraperLoggingConfigurationCloudwatchLogsPropertyToTerraform, true)(struct!.cloudwatchLogs),
   }
 }
 
 
-export function tfScraperLoggingConfigurationLoggingDestinationPropertyToHclTerraform(struct?: TfScraperLoggingConfiguration.LoggingDestinationProperty | cdktn.IResolvable): any {
+export function awsScraperLoggingConfigurationLoggingDestinationPropertyToHclTerraform(struct?: AwsScraperLoggingConfiguration.LoggingDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_logs: {
-      value: cdktn.listMapperHcl(tfScraperLoggingConfigurationCloudwatchLogsPropertyToHclTerraform, true)(struct!.cloudwatchLogs),
+      value: cdktn.listMapperHcl(awsScraperLoggingConfigurationCloudwatchLogsPropertyToHclTerraform, true)(struct!.cloudwatchLogs),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsPropertyList",
@@ -286,7 +286,7 @@ export function tfScraperLoggingConfigurationLoggingDestinationPropertyToHclTerr
 }
 
 
-export function tfScraperLoggingConfigurationTimeoutsPropertyToTerraform(struct?: TfScraperLoggingConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsScraperLoggingConfigurationTimeoutsPropertyToTerraform(struct?: AwsScraperLoggingConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function tfScraperLoggingConfigurationTimeoutsPropertyToTerraform(struct?
 }
 
 
-export function tfScraperLoggingConfigurationTimeoutsPropertyToHclTerraform(struct?: TfScraperLoggingConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsScraperLoggingConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsScraperLoggingConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,10 +330,10 @@ export function tfScraperLoggingConfigurationTimeoutsPropertyToHclTerraform(stru
 }
 
 
-export namespace TfScraperLoggingConfiguration {
+export namespace AwsScraperLoggingConfiguration {
 export interface CloudwatchLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#log_group_arn TfScraperLoggingConfiguration#log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#log_group_arn AwsScraperLoggingConfiguration#log_group_arn}
   */
   readonly logGroupArn: string;
 }
@@ -418,7 +418,7 @@ export interface LoggingDestinationProperty {
   /**
   * cloudwatch_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#cloudwatch_logs TfScraperLoggingConfiguration#cloudwatch_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#cloudwatch_logs AwsScraperLoggingConfiguration#cloudwatch_logs}
   */
   readonly cloudwatchLogs?: CloudwatchLogsProperty[] | cdktn.IResolvable;
 }
@@ -506,19 +506,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#create TfScraperLoggingConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#create AwsScraperLoggingConfiguration#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#delete TfScraperLoggingConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#delete AwsScraperLoggingConfiguration#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#update TfScraperLoggingConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_scraper_logging_configuration#update AwsScraperLoggingConfiguration#update}
   */
   readonly update?: string;
 }

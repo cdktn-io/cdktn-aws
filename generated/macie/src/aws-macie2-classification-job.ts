@@ -5,84 +5,84 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClassificationJobConfig extends cdktn.TerraformMetaArguments {
+export interface AwsClassificationJobConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#custom_data_identifier_ids TfClassificationJob#custom_data_identifier_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#custom_data_identifier_ids AwsClassificationJob#custom_data_identifier_ids}
   */
   readonly customDataIdentifierIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#description TfClassificationJob#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#description AwsClassificationJob#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#id TfClassificationJob#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#id AwsClassificationJob#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#initial_run TfClassificationJob#initial_run}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#initial_run AwsClassificationJob#initial_run}
   */
   readonly initialRun?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#job_status TfClassificationJob#job_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#job_status AwsClassificationJob#job_status}
   */
   readonly jobStatus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#job_type TfClassificationJob#job_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#job_type AwsClassificationJob#job_type}
   */
   readonly jobType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#name TfClassificationJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#name AwsClassificationJob#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#name_prefix TfClassificationJob#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#name_prefix AwsClassificationJob#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#region TfClassificationJob#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#region AwsClassificationJob#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#sampling_percentage TfClassificationJob#sampling_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#sampling_percentage AwsClassificationJob#sampling_percentage}
   */
   readonly samplingPercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tags TfClassificationJob#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tags AwsClassificationJob#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tags_all TfClassificationJob#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tags_all AwsClassificationJob#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * s3_job_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#s3_job_definition TfClassificationJob#s3_job_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#s3_job_definition AwsClassificationJob#s3_job_definition}
   */
-  readonly s3JobDefinition: TfClassificationJob.S3JobDefinitionProperty;
+  readonly s3JobDefinition: AwsClassificationJob.S3JobDefinitionProperty;
   /**
   * schedule_frequency block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#schedule_frequency TfClassificationJob#schedule_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#schedule_frequency AwsClassificationJob#schedule_frequency}
   */
-  readonly scheduleFrequency?: TfClassificationJob.ScheduleFrequencyProperty;
+  readonly scheduleFrequency?: AwsClassificationJob.ScheduleFrequencyProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#timeouts TfClassificationJob#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#timeouts AwsClassificationJob#timeouts}
   */
-  readonly timeouts?: TfClassificationJob.TimeoutsProperty;
+  readonly timeouts?: AwsClassificationJob.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job aws_macie2_classification_job}
 */
-export class TfClassificationJob extends cdktn.TerraformResource {
+export class AwsClassificationJob extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -93,11 +93,11 @@ export class TfClassificationJob extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfClassificationJob resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsClassificationJob resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfClassificationJob to import
-  * @param importFromId The id of the existing TfClassificationJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfClassificationJob to import is found
+  * @param importToId The construct id used in the generated config for the AwsClassificationJob to import
+  * @param importFromId The id of the existing AwsClassificationJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsClassificationJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_macie2_classification_job", importId: importFromId, provider });
@@ -112,9 +112,9 @@ export class TfClassificationJob extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClassificationJobConfig
+  * @param options AwsClassificationJobConfig
   */
-  public constructor(scope: Construct, id: string, config: TfClassificationJobConfig) {
+  public constructor(scope: Construct, id: string, config: AwsClassificationJobConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_macie2_classification_job',
       terraformGeneratorMetadata: {
@@ -356,17 +356,17 @@ export class TfClassificationJob extends cdktn.TerraformResource {
   }
 
   // user_paused_details - computed: true, optional: false, required: false
-  private _userPausedDetails = new TfClassificationJob.UserPausedDetailsPropertyList(this, "user_paused_details", false);
+  private _userPausedDetails = new AwsClassificationJob.UserPausedDetailsPropertyList(this, "user_paused_details", false);
   public get userPausedDetails() {
     return this._userPausedDetails;
   }
 
   // s3_job_definition - computed: false, optional: false, required: true
-  private _s3JobDefinition = new TfClassificationJob.S3JobDefinitionPropertyOutputReference(this, "s3_job_definition");
+  private _s3JobDefinition = new AwsClassificationJob.S3JobDefinitionPropertyOutputReference(this, "s3_job_definition");
   public get s3JobDefinition() {
     return this._s3JobDefinition;
   }
-  public putS3JobDefinition(value: TfClassificationJob.S3JobDefinitionProperty) {
+  public putS3JobDefinition(value: AwsClassificationJob.S3JobDefinitionProperty) {
     this._s3JobDefinition.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -375,11 +375,11 @@ export class TfClassificationJob extends cdktn.TerraformResource {
   }
 
   // schedule_frequency - computed: false, optional: true, required: false
-  private _scheduleFrequency = new TfClassificationJob.ScheduleFrequencyPropertyOutputReference(this, "schedule_frequency");
+  private _scheduleFrequency = new AwsClassificationJob.ScheduleFrequencyPropertyOutputReference(this, "schedule_frequency");
   public get scheduleFrequency() {
     return this._scheduleFrequency;
   }
-  public putScheduleFrequency(value: TfClassificationJob.ScheduleFrequencyProperty) {
+  public putScheduleFrequency(value: AwsClassificationJob.ScheduleFrequencyProperty) {
     this._scheduleFrequency.internalValue = value;
   }
   public resetScheduleFrequency() {
@@ -391,11 +391,11 @@ export class TfClassificationJob extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfClassificationJob.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsClassificationJob.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfClassificationJob.TimeoutsProperty) {
+  public putTimeouts(value: AwsClassificationJob.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -424,9 +424,9 @@ export class TfClassificationJob extends cdktn.TerraformResource {
       sampling_percentage: cdktn.numberToTerraform(this._samplingPercentage),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      s3_job_definition: tfClassificationJobS3JobDefinitionPropertyToTerraform(this._s3JobDefinition.internalValue),
-      schedule_frequency: tfClassificationJobScheduleFrequencyPropertyToTerraform(this._scheduleFrequency.internalValue),
-      timeouts: tfClassificationJobTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      s3_job_definition: awsClassificationJobS3JobDefinitionPropertyToTerraform(this._s3JobDefinition.internalValue),
+      schedule_frequency: awsClassificationJobScheduleFrequencyPropertyToTerraform(this._scheduleFrequency.internalValue),
+      timeouts: awsClassificationJobTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -505,22 +505,22 @@ export class TfClassificationJob extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       s3_job_definition: {
-        value: tfClassificationJobS3JobDefinitionPropertyToHclTerraform(this._s3JobDefinition.internalValue),
+        value: awsClassificationJobS3JobDefinitionPropertyToHclTerraform(this._s3JobDefinition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfClassificationJob.S3JobDefinitionPropertyList",
+        storageClassType: "AwsClassificationJob.S3JobDefinitionPropertyList",
       },
       schedule_frequency: {
-        value: tfClassificationJobScheduleFrequencyPropertyToHclTerraform(this._scheduleFrequency.internalValue),
+        value: awsClassificationJobScheduleFrequencyPropertyToHclTerraform(this._scheduleFrequency.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfClassificationJob.ScheduleFrequencyPropertyList",
+        storageClassType: "AwsClassificationJob.ScheduleFrequencyPropertyList",
       },
       timeouts: {
-        value: tfClassificationJobTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsClassificationJobTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfClassificationJob.TimeoutsProperty",
+        storageClassType: "AwsClassificationJob.TimeoutsProperty",
       },
     };
 
@@ -529,7 +529,7 @@ export class TfClassificationJob extends cdktn.TerraformResource {
   }
 }
 
-export function tfClassificationJobUserPausedDetailsPropertyToTerraform(struct?: TfClassificationJob.UserPausedDetailsProperty): any {
+export function awsClassificationJobUserPausedDetailsPropertyToTerraform(struct?: AwsClassificationJob.UserPausedDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -539,7 +539,7 @@ export function tfClassificationJobUserPausedDetailsPropertyToTerraform(struct?:
 }
 
 
-export function tfClassificationJobUserPausedDetailsPropertyToHclTerraform(struct?: TfClassificationJob.UserPausedDetailsProperty): any {
+export function awsClassificationJobUserPausedDetailsPropertyToHclTerraform(struct?: AwsClassificationJob.UserPausedDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -550,7 +550,7 @@ export function tfClassificationJobUserPausedDetailsPropertyToHclTerraform(struc
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyOutputReference | TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionProperty): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyOutputReference | AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpl
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyOutputReference | TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionProperty): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyOutputReference | AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -594,7 +594,7 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpl
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -606,7 +606,7 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCr
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -631,19 +631,19 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCr
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyOutputReference | TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndTagCriterionProperty): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyOutputReference | AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndTagCriterionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     comparator: cdktn.stringToTerraform(struct!.comparator),
-    tag_values: cdktn.listMapper(tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesPropertyToTerraform, true)(struct!.tagValues),
+    tag_values: cdktn.listMapper(awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesPropertyToTerraform, true)(struct!.tagValues),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyOutputReference | TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndTagCriterionProperty): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyOutputReference | AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndTagCriterionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -656,7 +656,7 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCr
       storageClassType: "string",
     },
     tag_values: {
-      value: cdktn.listMapperHcl(tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesPropertyToHclTerraform, true)(struct!.tagValues),
+      value: cdktn.listMapperHcl(awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesPropertyToHclTerraform, true)(struct!.tagValues),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesPropertyList",
@@ -668,32 +668,32 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCr
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    simple_criterion: tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyToTerraform(struct!.simpleCriterion),
-    tag_criterion: tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyToTerraform(struct!.tagCriterion),
+    simple_criterion: awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyToTerraform(struct!.simpleCriterion),
+    tag_criterion: awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyToTerraform(struct!.tagCriterion),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     simple_criterion: {
-      value: tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyToHclTerraform(struct!.simpleCriterion),
+      value: awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyToHclTerraform(struct!.simpleCriterion),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyList",
     },
     tag_criterion: {
-      value: tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyToHclTerraform(struct!.tagCriterion),
+      value: awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyToHclTerraform(struct!.tagCriterion),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionBucketCriteriaExcludesAndTagCriterionPropertyList",
@@ -705,25 +705,25 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndPrope
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesPropertyOutputReference | TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesProperty): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaExcludesPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesPropertyOutputReference | AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndPropertyToTerraform, true)(struct!.and),
+    and: cdktn.listMapper(awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndPropertyToTerraform, true)(struct!.and),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesPropertyOutputReference | TfClassificationJob.S3JobDefinitionBucketCriteriaExcludesProperty): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaExcludesPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesPropertyOutputReference | AwsClassificationJob.S3JobDefinitionBucketCriteriaExcludesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(tfClassificationJobS3JobDefinitionBucketCriteriaExcludesAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(awsClassificationJobS3JobDefinitionBucketCriteriaExcludesAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionBucketCriteriaExcludesAndPropertyList",
@@ -735,7 +735,7 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaExcludesProperty
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyOutputReference | TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionProperty): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyOutputReference | AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -748,7 +748,7 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpl
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyOutputReference | TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionProperty): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyOutputReference | AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -779,7 +779,7 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpl
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -791,7 +791,7 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCr
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -816,19 +816,19 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCr
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyOutputReference | TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndTagCriterionProperty): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyOutputReference | AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndTagCriterionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     comparator: cdktn.stringToTerraform(struct!.comparator),
-    tag_values: cdktn.listMapper(tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesPropertyToTerraform, true)(struct!.tagValues),
+    tag_values: cdktn.listMapper(awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesPropertyToTerraform, true)(struct!.tagValues),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyOutputReference | TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndTagCriterionProperty): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyOutputReference | AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndTagCriterionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -841,7 +841,7 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCr
       storageClassType: "string",
     },
     tag_values: {
-      value: cdktn.listMapperHcl(tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesPropertyToHclTerraform, true)(struct!.tagValues),
+      value: cdktn.listMapperHcl(awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesPropertyToHclTerraform, true)(struct!.tagValues),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesPropertyList",
@@ -853,32 +853,32 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCr
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    simple_criterion: tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyToTerraform(struct!.simpleCriterion),
-    tag_criterion: tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyToTerraform(struct!.tagCriterion),
+    simple_criterion: awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyToTerraform(struct!.simpleCriterion),
+    tag_criterion: awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyToTerraform(struct!.tagCriterion),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     simple_criterion: {
-      value: tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyToHclTerraform(struct!.simpleCriterion),
+      value: awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyToHclTerraform(struct!.simpleCriterion),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyList",
     },
     tag_criterion: {
-      value: tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyToHclTerraform(struct!.tagCriterion),
+      value: awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyToHclTerraform(struct!.tagCriterion),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionBucketCriteriaIncludesAndTagCriterionPropertyList",
@@ -890,25 +890,25 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndPrope
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesPropertyOutputReference | TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesProperty): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaIncludesPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesPropertyOutputReference | AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndPropertyToTerraform, true)(struct!.and),
+    and: cdktn.listMapper(awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndPropertyToTerraform, true)(struct!.and),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesPropertyOutputReference | TfClassificationJob.S3JobDefinitionBucketCriteriaIncludesProperty): any {
+export function awsClassificationJobS3JobDefinitionBucketCriteriaIncludesPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesPropertyOutputReference | AwsClassificationJob.S3JobDefinitionBucketCriteriaIncludesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(tfClassificationJobS3JobDefinitionBucketCriteriaIncludesAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(awsClassificationJobS3JobDefinitionBucketCriteriaIncludesAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionBucketCriteriaIncludesAndPropertyList",
@@ -920,32 +920,32 @@ export function tfClassificationJobS3JobDefinitionBucketCriteriaIncludesProperty
 }
 
 
-export function tfClassificationJobBucketCriteriaPropertyToTerraform(struct?: TfClassificationJob.BucketCriteriaPropertyOutputReference | TfClassificationJob.BucketCriteriaProperty): any {
+export function awsClassificationJobBucketCriteriaPropertyToTerraform(struct?: AwsClassificationJob.BucketCriteriaPropertyOutputReference | AwsClassificationJob.BucketCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    excludes: tfClassificationJobS3JobDefinitionBucketCriteriaExcludesPropertyToTerraform(struct!.excludes),
-    includes: tfClassificationJobS3JobDefinitionBucketCriteriaIncludesPropertyToTerraform(struct!.includes),
+    excludes: awsClassificationJobS3JobDefinitionBucketCriteriaExcludesPropertyToTerraform(struct!.excludes),
+    includes: awsClassificationJobS3JobDefinitionBucketCriteriaIncludesPropertyToTerraform(struct!.includes),
   }
 }
 
 
-export function tfClassificationJobBucketCriteriaPropertyToHclTerraform(struct?: TfClassificationJob.BucketCriteriaPropertyOutputReference | TfClassificationJob.BucketCriteriaProperty): any {
+export function awsClassificationJobBucketCriteriaPropertyToHclTerraform(struct?: AwsClassificationJob.BucketCriteriaPropertyOutputReference | AwsClassificationJob.BucketCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     excludes: {
-      value: tfClassificationJobS3JobDefinitionBucketCriteriaExcludesPropertyToHclTerraform(struct!.excludes),
+      value: awsClassificationJobS3JobDefinitionBucketCriteriaExcludesPropertyToHclTerraform(struct!.excludes),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionBucketCriteriaExcludesPropertyList",
     },
     includes: {
-      value: tfClassificationJobS3JobDefinitionBucketCriteriaIncludesPropertyToHclTerraform(struct!.includes),
+      value: awsClassificationJobS3JobDefinitionBucketCriteriaIncludesPropertyToHclTerraform(struct!.includes),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionBucketCriteriaIncludesPropertyList",
@@ -957,7 +957,7 @@ export function tfClassificationJobBucketCriteriaPropertyToHclTerraform(struct?:
 }
 
 
-export function tfClassificationJobBucketDefinitionsPropertyToTerraform(struct?: TfClassificationJob.BucketDefinitionsProperty | cdktn.IResolvable): any {
+export function awsClassificationJobBucketDefinitionsPropertyToTerraform(struct?: AwsClassificationJob.BucketDefinitionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -969,7 +969,7 @@ export function tfClassificationJobBucketDefinitionsPropertyToTerraform(struct?:
 }
 
 
-export function tfClassificationJobBucketDefinitionsPropertyToHclTerraform(struct?: TfClassificationJob.BucketDefinitionsProperty | cdktn.IResolvable): any {
+export function awsClassificationJobBucketDefinitionsPropertyToHclTerraform(struct?: AwsClassificationJob.BucketDefinitionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -994,7 +994,7 @@ export function tfClassificationJobBucketDefinitionsPropertyToHclTerraform(struc
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyOutputReference | TfClassificationJob.S3JobDefinitionScopingExcludesAndSimpleScopeTermProperty): any {
+export function awsClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyOutputReference | AwsClassificationJob.S3JobDefinitionScopingExcludesAndSimpleScopeTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1007,7 +1007,7 @@ export function tfClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeT
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyOutputReference | TfClassificationJob.S3JobDefinitionScopingExcludesAndSimpleScopeTermProperty): any {
+export function awsClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyOutputReference | AwsClassificationJob.S3JobDefinitionScopingExcludesAndSimpleScopeTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1038,7 +1038,7 @@ export function tfClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeT
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValuesPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingExcludesAndTagScopeTermTagValuesProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValuesPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingExcludesAndTagScopeTermTagValuesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1050,7 +1050,7 @@ export function tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValuesPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingExcludesAndTagScopeTermTagValuesProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValuesPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingExcludesAndTagScopeTermTagValuesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1075,7 +1075,7 @@ export function tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingExcludesAndTagScopeTermPropertyOutputReference | TfClassificationJob.S3JobDefinitionScopingExcludesAndTagScopeTermProperty): any {
+export function awsClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingExcludesAndTagScopeTermPropertyOutputReference | AwsClassificationJob.S3JobDefinitionScopingExcludesAndTagScopeTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1084,12 +1084,12 @@ export function tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm
     comparator: cdktn.stringToTerraform(struct!.comparator),
     key: cdktn.stringToTerraform(struct!.key),
     target: cdktn.stringToTerraform(struct!.target),
-    tag_values: cdktn.listMapper(tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValuesPropertyToTerraform, true)(struct!.tagValues),
+    tag_values: cdktn.listMapper(awsClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValuesPropertyToTerraform, true)(struct!.tagValues),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingExcludesAndTagScopeTermPropertyOutputReference | TfClassificationJob.S3JobDefinitionScopingExcludesAndTagScopeTermProperty): any {
+export function awsClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingExcludesAndTagScopeTermPropertyOutputReference | AwsClassificationJob.S3JobDefinitionScopingExcludesAndTagScopeTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1114,7 +1114,7 @@ export function tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm
       storageClassType: "string",
     },
     tag_values: {
-      value: cdktn.listMapperHcl(tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValuesPropertyToHclTerraform, true)(struct!.tagValues),
+      value: cdktn.listMapperHcl(awsClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValuesPropertyToHclTerraform, true)(struct!.tagValues),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionScopingExcludesAndTagScopeTermTagValuesPropertyList",
@@ -1126,32 +1126,32 @@ export function tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingExcludesAndPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingExcludesAndProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionScopingExcludesAndPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingExcludesAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    simple_scope_term: tfClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyToTerraform(struct!.simpleScopeTerm),
-    tag_scope_term: tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPropertyToTerraform(struct!.tagScopeTerm),
+    simple_scope_term: awsClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyToTerraform(struct!.simpleScopeTerm),
+    tag_scope_term: awsClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPropertyToTerraform(struct!.tagScopeTerm),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingExcludesAndPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingExcludesAndProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionScopingExcludesAndPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingExcludesAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     simple_scope_term: {
-      value: tfClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyToHclTerraform(struct!.simpleScopeTerm),
+      value: awsClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyToHclTerraform(struct!.simpleScopeTerm),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyList",
     },
     tag_scope_term: {
-      value: tfClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPropertyToHclTerraform(struct!.tagScopeTerm),
+      value: awsClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPropertyToHclTerraform(struct!.tagScopeTerm),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionScopingExcludesAndTagScopeTermPropertyList",
@@ -1163,25 +1163,25 @@ export function tfClassificationJobS3JobDefinitionScopingExcludesAndPropertyToHc
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingExcludesPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingExcludesPropertyOutputReference | TfClassificationJob.S3JobDefinitionScopingExcludesProperty): any {
+export function awsClassificationJobS3JobDefinitionScopingExcludesPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingExcludesPropertyOutputReference | AwsClassificationJob.S3JobDefinitionScopingExcludesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(tfClassificationJobS3JobDefinitionScopingExcludesAndPropertyToTerraform, true)(struct!.and),
+    and: cdktn.listMapper(awsClassificationJobS3JobDefinitionScopingExcludesAndPropertyToTerraform, true)(struct!.and),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingExcludesPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingExcludesPropertyOutputReference | TfClassificationJob.S3JobDefinitionScopingExcludesProperty): any {
+export function awsClassificationJobS3JobDefinitionScopingExcludesPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingExcludesPropertyOutputReference | AwsClassificationJob.S3JobDefinitionScopingExcludesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(tfClassificationJobS3JobDefinitionScopingExcludesAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(awsClassificationJobS3JobDefinitionScopingExcludesAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionScopingExcludesAndPropertyList",
@@ -1193,7 +1193,7 @@ export function tfClassificationJobS3JobDefinitionScopingExcludesPropertyToHclTe
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyOutputReference | TfClassificationJob.S3JobDefinitionScopingIncludesAndSimpleScopeTermProperty): any {
+export function awsClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyOutputReference | AwsClassificationJob.S3JobDefinitionScopingIncludesAndSimpleScopeTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1206,7 +1206,7 @@ export function tfClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeT
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyOutputReference | TfClassificationJob.S3JobDefinitionScopingIncludesAndSimpleScopeTermProperty): any {
+export function awsClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyOutputReference | AwsClassificationJob.S3JobDefinitionScopingIncludesAndSimpleScopeTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1237,7 +1237,7 @@ export function tfClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeT
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValuesPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingIncludesAndTagScopeTermTagValuesProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValuesPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingIncludesAndTagScopeTermTagValuesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1249,7 +1249,7 @@ export function tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValuesPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingIncludesAndTagScopeTermTagValuesProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValuesPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingIncludesAndTagScopeTermTagValuesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1274,7 +1274,7 @@ export function tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingIncludesAndTagScopeTermPropertyOutputReference | TfClassificationJob.S3JobDefinitionScopingIncludesAndTagScopeTermProperty): any {
+export function awsClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingIncludesAndTagScopeTermPropertyOutputReference | AwsClassificationJob.S3JobDefinitionScopingIncludesAndTagScopeTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1283,12 +1283,12 @@ export function tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm
     comparator: cdktn.stringToTerraform(struct!.comparator),
     key: cdktn.stringToTerraform(struct!.key),
     target: cdktn.stringToTerraform(struct!.target),
-    tag_values: cdktn.listMapper(tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValuesPropertyToTerraform, true)(struct!.tagValues),
+    tag_values: cdktn.listMapper(awsClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValuesPropertyToTerraform, true)(struct!.tagValues),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingIncludesAndTagScopeTermPropertyOutputReference | TfClassificationJob.S3JobDefinitionScopingIncludesAndTagScopeTermProperty): any {
+export function awsClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingIncludesAndTagScopeTermPropertyOutputReference | AwsClassificationJob.S3JobDefinitionScopingIncludesAndTagScopeTermProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1313,7 +1313,7 @@ export function tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm
       storageClassType: "string",
     },
     tag_values: {
-      value: cdktn.listMapperHcl(tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValuesPropertyToHclTerraform, true)(struct!.tagValues),
+      value: cdktn.listMapperHcl(awsClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValuesPropertyToHclTerraform, true)(struct!.tagValues),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionScopingIncludesAndTagScopeTermTagValuesPropertyList",
@@ -1325,32 +1325,32 @@ export function tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingIncludesAndPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingIncludesAndProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionScopingIncludesAndPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingIncludesAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    simple_scope_term: tfClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyToTerraform(struct!.simpleScopeTerm),
-    tag_scope_term: tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPropertyToTerraform(struct!.tagScopeTerm),
+    simple_scope_term: awsClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyToTerraform(struct!.simpleScopeTerm),
+    tag_scope_term: awsClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPropertyToTerraform(struct!.tagScopeTerm),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingIncludesAndPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingIncludesAndProperty | cdktn.IResolvable): any {
+export function awsClassificationJobS3JobDefinitionScopingIncludesAndPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingIncludesAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     simple_scope_term: {
-      value: tfClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyToHclTerraform(struct!.simpleScopeTerm),
+      value: awsClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyToHclTerraform(struct!.simpleScopeTerm),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyList",
     },
     tag_scope_term: {
-      value: tfClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPropertyToHclTerraform(struct!.tagScopeTerm),
+      value: awsClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPropertyToHclTerraform(struct!.tagScopeTerm),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionScopingIncludesAndTagScopeTermPropertyList",
@@ -1362,25 +1362,25 @@ export function tfClassificationJobS3JobDefinitionScopingIncludesAndPropertyToHc
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingIncludesPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingIncludesPropertyOutputReference | TfClassificationJob.S3JobDefinitionScopingIncludesProperty): any {
+export function awsClassificationJobS3JobDefinitionScopingIncludesPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingIncludesPropertyOutputReference | AwsClassificationJob.S3JobDefinitionScopingIncludesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(tfClassificationJobS3JobDefinitionScopingIncludesAndPropertyToTerraform, true)(struct!.and),
+    and: cdktn.listMapper(awsClassificationJobS3JobDefinitionScopingIncludesAndPropertyToTerraform, true)(struct!.and),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionScopingIncludesPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionScopingIncludesPropertyOutputReference | TfClassificationJob.S3JobDefinitionScopingIncludesProperty): any {
+export function awsClassificationJobS3JobDefinitionScopingIncludesPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionScopingIncludesPropertyOutputReference | AwsClassificationJob.S3JobDefinitionScopingIncludesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(tfClassificationJobS3JobDefinitionScopingIncludesAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(awsClassificationJobS3JobDefinitionScopingIncludesAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionScopingIncludesAndPropertyList",
@@ -1392,32 +1392,32 @@ export function tfClassificationJobS3JobDefinitionScopingIncludesPropertyToHclTe
 }
 
 
-export function tfClassificationJobScopingPropertyToTerraform(struct?: TfClassificationJob.ScopingPropertyOutputReference | TfClassificationJob.ScopingProperty): any {
+export function awsClassificationJobScopingPropertyToTerraform(struct?: AwsClassificationJob.ScopingPropertyOutputReference | AwsClassificationJob.ScopingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    excludes: tfClassificationJobS3JobDefinitionScopingExcludesPropertyToTerraform(struct!.excludes),
-    includes: tfClassificationJobS3JobDefinitionScopingIncludesPropertyToTerraform(struct!.includes),
+    excludes: awsClassificationJobS3JobDefinitionScopingExcludesPropertyToTerraform(struct!.excludes),
+    includes: awsClassificationJobS3JobDefinitionScopingIncludesPropertyToTerraform(struct!.includes),
   }
 }
 
 
-export function tfClassificationJobScopingPropertyToHclTerraform(struct?: TfClassificationJob.ScopingPropertyOutputReference | TfClassificationJob.ScopingProperty): any {
+export function awsClassificationJobScopingPropertyToHclTerraform(struct?: AwsClassificationJob.ScopingPropertyOutputReference | AwsClassificationJob.ScopingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     excludes: {
-      value: tfClassificationJobS3JobDefinitionScopingExcludesPropertyToHclTerraform(struct!.excludes),
+      value: awsClassificationJobS3JobDefinitionScopingExcludesPropertyToHclTerraform(struct!.excludes),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionScopingExcludesPropertyList",
     },
     includes: {
-      value: tfClassificationJobS3JobDefinitionScopingIncludesPropertyToHclTerraform(struct!.includes),
+      value: awsClassificationJobS3JobDefinitionScopingIncludesPropertyToHclTerraform(struct!.includes),
       isBlock: true,
       type: "list",
       storageClassType: "S3JobDefinitionScopingIncludesPropertyList",
@@ -1429,39 +1429,39 @@ export function tfClassificationJobScopingPropertyToHclTerraform(struct?: TfClas
 }
 
 
-export function tfClassificationJobS3JobDefinitionPropertyToTerraform(struct?: TfClassificationJob.S3JobDefinitionPropertyOutputReference | TfClassificationJob.S3JobDefinitionProperty): any {
+export function awsClassificationJobS3JobDefinitionPropertyToTerraform(struct?: AwsClassificationJob.S3JobDefinitionPropertyOutputReference | AwsClassificationJob.S3JobDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    bucket_criteria: tfClassificationJobBucketCriteriaPropertyToTerraform(struct!.bucketCriteria),
-    bucket_definitions: cdktn.listMapper(tfClassificationJobBucketDefinitionsPropertyToTerraform, true)(struct!.bucketDefinitions),
-    scoping: tfClassificationJobScopingPropertyToTerraform(struct!.scoping),
+    bucket_criteria: awsClassificationJobBucketCriteriaPropertyToTerraform(struct!.bucketCriteria),
+    bucket_definitions: cdktn.listMapper(awsClassificationJobBucketDefinitionsPropertyToTerraform, true)(struct!.bucketDefinitions),
+    scoping: awsClassificationJobScopingPropertyToTerraform(struct!.scoping),
   }
 }
 
 
-export function tfClassificationJobS3JobDefinitionPropertyToHclTerraform(struct?: TfClassificationJob.S3JobDefinitionPropertyOutputReference | TfClassificationJob.S3JobDefinitionProperty): any {
+export function awsClassificationJobS3JobDefinitionPropertyToHclTerraform(struct?: AwsClassificationJob.S3JobDefinitionPropertyOutputReference | AwsClassificationJob.S3JobDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     bucket_criteria: {
-      value: tfClassificationJobBucketCriteriaPropertyToHclTerraform(struct!.bucketCriteria),
+      value: awsClassificationJobBucketCriteriaPropertyToHclTerraform(struct!.bucketCriteria),
       isBlock: true,
       type: "list",
       storageClassType: "BucketCriteriaPropertyList",
     },
     bucket_definitions: {
-      value: cdktn.listMapperHcl(tfClassificationJobBucketDefinitionsPropertyToHclTerraform, true)(struct!.bucketDefinitions),
+      value: cdktn.listMapperHcl(awsClassificationJobBucketDefinitionsPropertyToHclTerraform, true)(struct!.bucketDefinitions),
       isBlock: true,
       type: "list",
       storageClassType: "BucketDefinitionsPropertyList",
     },
     scoping: {
-      value: tfClassificationJobScopingPropertyToHclTerraform(struct!.scoping),
+      value: awsClassificationJobScopingPropertyToHclTerraform(struct!.scoping),
       isBlock: true,
       type: "list",
       storageClassType: "ScopingPropertyList",
@@ -1473,7 +1473,7 @@ export function tfClassificationJobS3JobDefinitionPropertyToHclTerraform(struct?
 }
 
 
-export function tfClassificationJobScheduleFrequencyPropertyToTerraform(struct?: TfClassificationJob.ScheduleFrequencyPropertyOutputReference | TfClassificationJob.ScheduleFrequencyProperty): any {
+export function awsClassificationJobScheduleFrequencyPropertyToTerraform(struct?: AwsClassificationJob.ScheduleFrequencyPropertyOutputReference | AwsClassificationJob.ScheduleFrequencyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1486,7 +1486,7 @@ export function tfClassificationJobScheduleFrequencyPropertyToTerraform(struct?:
 }
 
 
-export function tfClassificationJobScheduleFrequencyPropertyToHclTerraform(struct?: TfClassificationJob.ScheduleFrequencyPropertyOutputReference | TfClassificationJob.ScheduleFrequencyProperty): any {
+export function awsClassificationJobScheduleFrequencyPropertyToHclTerraform(struct?: AwsClassificationJob.ScheduleFrequencyPropertyOutputReference | AwsClassificationJob.ScheduleFrequencyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1517,7 +1517,7 @@ export function tfClassificationJobScheduleFrequencyPropertyToHclTerraform(struc
 }
 
 
-export function tfClassificationJobTimeoutsPropertyToTerraform(struct?: TfClassificationJob.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClassificationJobTimeoutsPropertyToTerraform(struct?: AwsClassificationJob.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1529,7 +1529,7 @@ export function tfClassificationJobTimeoutsPropertyToTerraform(struct?: TfClassi
 }
 
 
-export function tfClassificationJobTimeoutsPropertyToHclTerraform(struct?: TfClassificationJob.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClassificationJobTimeoutsPropertyToHclTerraform(struct?: AwsClassificationJob.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1554,7 +1554,7 @@ export function tfClassificationJobTimeoutsPropertyToHclTerraform(struct?: TfCla
 }
 
 
-export namespace TfClassificationJob {
+export namespace AwsClassificationJob {
 export interface UserPausedDetailsProperty {
 }
 export class UserPausedDetailsPropertyOutputReference extends cdktn.ComplexObject {
@@ -1621,15 +1621,15 @@ export class UserPausedDetailsPropertyList extends cdktn.ComplexList {
 }
 export interface S3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator TfClassificationJob#comparator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator AwsClassificationJob#comparator}
   */
   readonly comparator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key TfClassificationJob#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key AwsClassificationJob#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#values TfClassificationJob#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#values AwsClassificationJob#values}
   */
   readonly values?: string[];
 }
@@ -1727,11 +1727,11 @@ export class S3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPropertyOutp
 }
 export interface S3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key TfClassificationJob#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key AwsClassificationJob#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#value TfClassificationJob#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#value AwsClassificationJob#value}
   */
   readonly value?: string;
 }
@@ -1839,13 +1839,13 @@ export class S3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesProper
 }
 export interface S3JobDefinitionBucketCriteriaExcludesAndTagCriterionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator TfClassificationJob#comparator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator AwsClassificationJob#comparator}
   */
   readonly comparator?: string;
   /**
   * tag_values block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_values TfClassificationJob#tag_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_values AwsClassificationJob#tag_values}
   */
   readonly tagValues?: S3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValuesProperty[] | cdktn.IResolvable;
 }
@@ -1923,13 +1923,13 @@ export interface S3JobDefinitionBucketCriteriaExcludesAndProperty {
   /**
   * simple_criterion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#simple_criterion TfClassificationJob#simple_criterion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#simple_criterion AwsClassificationJob#simple_criterion}
   */
   readonly simpleCriterion?: S3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionProperty;
   /**
   * tag_criterion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_criterion TfClassificationJob#tag_criterion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_criterion AwsClassificationJob#tag_criterion}
   */
   readonly tagCriterion?: S3JobDefinitionBucketCriteriaExcludesAndTagCriterionProperty;
 }
@@ -2039,7 +2039,7 @@ export interface S3JobDefinitionBucketCriteriaExcludesProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#and TfClassificationJob#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#and AwsClassificationJob#and}
   */
   readonly and?: S3JobDefinitionBucketCriteriaExcludesAndProperty[] | cdktn.IResolvable;
 }
@@ -2093,15 +2093,15 @@ export class S3JobDefinitionBucketCriteriaExcludesPropertyOutputReference extend
 }
 export interface S3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator TfClassificationJob#comparator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator AwsClassificationJob#comparator}
   */
   readonly comparator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key TfClassificationJob#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key AwsClassificationJob#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#values TfClassificationJob#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#values AwsClassificationJob#values}
   */
   readonly values?: string[];
 }
@@ -2199,11 +2199,11 @@ export class S3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPropertyOutp
 }
 export interface S3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key TfClassificationJob#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key AwsClassificationJob#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#value TfClassificationJob#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#value AwsClassificationJob#value}
   */
   readonly value?: string;
 }
@@ -2311,13 +2311,13 @@ export class S3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesProper
 }
 export interface S3JobDefinitionBucketCriteriaIncludesAndTagCriterionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator TfClassificationJob#comparator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator AwsClassificationJob#comparator}
   */
   readonly comparator?: string;
   /**
   * tag_values block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_values TfClassificationJob#tag_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_values AwsClassificationJob#tag_values}
   */
   readonly tagValues?: S3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValuesProperty[] | cdktn.IResolvable;
 }
@@ -2395,13 +2395,13 @@ export interface S3JobDefinitionBucketCriteriaIncludesAndProperty {
   /**
   * simple_criterion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#simple_criterion TfClassificationJob#simple_criterion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#simple_criterion AwsClassificationJob#simple_criterion}
   */
   readonly simpleCriterion?: S3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionProperty;
   /**
   * tag_criterion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_criterion TfClassificationJob#tag_criterion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_criterion AwsClassificationJob#tag_criterion}
   */
   readonly tagCriterion?: S3JobDefinitionBucketCriteriaIncludesAndTagCriterionProperty;
 }
@@ -2511,7 +2511,7 @@ export interface S3JobDefinitionBucketCriteriaIncludesProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#and TfClassificationJob#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#and AwsClassificationJob#and}
   */
   readonly and?: S3JobDefinitionBucketCriteriaIncludesAndProperty[] | cdktn.IResolvable;
 }
@@ -2567,13 +2567,13 @@ export interface BucketCriteriaProperty {
   /**
   * excludes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#excludes TfClassificationJob#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#excludes AwsClassificationJob#excludes}
   */
   readonly excludes?: S3JobDefinitionBucketCriteriaExcludesProperty;
   /**
   * includes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#includes TfClassificationJob#includes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#includes AwsClassificationJob#includes}
   */
   readonly includes?: S3JobDefinitionBucketCriteriaIncludesProperty;
 }
@@ -2649,11 +2649,11 @@ export class BucketCriteriaPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BucketDefinitionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#account_id TfClassificationJob#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#account_id AwsClassificationJob#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#buckets TfClassificationJob#buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#buckets AwsClassificationJob#buckets}
   */
   readonly buckets: string[];
 }
@@ -2755,15 +2755,15 @@ export class BucketDefinitionsPropertyList extends cdktn.ComplexList {
 }
 export interface S3JobDefinitionScopingExcludesAndSimpleScopeTermProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator TfClassificationJob#comparator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator AwsClassificationJob#comparator}
   */
   readonly comparator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key TfClassificationJob#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key AwsClassificationJob#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#values TfClassificationJob#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#values AwsClassificationJob#values}
   */
   readonly values?: string[];
 }
@@ -2861,11 +2861,11 @@ export class S3JobDefinitionScopingExcludesAndSimpleScopeTermPropertyOutputRefer
 }
 export interface S3JobDefinitionScopingExcludesAndTagScopeTermTagValuesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key TfClassificationJob#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key AwsClassificationJob#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#value TfClassificationJob#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#value AwsClassificationJob#value}
   */
   readonly value?: string;
 }
@@ -2973,21 +2973,21 @@ export class S3JobDefinitionScopingExcludesAndTagScopeTermTagValuesPropertyList 
 }
 export interface S3JobDefinitionScopingExcludesAndTagScopeTermProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator TfClassificationJob#comparator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator AwsClassificationJob#comparator}
   */
   readonly comparator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key TfClassificationJob#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key AwsClassificationJob#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#target TfClassificationJob#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#target AwsClassificationJob#target}
   */
   readonly target?: string;
   /**
   * tag_values block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_values TfClassificationJob#tag_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_values AwsClassificationJob#tag_values}
   */
   readonly tagValues?: S3JobDefinitionScopingExcludesAndTagScopeTermTagValuesProperty[] | cdktn.IResolvable;
 }
@@ -3109,13 +3109,13 @@ export interface S3JobDefinitionScopingExcludesAndProperty {
   /**
   * simple_scope_term block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#simple_scope_term TfClassificationJob#simple_scope_term}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#simple_scope_term AwsClassificationJob#simple_scope_term}
   */
   readonly simpleScopeTerm?: S3JobDefinitionScopingExcludesAndSimpleScopeTermProperty;
   /**
   * tag_scope_term block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_scope_term TfClassificationJob#tag_scope_term}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_scope_term AwsClassificationJob#tag_scope_term}
   */
   readonly tagScopeTerm?: S3JobDefinitionScopingExcludesAndTagScopeTermProperty;
 }
@@ -3225,7 +3225,7 @@ export interface S3JobDefinitionScopingExcludesProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#and TfClassificationJob#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#and AwsClassificationJob#and}
   */
   readonly and?: S3JobDefinitionScopingExcludesAndProperty[] | cdktn.IResolvable;
 }
@@ -3279,15 +3279,15 @@ export class S3JobDefinitionScopingExcludesPropertyOutputReference extends cdktn
 }
 export interface S3JobDefinitionScopingIncludesAndSimpleScopeTermProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator TfClassificationJob#comparator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator AwsClassificationJob#comparator}
   */
   readonly comparator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key TfClassificationJob#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key AwsClassificationJob#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#values TfClassificationJob#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#values AwsClassificationJob#values}
   */
   readonly values?: string[];
 }
@@ -3385,11 +3385,11 @@ export class S3JobDefinitionScopingIncludesAndSimpleScopeTermPropertyOutputRefer
 }
 export interface S3JobDefinitionScopingIncludesAndTagScopeTermTagValuesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key TfClassificationJob#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key AwsClassificationJob#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#value TfClassificationJob#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#value AwsClassificationJob#value}
   */
   readonly value?: string;
 }
@@ -3497,21 +3497,21 @@ export class S3JobDefinitionScopingIncludesAndTagScopeTermTagValuesPropertyList 
 }
 export interface S3JobDefinitionScopingIncludesAndTagScopeTermProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator TfClassificationJob#comparator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#comparator AwsClassificationJob#comparator}
   */
   readonly comparator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key TfClassificationJob#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#key AwsClassificationJob#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#target TfClassificationJob#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#target AwsClassificationJob#target}
   */
   readonly target?: string;
   /**
   * tag_values block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_values TfClassificationJob#tag_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_values AwsClassificationJob#tag_values}
   */
   readonly tagValues?: S3JobDefinitionScopingIncludesAndTagScopeTermTagValuesProperty[] | cdktn.IResolvable;
 }
@@ -3633,13 +3633,13 @@ export interface S3JobDefinitionScopingIncludesAndProperty {
   /**
   * simple_scope_term block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#simple_scope_term TfClassificationJob#simple_scope_term}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#simple_scope_term AwsClassificationJob#simple_scope_term}
   */
   readonly simpleScopeTerm?: S3JobDefinitionScopingIncludesAndSimpleScopeTermProperty;
   /**
   * tag_scope_term block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_scope_term TfClassificationJob#tag_scope_term}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#tag_scope_term AwsClassificationJob#tag_scope_term}
   */
   readonly tagScopeTerm?: S3JobDefinitionScopingIncludesAndTagScopeTermProperty;
 }
@@ -3749,7 +3749,7 @@ export interface S3JobDefinitionScopingIncludesProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#and TfClassificationJob#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#and AwsClassificationJob#and}
   */
   readonly and?: S3JobDefinitionScopingIncludesAndProperty[] | cdktn.IResolvable;
 }
@@ -3805,13 +3805,13 @@ export interface ScopingProperty {
   /**
   * excludes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#excludes TfClassificationJob#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#excludes AwsClassificationJob#excludes}
   */
   readonly excludes?: S3JobDefinitionScopingExcludesProperty;
   /**
   * includes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#includes TfClassificationJob#includes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#includes AwsClassificationJob#includes}
   */
   readonly includes?: S3JobDefinitionScopingIncludesProperty;
 }
@@ -3889,19 +3889,19 @@ export interface S3JobDefinitionProperty {
   /**
   * bucket_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#bucket_criteria TfClassificationJob#bucket_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#bucket_criteria AwsClassificationJob#bucket_criteria}
   */
   readonly bucketCriteria?: BucketCriteriaProperty;
   /**
   * bucket_definitions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#bucket_definitions TfClassificationJob#bucket_definitions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#bucket_definitions AwsClassificationJob#bucket_definitions}
   */
   readonly bucketDefinitions?: BucketDefinitionsProperty[] | cdktn.IResolvable;
   /**
   * scoping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#scoping TfClassificationJob#scoping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#scoping AwsClassificationJob#scoping}
   */
   readonly scoping?: ScopingProperty;
 }
@@ -3999,15 +3999,15 @@ export class S3JobDefinitionPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface ScheduleFrequencyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#daily_schedule TfClassificationJob#daily_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#daily_schedule AwsClassificationJob#daily_schedule}
   */
   readonly dailySchedule?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#monthly_schedule TfClassificationJob#monthly_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#monthly_schedule AwsClassificationJob#monthly_schedule}
   */
   readonly monthlySchedule?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#weekly_schedule TfClassificationJob#weekly_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#weekly_schedule AwsClassificationJob#weekly_schedule}
   */
   readonly weeklySchedule?: string;
 }
@@ -4105,11 +4105,11 @@ export class ScheduleFrequencyPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#create TfClassificationJob#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#create AwsClassificationJob#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#update TfClassificationJob#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_classification_job#update AwsClassificationJob#update}
   */
   readonly update?: string;
 }

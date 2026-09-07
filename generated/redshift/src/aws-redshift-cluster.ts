@@ -5,196 +5,196 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClusterConfig extends cdktn.TerraformMetaArguments {
+export interface AwsClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#allow_version_upgrade TfCluster#allow_version_upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#allow_version_upgrade AwsCluster#allow_version_upgrade}
   */
   readonly allowVersionUpgrade?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#apply_immediately TfCluster#apply_immediately}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#apply_immediately AwsCluster#apply_immediately}
   */
   readonly applyImmediately?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#aqua_configuration_status TfCluster#aqua_configuration_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#aqua_configuration_status AwsCluster#aqua_configuration_status}
   */
   readonly aquaConfigurationStatus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#automated_snapshot_retention_period TfCluster#automated_snapshot_retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#automated_snapshot_retention_period AwsCluster#automated_snapshot_retention_period}
   */
   readonly automatedSnapshotRetentionPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#availability_zone TfCluster#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#availability_zone AwsCluster#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#availability_zone_relocation_enabled TfCluster#availability_zone_relocation_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#availability_zone_relocation_enabled AwsCluster#availability_zone_relocation_enabled}
   */
   readonly availabilityZoneRelocationEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#cluster_identifier TfCluster#cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#cluster_identifier AwsCluster#cluster_identifier}
   */
   readonly clusterIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#cluster_parameter_group_name TfCluster#cluster_parameter_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#cluster_parameter_group_name AwsCluster#cluster_parameter_group_name}
   */
   readonly clusterParameterGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#cluster_subnet_group_name TfCluster#cluster_subnet_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#cluster_subnet_group_name AwsCluster#cluster_subnet_group_name}
   */
   readonly clusterSubnetGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#cluster_type TfCluster#cluster_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#cluster_type AwsCluster#cluster_type}
   */
   readonly clusterType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#cluster_version TfCluster#cluster_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#cluster_version AwsCluster#cluster_version}
   */
   readonly clusterVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#database_name TfCluster#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#database_name AwsCluster#database_name}
   */
   readonly databaseName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#default_iam_role_arn TfCluster#default_iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#default_iam_role_arn AwsCluster#default_iam_role_arn}
   */
   readonly defaultIamRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#elastic_ip TfCluster#elastic_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#elastic_ip AwsCluster#elastic_ip}
   */
   readonly elasticIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#encrypted TfCluster#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#encrypted AwsCluster#encrypted}
   */
   readonly encrypted?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#enhanced_vpc_routing TfCluster#enhanced_vpc_routing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#enhanced_vpc_routing AwsCluster#enhanced_vpc_routing}
   */
   readonly enhancedVpcRouting?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#final_snapshot_identifier TfCluster#final_snapshot_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#final_snapshot_identifier AwsCluster#final_snapshot_identifier}
   */
   readonly finalSnapshotIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#iam_roles TfCluster#iam_roles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#iam_roles AwsCluster#iam_roles}
   */
   readonly iamRoles?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#id TfCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#id AwsCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#kms_key_id TfCluster#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#kms_key_id AwsCluster#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#maintenance_track_name TfCluster#maintenance_track_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#maintenance_track_name AwsCluster#maintenance_track_name}
   */
   readonly maintenanceTrackName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#manage_master_password TfCluster#manage_master_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#manage_master_password AwsCluster#manage_master_password}
   */
   readonly manageMasterPassword?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#manual_snapshot_retention_period TfCluster#manual_snapshot_retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#manual_snapshot_retention_period AwsCluster#manual_snapshot_retention_period}
   */
   readonly manualSnapshotRetentionPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#master_password TfCluster#master_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#master_password AwsCluster#master_password}
   */
   readonly masterPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#master_password_secret_kms_key_id TfCluster#master_password_secret_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#master_password_secret_kms_key_id AwsCluster#master_password_secret_kms_key_id}
   */
   readonly masterPasswordSecretKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#master_password_wo TfCluster#master_password_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#master_password_wo AwsCluster#master_password_wo}
   */
   readonly masterPasswordWo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#master_password_wo_version TfCluster#master_password_wo_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#master_password_wo_version AwsCluster#master_password_wo_version}
   */
   readonly masterPasswordWoVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#master_username TfCluster#master_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#master_username AwsCluster#master_username}
   */
   readonly masterUsername?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#multi_az TfCluster#multi_az}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#multi_az AwsCluster#multi_az}
   */
   readonly multiAz?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#node_type TfCluster#node_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#node_type AwsCluster#node_type}
   */
   readonly nodeType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#number_of_nodes TfCluster#number_of_nodes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#number_of_nodes AwsCluster#number_of_nodes}
   */
   readonly numberOfNodes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#owner_account TfCluster#owner_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#owner_account AwsCluster#owner_account}
   */
   readonly ownerAccount?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#port TfCluster#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#port AwsCluster#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#preferred_maintenance_window TfCluster#preferred_maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#preferred_maintenance_window AwsCluster#preferred_maintenance_window}
   */
   readonly preferredMaintenanceWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#publicly_accessible TfCluster#publicly_accessible}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#publicly_accessible AwsCluster#publicly_accessible}
   */
   readonly publiclyAccessible?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#region TfCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#region AwsCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#skip_final_snapshot TfCluster#skip_final_snapshot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#skip_final_snapshot AwsCluster#skip_final_snapshot}
   */
   readonly skipFinalSnapshot?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#snapshot_arn TfCluster#snapshot_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#snapshot_arn AwsCluster#snapshot_arn}
   */
   readonly snapshotArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#snapshot_cluster_identifier TfCluster#snapshot_cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#snapshot_cluster_identifier AwsCluster#snapshot_cluster_identifier}
   */
   readonly snapshotClusterIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#snapshot_identifier TfCluster#snapshot_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#snapshot_identifier AwsCluster#snapshot_identifier}
   */
   readonly snapshotIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#tags TfCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#tags AwsCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#tags_all TfCluster#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#tags_all AwsCluster#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#vpc_security_group_ids TfCluster#vpc_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#vpc_security_group_ids AwsCluster#vpc_security_group_ids}
   */
   readonly vpcSecurityGroupIds?: string[];
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#timeouts TfCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#timeouts AwsCluster#timeouts}
   */
-  readonly timeouts?: TfCluster.TimeoutsProperty;
+  readonly timeouts?: AwsCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster aws_redshift_cluster}
 */
-export class TfCluster extends cdktn.TerraformResource {
+export class AwsCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -205,11 +205,11 @@ export class TfCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCluster to import
-  * @param importFromId The id of the existing TfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCluster to import is found
+  * @param importToId The construct id used in the generated config for the AwsCluster to import
+  * @param importFromId The id of the existing AwsCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_cluster", importId: importFromId, provider });
@@ -224,9 +224,9 @@ export class TfCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClusterConfig
+  * @param options AwsClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfClusterConfig) {
+  public constructor(scope: Construct, id: string, config: AwsClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_cluster',
       terraformGeneratorMetadata: {
@@ -412,7 +412,7 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // cluster_nodes - computed: true, optional: false, required: false
-  private _clusterNodes = new TfCluster.ClusterNodesPropertyList(this, "cluster_nodes", false);
+  private _clusterNodes = new AwsCluster.ClusterNodesPropertyList(this, "cluster_nodes", false);
   public get clusterNodes() {
     return this._clusterNodes;
   }
@@ -1019,11 +1019,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCluster.TimeoutsProperty) {
+  public putTimeouts(value: AwsCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -1083,7 +1083,7 @@ export class TfCluster extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
-      timeouts: tfClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -1348,10 +1348,10 @@ export class TfCluster extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       timeouts: {
-        value: tfClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCluster.TimeoutsProperty",
+        storageClassType: "AwsCluster.TimeoutsProperty",
       },
     };
 
@@ -1360,7 +1360,7 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 }
 
-export function tfClusterClusterNodesPropertyToTerraform(struct?: TfCluster.ClusterNodesProperty): any {
+export function awsClusterClusterNodesPropertyToTerraform(struct?: AwsCluster.ClusterNodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1370,7 +1370,7 @@ export function tfClusterClusterNodesPropertyToTerraform(struct?: TfCluster.Clus
 }
 
 
-export function tfClusterClusterNodesPropertyToHclTerraform(struct?: TfCluster.ClusterNodesProperty): any {
+export function awsClusterClusterNodesPropertyToHclTerraform(struct?: AwsCluster.ClusterNodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1381,7 +1381,7 @@ export function tfClusterClusterNodesPropertyToHclTerraform(struct?: TfCluster.C
 }
 
 
-export function tfClusterTimeoutsPropertyToTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClusterTimeoutsPropertyToTerraform(struct?: AwsCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1394,7 +1394,7 @@ export function tfClusterTimeoutsPropertyToTerraform(struct?: TfCluster.Timeouts
 }
 
 
-export function tfClusterTimeoutsPropertyToHclTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClusterTimeoutsPropertyToHclTerraform(struct?: AwsCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1425,7 +1425,7 @@ export function tfClusterTimeoutsPropertyToHclTerraform(struct?: TfCluster.Timeo
 }
 
 
-export namespace TfCluster {
+export namespace AwsCluster {
 export interface ClusterNodesProperty {
 }
 export class ClusterNodesPropertyOutputReference extends cdktn.ComplexObject {
@@ -1492,15 +1492,15 @@ export class ClusterNodesPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#create TfCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#create AwsCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#delete TfCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#delete AwsCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#update TfCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster#update AwsCluster#update}
   */
   readonly update?: string;
 }

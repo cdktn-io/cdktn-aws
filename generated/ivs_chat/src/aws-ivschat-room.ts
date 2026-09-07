@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRoomConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRoomConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#id TfRoom#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#id AwsRoom#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#logging_configuration_identifiers TfRoom#logging_configuration_identifiers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#logging_configuration_identifiers AwsRoom#logging_configuration_identifiers}
   */
   readonly loggingConfigurationIdentifiers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#maximum_message_length TfRoom#maximum_message_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#maximum_message_length AwsRoom#maximum_message_length}
   */
   readonly maximumMessageLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#maximum_message_rate_per_second TfRoom#maximum_message_rate_per_second}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#maximum_message_rate_per_second AwsRoom#maximum_message_rate_per_second}
   */
   readonly maximumMessageRatePerSecond?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#name TfRoom#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#name AwsRoom#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#region TfRoom#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#region AwsRoom#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#tags TfRoom#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#tags AwsRoom#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#tags_all TfRoom#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#tags_all AwsRoom#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * message_review_handler block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#message_review_handler TfRoom#message_review_handler}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#message_review_handler AwsRoom#message_review_handler}
   */
-  readonly messageReviewHandler?: TfRoom.MessageReviewHandlerProperty;
+  readonly messageReviewHandler?: AwsRoom.MessageReviewHandlerProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#timeouts TfRoom#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#timeouts AwsRoom#timeouts}
   */
-  readonly timeouts?: TfRoom.TimeoutsProperty;
+  readonly timeouts?: AwsRoom.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room aws_ivschat_room}
 */
-export class TfRoom extends cdktn.TerraformResource {
+export class AwsRoom extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfRoom extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRoom resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRoom resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRoom to import
-  * @param importFromId The id of the existing TfRoom that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRoom to import is found
+  * @param importToId The construct id used in the generated config for the AwsRoom to import
+  * @param importFromId The id of the existing AwsRoom that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRoom to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ivschat_room", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfRoom extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRoomConfig = {}
+  * @param options AwsRoomConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfRoomConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsRoomConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ivschat_room',
       terraformGeneratorMetadata: {
@@ -258,11 +258,11 @@ export class TfRoom extends cdktn.TerraformResource {
   }
 
   // message_review_handler - computed: false, optional: true, required: false
-  private _messageReviewHandler = new TfRoom.MessageReviewHandlerPropertyOutputReference(this, "message_review_handler");
+  private _messageReviewHandler = new AwsRoom.MessageReviewHandlerPropertyOutputReference(this, "message_review_handler");
   public get messageReviewHandler() {
     return this._messageReviewHandler;
   }
-  public putMessageReviewHandler(value: TfRoom.MessageReviewHandlerProperty) {
+  public putMessageReviewHandler(value: AwsRoom.MessageReviewHandlerProperty) {
     this._messageReviewHandler.internalValue = value;
   }
   public resetMessageReviewHandler() {
@@ -274,11 +274,11 @@ export class TfRoom extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfRoom.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsRoom.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfRoom.TimeoutsProperty) {
+  public putTimeouts(value: AwsRoom.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -303,8 +303,8 @@ export class TfRoom extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      message_review_handler: tfRoomMessageReviewHandlerPropertyToTerraform(this._messageReviewHandler.internalValue),
-      timeouts: tfRoomTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      message_review_handler: awsRoomMessageReviewHandlerPropertyToTerraform(this._messageReviewHandler.internalValue),
+      timeouts: awsRoomTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -359,16 +359,16 @@ export class TfRoom extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       message_review_handler: {
-        value: tfRoomMessageReviewHandlerPropertyToHclTerraform(this._messageReviewHandler.internalValue),
+        value: awsRoomMessageReviewHandlerPropertyToHclTerraform(this._messageReviewHandler.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRoom.MessageReviewHandlerPropertyList",
+        storageClassType: "AwsRoom.MessageReviewHandlerPropertyList",
       },
       timeouts: {
-        value: tfRoomTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsRoomTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfRoom.TimeoutsProperty",
+        storageClassType: "AwsRoom.TimeoutsProperty",
       },
     };
 
@@ -377,7 +377,7 @@ export class TfRoom extends cdktn.TerraformResource {
   }
 }
 
-export function tfRoomMessageReviewHandlerPropertyToTerraform(struct?: TfRoom.MessageReviewHandlerPropertyOutputReference | TfRoom.MessageReviewHandlerProperty): any {
+export function awsRoomMessageReviewHandlerPropertyToTerraform(struct?: AwsRoom.MessageReviewHandlerPropertyOutputReference | AwsRoom.MessageReviewHandlerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function tfRoomMessageReviewHandlerPropertyToTerraform(struct?: TfRoom.Me
 }
 
 
-export function tfRoomMessageReviewHandlerPropertyToHclTerraform(struct?: TfRoom.MessageReviewHandlerPropertyOutputReference | TfRoom.MessageReviewHandlerProperty): any {
+export function awsRoomMessageReviewHandlerPropertyToHclTerraform(struct?: AwsRoom.MessageReviewHandlerPropertyOutputReference | AwsRoom.MessageReviewHandlerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function tfRoomMessageReviewHandlerPropertyToHclTerraform(struct?: TfRoom
 }
 
 
-export function tfRoomTimeoutsPropertyToTerraform(struct?: TfRoom.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRoomTimeoutsPropertyToTerraform(struct?: AwsRoom.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,7 +427,7 @@ export function tfRoomTimeoutsPropertyToTerraform(struct?: TfRoom.TimeoutsProper
 }
 
 
-export function tfRoomTimeoutsPropertyToHclTerraform(struct?: TfRoom.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRoomTimeoutsPropertyToHclTerraform(struct?: AwsRoom.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,14 +458,14 @@ export function tfRoomTimeoutsPropertyToHclTerraform(struct?: TfRoom.TimeoutsPro
 }
 
 
-export namespace TfRoom {
+export namespace AwsRoom {
 export interface MessageReviewHandlerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#fallback_result TfRoom#fallback_result}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#fallback_result AwsRoom#fallback_result}
   */
   readonly fallbackResult?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#uri TfRoom#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#uri AwsRoom#uri}
   */
   readonly uri?: string;
 }
@@ -541,15 +541,15 @@ export class MessageReviewHandlerPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#create TfRoom#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#create AwsRoom#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#delete TfRoom#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#delete AwsRoom#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#update TfRoom#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_room#update AwsRoom#update}
   */
   readonly update?: string;
 }

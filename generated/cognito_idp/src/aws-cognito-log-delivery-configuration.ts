@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLogDeliveryConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLogDeliveryConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#region TfLogDeliveryConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#region AwsLogDeliveryConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#user_pool_id TfLogDeliveryConfiguration#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#user_pool_id AwsLogDeliveryConfiguration#user_pool_id}
   */
   readonly userPoolId: string;
   /**
   * log_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#log_configurations TfLogDeliveryConfiguration#log_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#log_configurations AwsLogDeliveryConfiguration#log_configurations}
   */
-  readonly logConfigurations?: TfLogDeliveryConfiguration.LogConfigurationsProperty[] | cdktn.IResolvable;
+  readonly logConfigurations?: AwsLogDeliveryConfiguration.LogConfigurationsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration aws_cognito_log_delivery_configuration}
 */
-export class TfLogDeliveryConfiguration extends cdktn.TerraformResource {
+export class AwsLogDeliveryConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class TfLogDeliveryConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLogDeliveryConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLogDeliveryConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLogDeliveryConfiguration to import
-  * @param importFromId The id of the existing TfLogDeliveryConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLogDeliveryConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsLogDeliveryConfiguration to import
+  * @param importFromId The id of the existing AwsLogDeliveryConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLogDeliveryConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_log_delivery_configuration", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class TfLogDeliveryConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLogDeliveryConfigurationConfig
+  * @param options AwsLogDeliveryConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLogDeliveryConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLogDeliveryConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_log_delivery_configuration',
       terraformGeneratorMetadata: {
@@ -114,11 +114,11 @@ export class TfLogDeliveryConfiguration extends cdktn.TerraformResource {
   }
 
   // log_configurations - computed: false, optional: true, required: false
-  private _logConfigurations = new TfLogDeliveryConfiguration.LogConfigurationsPropertyList(this, "log_configurations", false);
+  private _logConfigurations = new AwsLogDeliveryConfiguration.LogConfigurationsPropertyList(this, "log_configurations", false);
   public get logConfigurations() {
     return this._logConfigurations;
   }
-  public putLogConfigurations(value: TfLogDeliveryConfiguration.LogConfigurationsProperty[] | cdktn.IResolvable) {
+  public putLogConfigurations(value: AwsLogDeliveryConfiguration.LogConfigurationsProperty[] | cdktn.IResolvable) {
     this._logConfigurations.internalValue = value;
   }
   public resetLogConfigurations() {
@@ -137,7 +137,7 @@ export class TfLogDeliveryConfiguration extends cdktn.TerraformResource {
     return {
       region: cdktn.stringToTerraform(this._region),
       user_pool_id: cdktn.stringToTerraform(this._userPoolId),
-      log_configurations: cdktn.listMapper(tfLogDeliveryConfigurationLogConfigurationsPropertyToTerraform, true)(this._logConfigurations.internalValue),
+      log_configurations: cdktn.listMapper(awsLogDeliveryConfigurationLogConfigurationsPropertyToTerraform, true)(this._logConfigurations.internalValue),
     };
   }
 
@@ -156,10 +156,10 @@ export class TfLogDeliveryConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       log_configurations: {
-        value: cdktn.listMapperHcl(tfLogDeliveryConfigurationLogConfigurationsPropertyToHclTerraform, true)(this._logConfigurations.internalValue),
+        value: cdktn.listMapperHcl(awsLogDeliveryConfigurationLogConfigurationsPropertyToHclTerraform, true)(this._logConfigurations.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLogDeliveryConfiguration.LogConfigurationsPropertyList",
+        storageClassType: "AwsLogDeliveryConfiguration.LogConfigurationsPropertyList",
       },
     };
 
@@ -168,7 +168,7 @@ export class TfLogDeliveryConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfLogDeliveryConfigurationCloudWatchLogsConfigurationPropertyToTerraform(struct?: TfLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty | cdktn.IResolvable): any {
+export function awsLogDeliveryConfigurationCloudWatchLogsConfigurationPropertyToTerraform(struct?: AwsLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -179,7 +179,7 @@ export function tfLogDeliveryConfigurationCloudWatchLogsConfigurationPropertyToT
 }
 
 
-export function tfLogDeliveryConfigurationCloudWatchLogsConfigurationPropertyToHclTerraform(struct?: TfLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty | cdktn.IResolvable): any {
+export function awsLogDeliveryConfigurationCloudWatchLogsConfigurationPropertyToHclTerraform(struct?: AwsLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -198,7 +198,7 @@ export function tfLogDeliveryConfigurationCloudWatchLogsConfigurationPropertyToH
 }
 
 
-export function tfLogDeliveryConfigurationFirehoseConfigurationPropertyToTerraform(struct?: TfLogDeliveryConfiguration.FirehoseConfigurationProperty | cdktn.IResolvable): any {
+export function awsLogDeliveryConfigurationFirehoseConfigurationPropertyToTerraform(struct?: AwsLogDeliveryConfiguration.FirehoseConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -209,7 +209,7 @@ export function tfLogDeliveryConfigurationFirehoseConfigurationPropertyToTerrafo
 }
 
 
-export function tfLogDeliveryConfigurationFirehoseConfigurationPropertyToHclTerraform(struct?: TfLogDeliveryConfiguration.FirehoseConfigurationProperty | cdktn.IResolvable): any {
+export function awsLogDeliveryConfigurationFirehoseConfigurationPropertyToHclTerraform(struct?: AwsLogDeliveryConfiguration.FirehoseConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -228,7 +228,7 @@ export function tfLogDeliveryConfigurationFirehoseConfigurationPropertyToHclTerr
 }
 
 
-export function tfLogDeliveryConfigurationS3ConfigurationPropertyToTerraform(struct?: TfLogDeliveryConfiguration.S3ConfigurationProperty | cdktn.IResolvable): any {
+export function awsLogDeliveryConfigurationS3ConfigurationPropertyToTerraform(struct?: AwsLogDeliveryConfiguration.S3ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -239,7 +239,7 @@ export function tfLogDeliveryConfigurationS3ConfigurationPropertyToTerraform(str
 }
 
 
-export function tfLogDeliveryConfigurationS3ConfigurationPropertyToHclTerraform(struct?: TfLogDeliveryConfiguration.S3ConfigurationProperty | cdktn.IResolvable): any {
+export function awsLogDeliveryConfigurationS3ConfigurationPropertyToHclTerraform(struct?: AwsLogDeliveryConfiguration.S3ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -258,7 +258,7 @@ export function tfLogDeliveryConfigurationS3ConfigurationPropertyToHclTerraform(
 }
 
 
-export function tfLogDeliveryConfigurationLogConfigurationsPropertyToTerraform(struct?: TfLogDeliveryConfiguration.LogConfigurationsProperty | cdktn.IResolvable): any {
+export function awsLogDeliveryConfigurationLogConfigurationsPropertyToTerraform(struct?: AwsLogDeliveryConfiguration.LogConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,14 +266,14 @@ export function tfLogDeliveryConfigurationLogConfigurationsPropertyToTerraform(s
   return {
     event_source: cdktn.stringToTerraform(struct!.eventSource),
     log_level: cdktn.stringToTerraform(struct!.logLevel),
-    cloud_watch_logs_configuration: cdktn.listMapper(tfLogDeliveryConfigurationCloudWatchLogsConfigurationPropertyToTerraform, true)(struct!.cloudWatchLogsConfiguration),
-    firehose_configuration: cdktn.listMapper(tfLogDeliveryConfigurationFirehoseConfigurationPropertyToTerraform, true)(struct!.firehoseConfiguration),
-    s3_configuration: cdktn.listMapper(tfLogDeliveryConfigurationS3ConfigurationPropertyToTerraform, true)(struct!.s3Configuration),
+    cloud_watch_logs_configuration: cdktn.listMapper(awsLogDeliveryConfigurationCloudWatchLogsConfigurationPropertyToTerraform, true)(struct!.cloudWatchLogsConfiguration),
+    firehose_configuration: cdktn.listMapper(awsLogDeliveryConfigurationFirehoseConfigurationPropertyToTerraform, true)(struct!.firehoseConfiguration),
+    s3_configuration: cdktn.listMapper(awsLogDeliveryConfigurationS3ConfigurationPropertyToTerraform, true)(struct!.s3Configuration),
   }
 }
 
 
-export function tfLogDeliveryConfigurationLogConfigurationsPropertyToHclTerraform(struct?: TfLogDeliveryConfiguration.LogConfigurationsProperty | cdktn.IResolvable): any {
+export function awsLogDeliveryConfigurationLogConfigurationsPropertyToHclTerraform(struct?: AwsLogDeliveryConfiguration.LogConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -292,19 +292,19 @@ export function tfLogDeliveryConfigurationLogConfigurationsPropertyToHclTerrafor
       storageClassType: "string",
     },
     cloud_watch_logs_configuration: {
-      value: cdktn.listMapperHcl(tfLogDeliveryConfigurationCloudWatchLogsConfigurationPropertyToHclTerraform, true)(struct!.cloudWatchLogsConfiguration),
+      value: cdktn.listMapperHcl(awsLogDeliveryConfigurationCloudWatchLogsConfigurationPropertyToHclTerraform, true)(struct!.cloudWatchLogsConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CloudWatchLogsConfigurationPropertyList",
     },
     firehose_configuration: {
-      value: cdktn.listMapperHcl(tfLogDeliveryConfigurationFirehoseConfigurationPropertyToHclTerraform, true)(struct!.firehoseConfiguration),
+      value: cdktn.listMapperHcl(awsLogDeliveryConfigurationFirehoseConfigurationPropertyToHclTerraform, true)(struct!.firehoseConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "FirehoseConfigurationPropertyList",
     },
     s3_configuration: {
-      value: cdktn.listMapperHcl(tfLogDeliveryConfigurationS3ConfigurationPropertyToHclTerraform, true)(struct!.s3Configuration),
+      value: cdktn.listMapperHcl(awsLogDeliveryConfigurationS3ConfigurationPropertyToHclTerraform, true)(struct!.s3Configuration),
       isBlock: true,
       type: "list",
       storageClassType: "S3ConfigurationPropertyList",
@@ -316,10 +316,10 @@ export function tfLogDeliveryConfigurationLogConfigurationsPropertyToHclTerrafor
 }
 
 
-export namespace TfLogDeliveryConfiguration {
+export namespace AwsLogDeliveryConfiguration {
 export interface CloudWatchLogsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#log_group_arn TfLogDeliveryConfiguration#log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#log_group_arn AwsLogDeliveryConfiguration#log_group_arn}
   */
   readonly logGroupArn?: string;
 }
@@ -405,7 +405,7 @@ export class CloudWatchLogsConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface FirehoseConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#stream_arn TfLogDeliveryConfiguration#stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#stream_arn AwsLogDeliveryConfiguration#stream_arn}
   */
   readonly streamArn?: string;
 }
@@ -491,7 +491,7 @@ export class FirehoseConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface S3ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#bucket_arn TfLogDeliveryConfiguration#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#bucket_arn AwsLogDeliveryConfiguration#bucket_arn}
   */
   readonly bucketArn?: string;
 }
@@ -577,29 +577,29 @@ export class S3ConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface LogConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#event_source TfLogDeliveryConfiguration#event_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#event_source AwsLogDeliveryConfiguration#event_source}
   */
   readonly eventSource: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#log_level TfLogDeliveryConfiguration#log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#log_level AwsLogDeliveryConfiguration#log_level}
   */
   readonly logLevel: string;
   /**
   * cloud_watch_logs_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#cloud_watch_logs_configuration TfLogDeliveryConfiguration#cloud_watch_logs_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#cloud_watch_logs_configuration AwsLogDeliveryConfiguration#cloud_watch_logs_configuration}
   */
   readonly cloudWatchLogsConfiguration?: CloudWatchLogsConfigurationProperty[] | cdktn.IResolvable;
   /**
   * firehose_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#firehose_configuration TfLogDeliveryConfiguration#firehose_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#firehose_configuration AwsLogDeliveryConfiguration#firehose_configuration}
   */
   readonly firehoseConfiguration?: FirehoseConfigurationProperty[] | cdktn.IResolvable;
   /**
   * s3_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#s3_configuration TfLogDeliveryConfiguration#s3_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_log_delivery_configuration#s3_configuration AwsLogDeliveryConfiguration#s3_configuration}
   */
   readonly s3Configuration?: S3ConfigurationProperty[] | cdktn.IResolvable;
 }

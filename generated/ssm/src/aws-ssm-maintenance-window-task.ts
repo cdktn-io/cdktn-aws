@@ -5,78 +5,78 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMaintenanceWindowTaskConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMaintenanceWindowTaskConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#cutoff_behavior TfMaintenanceWindowTask#cutoff_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#cutoff_behavior AwsMaintenanceWindowTask#cutoff_behavior}
   */
   readonly cutoffBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#description TfMaintenanceWindowTask#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#description AwsMaintenanceWindowTask#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#id TfMaintenanceWindowTask#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#id AwsMaintenanceWindowTask#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#max_concurrency TfMaintenanceWindowTask#max_concurrency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#max_concurrency AwsMaintenanceWindowTask#max_concurrency}
   */
   readonly maxConcurrency?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#max_errors TfMaintenanceWindowTask#max_errors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#max_errors AwsMaintenanceWindowTask#max_errors}
   */
   readonly maxErrors?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#name TfMaintenanceWindowTask#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#name AwsMaintenanceWindowTask#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#priority TfMaintenanceWindowTask#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#priority AwsMaintenanceWindowTask#priority}
   */
   readonly priority?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#region TfMaintenanceWindowTask#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#region AwsMaintenanceWindowTask#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#service_role_arn TfMaintenanceWindowTask#service_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#service_role_arn AwsMaintenanceWindowTask#service_role_arn}
   */
   readonly serviceRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#task_arn TfMaintenanceWindowTask#task_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#task_arn AwsMaintenanceWindowTask#task_arn}
   */
   readonly taskArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#task_type TfMaintenanceWindowTask#task_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#task_type AwsMaintenanceWindowTask#task_type}
   */
   readonly taskType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#window_id TfMaintenanceWindowTask#window_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#window_id AwsMaintenanceWindowTask#window_id}
   */
   readonly windowId: string;
   /**
   * targets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#targets TfMaintenanceWindowTask#targets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#targets AwsMaintenanceWindowTask#targets}
   */
-  readonly targets?: TfMaintenanceWindowTask.TargetsProperty[] | cdktn.IResolvable;
+  readonly targets?: AwsMaintenanceWindowTask.TargetsProperty[] | cdktn.IResolvable;
   /**
   * task_invocation_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#task_invocation_parameters TfMaintenanceWindowTask#task_invocation_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#task_invocation_parameters AwsMaintenanceWindowTask#task_invocation_parameters}
   */
-  readonly taskInvocationParameters?: TfMaintenanceWindowTask.TaskInvocationParametersProperty;
+  readonly taskInvocationParameters?: AwsMaintenanceWindowTask.TaskInvocationParametersProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task aws_ssm_maintenance_window_task}
 */
-export class TfMaintenanceWindowTask extends cdktn.TerraformResource {
+export class AwsMaintenanceWindowTask extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -87,11 +87,11 @@ export class TfMaintenanceWindowTask extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMaintenanceWindowTask resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMaintenanceWindowTask resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMaintenanceWindowTask to import
-  * @param importFromId The id of the existing TfMaintenanceWindowTask that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMaintenanceWindowTask to import is found
+  * @param importToId The construct id used in the generated config for the AwsMaintenanceWindowTask to import
+  * @param importFromId The id of the existing AwsMaintenanceWindowTask that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMaintenanceWindowTask to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssm_maintenance_window_task", importId: importFromId, provider });
@@ -106,9 +106,9 @@ export class TfMaintenanceWindowTask extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMaintenanceWindowTaskConfig
+  * @param options AwsMaintenanceWindowTaskConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMaintenanceWindowTaskConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMaintenanceWindowTaskConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssm_maintenance_window_task',
       terraformGeneratorMetadata: {
@@ -338,11 +338,11 @@ export class TfMaintenanceWindowTask extends cdktn.TerraformResource {
   }
 
   // targets - computed: false, optional: true, required: false
-  private _targets = new TfMaintenanceWindowTask.TargetsPropertyList(this, "targets", false);
+  private _targets = new AwsMaintenanceWindowTask.TargetsPropertyList(this, "targets", false);
   public get targets() {
     return this._targets;
   }
-  public putTargets(value: TfMaintenanceWindowTask.TargetsProperty[] | cdktn.IResolvable) {
+  public putTargets(value: AwsMaintenanceWindowTask.TargetsProperty[] | cdktn.IResolvable) {
     this._targets.internalValue = value;
   }
   public resetTargets() {
@@ -354,11 +354,11 @@ export class TfMaintenanceWindowTask extends cdktn.TerraformResource {
   }
 
   // task_invocation_parameters - computed: false, optional: true, required: false
-  private _taskInvocationParameters = new TfMaintenanceWindowTask.TaskInvocationParametersPropertyOutputReference(this, "task_invocation_parameters");
+  private _taskInvocationParameters = new AwsMaintenanceWindowTask.TaskInvocationParametersPropertyOutputReference(this, "task_invocation_parameters");
   public get taskInvocationParameters() {
     return this._taskInvocationParameters;
   }
-  public putTaskInvocationParameters(value: TfMaintenanceWindowTask.TaskInvocationParametersProperty) {
+  public putTaskInvocationParameters(value: AwsMaintenanceWindowTask.TaskInvocationParametersProperty) {
     this._taskInvocationParameters.internalValue = value;
   }
   public resetTaskInvocationParameters() {
@@ -387,8 +387,8 @@ export class TfMaintenanceWindowTask extends cdktn.TerraformResource {
       task_arn: cdktn.stringToTerraform(this._taskArn),
       task_type: cdktn.stringToTerraform(this._taskType),
       window_id: cdktn.stringToTerraform(this._windowId),
-      targets: cdktn.listMapper(tfMaintenanceWindowTaskTargetsPropertyToTerraform, true)(this._targets.internalValue),
-      task_invocation_parameters: tfMaintenanceWindowTaskTaskInvocationParametersPropertyToTerraform(this._taskInvocationParameters.internalValue),
+      targets: cdktn.listMapper(awsMaintenanceWindowTaskTargetsPropertyToTerraform, true)(this._targets.internalValue),
+      task_invocation_parameters: awsMaintenanceWindowTaskTaskInvocationParametersPropertyToTerraform(this._taskInvocationParameters.internalValue),
     };
   }
 
@@ -467,16 +467,16 @@ export class TfMaintenanceWindowTask extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       targets: {
-        value: cdktn.listMapperHcl(tfMaintenanceWindowTaskTargetsPropertyToHclTerraform, true)(this._targets.internalValue),
+        value: cdktn.listMapperHcl(awsMaintenanceWindowTaskTargetsPropertyToHclTerraform, true)(this._targets.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMaintenanceWindowTask.TargetsPropertyList",
+        storageClassType: "AwsMaintenanceWindowTask.TargetsPropertyList",
       },
       task_invocation_parameters: {
-        value: tfMaintenanceWindowTaskTaskInvocationParametersPropertyToHclTerraform(this._taskInvocationParameters.internalValue),
+        value: awsMaintenanceWindowTaskTaskInvocationParametersPropertyToHclTerraform(this._taskInvocationParameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMaintenanceWindowTask.TaskInvocationParametersPropertyList",
+        storageClassType: "AwsMaintenanceWindowTask.TaskInvocationParametersPropertyList",
       },
     };
 
@@ -485,7 +485,7 @@ export class TfMaintenanceWindowTask extends cdktn.TerraformResource {
   }
 }
 
-export function tfMaintenanceWindowTaskTargetsPropertyToTerraform(struct?: TfMaintenanceWindowTask.TargetsProperty | cdktn.IResolvable): any {
+export function awsMaintenanceWindowTaskTargetsPropertyToTerraform(struct?: AwsMaintenanceWindowTask.TargetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,7 +497,7 @@ export function tfMaintenanceWindowTaskTargetsPropertyToTerraform(struct?: TfMai
 }
 
 
-export function tfMaintenanceWindowTaskTargetsPropertyToHclTerraform(struct?: TfMaintenanceWindowTask.TargetsProperty | cdktn.IResolvable): any {
+export function awsMaintenanceWindowTaskTargetsPropertyToHclTerraform(struct?: AwsMaintenanceWindowTask.TargetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -522,7 +522,7 @@ export function tfMaintenanceWindowTaskTargetsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfMaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterPropertyToTerraform(struct?: TfMaintenanceWindowTask.TaskInvocationParametersAutomationParametersParameterProperty | cdktn.IResolvable): any {
+export function awsMaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterPropertyToTerraform(struct?: AwsMaintenanceWindowTask.TaskInvocationParametersAutomationParametersParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -534,7 +534,7 @@ export function tfMaintenanceWindowTaskTaskInvocationParametersAutomationParamet
 }
 
 
-export function tfMaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterPropertyToHclTerraform(struct?: TfMaintenanceWindowTask.TaskInvocationParametersAutomationParametersParameterProperty | cdktn.IResolvable): any {
+export function awsMaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterPropertyToHclTerraform(struct?: AwsMaintenanceWindowTask.TaskInvocationParametersAutomationParametersParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -559,19 +559,19 @@ export function tfMaintenanceWindowTaskTaskInvocationParametersAutomationParamet
 }
 
 
-export function tfMaintenanceWindowTaskAutomationParametersPropertyToTerraform(struct?: TfMaintenanceWindowTask.AutomationParametersPropertyOutputReference | TfMaintenanceWindowTask.AutomationParametersProperty): any {
+export function awsMaintenanceWindowTaskAutomationParametersPropertyToTerraform(struct?: AwsMaintenanceWindowTask.AutomationParametersPropertyOutputReference | AwsMaintenanceWindowTask.AutomationParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     document_version: cdktn.stringToTerraform(struct!.documentVersion),
-    parameter: cdktn.listMapper(tfMaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterPropertyToTerraform, true)(struct!.parameter),
+    parameter: cdktn.listMapper(awsMaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterPropertyToTerraform, true)(struct!.parameter),
   }
 }
 
 
-export function tfMaintenanceWindowTaskAutomationParametersPropertyToHclTerraform(struct?: TfMaintenanceWindowTask.AutomationParametersPropertyOutputReference | TfMaintenanceWindowTask.AutomationParametersProperty): any {
+export function awsMaintenanceWindowTaskAutomationParametersPropertyToHclTerraform(struct?: AwsMaintenanceWindowTask.AutomationParametersPropertyOutputReference | AwsMaintenanceWindowTask.AutomationParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -584,7 +584,7 @@ export function tfMaintenanceWindowTaskAutomationParametersPropertyToHclTerrafor
       storageClassType: "string",
     },
     parameter: {
-      value: cdktn.listMapperHcl(tfMaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterPropertyToHclTerraform, true)(struct!.parameter),
+      value: cdktn.listMapperHcl(awsMaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterPropertyToHclTerraform, true)(struct!.parameter),
       isBlock: true,
       type: "set",
       storageClassType: "TaskInvocationParametersAutomationParametersParameterPropertyList",
@@ -596,7 +596,7 @@ export function tfMaintenanceWindowTaskAutomationParametersPropertyToHclTerrafor
 }
 
 
-export function tfMaintenanceWindowTaskLambdaParametersPropertyToTerraform(struct?: TfMaintenanceWindowTask.LambdaParametersPropertyOutputReference | TfMaintenanceWindowTask.LambdaParametersProperty): any {
+export function awsMaintenanceWindowTaskLambdaParametersPropertyToTerraform(struct?: AwsMaintenanceWindowTask.LambdaParametersPropertyOutputReference | AwsMaintenanceWindowTask.LambdaParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -609,7 +609,7 @@ export function tfMaintenanceWindowTaskLambdaParametersPropertyToTerraform(struc
 }
 
 
-export function tfMaintenanceWindowTaskLambdaParametersPropertyToHclTerraform(struct?: TfMaintenanceWindowTask.LambdaParametersPropertyOutputReference | TfMaintenanceWindowTask.LambdaParametersProperty): any {
+export function awsMaintenanceWindowTaskLambdaParametersPropertyToHclTerraform(struct?: AwsMaintenanceWindowTask.LambdaParametersPropertyOutputReference | AwsMaintenanceWindowTask.LambdaParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -640,7 +640,7 @@ export function tfMaintenanceWindowTaskLambdaParametersPropertyToHclTerraform(st
 }
 
 
-export function tfMaintenanceWindowTaskCloudwatchConfigPropertyToTerraform(struct?: TfMaintenanceWindowTask.CloudwatchConfigPropertyOutputReference | TfMaintenanceWindowTask.CloudwatchConfigProperty): any {
+export function awsMaintenanceWindowTaskCloudwatchConfigPropertyToTerraform(struct?: AwsMaintenanceWindowTask.CloudwatchConfigPropertyOutputReference | AwsMaintenanceWindowTask.CloudwatchConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -652,7 +652,7 @@ export function tfMaintenanceWindowTaskCloudwatchConfigPropertyToTerraform(struc
 }
 
 
-export function tfMaintenanceWindowTaskCloudwatchConfigPropertyToHclTerraform(struct?: TfMaintenanceWindowTask.CloudwatchConfigPropertyOutputReference | TfMaintenanceWindowTask.CloudwatchConfigProperty): any {
+export function awsMaintenanceWindowTaskCloudwatchConfigPropertyToHclTerraform(struct?: AwsMaintenanceWindowTask.CloudwatchConfigPropertyOutputReference | AwsMaintenanceWindowTask.CloudwatchConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -677,7 +677,7 @@ export function tfMaintenanceWindowTaskCloudwatchConfigPropertyToHclTerraform(st
 }
 
 
-export function tfMaintenanceWindowTaskNotificationConfigPropertyToTerraform(struct?: TfMaintenanceWindowTask.NotificationConfigPropertyOutputReference | TfMaintenanceWindowTask.NotificationConfigProperty): any {
+export function awsMaintenanceWindowTaskNotificationConfigPropertyToTerraform(struct?: AwsMaintenanceWindowTask.NotificationConfigPropertyOutputReference | AwsMaintenanceWindowTask.NotificationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -690,7 +690,7 @@ export function tfMaintenanceWindowTaskNotificationConfigPropertyToTerraform(str
 }
 
 
-export function tfMaintenanceWindowTaskNotificationConfigPropertyToHclTerraform(struct?: TfMaintenanceWindowTask.NotificationConfigPropertyOutputReference | TfMaintenanceWindowTask.NotificationConfigProperty): any {
+export function awsMaintenanceWindowTaskNotificationConfigPropertyToHclTerraform(struct?: AwsMaintenanceWindowTask.NotificationConfigPropertyOutputReference | AwsMaintenanceWindowTask.NotificationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -721,7 +721,7 @@ export function tfMaintenanceWindowTaskNotificationConfigPropertyToHclTerraform(
 }
 
 
-export function tfMaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterPropertyToTerraform(struct?: TfMaintenanceWindowTask.TaskInvocationParametersRunCommandParametersParameterProperty | cdktn.IResolvable): any {
+export function awsMaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterPropertyToTerraform(struct?: AwsMaintenanceWindowTask.TaskInvocationParametersRunCommandParametersParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -733,7 +733,7 @@ export function tfMaintenanceWindowTaskTaskInvocationParametersRunCommandParamet
 }
 
 
-export function tfMaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterPropertyToHclTerraform(struct?: TfMaintenanceWindowTask.TaskInvocationParametersRunCommandParametersParameterProperty | cdktn.IResolvable): any {
+export function awsMaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterPropertyToHclTerraform(struct?: AwsMaintenanceWindowTask.TaskInvocationParametersRunCommandParametersParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -758,7 +758,7 @@ export function tfMaintenanceWindowTaskTaskInvocationParametersRunCommandParamet
 }
 
 
-export function tfMaintenanceWindowTaskRunCommandParametersPropertyToTerraform(struct?: TfMaintenanceWindowTask.RunCommandParametersPropertyOutputReference | TfMaintenanceWindowTask.RunCommandParametersProperty): any {
+export function awsMaintenanceWindowTaskRunCommandParametersPropertyToTerraform(struct?: AwsMaintenanceWindowTask.RunCommandParametersPropertyOutputReference | AwsMaintenanceWindowTask.RunCommandParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -772,14 +772,14 @@ export function tfMaintenanceWindowTaskRunCommandParametersPropertyToTerraform(s
     output_s3_key_prefix: cdktn.stringToTerraform(struct!.outputS3KeyPrefix),
     service_role_arn: cdktn.stringToTerraform(struct!.serviceRoleArn),
     timeout_seconds: cdktn.numberToTerraform(struct!.timeoutSeconds),
-    cloudwatch_config: tfMaintenanceWindowTaskCloudwatchConfigPropertyToTerraform(struct!.cloudwatchConfig),
-    notification_config: tfMaintenanceWindowTaskNotificationConfigPropertyToTerraform(struct!.notificationConfig),
-    parameter: cdktn.listMapper(tfMaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterPropertyToTerraform, true)(struct!.parameter),
+    cloudwatch_config: awsMaintenanceWindowTaskCloudwatchConfigPropertyToTerraform(struct!.cloudwatchConfig),
+    notification_config: awsMaintenanceWindowTaskNotificationConfigPropertyToTerraform(struct!.notificationConfig),
+    parameter: cdktn.listMapper(awsMaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterPropertyToTerraform, true)(struct!.parameter),
   }
 }
 
 
-export function tfMaintenanceWindowTaskRunCommandParametersPropertyToHclTerraform(struct?: TfMaintenanceWindowTask.RunCommandParametersPropertyOutputReference | TfMaintenanceWindowTask.RunCommandParametersProperty): any {
+export function awsMaintenanceWindowTaskRunCommandParametersPropertyToHclTerraform(struct?: AwsMaintenanceWindowTask.RunCommandParametersPropertyOutputReference | AwsMaintenanceWindowTask.RunCommandParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -834,19 +834,19 @@ export function tfMaintenanceWindowTaskRunCommandParametersPropertyToHclTerrafor
       storageClassType: "number",
     },
     cloudwatch_config: {
-      value: tfMaintenanceWindowTaskCloudwatchConfigPropertyToHclTerraform(struct!.cloudwatchConfig),
+      value: awsMaintenanceWindowTaskCloudwatchConfigPropertyToHclTerraform(struct!.cloudwatchConfig),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchConfigPropertyList",
     },
     notification_config: {
-      value: tfMaintenanceWindowTaskNotificationConfigPropertyToHclTerraform(struct!.notificationConfig),
+      value: awsMaintenanceWindowTaskNotificationConfigPropertyToHclTerraform(struct!.notificationConfig),
       isBlock: true,
       type: "list",
       storageClassType: "NotificationConfigPropertyList",
     },
     parameter: {
-      value: cdktn.listMapperHcl(tfMaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterPropertyToHclTerraform, true)(struct!.parameter),
+      value: cdktn.listMapperHcl(awsMaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterPropertyToHclTerraform, true)(struct!.parameter),
       isBlock: true,
       type: "set",
       storageClassType: "TaskInvocationParametersRunCommandParametersParameterPropertyList",
@@ -858,7 +858,7 @@ export function tfMaintenanceWindowTaskRunCommandParametersPropertyToHclTerrafor
 }
 
 
-export function tfMaintenanceWindowTaskStepFunctionsParametersPropertyToTerraform(struct?: TfMaintenanceWindowTask.StepFunctionsParametersPropertyOutputReference | TfMaintenanceWindowTask.StepFunctionsParametersProperty): any {
+export function awsMaintenanceWindowTaskStepFunctionsParametersPropertyToTerraform(struct?: AwsMaintenanceWindowTask.StepFunctionsParametersPropertyOutputReference | AwsMaintenanceWindowTask.StepFunctionsParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -870,7 +870,7 @@ export function tfMaintenanceWindowTaskStepFunctionsParametersPropertyToTerrafor
 }
 
 
-export function tfMaintenanceWindowTaskStepFunctionsParametersPropertyToHclTerraform(struct?: TfMaintenanceWindowTask.StepFunctionsParametersPropertyOutputReference | TfMaintenanceWindowTask.StepFunctionsParametersProperty): any {
+export function awsMaintenanceWindowTaskStepFunctionsParametersPropertyToHclTerraform(struct?: AwsMaintenanceWindowTask.StepFunctionsParametersPropertyOutputReference | AwsMaintenanceWindowTask.StepFunctionsParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -895,46 +895,46 @@ export function tfMaintenanceWindowTaskStepFunctionsParametersPropertyToHclTerra
 }
 
 
-export function tfMaintenanceWindowTaskTaskInvocationParametersPropertyToTerraform(struct?: TfMaintenanceWindowTask.TaskInvocationParametersPropertyOutputReference | TfMaintenanceWindowTask.TaskInvocationParametersProperty): any {
+export function awsMaintenanceWindowTaskTaskInvocationParametersPropertyToTerraform(struct?: AwsMaintenanceWindowTask.TaskInvocationParametersPropertyOutputReference | AwsMaintenanceWindowTask.TaskInvocationParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    automation_parameters: tfMaintenanceWindowTaskAutomationParametersPropertyToTerraform(struct!.automationParameters),
-    lambda_parameters: tfMaintenanceWindowTaskLambdaParametersPropertyToTerraform(struct!.lambdaParameters),
-    run_command_parameters: tfMaintenanceWindowTaskRunCommandParametersPropertyToTerraform(struct!.runCommandParameters),
-    step_functions_parameters: tfMaintenanceWindowTaskStepFunctionsParametersPropertyToTerraform(struct!.stepFunctionsParameters),
+    automation_parameters: awsMaintenanceWindowTaskAutomationParametersPropertyToTerraform(struct!.automationParameters),
+    lambda_parameters: awsMaintenanceWindowTaskLambdaParametersPropertyToTerraform(struct!.lambdaParameters),
+    run_command_parameters: awsMaintenanceWindowTaskRunCommandParametersPropertyToTerraform(struct!.runCommandParameters),
+    step_functions_parameters: awsMaintenanceWindowTaskStepFunctionsParametersPropertyToTerraform(struct!.stepFunctionsParameters),
   }
 }
 
 
-export function tfMaintenanceWindowTaskTaskInvocationParametersPropertyToHclTerraform(struct?: TfMaintenanceWindowTask.TaskInvocationParametersPropertyOutputReference | TfMaintenanceWindowTask.TaskInvocationParametersProperty): any {
+export function awsMaintenanceWindowTaskTaskInvocationParametersPropertyToHclTerraform(struct?: AwsMaintenanceWindowTask.TaskInvocationParametersPropertyOutputReference | AwsMaintenanceWindowTask.TaskInvocationParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     automation_parameters: {
-      value: tfMaintenanceWindowTaskAutomationParametersPropertyToHclTerraform(struct!.automationParameters),
+      value: awsMaintenanceWindowTaskAutomationParametersPropertyToHclTerraform(struct!.automationParameters),
       isBlock: true,
       type: "list",
       storageClassType: "AutomationParametersPropertyList",
     },
     lambda_parameters: {
-      value: tfMaintenanceWindowTaskLambdaParametersPropertyToHclTerraform(struct!.lambdaParameters),
+      value: awsMaintenanceWindowTaskLambdaParametersPropertyToHclTerraform(struct!.lambdaParameters),
       isBlock: true,
       type: "list",
       storageClassType: "LambdaParametersPropertyList",
     },
     run_command_parameters: {
-      value: tfMaintenanceWindowTaskRunCommandParametersPropertyToHclTerraform(struct!.runCommandParameters),
+      value: awsMaintenanceWindowTaskRunCommandParametersPropertyToHclTerraform(struct!.runCommandParameters),
       isBlock: true,
       type: "list",
       storageClassType: "RunCommandParametersPropertyList",
     },
     step_functions_parameters: {
-      value: tfMaintenanceWindowTaskStepFunctionsParametersPropertyToHclTerraform(struct!.stepFunctionsParameters),
+      value: awsMaintenanceWindowTaskStepFunctionsParametersPropertyToHclTerraform(struct!.stepFunctionsParameters),
       isBlock: true,
       type: "list",
       storageClassType: "StepFunctionsParametersPropertyList",
@@ -946,14 +946,14 @@ export function tfMaintenanceWindowTaskTaskInvocationParametersPropertyToHclTerr
 }
 
 
-export namespace TfMaintenanceWindowTask {
+export namespace AwsMaintenanceWindowTask {
 export interface TargetsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#key TfMaintenanceWindowTask#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#key AwsMaintenanceWindowTask#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#values TfMaintenanceWindowTask#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#values AwsMaintenanceWindowTask#values}
   */
   readonly values: string[];
 }
@@ -1055,11 +1055,11 @@ export class TargetsPropertyList extends cdktn.ComplexList {
 }
 export interface TaskInvocationParametersAutomationParametersParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#name TfMaintenanceWindowTask#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#name AwsMaintenanceWindowTask#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#values TfMaintenanceWindowTask#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#values AwsMaintenanceWindowTask#values}
   */
   readonly values: string[];
 }
@@ -1161,13 +1161,13 @@ export class TaskInvocationParametersAutomationParametersParameterPropertyList e
 }
 export interface AutomationParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#document_version TfMaintenanceWindowTask#document_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#document_version AwsMaintenanceWindowTask#document_version}
   */
   readonly documentVersion?: string;
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#parameter TfMaintenanceWindowTask#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#parameter AwsMaintenanceWindowTask#parameter}
   */
   readonly parameter?: TaskInvocationParametersAutomationParametersParameterProperty[] | cdktn.IResolvable;
 }
@@ -1243,15 +1243,15 @@ export class AutomationParametersPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface LambdaParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#client_context TfMaintenanceWindowTask#client_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#client_context AwsMaintenanceWindowTask#client_context}
   */
   readonly clientContext?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#payload TfMaintenanceWindowTask#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#payload AwsMaintenanceWindowTask#payload}
   */
   readonly payload?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#qualifier TfMaintenanceWindowTask#qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#qualifier AwsMaintenanceWindowTask#qualifier}
   */
   readonly qualifier?: string;
 }
@@ -1349,11 +1349,11 @@ export class LambdaParametersPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface CloudwatchConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#cloudwatch_log_group_name TfMaintenanceWindowTask#cloudwatch_log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#cloudwatch_log_group_name AwsMaintenanceWindowTask#cloudwatch_log_group_name}
   */
   readonly cloudwatchLogGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#cloudwatch_output_enabled TfMaintenanceWindowTask#cloudwatch_output_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#cloudwatch_output_enabled AwsMaintenanceWindowTask#cloudwatch_output_enabled}
   */
   readonly cloudwatchOutputEnabled?: boolean | cdktn.IResolvable;
 }
@@ -1429,15 +1429,15 @@ export class CloudwatchConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface NotificationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#notification_arn TfMaintenanceWindowTask#notification_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#notification_arn AwsMaintenanceWindowTask#notification_arn}
   */
   readonly notificationArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#notification_events TfMaintenanceWindowTask#notification_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#notification_events AwsMaintenanceWindowTask#notification_events}
   */
   readonly notificationEvents?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#notification_type TfMaintenanceWindowTask#notification_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#notification_type AwsMaintenanceWindowTask#notification_type}
   */
   readonly notificationType?: string;
 }
@@ -1535,11 +1535,11 @@ export class NotificationConfigPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface TaskInvocationParametersRunCommandParametersParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#name TfMaintenanceWindowTask#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#name AwsMaintenanceWindowTask#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#values TfMaintenanceWindowTask#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#values AwsMaintenanceWindowTask#values}
   */
   readonly values: string[];
 }
@@ -1641,53 +1641,53 @@ export class TaskInvocationParametersRunCommandParametersParameterPropertyList e
 }
 export interface RunCommandParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#comment TfMaintenanceWindowTask#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#comment AwsMaintenanceWindowTask#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#document_hash TfMaintenanceWindowTask#document_hash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#document_hash AwsMaintenanceWindowTask#document_hash}
   */
   readonly documentHash?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#document_hash_type TfMaintenanceWindowTask#document_hash_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#document_hash_type AwsMaintenanceWindowTask#document_hash_type}
   */
   readonly documentHashType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#document_version TfMaintenanceWindowTask#document_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#document_version AwsMaintenanceWindowTask#document_version}
   */
   readonly documentVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#output_s3_bucket TfMaintenanceWindowTask#output_s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#output_s3_bucket AwsMaintenanceWindowTask#output_s3_bucket}
   */
   readonly outputS3Bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#output_s3_key_prefix TfMaintenanceWindowTask#output_s3_key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#output_s3_key_prefix AwsMaintenanceWindowTask#output_s3_key_prefix}
   */
   readonly outputS3KeyPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#service_role_arn TfMaintenanceWindowTask#service_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#service_role_arn AwsMaintenanceWindowTask#service_role_arn}
   */
   readonly serviceRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#timeout_seconds TfMaintenanceWindowTask#timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#timeout_seconds AwsMaintenanceWindowTask#timeout_seconds}
   */
   readonly timeoutSeconds?: number;
   /**
   * cloudwatch_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#cloudwatch_config TfMaintenanceWindowTask#cloudwatch_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#cloudwatch_config AwsMaintenanceWindowTask#cloudwatch_config}
   */
   readonly cloudwatchConfig?: CloudwatchConfigProperty;
   /**
   * notification_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#notification_config TfMaintenanceWindowTask#notification_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#notification_config AwsMaintenanceWindowTask#notification_config}
   */
   readonly notificationConfig?: NotificationConfigProperty;
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#parameter TfMaintenanceWindowTask#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#parameter AwsMaintenanceWindowTask#parameter}
   */
   readonly parameter?: TaskInvocationParametersRunCommandParametersParameterProperty[] | cdktn.IResolvable;
 }
@@ -1961,11 +1961,11 @@ export class RunCommandParametersPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface StepFunctionsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#input TfMaintenanceWindowTask#input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#input AwsMaintenanceWindowTask#input}
   */
   readonly input?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#name TfMaintenanceWindowTask#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#name AwsMaintenanceWindowTask#name}
   */
   readonly name?: string;
 }
@@ -2043,25 +2043,25 @@ export interface TaskInvocationParametersProperty {
   /**
   * automation_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#automation_parameters TfMaintenanceWindowTask#automation_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#automation_parameters AwsMaintenanceWindowTask#automation_parameters}
   */
   readonly automationParameters?: AutomationParametersProperty;
   /**
   * lambda_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#lambda_parameters TfMaintenanceWindowTask#lambda_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#lambda_parameters AwsMaintenanceWindowTask#lambda_parameters}
   */
   readonly lambdaParameters?: LambdaParametersProperty;
   /**
   * run_command_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#run_command_parameters TfMaintenanceWindowTask#run_command_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#run_command_parameters AwsMaintenanceWindowTask#run_command_parameters}
   */
   readonly runCommandParameters?: RunCommandParametersProperty;
   /**
   * step_functions_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#step_functions_parameters TfMaintenanceWindowTask#step_functions_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#step_functions_parameters AwsMaintenanceWindowTask#step_functions_parameters}
   */
   readonly stepFunctionsParameters?: StepFunctionsParametersProperty;
 }

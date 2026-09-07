@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCertificateConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#api_passthrough TfCertificate#api_passthrough}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#api_passthrough AwsCertificate#api_passthrough}
   */
   readonly apiPassthrough?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#certificate_authority_arn TfCertificate#certificate_authority_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#certificate_authority_arn AwsCertificate#certificate_authority_arn}
   */
   readonly certificateAuthorityArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#certificate_signing_request TfCertificate#certificate_signing_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#certificate_signing_request AwsCertificate#certificate_signing_request}
   */
   readonly certificateSigningRequest: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#id TfCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#id AwsCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,29 +28,29 @@ export interface TfCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#region TfCertificate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#region AwsCertificate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#signing_algorithm TfCertificate#signing_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#signing_algorithm AwsCertificate#signing_algorithm}
   */
   readonly signingAlgorithm: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#template_arn TfCertificate#template_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#template_arn AwsCertificate#template_arn}
   */
   readonly templateArn?: string;
   /**
   * validity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#validity TfCertificate#validity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#validity AwsCertificate#validity}
   */
-  readonly validity: TfCertificate.ValidityProperty;
+  readonly validity: AwsCertificate.ValidityProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate aws_acmpca_certificate}
 */
-export class TfCertificate extends cdktn.TerraformResource {
+export class AwsCertificate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfCertificate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCertificate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCertificate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCertificate to import
-  * @param importFromId The id of the existing TfCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCertificate to import is found
+  * @param importToId The construct id used in the generated config for the AwsCertificate to import
+  * @param importFromId The id of the existing AwsCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_acmpca_certificate", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfCertificate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCertificateConfig
+  * @param options AwsCertificateConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCertificateConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_acmpca_certificate',
       terraformGeneratorMetadata: {
@@ -231,11 +231,11 @@ export class TfCertificate extends cdktn.TerraformResource {
   }
 
   // validity - computed: false, optional: false, required: true
-  private _validity = new TfCertificate.ValidityPropertyOutputReference(this, "validity");
+  private _validity = new AwsCertificate.ValidityPropertyOutputReference(this, "validity");
   public get validity() {
     return this._validity;
   }
-  public putValidity(value: TfCertificate.ValidityProperty) {
+  public putValidity(value: AwsCertificate.ValidityProperty) {
     this._validity.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -256,7 +256,7 @@ export class TfCertificate extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       signing_algorithm: cdktn.stringToTerraform(this._signingAlgorithm),
       template_arn: cdktn.stringToTerraform(this._templateArn),
-      validity: tfCertificateValidityPropertyToTerraform(this._validity.internalValue),
+      validity: awsCertificateValidityPropertyToTerraform(this._validity.internalValue),
     };
   }
 
@@ -305,10 +305,10 @@ export class TfCertificate extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       validity: {
-        value: tfCertificateValidityPropertyToHclTerraform(this._validity.internalValue),
+        value: awsCertificateValidityPropertyToHclTerraform(this._validity.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCertificate.ValidityPropertyList",
+        storageClassType: "AwsCertificate.ValidityPropertyList",
       },
     };
 
@@ -317,7 +317,7 @@ export class TfCertificate extends cdktn.TerraformResource {
   }
 }
 
-export function tfCertificateValidityPropertyToTerraform(struct?: TfCertificate.ValidityPropertyOutputReference | TfCertificate.ValidityProperty): any {
+export function awsCertificateValidityPropertyToTerraform(struct?: AwsCertificate.ValidityPropertyOutputReference | AwsCertificate.ValidityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function tfCertificateValidityPropertyToTerraform(struct?: TfCertificate.
 }
 
 
-export function tfCertificateValidityPropertyToHclTerraform(struct?: TfCertificate.ValidityPropertyOutputReference | TfCertificate.ValidityProperty): any {
+export function awsCertificateValidityPropertyToHclTerraform(struct?: AwsCertificate.ValidityPropertyOutputReference | AwsCertificate.ValidityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,14 +354,14 @@ export function tfCertificateValidityPropertyToHclTerraform(struct?: TfCertifica
 }
 
 
-export namespace TfCertificate {
+export namespace AwsCertificate {
 export interface ValidityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#type TfCertificate#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#type AwsCertificate#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#value TfCertificate#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#value AwsCertificate#value}
   */
   readonly value: string;
 }

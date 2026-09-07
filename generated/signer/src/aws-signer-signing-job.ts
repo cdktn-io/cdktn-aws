@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSigningJobConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSigningJobConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#id TfSigningJob#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#id AwsSigningJob#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#ignore_signing_job_failure TfSigningJob#ignore_signing_job_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#ignore_signing_job_failure AwsSigningJob#ignore_signing_job_failure}
   */
   readonly ignoreSigningJobFailure?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#profile_name TfSigningJob#profile_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#profile_name AwsSigningJob#profile_name}
   */
   readonly profileName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#region TfSigningJob#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#region AwsSigningJob#region}
   */
   readonly region?: string;
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#destination TfSigningJob#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#destination AwsSigningJob#destination}
   */
-  readonly destination: TfSigningJob.DestinationProperty;
+  readonly destination: AwsSigningJob.DestinationProperty;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#source TfSigningJob#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#source AwsSigningJob#source}
   */
-  readonly source: TfSigningJob.SourceProperty;
+  readonly source: AwsSigningJob.SourceProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job aws_signer_signing_job}
 */
-export class TfSigningJob extends cdktn.TerraformResource {
+export class AwsSigningJob extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfSigningJob extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSigningJob resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSigningJob resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSigningJob to import
-  * @param importFromId The id of the existing TfSigningJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSigningJob to import is found
+  * @param importToId The construct id used in the generated config for the AwsSigningJob to import
+  * @param importFromId The id of the existing AwsSigningJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSigningJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_signer_signing_job", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfSigningJob extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSigningJobConfig
+  * @param options AwsSigningJobConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSigningJobConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSigningJobConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_signer_signing_job',
       terraformGeneratorMetadata: {
@@ -211,7 +211,7 @@ export class TfSigningJob extends cdktn.TerraformResource {
   }
 
   // revocation_record - computed: true, optional: false, required: false
-  private _revocationRecord = new TfSigningJob.RevocationRecordPropertyList(this, "revocation_record", false);
+  private _revocationRecord = new AwsSigningJob.RevocationRecordPropertyList(this, "revocation_record", false);
   public get revocationRecord() {
     return this._revocationRecord;
   }
@@ -222,7 +222,7 @@ export class TfSigningJob extends cdktn.TerraformResource {
   }
 
   // signed_object - computed: true, optional: false, required: false
-  private _signedObject = new TfSigningJob.SignedObjectPropertyList(this, "signed_object", false);
+  private _signedObject = new AwsSigningJob.SignedObjectPropertyList(this, "signed_object", false);
   public get signedObject() {
     return this._signedObject;
   }
@@ -238,11 +238,11 @@ export class TfSigningJob extends cdktn.TerraformResource {
   }
 
   // destination - computed: false, optional: false, required: true
-  private _destination = new TfSigningJob.DestinationPropertyOutputReference(this, "destination");
+  private _destination = new AwsSigningJob.DestinationPropertyOutputReference(this, "destination");
   public get destination() {
     return this._destination;
   }
-  public putDestination(value: TfSigningJob.DestinationProperty) {
+  public putDestination(value: AwsSigningJob.DestinationProperty) {
     this._destination.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -251,11 +251,11 @@ export class TfSigningJob extends cdktn.TerraformResource {
   }
 
   // source - computed: false, optional: false, required: true
-  private _source = new TfSigningJob.SourcePropertyOutputReference(this, "source");
+  private _source = new AwsSigningJob.SourcePropertyOutputReference(this, "source");
   public get source() {
     return this._source;
   }
-  public putSource(value: TfSigningJob.SourceProperty) {
+  public putSource(value: AwsSigningJob.SourceProperty) {
     this._source.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -273,8 +273,8 @@ export class TfSigningJob extends cdktn.TerraformResource {
       ignore_signing_job_failure: cdktn.booleanToTerraform(this._ignoreSigningJobFailure),
       profile_name: cdktn.stringToTerraform(this._profileName),
       region: cdktn.stringToTerraform(this._region),
-      destination: tfSigningJobDestinationPropertyToTerraform(this._destination.internalValue),
-      source: tfSigningJobSourcePropertyToTerraform(this._source.internalValue),
+      destination: awsSigningJobDestinationPropertyToTerraform(this._destination.internalValue),
+      source: awsSigningJobSourcePropertyToTerraform(this._source.internalValue),
     };
   }
 
@@ -305,16 +305,16 @@ export class TfSigningJob extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       destination: {
-        value: tfSigningJobDestinationPropertyToHclTerraform(this._destination.internalValue),
+        value: awsSigningJobDestinationPropertyToHclTerraform(this._destination.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSigningJob.DestinationPropertyList",
+        storageClassType: "AwsSigningJob.DestinationPropertyList",
       },
       source: {
-        value: tfSigningJobSourcePropertyToHclTerraform(this._source.internalValue),
+        value: awsSigningJobSourcePropertyToHclTerraform(this._source.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSigningJob.SourcePropertyList",
+        storageClassType: "AwsSigningJob.SourcePropertyList",
       },
     };
 
@@ -323,7 +323,7 @@ export class TfSigningJob extends cdktn.TerraformResource {
   }
 }
 
-export function tfSigningJobRevocationRecordPropertyToTerraform(struct?: TfSigningJob.RevocationRecordProperty): any {
+export function awsSigningJobRevocationRecordPropertyToTerraform(struct?: AwsSigningJob.RevocationRecordProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function tfSigningJobRevocationRecordPropertyToTerraform(struct?: TfSigni
 }
 
 
-export function tfSigningJobRevocationRecordPropertyToHclTerraform(struct?: TfSigningJob.RevocationRecordProperty): any {
+export function awsSigningJobRevocationRecordPropertyToHclTerraform(struct?: AwsSigningJob.RevocationRecordProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -344,7 +344,7 @@ export function tfSigningJobRevocationRecordPropertyToHclTerraform(struct?: TfSi
 }
 
 
-export function tfSigningJobSignedObjectS3PropertyToTerraform(struct?: TfSigningJob.SignedObjectS3Property): any {
+export function awsSigningJobSignedObjectS3PropertyToTerraform(struct?: AwsSigningJob.SignedObjectS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function tfSigningJobSignedObjectS3PropertyToTerraform(struct?: TfSigning
 }
 
 
-export function tfSigningJobSignedObjectS3PropertyToHclTerraform(struct?: TfSigningJob.SignedObjectS3Property): any {
+export function awsSigningJobSignedObjectS3PropertyToHclTerraform(struct?: AwsSigningJob.SignedObjectS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,7 +365,7 @@ export function tfSigningJobSignedObjectS3PropertyToHclTerraform(struct?: TfSign
 }
 
 
-export function tfSigningJobSignedObjectPropertyToTerraform(struct?: TfSigningJob.SignedObjectProperty): any {
+export function awsSigningJobSignedObjectPropertyToTerraform(struct?: AwsSigningJob.SignedObjectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,7 +375,7 @@ export function tfSigningJobSignedObjectPropertyToTerraform(struct?: TfSigningJo
 }
 
 
-export function tfSigningJobSignedObjectPropertyToHclTerraform(struct?: TfSigningJob.SignedObjectProperty): any {
+export function awsSigningJobSignedObjectPropertyToHclTerraform(struct?: AwsSigningJob.SignedObjectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function tfSigningJobSignedObjectPropertyToHclTerraform(struct?: TfSignin
 }
 
 
-export function tfSigningJobDestinationS3PropertyToTerraform(struct?: TfSigningJob.DestinationS3PropertyOutputReference | TfSigningJob.DestinationS3Property): any {
+export function awsSigningJobDestinationS3PropertyToTerraform(struct?: AwsSigningJob.DestinationS3PropertyOutputReference | AwsSigningJob.DestinationS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function tfSigningJobDestinationS3PropertyToTerraform(struct?: TfSigningJ
 }
 
 
-export function tfSigningJobDestinationS3PropertyToHclTerraform(struct?: TfSigningJob.DestinationS3PropertyOutputReference | TfSigningJob.DestinationS3Property): any {
+export function awsSigningJobDestinationS3PropertyToHclTerraform(struct?: AwsSigningJob.DestinationS3PropertyOutputReference | AwsSigningJob.DestinationS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,25 +423,25 @@ export function tfSigningJobDestinationS3PropertyToHclTerraform(struct?: TfSigni
 }
 
 
-export function tfSigningJobDestinationPropertyToTerraform(struct?: TfSigningJob.DestinationPropertyOutputReference | TfSigningJob.DestinationProperty): any {
+export function awsSigningJobDestinationPropertyToTerraform(struct?: AwsSigningJob.DestinationPropertyOutputReference | AwsSigningJob.DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3: tfSigningJobDestinationS3PropertyToTerraform(struct!.s3),
+    s3: awsSigningJobDestinationS3PropertyToTerraform(struct!.s3),
   }
 }
 
 
-export function tfSigningJobDestinationPropertyToHclTerraform(struct?: TfSigningJob.DestinationPropertyOutputReference | TfSigningJob.DestinationProperty): any {
+export function awsSigningJobDestinationPropertyToHclTerraform(struct?: AwsSigningJob.DestinationPropertyOutputReference | AwsSigningJob.DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3: {
-      value: tfSigningJobDestinationS3PropertyToHclTerraform(struct!.s3),
+      value: awsSigningJobDestinationS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationS3PropertyList",
@@ -453,7 +453,7 @@ export function tfSigningJobDestinationPropertyToHclTerraform(struct?: TfSigning
 }
 
 
-export function tfSigningJobSourceS3PropertyToTerraform(struct?: TfSigningJob.SourceS3PropertyOutputReference | TfSigningJob.SourceS3Property): any {
+export function awsSigningJobSourceS3PropertyToTerraform(struct?: AwsSigningJob.SourceS3PropertyOutputReference | AwsSigningJob.SourceS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function tfSigningJobSourceS3PropertyToTerraform(struct?: TfSigningJob.So
 }
 
 
-export function tfSigningJobSourceS3PropertyToHclTerraform(struct?: TfSigningJob.SourceS3PropertyOutputReference | TfSigningJob.SourceS3Property): any {
+export function awsSigningJobSourceS3PropertyToHclTerraform(struct?: AwsSigningJob.SourceS3PropertyOutputReference | AwsSigningJob.SourceS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,25 +497,25 @@ export function tfSigningJobSourceS3PropertyToHclTerraform(struct?: TfSigningJob
 }
 
 
-export function tfSigningJobSourcePropertyToTerraform(struct?: TfSigningJob.SourcePropertyOutputReference | TfSigningJob.SourceProperty): any {
+export function awsSigningJobSourcePropertyToTerraform(struct?: AwsSigningJob.SourcePropertyOutputReference | AwsSigningJob.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3: tfSigningJobSourceS3PropertyToTerraform(struct!.s3),
+    s3: awsSigningJobSourceS3PropertyToTerraform(struct!.s3),
   }
 }
 
 
-export function tfSigningJobSourcePropertyToHclTerraform(struct?: TfSigningJob.SourcePropertyOutputReference | TfSigningJob.SourceProperty): any {
+export function awsSigningJobSourcePropertyToHclTerraform(struct?: AwsSigningJob.SourcePropertyOutputReference | AwsSigningJob.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3: {
-      value: tfSigningJobSourceS3PropertyToHclTerraform(struct!.s3),
+      value: awsSigningJobSourceS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "SourceS3PropertyList",
@@ -527,7 +527,7 @@ export function tfSigningJobSourcePropertyToHclTerraform(struct?: TfSigningJob.S
 }
 
 
-export namespace TfSigningJob {
+export namespace AwsSigningJob {
 export interface RevocationRecordProperty {
 }
 export class RevocationRecordPropertyOutputReference extends cdktn.ComplexObject {
@@ -708,11 +708,11 @@ export class SignedObjectPropertyList extends cdktn.ComplexList {
 }
 export interface DestinationS3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#bucket TfSigningJob#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#bucket AwsSigningJob#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#prefix TfSigningJob#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#prefix AwsSigningJob#prefix}
   */
   readonly prefix?: string;
 }
@@ -787,7 +787,7 @@ export interface DestinationProperty {
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#s3 TfSigningJob#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#s3 AwsSigningJob#s3}
   */
   readonly s3: DestinationS3Property;
 }
@@ -838,15 +838,15 @@ export class DestinationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SourceS3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#bucket TfSigningJob#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#bucket AwsSigningJob#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#key TfSigningJob#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#key AwsSigningJob#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#version TfSigningJob#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#version AwsSigningJob#version}
   */
   readonly version: string;
 }
@@ -937,7 +937,7 @@ export interface SourceProperty {
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#s3 TfSigningJob#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#s3 AwsSigningJob#s3}
   */
   readonly s3: SourceS3Property;
 }

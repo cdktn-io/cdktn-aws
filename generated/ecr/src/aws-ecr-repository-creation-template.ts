@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRepositoryCreationTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRepositoryCreationTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#applied_for TfRepositoryCreationTemplate#applied_for}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#applied_for AwsRepositoryCreationTemplate#applied_for}
   */
   readonly appliedFor: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#custom_role_arn TfRepositoryCreationTemplate#custom_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#custom_role_arn AwsRepositoryCreationTemplate#custom_role_arn}
   */
   readonly customRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#description TfRepositoryCreationTemplate#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#description AwsRepositoryCreationTemplate#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#id TfRepositoryCreationTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#id AwsRepositoryCreationTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#image_tag_mutability TfRepositoryCreationTemplate#image_tag_mutability}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#image_tag_mutability AwsRepositoryCreationTemplate#image_tag_mutability}
   */
   readonly imageTagMutability?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#lifecycle_policy TfRepositoryCreationTemplate#lifecycle_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#lifecycle_policy AwsRepositoryCreationTemplate#lifecycle_policy}
   */
   readonly lifecyclePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#prefix TfRepositoryCreationTemplate#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#prefix AwsRepositoryCreationTemplate#prefix}
   */
   readonly prefix: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#region TfRepositoryCreationTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#region AwsRepositoryCreationTemplate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#repository_policy TfRepositoryCreationTemplate#repository_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#repository_policy AwsRepositoryCreationTemplate#repository_policy}
   */
   readonly repositoryPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#resource_tags TfRepositoryCreationTemplate#resource_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#resource_tags AwsRepositoryCreationTemplate#resource_tags}
   */
   readonly resourceTags?: { [key: string]: string };
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#encryption_configuration TfRepositoryCreationTemplate#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#encryption_configuration AwsRepositoryCreationTemplate#encryption_configuration}
   */
-  readonly encryptionConfiguration?: TfRepositoryCreationTemplate.EncryptionConfigurationProperty[] | cdktn.IResolvable;
+  readonly encryptionConfiguration?: AwsRepositoryCreationTemplate.EncryptionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * image_tag_mutability_exclusion_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#image_tag_mutability_exclusion_filter TfRepositoryCreationTemplate#image_tag_mutability_exclusion_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#image_tag_mutability_exclusion_filter AwsRepositoryCreationTemplate#image_tag_mutability_exclusion_filter}
   */
-  readonly imageTagMutabilityExclusionFilter?: TfRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterProperty[] | cdktn.IResolvable;
+  readonly imageTagMutabilityExclusionFilter?: AwsRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template aws_ecr_repository_creation_template}
 */
-export class TfRepositoryCreationTemplate extends cdktn.TerraformResource {
+export class AwsRepositoryCreationTemplate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfRepositoryCreationTemplate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRepositoryCreationTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRepositoryCreationTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRepositoryCreationTemplate to import
-  * @param importFromId The id of the existing TfRepositoryCreationTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRepositoryCreationTemplate to import is found
+  * @param importToId The construct id used in the generated config for the AwsRepositoryCreationTemplate to import
+  * @param importFromId The id of the existing AwsRepositoryCreationTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRepositoryCreationTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecr_repository_creation_template", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfRepositoryCreationTemplate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRepositoryCreationTemplateConfig
+  * @param options AwsRepositoryCreationTemplateConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRepositoryCreationTemplateConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRepositoryCreationTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecr_repository_creation_template',
       terraformGeneratorMetadata: {
@@ -294,11 +294,11 @@ export class TfRepositoryCreationTemplate extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: true, required: false
-  private _encryptionConfiguration = new TfRepositoryCreationTemplate.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
+  private _encryptionConfiguration = new AwsRepositoryCreationTemplate.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: TfRepositoryCreationTemplate.EncryptionConfigurationProperty[] | cdktn.IResolvable) {
+  public putEncryptionConfiguration(value: AwsRepositoryCreationTemplate.EncryptionConfigurationProperty[] | cdktn.IResolvable) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -310,11 +310,11 @@ export class TfRepositoryCreationTemplate extends cdktn.TerraformResource {
   }
 
   // image_tag_mutability_exclusion_filter - computed: false, optional: true, required: false
-  private _imageTagMutabilityExclusionFilter = new TfRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterPropertyList(this, "image_tag_mutability_exclusion_filter", false);
+  private _imageTagMutabilityExclusionFilter = new AwsRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterPropertyList(this, "image_tag_mutability_exclusion_filter", false);
   public get imageTagMutabilityExclusionFilter() {
     return this._imageTagMutabilityExclusionFilter;
   }
-  public putImageTagMutabilityExclusionFilter(value: TfRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterProperty[] | cdktn.IResolvable) {
+  public putImageTagMutabilityExclusionFilter(value: AwsRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterProperty[] | cdktn.IResolvable) {
     this._imageTagMutabilityExclusionFilter.internalValue = value;
   }
   public resetImageTagMutabilityExclusionFilter() {
@@ -341,8 +341,8 @@ export class TfRepositoryCreationTemplate extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       repository_policy: cdktn.stringToTerraform(this._repositoryPolicy),
       resource_tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._resourceTags),
-      encryption_configuration: cdktn.listMapper(tfRepositoryCreationTemplateEncryptionConfigurationPropertyToTerraform, true)(this._encryptionConfiguration.internalValue),
-      image_tag_mutability_exclusion_filter: cdktn.listMapper(tfRepositoryCreationTemplateImageTagMutabilityExclusionFilterPropertyToTerraform, true)(this._imageTagMutabilityExclusionFilter.internalValue),
+      encryption_configuration: cdktn.listMapper(awsRepositoryCreationTemplateEncryptionConfigurationPropertyToTerraform, true)(this._encryptionConfiguration.internalValue),
+      image_tag_mutability_exclusion_filter: cdktn.listMapper(awsRepositoryCreationTemplateImageTagMutabilityExclusionFilterPropertyToTerraform, true)(this._imageTagMutabilityExclusionFilter.internalValue),
     };
   }
 
@@ -409,16 +409,16 @@ export class TfRepositoryCreationTemplate extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       encryption_configuration: {
-        value: cdktn.listMapperHcl(tfRepositoryCreationTemplateEncryptionConfigurationPropertyToHclTerraform, true)(this._encryptionConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsRepositoryCreationTemplateEncryptionConfigurationPropertyToHclTerraform, true)(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRepositoryCreationTemplate.EncryptionConfigurationPropertyList",
+        storageClassType: "AwsRepositoryCreationTemplate.EncryptionConfigurationPropertyList",
       },
       image_tag_mutability_exclusion_filter: {
-        value: cdktn.listMapperHcl(tfRepositoryCreationTemplateImageTagMutabilityExclusionFilterPropertyToHclTerraform, true)(this._imageTagMutabilityExclusionFilter.internalValue),
+        value: cdktn.listMapperHcl(awsRepositoryCreationTemplateImageTagMutabilityExclusionFilterPropertyToHclTerraform, true)(this._imageTagMutabilityExclusionFilter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterPropertyList",
+        storageClassType: "AwsRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterPropertyList",
       },
     };
 
@@ -427,7 +427,7 @@ export class TfRepositoryCreationTemplate extends cdktn.TerraformResource {
   }
 }
 
-export function tfRepositoryCreationTemplateEncryptionConfigurationPropertyToTerraform(struct?: TfRepositoryCreationTemplate.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function awsRepositoryCreationTemplateEncryptionConfigurationPropertyToTerraform(struct?: AwsRepositoryCreationTemplate.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function tfRepositoryCreationTemplateEncryptionConfigurationPropertyToTer
 }
 
 
-export function tfRepositoryCreationTemplateEncryptionConfigurationPropertyToHclTerraform(struct?: TfRepositoryCreationTemplate.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function awsRepositoryCreationTemplateEncryptionConfigurationPropertyToHclTerraform(struct?: AwsRepositoryCreationTemplate.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function tfRepositoryCreationTemplateEncryptionConfigurationPropertyToHcl
 }
 
 
-export function tfRepositoryCreationTemplateImageTagMutabilityExclusionFilterPropertyToTerraform(struct?: TfRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterProperty | cdktn.IResolvable): any {
+export function awsRepositoryCreationTemplateImageTagMutabilityExclusionFilterPropertyToTerraform(struct?: AwsRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,7 +476,7 @@ export function tfRepositoryCreationTemplateImageTagMutabilityExclusionFilterPro
 }
 
 
-export function tfRepositoryCreationTemplateImageTagMutabilityExclusionFilterPropertyToHclTerraform(struct?: TfRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterProperty | cdktn.IResolvable): any {
+export function awsRepositoryCreationTemplateImageTagMutabilityExclusionFilterPropertyToHclTerraform(struct?: AwsRepositoryCreationTemplate.ImageTagMutabilityExclusionFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -501,14 +501,14 @@ export function tfRepositoryCreationTemplateImageTagMutabilityExclusionFilterPro
 }
 
 
-export namespace TfRepositoryCreationTemplate {
+export namespace AwsRepositoryCreationTemplate {
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#encryption_type TfRepositoryCreationTemplate#encryption_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#encryption_type AwsRepositoryCreationTemplate#encryption_type}
   */
   readonly encryptionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#kms_key TfRepositoryCreationTemplate#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#kms_key AwsRepositoryCreationTemplate#kms_key}
   */
   readonly kmsKey?: string;
 }
@@ -616,11 +616,11 @@ export class EncryptionConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ImageTagMutabilityExclusionFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#filter TfRepositoryCreationTemplate#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#filter AwsRepositoryCreationTemplate#filter}
   */
   readonly filter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#filter_type TfRepositoryCreationTemplate#filter_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_repository_creation_template#filter_type AwsRepositoryCreationTemplate#filter_type}
   */
   readonly filterType: string;
 }

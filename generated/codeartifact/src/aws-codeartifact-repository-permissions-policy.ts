@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRepositoryPermissionsPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRepositoryPermissionsPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#domain TfRepositoryPermissionsPolicy#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#domain AwsRepositoryPermissionsPolicy#domain}
   */
   readonly domain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#domain_owner TfRepositoryPermissionsPolicy#domain_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#domain_owner AwsRepositoryPermissionsPolicy#domain_owner}
   */
   readonly domainOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#id TfRepositoryPermissionsPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#id AwsRepositoryPermissionsPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#policy_document TfRepositoryPermissionsPolicy#policy_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#policy_document AwsRepositoryPermissionsPolicy#policy_document}
   */
   readonly policyDocument: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#policy_revision TfRepositoryPermissionsPolicy#policy_revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#policy_revision AwsRepositoryPermissionsPolicy#policy_revision}
   */
   readonly policyRevision?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#region TfRepositoryPermissionsPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#region AwsRepositoryPermissionsPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#repository TfRepositoryPermissionsPolicy#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#repository AwsRepositoryPermissionsPolicy#repository}
   */
   readonly repository: string;
 }
@@ -44,7 +44,7 @@ export interface TfRepositoryPermissionsPolicyConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy aws_codeartifact_repository_permissions_policy}
 */
-export class TfRepositoryPermissionsPolicy extends cdktn.TerraformResource {
+export class AwsRepositoryPermissionsPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfRepositoryPermissionsPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRepositoryPermissionsPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRepositoryPermissionsPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRepositoryPermissionsPolicy to import
-  * @param importFromId The id of the existing TfRepositoryPermissionsPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRepositoryPermissionsPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsRepositoryPermissionsPolicy to import
+  * @param importFromId The id of the existing AwsRepositoryPermissionsPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codeartifact_repository_permissions_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRepositoryPermissionsPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codeartifact_repository_permissions_policy", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfRepositoryPermissionsPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRepositoryPermissionsPolicyConfig
+  * @param options AwsRepositoryPermissionsPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRepositoryPermissionsPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRepositoryPermissionsPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codeartifact_repository_permissions_policy',
       terraformGeneratorMetadata: {

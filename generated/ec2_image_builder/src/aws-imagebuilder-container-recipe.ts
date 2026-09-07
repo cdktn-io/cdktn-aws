@@ -5,92 +5,92 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfContainerRecipeConfig extends cdktn.TerraformMetaArguments {
+export interface AwsContainerRecipeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#container_type TfContainerRecipe#container_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#container_type AwsContainerRecipe#container_type}
   */
   readonly containerType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#description TfContainerRecipe#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#description AwsContainerRecipe#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#dockerfile_template_data TfContainerRecipe#dockerfile_template_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#dockerfile_template_data AwsContainerRecipe#dockerfile_template_data}
   */
   readonly dockerfileTemplateData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#dockerfile_template_uri TfContainerRecipe#dockerfile_template_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#dockerfile_template_uri AwsContainerRecipe#dockerfile_template_uri}
   */
   readonly dockerfileTemplateUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#id TfContainerRecipe#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#id AwsContainerRecipe#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#kms_key_id TfContainerRecipe#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#kms_key_id AwsContainerRecipe#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#name TfContainerRecipe#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#name AwsContainerRecipe#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#parent_image TfContainerRecipe#parent_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#parent_image AwsContainerRecipe#parent_image}
   */
   readonly parentImage: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#platform_override TfContainerRecipe#platform_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#platform_override AwsContainerRecipe#platform_override}
   */
   readonly platformOverride?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#region TfContainerRecipe#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#region AwsContainerRecipe#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#tags TfContainerRecipe#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#tags AwsContainerRecipe#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#tags_all TfContainerRecipe#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#tags_all AwsContainerRecipe#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#version TfContainerRecipe#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#version AwsContainerRecipe#version}
   */
   readonly version: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#working_directory TfContainerRecipe#working_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#working_directory AwsContainerRecipe#working_directory}
   */
   readonly workingDirectory?: string;
   /**
   * component block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#component TfContainerRecipe#component}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#component AwsContainerRecipe#component}
   */
-  readonly component: TfContainerRecipe.ComponentProperty[] | cdktn.IResolvable;
+  readonly component: AwsContainerRecipe.ComponentProperty[] | cdktn.IResolvable;
   /**
   * instance_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#instance_configuration TfContainerRecipe#instance_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#instance_configuration AwsContainerRecipe#instance_configuration}
   */
-  readonly instanceConfiguration?: TfContainerRecipe.InstanceConfigurationProperty;
+  readonly instanceConfiguration?: AwsContainerRecipe.InstanceConfigurationProperty;
   /**
   * target_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#target_repository TfContainerRecipe#target_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#target_repository AwsContainerRecipe#target_repository}
   */
-  readonly targetRepository: TfContainerRecipe.TargetRepositoryProperty;
+  readonly targetRepository: AwsContainerRecipe.TargetRepositoryProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe aws_imagebuilder_container_recipe}
 */
-export class TfContainerRecipe extends cdktn.TerraformResource {
+export class AwsContainerRecipe extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -101,11 +101,11 @@ export class TfContainerRecipe extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfContainerRecipe resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsContainerRecipe resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfContainerRecipe to import
-  * @param importFromId The id of the existing TfContainerRecipe that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfContainerRecipe to import is found
+  * @param importToId The construct id used in the generated config for the AwsContainerRecipe to import
+  * @param importFromId The id of the existing AwsContainerRecipe that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsContainerRecipe to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_container_recipe", importId: importFromId, provider });
@@ -120,9 +120,9 @@ export class TfContainerRecipe extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfContainerRecipeConfig
+  * @param options AwsContainerRecipeConfig
   */
-  public constructor(scope: Construct, id: string, config: TfContainerRecipeConfig) {
+  public constructor(scope: Construct, id: string, config: AwsContainerRecipeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_container_recipe',
       terraformGeneratorMetadata: {
@@ -399,11 +399,11 @@ export class TfContainerRecipe extends cdktn.TerraformResource {
   }
 
   // component - computed: false, optional: false, required: true
-  private _component = new TfContainerRecipe.ComponentPropertyList(this, "component", false);
+  private _component = new AwsContainerRecipe.ComponentPropertyList(this, "component", false);
   public get component() {
     return this._component;
   }
-  public putComponent(value: TfContainerRecipe.ComponentProperty[] | cdktn.IResolvable) {
+  public putComponent(value: AwsContainerRecipe.ComponentProperty[] | cdktn.IResolvable) {
     this._component.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -412,11 +412,11 @@ export class TfContainerRecipe extends cdktn.TerraformResource {
   }
 
   // instance_configuration - computed: false, optional: true, required: false
-  private _instanceConfiguration = new TfContainerRecipe.InstanceConfigurationPropertyOutputReference(this, "instance_configuration");
+  private _instanceConfiguration = new AwsContainerRecipe.InstanceConfigurationPropertyOutputReference(this, "instance_configuration");
   public get instanceConfiguration() {
     return this._instanceConfiguration;
   }
-  public putInstanceConfiguration(value: TfContainerRecipe.InstanceConfigurationProperty) {
+  public putInstanceConfiguration(value: AwsContainerRecipe.InstanceConfigurationProperty) {
     this._instanceConfiguration.internalValue = value;
   }
   public resetInstanceConfiguration() {
@@ -428,11 +428,11 @@ export class TfContainerRecipe extends cdktn.TerraformResource {
   }
 
   // target_repository - computed: false, optional: false, required: true
-  private _targetRepository = new TfContainerRecipe.TargetRepositoryPropertyOutputReference(this, "target_repository");
+  private _targetRepository = new AwsContainerRecipe.TargetRepositoryPropertyOutputReference(this, "target_repository");
   public get targetRepository() {
     return this._targetRepository;
   }
-  public putTargetRepository(value: TfContainerRecipe.TargetRepositoryProperty) {
+  public putTargetRepository(value: AwsContainerRecipe.TargetRepositoryProperty) {
     this._targetRepository.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -460,9 +460,9 @@ export class TfContainerRecipe extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       version: cdktn.stringToTerraform(this._version),
       working_directory: cdktn.stringToTerraform(this._workingDirectory),
-      component: cdktn.listMapper(tfContainerRecipeComponentPropertyToTerraform, true)(this._component.internalValue),
-      instance_configuration: tfContainerRecipeInstanceConfigurationPropertyToTerraform(this._instanceConfiguration.internalValue),
-      target_repository: tfContainerRecipeTargetRepositoryPropertyToTerraform(this._targetRepository.internalValue),
+      component: cdktn.listMapper(awsContainerRecipeComponentPropertyToTerraform, true)(this._component.internalValue),
+      instance_configuration: awsContainerRecipeInstanceConfigurationPropertyToTerraform(this._instanceConfiguration.internalValue),
+      target_repository: awsContainerRecipeTargetRepositoryPropertyToTerraform(this._targetRepository.internalValue),
     };
   }
 
@@ -553,22 +553,22 @@ export class TfContainerRecipe extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       component: {
-        value: cdktn.listMapperHcl(tfContainerRecipeComponentPropertyToHclTerraform, true)(this._component.internalValue),
+        value: cdktn.listMapperHcl(awsContainerRecipeComponentPropertyToHclTerraform, true)(this._component.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfContainerRecipe.ComponentPropertyList",
+        storageClassType: "AwsContainerRecipe.ComponentPropertyList",
       },
       instance_configuration: {
-        value: tfContainerRecipeInstanceConfigurationPropertyToHclTerraform(this._instanceConfiguration.internalValue),
+        value: awsContainerRecipeInstanceConfigurationPropertyToHclTerraform(this._instanceConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfContainerRecipe.InstanceConfigurationPropertyList",
+        storageClassType: "AwsContainerRecipe.InstanceConfigurationPropertyList",
       },
       target_repository: {
-        value: tfContainerRecipeTargetRepositoryPropertyToHclTerraform(this._targetRepository.internalValue),
+        value: awsContainerRecipeTargetRepositoryPropertyToHclTerraform(this._targetRepository.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfContainerRecipe.TargetRepositoryPropertyList",
+        storageClassType: "AwsContainerRecipe.TargetRepositoryPropertyList",
       },
     };
 
@@ -577,7 +577,7 @@ export class TfContainerRecipe extends cdktn.TerraformResource {
   }
 }
 
-export function tfContainerRecipeParameterPropertyToTerraform(struct?: TfContainerRecipe.ParameterProperty | cdktn.IResolvable): any {
+export function awsContainerRecipeParameterPropertyToTerraform(struct?: AwsContainerRecipe.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -589,7 +589,7 @@ export function tfContainerRecipeParameterPropertyToTerraform(struct?: TfContain
 }
 
 
-export function tfContainerRecipeParameterPropertyToHclTerraform(struct?: TfContainerRecipe.ParameterProperty | cdktn.IResolvable): any {
+export function awsContainerRecipeParameterPropertyToHclTerraform(struct?: AwsContainerRecipe.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -614,19 +614,19 @@ export function tfContainerRecipeParameterPropertyToHclTerraform(struct?: TfCont
 }
 
 
-export function tfContainerRecipeComponentPropertyToTerraform(struct?: TfContainerRecipe.ComponentProperty | cdktn.IResolvable): any {
+export function awsContainerRecipeComponentPropertyToTerraform(struct?: AwsContainerRecipe.ComponentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     component_arn: cdktn.stringToTerraform(struct!.componentArn),
-    parameter: cdktn.listMapper(tfContainerRecipeParameterPropertyToTerraform, true)(struct!.parameter),
+    parameter: cdktn.listMapper(awsContainerRecipeParameterPropertyToTerraform, true)(struct!.parameter),
   }
 }
 
 
-export function tfContainerRecipeComponentPropertyToHclTerraform(struct?: TfContainerRecipe.ComponentProperty | cdktn.IResolvable): any {
+export function awsContainerRecipeComponentPropertyToHclTerraform(struct?: AwsContainerRecipe.ComponentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -639,7 +639,7 @@ export function tfContainerRecipeComponentPropertyToHclTerraform(struct?: TfCont
       storageClassType: "string",
     },
     parameter: {
-      value: cdktn.listMapperHcl(tfContainerRecipeParameterPropertyToHclTerraform, true)(struct!.parameter),
+      value: cdktn.listMapperHcl(awsContainerRecipeParameterPropertyToHclTerraform, true)(struct!.parameter),
       isBlock: true,
       type: "set",
       storageClassType: "ParameterPropertyList",
@@ -651,7 +651,7 @@ export function tfContainerRecipeComponentPropertyToHclTerraform(struct?: TfCont
 }
 
 
-export function tfContainerRecipeEbsPropertyToTerraform(struct?: TfContainerRecipe.EbsPropertyOutputReference | TfContainerRecipe.EbsProperty): any {
+export function awsContainerRecipeEbsPropertyToTerraform(struct?: AwsContainerRecipe.EbsPropertyOutputReference | AwsContainerRecipe.EbsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -669,7 +669,7 @@ export function tfContainerRecipeEbsPropertyToTerraform(struct?: TfContainerReci
 }
 
 
-export function tfContainerRecipeEbsPropertyToHclTerraform(struct?: TfContainerRecipe.EbsPropertyOutputReference | TfContainerRecipe.EbsProperty): any {
+export function awsContainerRecipeEbsPropertyToHclTerraform(struct?: AwsContainerRecipe.EbsPropertyOutputReference | AwsContainerRecipe.EbsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -730,7 +730,7 @@ export function tfContainerRecipeEbsPropertyToHclTerraform(struct?: TfContainerR
 }
 
 
-export function tfContainerRecipeBlockDeviceMappingPropertyToTerraform(struct?: TfContainerRecipe.BlockDeviceMappingProperty | cdktn.IResolvable): any {
+export function awsContainerRecipeBlockDeviceMappingPropertyToTerraform(struct?: AwsContainerRecipe.BlockDeviceMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -739,12 +739,12 @@ export function tfContainerRecipeBlockDeviceMappingPropertyToTerraform(struct?: 
     device_name: cdktn.stringToTerraform(struct!.deviceName),
     no_device: cdktn.booleanToTerraform(struct!.noDevice),
     virtual_name: cdktn.stringToTerraform(struct!.virtualName),
-    ebs: tfContainerRecipeEbsPropertyToTerraform(struct!.ebs),
+    ebs: awsContainerRecipeEbsPropertyToTerraform(struct!.ebs),
   }
 }
 
 
-export function tfContainerRecipeBlockDeviceMappingPropertyToHclTerraform(struct?: TfContainerRecipe.BlockDeviceMappingProperty | cdktn.IResolvable): any {
+export function awsContainerRecipeBlockDeviceMappingPropertyToHclTerraform(struct?: AwsContainerRecipe.BlockDeviceMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -769,7 +769,7 @@ export function tfContainerRecipeBlockDeviceMappingPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     ebs: {
-      value: tfContainerRecipeEbsPropertyToHclTerraform(struct!.ebs),
+      value: awsContainerRecipeEbsPropertyToHclTerraform(struct!.ebs),
       isBlock: true,
       type: "list",
       storageClassType: "EbsPropertyList",
@@ -781,19 +781,19 @@ export function tfContainerRecipeBlockDeviceMappingPropertyToHclTerraform(struct
 }
 
 
-export function tfContainerRecipeInstanceConfigurationPropertyToTerraform(struct?: TfContainerRecipe.InstanceConfigurationPropertyOutputReference | TfContainerRecipe.InstanceConfigurationProperty): any {
+export function awsContainerRecipeInstanceConfigurationPropertyToTerraform(struct?: AwsContainerRecipe.InstanceConfigurationPropertyOutputReference | AwsContainerRecipe.InstanceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     image: cdktn.stringToTerraform(struct!.image),
-    block_device_mapping: cdktn.listMapper(tfContainerRecipeBlockDeviceMappingPropertyToTerraform, true)(struct!.blockDeviceMapping),
+    block_device_mapping: cdktn.listMapper(awsContainerRecipeBlockDeviceMappingPropertyToTerraform, true)(struct!.blockDeviceMapping),
   }
 }
 
 
-export function tfContainerRecipeInstanceConfigurationPropertyToHclTerraform(struct?: TfContainerRecipe.InstanceConfigurationPropertyOutputReference | TfContainerRecipe.InstanceConfigurationProperty): any {
+export function awsContainerRecipeInstanceConfigurationPropertyToHclTerraform(struct?: AwsContainerRecipe.InstanceConfigurationPropertyOutputReference | AwsContainerRecipe.InstanceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -806,7 +806,7 @@ export function tfContainerRecipeInstanceConfigurationPropertyToHclTerraform(str
       storageClassType: "string",
     },
     block_device_mapping: {
-      value: cdktn.listMapperHcl(tfContainerRecipeBlockDeviceMappingPropertyToHclTerraform, true)(struct!.blockDeviceMapping),
+      value: cdktn.listMapperHcl(awsContainerRecipeBlockDeviceMappingPropertyToHclTerraform, true)(struct!.blockDeviceMapping),
       isBlock: true,
       type: "set",
       storageClassType: "BlockDeviceMappingPropertyList",
@@ -818,7 +818,7 @@ export function tfContainerRecipeInstanceConfigurationPropertyToHclTerraform(str
 }
 
 
-export function tfContainerRecipeTargetRepositoryPropertyToTerraform(struct?: TfContainerRecipe.TargetRepositoryPropertyOutputReference | TfContainerRecipe.TargetRepositoryProperty): any {
+export function awsContainerRecipeTargetRepositoryPropertyToTerraform(struct?: AwsContainerRecipe.TargetRepositoryPropertyOutputReference | AwsContainerRecipe.TargetRepositoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -830,7 +830,7 @@ export function tfContainerRecipeTargetRepositoryPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfContainerRecipeTargetRepositoryPropertyToHclTerraform(struct?: TfContainerRecipe.TargetRepositoryPropertyOutputReference | TfContainerRecipe.TargetRepositoryProperty): any {
+export function awsContainerRecipeTargetRepositoryPropertyToHclTerraform(struct?: AwsContainerRecipe.TargetRepositoryPropertyOutputReference | AwsContainerRecipe.TargetRepositoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -855,14 +855,14 @@ export function tfContainerRecipeTargetRepositoryPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfContainerRecipe {
+export namespace AwsContainerRecipe {
 export interface ParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#name TfContainerRecipe#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#name AwsContainerRecipe#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#value TfContainerRecipe#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#value AwsContainerRecipe#value}
   */
   readonly value: string;
 }
@@ -964,13 +964,13 @@ export class ParameterPropertyList extends cdktn.ComplexList {
 }
 export interface ComponentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#component_arn TfContainerRecipe#component_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#component_arn AwsContainerRecipe#component_arn}
   */
   readonly componentArn: string;
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#parameter TfContainerRecipe#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#parameter AwsContainerRecipe#parameter}
   */
   readonly parameter?: ParameterProperty[] | cdktn.IResolvable;
 }
@@ -1075,35 +1075,35 @@ export class ComponentPropertyList extends cdktn.ComplexList {
 }
 export interface EbsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#delete_on_termination TfContainerRecipe#delete_on_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#delete_on_termination AwsContainerRecipe#delete_on_termination}
   */
   readonly deleteOnTermination?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#encrypted TfContainerRecipe#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#encrypted AwsContainerRecipe#encrypted}
   */
   readonly encrypted?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#iops TfContainerRecipe#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#iops AwsContainerRecipe#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#kms_key_id TfContainerRecipe#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#kms_key_id AwsContainerRecipe#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#snapshot_id TfContainerRecipe#snapshot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#snapshot_id AwsContainerRecipe#snapshot_id}
   */
   readonly snapshotId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#throughput TfContainerRecipe#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#throughput AwsContainerRecipe#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#volume_size TfContainerRecipe#volume_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#volume_size AwsContainerRecipe#volume_size}
   */
   readonly volumeSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#volume_type TfContainerRecipe#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#volume_type AwsContainerRecipe#volume_type}
   */
   readonly volumeType?: string;
 }
@@ -1311,21 +1311,21 @@ export class EbsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BlockDeviceMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#device_name TfContainerRecipe#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#device_name AwsContainerRecipe#device_name}
   */
   readonly deviceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#no_device TfContainerRecipe#no_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#no_device AwsContainerRecipe#no_device}
   */
   readonly noDevice?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#virtual_name TfContainerRecipe#virtual_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#virtual_name AwsContainerRecipe#virtual_name}
   */
   readonly virtualName?: string;
   /**
   * ebs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#ebs TfContainerRecipe#ebs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#ebs AwsContainerRecipe#ebs}
   */
   readonly ebs?: EbsProperty;
 }
@@ -1477,13 +1477,13 @@ export class BlockDeviceMappingPropertyList extends cdktn.ComplexList {
 }
 export interface InstanceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#image TfContainerRecipe#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#image AwsContainerRecipe#image}
   */
   readonly image?: string;
   /**
   * block_device_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#block_device_mapping TfContainerRecipe#block_device_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#block_device_mapping AwsContainerRecipe#block_device_mapping}
   */
   readonly blockDeviceMapping?: BlockDeviceMappingProperty[] | cdktn.IResolvable;
 }
@@ -1559,11 +1559,11 @@ export class InstanceConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface TargetRepositoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#repository_name TfContainerRecipe#repository_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#repository_name AwsContainerRecipe#repository_name}
   */
   readonly repositoryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#service TfContainerRecipe#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_container_recipe#service AwsContainerRecipe#service}
   */
   readonly service: string;
 }

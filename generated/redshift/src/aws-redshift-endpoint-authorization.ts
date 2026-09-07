@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEndpointAuthorizationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEndpointAuthorizationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#account TfEndpointAuthorization#account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#account AwsEndpointAuthorization#account}
   */
   readonly account: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#cluster_identifier TfEndpointAuthorization#cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#cluster_identifier AwsEndpointAuthorization#cluster_identifier}
   */
   readonly clusterIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#force_delete TfEndpointAuthorization#force_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#force_delete AwsEndpointAuthorization#force_delete}
   */
   readonly forceDelete?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#id TfEndpointAuthorization#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#id AwsEndpointAuthorization#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,11 +28,11 @@ export interface TfEndpointAuthorizationConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#region TfEndpointAuthorization#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#region AwsEndpointAuthorization#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#vpc_ids TfEndpointAuthorization#vpc_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#vpc_ids AwsEndpointAuthorization#vpc_ids}
   */
   readonly vpcIds?: string[];
 }
@@ -40,7 +40,7 @@ export interface TfEndpointAuthorizationConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization aws_redshift_endpoint_authorization}
 */
-export class TfEndpointAuthorization extends cdktn.TerraformResource {
+export class AwsEndpointAuthorization extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfEndpointAuthorization extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEndpointAuthorization resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEndpointAuthorization resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEndpointAuthorization to import
-  * @param importFromId The id of the existing TfEndpointAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEndpointAuthorization to import is found
+  * @param importToId The construct id used in the generated config for the AwsEndpointAuthorization to import
+  * @param importFromId The id of the existing AwsEndpointAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_endpoint_authorization#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEndpointAuthorization to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_endpoint_authorization", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfEndpointAuthorization extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEndpointAuthorizationConfig
+  * @param options AwsEndpointAuthorizationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEndpointAuthorizationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEndpointAuthorizationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_endpoint_authorization',
       terraformGeneratorMetadata: {

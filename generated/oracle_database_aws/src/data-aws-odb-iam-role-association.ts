@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfIamRoleAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsIamRoleAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_iam_role_association#iam_role_arn DataTfIamRoleAssociation#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_iam_role_association#iam_role_arn DataAwsIamRoleAssociation#iam_role_arn}
   */
   readonly iamRoleArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_iam_role_association#region DataTfIamRoleAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_iam_role_association#region DataAwsIamRoleAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_iam_role_association#resource_arn DataTfIamRoleAssociation#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_iam_role_association#resource_arn DataAwsIamRoleAssociation#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -25,7 +25,7 @@ export interface DataTfIamRoleAssociationConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_iam_role_association aws_odb_iam_role_association}
 */
-export class DataTfIamRoleAssociation extends cdktn.TerraformDataSource {
+export class DataAwsIamRoleAssociation extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class DataTfIamRoleAssociation extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfIamRoleAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsIamRoleAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfIamRoleAssociation to import
-  * @param importFromId The id of the existing DataTfIamRoleAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_iam_role_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfIamRoleAssociation to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsIamRoleAssociation to import
+  * @param importFromId The id of the existing DataAwsIamRoleAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/odb_iam_role_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsIamRoleAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_iam_role_association", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class DataTfIamRoleAssociation extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfIamRoleAssociationConfig
+  * @param options DataAwsIamRoleAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfIamRoleAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsIamRoleAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_iam_role_association',
       terraformGeneratorMetadata: {

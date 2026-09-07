@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfStreamConsumerConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsStreamConsumerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#arn DataTfStreamConsumer#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#arn DataAwsStreamConsumer#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#id DataTfStreamConsumer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#id DataAwsStreamConsumer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#name DataTfStreamConsumer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#name DataAwsStreamConsumer#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#region DataTfStreamConsumer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#region DataAwsStreamConsumer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#stream_arn DataTfStreamConsumer#stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#stream_arn DataAwsStreamConsumer#stream_arn}
   */
   readonly streamArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#tags DataTfStreamConsumer#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#tags DataAwsStreamConsumer#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface DataTfStreamConsumerConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer aws_kinesis_stream_consumer}
 */
-export class DataTfStreamConsumer extends cdktn.TerraformDataSource {
+export class DataAwsStreamConsumer extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataTfStreamConsumer extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfStreamConsumer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsStreamConsumer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfStreamConsumer to import
-  * @param importFromId The id of the existing DataTfStreamConsumer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfStreamConsumer to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsStreamConsumer to import
+  * @param importFromId The id of the existing DataAwsStreamConsumer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kinesis_stream_consumer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsStreamConsumer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kinesis_stream_consumer", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataTfStreamConsumer extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfStreamConsumerConfig
+  * @param options DataAwsStreamConsumerConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfStreamConsumerConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsStreamConsumerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kinesis_stream_consumer',
       terraformGeneratorMetadata: {

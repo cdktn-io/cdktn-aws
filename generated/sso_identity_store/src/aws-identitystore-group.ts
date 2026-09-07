@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group#description TfGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group#description AwsGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group#display_name TfGroup#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group#display_name AwsGroup#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group#id TfGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group#id AwsGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group#identity_store_id TfGroup#identity_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group#identity_store_id AwsGroup#identity_store_id}
   */
   readonly identityStoreId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group#region TfGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group#region AwsGroup#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface TfGroupConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group aws_identitystore_group}
 */
-export class TfGroup extends cdktn.TerraformResource {
+export class AwsGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGroup to import
-  * @param importFromId The id of the existing TfGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsGroup to import
+  * @param importFromId The id of the existing AwsGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_identitystore_group", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGroupConfig
+  * @param options AwsGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_identitystore_group',
       terraformGeneratorMetadata: {
@@ -130,7 +130,7 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // external_ids - computed: true, optional: false, required: false
-  private _externalIds = new TfGroup.ExternalIdsPropertyList(this, "external_ids", false);
+  private _externalIds = new AwsGroup.ExternalIdsPropertyList(this, "external_ids", false);
   public get externalIds() {
     return this._externalIds;
   }
@@ -238,7 +238,7 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfGroupExternalIdsPropertyToTerraform(struct?: TfGroup.ExternalIdsProperty): any {
+export function awsGroupExternalIdsPropertyToTerraform(struct?: AwsGroup.ExternalIdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -248,7 +248,7 @@ export function tfGroupExternalIdsPropertyToTerraform(struct?: TfGroup.ExternalI
 }
 
 
-export function tfGroupExternalIdsPropertyToHclTerraform(struct?: TfGroup.ExternalIdsProperty): any {
+export function awsGroupExternalIdsPropertyToHclTerraform(struct?: AwsGroup.ExternalIdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function tfGroupExternalIdsPropertyToHclTerraform(struct?: TfGroup.Extern
 }
 
 
-export namespace TfGroup {
+export namespace AwsGroup {
 export interface ExternalIdsProperty {
 }
 export class ExternalIdsPropertyOutputReference extends cdktn.ComplexObject {

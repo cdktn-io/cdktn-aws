@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfWorkspaceConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsWorkspaceConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#out_of_order_time_window_in_seconds TfWorkspaceConfiguration#out_of_order_time_window_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#out_of_order_time_window_in_seconds AwsWorkspaceConfiguration#out_of_order_time_window_in_seconds}
   */
   readonly outOfOrderTimeWindowInSeconds?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#region TfWorkspaceConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#region AwsWorkspaceConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#retention_period_in_days TfWorkspaceConfiguration#retention_period_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#retention_period_in_days AwsWorkspaceConfiguration#retention_period_in_days}
   */
   readonly retentionPeriodInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#rule_query_offset_in_seconds TfWorkspaceConfiguration#rule_query_offset_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#rule_query_offset_in_seconds AwsWorkspaceConfiguration#rule_query_offset_in_seconds}
   */
   readonly ruleQueryOffsetInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#workspace_id TfWorkspaceConfiguration#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#workspace_id AwsWorkspaceConfiguration#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * limits_per_label_set block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#limits_per_label_set TfWorkspaceConfiguration#limits_per_label_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#limits_per_label_set AwsWorkspaceConfiguration#limits_per_label_set}
   */
-  readonly limitsPerLabelSet?: TfWorkspaceConfiguration.LimitsPerLabelSetProperty[] | cdktn.IResolvable;
+  readonly limitsPerLabelSet?: AwsWorkspaceConfiguration.LimitsPerLabelSetProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#timeouts TfWorkspaceConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#timeouts AwsWorkspaceConfiguration#timeouts}
   */
-  readonly timeouts?: TfWorkspaceConfiguration.TimeoutsProperty;
+  readonly timeouts?: AwsWorkspaceConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration aws_prometheus_workspace_configuration}
 */
-export class TfWorkspaceConfiguration extends cdktn.TerraformResource {
+export class AwsWorkspaceConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class TfWorkspaceConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfWorkspaceConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsWorkspaceConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfWorkspaceConfiguration to import
-  * @param importFromId The id of the existing TfWorkspaceConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfWorkspaceConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsWorkspaceConfiguration to import
+  * @param importFromId The id of the existing AwsWorkspaceConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsWorkspaceConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_prometheus_workspace_configuration", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class TfWorkspaceConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfWorkspaceConfigurationConfig
+  * @param options AwsWorkspaceConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfWorkspaceConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsWorkspaceConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_prometheus_workspace_configuration',
       terraformGeneratorMetadata: {
@@ -184,11 +184,11 @@ export class TfWorkspaceConfiguration extends cdktn.TerraformResource {
   }
 
   // limits_per_label_set - computed: false, optional: true, required: false
-  private _limitsPerLabelSet = new TfWorkspaceConfiguration.LimitsPerLabelSetPropertyList(this, "limits_per_label_set", false);
+  private _limitsPerLabelSet = new AwsWorkspaceConfiguration.LimitsPerLabelSetPropertyList(this, "limits_per_label_set", false);
   public get limitsPerLabelSet() {
     return this._limitsPerLabelSet;
   }
-  public putLimitsPerLabelSet(value: TfWorkspaceConfiguration.LimitsPerLabelSetProperty[] | cdktn.IResolvable) {
+  public putLimitsPerLabelSet(value: AwsWorkspaceConfiguration.LimitsPerLabelSetProperty[] | cdktn.IResolvable) {
     this._limitsPerLabelSet.internalValue = value;
   }
   public resetLimitsPerLabelSet() {
@@ -200,11 +200,11 @@ export class TfWorkspaceConfiguration extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfWorkspaceConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsWorkspaceConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfWorkspaceConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: AwsWorkspaceConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -226,8 +226,8 @@ export class TfWorkspaceConfiguration extends cdktn.TerraformResource {
       retention_period_in_days: cdktn.numberToTerraform(this._retentionPeriodInDays),
       rule_query_offset_in_seconds: cdktn.numberToTerraform(this._ruleQueryOffsetInSeconds),
       workspace_id: cdktn.stringToTerraform(this._workspaceId),
-      limits_per_label_set: cdktn.listMapper(tfWorkspaceConfigurationLimitsPerLabelSetPropertyToTerraform, true)(this._limitsPerLabelSet.internalValue),
-      timeouts: tfWorkspaceConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      limits_per_label_set: cdktn.listMapper(awsWorkspaceConfigurationLimitsPerLabelSetPropertyToTerraform, true)(this._limitsPerLabelSet.internalValue),
+      timeouts: awsWorkspaceConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -264,16 +264,16 @@ export class TfWorkspaceConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       limits_per_label_set: {
-        value: cdktn.listMapperHcl(tfWorkspaceConfigurationLimitsPerLabelSetPropertyToHclTerraform, true)(this._limitsPerLabelSet.internalValue),
+        value: cdktn.listMapperHcl(awsWorkspaceConfigurationLimitsPerLabelSetPropertyToHclTerraform, true)(this._limitsPerLabelSet.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfWorkspaceConfiguration.LimitsPerLabelSetPropertyList",
+        storageClassType: "AwsWorkspaceConfiguration.LimitsPerLabelSetPropertyList",
       },
       timeouts: {
-        value: tfWorkspaceConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsWorkspaceConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfWorkspaceConfiguration.TimeoutsProperty",
+        storageClassType: "AwsWorkspaceConfiguration.TimeoutsProperty",
       },
     };
 
@@ -282,7 +282,7 @@ export class TfWorkspaceConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfWorkspaceConfigurationLimitsPropertyToTerraform(struct?: TfWorkspaceConfiguration.LimitsProperty | cdktn.IResolvable): any {
+export function awsWorkspaceConfigurationLimitsPropertyToTerraform(struct?: AwsWorkspaceConfiguration.LimitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function tfWorkspaceConfigurationLimitsPropertyToTerraform(struct?: TfWor
 }
 
 
-export function tfWorkspaceConfigurationLimitsPropertyToHclTerraform(struct?: TfWorkspaceConfiguration.LimitsProperty | cdktn.IResolvable): any {
+export function awsWorkspaceConfigurationLimitsPropertyToHclTerraform(struct?: AwsWorkspaceConfiguration.LimitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,19 +312,19 @@ export function tfWorkspaceConfigurationLimitsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfWorkspaceConfigurationLimitsPerLabelSetPropertyToTerraform(struct?: TfWorkspaceConfiguration.LimitsPerLabelSetProperty | cdktn.IResolvable): any {
+export function awsWorkspaceConfigurationLimitsPerLabelSetPropertyToTerraform(struct?: AwsWorkspaceConfiguration.LimitsPerLabelSetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     label_set: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.labelSet),
-    limits: cdktn.listMapper(tfWorkspaceConfigurationLimitsPropertyToTerraform, true)(struct!.limits),
+    limits: cdktn.listMapper(awsWorkspaceConfigurationLimitsPropertyToTerraform, true)(struct!.limits),
   }
 }
 
 
-export function tfWorkspaceConfigurationLimitsPerLabelSetPropertyToHclTerraform(struct?: TfWorkspaceConfiguration.LimitsPerLabelSetProperty | cdktn.IResolvable): any {
+export function awsWorkspaceConfigurationLimitsPerLabelSetPropertyToHclTerraform(struct?: AwsWorkspaceConfiguration.LimitsPerLabelSetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function tfWorkspaceConfigurationLimitsPerLabelSetPropertyToHclTerraform(
       storageClassType: "stringMap",
     },
     limits: {
-      value: cdktn.listMapperHcl(tfWorkspaceConfigurationLimitsPropertyToHclTerraform, true)(struct!.limits),
+      value: cdktn.listMapperHcl(awsWorkspaceConfigurationLimitsPropertyToHclTerraform, true)(struct!.limits),
       isBlock: true,
       type: "list",
       storageClassType: "LimitsPropertyList",
@@ -349,7 +349,7 @@ export function tfWorkspaceConfigurationLimitsPerLabelSetPropertyToHclTerraform(
 }
 
 
-export function tfWorkspaceConfigurationTimeoutsPropertyToTerraform(struct?: TfWorkspaceConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsWorkspaceConfigurationTimeoutsPropertyToTerraform(struct?: AwsWorkspaceConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function tfWorkspaceConfigurationTimeoutsPropertyToTerraform(struct?: TfW
 }
 
 
-export function tfWorkspaceConfigurationTimeoutsPropertyToHclTerraform(struct?: TfWorkspaceConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsWorkspaceConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsWorkspaceConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,10 +386,10 @@ export function tfWorkspaceConfigurationTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfWorkspaceConfiguration {
+export namespace AwsWorkspaceConfiguration {
 export interface LimitsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#max_series TfWorkspaceConfiguration#max_series}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#max_series AwsWorkspaceConfiguration#max_series}
   */
   readonly maxSeries: number;
 }
@@ -472,13 +472,13 @@ export class LimitsPropertyList extends cdktn.ComplexList {
 }
 export interface LimitsPerLabelSetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#label_set TfWorkspaceConfiguration#label_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#label_set AwsWorkspaceConfiguration#label_set}
   */
   readonly labelSet: { [key: string]: string };
   /**
   * limits block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#limits TfWorkspaceConfiguration#limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#limits AwsWorkspaceConfiguration#limits}
   */
   readonly limits?: LimitsProperty[] | cdktn.IResolvable;
 }
@@ -585,13 +585,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#create TfWorkspaceConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#create AwsWorkspaceConfiguration#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#update TfWorkspaceConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_workspace_configuration#update AwsWorkspaceConfiguration#update}
   */
   readonly update?: string;
 }

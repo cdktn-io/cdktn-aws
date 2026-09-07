@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEmailTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEmailTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#region TfEmailTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#region AwsEmailTemplate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#tags TfEmailTemplate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#tags AwsEmailTemplate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#template_name TfEmailTemplate#template_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#template_name AwsEmailTemplate#template_name}
   */
   readonly templateName: string;
   /**
   * email_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#email_template TfEmailTemplate#email_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#email_template AwsEmailTemplate#email_template}
   */
-  readonly emailTemplate?: TfEmailTemplate.EmailTemplateProperty[] | cdktn.IResolvable;
+  readonly emailTemplate?: AwsEmailTemplate.EmailTemplateProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template aws_pinpoint_email_template}
 */
-export class TfEmailTemplate extends cdktn.TerraformResource {
+export class AwsEmailTemplate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class TfEmailTemplate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEmailTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEmailTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEmailTemplate to import
-  * @param importFromId The id of the existing TfEmailTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEmailTemplate to import is found
+  * @param importToId The construct id used in the generated config for the AwsEmailTemplate to import
+  * @param importFromId The id of the existing AwsEmailTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEmailTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpoint_email_template", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class TfEmailTemplate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEmailTemplateConfig
+  * @param options AwsEmailTemplateConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEmailTemplateConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEmailTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpoint_email_template',
       terraformGeneratorMetadata: {
@@ -146,11 +146,11 @@ export class TfEmailTemplate extends cdktn.TerraformResource {
   }
 
   // email_template - computed: false, optional: true, required: false
-  private _emailTemplate = new TfEmailTemplate.EmailTemplatePropertyList(this, "email_template", false);
+  private _emailTemplate = new AwsEmailTemplate.EmailTemplatePropertyList(this, "email_template", false);
   public get emailTemplate() {
     return this._emailTemplate;
   }
-  public putEmailTemplate(value: TfEmailTemplate.EmailTemplateProperty[] | cdktn.IResolvable) {
+  public putEmailTemplate(value: AwsEmailTemplate.EmailTemplateProperty[] | cdktn.IResolvable) {
     this._emailTemplate.internalValue = value;
   }
   public resetEmailTemplate() {
@@ -170,7 +170,7 @@ export class TfEmailTemplate extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       template_name: cdktn.stringToTerraform(this._templateName),
-      email_template: cdktn.listMapper(tfEmailTemplateEmailTemplatePropertyToTerraform, true)(this._emailTemplate.internalValue),
+      email_template: cdktn.listMapper(awsEmailTemplateEmailTemplatePropertyToTerraform, true)(this._emailTemplate.internalValue),
     };
   }
 
@@ -195,10 +195,10 @@ export class TfEmailTemplate extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       email_template: {
-        value: cdktn.listMapperHcl(tfEmailTemplateEmailTemplatePropertyToHclTerraform, true)(this._emailTemplate.internalValue),
+        value: cdktn.listMapperHcl(awsEmailTemplateEmailTemplatePropertyToHclTerraform, true)(this._emailTemplate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEmailTemplate.EmailTemplatePropertyList",
+        storageClassType: "AwsEmailTemplate.EmailTemplatePropertyList",
       },
     };
 
@@ -207,7 +207,7 @@ export class TfEmailTemplate extends cdktn.TerraformResource {
   }
 }
 
-export function tfEmailTemplateHeaderPropertyToTerraform(struct?: TfEmailTemplate.HeaderProperty | cdktn.IResolvable): any {
+export function awsEmailTemplateHeaderPropertyToTerraform(struct?: AwsEmailTemplate.HeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -219,7 +219,7 @@ export function tfEmailTemplateHeaderPropertyToTerraform(struct?: TfEmailTemplat
 }
 
 
-export function tfEmailTemplateHeaderPropertyToHclTerraform(struct?: TfEmailTemplate.HeaderProperty | cdktn.IResolvable): any {
+export function awsEmailTemplateHeaderPropertyToHclTerraform(struct?: AwsEmailTemplate.HeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function tfEmailTemplateHeaderPropertyToHclTerraform(struct?: TfEmailTemp
 }
 
 
-export function tfEmailTemplateEmailTemplatePropertyToTerraform(struct?: TfEmailTemplate.EmailTemplateProperty | cdktn.IResolvable): any {
+export function awsEmailTemplateEmailTemplatePropertyToTerraform(struct?: AwsEmailTemplate.EmailTemplateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,12 +256,12 @@ export function tfEmailTemplateEmailTemplatePropertyToTerraform(struct?: TfEmail
     recommender_id: cdktn.stringToTerraform(struct!.recommenderId),
     subject: cdktn.stringToTerraform(struct!.subject),
     text_part: cdktn.stringToTerraform(struct!.textPart),
-    header: cdktn.listMapper(tfEmailTemplateHeaderPropertyToTerraform, true)(struct!.header),
+    header: cdktn.listMapper(awsEmailTemplateHeaderPropertyToTerraform, true)(struct!.header),
   }
 }
 
 
-export function tfEmailTemplateEmailTemplatePropertyToHclTerraform(struct?: TfEmailTemplate.EmailTemplateProperty | cdktn.IResolvable): any {
+export function awsEmailTemplateEmailTemplatePropertyToHclTerraform(struct?: AwsEmailTemplate.EmailTemplateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function tfEmailTemplateEmailTemplatePropertyToHclTerraform(struct?: TfEm
       storageClassType: "string",
     },
     header: {
-      value: cdktn.listMapperHcl(tfEmailTemplateHeaderPropertyToHclTerraform, true)(struct!.header),
+      value: cdktn.listMapperHcl(awsEmailTemplateHeaderPropertyToHclTerraform, true)(struct!.header),
       isBlock: true,
       type: "list",
       storageClassType: "HeaderPropertyList",
@@ -316,14 +316,14 @@ export function tfEmailTemplateEmailTemplatePropertyToHclTerraform(struct?: TfEm
 }
 
 
-export namespace TfEmailTemplate {
+export namespace AwsEmailTemplate {
 export interface HeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#name TfEmailTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#name AwsEmailTemplate#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#value TfEmailTemplate#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#value AwsEmailTemplate#value}
   */
   readonly value?: string;
 }
@@ -431,33 +431,33 @@ export class HeaderPropertyList extends cdktn.ComplexList {
 }
 export interface EmailTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#default_substitutions TfEmailTemplate#default_substitutions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#default_substitutions AwsEmailTemplate#default_substitutions}
   */
   readonly defaultSubstitutions?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#description TfEmailTemplate#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#description AwsEmailTemplate#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#html_part TfEmailTemplate#html_part}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#html_part AwsEmailTemplate#html_part}
   */
   readonly htmlPart?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#recommender_id TfEmailTemplate#recommender_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#recommender_id AwsEmailTemplate#recommender_id}
   */
   readonly recommenderId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#subject TfEmailTemplate#subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#subject AwsEmailTemplate#subject}
   */
   readonly subject?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#text_part TfEmailTemplate#text_part}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#text_part AwsEmailTemplate#text_part}
   */
   readonly textPart?: string;
   /**
   * header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#header TfEmailTemplate#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#header AwsEmailTemplate#header}
   */
   readonly header?: HeaderProperty[] | cdktn.IResolvable;
 }

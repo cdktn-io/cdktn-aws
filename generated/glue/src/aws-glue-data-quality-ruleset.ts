@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataQualityRulesetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDataQualityRulesetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#description TfDataQualityRuleset#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#description AwsDataQualityRuleset#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#id TfDataQualityRuleset#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#id AwsDataQualityRuleset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#name TfDataQualityRuleset#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#name AwsDataQualityRuleset#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#region TfDataQualityRuleset#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#region AwsDataQualityRuleset#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#ruleset TfDataQualityRuleset#ruleset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#ruleset AwsDataQualityRuleset#ruleset}
   */
   readonly ruleset: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#tags TfDataQualityRuleset#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#tags AwsDataQualityRuleset#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#tags_all TfDataQualityRuleset#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#tags_all AwsDataQualityRuleset#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * target_table block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#target_table TfDataQualityRuleset#target_table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#target_table AwsDataQualityRuleset#target_table}
   */
-  readonly targetTable?: TfDataQualityRuleset.TargetTableProperty;
+  readonly targetTable?: AwsDataQualityRuleset.TargetTableProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset aws_glue_data_quality_ruleset}
 */
-export class TfDataQualityRuleset extends cdktn.TerraformResource {
+export class AwsDataQualityRuleset extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfDataQualityRuleset extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataQualityRuleset resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDataQualityRuleset resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataQualityRuleset to import
-  * @param importFromId The id of the existing TfDataQualityRuleset that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataQualityRuleset to import is found
+  * @param importToId The construct id used in the generated config for the AwsDataQualityRuleset to import
+  * @param importFromId The id of the existing AwsDataQualityRuleset that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDataQualityRuleset to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_data_quality_ruleset", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfDataQualityRuleset extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataQualityRulesetConfig
+  * @param options AwsDataQualityRulesetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataQualityRulesetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDataQualityRulesetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_data_quality_ruleset',
       terraformGeneratorMetadata: {
@@ -239,11 +239,11 @@ export class TfDataQualityRuleset extends cdktn.TerraformResource {
   }
 
   // target_table - computed: false, optional: true, required: false
-  private _targetTable = new TfDataQualityRuleset.TargetTablePropertyOutputReference(this, "target_table");
+  private _targetTable = new AwsDataQualityRuleset.TargetTablePropertyOutputReference(this, "target_table");
   public get targetTable() {
     return this._targetTable;
   }
-  public putTargetTable(value: TfDataQualityRuleset.TargetTableProperty) {
+  public putTargetTable(value: AwsDataQualityRuleset.TargetTableProperty) {
     this._targetTable.internalValue = value;
   }
   public resetTargetTable() {
@@ -267,7 +267,7 @@ export class TfDataQualityRuleset extends cdktn.TerraformResource {
       ruleset: cdktn.stringToTerraform(this._ruleset),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      target_table: tfDataQualityRulesetTargetTablePropertyToTerraform(this._targetTable.internalValue),
+      target_table: awsDataQualityRulesetTargetTablePropertyToTerraform(this._targetTable.internalValue),
     };
   }
 
@@ -316,10 +316,10 @@ export class TfDataQualityRuleset extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       target_table: {
-        value: tfDataQualityRulesetTargetTablePropertyToHclTerraform(this._targetTable.internalValue),
+        value: awsDataQualityRulesetTargetTablePropertyToHclTerraform(this._targetTable.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataQualityRuleset.TargetTablePropertyList",
+        storageClassType: "AwsDataQualityRuleset.TargetTablePropertyList",
       },
     };
 
@@ -328,7 +328,7 @@ export class TfDataQualityRuleset extends cdktn.TerraformResource {
   }
 }
 
-export function tfDataQualityRulesetTargetTablePropertyToTerraform(struct?: TfDataQualityRuleset.TargetTablePropertyOutputReference | TfDataQualityRuleset.TargetTableProperty): any {
+export function awsDataQualityRulesetTargetTablePropertyToTerraform(struct?: AwsDataQualityRuleset.TargetTablePropertyOutputReference | AwsDataQualityRuleset.TargetTableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function tfDataQualityRulesetTargetTablePropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataQualityRulesetTargetTablePropertyToHclTerraform(struct?: TfDataQualityRuleset.TargetTablePropertyOutputReference | TfDataQualityRuleset.TargetTableProperty): any {
+export function awsDataQualityRulesetTargetTablePropertyToHclTerraform(struct?: AwsDataQualityRuleset.TargetTablePropertyOutputReference | AwsDataQualityRuleset.TargetTableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,18 +372,18 @@ export function tfDataQualityRulesetTargetTablePropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfDataQualityRuleset {
+export namespace AwsDataQualityRuleset {
 export interface TargetTableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#catalog_id TfDataQualityRuleset#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#catalog_id AwsDataQualityRuleset#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#database_name TfDataQualityRuleset#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#database_name AwsDataQualityRuleset#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#table_name TfDataQualityRuleset#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_data_quality_ruleset#table_name AwsDataQualityRuleset#table_name}
   */
   readonly tableName: string;
 }

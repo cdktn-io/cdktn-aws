@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResolverFirewallRuleGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResolverFirewallRuleGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group#id TfResolverFirewallRuleGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group#id AwsResolverFirewallRuleGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group#name TfResolverFirewallRuleGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group#name AwsResolverFirewallRuleGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group#region TfResolverFirewallRuleGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group#region AwsResolverFirewallRuleGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group#tags TfResolverFirewallRuleGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group#tags AwsResolverFirewallRuleGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group#tags_all TfResolverFirewallRuleGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group#tags_all AwsResolverFirewallRuleGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface TfResolverFirewallRuleGroupConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group aws_route53_resolver_firewall_rule_group}
 */
-export class TfResolverFirewallRuleGroup extends cdktn.TerraformResource {
+export class AwsResolverFirewallRuleGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfResolverFirewallRuleGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResolverFirewallRuleGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResolverFirewallRuleGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResolverFirewallRuleGroup to import
-  * @param importFromId The id of the existing TfResolverFirewallRuleGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResolverFirewallRuleGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsResolverFirewallRuleGroup to import
+  * @param importFromId The id of the existing AwsResolverFirewallRuleGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResolverFirewallRuleGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_resolver_firewall_rule_group", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfResolverFirewallRuleGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResolverFirewallRuleGroupConfig
+  * @param options AwsResolverFirewallRuleGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResolverFirewallRuleGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResolverFirewallRuleGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_resolver_firewall_rule_group',
       terraformGeneratorMetadata: {

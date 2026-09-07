@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVoiceProfileDomainConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVoiceProfileDomainConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#description TfVoiceProfileDomain#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#description AwsVoiceProfileDomain#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#name TfVoiceProfileDomain#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#name AwsVoiceProfileDomain#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#region TfVoiceProfileDomain#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#region AwsVoiceProfileDomain#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#tags TfVoiceProfileDomain#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#tags AwsVoiceProfileDomain#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#tags_all TfVoiceProfileDomain#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#tags_all AwsVoiceProfileDomain#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * server_side_encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#server_side_encryption_configuration TfVoiceProfileDomain#server_side_encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#server_side_encryption_configuration AwsVoiceProfileDomain#server_side_encryption_configuration}
   */
-  readonly serverSideEncryptionConfiguration: TfVoiceProfileDomain.ServerSideEncryptionConfigurationProperty;
+  readonly serverSideEncryptionConfiguration: AwsVoiceProfileDomain.ServerSideEncryptionConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#timeouts TfVoiceProfileDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#timeouts AwsVoiceProfileDomain#timeouts}
   */
-  readonly timeouts?: TfVoiceProfileDomain.TimeoutsProperty;
+  readonly timeouts?: AwsVoiceProfileDomain.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain aws_chimesdkvoice_voice_profile_domain}
 */
-export class TfVoiceProfileDomain extends cdktn.TerraformResource {
+export class AwsVoiceProfileDomain extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class TfVoiceProfileDomain extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVoiceProfileDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVoiceProfileDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVoiceProfileDomain to import
-  * @param importFromId The id of the existing TfVoiceProfileDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVoiceProfileDomain to import is found
+  * @param importToId The construct id used in the generated config for the AwsVoiceProfileDomain to import
+  * @param importFromId The id of the existing AwsVoiceProfileDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVoiceProfileDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chimesdkvoice_voice_profile_domain", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class TfVoiceProfileDomain extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVoiceProfileDomainConfig
+  * @param options AwsVoiceProfileDomainConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVoiceProfileDomainConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVoiceProfileDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_chimesdkvoice_voice_profile_domain',
       terraformGeneratorMetadata: {
@@ -194,11 +194,11 @@ export class TfVoiceProfileDomain extends cdktn.TerraformResource {
   }
 
   // server_side_encryption_configuration - computed: false, optional: false, required: true
-  private _serverSideEncryptionConfiguration = new TfVoiceProfileDomain.ServerSideEncryptionConfigurationPropertyOutputReference(this, "server_side_encryption_configuration");
+  private _serverSideEncryptionConfiguration = new AwsVoiceProfileDomain.ServerSideEncryptionConfigurationPropertyOutputReference(this, "server_side_encryption_configuration");
   public get serverSideEncryptionConfiguration() {
     return this._serverSideEncryptionConfiguration;
   }
-  public putServerSideEncryptionConfiguration(value: TfVoiceProfileDomain.ServerSideEncryptionConfigurationProperty) {
+  public putServerSideEncryptionConfiguration(value: AwsVoiceProfileDomain.ServerSideEncryptionConfigurationProperty) {
     this._serverSideEncryptionConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -207,11 +207,11 @@ export class TfVoiceProfileDomain extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfVoiceProfileDomain.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsVoiceProfileDomain.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfVoiceProfileDomain.TimeoutsProperty) {
+  public putTimeouts(value: AwsVoiceProfileDomain.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -233,8 +233,8 @@ export class TfVoiceProfileDomain extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      server_side_encryption_configuration: tfVoiceProfileDomainServerSideEncryptionConfigurationPropertyToTerraform(this._serverSideEncryptionConfiguration.internalValue),
-      timeouts: tfVoiceProfileDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      server_side_encryption_configuration: awsVoiceProfileDomainServerSideEncryptionConfigurationPropertyToTerraform(this._serverSideEncryptionConfiguration.internalValue),
+      timeouts: awsVoiceProfileDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -271,16 +271,16 @@ export class TfVoiceProfileDomain extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       server_side_encryption_configuration: {
-        value: tfVoiceProfileDomainServerSideEncryptionConfigurationPropertyToHclTerraform(this._serverSideEncryptionConfiguration.internalValue),
+        value: awsVoiceProfileDomainServerSideEncryptionConfigurationPropertyToHclTerraform(this._serverSideEncryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfVoiceProfileDomain.ServerSideEncryptionConfigurationPropertyList",
+        storageClassType: "AwsVoiceProfileDomain.ServerSideEncryptionConfigurationPropertyList",
       },
       timeouts: {
-        value: tfVoiceProfileDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsVoiceProfileDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfVoiceProfileDomain.TimeoutsProperty",
+        storageClassType: "AwsVoiceProfileDomain.TimeoutsProperty",
       },
     };
 
@@ -289,7 +289,7 @@ export class TfVoiceProfileDomain extends cdktn.TerraformResource {
   }
 }
 
-export function tfVoiceProfileDomainServerSideEncryptionConfigurationPropertyToTerraform(struct?: TfVoiceProfileDomain.ServerSideEncryptionConfigurationPropertyOutputReference | TfVoiceProfileDomain.ServerSideEncryptionConfigurationProperty): any {
+export function awsVoiceProfileDomainServerSideEncryptionConfigurationPropertyToTerraform(struct?: AwsVoiceProfileDomain.ServerSideEncryptionConfigurationPropertyOutputReference | AwsVoiceProfileDomain.ServerSideEncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function tfVoiceProfileDomainServerSideEncryptionConfigurationPropertyToT
 }
 
 
-export function tfVoiceProfileDomainServerSideEncryptionConfigurationPropertyToHclTerraform(struct?: TfVoiceProfileDomain.ServerSideEncryptionConfigurationPropertyOutputReference | TfVoiceProfileDomain.ServerSideEncryptionConfigurationProperty): any {
+export function awsVoiceProfileDomainServerSideEncryptionConfigurationPropertyToHclTerraform(struct?: AwsVoiceProfileDomain.ServerSideEncryptionConfigurationPropertyOutputReference | AwsVoiceProfileDomain.ServerSideEncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function tfVoiceProfileDomainServerSideEncryptionConfigurationPropertyToH
 }
 
 
-export function tfVoiceProfileDomainTimeoutsPropertyToTerraform(struct?: TfVoiceProfileDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsVoiceProfileDomainTimeoutsPropertyToTerraform(struct?: AwsVoiceProfileDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function tfVoiceProfileDomainTimeoutsPropertyToTerraform(struct?: TfVoice
 }
 
 
-export function tfVoiceProfileDomainTimeoutsPropertyToHclTerraform(struct?: TfVoiceProfileDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsVoiceProfileDomainTimeoutsPropertyToHclTerraform(struct?: AwsVoiceProfileDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -363,10 +363,10 @@ export function tfVoiceProfileDomainTimeoutsPropertyToHclTerraform(struct?: TfVo
 }
 
 
-export namespace TfVoiceProfileDomain {
+export namespace AwsVoiceProfileDomain {
 export interface ServerSideEncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#kms_key_arn TfVoiceProfileDomain#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#kms_key_arn AwsVoiceProfileDomain#kms_key_arn}
   */
   readonly kmsKeyArn: string;
 }
@@ -417,15 +417,15 @@ export class ServerSideEncryptionConfigurationPropertyOutputReference extends cd
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#create TfVoiceProfileDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#create AwsVoiceProfileDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#delete TfVoiceProfileDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#delete AwsVoiceProfileDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#update TfVoiceProfileDomain#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_voice_profile_domain#update AwsVoiceProfileDomain#update}
   */
   readonly update?: string;
 }

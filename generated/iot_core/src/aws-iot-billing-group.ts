@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBillingGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBillingGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group#name TfBillingGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group#name AwsBillingGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group#region TfBillingGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group#region AwsBillingGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group#tags TfBillingGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group#tags AwsBillingGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group#properties TfBillingGroup#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group#properties AwsBillingGroup#properties}
   */
-  readonly properties?: TfBillingGroup.PropertiesProperty[] | cdktn.IResolvable;
+  readonly properties?: AwsBillingGroup.PropertiesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group aws_iot_billing_group}
 */
-export class TfBillingGroup extends cdktn.TerraformResource {
+export class AwsBillingGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class TfBillingGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBillingGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBillingGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBillingGroup to import
-  * @param importFromId The id of the existing TfBillingGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBillingGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsBillingGroup to import
+  * @param importFromId The id of the existing AwsBillingGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBillingGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_billing_group", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class TfBillingGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBillingGroupConfig
+  * @param options AwsBillingGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBillingGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBillingGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_billing_group',
       terraformGeneratorMetadata: {
@@ -100,7 +100,7 @@ export class TfBillingGroup extends cdktn.TerraformResource {
   }
 
   // metadata - computed: true, optional: false, required: false
-  private _metadata = new TfBillingGroup.MetadataPropertyList(this, "metadata", false);
+  private _metadata = new AwsBillingGroup.MetadataPropertyList(this, "metadata", false);
   public get metadata() {
     return this._metadata;
   }
@@ -162,11 +162,11 @@ export class TfBillingGroup extends cdktn.TerraformResource {
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties = new TfBillingGroup.PropertiesPropertyList(this, "properties", false);
+  private _properties = new AwsBillingGroup.PropertiesPropertyList(this, "properties", false);
   public get properties() {
     return this._properties;
   }
-  public putProperties(value: TfBillingGroup.PropertiesProperty[] | cdktn.IResolvable) {
+  public putProperties(value: AwsBillingGroup.PropertiesProperty[] | cdktn.IResolvable) {
     this._properties.internalValue = value;
   }
   public resetProperties() {
@@ -186,7 +186,7 @@ export class TfBillingGroup extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      properties: cdktn.listMapper(tfBillingGroupPropertiesPropertyToTerraform, true)(this._properties.internalValue),
+      properties: cdktn.listMapper(awsBillingGroupPropertiesPropertyToTerraform, true)(this._properties.internalValue),
     };
   }
 
@@ -211,10 +211,10 @@ export class TfBillingGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       properties: {
-        value: cdktn.listMapperHcl(tfBillingGroupPropertiesPropertyToHclTerraform, true)(this._properties.internalValue),
+        value: cdktn.listMapperHcl(awsBillingGroupPropertiesPropertyToHclTerraform, true)(this._properties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBillingGroup.PropertiesPropertyList",
+        storageClassType: "AwsBillingGroup.PropertiesPropertyList",
       },
     };
 
@@ -223,7 +223,7 @@ export class TfBillingGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfBillingGroupMetadataPropertyToTerraform(struct?: TfBillingGroup.MetadataProperty): any {
+export function awsBillingGroupMetadataPropertyToTerraform(struct?: AwsBillingGroup.MetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function tfBillingGroupMetadataPropertyToTerraform(struct?: TfBillingGrou
 }
 
 
-export function tfBillingGroupMetadataPropertyToHclTerraform(struct?: TfBillingGroup.MetadataProperty): any {
+export function awsBillingGroupMetadataPropertyToHclTerraform(struct?: AwsBillingGroup.MetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function tfBillingGroupMetadataPropertyToHclTerraform(struct?: TfBillingG
 }
 
 
-export function tfBillingGroupPropertiesPropertyToTerraform(struct?: TfBillingGroup.PropertiesProperty | cdktn.IResolvable): any {
+export function awsBillingGroupPropertiesPropertyToTerraform(struct?: AwsBillingGroup.PropertiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -255,7 +255,7 @@ export function tfBillingGroupPropertiesPropertyToTerraform(struct?: TfBillingGr
 }
 
 
-export function tfBillingGroupPropertiesPropertyToHclTerraform(struct?: TfBillingGroup.PropertiesProperty | cdktn.IResolvable): any {
+export function awsBillingGroupPropertiesPropertyToHclTerraform(struct?: AwsBillingGroup.PropertiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function tfBillingGroupPropertiesPropertyToHclTerraform(struct?: TfBillin
 }
 
 
-export namespace TfBillingGroup {
+export namespace AwsBillingGroup {
 export interface MetadataProperty {
 }
 export class MetadataPropertyOutputReference extends cdktn.ComplexObject {
@@ -331,7 +331,7 @@ export class MetadataPropertyList extends cdktn.ComplexList {
 }
 export interface PropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group#description TfBillingGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_billing_group#description AwsBillingGroup#description}
   */
   readonly description?: string;
 }

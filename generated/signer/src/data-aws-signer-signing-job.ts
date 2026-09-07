@@ -5,22 +5,22 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfSigningJobConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsSigningJobConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_job#id DataTfSigningJob#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_job#id DataAwsSigningJob#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_job#job_id DataTfSigningJob#job_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_job#job_id DataAwsSigningJob#job_id}
   */
   readonly jobId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_job#region DataTfSigningJob#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_job#region DataAwsSigningJob#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataTfSigningJobConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_job aws_signer_signing_job}
 */
-export class DataTfSigningJob extends cdktn.TerraformDataSource {
+export class DataAwsSigningJob extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataTfSigningJob extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfSigningJob resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsSigningJob resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfSigningJob to import
-  * @param importFromId The id of the existing DataTfSigningJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_job#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfSigningJob to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsSigningJob to import
+  * @param importFromId The id of the existing DataAwsSigningJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_job#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsSigningJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_signer_signing_job", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataTfSigningJob extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfSigningJobConfig
+  * @param options DataAwsSigningJobConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfSigningJobConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsSigningJobConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_signer_signing_job',
       terraformGeneratorMetadata: {
@@ -176,7 +176,7 @@ export class DataTfSigningJob extends cdktn.TerraformDataSource {
   }
 
   // revocation_record - computed: true, optional: false, required: false
-  private _revocationRecord = new DataTfSigningJob.RevocationRecordPropertyList(this, "revocation_record", false);
+  private _revocationRecord = new DataAwsSigningJob.RevocationRecordPropertyList(this, "revocation_record", false);
   public get revocationRecord() {
     return this._revocationRecord;
   }
@@ -187,13 +187,13 @@ export class DataTfSigningJob extends cdktn.TerraformDataSource {
   }
 
   // signed_object - computed: true, optional: false, required: false
-  private _signedObject = new DataTfSigningJob.SignedObjectPropertyList(this, "signed_object", false);
+  private _signedObject = new DataAwsSigningJob.SignedObjectPropertyList(this, "signed_object", false);
   public get signedObject() {
     return this._signedObject;
   }
 
   // source - computed: true, optional: false, required: false
-  private _source = new DataTfSigningJob.SourcePropertyList(this, "source", false);
+  private _source = new DataAwsSigningJob.SourcePropertyList(this, "source", false);
   public get source() {
     return this._source;
   }
@@ -247,7 +247,7 @@ export class DataTfSigningJob extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfSigningJobRevocationRecordPropertyToTerraform(struct?: DataTfSigningJob.RevocationRecordProperty): any {
+export function dataAwsSigningJobRevocationRecordPropertyToTerraform(struct?: DataAwsSigningJob.RevocationRecordProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -257,7 +257,7 @@ export function dataTfSigningJobRevocationRecordPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfSigningJobRevocationRecordPropertyToHclTerraform(struct?: DataTfSigningJob.RevocationRecordProperty): any {
+export function dataAwsSigningJobRevocationRecordPropertyToHclTerraform(struct?: DataAwsSigningJob.RevocationRecordProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function dataTfSigningJobRevocationRecordPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataTfSigningJobSignedObjectS3PropertyToTerraform(struct?: DataTfSigningJob.SignedObjectS3Property): any {
+export function dataAwsSigningJobSignedObjectS3PropertyToTerraform(struct?: DataAwsSigningJob.SignedObjectS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,7 +278,7 @@ export function dataTfSigningJobSignedObjectS3PropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfSigningJobSignedObjectS3PropertyToHclTerraform(struct?: DataTfSigningJob.SignedObjectS3Property): any {
+export function dataAwsSigningJobSignedObjectS3PropertyToHclTerraform(struct?: DataAwsSigningJob.SignedObjectS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,7 +289,7 @@ export function dataTfSigningJobSignedObjectS3PropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfSigningJobSignedObjectPropertyToTerraform(struct?: DataTfSigningJob.SignedObjectProperty): any {
+export function dataAwsSigningJobSignedObjectPropertyToTerraform(struct?: DataAwsSigningJob.SignedObjectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function dataTfSigningJobSignedObjectPropertyToTerraform(struct?: DataTfS
 }
 
 
-export function dataTfSigningJobSignedObjectPropertyToHclTerraform(struct?: DataTfSigningJob.SignedObjectProperty): any {
+export function dataAwsSigningJobSignedObjectPropertyToHclTerraform(struct?: DataAwsSigningJob.SignedObjectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,7 +310,7 @@ export function dataTfSigningJobSignedObjectPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataTfSigningJobSourceS3PropertyToTerraform(struct?: DataTfSigningJob.SourceS3Property): any {
+export function dataAwsSigningJobSourceS3PropertyToTerraform(struct?: DataAwsSigningJob.SourceS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,7 +320,7 @@ export function dataTfSigningJobSourceS3PropertyToTerraform(struct?: DataTfSigni
 }
 
 
-export function dataTfSigningJobSourceS3PropertyToHclTerraform(struct?: DataTfSigningJob.SourceS3Property): any {
+export function dataAwsSigningJobSourceS3PropertyToHclTerraform(struct?: DataAwsSigningJob.SourceS3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,7 +331,7 @@ export function dataTfSigningJobSourceS3PropertyToHclTerraform(struct?: DataTfSi
 }
 
 
-export function dataTfSigningJobSourcePropertyToTerraform(struct?: DataTfSigningJob.SourceProperty): any {
+export function dataAwsSigningJobSourcePropertyToTerraform(struct?: DataAwsSigningJob.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function dataTfSigningJobSourcePropertyToTerraform(struct?: DataTfSigning
 }
 
 
-export function dataTfSigningJobSourcePropertyToHclTerraform(struct?: DataTfSigningJob.SourceProperty): any {
+export function dataAwsSigningJobSourcePropertyToHclTerraform(struct?: DataAwsSigningJob.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -352,7 +352,7 @@ export function dataTfSigningJobSourcePropertyToHclTerraform(struct?: DataTfSign
 }
 
 
-export namespace DataTfSigningJob {
+export namespace DataAwsSigningJob {
 export interface RevocationRecordProperty {
 }
 export class RevocationRecordPropertyOutputReference extends cdktn.ComplexObject {

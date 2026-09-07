@@ -5,100 +5,100 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPipeConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPipeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#description TfPipe#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#description AwsPipe#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#desired_state TfPipe#desired_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#desired_state AwsPipe#desired_state}
   */
   readonly desiredState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#enrichment TfPipe#enrichment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#enrichment AwsPipe#enrichment}
   */
   readonly enrichment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#id TfPipe#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#id AwsPipe#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#kms_key_identifier TfPipe#kms_key_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#kms_key_identifier AwsPipe#kms_key_identifier}
   */
   readonly kmsKeyIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#name TfPipe#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#name AwsPipe#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#name_prefix TfPipe#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#name_prefix AwsPipe#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#region TfPipe#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#region AwsPipe#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#role_arn TfPipe#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#role_arn AwsPipe#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#source TfPipe#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#source AwsPipe#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#tags TfPipe#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#tags AwsPipe#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#tags_all TfPipe#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#tags_all AwsPipe#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#target TfPipe#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#target AwsPipe#target}
   */
   readonly target: string;
   /**
   * enrichment_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#enrichment_parameters TfPipe#enrichment_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#enrichment_parameters AwsPipe#enrichment_parameters}
   */
-  readonly enrichmentParameters?: TfPipe.EnrichmentParametersProperty;
+  readonly enrichmentParameters?: AwsPipe.EnrichmentParametersProperty;
   /**
   * log_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#log_configuration TfPipe#log_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#log_configuration AwsPipe#log_configuration}
   */
-  readonly logConfiguration?: TfPipe.LogConfigurationProperty;
+  readonly logConfiguration?: AwsPipe.LogConfigurationProperty;
   /**
   * source_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#source_parameters TfPipe#source_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#source_parameters AwsPipe#source_parameters}
   */
-  readonly sourceParameters?: TfPipe.SourceParametersProperty;
+  readonly sourceParameters?: AwsPipe.SourceParametersProperty;
   /**
   * target_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#target_parameters TfPipe#target_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#target_parameters AwsPipe#target_parameters}
   */
-  readonly targetParameters?: TfPipe.TargetParametersProperty;
+  readonly targetParameters?: AwsPipe.TargetParametersProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#timeouts TfPipe#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#timeouts AwsPipe#timeouts}
   */
-  readonly timeouts?: TfPipe.TimeoutsProperty;
+  readonly timeouts?: AwsPipe.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe aws_pipes_pipe}
 */
-export class TfPipe extends cdktn.TerraformResource {
+export class AwsPipe extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -109,11 +109,11 @@ export class TfPipe extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPipe resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPipe resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPipe to import
-  * @param importFromId The id of the existing TfPipe that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPipe to import is found
+  * @param importToId The construct id used in the generated config for the AwsPipe to import
+  * @param importFromId The id of the existing AwsPipe that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPipe to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pipes_pipe", importId: importFromId, provider });
@@ -128,9 +128,9 @@ export class TfPipe extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPipeConfig
+  * @param options AwsPipeConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPipeConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPipeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pipes_pipe',
       terraformGeneratorMetadata: {
@@ -375,11 +375,11 @@ export class TfPipe extends cdktn.TerraformResource {
   }
 
   // enrichment_parameters - computed: false, optional: true, required: false
-  private _enrichmentParameters = new TfPipe.EnrichmentParametersPropertyOutputReference(this, "enrichment_parameters");
+  private _enrichmentParameters = new AwsPipe.EnrichmentParametersPropertyOutputReference(this, "enrichment_parameters");
   public get enrichmentParameters() {
     return this._enrichmentParameters;
   }
-  public putEnrichmentParameters(value: TfPipe.EnrichmentParametersProperty) {
+  public putEnrichmentParameters(value: AwsPipe.EnrichmentParametersProperty) {
     this._enrichmentParameters.internalValue = value;
   }
   public resetEnrichmentParameters() {
@@ -391,11 +391,11 @@ export class TfPipe extends cdktn.TerraformResource {
   }
 
   // log_configuration - computed: false, optional: true, required: false
-  private _logConfiguration = new TfPipe.LogConfigurationPropertyOutputReference(this, "log_configuration");
+  private _logConfiguration = new AwsPipe.LogConfigurationPropertyOutputReference(this, "log_configuration");
   public get logConfiguration() {
     return this._logConfiguration;
   }
-  public putLogConfiguration(value: TfPipe.LogConfigurationProperty) {
+  public putLogConfiguration(value: AwsPipe.LogConfigurationProperty) {
     this._logConfiguration.internalValue = value;
   }
   public resetLogConfiguration() {
@@ -407,11 +407,11 @@ export class TfPipe extends cdktn.TerraformResource {
   }
 
   // source_parameters - computed: false, optional: true, required: false
-  private _sourceParameters = new TfPipe.SourceParametersPropertyOutputReference(this, "source_parameters");
+  private _sourceParameters = new AwsPipe.SourceParametersPropertyOutputReference(this, "source_parameters");
   public get sourceParameters() {
     return this._sourceParameters;
   }
-  public putSourceParameters(value: TfPipe.SourceParametersProperty) {
+  public putSourceParameters(value: AwsPipe.SourceParametersProperty) {
     this._sourceParameters.internalValue = value;
   }
   public resetSourceParameters() {
@@ -423,11 +423,11 @@ export class TfPipe extends cdktn.TerraformResource {
   }
 
   // target_parameters - computed: false, optional: true, required: false
-  private _targetParameters = new TfPipe.TargetParametersPropertyOutputReference(this, "target_parameters");
+  private _targetParameters = new AwsPipe.TargetParametersPropertyOutputReference(this, "target_parameters");
   public get targetParameters() {
     return this._targetParameters;
   }
-  public putTargetParameters(value: TfPipe.TargetParametersProperty) {
+  public putTargetParameters(value: AwsPipe.TargetParametersProperty) {
     this._targetParameters.internalValue = value;
   }
   public resetTargetParameters() {
@@ -439,11 +439,11 @@ export class TfPipe extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPipe.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPipe.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPipe.TimeoutsProperty) {
+  public putTimeouts(value: AwsPipe.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -473,11 +473,11 @@ export class TfPipe extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       target: cdktn.stringToTerraform(this._target),
-      enrichment_parameters: tfPipeEnrichmentParametersPropertyToTerraform(this._enrichmentParameters.internalValue),
-      log_configuration: tfPipeLogConfigurationPropertyToTerraform(this._logConfiguration.internalValue),
-      source_parameters: tfPipeSourceParametersPropertyToTerraform(this._sourceParameters.internalValue),
-      target_parameters: tfPipeTargetParametersPropertyToTerraform(this._targetParameters.internalValue),
-      timeouts: tfPipeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      enrichment_parameters: awsPipeEnrichmentParametersPropertyToTerraform(this._enrichmentParameters.internalValue),
+      log_configuration: awsPipeLogConfigurationPropertyToTerraform(this._logConfiguration.internalValue),
+      source_parameters: awsPipeSourceParametersPropertyToTerraform(this._sourceParameters.internalValue),
+      target_parameters: awsPipeTargetParametersPropertyToTerraform(this._targetParameters.internalValue),
+      timeouts: awsPipeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -562,34 +562,34 @@ export class TfPipe extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       enrichment_parameters: {
-        value: tfPipeEnrichmentParametersPropertyToHclTerraform(this._enrichmentParameters.internalValue),
+        value: awsPipeEnrichmentParametersPropertyToHclTerraform(this._enrichmentParameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipe.EnrichmentParametersPropertyList",
+        storageClassType: "AwsPipe.EnrichmentParametersPropertyList",
       },
       log_configuration: {
-        value: tfPipeLogConfigurationPropertyToHclTerraform(this._logConfiguration.internalValue),
+        value: awsPipeLogConfigurationPropertyToHclTerraform(this._logConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipe.LogConfigurationPropertyList",
+        storageClassType: "AwsPipe.LogConfigurationPropertyList",
       },
       source_parameters: {
-        value: tfPipeSourceParametersPropertyToHclTerraform(this._sourceParameters.internalValue),
+        value: awsPipeSourceParametersPropertyToHclTerraform(this._sourceParameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipe.SourceParametersPropertyList",
+        storageClassType: "AwsPipe.SourceParametersPropertyList",
       },
       target_parameters: {
-        value: tfPipeTargetParametersPropertyToHclTerraform(this._targetParameters.internalValue),
+        value: awsPipeTargetParametersPropertyToHclTerraform(this._targetParameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipe.TargetParametersPropertyList",
+        storageClassType: "AwsPipe.TargetParametersPropertyList",
       },
       timeouts: {
-        value: tfPipeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPipeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPipe.TimeoutsProperty",
+        storageClassType: "AwsPipe.TimeoutsProperty",
       },
     };
 
@@ -598,7 +598,7 @@ export class TfPipe extends cdktn.TerraformResource {
   }
 }
 
-export function tfPipeEnrichmentParametersHttpParametersPropertyToTerraform(struct?: TfPipe.EnrichmentParametersHttpParametersPropertyOutputReference | TfPipe.EnrichmentParametersHttpParametersProperty): any {
+export function awsPipeEnrichmentParametersHttpParametersPropertyToTerraform(struct?: AwsPipe.EnrichmentParametersHttpParametersPropertyOutputReference | AwsPipe.EnrichmentParametersHttpParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,7 +611,7 @@ export function tfPipeEnrichmentParametersHttpParametersPropertyToTerraform(stru
 }
 
 
-export function tfPipeEnrichmentParametersHttpParametersPropertyToHclTerraform(struct?: TfPipe.EnrichmentParametersHttpParametersPropertyOutputReference | TfPipe.EnrichmentParametersHttpParametersProperty): any {
+export function awsPipeEnrichmentParametersHttpParametersPropertyToHclTerraform(struct?: AwsPipe.EnrichmentParametersHttpParametersPropertyOutputReference | AwsPipe.EnrichmentParametersHttpParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -642,19 +642,19 @@ export function tfPipeEnrichmentParametersHttpParametersPropertyToHclTerraform(s
 }
 
 
-export function tfPipeEnrichmentParametersPropertyToTerraform(struct?: TfPipe.EnrichmentParametersPropertyOutputReference | TfPipe.EnrichmentParametersProperty): any {
+export function awsPipeEnrichmentParametersPropertyToTerraform(struct?: AwsPipe.EnrichmentParametersPropertyOutputReference | AwsPipe.EnrichmentParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     input_template: cdktn.stringToTerraform(struct!.inputTemplate),
-    http_parameters: tfPipeEnrichmentParametersHttpParametersPropertyToTerraform(struct!.httpParameters),
+    http_parameters: awsPipeEnrichmentParametersHttpParametersPropertyToTerraform(struct!.httpParameters),
   }
 }
 
 
-export function tfPipeEnrichmentParametersPropertyToHclTerraform(struct?: TfPipe.EnrichmentParametersPropertyOutputReference | TfPipe.EnrichmentParametersProperty): any {
+export function awsPipeEnrichmentParametersPropertyToHclTerraform(struct?: AwsPipe.EnrichmentParametersPropertyOutputReference | AwsPipe.EnrichmentParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -667,7 +667,7 @@ export function tfPipeEnrichmentParametersPropertyToHclTerraform(struct?: TfPipe
       storageClassType: "string",
     },
     http_parameters: {
-      value: tfPipeEnrichmentParametersHttpParametersPropertyToHclTerraform(struct!.httpParameters),
+      value: awsPipeEnrichmentParametersHttpParametersPropertyToHclTerraform(struct!.httpParameters),
       isBlock: true,
       type: "list",
       storageClassType: "EnrichmentParametersHttpParametersPropertyList",
@@ -679,7 +679,7 @@ export function tfPipeEnrichmentParametersPropertyToHclTerraform(struct?: TfPipe
 }
 
 
-export function tfPipeCloudwatchLogsLogDestinationPropertyToTerraform(struct?: TfPipe.CloudwatchLogsLogDestinationPropertyOutputReference | TfPipe.CloudwatchLogsLogDestinationProperty): any {
+export function awsPipeCloudwatchLogsLogDestinationPropertyToTerraform(struct?: AwsPipe.CloudwatchLogsLogDestinationPropertyOutputReference | AwsPipe.CloudwatchLogsLogDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -690,7 +690,7 @@ export function tfPipeCloudwatchLogsLogDestinationPropertyToTerraform(struct?: T
 }
 
 
-export function tfPipeCloudwatchLogsLogDestinationPropertyToHclTerraform(struct?: TfPipe.CloudwatchLogsLogDestinationPropertyOutputReference | TfPipe.CloudwatchLogsLogDestinationProperty): any {
+export function awsPipeCloudwatchLogsLogDestinationPropertyToHclTerraform(struct?: AwsPipe.CloudwatchLogsLogDestinationPropertyOutputReference | AwsPipe.CloudwatchLogsLogDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -709,7 +709,7 @@ export function tfPipeCloudwatchLogsLogDestinationPropertyToHclTerraform(struct?
 }
 
 
-export function tfPipeFirehoseLogDestinationPropertyToTerraform(struct?: TfPipe.FirehoseLogDestinationPropertyOutputReference | TfPipe.FirehoseLogDestinationProperty): any {
+export function awsPipeFirehoseLogDestinationPropertyToTerraform(struct?: AwsPipe.FirehoseLogDestinationPropertyOutputReference | AwsPipe.FirehoseLogDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -720,7 +720,7 @@ export function tfPipeFirehoseLogDestinationPropertyToTerraform(struct?: TfPipe.
 }
 
 
-export function tfPipeFirehoseLogDestinationPropertyToHclTerraform(struct?: TfPipe.FirehoseLogDestinationPropertyOutputReference | TfPipe.FirehoseLogDestinationProperty): any {
+export function awsPipeFirehoseLogDestinationPropertyToHclTerraform(struct?: AwsPipe.FirehoseLogDestinationPropertyOutputReference | AwsPipe.FirehoseLogDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -739,7 +739,7 @@ export function tfPipeFirehoseLogDestinationPropertyToHclTerraform(struct?: TfPi
 }
 
 
-export function tfPipeS3LogDestinationPropertyToTerraform(struct?: TfPipe.S3LogDestinationPropertyOutputReference | TfPipe.S3LogDestinationProperty): any {
+export function awsPipeS3LogDestinationPropertyToTerraform(struct?: AwsPipe.S3LogDestinationPropertyOutputReference | AwsPipe.S3LogDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -753,7 +753,7 @@ export function tfPipeS3LogDestinationPropertyToTerraform(struct?: TfPipe.S3LogD
 }
 
 
-export function tfPipeS3LogDestinationPropertyToHclTerraform(struct?: TfPipe.S3LogDestinationPropertyOutputReference | TfPipe.S3LogDestinationProperty): any {
+export function awsPipeS3LogDestinationPropertyToHclTerraform(struct?: AwsPipe.S3LogDestinationPropertyOutputReference | AwsPipe.S3LogDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -790,7 +790,7 @@ export function tfPipeS3LogDestinationPropertyToHclTerraform(struct?: TfPipe.S3L
 }
 
 
-export function tfPipeLogConfigurationPropertyToTerraform(struct?: TfPipe.LogConfigurationPropertyOutputReference | TfPipe.LogConfigurationProperty): any {
+export function awsPipeLogConfigurationPropertyToTerraform(struct?: AwsPipe.LogConfigurationPropertyOutputReference | AwsPipe.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -798,14 +798,14 @@ export function tfPipeLogConfigurationPropertyToTerraform(struct?: TfPipe.LogCon
   return {
     include_execution_data: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.includeExecutionData),
     level: cdktn.stringToTerraform(struct!.level),
-    cloudwatch_logs_log_destination: tfPipeCloudwatchLogsLogDestinationPropertyToTerraform(struct!.cloudwatchLogsLogDestination),
-    firehose_log_destination: tfPipeFirehoseLogDestinationPropertyToTerraform(struct!.firehoseLogDestination),
-    s3_log_destination: tfPipeS3LogDestinationPropertyToTerraform(struct!.s3LogDestination),
+    cloudwatch_logs_log_destination: awsPipeCloudwatchLogsLogDestinationPropertyToTerraform(struct!.cloudwatchLogsLogDestination),
+    firehose_log_destination: awsPipeFirehoseLogDestinationPropertyToTerraform(struct!.firehoseLogDestination),
+    s3_log_destination: awsPipeS3LogDestinationPropertyToTerraform(struct!.s3LogDestination),
   }
 }
 
 
-export function tfPipeLogConfigurationPropertyToHclTerraform(struct?: TfPipe.LogConfigurationPropertyOutputReference | TfPipe.LogConfigurationProperty): any {
+export function awsPipeLogConfigurationPropertyToHclTerraform(struct?: AwsPipe.LogConfigurationPropertyOutputReference | AwsPipe.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -824,19 +824,19 @@ export function tfPipeLogConfigurationPropertyToHclTerraform(struct?: TfPipe.Log
       storageClassType: "string",
     },
     cloudwatch_logs_log_destination: {
-      value: tfPipeCloudwatchLogsLogDestinationPropertyToHclTerraform(struct!.cloudwatchLogsLogDestination),
+      value: awsPipeCloudwatchLogsLogDestinationPropertyToHclTerraform(struct!.cloudwatchLogsLogDestination),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsLogDestinationPropertyList",
     },
     firehose_log_destination: {
-      value: tfPipeFirehoseLogDestinationPropertyToHclTerraform(struct!.firehoseLogDestination),
+      value: awsPipeFirehoseLogDestinationPropertyToHclTerraform(struct!.firehoseLogDestination),
       isBlock: true,
       type: "list",
       storageClassType: "FirehoseLogDestinationPropertyList",
     },
     s3_log_destination: {
-      value: tfPipeS3LogDestinationPropertyToHclTerraform(struct!.s3LogDestination),
+      value: awsPipeS3LogDestinationPropertyToHclTerraform(struct!.s3LogDestination),
       isBlock: true,
       type: "list",
       storageClassType: "S3LogDestinationPropertyList",
@@ -848,7 +848,7 @@ export function tfPipeLogConfigurationPropertyToHclTerraform(struct?: TfPipe.Log
 }
 
 
-export function tfPipeSourceParametersActivemqBrokerParametersCredentialsPropertyToTerraform(struct?: TfPipe.SourceParametersActivemqBrokerParametersCredentialsPropertyOutputReference | TfPipe.SourceParametersActivemqBrokerParametersCredentialsProperty): any {
+export function awsPipeSourceParametersActivemqBrokerParametersCredentialsPropertyToTerraform(struct?: AwsPipe.SourceParametersActivemqBrokerParametersCredentialsPropertyOutputReference | AwsPipe.SourceParametersActivemqBrokerParametersCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -859,7 +859,7 @@ export function tfPipeSourceParametersActivemqBrokerParametersCredentialsPropert
 }
 
 
-export function tfPipeSourceParametersActivemqBrokerParametersCredentialsPropertyToHclTerraform(struct?: TfPipe.SourceParametersActivemqBrokerParametersCredentialsPropertyOutputReference | TfPipe.SourceParametersActivemqBrokerParametersCredentialsProperty): any {
+export function awsPipeSourceParametersActivemqBrokerParametersCredentialsPropertyToHclTerraform(struct?: AwsPipe.SourceParametersActivemqBrokerParametersCredentialsPropertyOutputReference | AwsPipe.SourceParametersActivemqBrokerParametersCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -878,7 +878,7 @@ export function tfPipeSourceParametersActivemqBrokerParametersCredentialsPropert
 }
 
 
-export function tfPipeActivemqBrokerParametersPropertyToTerraform(struct?: TfPipe.ActivemqBrokerParametersPropertyOutputReference | TfPipe.ActivemqBrokerParametersProperty): any {
+export function awsPipeActivemqBrokerParametersPropertyToTerraform(struct?: AwsPipe.ActivemqBrokerParametersPropertyOutputReference | AwsPipe.ActivemqBrokerParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -887,12 +887,12 @@ export function tfPipeActivemqBrokerParametersPropertyToTerraform(struct?: TfPip
     batch_size: cdktn.numberToTerraform(struct!.batchSize),
     maximum_batching_window_in_seconds: cdktn.numberToTerraform(struct!.maximumBatchingWindowInSeconds),
     queue_name: cdktn.stringToTerraform(struct!.queueName),
-    credentials: tfPipeSourceParametersActivemqBrokerParametersCredentialsPropertyToTerraform(struct!.credentials),
+    credentials: awsPipeSourceParametersActivemqBrokerParametersCredentialsPropertyToTerraform(struct!.credentials),
   }
 }
 
 
-export function tfPipeActivemqBrokerParametersPropertyToHclTerraform(struct?: TfPipe.ActivemqBrokerParametersPropertyOutputReference | TfPipe.ActivemqBrokerParametersProperty): any {
+export function awsPipeActivemqBrokerParametersPropertyToHclTerraform(struct?: AwsPipe.ActivemqBrokerParametersPropertyOutputReference | AwsPipe.ActivemqBrokerParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -917,7 +917,7 @@ export function tfPipeActivemqBrokerParametersPropertyToHclTerraform(struct?: Tf
       storageClassType: "string",
     },
     credentials: {
-      value: tfPipeSourceParametersActivemqBrokerParametersCredentialsPropertyToHclTerraform(struct!.credentials),
+      value: awsPipeSourceParametersActivemqBrokerParametersCredentialsPropertyToHclTerraform(struct!.credentials),
       isBlock: true,
       type: "list",
       storageClassType: "SourceParametersActivemqBrokerParametersCredentialsPropertyList",
@@ -929,7 +929,7 @@ export function tfPipeActivemqBrokerParametersPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfPipeSourceParametersDynamodbStreamParametersDeadLetterConfigPropertyToTerraform(struct?: TfPipe.SourceParametersDynamodbStreamParametersDeadLetterConfigPropertyOutputReference | TfPipe.SourceParametersDynamodbStreamParametersDeadLetterConfigProperty): any {
+export function awsPipeSourceParametersDynamodbStreamParametersDeadLetterConfigPropertyToTerraform(struct?: AwsPipe.SourceParametersDynamodbStreamParametersDeadLetterConfigPropertyOutputReference | AwsPipe.SourceParametersDynamodbStreamParametersDeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -940,7 +940,7 @@ export function tfPipeSourceParametersDynamodbStreamParametersDeadLetterConfigPr
 }
 
 
-export function tfPipeSourceParametersDynamodbStreamParametersDeadLetterConfigPropertyToHclTerraform(struct?: TfPipe.SourceParametersDynamodbStreamParametersDeadLetterConfigPropertyOutputReference | TfPipe.SourceParametersDynamodbStreamParametersDeadLetterConfigProperty): any {
+export function awsPipeSourceParametersDynamodbStreamParametersDeadLetterConfigPropertyToHclTerraform(struct?: AwsPipe.SourceParametersDynamodbStreamParametersDeadLetterConfigPropertyOutputReference | AwsPipe.SourceParametersDynamodbStreamParametersDeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -959,7 +959,7 @@ export function tfPipeSourceParametersDynamodbStreamParametersDeadLetterConfigPr
 }
 
 
-export function tfPipeDynamodbStreamParametersPropertyToTerraform(struct?: TfPipe.DynamodbStreamParametersPropertyOutputReference | TfPipe.DynamodbStreamParametersProperty): any {
+export function awsPipeDynamodbStreamParametersPropertyToTerraform(struct?: AwsPipe.DynamodbStreamParametersPropertyOutputReference | AwsPipe.DynamodbStreamParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -972,12 +972,12 @@ export function tfPipeDynamodbStreamParametersPropertyToTerraform(struct?: TfPip
     on_partial_batch_item_failure: cdktn.stringToTerraform(struct!.onPartialBatchItemFailure),
     parallelization_factor: cdktn.numberToTerraform(struct!.parallelizationFactor),
     starting_position: cdktn.stringToTerraform(struct!.startingPosition),
-    dead_letter_config: tfPipeSourceParametersDynamodbStreamParametersDeadLetterConfigPropertyToTerraform(struct!.deadLetterConfig),
+    dead_letter_config: awsPipeSourceParametersDynamodbStreamParametersDeadLetterConfigPropertyToTerraform(struct!.deadLetterConfig),
   }
 }
 
 
-export function tfPipeDynamodbStreamParametersPropertyToHclTerraform(struct?: TfPipe.DynamodbStreamParametersPropertyOutputReference | TfPipe.DynamodbStreamParametersProperty): any {
+export function awsPipeDynamodbStreamParametersPropertyToHclTerraform(struct?: AwsPipe.DynamodbStreamParametersPropertyOutputReference | AwsPipe.DynamodbStreamParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1026,7 +1026,7 @@ export function tfPipeDynamodbStreamParametersPropertyToHclTerraform(struct?: Tf
       storageClassType: "string",
     },
     dead_letter_config: {
-      value: tfPipeSourceParametersDynamodbStreamParametersDeadLetterConfigPropertyToHclTerraform(struct!.deadLetterConfig),
+      value: awsPipeSourceParametersDynamodbStreamParametersDeadLetterConfigPropertyToHclTerraform(struct!.deadLetterConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SourceParametersDynamodbStreamParametersDeadLetterConfigPropertyList",
@@ -1038,7 +1038,7 @@ export function tfPipeDynamodbStreamParametersPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfPipeFilterPropertyToTerraform(struct?: TfPipe.FilterProperty | cdktn.IResolvable): any {
+export function awsPipeFilterPropertyToTerraform(struct?: AwsPipe.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1049,7 +1049,7 @@ export function tfPipeFilterPropertyToTerraform(struct?: TfPipe.FilterProperty |
 }
 
 
-export function tfPipeFilterPropertyToHclTerraform(struct?: TfPipe.FilterProperty | cdktn.IResolvable): any {
+export function awsPipeFilterPropertyToHclTerraform(struct?: AwsPipe.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1068,25 +1068,25 @@ export function tfPipeFilterPropertyToHclTerraform(struct?: TfPipe.FilterPropert
 }
 
 
-export function tfPipeFilterCriteriaPropertyToTerraform(struct?: TfPipe.FilterCriteriaPropertyOutputReference | TfPipe.FilterCriteriaProperty): any {
+export function awsPipeFilterCriteriaPropertyToTerraform(struct?: AwsPipe.FilterCriteriaPropertyOutputReference | AwsPipe.FilterCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    filter: cdktn.listMapper(tfPipeFilterPropertyToTerraform, true)(struct!.filter),
+    filter: cdktn.listMapper(awsPipeFilterPropertyToTerraform, true)(struct!.filter),
   }
 }
 
 
-export function tfPipeFilterCriteriaPropertyToHclTerraform(struct?: TfPipe.FilterCriteriaPropertyOutputReference | TfPipe.FilterCriteriaProperty): any {
+export function awsPipeFilterCriteriaPropertyToHclTerraform(struct?: AwsPipe.FilterCriteriaPropertyOutputReference | AwsPipe.FilterCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     filter: {
-      value: cdktn.listMapperHcl(tfPipeFilterPropertyToHclTerraform, true)(struct!.filter),
+      value: cdktn.listMapperHcl(awsPipeFilterPropertyToHclTerraform, true)(struct!.filter),
       isBlock: true,
       type: "list",
       storageClassType: "FilterPropertyList",
@@ -1098,7 +1098,7 @@ export function tfPipeFilterCriteriaPropertyToHclTerraform(struct?: TfPipe.Filte
 }
 
 
-export function tfPipeSourceParametersKinesisStreamParametersDeadLetterConfigPropertyToTerraform(struct?: TfPipe.SourceParametersKinesisStreamParametersDeadLetterConfigPropertyOutputReference | TfPipe.SourceParametersKinesisStreamParametersDeadLetterConfigProperty): any {
+export function awsPipeSourceParametersKinesisStreamParametersDeadLetterConfigPropertyToTerraform(struct?: AwsPipe.SourceParametersKinesisStreamParametersDeadLetterConfigPropertyOutputReference | AwsPipe.SourceParametersKinesisStreamParametersDeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1109,7 +1109,7 @@ export function tfPipeSourceParametersKinesisStreamParametersDeadLetterConfigPro
 }
 
 
-export function tfPipeSourceParametersKinesisStreamParametersDeadLetterConfigPropertyToHclTerraform(struct?: TfPipe.SourceParametersKinesisStreamParametersDeadLetterConfigPropertyOutputReference | TfPipe.SourceParametersKinesisStreamParametersDeadLetterConfigProperty): any {
+export function awsPipeSourceParametersKinesisStreamParametersDeadLetterConfigPropertyToHclTerraform(struct?: AwsPipe.SourceParametersKinesisStreamParametersDeadLetterConfigPropertyOutputReference | AwsPipe.SourceParametersKinesisStreamParametersDeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1128,7 +1128,7 @@ export function tfPipeSourceParametersKinesisStreamParametersDeadLetterConfigPro
 }
 
 
-export function tfPipeSourceParametersKinesisStreamParametersPropertyToTerraform(struct?: TfPipe.SourceParametersKinesisStreamParametersPropertyOutputReference | TfPipe.SourceParametersKinesisStreamParametersProperty): any {
+export function awsPipeSourceParametersKinesisStreamParametersPropertyToTerraform(struct?: AwsPipe.SourceParametersKinesisStreamParametersPropertyOutputReference | AwsPipe.SourceParametersKinesisStreamParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1142,12 +1142,12 @@ export function tfPipeSourceParametersKinesisStreamParametersPropertyToTerraform
     parallelization_factor: cdktn.numberToTerraform(struct!.parallelizationFactor),
     starting_position: cdktn.stringToTerraform(struct!.startingPosition),
     starting_position_timestamp: cdktn.stringToTerraform(struct!.startingPositionTimestamp),
-    dead_letter_config: tfPipeSourceParametersKinesisStreamParametersDeadLetterConfigPropertyToTerraform(struct!.deadLetterConfig),
+    dead_letter_config: awsPipeSourceParametersKinesisStreamParametersDeadLetterConfigPropertyToTerraform(struct!.deadLetterConfig),
   }
 }
 
 
-export function tfPipeSourceParametersKinesisStreamParametersPropertyToHclTerraform(struct?: TfPipe.SourceParametersKinesisStreamParametersPropertyOutputReference | TfPipe.SourceParametersKinesisStreamParametersProperty): any {
+export function awsPipeSourceParametersKinesisStreamParametersPropertyToHclTerraform(struct?: AwsPipe.SourceParametersKinesisStreamParametersPropertyOutputReference | AwsPipe.SourceParametersKinesisStreamParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1202,7 +1202,7 @@ export function tfPipeSourceParametersKinesisStreamParametersPropertyToHclTerraf
       storageClassType: "string",
     },
     dead_letter_config: {
-      value: tfPipeSourceParametersKinesisStreamParametersDeadLetterConfigPropertyToHclTerraform(struct!.deadLetterConfig),
+      value: awsPipeSourceParametersKinesisStreamParametersDeadLetterConfigPropertyToHclTerraform(struct!.deadLetterConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SourceParametersKinesisStreamParametersDeadLetterConfigPropertyList",
@@ -1214,7 +1214,7 @@ export function tfPipeSourceParametersKinesisStreamParametersPropertyToHclTerraf
 }
 
 
-export function tfPipeSourceParametersManagedStreamingKafkaParametersCredentialsPropertyToTerraform(struct?: TfPipe.SourceParametersManagedStreamingKafkaParametersCredentialsPropertyOutputReference | TfPipe.SourceParametersManagedStreamingKafkaParametersCredentialsProperty): any {
+export function awsPipeSourceParametersManagedStreamingKafkaParametersCredentialsPropertyToTerraform(struct?: AwsPipe.SourceParametersManagedStreamingKafkaParametersCredentialsPropertyOutputReference | AwsPipe.SourceParametersManagedStreamingKafkaParametersCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1226,7 +1226,7 @@ export function tfPipeSourceParametersManagedStreamingKafkaParametersCredentials
 }
 
 
-export function tfPipeSourceParametersManagedStreamingKafkaParametersCredentialsPropertyToHclTerraform(struct?: TfPipe.SourceParametersManagedStreamingKafkaParametersCredentialsPropertyOutputReference | TfPipe.SourceParametersManagedStreamingKafkaParametersCredentialsProperty): any {
+export function awsPipeSourceParametersManagedStreamingKafkaParametersCredentialsPropertyToHclTerraform(struct?: AwsPipe.SourceParametersManagedStreamingKafkaParametersCredentialsPropertyOutputReference | AwsPipe.SourceParametersManagedStreamingKafkaParametersCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1251,7 +1251,7 @@ export function tfPipeSourceParametersManagedStreamingKafkaParametersCredentials
 }
 
 
-export function tfPipeManagedStreamingKafkaParametersPropertyToTerraform(struct?: TfPipe.ManagedStreamingKafkaParametersPropertyOutputReference | TfPipe.ManagedStreamingKafkaParametersProperty): any {
+export function awsPipeManagedStreamingKafkaParametersPropertyToTerraform(struct?: AwsPipe.ManagedStreamingKafkaParametersPropertyOutputReference | AwsPipe.ManagedStreamingKafkaParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1262,12 +1262,12 @@ export function tfPipeManagedStreamingKafkaParametersPropertyToTerraform(struct?
     maximum_batching_window_in_seconds: cdktn.numberToTerraform(struct!.maximumBatchingWindowInSeconds),
     starting_position: cdktn.stringToTerraform(struct!.startingPosition),
     topic_name: cdktn.stringToTerraform(struct!.topicName),
-    credentials: tfPipeSourceParametersManagedStreamingKafkaParametersCredentialsPropertyToTerraform(struct!.credentials),
+    credentials: awsPipeSourceParametersManagedStreamingKafkaParametersCredentialsPropertyToTerraform(struct!.credentials),
   }
 }
 
 
-export function tfPipeManagedStreamingKafkaParametersPropertyToHclTerraform(struct?: TfPipe.ManagedStreamingKafkaParametersPropertyOutputReference | TfPipe.ManagedStreamingKafkaParametersProperty): any {
+export function awsPipeManagedStreamingKafkaParametersPropertyToHclTerraform(struct?: AwsPipe.ManagedStreamingKafkaParametersPropertyOutputReference | AwsPipe.ManagedStreamingKafkaParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1304,7 +1304,7 @@ export function tfPipeManagedStreamingKafkaParametersPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     credentials: {
-      value: tfPipeSourceParametersManagedStreamingKafkaParametersCredentialsPropertyToHclTerraform(struct!.credentials),
+      value: awsPipeSourceParametersManagedStreamingKafkaParametersCredentialsPropertyToHclTerraform(struct!.credentials),
       isBlock: true,
       type: "list",
       storageClassType: "SourceParametersManagedStreamingKafkaParametersCredentialsPropertyList",
@@ -1316,7 +1316,7 @@ export function tfPipeManagedStreamingKafkaParametersPropertyToHclTerraform(stru
 }
 
 
-export function tfPipeSourceParametersRabbitmqBrokerParametersCredentialsPropertyToTerraform(struct?: TfPipe.SourceParametersRabbitmqBrokerParametersCredentialsPropertyOutputReference | TfPipe.SourceParametersRabbitmqBrokerParametersCredentialsProperty): any {
+export function awsPipeSourceParametersRabbitmqBrokerParametersCredentialsPropertyToTerraform(struct?: AwsPipe.SourceParametersRabbitmqBrokerParametersCredentialsPropertyOutputReference | AwsPipe.SourceParametersRabbitmqBrokerParametersCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1327,7 +1327,7 @@ export function tfPipeSourceParametersRabbitmqBrokerParametersCredentialsPropert
 }
 
 
-export function tfPipeSourceParametersRabbitmqBrokerParametersCredentialsPropertyToHclTerraform(struct?: TfPipe.SourceParametersRabbitmqBrokerParametersCredentialsPropertyOutputReference | TfPipe.SourceParametersRabbitmqBrokerParametersCredentialsProperty): any {
+export function awsPipeSourceParametersRabbitmqBrokerParametersCredentialsPropertyToHclTerraform(struct?: AwsPipe.SourceParametersRabbitmqBrokerParametersCredentialsPropertyOutputReference | AwsPipe.SourceParametersRabbitmqBrokerParametersCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1346,7 +1346,7 @@ export function tfPipeSourceParametersRabbitmqBrokerParametersCredentialsPropert
 }
 
 
-export function tfPipeRabbitmqBrokerParametersPropertyToTerraform(struct?: TfPipe.RabbitmqBrokerParametersPropertyOutputReference | TfPipe.RabbitmqBrokerParametersProperty): any {
+export function awsPipeRabbitmqBrokerParametersPropertyToTerraform(struct?: AwsPipe.RabbitmqBrokerParametersPropertyOutputReference | AwsPipe.RabbitmqBrokerParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1356,12 +1356,12 @@ export function tfPipeRabbitmqBrokerParametersPropertyToTerraform(struct?: TfPip
     maximum_batching_window_in_seconds: cdktn.numberToTerraform(struct!.maximumBatchingWindowInSeconds),
     queue_name: cdktn.stringToTerraform(struct!.queueName),
     virtual_host: cdktn.stringToTerraform(struct!.virtualHost),
-    credentials: tfPipeSourceParametersRabbitmqBrokerParametersCredentialsPropertyToTerraform(struct!.credentials),
+    credentials: awsPipeSourceParametersRabbitmqBrokerParametersCredentialsPropertyToTerraform(struct!.credentials),
   }
 }
 
 
-export function tfPipeRabbitmqBrokerParametersPropertyToHclTerraform(struct?: TfPipe.RabbitmqBrokerParametersPropertyOutputReference | TfPipe.RabbitmqBrokerParametersProperty): any {
+export function awsPipeRabbitmqBrokerParametersPropertyToHclTerraform(struct?: AwsPipe.RabbitmqBrokerParametersPropertyOutputReference | AwsPipe.RabbitmqBrokerParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1392,7 +1392,7 @@ export function tfPipeRabbitmqBrokerParametersPropertyToHclTerraform(struct?: Tf
       storageClassType: "string",
     },
     credentials: {
-      value: tfPipeSourceParametersRabbitmqBrokerParametersCredentialsPropertyToHclTerraform(struct!.credentials),
+      value: awsPipeSourceParametersRabbitmqBrokerParametersCredentialsPropertyToHclTerraform(struct!.credentials),
       isBlock: true,
       type: "list",
       storageClassType: "SourceParametersRabbitmqBrokerParametersCredentialsPropertyList",
@@ -1404,7 +1404,7 @@ export function tfPipeRabbitmqBrokerParametersPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfPipeSourceParametersSelfManagedKafkaParametersCredentialsPropertyToTerraform(struct?: TfPipe.SourceParametersSelfManagedKafkaParametersCredentialsPropertyOutputReference | TfPipe.SourceParametersSelfManagedKafkaParametersCredentialsProperty): any {
+export function awsPipeSourceParametersSelfManagedKafkaParametersCredentialsPropertyToTerraform(struct?: AwsPipe.SourceParametersSelfManagedKafkaParametersCredentialsPropertyOutputReference | AwsPipe.SourceParametersSelfManagedKafkaParametersCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1418,7 +1418,7 @@ export function tfPipeSourceParametersSelfManagedKafkaParametersCredentialsPrope
 }
 
 
-export function tfPipeSourceParametersSelfManagedKafkaParametersCredentialsPropertyToHclTerraform(struct?: TfPipe.SourceParametersSelfManagedKafkaParametersCredentialsPropertyOutputReference | TfPipe.SourceParametersSelfManagedKafkaParametersCredentialsProperty): any {
+export function awsPipeSourceParametersSelfManagedKafkaParametersCredentialsPropertyToHclTerraform(struct?: AwsPipe.SourceParametersSelfManagedKafkaParametersCredentialsPropertyOutputReference | AwsPipe.SourceParametersSelfManagedKafkaParametersCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1455,7 +1455,7 @@ export function tfPipeSourceParametersSelfManagedKafkaParametersCredentialsPrope
 }
 
 
-export function tfPipeVpcPropertyToTerraform(struct?: TfPipe.VpcPropertyOutputReference | TfPipe.VpcProperty): any {
+export function awsPipeVpcPropertyToTerraform(struct?: AwsPipe.VpcPropertyOutputReference | AwsPipe.VpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1467,7 +1467,7 @@ export function tfPipeVpcPropertyToTerraform(struct?: TfPipe.VpcPropertyOutputRe
 }
 
 
-export function tfPipeVpcPropertyToHclTerraform(struct?: TfPipe.VpcPropertyOutputReference | TfPipe.VpcProperty): any {
+export function awsPipeVpcPropertyToHclTerraform(struct?: AwsPipe.VpcPropertyOutputReference | AwsPipe.VpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1492,7 +1492,7 @@ export function tfPipeVpcPropertyToHclTerraform(struct?: TfPipe.VpcPropertyOutpu
 }
 
 
-export function tfPipeSelfManagedKafkaParametersPropertyToTerraform(struct?: TfPipe.SelfManagedKafkaParametersPropertyOutputReference | TfPipe.SelfManagedKafkaParametersProperty): any {
+export function awsPipeSelfManagedKafkaParametersPropertyToTerraform(struct?: AwsPipe.SelfManagedKafkaParametersPropertyOutputReference | AwsPipe.SelfManagedKafkaParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1505,13 +1505,13 @@ export function tfPipeSelfManagedKafkaParametersPropertyToTerraform(struct?: TfP
     server_root_ca_certificate: cdktn.stringToTerraform(struct!.serverRootCaCertificate),
     starting_position: cdktn.stringToTerraform(struct!.startingPosition),
     topic_name: cdktn.stringToTerraform(struct!.topicName),
-    credentials: tfPipeSourceParametersSelfManagedKafkaParametersCredentialsPropertyToTerraform(struct!.credentials),
-    vpc: tfPipeVpcPropertyToTerraform(struct!.vpc),
+    credentials: awsPipeSourceParametersSelfManagedKafkaParametersCredentialsPropertyToTerraform(struct!.credentials),
+    vpc: awsPipeVpcPropertyToTerraform(struct!.vpc),
   }
 }
 
 
-export function tfPipeSelfManagedKafkaParametersPropertyToHclTerraform(struct?: TfPipe.SelfManagedKafkaParametersPropertyOutputReference | TfPipe.SelfManagedKafkaParametersProperty): any {
+export function awsPipeSelfManagedKafkaParametersPropertyToHclTerraform(struct?: AwsPipe.SelfManagedKafkaParametersPropertyOutputReference | AwsPipe.SelfManagedKafkaParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1560,13 +1560,13 @@ export function tfPipeSelfManagedKafkaParametersPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     credentials: {
-      value: tfPipeSourceParametersSelfManagedKafkaParametersCredentialsPropertyToHclTerraform(struct!.credentials),
+      value: awsPipeSourceParametersSelfManagedKafkaParametersCredentialsPropertyToHclTerraform(struct!.credentials),
       isBlock: true,
       type: "list",
       storageClassType: "SourceParametersSelfManagedKafkaParametersCredentialsPropertyList",
     },
     vpc: {
-      value: tfPipeVpcPropertyToHclTerraform(struct!.vpc),
+      value: awsPipeVpcPropertyToHclTerraform(struct!.vpc),
       isBlock: true,
       type: "list",
       storageClassType: "VpcPropertyList",
@@ -1578,7 +1578,7 @@ export function tfPipeSelfManagedKafkaParametersPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfPipeSourceParametersSqsQueueParametersPropertyToTerraform(struct?: TfPipe.SourceParametersSqsQueueParametersPropertyOutputReference | TfPipe.SourceParametersSqsQueueParametersProperty): any {
+export function awsPipeSourceParametersSqsQueueParametersPropertyToTerraform(struct?: AwsPipe.SourceParametersSqsQueueParametersPropertyOutputReference | AwsPipe.SourceParametersSqsQueueParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1590,7 +1590,7 @@ export function tfPipeSourceParametersSqsQueueParametersPropertyToTerraform(stru
 }
 
 
-export function tfPipeSourceParametersSqsQueueParametersPropertyToHclTerraform(struct?: TfPipe.SourceParametersSqsQueueParametersPropertyOutputReference | TfPipe.SourceParametersSqsQueueParametersProperty): any {
+export function awsPipeSourceParametersSqsQueueParametersPropertyToHclTerraform(struct?: AwsPipe.SourceParametersSqsQueueParametersPropertyOutputReference | AwsPipe.SourceParametersSqsQueueParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1615,74 +1615,74 @@ export function tfPipeSourceParametersSqsQueueParametersPropertyToHclTerraform(s
 }
 
 
-export function tfPipeSourceParametersPropertyToTerraform(struct?: TfPipe.SourceParametersPropertyOutputReference | TfPipe.SourceParametersProperty): any {
+export function awsPipeSourceParametersPropertyToTerraform(struct?: AwsPipe.SourceParametersPropertyOutputReference | AwsPipe.SourceParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    activemq_broker_parameters: tfPipeActivemqBrokerParametersPropertyToTerraform(struct!.activemqBrokerParameters),
-    dynamodb_stream_parameters: tfPipeDynamodbStreamParametersPropertyToTerraform(struct!.dynamodbStreamParameters),
-    filter_criteria: tfPipeFilterCriteriaPropertyToTerraform(struct!.filterCriteria),
-    kinesis_stream_parameters: tfPipeSourceParametersKinesisStreamParametersPropertyToTerraform(struct!.kinesisStreamParameters),
-    managed_streaming_kafka_parameters: tfPipeManagedStreamingKafkaParametersPropertyToTerraform(struct!.managedStreamingKafkaParameters),
-    rabbitmq_broker_parameters: tfPipeRabbitmqBrokerParametersPropertyToTerraform(struct!.rabbitmqBrokerParameters),
-    self_managed_kafka_parameters: tfPipeSelfManagedKafkaParametersPropertyToTerraform(struct!.selfManagedKafkaParameters),
-    sqs_queue_parameters: tfPipeSourceParametersSqsQueueParametersPropertyToTerraform(struct!.sqsQueueParameters),
+    activemq_broker_parameters: awsPipeActivemqBrokerParametersPropertyToTerraform(struct!.activemqBrokerParameters),
+    dynamodb_stream_parameters: awsPipeDynamodbStreamParametersPropertyToTerraform(struct!.dynamodbStreamParameters),
+    filter_criteria: awsPipeFilterCriteriaPropertyToTerraform(struct!.filterCriteria),
+    kinesis_stream_parameters: awsPipeSourceParametersKinesisStreamParametersPropertyToTerraform(struct!.kinesisStreamParameters),
+    managed_streaming_kafka_parameters: awsPipeManagedStreamingKafkaParametersPropertyToTerraform(struct!.managedStreamingKafkaParameters),
+    rabbitmq_broker_parameters: awsPipeRabbitmqBrokerParametersPropertyToTerraform(struct!.rabbitmqBrokerParameters),
+    self_managed_kafka_parameters: awsPipeSelfManagedKafkaParametersPropertyToTerraform(struct!.selfManagedKafkaParameters),
+    sqs_queue_parameters: awsPipeSourceParametersSqsQueueParametersPropertyToTerraform(struct!.sqsQueueParameters),
   }
 }
 
 
-export function tfPipeSourceParametersPropertyToHclTerraform(struct?: TfPipe.SourceParametersPropertyOutputReference | TfPipe.SourceParametersProperty): any {
+export function awsPipeSourceParametersPropertyToHclTerraform(struct?: AwsPipe.SourceParametersPropertyOutputReference | AwsPipe.SourceParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     activemq_broker_parameters: {
-      value: tfPipeActivemqBrokerParametersPropertyToHclTerraform(struct!.activemqBrokerParameters),
+      value: awsPipeActivemqBrokerParametersPropertyToHclTerraform(struct!.activemqBrokerParameters),
       isBlock: true,
       type: "list",
       storageClassType: "ActivemqBrokerParametersPropertyList",
     },
     dynamodb_stream_parameters: {
-      value: tfPipeDynamodbStreamParametersPropertyToHclTerraform(struct!.dynamodbStreamParameters),
+      value: awsPipeDynamodbStreamParametersPropertyToHclTerraform(struct!.dynamodbStreamParameters),
       isBlock: true,
       type: "list",
       storageClassType: "DynamodbStreamParametersPropertyList",
     },
     filter_criteria: {
-      value: tfPipeFilterCriteriaPropertyToHclTerraform(struct!.filterCriteria),
+      value: awsPipeFilterCriteriaPropertyToHclTerraform(struct!.filterCriteria),
       isBlock: true,
       type: "list",
       storageClassType: "FilterCriteriaPropertyList",
     },
     kinesis_stream_parameters: {
-      value: tfPipeSourceParametersKinesisStreamParametersPropertyToHclTerraform(struct!.kinesisStreamParameters),
+      value: awsPipeSourceParametersKinesisStreamParametersPropertyToHclTerraform(struct!.kinesisStreamParameters),
       isBlock: true,
       type: "list",
       storageClassType: "SourceParametersKinesisStreamParametersPropertyList",
     },
     managed_streaming_kafka_parameters: {
-      value: tfPipeManagedStreamingKafkaParametersPropertyToHclTerraform(struct!.managedStreamingKafkaParameters),
+      value: awsPipeManagedStreamingKafkaParametersPropertyToHclTerraform(struct!.managedStreamingKafkaParameters),
       isBlock: true,
       type: "list",
       storageClassType: "ManagedStreamingKafkaParametersPropertyList",
     },
     rabbitmq_broker_parameters: {
-      value: tfPipeRabbitmqBrokerParametersPropertyToHclTerraform(struct!.rabbitmqBrokerParameters),
+      value: awsPipeRabbitmqBrokerParametersPropertyToHclTerraform(struct!.rabbitmqBrokerParameters),
       isBlock: true,
       type: "list",
       storageClassType: "RabbitmqBrokerParametersPropertyList",
     },
     self_managed_kafka_parameters: {
-      value: tfPipeSelfManagedKafkaParametersPropertyToHclTerraform(struct!.selfManagedKafkaParameters),
+      value: awsPipeSelfManagedKafkaParametersPropertyToHclTerraform(struct!.selfManagedKafkaParameters),
       isBlock: true,
       type: "list",
       storageClassType: "SelfManagedKafkaParametersPropertyList",
     },
     sqs_queue_parameters: {
-      value: tfPipeSourceParametersSqsQueueParametersPropertyToHclTerraform(struct!.sqsQueueParameters),
+      value: awsPipeSourceParametersSqsQueueParametersPropertyToHclTerraform(struct!.sqsQueueParameters),
       isBlock: true,
       type: "list",
       storageClassType: "SourceParametersSqsQueueParametersPropertyList",
@@ -1694,7 +1694,7 @@ export function tfPipeSourceParametersPropertyToHclTerraform(struct?: TfPipe.Sou
 }
 
 
-export function tfPipeArrayPropertiesPropertyToTerraform(struct?: TfPipe.ArrayPropertiesPropertyOutputReference | TfPipe.ArrayPropertiesProperty): any {
+export function awsPipeArrayPropertiesPropertyToTerraform(struct?: AwsPipe.ArrayPropertiesPropertyOutputReference | AwsPipe.ArrayPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1705,7 +1705,7 @@ export function tfPipeArrayPropertiesPropertyToTerraform(struct?: TfPipe.ArrayPr
 }
 
 
-export function tfPipeArrayPropertiesPropertyToHclTerraform(struct?: TfPipe.ArrayPropertiesPropertyOutputReference | TfPipe.ArrayPropertiesProperty): any {
+export function awsPipeArrayPropertiesPropertyToHclTerraform(struct?: AwsPipe.ArrayPropertiesPropertyOutputReference | AwsPipe.ArrayPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1724,7 +1724,7 @@ export function tfPipeArrayPropertiesPropertyToHclTerraform(struct?: TfPipe.Arra
 }
 
 
-export function tfPipeTargetParametersBatchJobParametersContainerOverridesEnvironmentPropertyToTerraform(struct?: TfPipe.TargetParametersBatchJobParametersContainerOverridesEnvironmentProperty | cdktn.IResolvable): any {
+export function awsPipeTargetParametersBatchJobParametersContainerOverridesEnvironmentPropertyToTerraform(struct?: AwsPipe.TargetParametersBatchJobParametersContainerOverridesEnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1736,7 +1736,7 @@ export function tfPipeTargetParametersBatchJobParametersContainerOverridesEnviro
 }
 
 
-export function tfPipeTargetParametersBatchJobParametersContainerOverridesEnvironmentPropertyToHclTerraform(struct?: TfPipe.TargetParametersBatchJobParametersContainerOverridesEnvironmentProperty | cdktn.IResolvable): any {
+export function awsPipeTargetParametersBatchJobParametersContainerOverridesEnvironmentPropertyToHclTerraform(struct?: AwsPipe.TargetParametersBatchJobParametersContainerOverridesEnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1761,7 +1761,7 @@ export function tfPipeTargetParametersBatchJobParametersContainerOverridesEnviro
 }
 
 
-export function tfPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementPropertyToTerraform(struct?: TfPipe.TargetParametersBatchJobParametersContainerOverridesResourceRequirementProperty | cdktn.IResolvable): any {
+export function awsPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementPropertyToTerraform(struct?: AwsPipe.TargetParametersBatchJobParametersContainerOverridesResourceRequirementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1773,7 +1773,7 @@ export function tfPipeTargetParametersBatchJobParametersContainerOverridesResour
 }
 
 
-export function tfPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementPropertyToHclTerraform(struct?: TfPipe.TargetParametersBatchJobParametersContainerOverridesResourceRequirementProperty | cdktn.IResolvable): any {
+export function awsPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementPropertyToHclTerraform(struct?: AwsPipe.TargetParametersBatchJobParametersContainerOverridesResourceRequirementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1798,7 +1798,7 @@ export function tfPipeTargetParametersBatchJobParametersContainerOverridesResour
 }
 
 
-export function tfPipeContainerOverridesPropertyToTerraform(struct?: TfPipe.ContainerOverridesPropertyOutputReference | TfPipe.ContainerOverridesProperty): any {
+export function awsPipeContainerOverridesPropertyToTerraform(struct?: AwsPipe.ContainerOverridesPropertyOutputReference | AwsPipe.ContainerOverridesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1806,13 +1806,13 @@ export function tfPipeContainerOverridesPropertyToTerraform(struct?: TfPipe.Cont
   return {
     command: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.command),
     instance_type: cdktn.stringToTerraform(struct!.instanceType),
-    environment: cdktn.listMapper(tfPipeTargetParametersBatchJobParametersContainerOverridesEnvironmentPropertyToTerraform, true)(struct!.environment),
-    resource_requirement: cdktn.listMapper(tfPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementPropertyToTerraform, true)(struct!.resourceRequirement),
+    environment: cdktn.listMapper(awsPipeTargetParametersBatchJobParametersContainerOverridesEnvironmentPropertyToTerraform, true)(struct!.environment),
+    resource_requirement: cdktn.listMapper(awsPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementPropertyToTerraform, true)(struct!.resourceRequirement),
   }
 }
 
 
-export function tfPipeContainerOverridesPropertyToHclTerraform(struct?: TfPipe.ContainerOverridesPropertyOutputReference | TfPipe.ContainerOverridesProperty): any {
+export function awsPipeContainerOverridesPropertyToHclTerraform(struct?: AwsPipe.ContainerOverridesPropertyOutputReference | AwsPipe.ContainerOverridesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1831,13 +1831,13 @@ export function tfPipeContainerOverridesPropertyToHclTerraform(struct?: TfPipe.C
       storageClassType: "string",
     },
     environment: {
-      value: cdktn.listMapperHcl(tfPipeTargetParametersBatchJobParametersContainerOverridesEnvironmentPropertyToHclTerraform, true)(struct!.environment),
+      value: cdktn.listMapperHcl(awsPipeTargetParametersBatchJobParametersContainerOverridesEnvironmentPropertyToHclTerraform, true)(struct!.environment),
       isBlock: true,
       type: "list",
       storageClassType: "TargetParametersBatchJobParametersContainerOverridesEnvironmentPropertyList",
     },
     resource_requirement: {
-      value: cdktn.listMapperHcl(tfPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementPropertyToHclTerraform, true)(struct!.resourceRequirement),
+      value: cdktn.listMapperHcl(awsPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementPropertyToHclTerraform, true)(struct!.resourceRequirement),
       isBlock: true,
       type: "list",
       storageClassType: "TargetParametersBatchJobParametersContainerOverridesResourceRequirementPropertyList",
@@ -1849,7 +1849,7 @@ export function tfPipeContainerOverridesPropertyToHclTerraform(struct?: TfPipe.C
 }
 
 
-export function tfPipeDependsOnPropertyToTerraform(struct?: TfPipe.DependsOnProperty | cdktn.IResolvable): any {
+export function awsPipeDependsOnPropertyToTerraform(struct?: AwsPipe.DependsOnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1861,7 +1861,7 @@ export function tfPipeDependsOnPropertyToTerraform(struct?: TfPipe.DependsOnProp
 }
 
 
-export function tfPipeDependsOnPropertyToHclTerraform(struct?: TfPipe.DependsOnProperty | cdktn.IResolvable): any {
+export function awsPipeDependsOnPropertyToHclTerraform(struct?: AwsPipe.DependsOnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1886,7 +1886,7 @@ export function tfPipeDependsOnPropertyToHclTerraform(struct?: TfPipe.DependsOnP
 }
 
 
-export function tfPipeRetryStrategyPropertyToTerraform(struct?: TfPipe.RetryStrategyPropertyOutputReference | TfPipe.RetryStrategyProperty): any {
+export function awsPipeRetryStrategyPropertyToTerraform(struct?: AwsPipe.RetryStrategyPropertyOutputReference | AwsPipe.RetryStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1897,7 +1897,7 @@ export function tfPipeRetryStrategyPropertyToTerraform(struct?: TfPipe.RetryStra
 }
 
 
-export function tfPipeRetryStrategyPropertyToHclTerraform(struct?: TfPipe.RetryStrategyPropertyOutputReference | TfPipe.RetryStrategyProperty): any {
+export function awsPipeRetryStrategyPropertyToHclTerraform(struct?: AwsPipe.RetryStrategyPropertyOutputReference | AwsPipe.RetryStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1916,7 +1916,7 @@ export function tfPipeRetryStrategyPropertyToHclTerraform(struct?: TfPipe.RetryS
 }
 
 
-export function tfPipeBatchJobParametersPropertyToTerraform(struct?: TfPipe.BatchJobParametersPropertyOutputReference | TfPipe.BatchJobParametersProperty): any {
+export function awsPipeBatchJobParametersPropertyToTerraform(struct?: AwsPipe.BatchJobParametersPropertyOutputReference | AwsPipe.BatchJobParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1925,15 +1925,15 @@ export function tfPipeBatchJobParametersPropertyToTerraform(struct?: TfPipe.Batc
     job_definition: cdktn.stringToTerraform(struct!.jobDefinition),
     job_name: cdktn.stringToTerraform(struct!.jobName),
     parameters: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.parameters),
-    array_properties: tfPipeArrayPropertiesPropertyToTerraform(struct!.arrayProperties),
-    container_overrides: tfPipeContainerOverridesPropertyToTerraform(struct!.containerOverrides),
-    depends_on: cdktn.listMapper(tfPipeDependsOnPropertyToTerraform, true)(struct!.dependsOn),
-    retry_strategy: tfPipeRetryStrategyPropertyToTerraform(struct!.retryStrategy),
+    array_properties: awsPipeArrayPropertiesPropertyToTerraform(struct!.arrayProperties),
+    container_overrides: awsPipeContainerOverridesPropertyToTerraform(struct!.containerOverrides),
+    depends_on: cdktn.listMapper(awsPipeDependsOnPropertyToTerraform, true)(struct!.dependsOn),
+    retry_strategy: awsPipeRetryStrategyPropertyToTerraform(struct!.retryStrategy),
   }
 }
 
 
-export function tfPipeBatchJobParametersPropertyToHclTerraform(struct?: TfPipe.BatchJobParametersPropertyOutputReference | TfPipe.BatchJobParametersProperty): any {
+export function awsPipeBatchJobParametersPropertyToHclTerraform(struct?: AwsPipe.BatchJobParametersPropertyOutputReference | AwsPipe.BatchJobParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1958,25 +1958,25 @@ export function tfPipeBatchJobParametersPropertyToHclTerraform(struct?: TfPipe.B
       storageClassType: "stringMap",
     },
     array_properties: {
-      value: tfPipeArrayPropertiesPropertyToHclTerraform(struct!.arrayProperties),
+      value: awsPipeArrayPropertiesPropertyToHclTerraform(struct!.arrayProperties),
       isBlock: true,
       type: "list",
       storageClassType: "ArrayPropertiesPropertyList",
     },
     container_overrides: {
-      value: tfPipeContainerOverridesPropertyToHclTerraform(struct!.containerOverrides),
+      value: awsPipeContainerOverridesPropertyToHclTerraform(struct!.containerOverrides),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerOverridesPropertyList",
     },
     depends_on: {
-      value: cdktn.listMapperHcl(tfPipeDependsOnPropertyToHclTerraform, true)(struct!.dependsOn),
+      value: cdktn.listMapperHcl(awsPipeDependsOnPropertyToHclTerraform, true)(struct!.dependsOn),
       isBlock: true,
       type: "list",
       storageClassType: "DependsOnPropertyList",
     },
     retry_strategy: {
-      value: tfPipeRetryStrategyPropertyToHclTerraform(struct!.retryStrategy),
+      value: awsPipeRetryStrategyPropertyToHclTerraform(struct!.retryStrategy),
       isBlock: true,
       type: "list",
       storageClassType: "RetryStrategyPropertyList",
@@ -1988,7 +1988,7 @@ export function tfPipeBatchJobParametersPropertyToHclTerraform(struct?: TfPipe.B
 }
 
 
-export function tfPipeCloudwatchLogsParametersPropertyToTerraform(struct?: TfPipe.CloudwatchLogsParametersPropertyOutputReference | TfPipe.CloudwatchLogsParametersProperty): any {
+export function awsPipeCloudwatchLogsParametersPropertyToTerraform(struct?: AwsPipe.CloudwatchLogsParametersPropertyOutputReference | AwsPipe.CloudwatchLogsParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2000,7 +2000,7 @@ export function tfPipeCloudwatchLogsParametersPropertyToTerraform(struct?: TfPip
 }
 
 
-export function tfPipeCloudwatchLogsParametersPropertyToHclTerraform(struct?: TfPipe.CloudwatchLogsParametersPropertyOutputReference | TfPipe.CloudwatchLogsParametersProperty): any {
+export function awsPipeCloudwatchLogsParametersPropertyToHclTerraform(struct?: AwsPipe.CloudwatchLogsParametersPropertyOutputReference | AwsPipe.CloudwatchLogsParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2025,7 +2025,7 @@ export function tfPipeCloudwatchLogsParametersPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfPipeCapacityProviderStrategyPropertyToTerraform(struct?: TfPipe.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function awsPipeCapacityProviderStrategyPropertyToTerraform(struct?: AwsPipe.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2038,7 +2038,7 @@ export function tfPipeCapacityProviderStrategyPropertyToTerraform(struct?: TfPip
 }
 
 
-export function tfPipeCapacityProviderStrategyPropertyToHclTerraform(struct?: TfPipe.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function awsPipeCapacityProviderStrategyPropertyToHclTerraform(struct?: AwsPipe.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2069,7 +2069,7 @@ export function tfPipeCapacityProviderStrategyPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfPipeAwsVpcConfigurationPropertyToTerraform(struct?: TfPipe.AwsVpcConfigurationPropertyOutputReference | TfPipe.AwsVpcConfigurationProperty): any {
+export function awsPipeAwsVpcConfigurationPropertyToTerraform(struct?: AwsPipe.AwsVpcConfigurationPropertyOutputReference | AwsPipe.AwsVpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2082,7 +2082,7 @@ export function tfPipeAwsVpcConfigurationPropertyToTerraform(struct?: TfPipe.Aws
 }
 
 
-export function tfPipeAwsVpcConfigurationPropertyToHclTerraform(struct?: TfPipe.AwsVpcConfigurationPropertyOutputReference | TfPipe.AwsVpcConfigurationProperty): any {
+export function awsPipeAwsVpcConfigurationPropertyToHclTerraform(struct?: AwsPipe.AwsVpcConfigurationPropertyOutputReference | AwsPipe.AwsVpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2113,25 +2113,25 @@ export function tfPipeAwsVpcConfigurationPropertyToHclTerraform(struct?: TfPipe.
 }
 
 
-export function tfPipeNetworkConfigurationPropertyToTerraform(struct?: TfPipe.NetworkConfigurationPropertyOutputReference | TfPipe.NetworkConfigurationProperty): any {
+export function awsPipeNetworkConfigurationPropertyToTerraform(struct?: AwsPipe.NetworkConfigurationPropertyOutputReference | AwsPipe.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    aws_vpc_configuration: tfPipeAwsVpcConfigurationPropertyToTerraform(struct!.awsVpcConfiguration),
+    aws_vpc_configuration: awsPipeAwsVpcConfigurationPropertyToTerraform(struct!.awsVpcConfiguration),
   }
 }
 
 
-export function tfPipeNetworkConfigurationPropertyToHclTerraform(struct?: TfPipe.NetworkConfigurationPropertyOutputReference | TfPipe.NetworkConfigurationProperty): any {
+export function awsPipeNetworkConfigurationPropertyToHclTerraform(struct?: AwsPipe.NetworkConfigurationPropertyOutputReference | AwsPipe.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     aws_vpc_configuration: {
-      value: tfPipeAwsVpcConfigurationPropertyToHclTerraform(struct!.awsVpcConfiguration),
+      value: awsPipeAwsVpcConfigurationPropertyToHclTerraform(struct!.awsVpcConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AwsVpcConfigurationPropertyList",
@@ -2143,7 +2143,7 @@ export function tfPipeNetworkConfigurationPropertyToHclTerraform(struct?: TfPipe
 }
 
 
-export function tfPipeTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentPropertyToTerraform(struct?: TfPipe.TargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentProperty | cdktn.IResolvable): any {
+export function awsPipeTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentPropertyToTerraform(struct?: AwsPipe.TargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2155,7 +2155,7 @@ export function tfPipeTargetParametersEcsTaskParametersOverridesContainerOverrid
 }
 
 
-export function tfPipeTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentPropertyToHclTerraform(struct?: TfPipe.TargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentProperty | cdktn.IResolvable): any {
+export function awsPipeTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentPropertyToHclTerraform(struct?: AwsPipe.TargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2180,7 +2180,7 @@ export function tfPipeTargetParametersEcsTaskParametersOverridesContainerOverrid
 }
 
 
-export function tfPipeEnvironmentFilePropertyToTerraform(struct?: TfPipe.EnvironmentFileProperty | cdktn.IResolvable): any {
+export function awsPipeEnvironmentFilePropertyToTerraform(struct?: AwsPipe.EnvironmentFileProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2192,7 +2192,7 @@ export function tfPipeEnvironmentFilePropertyToTerraform(struct?: TfPipe.Environ
 }
 
 
-export function tfPipeEnvironmentFilePropertyToHclTerraform(struct?: TfPipe.EnvironmentFileProperty | cdktn.IResolvable): any {
+export function awsPipeEnvironmentFilePropertyToHclTerraform(struct?: AwsPipe.EnvironmentFileProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2217,7 +2217,7 @@ export function tfPipeEnvironmentFilePropertyToHclTerraform(struct?: TfPipe.Envi
 }
 
 
-export function tfPipeTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementPropertyToTerraform(struct?: TfPipe.TargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementProperty | cdktn.IResolvable): any {
+export function awsPipeTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementPropertyToTerraform(struct?: AwsPipe.TargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2229,7 +2229,7 @@ export function tfPipeTargetParametersEcsTaskParametersOverridesContainerOverrid
 }
 
 
-export function tfPipeTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementPropertyToHclTerraform(struct?: TfPipe.TargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementProperty | cdktn.IResolvable): any {
+export function awsPipeTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementPropertyToHclTerraform(struct?: AwsPipe.TargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2254,7 +2254,7 @@ export function tfPipeTargetParametersEcsTaskParametersOverridesContainerOverrid
 }
 
 
-export function tfPipeContainerOverridePropertyToTerraform(struct?: TfPipe.ContainerOverrideProperty | cdktn.IResolvable): any {
+export function awsPipeContainerOverridePropertyToTerraform(struct?: AwsPipe.ContainerOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2265,14 +2265,14 @@ export function tfPipeContainerOverridePropertyToTerraform(struct?: TfPipe.Conta
     memory: cdktn.numberToTerraform(struct!.memory),
     memory_reservation: cdktn.numberToTerraform(struct!.memoryReservation),
     name: cdktn.stringToTerraform(struct!.name),
-    environment: cdktn.listMapper(tfPipeTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentPropertyToTerraform, true)(struct!.environment),
-    environment_file: cdktn.listMapper(tfPipeEnvironmentFilePropertyToTerraform, true)(struct!.environmentFile),
-    resource_requirement: cdktn.listMapper(tfPipeTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementPropertyToTerraform, true)(struct!.resourceRequirement),
+    environment: cdktn.listMapper(awsPipeTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentPropertyToTerraform, true)(struct!.environment),
+    environment_file: cdktn.listMapper(awsPipeEnvironmentFilePropertyToTerraform, true)(struct!.environmentFile),
+    resource_requirement: cdktn.listMapper(awsPipeTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementPropertyToTerraform, true)(struct!.resourceRequirement),
   }
 }
 
 
-export function tfPipeContainerOverridePropertyToHclTerraform(struct?: TfPipe.ContainerOverrideProperty | cdktn.IResolvable): any {
+export function awsPipeContainerOverridePropertyToHclTerraform(struct?: AwsPipe.ContainerOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2309,19 +2309,19 @@ export function tfPipeContainerOverridePropertyToHclTerraform(struct?: TfPipe.Co
       storageClassType: "string",
     },
     environment: {
-      value: cdktn.listMapperHcl(tfPipeTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentPropertyToHclTerraform, true)(struct!.environment),
+      value: cdktn.listMapperHcl(awsPipeTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentPropertyToHclTerraform, true)(struct!.environment),
       isBlock: true,
       type: "list",
       storageClassType: "TargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentPropertyList",
     },
     environment_file: {
-      value: cdktn.listMapperHcl(tfPipeEnvironmentFilePropertyToHclTerraform, true)(struct!.environmentFile),
+      value: cdktn.listMapperHcl(awsPipeEnvironmentFilePropertyToHclTerraform, true)(struct!.environmentFile),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentFilePropertyList",
     },
     resource_requirement: {
-      value: cdktn.listMapperHcl(tfPipeTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementPropertyToHclTerraform, true)(struct!.resourceRequirement),
+      value: cdktn.listMapperHcl(awsPipeTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementPropertyToHclTerraform, true)(struct!.resourceRequirement),
       isBlock: true,
       type: "list",
       storageClassType: "TargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementPropertyList",
@@ -2333,7 +2333,7 @@ export function tfPipeContainerOverridePropertyToHclTerraform(struct?: TfPipe.Co
 }
 
 
-export function tfPipeEphemeralStoragePropertyToTerraform(struct?: TfPipe.EphemeralStoragePropertyOutputReference | TfPipe.EphemeralStorageProperty): any {
+export function awsPipeEphemeralStoragePropertyToTerraform(struct?: AwsPipe.EphemeralStoragePropertyOutputReference | AwsPipe.EphemeralStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2344,7 +2344,7 @@ export function tfPipeEphemeralStoragePropertyToTerraform(struct?: TfPipe.Epheme
 }
 
 
-export function tfPipeEphemeralStoragePropertyToHclTerraform(struct?: TfPipe.EphemeralStoragePropertyOutputReference | TfPipe.EphemeralStorageProperty): any {
+export function awsPipeEphemeralStoragePropertyToHclTerraform(struct?: AwsPipe.EphemeralStoragePropertyOutputReference | AwsPipe.EphemeralStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2363,7 +2363,7 @@ export function tfPipeEphemeralStoragePropertyToHclTerraform(struct?: TfPipe.Eph
 }
 
 
-export function tfPipeInferenceAcceleratorOverridePropertyToTerraform(struct?: TfPipe.InferenceAcceleratorOverrideProperty | cdktn.IResolvable): any {
+export function awsPipeInferenceAcceleratorOverridePropertyToTerraform(struct?: AwsPipe.InferenceAcceleratorOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2375,7 +2375,7 @@ export function tfPipeInferenceAcceleratorOverridePropertyToTerraform(struct?: T
 }
 
 
-export function tfPipeInferenceAcceleratorOverridePropertyToHclTerraform(struct?: TfPipe.InferenceAcceleratorOverrideProperty | cdktn.IResolvable): any {
+export function awsPipeInferenceAcceleratorOverridePropertyToHclTerraform(struct?: AwsPipe.InferenceAcceleratorOverrideProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2400,7 +2400,7 @@ export function tfPipeInferenceAcceleratorOverridePropertyToHclTerraform(struct?
 }
 
 
-export function tfPipeOverridesPropertyToTerraform(struct?: TfPipe.OverridesPropertyOutputReference | TfPipe.OverridesProperty): any {
+export function awsPipeOverridesPropertyToTerraform(struct?: AwsPipe.OverridesPropertyOutputReference | AwsPipe.OverridesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2410,14 +2410,14 @@ export function tfPipeOverridesPropertyToTerraform(struct?: TfPipe.OverridesProp
     execution_role_arn: cdktn.stringToTerraform(struct!.executionRoleArn),
     memory: cdktn.stringToTerraform(struct!.memory),
     task_role_arn: cdktn.stringToTerraform(struct!.taskRoleArn),
-    container_override: cdktn.listMapper(tfPipeContainerOverridePropertyToTerraform, true)(struct!.containerOverride),
-    ephemeral_storage: tfPipeEphemeralStoragePropertyToTerraform(struct!.ephemeralStorage),
-    inference_accelerator_override: cdktn.listMapper(tfPipeInferenceAcceleratorOverridePropertyToTerraform, true)(struct!.inferenceAcceleratorOverride),
+    container_override: cdktn.listMapper(awsPipeContainerOverridePropertyToTerraform, true)(struct!.containerOverride),
+    ephemeral_storage: awsPipeEphemeralStoragePropertyToTerraform(struct!.ephemeralStorage),
+    inference_accelerator_override: cdktn.listMapper(awsPipeInferenceAcceleratorOverridePropertyToTerraform, true)(struct!.inferenceAcceleratorOverride),
   }
 }
 
 
-export function tfPipeOverridesPropertyToHclTerraform(struct?: TfPipe.OverridesPropertyOutputReference | TfPipe.OverridesProperty): any {
+export function awsPipeOverridesPropertyToHclTerraform(struct?: AwsPipe.OverridesPropertyOutputReference | AwsPipe.OverridesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2448,19 +2448,19 @@ export function tfPipeOverridesPropertyToHclTerraform(struct?: TfPipe.OverridesP
       storageClassType: "string",
     },
     container_override: {
-      value: cdktn.listMapperHcl(tfPipeContainerOverridePropertyToHclTerraform, true)(struct!.containerOverride),
+      value: cdktn.listMapperHcl(awsPipeContainerOverridePropertyToHclTerraform, true)(struct!.containerOverride),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerOverridePropertyList",
     },
     ephemeral_storage: {
-      value: tfPipeEphemeralStoragePropertyToHclTerraform(struct!.ephemeralStorage),
+      value: awsPipeEphemeralStoragePropertyToHclTerraform(struct!.ephemeralStorage),
       isBlock: true,
       type: "list",
       storageClassType: "EphemeralStoragePropertyList",
     },
     inference_accelerator_override: {
-      value: cdktn.listMapperHcl(tfPipeInferenceAcceleratorOverridePropertyToHclTerraform, true)(struct!.inferenceAcceleratorOverride),
+      value: cdktn.listMapperHcl(awsPipeInferenceAcceleratorOverridePropertyToHclTerraform, true)(struct!.inferenceAcceleratorOverride),
       isBlock: true,
       type: "list",
       storageClassType: "InferenceAcceleratorOverridePropertyList",
@@ -2472,7 +2472,7 @@ export function tfPipeOverridesPropertyToHclTerraform(struct?: TfPipe.OverridesP
 }
 
 
-export function tfPipePlacementConstraintPropertyToTerraform(struct?: TfPipe.PlacementConstraintProperty | cdktn.IResolvable): any {
+export function awsPipePlacementConstraintPropertyToTerraform(struct?: AwsPipe.PlacementConstraintProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2484,7 +2484,7 @@ export function tfPipePlacementConstraintPropertyToTerraform(struct?: TfPipe.Pla
 }
 
 
-export function tfPipePlacementConstraintPropertyToHclTerraform(struct?: TfPipe.PlacementConstraintProperty | cdktn.IResolvable): any {
+export function awsPipePlacementConstraintPropertyToHclTerraform(struct?: AwsPipe.PlacementConstraintProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2509,7 +2509,7 @@ export function tfPipePlacementConstraintPropertyToHclTerraform(struct?: TfPipe.
 }
 
 
-export function tfPipePlacementStrategyPropertyToTerraform(struct?: TfPipe.PlacementStrategyProperty | cdktn.IResolvable): any {
+export function awsPipePlacementStrategyPropertyToTerraform(struct?: AwsPipe.PlacementStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2521,7 +2521,7 @@ export function tfPipePlacementStrategyPropertyToTerraform(struct?: TfPipe.Place
 }
 
 
-export function tfPipePlacementStrategyPropertyToHclTerraform(struct?: TfPipe.PlacementStrategyProperty | cdktn.IResolvable): any {
+export function awsPipePlacementStrategyPropertyToHclTerraform(struct?: AwsPipe.PlacementStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2546,7 +2546,7 @@ export function tfPipePlacementStrategyPropertyToHclTerraform(struct?: TfPipe.Pl
 }
 
 
-export function tfPipeEcsTaskParametersPropertyToTerraform(struct?: TfPipe.EcsTaskParametersPropertyOutputReference | TfPipe.EcsTaskParametersProperty): any {
+export function awsPipeEcsTaskParametersPropertyToTerraform(struct?: AwsPipe.EcsTaskParametersPropertyOutputReference | AwsPipe.EcsTaskParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2562,16 +2562,16 @@ export function tfPipeEcsTaskParametersPropertyToTerraform(struct?: TfPipe.EcsTa
     tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tags),
     task_count: cdktn.numberToTerraform(struct!.taskCount),
     task_definition_arn: cdktn.stringToTerraform(struct!.taskDefinitionArn),
-    capacity_provider_strategy: cdktn.listMapper(tfPipeCapacityProviderStrategyPropertyToTerraform, true)(struct!.capacityProviderStrategy),
-    network_configuration: tfPipeNetworkConfigurationPropertyToTerraform(struct!.networkConfiguration),
-    overrides: tfPipeOverridesPropertyToTerraform(struct!.overrides),
-    placement_constraint: cdktn.listMapper(tfPipePlacementConstraintPropertyToTerraform, true)(struct!.placementConstraint),
-    placement_strategy: cdktn.listMapper(tfPipePlacementStrategyPropertyToTerraform, true)(struct!.placementStrategy),
+    capacity_provider_strategy: cdktn.listMapper(awsPipeCapacityProviderStrategyPropertyToTerraform, true)(struct!.capacityProviderStrategy),
+    network_configuration: awsPipeNetworkConfigurationPropertyToTerraform(struct!.networkConfiguration),
+    overrides: awsPipeOverridesPropertyToTerraform(struct!.overrides),
+    placement_constraint: cdktn.listMapper(awsPipePlacementConstraintPropertyToTerraform, true)(struct!.placementConstraint),
+    placement_strategy: cdktn.listMapper(awsPipePlacementStrategyPropertyToTerraform, true)(struct!.placementStrategy),
   }
 }
 
 
-export function tfPipeEcsTaskParametersPropertyToHclTerraform(struct?: TfPipe.EcsTaskParametersPropertyOutputReference | TfPipe.EcsTaskParametersProperty): any {
+export function awsPipeEcsTaskParametersPropertyToHclTerraform(struct?: AwsPipe.EcsTaskParametersPropertyOutputReference | AwsPipe.EcsTaskParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2638,31 +2638,31 @@ export function tfPipeEcsTaskParametersPropertyToHclTerraform(struct?: TfPipe.Ec
       storageClassType: "string",
     },
     capacity_provider_strategy: {
-      value: cdktn.listMapperHcl(tfPipeCapacityProviderStrategyPropertyToHclTerraform, true)(struct!.capacityProviderStrategy),
+      value: cdktn.listMapperHcl(awsPipeCapacityProviderStrategyPropertyToHclTerraform, true)(struct!.capacityProviderStrategy),
       isBlock: true,
       type: "list",
       storageClassType: "CapacityProviderStrategyPropertyList",
     },
     network_configuration: {
-      value: tfPipeNetworkConfigurationPropertyToHclTerraform(struct!.networkConfiguration),
+      value: awsPipeNetworkConfigurationPropertyToHclTerraform(struct!.networkConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkConfigurationPropertyList",
     },
     overrides: {
-      value: tfPipeOverridesPropertyToHclTerraform(struct!.overrides),
+      value: awsPipeOverridesPropertyToHclTerraform(struct!.overrides),
       isBlock: true,
       type: "list",
       storageClassType: "OverridesPropertyList",
     },
     placement_constraint: {
-      value: cdktn.listMapperHcl(tfPipePlacementConstraintPropertyToHclTerraform, true)(struct!.placementConstraint),
+      value: cdktn.listMapperHcl(awsPipePlacementConstraintPropertyToHclTerraform, true)(struct!.placementConstraint),
       isBlock: true,
       type: "list",
       storageClassType: "PlacementConstraintPropertyList",
     },
     placement_strategy: {
-      value: cdktn.listMapperHcl(tfPipePlacementStrategyPropertyToHclTerraform, true)(struct!.placementStrategy),
+      value: cdktn.listMapperHcl(awsPipePlacementStrategyPropertyToHclTerraform, true)(struct!.placementStrategy),
       isBlock: true,
       type: "list",
       storageClassType: "PlacementStrategyPropertyList",
@@ -2674,7 +2674,7 @@ export function tfPipeEcsTaskParametersPropertyToHclTerraform(struct?: TfPipe.Ec
 }
 
 
-export function tfPipeEventbridgeEventBusParametersPropertyToTerraform(struct?: TfPipe.EventbridgeEventBusParametersPropertyOutputReference | TfPipe.EventbridgeEventBusParametersProperty): any {
+export function awsPipeEventbridgeEventBusParametersPropertyToTerraform(struct?: AwsPipe.EventbridgeEventBusParametersPropertyOutputReference | AwsPipe.EventbridgeEventBusParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2689,7 +2689,7 @@ export function tfPipeEventbridgeEventBusParametersPropertyToTerraform(struct?: 
 }
 
 
-export function tfPipeEventbridgeEventBusParametersPropertyToHclTerraform(struct?: TfPipe.EventbridgeEventBusParametersPropertyOutputReference | TfPipe.EventbridgeEventBusParametersProperty): any {
+export function awsPipeEventbridgeEventBusParametersPropertyToHclTerraform(struct?: AwsPipe.EventbridgeEventBusParametersPropertyOutputReference | AwsPipe.EventbridgeEventBusParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2732,7 +2732,7 @@ export function tfPipeEventbridgeEventBusParametersPropertyToHclTerraform(struct
 }
 
 
-export function tfPipeTargetParametersHttpParametersPropertyToTerraform(struct?: TfPipe.TargetParametersHttpParametersPropertyOutputReference | TfPipe.TargetParametersHttpParametersProperty): any {
+export function awsPipeTargetParametersHttpParametersPropertyToTerraform(struct?: AwsPipe.TargetParametersHttpParametersPropertyOutputReference | AwsPipe.TargetParametersHttpParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2745,7 +2745,7 @@ export function tfPipeTargetParametersHttpParametersPropertyToTerraform(struct?:
 }
 
 
-export function tfPipeTargetParametersHttpParametersPropertyToHclTerraform(struct?: TfPipe.TargetParametersHttpParametersPropertyOutputReference | TfPipe.TargetParametersHttpParametersProperty): any {
+export function awsPipeTargetParametersHttpParametersPropertyToHclTerraform(struct?: AwsPipe.TargetParametersHttpParametersPropertyOutputReference | AwsPipe.TargetParametersHttpParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2776,7 +2776,7 @@ export function tfPipeTargetParametersHttpParametersPropertyToHclTerraform(struc
 }
 
 
-export function tfPipeTargetParametersKinesisStreamParametersPropertyToTerraform(struct?: TfPipe.TargetParametersKinesisStreamParametersPropertyOutputReference | TfPipe.TargetParametersKinesisStreamParametersProperty): any {
+export function awsPipeTargetParametersKinesisStreamParametersPropertyToTerraform(struct?: AwsPipe.TargetParametersKinesisStreamParametersPropertyOutputReference | AwsPipe.TargetParametersKinesisStreamParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2787,7 +2787,7 @@ export function tfPipeTargetParametersKinesisStreamParametersPropertyToTerraform
 }
 
 
-export function tfPipeTargetParametersKinesisStreamParametersPropertyToHclTerraform(struct?: TfPipe.TargetParametersKinesisStreamParametersPropertyOutputReference | TfPipe.TargetParametersKinesisStreamParametersProperty): any {
+export function awsPipeTargetParametersKinesisStreamParametersPropertyToHclTerraform(struct?: AwsPipe.TargetParametersKinesisStreamParametersPropertyOutputReference | AwsPipe.TargetParametersKinesisStreamParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2806,7 +2806,7 @@ export function tfPipeTargetParametersKinesisStreamParametersPropertyToHclTerraf
 }
 
 
-export function tfPipeLambdaFunctionParametersPropertyToTerraform(struct?: TfPipe.LambdaFunctionParametersPropertyOutputReference | TfPipe.LambdaFunctionParametersProperty): any {
+export function awsPipeLambdaFunctionParametersPropertyToTerraform(struct?: AwsPipe.LambdaFunctionParametersPropertyOutputReference | AwsPipe.LambdaFunctionParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2817,7 +2817,7 @@ export function tfPipeLambdaFunctionParametersPropertyToTerraform(struct?: TfPip
 }
 
 
-export function tfPipeLambdaFunctionParametersPropertyToHclTerraform(struct?: TfPipe.LambdaFunctionParametersPropertyOutputReference | TfPipe.LambdaFunctionParametersProperty): any {
+export function awsPipeLambdaFunctionParametersPropertyToHclTerraform(struct?: AwsPipe.LambdaFunctionParametersPropertyOutputReference | AwsPipe.LambdaFunctionParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2836,7 +2836,7 @@ export function tfPipeLambdaFunctionParametersPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfPipeRedshiftDataParametersPropertyToTerraform(struct?: TfPipe.RedshiftDataParametersPropertyOutputReference | TfPipe.RedshiftDataParametersProperty): any {
+export function awsPipeRedshiftDataParametersPropertyToTerraform(struct?: AwsPipe.RedshiftDataParametersPropertyOutputReference | AwsPipe.RedshiftDataParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2852,7 +2852,7 @@ export function tfPipeRedshiftDataParametersPropertyToTerraform(struct?: TfPipe.
 }
 
 
-export function tfPipeRedshiftDataParametersPropertyToHclTerraform(struct?: TfPipe.RedshiftDataParametersPropertyOutputReference | TfPipe.RedshiftDataParametersProperty): any {
+export function awsPipeRedshiftDataParametersPropertyToHclTerraform(struct?: AwsPipe.RedshiftDataParametersPropertyOutputReference | AwsPipe.RedshiftDataParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2901,7 +2901,7 @@ export function tfPipeRedshiftDataParametersPropertyToHclTerraform(struct?: TfPi
 }
 
 
-export function tfPipePipelineParameterPropertyToTerraform(struct?: TfPipe.PipelineParameterProperty | cdktn.IResolvable): any {
+export function awsPipePipelineParameterPropertyToTerraform(struct?: AwsPipe.PipelineParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2913,7 +2913,7 @@ export function tfPipePipelineParameterPropertyToTerraform(struct?: TfPipe.Pipel
 }
 
 
-export function tfPipePipelineParameterPropertyToHclTerraform(struct?: TfPipe.PipelineParameterProperty | cdktn.IResolvable): any {
+export function awsPipePipelineParameterPropertyToHclTerraform(struct?: AwsPipe.PipelineParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2938,25 +2938,25 @@ export function tfPipePipelineParameterPropertyToHclTerraform(struct?: TfPipe.Pi
 }
 
 
-export function tfPipeSagemakerPipelineParametersPropertyToTerraform(struct?: TfPipe.SagemakerPipelineParametersPropertyOutputReference | TfPipe.SagemakerPipelineParametersProperty): any {
+export function awsPipeSagemakerPipelineParametersPropertyToTerraform(struct?: AwsPipe.SagemakerPipelineParametersPropertyOutputReference | AwsPipe.SagemakerPipelineParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    pipeline_parameter: cdktn.listMapper(tfPipePipelineParameterPropertyToTerraform, true)(struct!.pipelineParameter),
+    pipeline_parameter: cdktn.listMapper(awsPipePipelineParameterPropertyToTerraform, true)(struct!.pipelineParameter),
   }
 }
 
 
-export function tfPipeSagemakerPipelineParametersPropertyToHclTerraform(struct?: TfPipe.SagemakerPipelineParametersPropertyOutputReference | TfPipe.SagemakerPipelineParametersProperty): any {
+export function awsPipeSagemakerPipelineParametersPropertyToHclTerraform(struct?: AwsPipe.SagemakerPipelineParametersPropertyOutputReference | AwsPipe.SagemakerPipelineParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     pipeline_parameter: {
-      value: cdktn.listMapperHcl(tfPipePipelineParameterPropertyToHclTerraform, true)(struct!.pipelineParameter),
+      value: cdktn.listMapperHcl(awsPipePipelineParameterPropertyToHclTerraform, true)(struct!.pipelineParameter),
       isBlock: true,
       type: "list",
       storageClassType: "PipelineParameterPropertyList",
@@ -2968,7 +2968,7 @@ export function tfPipeSagemakerPipelineParametersPropertyToHclTerraform(struct?:
 }
 
 
-export function tfPipeTargetParametersSqsQueueParametersPropertyToTerraform(struct?: TfPipe.TargetParametersSqsQueueParametersPropertyOutputReference | TfPipe.TargetParametersSqsQueueParametersProperty): any {
+export function awsPipeTargetParametersSqsQueueParametersPropertyToTerraform(struct?: AwsPipe.TargetParametersSqsQueueParametersPropertyOutputReference | AwsPipe.TargetParametersSqsQueueParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2980,7 +2980,7 @@ export function tfPipeTargetParametersSqsQueueParametersPropertyToTerraform(stru
 }
 
 
-export function tfPipeTargetParametersSqsQueueParametersPropertyToHclTerraform(struct?: TfPipe.TargetParametersSqsQueueParametersPropertyOutputReference | TfPipe.TargetParametersSqsQueueParametersProperty): any {
+export function awsPipeTargetParametersSqsQueueParametersPropertyToHclTerraform(struct?: AwsPipe.TargetParametersSqsQueueParametersPropertyOutputReference | AwsPipe.TargetParametersSqsQueueParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3005,7 +3005,7 @@ export function tfPipeTargetParametersSqsQueueParametersPropertyToHclTerraform(s
 }
 
 
-export function tfPipeStepFunctionStateMachineParametersPropertyToTerraform(struct?: TfPipe.StepFunctionStateMachineParametersPropertyOutputReference | TfPipe.StepFunctionStateMachineParametersProperty): any {
+export function awsPipeStepFunctionStateMachineParametersPropertyToTerraform(struct?: AwsPipe.StepFunctionStateMachineParametersPropertyOutputReference | AwsPipe.StepFunctionStateMachineParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3016,7 +3016,7 @@ export function tfPipeStepFunctionStateMachineParametersPropertyToTerraform(stru
 }
 
 
-export function tfPipeStepFunctionStateMachineParametersPropertyToHclTerraform(struct?: TfPipe.StepFunctionStateMachineParametersPropertyOutputReference | TfPipe.StepFunctionStateMachineParametersProperty): any {
+export function awsPipeStepFunctionStateMachineParametersPropertyToHclTerraform(struct?: AwsPipe.StepFunctionStateMachineParametersPropertyOutputReference | AwsPipe.StepFunctionStateMachineParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3035,29 +3035,29 @@ export function tfPipeStepFunctionStateMachineParametersPropertyToHclTerraform(s
 }
 
 
-export function tfPipeTargetParametersPropertyToTerraform(struct?: TfPipe.TargetParametersPropertyOutputReference | TfPipe.TargetParametersProperty): any {
+export function awsPipeTargetParametersPropertyToTerraform(struct?: AwsPipe.TargetParametersPropertyOutputReference | AwsPipe.TargetParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     input_template: cdktn.stringToTerraform(struct!.inputTemplate),
-    batch_job_parameters: tfPipeBatchJobParametersPropertyToTerraform(struct!.batchJobParameters),
-    cloudwatch_logs_parameters: tfPipeCloudwatchLogsParametersPropertyToTerraform(struct!.cloudwatchLogsParameters),
-    ecs_task_parameters: tfPipeEcsTaskParametersPropertyToTerraform(struct!.ecsTaskParameters),
-    eventbridge_event_bus_parameters: tfPipeEventbridgeEventBusParametersPropertyToTerraform(struct!.eventbridgeEventBusParameters),
-    http_parameters: tfPipeTargetParametersHttpParametersPropertyToTerraform(struct!.httpParameters),
-    kinesis_stream_parameters: tfPipeTargetParametersKinesisStreamParametersPropertyToTerraform(struct!.kinesisStreamParameters),
-    lambda_function_parameters: tfPipeLambdaFunctionParametersPropertyToTerraform(struct!.lambdaFunctionParameters),
-    redshift_data_parameters: tfPipeRedshiftDataParametersPropertyToTerraform(struct!.redshiftDataParameters),
-    sagemaker_pipeline_parameters: tfPipeSagemakerPipelineParametersPropertyToTerraform(struct!.sagemakerPipelineParameters),
-    sqs_queue_parameters: tfPipeTargetParametersSqsQueueParametersPropertyToTerraform(struct!.sqsQueueParameters),
-    step_function_state_machine_parameters: tfPipeStepFunctionStateMachineParametersPropertyToTerraform(struct!.stepFunctionStateMachineParameters),
+    batch_job_parameters: awsPipeBatchJobParametersPropertyToTerraform(struct!.batchJobParameters),
+    cloudwatch_logs_parameters: awsPipeCloudwatchLogsParametersPropertyToTerraform(struct!.cloudwatchLogsParameters),
+    ecs_task_parameters: awsPipeEcsTaskParametersPropertyToTerraform(struct!.ecsTaskParameters),
+    eventbridge_event_bus_parameters: awsPipeEventbridgeEventBusParametersPropertyToTerraform(struct!.eventbridgeEventBusParameters),
+    http_parameters: awsPipeTargetParametersHttpParametersPropertyToTerraform(struct!.httpParameters),
+    kinesis_stream_parameters: awsPipeTargetParametersKinesisStreamParametersPropertyToTerraform(struct!.kinesisStreamParameters),
+    lambda_function_parameters: awsPipeLambdaFunctionParametersPropertyToTerraform(struct!.lambdaFunctionParameters),
+    redshift_data_parameters: awsPipeRedshiftDataParametersPropertyToTerraform(struct!.redshiftDataParameters),
+    sagemaker_pipeline_parameters: awsPipeSagemakerPipelineParametersPropertyToTerraform(struct!.sagemakerPipelineParameters),
+    sqs_queue_parameters: awsPipeTargetParametersSqsQueueParametersPropertyToTerraform(struct!.sqsQueueParameters),
+    step_function_state_machine_parameters: awsPipeStepFunctionStateMachineParametersPropertyToTerraform(struct!.stepFunctionStateMachineParameters),
   }
 }
 
 
-export function tfPipeTargetParametersPropertyToHclTerraform(struct?: TfPipe.TargetParametersPropertyOutputReference | TfPipe.TargetParametersProperty): any {
+export function awsPipeTargetParametersPropertyToHclTerraform(struct?: AwsPipe.TargetParametersPropertyOutputReference | AwsPipe.TargetParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3070,67 +3070,67 @@ export function tfPipeTargetParametersPropertyToHclTerraform(struct?: TfPipe.Tar
       storageClassType: "string",
     },
     batch_job_parameters: {
-      value: tfPipeBatchJobParametersPropertyToHclTerraform(struct!.batchJobParameters),
+      value: awsPipeBatchJobParametersPropertyToHclTerraform(struct!.batchJobParameters),
       isBlock: true,
       type: "list",
       storageClassType: "BatchJobParametersPropertyList",
     },
     cloudwatch_logs_parameters: {
-      value: tfPipeCloudwatchLogsParametersPropertyToHclTerraform(struct!.cloudwatchLogsParameters),
+      value: awsPipeCloudwatchLogsParametersPropertyToHclTerraform(struct!.cloudwatchLogsParameters),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsParametersPropertyList",
     },
     ecs_task_parameters: {
-      value: tfPipeEcsTaskParametersPropertyToHclTerraform(struct!.ecsTaskParameters),
+      value: awsPipeEcsTaskParametersPropertyToHclTerraform(struct!.ecsTaskParameters),
       isBlock: true,
       type: "list",
       storageClassType: "EcsTaskParametersPropertyList",
     },
     eventbridge_event_bus_parameters: {
-      value: tfPipeEventbridgeEventBusParametersPropertyToHclTerraform(struct!.eventbridgeEventBusParameters),
+      value: awsPipeEventbridgeEventBusParametersPropertyToHclTerraform(struct!.eventbridgeEventBusParameters),
       isBlock: true,
       type: "list",
       storageClassType: "EventbridgeEventBusParametersPropertyList",
     },
     http_parameters: {
-      value: tfPipeTargetParametersHttpParametersPropertyToHclTerraform(struct!.httpParameters),
+      value: awsPipeTargetParametersHttpParametersPropertyToHclTerraform(struct!.httpParameters),
       isBlock: true,
       type: "list",
       storageClassType: "TargetParametersHttpParametersPropertyList",
     },
     kinesis_stream_parameters: {
-      value: tfPipeTargetParametersKinesisStreamParametersPropertyToHclTerraform(struct!.kinesisStreamParameters),
+      value: awsPipeTargetParametersKinesisStreamParametersPropertyToHclTerraform(struct!.kinesisStreamParameters),
       isBlock: true,
       type: "list",
       storageClassType: "TargetParametersKinesisStreamParametersPropertyList",
     },
     lambda_function_parameters: {
-      value: tfPipeLambdaFunctionParametersPropertyToHclTerraform(struct!.lambdaFunctionParameters),
+      value: awsPipeLambdaFunctionParametersPropertyToHclTerraform(struct!.lambdaFunctionParameters),
       isBlock: true,
       type: "list",
       storageClassType: "LambdaFunctionParametersPropertyList",
     },
     redshift_data_parameters: {
-      value: tfPipeRedshiftDataParametersPropertyToHclTerraform(struct!.redshiftDataParameters),
+      value: awsPipeRedshiftDataParametersPropertyToHclTerraform(struct!.redshiftDataParameters),
       isBlock: true,
       type: "list",
       storageClassType: "RedshiftDataParametersPropertyList",
     },
     sagemaker_pipeline_parameters: {
-      value: tfPipeSagemakerPipelineParametersPropertyToHclTerraform(struct!.sagemakerPipelineParameters),
+      value: awsPipeSagemakerPipelineParametersPropertyToHclTerraform(struct!.sagemakerPipelineParameters),
       isBlock: true,
       type: "list",
       storageClassType: "SagemakerPipelineParametersPropertyList",
     },
     sqs_queue_parameters: {
-      value: tfPipeTargetParametersSqsQueueParametersPropertyToHclTerraform(struct!.sqsQueueParameters),
+      value: awsPipeTargetParametersSqsQueueParametersPropertyToHclTerraform(struct!.sqsQueueParameters),
       isBlock: true,
       type: "list",
       storageClassType: "TargetParametersSqsQueueParametersPropertyList",
     },
     step_function_state_machine_parameters: {
-      value: tfPipeStepFunctionStateMachineParametersPropertyToHclTerraform(struct!.stepFunctionStateMachineParameters),
+      value: awsPipeStepFunctionStateMachineParametersPropertyToHclTerraform(struct!.stepFunctionStateMachineParameters),
       isBlock: true,
       type: "list",
       storageClassType: "StepFunctionStateMachineParametersPropertyList",
@@ -3142,7 +3142,7 @@ export function tfPipeTargetParametersPropertyToHclTerraform(struct?: TfPipe.Tar
 }
 
 
-export function tfPipeTimeoutsPropertyToTerraform(struct?: TfPipe.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPipeTimeoutsPropertyToTerraform(struct?: AwsPipe.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3155,7 +3155,7 @@ export function tfPipeTimeoutsPropertyToTerraform(struct?: TfPipe.TimeoutsProper
 }
 
 
-export function tfPipeTimeoutsPropertyToHclTerraform(struct?: TfPipe.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPipeTimeoutsPropertyToHclTerraform(struct?: AwsPipe.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3186,18 +3186,18 @@ export function tfPipeTimeoutsPropertyToHclTerraform(struct?: TfPipe.TimeoutsPro
 }
 
 
-export namespace TfPipe {
+export namespace AwsPipe {
 export interface EnrichmentParametersHttpParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#header_parameters TfPipe#header_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#header_parameters AwsPipe#header_parameters}
   */
   readonly headerParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#path_parameter_values TfPipe#path_parameter_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#path_parameter_values AwsPipe#path_parameter_values}
   */
   readonly pathParameterValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#query_string_parameters TfPipe#query_string_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#query_string_parameters AwsPipe#query_string_parameters}
   */
   readonly queryStringParameters?: { [key: string]: string };
 }
@@ -3295,13 +3295,13 @@ export class EnrichmentParametersHttpParametersPropertyOutputReference extends c
 }
 export interface EnrichmentParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#input_template TfPipe#input_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#input_template AwsPipe#input_template}
   */
   readonly inputTemplate?: string;
   /**
   * http_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#http_parameters TfPipe#http_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#http_parameters AwsPipe#http_parameters}
   */
   readonly httpParameters?: EnrichmentParametersHttpParametersProperty;
 }
@@ -3377,7 +3377,7 @@ export class EnrichmentParametersPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface CloudwatchLogsLogDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#log_group_arn TfPipe#log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#log_group_arn AwsPipe#log_group_arn}
   */
   readonly logGroupArn: string;
 }
@@ -3428,7 +3428,7 @@ export class CloudwatchLogsLogDestinationPropertyOutputReference extends cdktn.C
 }
 export interface FirehoseLogDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#delivery_stream_arn TfPipe#delivery_stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#delivery_stream_arn AwsPipe#delivery_stream_arn}
   */
   readonly deliveryStreamArn: string;
 }
@@ -3479,19 +3479,19 @@ export class FirehoseLogDestinationPropertyOutputReference extends cdktn.Complex
 }
 export interface S3LogDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#bucket_name TfPipe#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#bucket_name AwsPipe#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#bucket_owner TfPipe#bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#bucket_owner AwsPipe#bucket_owner}
   */
   readonly bucketOwner: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#output_format TfPipe#output_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#output_format AwsPipe#output_format}
   */
   readonly outputFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#prefix TfPipe#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#prefix AwsPipe#prefix}
   */
   readonly prefix?: string;
 }
@@ -3605,29 +3605,29 @@ export class S3LogDestinationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface LogConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#include_execution_data TfPipe#include_execution_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#include_execution_data AwsPipe#include_execution_data}
   */
   readonly includeExecutionData?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#level TfPipe#level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#level AwsPipe#level}
   */
   readonly level: string;
   /**
   * cloudwatch_logs_log_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#cloudwatch_logs_log_destination TfPipe#cloudwatch_logs_log_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#cloudwatch_logs_log_destination AwsPipe#cloudwatch_logs_log_destination}
   */
   readonly cloudwatchLogsLogDestination?: CloudwatchLogsLogDestinationProperty;
   /**
   * firehose_log_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#firehose_log_destination TfPipe#firehose_log_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#firehose_log_destination AwsPipe#firehose_log_destination}
   */
   readonly firehoseLogDestination?: FirehoseLogDestinationProperty;
   /**
   * s3_log_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#s3_log_destination TfPipe#s3_log_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#s3_log_destination AwsPipe#s3_log_destination}
   */
   readonly s3LogDestination?: S3LogDestinationProperty;
 }
@@ -3766,7 +3766,7 @@ export class LogConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface SourceParametersActivemqBrokerParametersCredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#basic_auth TfPipe#basic_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#basic_auth AwsPipe#basic_auth}
   */
   readonly basicAuth: string;
 }
@@ -3817,21 +3817,21 @@ export class SourceParametersActivemqBrokerParametersCredentialsPropertyOutputRe
 }
 export interface ActivemqBrokerParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size TfPipe#batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size AwsPipe#batch_size}
   */
   readonly batchSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds TfPipe#maximum_batching_window_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds AwsPipe#maximum_batching_window_in_seconds}
   */
   readonly maximumBatchingWindowInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#queue_name TfPipe#queue_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#queue_name AwsPipe#queue_name}
   */
   readonly queueName: string;
   /**
   * credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#credentials TfPipe#credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#credentials AwsPipe#credentials}
   */
   readonly credentials: SourceParametersActivemqBrokerParametersCredentialsProperty;
 }
@@ -3945,7 +3945,7 @@ export class ActivemqBrokerParametersPropertyOutputReference extends cdktn.Compl
 }
 export interface SourceParametersDynamodbStreamParametersDeadLetterConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#arn TfPipe#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#arn AwsPipe#arn}
   */
   readonly arn?: string;
 }
@@ -3999,37 +3999,37 @@ export class SourceParametersDynamodbStreamParametersDeadLetterConfigPropertyOut
 }
 export interface DynamodbStreamParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size TfPipe#batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size AwsPipe#batch_size}
   */
   readonly batchSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds TfPipe#maximum_batching_window_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds AwsPipe#maximum_batching_window_in_seconds}
   */
   readonly maximumBatchingWindowInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_record_age_in_seconds TfPipe#maximum_record_age_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_record_age_in_seconds AwsPipe#maximum_record_age_in_seconds}
   */
   readonly maximumRecordAgeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_retry_attempts TfPipe#maximum_retry_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_retry_attempts AwsPipe#maximum_retry_attempts}
   */
   readonly maximumRetryAttempts?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#on_partial_batch_item_failure TfPipe#on_partial_batch_item_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#on_partial_batch_item_failure AwsPipe#on_partial_batch_item_failure}
   */
   readonly onPartialBatchItemFailure?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#parallelization_factor TfPipe#parallelization_factor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#parallelization_factor AwsPipe#parallelization_factor}
   */
   readonly parallelizationFactor?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#starting_position TfPipe#starting_position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#starting_position AwsPipe#starting_position}
   */
   readonly startingPosition: string;
   /**
   * dead_letter_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#dead_letter_config TfPipe#dead_letter_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#dead_letter_config AwsPipe#dead_letter_config}
   */
   readonly deadLetterConfig?: SourceParametersDynamodbStreamParametersDeadLetterConfigProperty;
 }
@@ -4234,7 +4234,7 @@ export class DynamodbStreamParametersPropertyOutputReference extends cdktn.Compl
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#pattern TfPipe#pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#pattern AwsPipe#pattern}
   */
   readonly pattern: string;
 }
@@ -4319,7 +4319,7 @@ export interface FilterCriteriaProperty {
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#filter TfPipe#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#filter AwsPipe#filter}
   */
   readonly filter?: FilterProperty[] | cdktn.IResolvable;
 }
@@ -4373,7 +4373,7 @@ export class FilterCriteriaPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SourceParametersKinesisStreamParametersDeadLetterConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#arn TfPipe#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#arn AwsPipe#arn}
   */
   readonly arn?: string;
 }
@@ -4427,41 +4427,41 @@ export class SourceParametersKinesisStreamParametersDeadLetterConfigPropertyOutp
 }
 export interface SourceParametersKinesisStreamParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size TfPipe#batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size AwsPipe#batch_size}
   */
   readonly batchSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds TfPipe#maximum_batching_window_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds AwsPipe#maximum_batching_window_in_seconds}
   */
   readonly maximumBatchingWindowInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_record_age_in_seconds TfPipe#maximum_record_age_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_record_age_in_seconds AwsPipe#maximum_record_age_in_seconds}
   */
   readonly maximumRecordAgeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_retry_attempts TfPipe#maximum_retry_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_retry_attempts AwsPipe#maximum_retry_attempts}
   */
   readonly maximumRetryAttempts?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#on_partial_batch_item_failure TfPipe#on_partial_batch_item_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#on_partial_batch_item_failure AwsPipe#on_partial_batch_item_failure}
   */
   readonly onPartialBatchItemFailure?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#parallelization_factor TfPipe#parallelization_factor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#parallelization_factor AwsPipe#parallelization_factor}
   */
   readonly parallelizationFactor?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#starting_position TfPipe#starting_position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#starting_position AwsPipe#starting_position}
   */
   readonly startingPosition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#starting_position_timestamp TfPipe#starting_position_timestamp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#starting_position_timestamp AwsPipe#starting_position_timestamp}
   */
   readonly startingPositionTimestamp?: string;
   /**
   * dead_letter_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#dead_letter_config TfPipe#dead_letter_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#dead_letter_config AwsPipe#dead_letter_config}
   */
   readonly deadLetterConfig?: SourceParametersKinesisStreamParametersDeadLetterConfigProperty;
 }
@@ -4688,11 +4688,11 @@ export class SourceParametersKinesisStreamParametersPropertyOutputReference exte
 }
 export interface SourceParametersManagedStreamingKafkaParametersCredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#client_certificate_tls_auth TfPipe#client_certificate_tls_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#client_certificate_tls_auth AwsPipe#client_certificate_tls_auth}
   */
   readonly clientCertificateTlsAuth?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sasl_scram_512_auth TfPipe#sasl_scram_512_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sasl_scram_512_auth AwsPipe#sasl_scram_512_auth}
   */
   readonly saslScram512Auth?: string;
 }
@@ -4768,29 +4768,29 @@ export class SourceParametersManagedStreamingKafkaParametersCredentialsPropertyO
 }
 export interface ManagedStreamingKafkaParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size TfPipe#batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size AwsPipe#batch_size}
   */
   readonly batchSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#consumer_group_id TfPipe#consumer_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#consumer_group_id AwsPipe#consumer_group_id}
   */
   readonly consumerGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds TfPipe#maximum_batching_window_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds AwsPipe#maximum_batching_window_in_seconds}
   */
   readonly maximumBatchingWindowInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#starting_position TfPipe#starting_position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#starting_position AwsPipe#starting_position}
   */
   readonly startingPosition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#topic_name TfPipe#topic_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#topic_name AwsPipe#topic_name}
   */
   readonly topicName: string;
   /**
   * credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#credentials TfPipe#credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#credentials AwsPipe#credentials}
   */
   readonly credentials?: SourceParametersManagedStreamingKafkaParametersCredentialsProperty;
 }
@@ -4951,7 +4951,7 @@ export class ManagedStreamingKafkaParametersPropertyOutputReference extends cdkt
 }
 export interface SourceParametersRabbitmqBrokerParametersCredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#basic_auth TfPipe#basic_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#basic_auth AwsPipe#basic_auth}
   */
   readonly basicAuth: string;
 }
@@ -5002,25 +5002,25 @@ export class SourceParametersRabbitmqBrokerParametersCredentialsPropertyOutputRe
 }
 export interface RabbitmqBrokerParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size TfPipe#batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size AwsPipe#batch_size}
   */
   readonly batchSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds TfPipe#maximum_batching_window_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds AwsPipe#maximum_batching_window_in_seconds}
   */
   readonly maximumBatchingWindowInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#queue_name TfPipe#queue_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#queue_name AwsPipe#queue_name}
   */
   readonly queueName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#virtual_host TfPipe#virtual_host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#virtual_host AwsPipe#virtual_host}
   */
   readonly virtualHost?: string;
   /**
   * credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#credentials TfPipe#credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#credentials AwsPipe#credentials}
   */
   readonly credentials: SourceParametersRabbitmqBrokerParametersCredentialsProperty;
 }
@@ -5156,19 +5156,19 @@ export class RabbitmqBrokerParametersPropertyOutputReference extends cdktn.Compl
 }
 export interface SourceParametersSelfManagedKafkaParametersCredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#basic_auth TfPipe#basic_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#basic_auth AwsPipe#basic_auth}
   */
   readonly basicAuth?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#client_certificate_tls_auth TfPipe#client_certificate_tls_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#client_certificate_tls_auth AwsPipe#client_certificate_tls_auth}
   */
   readonly clientCertificateTlsAuth?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sasl_scram_256_auth TfPipe#sasl_scram_256_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sasl_scram_256_auth AwsPipe#sasl_scram_256_auth}
   */
   readonly saslScram256Auth?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sasl_scram_512_auth TfPipe#sasl_scram_512_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sasl_scram_512_auth AwsPipe#sasl_scram_512_auth}
   */
   readonly saslScram512Auth?: string;
 }
@@ -5288,11 +5288,11 @@ export class SourceParametersSelfManagedKafkaParametersCredentialsPropertyOutput
 }
 export interface VpcProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#security_groups TfPipe#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#security_groups AwsPipe#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#subnets TfPipe#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#subnets AwsPipe#subnets}
   */
   readonly subnets?: string[];
 }
@@ -5368,43 +5368,43 @@ export class VpcPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SelfManagedKafkaParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#additional_bootstrap_servers TfPipe#additional_bootstrap_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#additional_bootstrap_servers AwsPipe#additional_bootstrap_servers}
   */
   readonly additionalBootstrapServers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size TfPipe#batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size AwsPipe#batch_size}
   */
   readonly batchSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#consumer_group_id TfPipe#consumer_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#consumer_group_id AwsPipe#consumer_group_id}
   */
   readonly consumerGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds TfPipe#maximum_batching_window_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds AwsPipe#maximum_batching_window_in_seconds}
   */
   readonly maximumBatchingWindowInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#server_root_ca_certificate TfPipe#server_root_ca_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#server_root_ca_certificate AwsPipe#server_root_ca_certificate}
   */
   readonly serverRootCaCertificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#starting_position TfPipe#starting_position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#starting_position AwsPipe#starting_position}
   */
   readonly startingPosition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#topic_name TfPipe#topic_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#topic_name AwsPipe#topic_name}
   */
   readonly topicName: string;
   /**
   * credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#credentials TfPipe#credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#credentials AwsPipe#credentials}
   */
   readonly credentials?: SourceParametersSelfManagedKafkaParametersCredentialsProperty;
   /**
   * vpc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#vpc TfPipe#vpc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#vpc AwsPipe#vpc}
   */
   readonly vpc?: VpcProperty;
 }
@@ -5631,11 +5631,11 @@ export class SelfManagedKafkaParametersPropertyOutputReference extends cdktn.Com
 }
 export interface SourceParametersSqsQueueParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size TfPipe#batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_size AwsPipe#batch_size}
   */
   readonly batchSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds TfPipe#maximum_batching_window_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#maximum_batching_window_in_seconds AwsPipe#maximum_batching_window_in_seconds}
   */
   readonly maximumBatchingWindowInSeconds?: number;
 }
@@ -5713,49 +5713,49 @@ export interface SourceParametersProperty {
   /**
   * activemq_broker_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#activemq_broker_parameters TfPipe#activemq_broker_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#activemq_broker_parameters AwsPipe#activemq_broker_parameters}
   */
   readonly activemqBrokerParameters?: ActivemqBrokerParametersProperty;
   /**
   * dynamodb_stream_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#dynamodb_stream_parameters TfPipe#dynamodb_stream_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#dynamodb_stream_parameters AwsPipe#dynamodb_stream_parameters}
   */
   readonly dynamodbStreamParameters?: DynamodbStreamParametersProperty;
   /**
   * filter_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#filter_criteria TfPipe#filter_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#filter_criteria AwsPipe#filter_criteria}
   */
   readonly filterCriteria?: FilterCriteriaProperty;
   /**
   * kinesis_stream_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#kinesis_stream_parameters TfPipe#kinesis_stream_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#kinesis_stream_parameters AwsPipe#kinesis_stream_parameters}
   */
   readonly kinesisStreamParameters?: SourceParametersKinesisStreamParametersProperty;
   /**
   * managed_streaming_kafka_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#managed_streaming_kafka_parameters TfPipe#managed_streaming_kafka_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#managed_streaming_kafka_parameters AwsPipe#managed_streaming_kafka_parameters}
   */
   readonly managedStreamingKafkaParameters?: ManagedStreamingKafkaParametersProperty;
   /**
   * rabbitmq_broker_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#rabbitmq_broker_parameters TfPipe#rabbitmq_broker_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#rabbitmq_broker_parameters AwsPipe#rabbitmq_broker_parameters}
   */
   readonly rabbitmqBrokerParameters?: RabbitmqBrokerParametersProperty;
   /**
   * self_managed_kafka_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#self_managed_kafka_parameters TfPipe#self_managed_kafka_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#self_managed_kafka_parameters AwsPipe#self_managed_kafka_parameters}
   */
   readonly selfManagedKafkaParameters?: SelfManagedKafkaParametersProperty;
   /**
   * sqs_queue_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sqs_queue_parameters TfPipe#sqs_queue_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sqs_queue_parameters AwsPipe#sqs_queue_parameters}
   */
   readonly sqsQueueParameters?: SourceParametersSqsQueueParametersProperty;
 }
@@ -5963,7 +5963,7 @@ export class SourceParametersPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ArrayPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#size TfPipe#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#size AwsPipe#size}
   */
   readonly size?: number;
 }
@@ -6017,11 +6017,11 @@ export class ArrayPropertiesPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TargetParametersBatchJobParametersContainerOverridesEnvironmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#name TfPipe#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#name AwsPipe#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#value TfPipe#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#value AwsPipe#value}
   */
   readonly value?: string;
 }
@@ -6129,11 +6129,11 @@ export class TargetParametersBatchJobParametersContainerOverridesEnvironmentProp
 }
 export interface TargetParametersBatchJobParametersContainerOverridesResourceRequirementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#type TfPipe#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#type AwsPipe#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#value TfPipe#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#value AwsPipe#value}
   */
   readonly value: string;
 }
@@ -6235,23 +6235,23 @@ export class TargetParametersBatchJobParametersContainerOverridesResourceRequire
 }
 export interface ContainerOverridesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#command TfPipe#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#command AwsPipe#command}
   */
   readonly command?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#instance_type TfPipe#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#instance_type AwsPipe#instance_type}
   */
   readonly instanceType?: string;
   /**
   * environment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#environment TfPipe#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#environment AwsPipe#environment}
   */
   readonly environment?: TargetParametersBatchJobParametersContainerOverridesEnvironmentProperty[] | cdktn.IResolvable;
   /**
   * resource_requirement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#resource_requirement TfPipe#resource_requirement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#resource_requirement AwsPipe#resource_requirement}
   */
   readonly resourceRequirement?: TargetParametersBatchJobParametersContainerOverridesResourceRequirementProperty[] | cdktn.IResolvable;
 }
@@ -6371,11 +6371,11 @@ export class ContainerOverridesPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface DependsOnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#job_id TfPipe#job_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#job_id AwsPipe#job_id}
   */
   readonly jobId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#type TfPipe#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#type AwsPipe#type}
   */
   readonly type?: string;
 }
@@ -6483,7 +6483,7 @@ export class DependsOnPropertyList extends cdktn.ComplexList {
 }
 export interface RetryStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#attempts TfPipe#attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#attempts AwsPipe#attempts}
   */
   readonly attempts?: number;
 }
@@ -6537,39 +6537,39 @@ export class RetryStrategyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BatchJobParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#job_definition TfPipe#job_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#job_definition AwsPipe#job_definition}
   */
   readonly jobDefinition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#job_name TfPipe#job_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#job_name AwsPipe#job_name}
   */
   readonly jobName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#parameters TfPipe#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#parameters AwsPipe#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
   * array_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#array_properties TfPipe#array_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#array_properties AwsPipe#array_properties}
   */
   readonly arrayProperties?: ArrayPropertiesProperty;
   /**
   * container_overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#container_overrides TfPipe#container_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#container_overrides AwsPipe#container_overrides}
   */
   readonly containerOverrides?: ContainerOverridesProperty;
   /**
   * depends_on block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#depends_on TfPipe#depends_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#depends_on AwsPipe#depends_on}
   */
   readonly dependsOn?: DependsOnProperty[] | cdktn.IResolvable;
   /**
   * retry_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#retry_strategy TfPipe#retry_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#retry_strategy AwsPipe#retry_strategy}
   */
   readonly retryStrategy?: RetryStrategyProperty;
 }
@@ -6749,11 +6749,11 @@ export class BatchJobParametersPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface CloudwatchLogsParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#log_stream_name TfPipe#log_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#log_stream_name AwsPipe#log_stream_name}
   */
   readonly logStreamName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#timestamp TfPipe#timestamp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#timestamp AwsPipe#timestamp}
   */
   readonly timestamp?: string;
 }
@@ -6829,15 +6829,15 @@ export class CloudwatchLogsParametersPropertyOutputReference extends cdktn.Compl
 }
 export interface CapacityProviderStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#base TfPipe#base}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#base AwsPipe#base}
   */
   readonly base?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#capacity_provider TfPipe#capacity_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#capacity_provider AwsPipe#capacity_provider}
   */
   readonly capacityProvider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#weight TfPipe#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#weight AwsPipe#weight}
   */
   readonly weight?: number;
 }
@@ -6964,15 +6964,15 @@ export class CapacityProviderStrategyPropertyList extends cdktn.ComplexList {
 }
 export interface AwsVpcConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#assign_public_ip TfPipe#assign_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#assign_public_ip AwsPipe#assign_public_ip}
   */
   readonly assignPublicIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#security_groups TfPipe#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#security_groups AwsPipe#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#subnets TfPipe#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#subnets AwsPipe#subnets}
   */
   readonly subnets?: string[];
 }
@@ -7072,7 +7072,7 @@ export interface NetworkConfigurationProperty {
   /**
   * aws_vpc_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#aws_vpc_configuration TfPipe#aws_vpc_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#aws_vpc_configuration AwsPipe#aws_vpc_configuration}
   */
   readonly awsVpcConfiguration?: AwsVpcConfigurationProperty;
 }
@@ -7126,11 +7126,11 @@ export class NetworkConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#name TfPipe#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#name AwsPipe#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#value TfPipe#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#value AwsPipe#value}
   */
   readonly value?: string;
 }
@@ -7238,11 +7238,11 @@ export class TargetParametersEcsTaskParametersOverridesContainerOverrideEnvironm
 }
 export interface EnvironmentFileProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#type TfPipe#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#type AwsPipe#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#value TfPipe#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#value AwsPipe#value}
   */
   readonly value: string;
 }
@@ -7344,11 +7344,11 @@ export class EnvironmentFilePropertyList extends cdktn.ComplexList {
 }
 export interface TargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#type TfPipe#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#type AwsPipe#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#value TfPipe#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#value AwsPipe#value}
   */
   readonly value: string;
 }
@@ -7450,41 +7450,41 @@ export class TargetParametersEcsTaskParametersOverridesContainerOverrideResource
 }
 export interface ContainerOverrideProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#command TfPipe#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#command AwsPipe#command}
   */
   readonly command?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#cpu TfPipe#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#cpu AwsPipe#cpu}
   */
   readonly cpu?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#memory TfPipe#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#memory AwsPipe#memory}
   */
   readonly memory?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#memory_reservation TfPipe#memory_reservation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#memory_reservation AwsPipe#memory_reservation}
   */
   readonly memoryReservation?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#name TfPipe#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#name AwsPipe#name}
   */
   readonly name?: string;
   /**
   * environment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#environment TfPipe#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#environment AwsPipe#environment}
   */
   readonly environment?: TargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentProperty[] | cdktn.IResolvable;
   /**
   * environment_file block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#environment_file TfPipe#environment_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#environment_file AwsPipe#environment_file}
   */
   readonly environmentFile?: EnvironmentFileProperty[] | cdktn.IResolvable;
   /**
   * resource_requirement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#resource_requirement TfPipe#resource_requirement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#resource_requirement AwsPipe#resource_requirement}
   */
   readonly resourceRequirement?: TargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirementProperty[] | cdktn.IResolvable;
 }
@@ -7724,7 +7724,7 @@ export class ContainerOverridePropertyList extends cdktn.ComplexList {
 }
 export interface EphemeralStorageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#size_in_gib TfPipe#size_in_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#size_in_gib AwsPipe#size_in_gib}
   */
   readonly sizeInGib: number;
 }
@@ -7775,11 +7775,11 @@ export class EphemeralStoragePropertyOutputReference extends cdktn.ComplexObject
 }
 export interface InferenceAcceleratorOverrideProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#device_name TfPipe#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#device_name AwsPipe#device_name}
   */
   readonly deviceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#device_type TfPipe#device_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#device_type AwsPipe#device_type}
   */
   readonly deviceType?: string;
 }
@@ -7887,37 +7887,37 @@ export class InferenceAcceleratorOverridePropertyList extends cdktn.ComplexList 
 }
 export interface OverridesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#cpu TfPipe#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#cpu AwsPipe#cpu}
   */
   readonly cpu?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#execution_role_arn TfPipe#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#execution_role_arn AwsPipe#execution_role_arn}
   */
   readonly executionRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#memory TfPipe#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#memory AwsPipe#memory}
   */
   readonly memory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#task_role_arn TfPipe#task_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#task_role_arn AwsPipe#task_role_arn}
   */
   readonly taskRoleArn?: string;
   /**
   * container_override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#container_override TfPipe#container_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#container_override AwsPipe#container_override}
   */
   readonly containerOverride?: ContainerOverrideProperty[] | cdktn.IResolvable;
   /**
   * ephemeral_storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#ephemeral_storage TfPipe#ephemeral_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#ephemeral_storage AwsPipe#ephemeral_storage}
   */
   readonly ephemeralStorage?: EphemeralStorageProperty;
   /**
   * inference_accelerator_override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#inference_accelerator_override TfPipe#inference_accelerator_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#inference_accelerator_override AwsPipe#inference_accelerator_override}
   */
   readonly inferenceAcceleratorOverride?: InferenceAcceleratorOverrideProperty[] | cdktn.IResolvable;
 }
@@ -8103,11 +8103,11 @@ export class OverridesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PlacementConstraintProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#expression TfPipe#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#expression AwsPipe#expression}
   */
   readonly expression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#type TfPipe#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#type AwsPipe#type}
   */
   readonly type?: string;
 }
@@ -8215,11 +8215,11 @@ export class PlacementConstraintPropertyList extends cdktn.ComplexList {
 }
 export interface PlacementStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#field TfPipe#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#field AwsPipe#field}
   */
   readonly field?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#type TfPipe#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#type AwsPipe#type}
   */
   readonly type?: string;
 }
@@ -8327,73 +8327,73 @@ export class PlacementStrategyPropertyList extends cdktn.ComplexList {
 }
 export interface EcsTaskParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#enable_ecs_managed_tags TfPipe#enable_ecs_managed_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#enable_ecs_managed_tags AwsPipe#enable_ecs_managed_tags}
   */
   readonly enableEcsManagedTags?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#enable_execute_command TfPipe#enable_execute_command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#enable_execute_command AwsPipe#enable_execute_command}
   */
   readonly enableExecuteCommand?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#group TfPipe#group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#group AwsPipe#group}
   */
   readonly group?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#launch_type TfPipe#launch_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#launch_type AwsPipe#launch_type}
   */
   readonly launchType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#platform_version TfPipe#platform_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#platform_version AwsPipe#platform_version}
   */
   readonly platformVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#propagate_tags TfPipe#propagate_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#propagate_tags AwsPipe#propagate_tags}
   */
   readonly propagateTags?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#reference_id TfPipe#reference_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#reference_id AwsPipe#reference_id}
   */
   readonly referenceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#tags TfPipe#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#tags AwsPipe#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#task_count TfPipe#task_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#task_count AwsPipe#task_count}
   */
   readonly taskCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#task_definition_arn TfPipe#task_definition_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#task_definition_arn AwsPipe#task_definition_arn}
   */
   readonly taskDefinitionArn: string;
   /**
   * capacity_provider_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#capacity_provider_strategy TfPipe#capacity_provider_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#capacity_provider_strategy AwsPipe#capacity_provider_strategy}
   */
   readonly capacityProviderStrategy?: CapacityProviderStrategyProperty[] | cdktn.IResolvable;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#network_configuration TfPipe#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#network_configuration AwsPipe#network_configuration}
   */
   readonly networkConfiguration?: NetworkConfigurationProperty;
   /**
   * overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#overrides TfPipe#overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#overrides AwsPipe#overrides}
   */
   readonly overrides?: OverridesProperty;
   /**
   * placement_constraint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#placement_constraint TfPipe#placement_constraint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#placement_constraint AwsPipe#placement_constraint}
   */
   readonly placementConstraint?: PlacementConstraintProperty[] | cdktn.IResolvable;
   /**
   * placement_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#placement_strategy TfPipe#placement_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#placement_strategy AwsPipe#placement_strategy}
   */
   readonly placementStrategy?: PlacementStrategyProperty[] | cdktn.IResolvable;
 }
@@ -8752,23 +8752,23 @@ export class EcsTaskParametersPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface EventbridgeEventBusParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#detail_type TfPipe#detail_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#detail_type AwsPipe#detail_type}
   */
   readonly detailType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#endpoint_id TfPipe#endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#endpoint_id AwsPipe#endpoint_id}
   */
   readonly endpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#resources TfPipe#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#resources AwsPipe#resources}
   */
   readonly resources?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#source TfPipe#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#source AwsPipe#source}
   */
   readonly source?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#time TfPipe#time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#time AwsPipe#time}
   */
   readonly time?: string;
 }
@@ -8910,15 +8910,15 @@ export class EventbridgeEventBusParametersPropertyOutputReference extends cdktn.
 }
 export interface TargetParametersHttpParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#header_parameters TfPipe#header_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#header_parameters AwsPipe#header_parameters}
   */
   readonly headerParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#path_parameter_values TfPipe#path_parameter_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#path_parameter_values AwsPipe#path_parameter_values}
   */
   readonly pathParameterValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#query_string_parameters TfPipe#query_string_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#query_string_parameters AwsPipe#query_string_parameters}
   */
   readonly queryStringParameters?: { [key: string]: string };
 }
@@ -9016,7 +9016,7 @@ export class TargetParametersHttpParametersPropertyOutputReference extends cdktn
 }
 export interface TargetParametersKinesisStreamParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#partition_key TfPipe#partition_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#partition_key AwsPipe#partition_key}
   */
   readonly partitionKey: string;
 }
@@ -9067,7 +9067,7 @@ export class TargetParametersKinesisStreamParametersPropertyOutputReference exte
 }
 export interface LambdaFunctionParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#invocation_type TfPipe#invocation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#invocation_type AwsPipe#invocation_type}
   */
   readonly invocationType: string;
 }
@@ -9118,27 +9118,27 @@ export class LambdaFunctionParametersPropertyOutputReference extends cdktn.Compl
 }
 export interface RedshiftDataParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#database TfPipe#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#database AwsPipe#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#db_user TfPipe#db_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#db_user AwsPipe#db_user}
   */
   readonly dbUser?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#secret_manager_arn TfPipe#secret_manager_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#secret_manager_arn AwsPipe#secret_manager_arn}
   */
   readonly secretManagerArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sqls TfPipe#sqls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sqls AwsPipe#sqls}
   */
   readonly sqls: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#statement_name TfPipe#statement_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#statement_name AwsPipe#statement_name}
   */
   readonly statementName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#with_event TfPipe#with_event}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#with_event AwsPipe#with_event}
   */
   readonly withEvent?: boolean | cdktn.IResolvable;
 }
@@ -9296,11 +9296,11 @@ export class RedshiftDataParametersPropertyOutputReference extends cdktn.Complex
 }
 export interface PipelineParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#name TfPipe#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#name AwsPipe#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#value TfPipe#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#value AwsPipe#value}
   */
   readonly value: string;
 }
@@ -9404,7 +9404,7 @@ export interface SagemakerPipelineParametersProperty {
   /**
   * pipeline_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#pipeline_parameter TfPipe#pipeline_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#pipeline_parameter AwsPipe#pipeline_parameter}
   */
   readonly pipelineParameter?: PipelineParameterProperty[] | cdktn.IResolvable;
 }
@@ -9458,11 +9458,11 @@ export class SagemakerPipelineParametersPropertyOutputReference extends cdktn.Co
 }
 export interface TargetParametersSqsQueueParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#message_deduplication_id TfPipe#message_deduplication_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#message_deduplication_id AwsPipe#message_deduplication_id}
   */
   readonly messageDeduplicationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#message_group_id TfPipe#message_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#message_group_id AwsPipe#message_group_id}
   */
   readonly messageGroupId?: string;
 }
@@ -9538,7 +9538,7 @@ export class TargetParametersSqsQueueParametersPropertyOutputReference extends c
 }
 export interface StepFunctionStateMachineParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#invocation_type TfPipe#invocation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#invocation_type AwsPipe#invocation_type}
   */
   readonly invocationType: string;
 }
@@ -9589,73 +9589,73 @@ export class StepFunctionStateMachineParametersPropertyOutputReference extends c
 }
 export interface TargetParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#input_template TfPipe#input_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#input_template AwsPipe#input_template}
   */
   readonly inputTemplate?: string;
   /**
   * batch_job_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_job_parameters TfPipe#batch_job_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#batch_job_parameters AwsPipe#batch_job_parameters}
   */
   readonly batchJobParameters?: BatchJobParametersProperty;
   /**
   * cloudwatch_logs_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#cloudwatch_logs_parameters TfPipe#cloudwatch_logs_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#cloudwatch_logs_parameters AwsPipe#cloudwatch_logs_parameters}
   */
   readonly cloudwatchLogsParameters?: CloudwatchLogsParametersProperty;
   /**
   * ecs_task_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#ecs_task_parameters TfPipe#ecs_task_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#ecs_task_parameters AwsPipe#ecs_task_parameters}
   */
   readonly ecsTaskParameters?: EcsTaskParametersProperty;
   /**
   * eventbridge_event_bus_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#eventbridge_event_bus_parameters TfPipe#eventbridge_event_bus_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#eventbridge_event_bus_parameters AwsPipe#eventbridge_event_bus_parameters}
   */
   readonly eventbridgeEventBusParameters?: EventbridgeEventBusParametersProperty;
   /**
   * http_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#http_parameters TfPipe#http_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#http_parameters AwsPipe#http_parameters}
   */
   readonly httpParameters?: TargetParametersHttpParametersProperty;
   /**
   * kinesis_stream_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#kinesis_stream_parameters TfPipe#kinesis_stream_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#kinesis_stream_parameters AwsPipe#kinesis_stream_parameters}
   */
   readonly kinesisStreamParameters?: TargetParametersKinesisStreamParametersProperty;
   /**
   * lambda_function_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#lambda_function_parameters TfPipe#lambda_function_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#lambda_function_parameters AwsPipe#lambda_function_parameters}
   */
   readonly lambdaFunctionParameters?: LambdaFunctionParametersProperty;
   /**
   * redshift_data_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#redshift_data_parameters TfPipe#redshift_data_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#redshift_data_parameters AwsPipe#redshift_data_parameters}
   */
   readonly redshiftDataParameters?: RedshiftDataParametersProperty;
   /**
   * sagemaker_pipeline_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sagemaker_pipeline_parameters TfPipe#sagemaker_pipeline_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sagemaker_pipeline_parameters AwsPipe#sagemaker_pipeline_parameters}
   */
   readonly sagemakerPipelineParameters?: SagemakerPipelineParametersProperty;
   /**
   * sqs_queue_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sqs_queue_parameters TfPipe#sqs_queue_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#sqs_queue_parameters AwsPipe#sqs_queue_parameters}
   */
   readonly sqsQueueParameters?: TargetParametersSqsQueueParametersProperty;
   /**
   * step_function_state_machine_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#step_function_state_machine_parameters TfPipe#step_function_state_machine_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#step_function_state_machine_parameters AwsPipe#step_function_state_machine_parameters}
   */
   readonly stepFunctionStateMachineParameters?: StepFunctionStateMachineParametersProperty;
 }
@@ -9951,15 +9951,15 @@ export class TargetParametersPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#create TfPipe#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#create AwsPipe#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#delete TfPipe#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#delete AwsPipe#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#update TfPipe#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pipes_pipe#update AwsPipe#update}
   */
   readonly update?: string;
 }

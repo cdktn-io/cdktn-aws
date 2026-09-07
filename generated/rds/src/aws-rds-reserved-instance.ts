@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfReservedInstanceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsReservedInstanceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#id TfReservedInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#id AwsReservedInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#instance_count TfReservedInstance#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#instance_count AwsReservedInstance#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#offering_id TfReservedInstance#offering_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#offering_id AwsReservedInstance#offering_id}
   */
   readonly offeringId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#region TfReservedInstance#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#region AwsReservedInstance#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#reservation_id TfReservedInstance#reservation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#reservation_id AwsReservedInstance#reservation_id}
   */
   readonly reservationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#tags TfReservedInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#tags AwsReservedInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#tags_all TfReservedInstance#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#tags_all AwsReservedInstance#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#timeouts TfReservedInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#timeouts AwsReservedInstance#timeouts}
   */
-  readonly timeouts?: TfReservedInstance.TimeoutsProperty;
+  readonly timeouts?: AwsReservedInstance.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance aws_rds_reserved_instance}
 */
-export class TfReservedInstance extends cdktn.TerraformResource {
+export class AwsReservedInstance extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfReservedInstance extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfReservedInstance resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsReservedInstance resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfReservedInstance to import
-  * @param importFromId The id of the existing TfReservedInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfReservedInstance to import is found
+  * @param importToId The construct id used in the generated config for the AwsReservedInstance to import
+  * @param importFromId The id of the existing AwsReservedInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsReservedInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rds_reserved_instance", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfReservedInstance extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfReservedInstanceConfig
+  * @param options AwsReservedInstanceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfReservedInstanceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsReservedInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rds_reserved_instance',
       terraformGeneratorMetadata: {
@@ -203,7 +203,7 @@ export class TfReservedInstance extends cdktn.TerraformResource {
   }
 
   // recurring_charges - computed: true, optional: false, required: false
-  private _recurringCharges = new TfReservedInstance.RecurringChargesPropertyList(this, "recurring_charges", false);
+  private _recurringCharges = new AwsReservedInstance.RecurringChargesPropertyList(this, "recurring_charges", false);
   public get recurringCharges() {
     return this._recurringCharges;
   }
@@ -288,11 +288,11 @@ export class TfReservedInstance extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfReservedInstance.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsReservedInstance.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfReservedInstance.TimeoutsProperty) {
+  public putTimeouts(value: AwsReservedInstance.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -316,7 +316,7 @@ export class TfReservedInstance extends cdktn.TerraformResource {
       reservation_id: cdktn.stringToTerraform(this._reservationId),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfReservedInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsReservedInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -365,10 +365,10 @@ export class TfReservedInstance extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfReservedInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsReservedInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfReservedInstance.TimeoutsProperty",
+        storageClassType: "AwsReservedInstance.TimeoutsProperty",
       },
     };
 
@@ -377,7 +377,7 @@ export class TfReservedInstance extends cdktn.TerraformResource {
   }
 }
 
-export function tfReservedInstanceRecurringChargesPropertyToTerraform(struct?: TfReservedInstance.RecurringChargesProperty): any {
+export function awsReservedInstanceRecurringChargesPropertyToTerraform(struct?: AwsReservedInstance.RecurringChargesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function tfReservedInstanceRecurringChargesPropertyToTerraform(struct?: T
 }
 
 
-export function tfReservedInstanceRecurringChargesPropertyToHclTerraform(struct?: TfReservedInstance.RecurringChargesProperty): any {
+export function awsReservedInstanceRecurringChargesPropertyToHclTerraform(struct?: AwsReservedInstance.RecurringChargesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function tfReservedInstanceRecurringChargesPropertyToHclTerraform(struct?
 }
 
 
-export function tfReservedInstanceTimeoutsPropertyToTerraform(struct?: TfReservedInstance.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsReservedInstanceTimeoutsPropertyToTerraform(struct?: AwsReservedInstance.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,7 +411,7 @@ export function tfReservedInstanceTimeoutsPropertyToTerraform(struct?: TfReserve
 }
 
 
-export function tfReservedInstanceTimeoutsPropertyToHclTerraform(struct?: TfReservedInstance.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsReservedInstanceTimeoutsPropertyToHclTerraform(struct?: AwsReservedInstance.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function tfReservedInstanceTimeoutsPropertyToHclTerraform(struct?: TfRese
 }
 
 
-export namespace TfReservedInstance {
+export namespace AwsReservedInstance {
 export interface RecurringChargesProperty {
 }
 export class RecurringChargesPropertyOutputReference extends cdktn.ComplexObject {
@@ -504,15 +504,15 @@ export class RecurringChargesPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#create TfReservedInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#create AwsReservedInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#delete TfReservedInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#delete AwsReservedInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#update TfReservedInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_reserved_instance#update AwsReservedInstance#update}
   */
   readonly update?: string;
 }

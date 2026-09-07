@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTopicRuleDestinationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTopicRuleDestinationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#enabled TfTopicRuleDestination#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#enabled AwsTopicRuleDestination#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#id TfTopicRuleDestination#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#id AwsTopicRuleDestination#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,27 +20,27 @@ export interface TfTopicRuleDestinationConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#region TfTopicRuleDestination#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#region AwsTopicRuleDestination#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#timeouts TfTopicRuleDestination#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#timeouts AwsTopicRuleDestination#timeouts}
   */
-  readonly timeouts?: TfTopicRuleDestination.TimeoutsProperty;
+  readonly timeouts?: AwsTopicRuleDestination.TimeoutsProperty;
   /**
   * vpc_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#vpc_configuration TfTopicRuleDestination#vpc_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#vpc_configuration AwsTopicRuleDestination#vpc_configuration}
   */
-  readonly vpcConfiguration: TfTopicRuleDestination.VpcConfigurationProperty;
+  readonly vpcConfiguration: AwsTopicRuleDestination.VpcConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination aws_iot_topic_rule_destination}
 */
-export class TfTopicRuleDestination extends cdktn.TerraformResource {
+export class AwsTopicRuleDestination extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfTopicRuleDestination extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTopicRuleDestination resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTopicRuleDestination resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTopicRuleDestination to import
-  * @param importFromId The id of the existing TfTopicRuleDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTopicRuleDestination to import is found
+  * @param importToId The construct id used in the generated config for the AwsTopicRuleDestination to import
+  * @param importFromId The id of the existing AwsTopicRuleDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTopicRuleDestination to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_topic_rule_destination", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfTopicRuleDestination extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTopicRuleDestinationConfig
+  * @param options AwsTopicRuleDestinationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTopicRuleDestinationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTopicRuleDestinationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_topic_rule_destination',
       terraformGeneratorMetadata: {
@@ -153,11 +153,11 @@ export class TfTopicRuleDestination extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTopicRuleDestination.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTopicRuleDestination.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTopicRuleDestination.TimeoutsProperty) {
+  public putTimeouts(value: AwsTopicRuleDestination.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -169,11 +169,11 @@ export class TfTopicRuleDestination extends cdktn.TerraformResource {
   }
 
   // vpc_configuration - computed: false, optional: false, required: true
-  private _vpcConfiguration = new TfTopicRuleDestination.VpcConfigurationPropertyOutputReference(this, "vpc_configuration");
+  private _vpcConfiguration = new AwsTopicRuleDestination.VpcConfigurationPropertyOutputReference(this, "vpc_configuration");
   public get vpcConfiguration() {
     return this._vpcConfiguration;
   }
-  public putVpcConfiguration(value: TfTopicRuleDestination.VpcConfigurationProperty) {
+  public putVpcConfiguration(value: AwsTopicRuleDestination.VpcConfigurationProperty) {
     this._vpcConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -190,8 +190,8 @@ export class TfTopicRuleDestination extends cdktn.TerraformResource {
       enabled: cdktn.booleanToTerraform(this._enabled),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfTopicRuleDestinationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_configuration: tfTopicRuleDestinationVpcConfigurationPropertyToTerraform(this._vpcConfiguration.internalValue),
+      timeouts: awsTopicRuleDestinationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_configuration: awsTopicRuleDestinationVpcConfigurationPropertyToTerraform(this._vpcConfiguration.internalValue),
     };
   }
 
@@ -216,16 +216,16 @@ export class TfTopicRuleDestination extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfTopicRuleDestinationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTopicRuleDestinationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTopicRuleDestination.TimeoutsProperty",
+        storageClassType: "AwsTopicRuleDestination.TimeoutsProperty",
       },
       vpc_configuration: {
-        value: tfTopicRuleDestinationVpcConfigurationPropertyToHclTerraform(this._vpcConfiguration.internalValue),
+        value: awsTopicRuleDestinationVpcConfigurationPropertyToHclTerraform(this._vpcConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTopicRuleDestination.VpcConfigurationPropertyList",
+        storageClassType: "AwsTopicRuleDestination.VpcConfigurationPropertyList",
       },
     };
 
@@ -234,7 +234,7 @@ export class TfTopicRuleDestination extends cdktn.TerraformResource {
   }
 }
 
-export function tfTopicRuleDestinationTimeoutsPropertyToTerraform(struct?: TfTopicRuleDestination.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTopicRuleDestinationTimeoutsPropertyToTerraform(struct?: AwsTopicRuleDestination.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -247,7 +247,7 @@ export function tfTopicRuleDestinationTimeoutsPropertyToTerraform(struct?: TfTop
 }
 
 
-export function tfTopicRuleDestinationTimeoutsPropertyToHclTerraform(struct?: TfTopicRuleDestination.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTopicRuleDestinationTimeoutsPropertyToHclTerraform(struct?: AwsTopicRuleDestination.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,7 +278,7 @@ export function tfTopicRuleDestinationTimeoutsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfTopicRuleDestinationVpcConfigurationPropertyToTerraform(struct?: TfTopicRuleDestination.VpcConfigurationPropertyOutputReference | TfTopicRuleDestination.VpcConfigurationProperty): any {
+export function awsTopicRuleDestinationVpcConfigurationPropertyToTerraform(struct?: AwsTopicRuleDestination.VpcConfigurationPropertyOutputReference | AwsTopicRuleDestination.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -292,7 +292,7 @@ export function tfTopicRuleDestinationVpcConfigurationPropertyToTerraform(struct
 }
 
 
-export function tfTopicRuleDestinationVpcConfigurationPropertyToHclTerraform(struct?: TfTopicRuleDestination.VpcConfigurationPropertyOutputReference | TfTopicRuleDestination.VpcConfigurationProperty): any {
+export function awsTopicRuleDestinationVpcConfigurationPropertyToHclTerraform(struct?: AwsTopicRuleDestination.VpcConfigurationPropertyOutputReference | AwsTopicRuleDestination.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,18 +329,18 @@ export function tfTopicRuleDestinationVpcConfigurationPropertyToHclTerraform(str
 }
 
 
-export namespace TfTopicRuleDestination {
+export namespace AwsTopicRuleDestination {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#create TfTopicRuleDestination#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#create AwsTopicRuleDestination#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#delete TfTopicRuleDestination#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#delete AwsTopicRuleDestination#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#update TfTopicRuleDestination#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#update AwsTopicRuleDestination#update}
   */
   readonly update?: string;
 }
@@ -448,19 +448,19 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#role_arn TfTopicRuleDestination#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#role_arn AwsTopicRuleDestination#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#security_groups TfTopicRuleDestination#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#security_groups AwsTopicRuleDestination#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#subnet_ids TfTopicRuleDestination#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#subnet_ids AwsTopicRuleDestination#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#vpc_id TfTopicRuleDestination#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_topic_rule_destination#vpc_id AwsTopicRuleDestination#vpc_id}
   */
   readonly vpcId: string;
 }

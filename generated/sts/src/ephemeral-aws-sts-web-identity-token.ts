@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface EphemeralTfWebIdentityTokenConfig extends cdktn.TerraformEphemeralMetaArguments {
+export interface EphemeralAwsWebIdentityTokenConfig extends cdktn.TerraformEphemeralMetaArguments {
   /**
   * The intended recipients of the token (populates the `aud` claim in the JWT). Must contain between 1 and 10 items.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/sts_web_identity_token#audience EphemeralTfWebIdentityToken#audience}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/sts_web_identity_token#audience EphemeralAwsWebIdentityToken#audience}
   */
   readonly audience: string[];
   /**
   * The duration, in seconds, for which the JWT will remain valid. Value can range from 60 to 3600 seconds. Default is 300 seconds (5 minutes).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/sts_web_identity_token#duration_seconds EphemeralTfWebIdentityToken#duration_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/sts_web_identity_token#duration_seconds EphemeralAwsWebIdentityToken#duration_seconds}
   */
   readonly durationSeconds?: number;
   /**
   * The cryptographic algorithm to use for signing the JWT. Valid values are `RS256` (RSA with SHA-256) and `ES384` (ECDSA using P-384 curve with SHA-384).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/sts_web_identity_token#signing_algorithm EphemeralTfWebIdentityToken#signing_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/sts_web_identity_token#signing_algorithm EphemeralAwsWebIdentityToken#signing_algorithm}
   */
   readonly signingAlgorithm: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/sts_web_identity_token#tags EphemeralTfWebIdentityToken#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/sts_web_identity_token#tags EphemeralAwsWebIdentityToken#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -33,7 +33,7 @@ export interface EphemeralTfWebIdentityTokenConfig extends cdktn.TerraformEpheme
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/sts_web_identity_token aws_sts_web_identity_token}
 */
-export class EphemeralTfWebIdentityToken extends cdktn.TerraformEphemeralResource {
+export class EphemeralAwsWebIdentityToken extends cdktn.TerraformEphemeralResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,9 +49,9 @@ export class EphemeralTfWebIdentityToken extends cdktn.TerraformEphemeralResourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options EphemeralTfWebIdentityTokenConfig
+  * @param options EphemeralAwsWebIdentityTokenConfig
   */
-  public constructor(scope: Construct, id: string, config: EphemeralTfWebIdentityTokenConfig) {
+  public constructor(scope: Construct, id: string, config: EphemeralAwsWebIdentityTokenConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sts_web_identity_token',
       terraformGeneratorMetadata: {

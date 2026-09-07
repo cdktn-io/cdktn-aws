@@ -5,122 +5,122 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfProfileConfig extends cdktn.TerraformMetaArguments {
+export interface AwsProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#account_number TfProfile#account_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#account_number AwsProfile#account_number}
   */
   readonly accountNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#additional_information TfProfile#additional_information}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#additional_information AwsProfile#additional_information}
   */
   readonly additionalInformation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#attributes TfProfile#attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#attributes AwsProfile#attributes}
   */
   readonly attributes?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#birth_date TfProfile#birth_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#birth_date AwsProfile#birth_date}
   */
   readonly birthDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#business_email_address TfProfile#business_email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#business_email_address AwsProfile#business_email_address}
   */
   readonly businessEmailAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#business_name TfProfile#business_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#business_name AwsProfile#business_name}
   */
   readonly businessName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#business_phone_number TfProfile#business_phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#business_phone_number AwsProfile#business_phone_number}
   */
   readonly businessPhoneNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#domain_name TfProfile#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#domain_name AwsProfile#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#email_address TfProfile#email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#email_address AwsProfile#email_address}
   */
   readonly emailAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#first_name TfProfile#first_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#first_name AwsProfile#first_name}
   */
   readonly firstName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#gender_string TfProfile#gender_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#gender_string AwsProfile#gender_string}
   */
   readonly genderString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#home_phone_number TfProfile#home_phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#home_phone_number AwsProfile#home_phone_number}
   */
   readonly homePhoneNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#id TfProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#id AwsProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#last_name TfProfile#last_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#last_name AwsProfile#last_name}
   */
   readonly lastName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#middle_name TfProfile#middle_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#middle_name AwsProfile#middle_name}
   */
   readonly middleName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#mobile_phone_number TfProfile#mobile_phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#mobile_phone_number AwsProfile#mobile_phone_number}
   */
   readonly mobilePhoneNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#party_type_string TfProfile#party_type_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#party_type_string AwsProfile#party_type_string}
   */
   readonly partyTypeString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#personal_email_address TfProfile#personal_email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#personal_email_address AwsProfile#personal_email_address}
   */
   readonly personalEmailAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#phone_number TfProfile#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#phone_number AwsProfile#phone_number}
   */
   readonly phoneNumber?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#region TfProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#region AwsProfile#region}
   */
   readonly region?: string;
   /**
   * address block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address TfProfile#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address AwsProfile#address}
   */
-  readonly address?: TfProfile.AddressProperty;
+  readonly address?: AwsProfile.AddressProperty;
   /**
   * billing_address block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#billing_address TfProfile#billing_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#billing_address AwsProfile#billing_address}
   */
-  readonly billingAddress?: TfProfile.BillingAddressProperty;
+  readonly billingAddress?: AwsProfile.BillingAddressProperty;
   /**
   * mailing_address block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#mailing_address TfProfile#mailing_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#mailing_address AwsProfile#mailing_address}
   */
-  readonly mailingAddress?: TfProfile.MailingAddressProperty;
+  readonly mailingAddress?: AwsProfile.MailingAddressProperty;
   /**
   * shipping_address block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#shipping_address TfProfile#shipping_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#shipping_address AwsProfile#shipping_address}
   */
-  readonly shippingAddress?: TfProfile.ShippingAddressProperty;
+  readonly shippingAddress?: AwsProfile.ShippingAddressProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile aws_customerprofiles_profile}
 */
-export class TfProfile extends cdktn.TerraformResource {
+export class AwsProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -131,11 +131,11 @@ export class TfProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfProfile to import
-  * @param importFromId The id of the existing TfProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfProfile to import is found
+  * @param importToId The construct id used in the generated config for the AwsProfile to import
+  * @param importFromId The id of the existing AwsProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_customerprofiles_profile", importId: importFromId, provider });
@@ -150,9 +150,9 @@ export class TfProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfProfileConfig
+  * @param options AwsProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: TfProfileConfig) {
+  public constructor(scope: Construct, id: string, config: AwsProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_customerprofiles_profile',
       terraformGeneratorMetadata: {
@@ -516,11 +516,11 @@ export class TfProfile extends cdktn.TerraformResource {
   }
 
   // address - computed: false, optional: true, required: false
-  private _address = new TfProfile.AddressPropertyOutputReference(this, "address");
+  private _address = new AwsProfile.AddressPropertyOutputReference(this, "address");
   public get address() {
     return this._address;
   }
-  public putAddress(value: TfProfile.AddressProperty) {
+  public putAddress(value: AwsProfile.AddressProperty) {
     this._address.internalValue = value;
   }
   public resetAddress() {
@@ -532,11 +532,11 @@ export class TfProfile extends cdktn.TerraformResource {
   }
 
   // billing_address - computed: false, optional: true, required: false
-  private _billingAddress = new TfProfile.BillingAddressPropertyOutputReference(this, "billing_address");
+  private _billingAddress = new AwsProfile.BillingAddressPropertyOutputReference(this, "billing_address");
   public get billingAddress() {
     return this._billingAddress;
   }
-  public putBillingAddress(value: TfProfile.BillingAddressProperty) {
+  public putBillingAddress(value: AwsProfile.BillingAddressProperty) {
     this._billingAddress.internalValue = value;
   }
   public resetBillingAddress() {
@@ -548,11 +548,11 @@ export class TfProfile extends cdktn.TerraformResource {
   }
 
   // mailing_address - computed: false, optional: true, required: false
-  private _mailingAddress = new TfProfile.MailingAddressPropertyOutputReference(this, "mailing_address");
+  private _mailingAddress = new AwsProfile.MailingAddressPropertyOutputReference(this, "mailing_address");
   public get mailingAddress() {
     return this._mailingAddress;
   }
-  public putMailingAddress(value: TfProfile.MailingAddressProperty) {
+  public putMailingAddress(value: AwsProfile.MailingAddressProperty) {
     this._mailingAddress.internalValue = value;
   }
   public resetMailingAddress() {
@@ -564,11 +564,11 @@ export class TfProfile extends cdktn.TerraformResource {
   }
 
   // shipping_address - computed: false, optional: true, required: false
-  private _shippingAddress = new TfProfile.ShippingAddressPropertyOutputReference(this, "shipping_address");
+  private _shippingAddress = new AwsProfile.ShippingAddressPropertyOutputReference(this, "shipping_address");
   public get shippingAddress() {
     return this._shippingAddress;
   }
-  public putShippingAddress(value: TfProfile.ShippingAddressProperty) {
+  public putShippingAddress(value: AwsProfile.ShippingAddressProperty) {
     this._shippingAddress.internalValue = value;
   }
   public resetShippingAddress() {
@@ -605,10 +605,10 @@ export class TfProfile extends cdktn.TerraformResource {
       personal_email_address: cdktn.stringToTerraform(this._personalEmailAddress),
       phone_number: cdktn.stringToTerraform(this._phoneNumber),
       region: cdktn.stringToTerraform(this._region),
-      address: tfProfileAddressPropertyToTerraform(this._address.internalValue),
-      billing_address: tfProfileBillingAddressPropertyToTerraform(this._billingAddress.internalValue),
-      mailing_address: tfProfileMailingAddressPropertyToTerraform(this._mailingAddress.internalValue),
-      shipping_address: tfProfileShippingAddressPropertyToTerraform(this._shippingAddress.internalValue),
+      address: awsProfileAddressPropertyToTerraform(this._address.internalValue),
+      billing_address: awsProfileBillingAddressPropertyToTerraform(this._billingAddress.internalValue),
+      mailing_address: awsProfileMailingAddressPropertyToTerraform(this._mailingAddress.internalValue),
+      shipping_address: awsProfileShippingAddressPropertyToTerraform(this._shippingAddress.internalValue),
     };
   }
 
@@ -735,28 +735,28 @@ export class TfProfile extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       address: {
-        value: tfProfileAddressPropertyToHclTerraform(this._address.internalValue),
+        value: awsProfileAddressPropertyToHclTerraform(this._address.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProfile.AddressPropertyList",
+        storageClassType: "AwsProfile.AddressPropertyList",
       },
       billing_address: {
-        value: tfProfileBillingAddressPropertyToHclTerraform(this._billingAddress.internalValue),
+        value: awsProfileBillingAddressPropertyToHclTerraform(this._billingAddress.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProfile.BillingAddressPropertyList",
+        storageClassType: "AwsProfile.BillingAddressPropertyList",
       },
       mailing_address: {
-        value: tfProfileMailingAddressPropertyToHclTerraform(this._mailingAddress.internalValue),
+        value: awsProfileMailingAddressPropertyToHclTerraform(this._mailingAddress.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProfile.MailingAddressPropertyList",
+        storageClassType: "AwsProfile.MailingAddressPropertyList",
       },
       shipping_address: {
-        value: tfProfileShippingAddressPropertyToHclTerraform(this._shippingAddress.internalValue),
+        value: awsProfileShippingAddressPropertyToHclTerraform(this._shippingAddress.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProfile.ShippingAddressPropertyList",
+        storageClassType: "AwsProfile.ShippingAddressPropertyList",
       },
     };
 
@@ -765,7 +765,7 @@ export class TfProfile extends cdktn.TerraformResource {
   }
 }
 
-export function tfProfileAddressPropertyToTerraform(struct?: TfProfile.AddressPropertyOutputReference | TfProfile.AddressProperty): any {
+export function awsProfileAddressPropertyToTerraform(struct?: AwsProfile.AddressPropertyOutputReference | AwsProfile.AddressProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -785,7 +785,7 @@ export function tfProfileAddressPropertyToTerraform(struct?: TfProfile.AddressPr
 }
 
 
-export function tfProfileAddressPropertyToHclTerraform(struct?: TfProfile.AddressPropertyOutputReference | TfProfile.AddressProperty): any {
+export function awsProfileAddressPropertyToHclTerraform(struct?: AwsProfile.AddressPropertyOutputReference | AwsProfile.AddressProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -858,7 +858,7 @@ export function tfProfileAddressPropertyToHclTerraform(struct?: TfProfile.Addres
 }
 
 
-export function tfProfileBillingAddressPropertyToTerraform(struct?: TfProfile.BillingAddressPropertyOutputReference | TfProfile.BillingAddressProperty): any {
+export function awsProfileBillingAddressPropertyToTerraform(struct?: AwsProfile.BillingAddressPropertyOutputReference | AwsProfile.BillingAddressProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -878,7 +878,7 @@ export function tfProfileBillingAddressPropertyToTerraform(struct?: TfProfile.Bi
 }
 
 
-export function tfProfileBillingAddressPropertyToHclTerraform(struct?: TfProfile.BillingAddressPropertyOutputReference | TfProfile.BillingAddressProperty): any {
+export function awsProfileBillingAddressPropertyToHclTerraform(struct?: AwsProfile.BillingAddressPropertyOutputReference | AwsProfile.BillingAddressProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -951,7 +951,7 @@ export function tfProfileBillingAddressPropertyToHclTerraform(struct?: TfProfile
 }
 
 
-export function tfProfileMailingAddressPropertyToTerraform(struct?: TfProfile.MailingAddressPropertyOutputReference | TfProfile.MailingAddressProperty): any {
+export function awsProfileMailingAddressPropertyToTerraform(struct?: AwsProfile.MailingAddressPropertyOutputReference | AwsProfile.MailingAddressProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -971,7 +971,7 @@ export function tfProfileMailingAddressPropertyToTerraform(struct?: TfProfile.Ma
 }
 
 
-export function tfProfileMailingAddressPropertyToHclTerraform(struct?: TfProfile.MailingAddressPropertyOutputReference | TfProfile.MailingAddressProperty): any {
+export function awsProfileMailingAddressPropertyToHclTerraform(struct?: AwsProfile.MailingAddressPropertyOutputReference | AwsProfile.MailingAddressProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1044,7 +1044,7 @@ export function tfProfileMailingAddressPropertyToHclTerraform(struct?: TfProfile
 }
 
 
-export function tfProfileShippingAddressPropertyToTerraform(struct?: TfProfile.ShippingAddressPropertyOutputReference | TfProfile.ShippingAddressProperty): any {
+export function awsProfileShippingAddressPropertyToTerraform(struct?: AwsProfile.ShippingAddressPropertyOutputReference | AwsProfile.ShippingAddressProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1064,7 +1064,7 @@ export function tfProfileShippingAddressPropertyToTerraform(struct?: TfProfile.S
 }
 
 
-export function tfProfileShippingAddressPropertyToHclTerraform(struct?: TfProfile.ShippingAddressPropertyOutputReference | TfProfile.ShippingAddressProperty): any {
+export function awsProfileShippingAddressPropertyToHclTerraform(struct?: AwsProfile.ShippingAddressPropertyOutputReference | AwsProfile.ShippingAddressProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1137,46 +1137,46 @@ export function tfProfileShippingAddressPropertyToHclTerraform(struct?: TfProfil
 }
 
 
-export namespace TfProfile {
+export namespace AwsProfile {
 export interface AddressProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_1 TfProfile#address_1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_1 AwsProfile#address_1}
   */
   readonly address1?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_2 TfProfile#address_2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_2 AwsProfile#address_2}
   */
   readonly address2?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_3 TfProfile#address_3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_3 AwsProfile#address_3}
   */
   readonly address3?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_4 TfProfile#address_4}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_4 AwsProfile#address_4}
   */
   readonly address4?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#city TfProfile#city}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#city AwsProfile#city}
   */
   readonly city?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#country TfProfile#country}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#country AwsProfile#country}
   */
   readonly country?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#county TfProfile#county}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#county AwsProfile#county}
   */
   readonly county?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#postal_code TfProfile#postal_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#postal_code AwsProfile#postal_code}
   */
   readonly postalCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#province TfProfile#province}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#province AwsProfile#province}
   */
   readonly province?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#state TfProfile#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#state AwsProfile#state}
   */
   readonly state?: string;
 }
@@ -1428,43 +1428,43 @@ export class AddressPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BillingAddressProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_1 TfProfile#address_1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_1 AwsProfile#address_1}
   */
   readonly address1?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_2 TfProfile#address_2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_2 AwsProfile#address_2}
   */
   readonly address2?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_3 TfProfile#address_3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_3 AwsProfile#address_3}
   */
   readonly address3?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_4 TfProfile#address_4}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_4 AwsProfile#address_4}
   */
   readonly address4?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#city TfProfile#city}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#city AwsProfile#city}
   */
   readonly city?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#country TfProfile#country}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#country AwsProfile#country}
   */
   readonly country?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#county TfProfile#county}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#county AwsProfile#county}
   */
   readonly county?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#postal_code TfProfile#postal_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#postal_code AwsProfile#postal_code}
   */
   readonly postalCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#province TfProfile#province}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#province AwsProfile#province}
   */
   readonly province?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#state TfProfile#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#state AwsProfile#state}
   */
   readonly state?: string;
 }
@@ -1716,43 +1716,43 @@ export class BillingAddressPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MailingAddressProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_1 TfProfile#address_1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_1 AwsProfile#address_1}
   */
   readonly address1?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_2 TfProfile#address_2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_2 AwsProfile#address_2}
   */
   readonly address2?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_3 TfProfile#address_3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_3 AwsProfile#address_3}
   */
   readonly address3?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_4 TfProfile#address_4}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_4 AwsProfile#address_4}
   */
   readonly address4?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#city TfProfile#city}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#city AwsProfile#city}
   */
   readonly city?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#country TfProfile#country}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#country AwsProfile#country}
   */
   readonly country?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#county TfProfile#county}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#county AwsProfile#county}
   */
   readonly county?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#postal_code TfProfile#postal_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#postal_code AwsProfile#postal_code}
   */
   readonly postalCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#province TfProfile#province}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#province AwsProfile#province}
   */
   readonly province?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#state TfProfile#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#state AwsProfile#state}
   */
   readonly state?: string;
 }
@@ -2004,43 +2004,43 @@ export class MailingAddressPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ShippingAddressProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_1 TfProfile#address_1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_1 AwsProfile#address_1}
   */
   readonly address1?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_2 TfProfile#address_2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_2 AwsProfile#address_2}
   */
   readonly address2?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_3 TfProfile#address_3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_3 AwsProfile#address_3}
   */
   readonly address3?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_4 TfProfile#address_4}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_4 AwsProfile#address_4}
   */
   readonly address4?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#city TfProfile#city}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#city AwsProfile#city}
   */
   readonly city?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#country TfProfile#country}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#country AwsProfile#country}
   */
   readonly country?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#county TfProfile#county}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#county AwsProfile#county}
   */
   readonly county?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#postal_code TfProfile#postal_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#postal_code AwsProfile#postal_code}
   */
   readonly postalCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#province TfProfile#province}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#province AwsProfile#province}
   */
   readonly province?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#state TfProfile#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#state AwsProfile#state}
   */
   readonly state?: string;
 }

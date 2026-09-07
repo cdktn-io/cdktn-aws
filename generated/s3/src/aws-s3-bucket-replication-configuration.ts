@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBucketReplicationConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBucketReplicationConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#bucket TfBucketReplicationConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#bucket AwsBucketReplicationConfiguration#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#id TfBucketReplicationConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#id AwsBucketReplicationConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,29 +20,29 @@ export interface TfBucketReplicationConfigurationConfig extends cdktn.TerraformM
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#region TfBucketReplicationConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#region AwsBucketReplicationConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#role TfBucketReplicationConfiguration#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#role AwsBucketReplicationConfiguration#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#token TfBucketReplicationConfiguration#token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#token AwsBucketReplicationConfiguration#token}
   */
   readonly token?: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#rule TfBucketReplicationConfiguration#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#rule AwsBucketReplicationConfiguration#rule}
   */
-  readonly rule: TfBucketReplicationConfiguration.RuleProperty[] | cdktn.IResolvable;
+  readonly rule: AwsBucketReplicationConfiguration.RuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration aws_s3_bucket_replication_configuration}
 */
-export class TfBucketReplicationConfiguration extends cdktn.TerraformResource {
+export class AwsBucketReplicationConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfBucketReplicationConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBucketReplicationConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBucketReplicationConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBucketReplicationConfiguration to import
-  * @param importFromId The id of the existing TfBucketReplicationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBucketReplicationConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsBucketReplicationConfiguration to import
+  * @param importFromId The id of the existing AwsBucketReplicationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBucketReplicationConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_replication_configuration", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfBucketReplicationConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBucketReplicationConfigurationConfig
+  * @param options AwsBucketReplicationConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBucketReplicationConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBucketReplicationConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_replication_configuration',
       terraformGeneratorMetadata: {
@@ -177,11 +177,11 @@ export class TfBucketReplicationConfiguration extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule = new TfBucketReplicationConfiguration.RulePropertyList(this, "rule", false);
+  private _rule = new AwsBucketReplicationConfiguration.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: TfBucketReplicationConfiguration.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: AwsBucketReplicationConfiguration.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -200,7 +200,7 @@ export class TfBucketReplicationConfiguration extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       role: cdktn.stringToTerraform(this._role),
       token: cdktn.stringToTerraform(this._token),
-      rule: cdktn.listMapper(tfBucketReplicationConfigurationRulePropertyToTerraform, true)(this._rule.internalValue),
+      rule: cdktn.listMapper(awsBucketReplicationConfigurationRulePropertyToTerraform, true)(this._rule.internalValue),
     };
   }
 
@@ -237,10 +237,10 @@ export class TfBucketReplicationConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       rule: {
-        value: cdktn.listMapperHcl(tfBucketReplicationConfigurationRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(awsBucketReplicationConfigurationRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBucketReplicationConfiguration.RulePropertyList",
+        storageClassType: "AwsBucketReplicationConfiguration.RulePropertyList",
       },
     };
 
@@ -249,7 +249,7 @@ export class TfBucketReplicationConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfBucketReplicationConfigurationDeleteMarkerReplicationPropertyToTerraform(struct?: TfBucketReplicationConfiguration.DeleteMarkerReplicationPropertyOutputReference | TfBucketReplicationConfiguration.DeleteMarkerReplicationProperty): any {
+export function awsBucketReplicationConfigurationDeleteMarkerReplicationPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.DeleteMarkerReplicationPropertyOutputReference | AwsBucketReplicationConfiguration.DeleteMarkerReplicationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -260,7 +260,7 @@ export function tfBucketReplicationConfigurationDeleteMarkerReplicationPropertyT
 }
 
 
-export function tfBucketReplicationConfigurationDeleteMarkerReplicationPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.DeleteMarkerReplicationPropertyOutputReference | TfBucketReplicationConfiguration.DeleteMarkerReplicationProperty): any {
+export function awsBucketReplicationConfigurationDeleteMarkerReplicationPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.DeleteMarkerReplicationPropertyOutputReference | AwsBucketReplicationConfiguration.DeleteMarkerReplicationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,7 +279,7 @@ export function tfBucketReplicationConfigurationDeleteMarkerReplicationPropertyT
 }
 
 
-export function tfBucketReplicationConfigurationAccessControlTranslationPropertyToTerraform(struct?: TfBucketReplicationConfiguration.AccessControlTranslationPropertyOutputReference | TfBucketReplicationConfiguration.AccessControlTranslationProperty): any {
+export function awsBucketReplicationConfigurationAccessControlTranslationPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.AccessControlTranslationPropertyOutputReference | AwsBucketReplicationConfiguration.AccessControlTranslationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function tfBucketReplicationConfigurationAccessControlTranslationProperty
 }
 
 
-export function tfBucketReplicationConfigurationAccessControlTranslationPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.AccessControlTranslationPropertyOutputReference | TfBucketReplicationConfiguration.AccessControlTranslationProperty): any {
+export function awsBucketReplicationConfigurationAccessControlTranslationPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.AccessControlTranslationPropertyOutputReference | AwsBucketReplicationConfiguration.AccessControlTranslationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function tfBucketReplicationConfigurationAccessControlTranslationProperty
 }
 
 
-export function tfBucketReplicationConfigurationEncryptionConfigurationPropertyToTerraform(struct?: TfBucketReplicationConfiguration.EncryptionConfigurationPropertyOutputReference | TfBucketReplicationConfiguration.EncryptionConfigurationProperty): any {
+export function awsBucketReplicationConfigurationEncryptionConfigurationPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.EncryptionConfigurationPropertyOutputReference | AwsBucketReplicationConfiguration.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,7 +320,7 @@ export function tfBucketReplicationConfigurationEncryptionConfigurationPropertyT
 }
 
 
-export function tfBucketReplicationConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.EncryptionConfigurationPropertyOutputReference | TfBucketReplicationConfiguration.EncryptionConfigurationProperty): any {
+export function awsBucketReplicationConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.EncryptionConfigurationPropertyOutputReference | AwsBucketReplicationConfiguration.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function tfBucketReplicationConfigurationEncryptionConfigurationPropertyT
 }
 
 
-export function tfBucketReplicationConfigurationEventThresholdPropertyToTerraform(struct?: TfBucketReplicationConfiguration.EventThresholdPropertyOutputReference | TfBucketReplicationConfiguration.EventThresholdProperty): any {
+export function awsBucketReplicationConfigurationEventThresholdPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.EventThresholdPropertyOutputReference | AwsBucketReplicationConfiguration.EventThresholdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function tfBucketReplicationConfigurationEventThresholdPropertyToTerrafor
 }
 
 
-export function tfBucketReplicationConfigurationEventThresholdPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.EventThresholdPropertyOutputReference | TfBucketReplicationConfiguration.EventThresholdProperty): any {
+export function awsBucketReplicationConfigurationEventThresholdPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.EventThresholdPropertyOutputReference | AwsBucketReplicationConfiguration.EventThresholdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,19 +369,19 @@ export function tfBucketReplicationConfigurationEventThresholdPropertyToHclTerra
 }
 
 
-export function tfBucketReplicationConfigurationMetricsPropertyToTerraform(struct?: TfBucketReplicationConfiguration.MetricsPropertyOutputReference | TfBucketReplicationConfiguration.MetricsProperty): any {
+export function awsBucketReplicationConfigurationMetricsPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.MetricsPropertyOutputReference | AwsBucketReplicationConfiguration.MetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     status: cdktn.stringToTerraform(struct!.status),
-    event_threshold: tfBucketReplicationConfigurationEventThresholdPropertyToTerraform(struct!.eventThreshold),
+    event_threshold: awsBucketReplicationConfigurationEventThresholdPropertyToTerraform(struct!.eventThreshold),
   }
 }
 
 
-export function tfBucketReplicationConfigurationMetricsPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.MetricsPropertyOutputReference | TfBucketReplicationConfiguration.MetricsProperty): any {
+export function awsBucketReplicationConfigurationMetricsPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.MetricsPropertyOutputReference | AwsBucketReplicationConfiguration.MetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,7 +394,7 @@ export function tfBucketReplicationConfigurationMetricsPropertyToHclTerraform(st
       storageClassType: "string",
     },
     event_threshold: {
-      value: tfBucketReplicationConfigurationEventThresholdPropertyToHclTerraform(struct!.eventThreshold),
+      value: awsBucketReplicationConfigurationEventThresholdPropertyToHclTerraform(struct!.eventThreshold),
       isBlock: true,
       type: "list",
       storageClassType: "EventThresholdPropertyList",
@@ -406,7 +406,7 @@ export function tfBucketReplicationConfigurationMetricsPropertyToHclTerraform(st
 }
 
 
-export function tfBucketReplicationConfigurationTimePropertyToTerraform(struct?: TfBucketReplicationConfiguration.TimePropertyOutputReference | TfBucketReplicationConfiguration.TimeProperty): any {
+export function awsBucketReplicationConfigurationTimePropertyToTerraform(struct?: AwsBucketReplicationConfiguration.TimePropertyOutputReference | AwsBucketReplicationConfiguration.TimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function tfBucketReplicationConfigurationTimePropertyToTerraform(struct?:
 }
 
 
-export function tfBucketReplicationConfigurationTimePropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.TimePropertyOutputReference | TfBucketReplicationConfiguration.TimeProperty): any {
+export function awsBucketReplicationConfigurationTimePropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.TimePropertyOutputReference | AwsBucketReplicationConfiguration.TimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,19 +436,19 @@ export function tfBucketReplicationConfigurationTimePropertyToHclTerraform(struc
 }
 
 
-export function tfBucketReplicationConfigurationReplicationTimePropertyToTerraform(struct?: TfBucketReplicationConfiguration.ReplicationTimePropertyOutputReference | TfBucketReplicationConfiguration.ReplicationTimeProperty): any {
+export function awsBucketReplicationConfigurationReplicationTimePropertyToTerraform(struct?: AwsBucketReplicationConfiguration.ReplicationTimePropertyOutputReference | AwsBucketReplicationConfiguration.ReplicationTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     status: cdktn.stringToTerraform(struct!.status),
-    time: tfBucketReplicationConfigurationTimePropertyToTerraform(struct!.time),
+    time: awsBucketReplicationConfigurationTimePropertyToTerraform(struct!.time),
   }
 }
 
 
-export function tfBucketReplicationConfigurationReplicationTimePropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.ReplicationTimePropertyOutputReference | TfBucketReplicationConfiguration.ReplicationTimeProperty): any {
+export function awsBucketReplicationConfigurationReplicationTimePropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.ReplicationTimePropertyOutputReference | AwsBucketReplicationConfiguration.ReplicationTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,7 +461,7 @@ export function tfBucketReplicationConfigurationReplicationTimePropertyToHclTerr
       storageClassType: "string",
     },
     time: {
-      value: tfBucketReplicationConfigurationTimePropertyToHclTerraform(struct!.time),
+      value: awsBucketReplicationConfigurationTimePropertyToHclTerraform(struct!.time),
       isBlock: true,
       type: "list",
       storageClassType: "TimePropertyList",
@@ -473,7 +473,7 @@ export function tfBucketReplicationConfigurationReplicationTimePropertyToHclTerr
 }
 
 
-export function tfBucketReplicationConfigurationDestinationPropertyToTerraform(struct?: TfBucketReplicationConfiguration.DestinationPropertyOutputReference | TfBucketReplicationConfiguration.DestinationProperty): any {
+export function awsBucketReplicationConfigurationDestinationPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.DestinationPropertyOutputReference | AwsBucketReplicationConfiguration.DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,15 +482,15 @@ export function tfBucketReplicationConfigurationDestinationPropertyToTerraform(s
     account: cdktn.stringToTerraform(struct!.account),
     bucket: cdktn.stringToTerraform(struct!.bucket),
     storage_class: cdktn.stringToTerraform(struct!.storageClass),
-    access_control_translation: tfBucketReplicationConfigurationAccessControlTranslationPropertyToTerraform(struct!.accessControlTranslation),
-    encryption_configuration: tfBucketReplicationConfigurationEncryptionConfigurationPropertyToTerraform(struct!.encryptionConfiguration),
-    metrics: tfBucketReplicationConfigurationMetricsPropertyToTerraform(struct!.metrics),
-    replication_time: tfBucketReplicationConfigurationReplicationTimePropertyToTerraform(struct!.replicationTime),
+    access_control_translation: awsBucketReplicationConfigurationAccessControlTranslationPropertyToTerraform(struct!.accessControlTranslation),
+    encryption_configuration: awsBucketReplicationConfigurationEncryptionConfigurationPropertyToTerraform(struct!.encryptionConfiguration),
+    metrics: awsBucketReplicationConfigurationMetricsPropertyToTerraform(struct!.metrics),
+    replication_time: awsBucketReplicationConfigurationReplicationTimePropertyToTerraform(struct!.replicationTime),
   }
 }
 
 
-export function tfBucketReplicationConfigurationDestinationPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.DestinationPropertyOutputReference | TfBucketReplicationConfiguration.DestinationProperty): any {
+export function awsBucketReplicationConfigurationDestinationPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.DestinationPropertyOutputReference | AwsBucketReplicationConfiguration.DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -515,25 +515,25 @@ export function tfBucketReplicationConfigurationDestinationPropertyToHclTerrafor
       storageClassType: "string",
     },
     access_control_translation: {
-      value: tfBucketReplicationConfigurationAccessControlTranslationPropertyToHclTerraform(struct!.accessControlTranslation),
+      value: awsBucketReplicationConfigurationAccessControlTranslationPropertyToHclTerraform(struct!.accessControlTranslation),
       isBlock: true,
       type: "list",
       storageClassType: "AccessControlTranslationPropertyList",
     },
     encryption_configuration: {
-      value: tfBucketReplicationConfigurationEncryptionConfigurationPropertyToHclTerraform(struct!.encryptionConfiguration),
+      value: awsBucketReplicationConfigurationEncryptionConfigurationPropertyToHclTerraform(struct!.encryptionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "EncryptionConfigurationPropertyList",
     },
     metrics: {
-      value: tfBucketReplicationConfigurationMetricsPropertyToHclTerraform(struct!.metrics),
+      value: awsBucketReplicationConfigurationMetricsPropertyToHclTerraform(struct!.metrics),
       isBlock: true,
       type: "list",
       storageClassType: "MetricsPropertyList",
     },
     replication_time: {
-      value: tfBucketReplicationConfigurationReplicationTimePropertyToHclTerraform(struct!.replicationTime),
+      value: awsBucketReplicationConfigurationReplicationTimePropertyToHclTerraform(struct!.replicationTime),
       isBlock: true,
       type: "list",
       storageClassType: "ReplicationTimePropertyList",
@@ -545,7 +545,7 @@ export function tfBucketReplicationConfigurationDestinationPropertyToHclTerrafor
 }
 
 
-export function tfBucketReplicationConfigurationExistingObjectReplicationPropertyToTerraform(struct?: TfBucketReplicationConfiguration.ExistingObjectReplicationPropertyOutputReference | TfBucketReplicationConfiguration.ExistingObjectReplicationProperty): any {
+export function awsBucketReplicationConfigurationExistingObjectReplicationPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.ExistingObjectReplicationPropertyOutputReference | AwsBucketReplicationConfiguration.ExistingObjectReplicationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,7 +556,7 @@ export function tfBucketReplicationConfigurationExistingObjectReplicationPropert
 }
 
 
-export function tfBucketReplicationConfigurationExistingObjectReplicationPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.ExistingObjectReplicationPropertyOutputReference | TfBucketReplicationConfiguration.ExistingObjectReplicationProperty): any {
+export function awsBucketReplicationConfigurationExistingObjectReplicationPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.ExistingObjectReplicationPropertyOutputReference | AwsBucketReplicationConfiguration.ExistingObjectReplicationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -575,7 +575,7 @@ export function tfBucketReplicationConfigurationExistingObjectReplicationPropert
 }
 
 
-export function tfBucketReplicationConfigurationAndPropertyToTerraform(struct?: TfBucketReplicationConfiguration.AndPropertyOutputReference | TfBucketReplicationConfiguration.AndProperty): any {
+export function awsBucketReplicationConfigurationAndPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.AndPropertyOutputReference | AwsBucketReplicationConfiguration.AndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,7 +587,7 @@ export function tfBucketReplicationConfigurationAndPropertyToTerraform(struct?: 
 }
 
 
-export function tfBucketReplicationConfigurationAndPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.AndPropertyOutputReference | TfBucketReplicationConfiguration.AndProperty): any {
+export function awsBucketReplicationConfigurationAndPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.AndPropertyOutputReference | AwsBucketReplicationConfiguration.AndProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,7 +612,7 @@ export function tfBucketReplicationConfigurationAndPropertyToHclTerraform(struct
 }
 
 
-export function tfBucketReplicationConfigurationTagPropertyToTerraform(struct?: TfBucketReplicationConfiguration.TagPropertyOutputReference | TfBucketReplicationConfiguration.TagProperty): any {
+export function awsBucketReplicationConfigurationTagPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.TagPropertyOutputReference | AwsBucketReplicationConfiguration.TagProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -624,7 +624,7 @@ export function tfBucketReplicationConfigurationTagPropertyToTerraform(struct?: 
 }
 
 
-export function tfBucketReplicationConfigurationTagPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.TagPropertyOutputReference | TfBucketReplicationConfiguration.TagProperty): any {
+export function awsBucketReplicationConfigurationTagPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.TagPropertyOutputReference | AwsBucketReplicationConfiguration.TagProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -649,20 +649,20 @@ export function tfBucketReplicationConfigurationTagPropertyToHclTerraform(struct
 }
 
 
-export function tfBucketReplicationConfigurationFilterPropertyToTerraform(struct?: TfBucketReplicationConfiguration.FilterPropertyOutputReference | TfBucketReplicationConfiguration.FilterProperty): any {
+export function awsBucketReplicationConfigurationFilterPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.FilterPropertyOutputReference | AwsBucketReplicationConfiguration.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     prefix: cdktn.stringToTerraform(struct!.prefix),
-    and: tfBucketReplicationConfigurationAndPropertyToTerraform(struct!.and),
-    tag: tfBucketReplicationConfigurationTagPropertyToTerraform(struct!.tag),
+    and: awsBucketReplicationConfigurationAndPropertyToTerraform(struct!.and),
+    tag: awsBucketReplicationConfigurationTagPropertyToTerraform(struct!.tag),
   }
 }
 
 
-export function tfBucketReplicationConfigurationFilterPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.FilterPropertyOutputReference | TfBucketReplicationConfiguration.FilterProperty): any {
+export function awsBucketReplicationConfigurationFilterPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.FilterPropertyOutputReference | AwsBucketReplicationConfiguration.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -675,13 +675,13 @@ export function tfBucketReplicationConfigurationFilterPropertyToHclTerraform(str
       storageClassType: "string",
     },
     and: {
-      value: tfBucketReplicationConfigurationAndPropertyToHclTerraform(struct!.and),
+      value: awsBucketReplicationConfigurationAndPropertyToHclTerraform(struct!.and),
       isBlock: true,
       type: "list",
       storageClassType: "AndPropertyList",
     },
     tag: {
-      value: tfBucketReplicationConfigurationTagPropertyToHclTerraform(struct!.tag),
+      value: awsBucketReplicationConfigurationTagPropertyToHclTerraform(struct!.tag),
       isBlock: true,
       type: "list",
       storageClassType: "TagPropertyList",
@@ -693,7 +693,7 @@ export function tfBucketReplicationConfigurationFilterPropertyToHclTerraform(str
 }
 
 
-export function tfBucketReplicationConfigurationReplicaModificationsPropertyToTerraform(struct?: TfBucketReplicationConfiguration.ReplicaModificationsPropertyOutputReference | TfBucketReplicationConfiguration.ReplicaModificationsProperty): any {
+export function awsBucketReplicationConfigurationReplicaModificationsPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.ReplicaModificationsPropertyOutputReference | AwsBucketReplicationConfiguration.ReplicaModificationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -704,7 +704,7 @@ export function tfBucketReplicationConfigurationReplicaModificationsPropertyToTe
 }
 
 
-export function tfBucketReplicationConfigurationReplicaModificationsPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.ReplicaModificationsPropertyOutputReference | TfBucketReplicationConfiguration.ReplicaModificationsProperty): any {
+export function awsBucketReplicationConfigurationReplicaModificationsPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.ReplicaModificationsPropertyOutputReference | AwsBucketReplicationConfiguration.ReplicaModificationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -723,7 +723,7 @@ export function tfBucketReplicationConfigurationReplicaModificationsPropertyToHc
 }
 
 
-export function tfBucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToTerraform(struct?: TfBucketReplicationConfiguration.SseKmsEncryptedObjectsPropertyOutputReference | TfBucketReplicationConfiguration.SseKmsEncryptedObjectsProperty): any {
+export function awsBucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.SseKmsEncryptedObjectsPropertyOutputReference | AwsBucketReplicationConfiguration.SseKmsEncryptedObjectsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -734,7 +734,7 @@ export function tfBucketReplicationConfigurationSseKmsEncryptedObjectsPropertyTo
 }
 
 
-export function tfBucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.SseKmsEncryptedObjectsPropertyOutputReference | TfBucketReplicationConfiguration.SseKmsEncryptedObjectsProperty): any {
+export function awsBucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.SseKmsEncryptedObjectsPropertyOutputReference | AwsBucketReplicationConfiguration.SseKmsEncryptedObjectsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -753,32 +753,32 @@ export function tfBucketReplicationConfigurationSseKmsEncryptedObjectsPropertyTo
 }
 
 
-export function tfBucketReplicationConfigurationSourceSelectionCriteriaPropertyToTerraform(struct?: TfBucketReplicationConfiguration.SourceSelectionCriteriaPropertyOutputReference | TfBucketReplicationConfiguration.SourceSelectionCriteriaProperty): any {
+export function awsBucketReplicationConfigurationSourceSelectionCriteriaPropertyToTerraform(struct?: AwsBucketReplicationConfiguration.SourceSelectionCriteriaPropertyOutputReference | AwsBucketReplicationConfiguration.SourceSelectionCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    replica_modifications: tfBucketReplicationConfigurationReplicaModificationsPropertyToTerraform(struct!.replicaModifications),
-    sse_kms_encrypted_objects: tfBucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToTerraform(struct!.sseKmsEncryptedObjects),
+    replica_modifications: awsBucketReplicationConfigurationReplicaModificationsPropertyToTerraform(struct!.replicaModifications),
+    sse_kms_encrypted_objects: awsBucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToTerraform(struct!.sseKmsEncryptedObjects),
   }
 }
 
 
-export function tfBucketReplicationConfigurationSourceSelectionCriteriaPropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.SourceSelectionCriteriaPropertyOutputReference | TfBucketReplicationConfiguration.SourceSelectionCriteriaProperty): any {
+export function awsBucketReplicationConfigurationSourceSelectionCriteriaPropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.SourceSelectionCriteriaPropertyOutputReference | AwsBucketReplicationConfiguration.SourceSelectionCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     replica_modifications: {
-      value: tfBucketReplicationConfigurationReplicaModificationsPropertyToHclTerraform(struct!.replicaModifications),
+      value: awsBucketReplicationConfigurationReplicaModificationsPropertyToHclTerraform(struct!.replicaModifications),
       isBlock: true,
       type: "list",
       storageClassType: "ReplicaModificationsPropertyList",
     },
     sse_kms_encrypted_objects: {
-      value: tfBucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToHclTerraform(struct!.sseKmsEncryptedObjects),
+      value: awsBucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToHclTerraform(struct!.sseKmsEncryptedObjects),
       isBlock: true,
       type: "list",
       storageClassType: "SseKmsEncryptedObjectsPropertyList",
@@ -790,7 +790,7 @@ export function tfBucketReplicationConfigurationSourceSelectionCriteriaPropertyT
 }
 
 
-export function tfBucketReplicationConfigurationRulePropertyToTerraform(struct?: TfBucketReplicationConfiguration.RuleProperty | cdktn.IResolvable): any {
+export function awsBucketReplicationConfigurationRulePropertyToTerraform(struct?: AwsBucketReplicationConfiguration.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -800,16 +800,16 @@ export function tfBucketReplicationConfigurationRulePropertyToTerraform(struct?:
     prefix: cdktn.stringToTerraform(struct!.prefix),
     priority: cdktn.numberToTerraform(struct!.priority),
     status: cdktn.stringToTerraform(struct!.status),
-    delete_marker_replication: tfBucketReplicationConfigurationDeleteMarkerReplicationPropertyToTerraform(struct!.deleteMarkerReplication),
-    destination: tfBucketReplicationConfigurationDestinationPropertyToTerraform(struct!.destination),
-    existing_object_replication: tfBucketReplicationConfigurationExistingObjectReplicationPropertyToTerraform(struct!.existingObjectReplication),
-    filter: tfBucketReplicationConfigurationFilterPropertyToTerraform(struct!.filter),
-    source_selection_criteria: tfBucketReplicationConfigurationSourceSelectionCriteriaPropertyToTerraform(struct!.sourceSelectionCriteria),
+    delete_marker_replication: awsBucketReplicationConfigurationDeleteMarkerReplicationPropertyToTerraform(struct!.deleteMarkerReplication),
+    destination: awsBucketReplicationConfigurationDestinationPropertyToTerraform(struct!.destination),
+    existing_object_replication: awsBucketReplicationConfigurationExistingObjectReplicationPropertyToTerraform(struct!.existingObjectReplication),
+    filter: awsBucketReplicationConfigurationFilterPropertyToTerraform(struct!.filter),
+    source_selection_criteria: awsBucketReplicationConfigurationSourceSelectionCriteriaPropertyToTerraform(struct!.sourceSelectionCriteria),
   }
 }
 
 
-export function tfBucketReplicationConfigurationRulePropertyToHclTerraform(struct?: TfBucketReplicationConfiguration.RuleProperty | cdktn.IResolvable): any {
+export function awsBucketReplicationConfigurationRulePropertyToHclTerraform(struct?: AwsBucketReplicationConfiguration.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -840,31 +840,31 @@ export function tfBucketReplicationConfigurationRulePropertyToHclTerraform(struc
       storageClassType: "string",
     },
     delete_marker_replication: {
-      value: tfBucketReplicationConfigurationDeleteMarkerReplicationPropertyToHclTerraform(struct!.deleteMarkerReplication),
+      value: awsBucketReplicationConfigurationDeleteMarkerReplicationPropertyToHclTerraform(struct!.deleteMarkerReplication),
       isBlock: true,
       type: "list",
       storageClassType: "DeleteMarkerReplicationPropertyList",
     },
     destination: {
-      value: tfBucketReplicationConfigurationDestinationPropertyToHclTerraform(struct!.destination),
+      value: awsBucketReplicationConfigurationDestinationPropertyToHclTerraform(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationPropertyList",
     },
     existing_object_replication: {
-      value: tfBucketReplicationConfigurationExistingObjectReplicationPropertyToHclTerraform(struct!.existingObjectReplication),
+      value: awsBucketReplicationConfigurationExistingObjectReplicationPropertyToHclTerraform(struct!.existingObjectReplication),
       isBlock: true,
       type: "list",
       storageClassType: "ExistingObjectReplicationPropertyList",
     },
     filter: {
-      value: tfBucketReplicationConfigurationFilterPropertyToHclTerraform(struct!.filter),
+      value: awsBucketReplicationConfigurationFilterPropertyToHclTerraform(struct!.filter),
       isBlock: true,
       type: "list",
       storageClassType: "FilterPropertyList",
     },
     source_selection_criteria: {
-      value: tfBucketReplicationConfigurationSourceSelectionCriteriaPropertyToHclTerraform(struct!.sourceSelectionCriteria),
+      value: awsBucketReplicationConfigurationSourceSelectionCriteriaPropertyToHclTerraform(struct!.sourceSelectionCriteria),
       isBlock: true,
       type: "list",
       storageClassType: "SourceSelectionCriteriaPropertyList",
@@ -876,10 +876,10 @@ export function tfBucketReplicationConfigurationRulePropertyToHclTerraform(struc
 }
 
 
-export namespace TfBucketReplicationConfiguration {
+export namespace AwsBucketReplicationConfiguration {
 export interface DeleteMarkerReplicationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status TfBucketReplicationConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsBucketReplicationConfiguration#status}
   */
   readonly status: string;
 }
@@ -930,7 +930,7 @@ export class DeleteMarkerReplicationPropertyOutputReference extends cdktn.Comple
 }
 export interface AccessControlTranslationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#owner TfBucketReplicationConfiguration#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#owner AwsBucketReplicationConfiguration#owner}
   */
   readonly owner: string;
 }
@@ -981,7 +981,7 @@ export class AccessControlTranslationPropertyOutputReference extends cdktn.Compl
 }
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#replica_kms_key_id TfBucketReplicationConfiguration#replica_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#replica_kms_key_id AwsBucketReplicationConfiguration#replica_kms_key_id}
   */
   readonly replicaKmsKeyId: string;
 }
@@ -1032,7 +1032,7 @@ export class EncryptionConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface EventThresholdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#minutes TfBucketReplicationConfiguration#minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#minutes AwsBucketReplicationConfiguration#minutes}
   */
   readonly minutes: number;
 }
@@ -1083,13 +1083,13 @@ export class EventThresholdPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status TfBucketReplicationConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsBucketReplicationConfiguration#status}
   */
   readonly status: string;
   /**
   * event_threshold block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#event_threshold TfBucketReplicationConfiguration#event_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#event_threshold AwsBucketReplicationConfiguration#event_threshold}
   */
   readonly eventThreshold?: EventThresholdProperty;
 }
@@ -1162,7 +1162,7 @@ export class MetricsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#minutes TfBucketReplicationConfiguration#minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#minutes AwsBucketReplicationConfiguration#minutes}
   */
   readonly minutes: number;
 }
@@ -1213,13 +1213,13 @@ export class TimePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ReplicationTimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status TfBucketReplicationConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsBucketReplicationConfiguration#status}
   */
   readonly status: string;
   /**
   * time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#time TfBucketReplicationConfiguration#time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#time AwsBucketReplicationConfiguration#time}
   */
   readonly time: TimeProperty;
 }
@@ -1289,39 +1289,39 @@ export class ReplicationTimePropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface DestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#account TfBucketReplicationConfiguration#account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#account AwsBucketReplicationConfiguration#account}
   */
   readonly account?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#bucket TfBucketReplicationConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#bucket AwsBucketReplicationConfiguration#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#storage_class TfBucketReplicationConfiguration#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#storage_class AwsBucketReplicationConfiguration#storage_class}
   */
   readonly storageClass?: string;
   /**
   * access_control_translation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#access_control_translation TfBucketReplicationConfiguration#access_control_translation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#access_control_translation AwsBucketReplicationConfiguration#access_control_translation}
   */
   readonly accessControlTranslation?: AccessControlTranslationProperty;
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#encryption_configuration TfBucketReplicationConfiguration#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#encryption_configuration AwsBucketReplicationConfiguration#encryption_configuration}
   */
   readonly encryptionConfiguration?: EncryptionConfigurationProperty;
   /**
   * metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#metrics TfBucketReplicationConfiguration#metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#metrics AwsBucketReplicationConfiguration#metrics}
   */
   readonly metrics?: MetricsProperty;
   /**
   * replication_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#replication_time TfBucketReplicationConfiguration#replication_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#replication_time AwsBucketReplicationConfiguration#replication_time}
   */
   readonly replicationTime?: ReplicationTimeProperty;
 }
@@ -1504,7 +1504,7 @@ export class DestinationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ExistingObjectReplicationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status TfBucketReplicationConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsBucketReplicationConfiguration#status}
   */
   readonly status: string;
 }
@@ -1555,11 +1555,11 @@ export class ExistingObjectReplicationPropertyOutputReference extends cdktn.Comp
 }
 export interface AndProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#prefix TfBucketReplicationConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#prefix AwsBucketReplicationConfiguration#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#tags TfBucketReplicationConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#tags AwsBucketReplicationConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -1635,11 +1635,11 @@ export class AndPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TagProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#key TfBucketReplicationConfiguration#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#key AwsBucketReplicationConfiguration#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#value TfBucketReplicationConfiguration#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#value AwsBucketReplicationConfiguration#value}
   */
   readonly value: string;
 }
@@ -1709,19 +1709,19 @@ export class TagPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#prefix TfBucketReplicationConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#prefix AwsBucketReplicationConfiguration#prefix}
   */
   readonly prefix?: string;
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#and TfBucketReplicationConfiguration#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#and AwsBucketReplicationConfiguration#and}
   */
   readonly and?: AndProperty;
   /**
   * tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#tag TfBucketReplicationConfiguration#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#tag AwsBucketReplicationConfiguration#tag}
   */
   readonly tag?: TagProperty;
 }
@@ -1819,7 +1819,7 @@ export class FilterPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ReplicaModificationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status TfBucketReplicationConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsBucketReplicationConfiguration#status}
   */
   readonly status: string;
 }
@@ -1870,7 +1870,7 @@ export class ReplicaModificationsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface SseKmsEncryptedObjectsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status TfBucketReplicationConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsBucketReplicationConfiguration#status}
   */
   readonly status: string;
 }
@@ -1923,13 +1923,13 @@ export interface SourceSelectionCriteriaProperty {
   /**
   * replica_modifications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#replica_modifications TfBucketReplicationConfiguration#replica_modifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#replica_modifications AwsBucketReplicationConfiguration#replica_modifications}
   */
   readonly replicaModifications?: ReplicaModificationsProperty;
   /**
   * sse_kms_encrypted_objects block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#sse_kms_encrypted_objects TfBucketReplicationConfiguration#sse_kms_encrypted_objects}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#sse_kms_encrypted_objects AwsBucketReplicationConfiguration#sse_kms_encrypted_objects}
   */
   readonly sseKmsEncryptedObjects?: SseKmsEncryptedObjectsProperty;
 }
@@ -2005,52 +2005,52 @@ export class SourceSelectionCriteriaPropertyOutputReference extends cdktn.Comple
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#id TfBucketReplicationConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#id AwsBucketReplicationConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#prefix TfBucketReplicationConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#prefix AwsBucketReplicationConfiguration#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#priority TfBucketReplicationConfiguration#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#priority AwsBucketReplicationConfiguration#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status TfBucketReplicationConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsBucketReplicationConfiguration#status}
   */
   readonly status: string;
   /**
   * delete_marker_replication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#delete_marker_replication TfBucketReplicationConfiguration#delete_marker_replication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#delete_marker_replication AwsBucketReplicationConfiguration#delete_marker_replication}
   */
   readonly deleteMarkerReplication?: DeleteMarkerReplicationProperty;
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#destination TfBucketReplicationConfiguration#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#destination AwsBucketReplicationConfiguration#destination}
   */
   readonly destination: DestinationProperty;
   /**
   * existing_object_replication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#existing_object_replication TfBucketReplicationConfiguration#existing_object_replication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#existing_object_replication AwsBucketReplicationConfiguration#existing_object_replication}
   */
   readonly existingObjectReplication?: ExistingObjectReplicationProperty;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#filter TfBucketReplicationConfiguration#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#filter AwsBucketReplicationConfiguration#filter}
   */
   readonly filter?: FilterProperty;
   /**
   * source_selection_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#source_selection_criteria TfBucketReplicationConfiguration#source_selection_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#source_selection_criteria AwsBucketReplicationConfiguration#source_selection_criteria}
   */
   readonly sourceSelectionCriteria?: SourceSelectionCriteriaProperty;
 }

@@ -5,16 +5,16 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfResponseHeadersPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsResponseHeadersPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_response_headers_policy#id DataTfResponseHeadersPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_response_headers_policy#id DataAwsResponseHeadersPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_response_headers_policy#name DataTfResponseHeadersPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_response_headers_policy#name DataAwsResponseHeadersPolicy#name}
   */
   readonly name?: string;
 }
@@ -22,7 +22,7 @@ export interface DataTfResponseHeadersPolicyConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_response_headers_policy aws_cloudfront_response_headers_policy}
 */
-export class DataTfResponseHeadersPolicy extends cdktn.TerraformDataSource {
+export class DataAwsResponseHeadersPolicy extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -33,11 +33,11 @@ export class DataTfResponseHeadersPolicy extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfResponseHeadersPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsResponseHeadersPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfResponseHeadersPolicy to import
-  * @param importFromId The id of the existing DataTfResponseHeadersPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_response_headers_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfResponseHeadersPolicy to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsResponseHeadersPolicy to import
+  * @param importFromId The id of the existing DataAwsResponseHeadersPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_response_headers_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsResponseHeadersPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_response_headers_policy", importId: importFromId, provider });
@@ -52,9 +52,9 @@ export class DataTfResponseHeadersPolicy extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfResponseHeadersPolicyConfig = {}
+  * @param options DataAwsResponseHeadersPolicyConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfResponseHeadersPolicyConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsResponseHeadersPolicyConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_response_headers_policy',
       terraformGeneratorMetadata: {
@@ -89,13 +89,13 @@ export class DataTfResponseHeadersPolicy extends cdktn.TerraformDataSource {
   }
 
   // cors_config - computed: true, optional: false, required: false
-  private _corsConfig = new DataTfResponseHeadersPolicy.CorsConfigPropertyList(this, "cors_config", false);
+  private _corsConfig = new DataAwsResponseHeadersPolicy.CorsConfigPropertyList(this, "cors_config", false);
   public get corsConfig() {
     return this._corsConfig;
   }
 
   // custom_headers_config - computed: true, optional: false, required: false
-  private _customHeadersConfig = new DataTfResponseHeadersPolicy.CustomHeadersConfigPropertyList(this, "custom_headers_config", false);
+  private _customHeadersConfig = new DataAwsResponseHeadersPolicy.CustomHeadersConfigPropertyList(this, "custom_headers_config", false);
   public get customHeadersConfig() {
     return this._customHeadersConfig;
   }
@@ -138,19 +138,19 @@ export class DataTfResponseHeadersPolicy extends cdktn.TerraformDataSource {
   }
 
   // remove_headers_config - computed: true, optional: false, required: false
-  private _removeHeadersConfig = new DataTfResponseHeadersPolicy.RemoveHeadersConfigPropertyList(this, "remove_headers_config", false);
+  private _removeHeadersConfig = new DataAwsResponseHeadersPolicy.RemoveHeadersConfigPropertyList(this, "remove_headers_config", false);
   public get removeHeadersConfig() {
     return this._removeHeadersConfig;
   }
 
   // security_headers_config - computed: true, optional: false, required: false
-  private _securityHeadersConfig = new DataTfResponseHeadersPolicy.SecurityHeadersConfigPropertyList(this, "security_headers_config", false);
+  private _securityHeadersConfig = new DataAwsResponseHeadersPolicy.SecurityHeadersConfigPropertyList(this, "security_headers_config", false);
   public get securityHeadersConfig() {
     return this._securityHeadersConfig;
   }
 
   // server_timing_headers_config - computed: true, optional: false, required: false
-  private _serverTimingHeadersConfig = new DataTfResponseHeadersPolicy.ServerTimingHeadersConfigPropertyList(this, "server_timing_headers_config", false);
+  private _serverTimingHeadersConfig = new DataAwsResponseHeadersPolicy.ServerTimingHeadersConfigPropertyList(this, "server_timing_headers_config", false);
   public get serverTimingHeadersConfig() {
     return this._serverTimingHeadersConfig;
   }
@@ -187,7 +187,7 @@ export class DataTfResponseHeadersPolicy extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfResponseHeadersPolicyAccessControlAllowHeadersPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.AccessControlAllowHeadersProperty): any {
+export function dataAwsResponseHeadersPolicyAccessControlAllowHeadersPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.AccessControlAllowHeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -197,7 +197,7 @@ export function dataTfResponseHeadersPolicyAccessControlAllowHeadersPropertyToTe
 }
 
 
-export function dataTfResponseHeadersPolicyAccessControlAllowHeadersPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.AccessControlAllowHeadersProperty): any {
+export function dataAwsResponseHeadersPolicyAccessControlAllowHeadersPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.AccessControlAllowHeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,7 +208,7 @@ export function dataTfResponseHeadersPolicyAccessControlAllowHeadersPropertyToHc
 }
 
 
-export function dataTfResponseHeadersPolicyAccessControlAllowMethodsPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.AccessControlAllowMethodsProperty): any {
+export function dataAwsResponseHeadersPolicyAccessControlAllowMethodsPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.AccessControlAllowMethodsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -218,7 +218,7 @@ export function dataTfResponseHeadersPolicyAccessControlAllowMethodsPropertyToTe
 }
 
 
-export function dataTfResponseHeadersPolicyAccessControlAllowMethodsPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.AccessControlAllowMethodsProperty): any {
+export function dataAwsResponseHeadersPolicyAccessControlAllowMethodsPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.AccessControlAllowMethodsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -229,7 +229,7 @@ export function dataTfResponseHeadersPolicyAccessControlAllowMethodsPropertyToHc
 }
 
 
-export function dataTfResponseHeadersPolicyAccessControlAllowOriginsPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.AccessControlAllowOriginsProperty): any {
+export function dataAwsResponseHeadersPolicyAccessControlAllowOriginsPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.AccessControlAllowOriginsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -239,7 +239,7 @@ export function dataTfResponseHeadersPolicyAccessControlAllowOriginsPropertyToTe
 }
 
 
-export function dataTfResponseHeadersPolicyAccessControlAllowOriginsPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.AccessControlAllowOriginsProperty): any {
+export function dataAwsResponseHeadersPolicyAccessControlAllowOriginsPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.AccessControlAllowOriginsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -250,7 +250,7 @@ export function dataTfResponseHeadersPolicyAccessControlAllowOriginsPropertyToHc
 }
 
 
-export function dataTfResponseHeadersPolicyAccessControlExposeHeadersPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.AccessControlExposeHeadersProperty): any {
+export function dataAwsResponseHeadersPolicyAccessControlExposeHeadersPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.AccessControlExposeHeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -260,7 +260,7 @@ export function dataTfResponseHeadersPolicyAccessControlExposeHeadersPropertyToT
 }
 
 
-export function dataTfResponseHeadersPolicyAccessControlExposeHeadersPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.AccessControlExposeHeadersProperty): any {
+export function dataAwsResponseHeadersPolicyAccessControlExposeHeadersPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.AccessControlExposeHeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,7 +271,7 @@ export function dataTfResponseHeadersPolicyAccessControlExposeHeadersPropertyToH
 }
 
 
-export function dataTfResponseHeadersPolicyCorsConfigPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.CorsConfigProperty): any {
+export function dataAwsResponseHeadersPolicyCorsConfigPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.CorsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -281,7 +281,7 @@ export function dataTfResponseHeadersPolicyCorsConfigPropertyToTerraform(struct?
 }
 
 
-export function dataTfResponseHeadersPolicyCorsConfigPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.CorsConfigProperty): any {
+export function dataAwsResponseHeadersPolicyCorsConfigPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.CorsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -292,7 +292,7 @@ export function dataTfResponseHeadersPolicyCorsConfigPropertyToHclTerraform(stru
 }
 
 
-export function dataTfResponseHeadersPolicyCustomHeadersConfigItemsPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.CustomHeadersConfigItemsProperty): any {
+export function dataAwsResponseHeadersPolicyCustomHeadersConfigItemsPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.CustomHeadersConfigItemsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function dataTfResponseHeadersPolicyCustomHeadersConfigItemsPropertyToTer
 }
 
 
-export function dataTfResponseHeadersPolicyCustomHeadersConfigItemsPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.CustomHeadersConfigItemsProperty): any {
+export function dataAwsResponseHeadersPolicyCustomHeadersConfigItemsPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.CustomHeadersConfigItemsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function dataTfResponseHeadersPolicyCustomHeadersConfigItemsPropertyToHcl
 }
 
 
-export function dataTfResponseHeadersPolicyCustomHeadersConfigPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.CustomHeadersConfigProperty): any {
+export function dataAwsResponseHeadersPolicyCustomHeadersConfigPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.CustomHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -323,7 +323,7 @@ export function dataTfResponseHeadersPolicyCustomHeadersConfigPropertyToTerrafor
 }
 
 
-export function dataTfResponseHeadersPolicyCustomHeadersConfigPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.CustomHeadersConfigProperty): any {
+export function dataAwsResponseHeadersPolicyCustomHeadersConfigPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.CustomHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function dataTfResponseHeadersPolicyCustomHeadersConfigPropertyToHclTerra
 }
 
 
-export function dataTfResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.RemoveHeadersConfigItemsProperty): any {
+export function dataAwsResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.RemoveHeadersConfigItemsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -344,7 +344,7 @@ export function dataTfResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToTer
 }
 
 
-export function dataTfResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.RemoveHeadersConfigItemsProperty): any {
+export function dataAwsResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.RemoveHeadersConfigItemsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,7 +355,7 @@ export function dataTfResponseHeadersPolicyRemoveHeadersConfigItemsPropertyToHcl
 }
 
 
-export function dataTfResponseHeadersPolicyRemoveHeadersConfigPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.RemoveHeadersConfigProperty): any {
+export function dataAwsResponseHeadersPolicyRemoveHeadersConfigPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.RemoveHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,7 +365,7 @@ export function dataTfResponseHeadersPolicyRemoveHeadersConfigPropertyToTerrafor
 }
 
 
-export function dataTfResponseHeadersPolicyRemoveHeadersConfigPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.RemoveHeadersConfigProperty): any {
+export function dataAwsResponseHeadersPolicyRemoveHeadersConfigPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.RemoveHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -376,7 +376,7 @@ export function dataTfResponseHeadersPolicyRemoveHeadersConfigPropertyToHclTerra
 }
 
 
-export function dataTfResponseHeadersPolicyContentSecurityPolicyPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.ContentSecurityPolicyProperty): any {
+export function dataAwsResponseHeadersPolicyContentSecurityPolicyPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.ContentSecurityPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function dataTfResponseHeadersPolicyContentSecurityPolicyPropertyToTerraf
 }
 
 
-export function dataTfResponseHeadersPolicyContentSecurityPolicyPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.ContentSecurityPolicyProperty): any {
+export function dataAwsResponseHeadersPolicyContentSecurityPolicyPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.ContentSecurityPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,7 +397,7 @@ export function dataTfResponseHeadersPolicyContentSecurityPolicyPropertyToHclTer
 }
 
 
-export function dataTfResponseHeadersPolicyContentTypeOptionsPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.ContentTypeOptionsProperty): any {
+export function dataAwsResponseHeadersPolicyContentTypeOptionsPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.ContentTypeOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -407,7 +407,7 @@ export function dataTfResponseHeadersPolicyContentTypeOptionsPropertyToTerraform
 }
 
 
-export function dataTfResponseHeadersPolicyContentTypeOptionsPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.ContentTypeOptionsProperty): any {
+export function dataAwsResponseHeadersPolicyContentTypeOptionsPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.ContentTypeOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -418,7 +418,7 @@ export function dataTfResponseHeadersPolicyContentTypeOptionsPropertyToHclTerraf
 }
 
 
-export function dataTfResponseHeadersPolicyFrameOptionsPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.FrameOptionsProperty): any {
+export function dataAwsResponseHeadersPolicyFrameOptionsPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.FrameOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -428,7 +428,7 @@ export function dataTfResponseHeadersPolicyFrameOptionsPropertyToTerraform(struc
 }
 
 
-export function dataTfResponseHeadersPolicyFrameOptionsPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.FrameOptionsProperty): any {
+export function dataAwsResponseHeadersPolicyFrameOptionsPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.FrameOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function dataTfResponseHeadersPolicyFrameOptionsPropertyToHclTerraform(st
 }
 
 
-export function dataTfResponseHeadersPolicyReferrerPolicyPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.ReferrerPolicyProperty): any {
+export function dataAwsResponseHeadersPolicyReferrerPolicyPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.ReferrerPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -449,7 +449,7 @@ export function dataTfResponseHeadersPolicyReferrerPolicyPropertyToTerraform(str
 }
 
 
-export function dataTfResponseHeadersPolicyReferrerPolicyPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.ReferrerPolicyProperty): any {
+export function dataAwsResponseHeadersPolicyReferrerPolicyPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.ReferrerPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function dataTfResponseHeadersPolicyReferrerPolicyPropertyToHclTerraform(
 }
 
 
-export function dataTfResponseHeadersPolicyStrictTransportSecurityPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.StrictTransportSecurityProperty): any {
+export function dataAwsResponseHeadersPolicyStrictTransportSecurityPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.StrictTransportSecurityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function dataTfResponseHeadersPolicyStrictTransportSecurityPropertyToTerr
 }
 
 
-export function dataTfResponseHeadersPolicyStrictTransportSecurityPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.StrictTransportSecurityProperty): any {
+export function dataAwsResponseHeadersPolicyStrictTransportSecurityPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.StrictTransportSecurityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function dataTfResponseHeadersPolicyStrictTransportSecurityPropertyToHclT
 }
 
 
-export function dataTfResponseHeadersPolicyXssProtectionPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.XssProtectionProperty): any {
+export function dataAwsResponseHeadersPolicyXssProtectionPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.XssProtectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,7 +491,7 @@ export function dataTfResponseHeadersPolicyXssProtectionPropertyToTerraform(stru
 }
 
 
-export function dataTfResponseHeadersPolicyXssProtectionPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.XssProtectionProperty): any {
+export function dataAwsResponseHeadersPolicyXssProtectionPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.XssProtectionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,7 +502,7 @@ export function dataTfResponseHeadersPolicyXssProtectionPropertyToHclTerraform(s
 }
 
 
-export function dataTfResponseHeadersPolicySecurityHeadersConfigPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.SecurityHeadersConfigProperty): any {
+export function dataAwsResponseHeadersPolicySecurityHeadersConfigPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.SecurityHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -512,7 +512,7 @@ export function dataTfResponseHeadersPolicySecurityHeadersConfigPropertyToTerraf
 }
 
 
-export function dataTfResponseHeadersPolicySecurityHeadersConfigPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.SecurityHeadersConfigProperty): any {
+export function dataAwsResponseHeadersPolicySecurityHeadersConfigPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.SecurityHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -523,7 +523,7 @@ export function dataTfResponseHeadersPolicySecurityHeadersConfigPropertyToHclTer
 }
 
 
-export function dataTfResponseHeadersPolicyServerTimingHeadersConfigPropertyToTerraform(struct?: DataTfResponseHeadersPolicy.ServerTimingHeadersConfigProperty): any {
+export function dataAwsResponseHeadersPolicyServerTimingHeadersConfigPropertyToTerraform(struct?: DataAwsResponseHeadersPolicy.ServerTimingHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -533,7 +533,7 @@ export function dataTfResponseHeadersPolicyServerTimingHeadersConfigPropertyToTe
 }
 
 
-export function dataTfResponseHeadersPolicyServerTimingHeadersConfigPropertyToHclTerraform(struct?: DataTfResponseHeadersPolicy.ServerTimingHeadersConfigProperty): any {
+export function dataAwsResponseHeadersPolicyServerTimingHeadersConfigPropertyToHclTerraform(struct?: DataAwsResponseHeadersPolicy.ServerTimingHeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -544,7 +544,7 @@ export function dataTfResponseHeadersPolicyServerTimingHeadersConfigPropertyToHc
 }
 
 
-export namespace DataTfResponseHeadersPolicy {
+export namespace DataAwsResponseHeadersPolicy {
 export interface AccessControlAllowHeadersProperty {
 }
 export class AccessControlAllowHeadersPropertyOutputReference extends cdktn.ComplexObject {

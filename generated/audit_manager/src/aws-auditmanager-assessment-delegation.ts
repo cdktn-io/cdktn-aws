@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAssessmentDelegationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAssessmentDelegationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#assessment_id TfAssessmentDelegation#assessment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#assessment_id AwsAssessmentDelegation#assessment_id}
   */
   readonly assessmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#comment TfAssessmentDelegation#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#comment AwsAssessmentDelegation#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#control_set_id TfAssessmentDelegation#control_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#control_set_id AwsAssessmentDelegation#control_set_id}
   */
   readonly controlSetId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#region TfAssessmentDelegation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#region AwsAssessmentDelegation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#role_arn TfAssessmentDelegation#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#role_arn AwsAssessmentDelegation#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#role_type TfAssessmentDelegation#role_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#role_type AwsAssessmentDelegation#role_type}
   */
   readonly roleType: string;
 }
@@ -37,7 +37,7 @@ export interface TfAssessmentDelegationConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation aws_auditmanager_assessment_delegation}
 */
-export class TfAssessmentDelegation extends cdktn.TerraformResource {
+export class AwsAssessmentDelegation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfAssessmentDelegation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAssessmentDelegation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAssessmentDelegation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAssessmentDelegation to import
-  * @param importFromId The id of the existing TfAssessmentDelegation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAssessmentDelegation to import is found
+  * @param importToId The construct id used in the generated config for the AwsAssessmentDelegation to import
+  * @param importFromId The id of the existing AwsAssessmentDelegation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_assessment_delegation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAssessmentDelegation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_auditmanager_assessment_delegation", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfAssessmentDelegation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAssessmentDelegationConfig
+  * @param options AwsAssessmentDelegationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAssessmentDelegationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAssessmentDelegationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_auditmanager_assessment_delegation',
       terraformGeneratorMetadata: {

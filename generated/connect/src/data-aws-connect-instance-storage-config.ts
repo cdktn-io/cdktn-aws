@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfInstanceStorageConfigConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsInstanceStorageConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config#association_id DataTfInstanceStorageConfig#association_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config#association_id DataAwsInstanceStorageConfig#association_id}
   */
   readonly associationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config#id DataTfInstanceStorageConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config#id DataAwsInstanceStorageConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config#instance_id DataTfInstanceStorageConfig#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config#instance_id DataAwsInstanceStorageConfig#instance_id}
   */
   readonly instanceId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config#region DataTfInstanceStorageConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config#region DataAwsInstanceStorageConfig#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config#resource_type DataTfInstanceStorageConfig#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config#resource_type DataAwsInstanceStorageConfig#resource_type}
   */
   readonly resourceType: string;
 }
@@ -36,7 +36,7 @@ export interface DataTfInstanceStorageConfigConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config aws_connect_instance_storage_config}
 */
-export class DataTfInstanceStorageConfig extends cdktn.TerraformDataSource {
+export class DataAwsInstanceStorageConfig extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfInstanceStorageConfig extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfInstanceStorageConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsInstanceStorageConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfInstanceStorageConfig to import
-  * @param importFromId The id of the existing DataTfInstanceStorageConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfInstanceStorageConfig to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsInstanceStorageConfig to import
+  * @param importFromId The id of the existing DataAwsInstanceStorageConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/connect_instance_storage_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsInstanceStorageConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_connect_instance_storage_config", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfInstanceStorageConfig extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfInstanceStorageConfigConfig
+  * @param options DataAwsInstanceStorageConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfInstanceStorageConfigConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsInstanceStorageConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_connect_instance_storage_config',
       terraformGeneratorMetadata: {
@@ -167,7 +167,7 @@ export class DataTfInstanceStorageConfig extends cdktn.TerraformDataSource {
   }
 
   // storage_config - computed: true, optional: false, required: false
-  private _storageConfig = new DataTfInstanceStorageConfig.StorageConfigPropertyList(this, "storage_config", false);
+  private _storageConfig = new DataAwsInstanceStorageConfig.StorageConfigPropertyList(this, "storage_config", false);
   public get storageConfig() {
     return this._storageConfig;
   }
@@ -225,7 +225,7 @@ export class DataTfInstanceStorageConfig extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfInstanceStorageConfigKinesisFirehoseConfigPropertyToTerraform(struct?: DataTfInstanceStorageConfig.KinesisFirehoseConfigProperty): any {
+export function dataAwsInstanceStorageConfigKinesisFirehoseConfigPropertyToTerraform(struct?: DataAwsInstanceStorageConfig.KinesisFirehoseConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function dataTfInstanceStorageConfigKinesisFirehoseConfigPropertyToTerraf
 }
 
 
-export function dataTfInstanceStorageConfigKinesisFirehoseConfigPropertyToHclTerraform(struct?: DataTfInstanceStorageConfig.KinesisFirehoseConfigProperty): any {
+export function dataAwsInstanceStorageConfigKinesisFirehoseConfigPropertyToHclTerraform(struct?: DataAwsInstanceStorageConfig.KinesisFirehoseConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function dataTfInstanceStorageConfigKinesisFirehoseConfigPropertyToHclTer
 }
 
 
-export function dataTfInstanceStorageConfigKinesisStreamConfigPropertyToTerraform(struct?: DataTfInstanceStorageConfig.KinesisStreamConfigProperty): any {
+export function dataAwsInstanceStorageConfigKinesisStreamConfigPropertyToTerraform(struct?: DataAwsInstanceStorageConfig.KinesisStreamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -256,7 +256,7 @@ export function dataTfInstanceStorageConfigKinesisStreamConfigPropertyToTerrafor
 }
 
 
-export function dataTfInstanceStorageConfigKinesisStreamConfigPropertyToHclTerraform(struct?: DataTfInstanceStorageConfig.KinesisStreamConfigProperty): any {
+export function dataAwsInstanceStorageConfigKinesisStreamConfigPropertyToHclTerraform(struct?: DataAwsInstanceStorageConfig.KinesisStreamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,7 +267,7 @@ export function dataTfInstanceStorageConfigKinesisStreamConfigPropertyToHclTerra
 }
 
 
-export function dataTfInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyToTerraform(struct?: DataTfInstanceStorageConfig.StorageConfigKinesisVideoStreamConfigEncryptionConfigProperty): any {
+export function dataAwsInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyToTerraform(struct?: DataAwsInstanceStorageConfig.StorageConfigKinesisVideoStreamConfigEncryptionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,7 +277,7 @@ export function dataTfInstanceStorageConfigStorageConfigKinesisVideoStreamConfig
 }
 
 
-export function dataTfInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyToHclTerraform(struct?: DataTfInstanceStorageConfig.StorageConfigKinesisVideoStreamConfigEncryptionConfigProperty): any {
+export function dataAwsInstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigPropertyToHclTerraform(struct?: DataAwsInstanceStorageConfig.StorageConfigKinesisVideoStreamConfigEncryptionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,7 +288,7 @@ export function dataTfInstanceStorageConfigStorageConfigKinesisVideoStreamConfig
 }
 
 
-export function dataTfInstanceStorageConfigKinesisVideoStreamConfigPropertyToTerraform(struct?: DataTfInstanceStorageConfig.KinesisVideoStreamConfigProperty): any {
+export function dataAwsInstanceStorageConfigKinesisVideoStreamConfigPropertyToTerraform(struct?: DataAwsInstanceStorageConfig.KinesisVideoStreamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function dataTfInstanceStorageConfigKinesisVideoStreamConfigPropertyToTer
 }
 
 
-export function dataTfInstanceStorageConfigKinesisVideoStreamConfigPropertyToHclTerraform(struct?: DataTfInstanceStorageConfig.KinesisVideoStreamConfigProperty): any {
+export function dataAwsInstanceStorageConfigKinesisVideoStreamConfigPropertyToHclTerraform(struct?: DataAwsInstanceStorageConfig.KinesisVideoStreamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function dataTfInstanceStorageConfigKinesisVideoStreamConfigPropertyToHcl
 }
 
 
-export function dataTfInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigPropertyToTerraform(struct?: DataTfInstanceStorageConfig.StorageConfigS3ConfigEncryptionConfigProperty): any {
+export function dataAwsInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigPropertyToTerraform(struct?: DataAwsInstanceStorageConfig.StorageConfigS3ConfigEncryptionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,7 +319,7 @@ export function dataTfInstanceStorageConfigStorageConfigS3ConfigEncryptionConfig
 }
 
 
-export function dataTfInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigPropertyToHclTerraform(struct?: DataTfInstanceStorageConfig.StorageConfigS3ConfigEncryptionConfigProperty): any {
+export function dataAwsInstanceStorageConfigStorageConfigS3ConfigEncryptionConfigPropertyToHclTerraform(struct?: DataAwsInstanceStorageConfig.StorageConfigS3ConfigEncryptionConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function dataTfInstanceStorageConfigStorageConfigS3ConfigEncryptionConfig
 }
 
 
-export function dataTfInstanceStorageConfigS3ConfigPropertyToTerraform(struct?: DataTfInstanceStorageConfig.S3ConfigProperty): any {
+export function dataAwsInstanceStorageConfigS3ConfigPropertyToTerraform(struct?: DataAwsInstanceStorageConfig.S3ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,7 +340,7 @@ export function dataTfInstanceStorageConfigS3ConfigPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfInstanceStorageConfigS3ConfigPropertyToHclTerraform(struct?: DataTfInstanceStorageConfig.S3ConfigProperty): any {
+export function dataAwsInstanceStorageConfigS3ConfigPropertyToHclTerraform(struct?: DataAwsInstanceStorageConfig.S3ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -351,7 +351,7 @@ export function dataTfInstanceStorageConfigS3ConfigPropertyToHclTerraform(struct
 }
 
 
-export function dataTfInstanceStorageConfigStorageConfigPropertyToTerraform(struct?: DataTfInstanceStorageConfig.StorageConfigProperty): any {
+export function dataAwsInstanceStorageConfigStorageConfigPropertyToTerraform(struct?: DataAwsInstanceStorageConfig.StorageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function dataTfInstanceStorageConfigStorageConfigPropertyToTerraform(stru
 }
 
 
-export function dataTfInstanceStorageConfigStorageConfigPropertyToHclTerraform(struct?: DataTfInstanceStorageConfig.StorageConfigProperty): any {
+export function dataAwsInstanceStorageConfigStorageConfigPropertyToHclTerraform(struct?: DataAwsInstanceStorageConfig.StorageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function dataTfInstanceStorageConfigStorageConfigPropertyToHclTerraform(s
 }
 
 
-export namespace DataTfInstanceStorageConfig {
+export namespace DataAwsInstanceStorageConfig {
 export interface KinesisFirehoseConfigProperty {
 }
 export class KinesisFirehoseConfigPropertyOutputReference extends cdktn.ComplexObject {

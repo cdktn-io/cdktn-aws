@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEndpointConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEndpointConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#execution_role_arn TfEndpointConfiguration#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#execution_role_arn AwsEndpointConfiguration#execution_role_arn}
   */
   readonly executionRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#id TfEndpointConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#id AwsEndpointConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#kms_key_arn TfEndpointConfiguration#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#kms_key_arn AwsEndpointConfiguration#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#name TfEndpointConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#name AwsEndpointConfiguration#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#name_prefix TfEndpointConfiguration#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#name_prefix AwsEndpointConfiguration#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#region TfEndpointConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#region AwsEndpointConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#tags TfEndpointConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#tags AwsEndpointConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#tags_all TfEndpointConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#tags_all AwsEndpointConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * async_inference_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#async_inference_config TfEndpointConfiguration#async_inference_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#async_inference_config AwsEndpointConfiguration#async_inference_config}
   */
-  readonly asyncInferenceConfig?: TfEndpointConfiguration.AsyncInferenceConfigProperty;
+  readonly asyncInferenceConfig?: AwsEndpointConfiguration.AsyncInferenceConfigProperty;
   /**
   * data_capture_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#data_capture_config TfEndpointConfiguration#data_capture_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#data_capture_config AwsEndpointConfiguration#data_capture_config}
   */
-  readonly dataCaptureConfig?: TfEndpointConfiguration.DataCaptureConfigProperty;
+  readonly dataCaptureConfig?: AwsEndpointConfiguration.DataCaptureConfigProperty;
   /**
   * production_variants block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#production_variants TfEndpointConfiguration#production_variants}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#production_variants AwsEndpointConfiguration#production_variants}
   */
-  readonly productionVariants: TfEndpointConfiguration.ProductionVariantsProperty[] | cdktn.IResolvable;
+  readonly productionVariants: AwsEndpointConfiguration.ProductionVariantsProperty[] | cdktn.IResolvable;
   /**
   * shadow_production_variants block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#shadow_production_variants TfEndpointConfiguration#shadow_production_variants}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#shadow_production_variants AwsEndpointConfiguration#shadow_production_variants}
   */
-  readonly shadowProductionVariants?: TfEndpointConfiguration.ShadowProductionVariantsProperty[] | cdktn.IResolvable;
+  readonly shadowProductionVariants?: AwsEndpointConfiguration.ShadowProductionVariantsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration aws_sagemaker_endpoint_configuration}
 */
-export class TfEndpointConfiguration extends cdktn.TerraformResource {
+export class AwsEndpointConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class TfEndpointConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEndpointConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEndpointConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEndpointConfiguration to import
-  * @param importFromId The id of the existing TfEndpointConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEndpointConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsEndpointConfiguration to import
+  * @param importFromId The id of the existing AwsEndpointConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEndpointConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_endpoint_configuration", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class TfEndpointConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEndpointConfigurationConfig
+  * @param options AwsEndpointConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEndpointConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEndpointConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_endpoint_configuration',
       terraformGeneratorMetadata: {
@@ -272,11 +272,11 @@ export class TfEndpointConfiguration extends cdktn.TerraformResource {
   }
 
   // async_inference_config - computed: false, optional: true, required: false
-  private _asyncInferenceConfig = new TfEndpointConfiguration.AsyncInferenceConfigPropertyOutputReference(this, "async_inference_config");
+  private _asyncInferenceConfig = new AwsEndpointConfiguration.AsyncInferenceConfigPropertyOutputReference(this, "async_inference_config");
   public get asyncInferenceConfig() {
     return this._asyncInferenceConfig;
   }
-  public putAsyncInferenceConfig(value: TfEndpointConfiguration.AsyncInferenceConfigProperty) {
+  public putAsyncInferenceConfig(value: AwsEndpointConfiguration.AsyncInferenceConfigProperty) {
     this._asyncInferenceConfig.internalValue = value;
   }
   public resetAsyncInferenceConfig() {
@@ -288,11 +288,11 @@ export class TfEndpointConfiguration extends cdktn.TerraformResource {
   }
 
   // data_capture_config - computed: false, optional: true, required: false
-  private _dataCaptureConfig = new TfEndpointConfiguration.DataCaptureConfigPropertyOutputReference(this, "data_capture_config");
+  private _dataCaptureConfig = new AwsEndpointConfiguration.DataCaptureConfigPropertyOutputReference(this, "data_capture_config");
   public get dataCaptureConfig() {
     return this._dataCaptureConfig;
   }
-  public putDataCaptureConfig(value: TfEndpointConfiguration.DataCaptureConfigProperty) {
+  public putDataCaptureConfig(value: AwsEndpointConfiguration.DataCaptureConfigProperty) {
     this._dataCaptureConfig.internalValue = value;
   }
   public resetDataCaptureConfig() {
@@ -304,11 +304,11 @@ export class TfEndpointConfiguration extends cdktn.TerraformResource {
   }
 
   // production_variants - computed: false, optional: false, required: true
-  private _productionVariants = new TfEndpointConfiguration.ProductionVariantsPropertyList(this, "production_variants", false);
+  private _productionVariants = new AwsEndpointConfiguration.ProductionVariantsPropertyList(this, "production_variants", false);
   public get productionVariants() {
     return this._productionVariants;
   }
-  public putProductionVariants(value: TfEndpointConfiguration.ProductionVariantsProperty[] | cdktn.IResolvable) {
+  public putProductionVariants(value: AwsEndpointConfiguration.ProductionVariantsProperty[] | cdktn.IResolvable) {
     this._productionVariants.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -317,11 +317,11 @@ export class TfEndpointConfiguration extends cdktn.TerraformResource {
   }
 
   // shadow_production_variants - computed: false, optional: true, required: false
-  private _shadowProductionVariants = new TfEndpointConfiguration.ShadowProductionVariantsPropertyList(this, "shadow_production_variants", false);
+  private _shadowProductionVariants = new AwsEndpointConfiguration.ShadowProductionVariantsPropertyList(this, "shadow_production_variants", false);
   public get shadowProductionVariants() {
     return this._shadowProductionVariants;
   }
-  public putShadowProductionVariants(value: TfEndpointConfiguration.ShadowProductionVariantsProperty[] | cdktn.IResolvable) {
+  public putShadowProductionVariants(value: AwsEndpointConfiguration.ShadowProductionVariantsProperty[] | cdktn.IResolvable) {
     this._shadowProductionVariants.internalValue = value;
   }
   public resetShadowProductionVariants() {
@@ -346,10 +346,10 @@ export class TfEndpointConfiguration extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      async_inference_config: tfEndpointConfigurationAsyncInferenceConfigPropertyToTerraform(this._asyncInferenceConfig.internalValue),
-      data_capture_config: tfEndpointConfigurationDataCaptureConfigPropertyToTerraform(this._dataCaptureConfig.internalValue),
-      production_variants: cdktn.listMapper(tfEndpointConfigurationProductionVariantsPropertyToTerraform, true)(this._productionVariants.internalValue),
-      shadow_production_variants: cdktn.listMapper(tfEndpointConfigurationShadowProductionVariantsPropertyToTerraform, true)(this._shadowProductionVariants.internalValue),
+      async_inference_config: awsEndpointConfigurationAsyncInferenceConfigPropertyToTerraform(this._asyncInferenceConfig.internalValue),
+      data_capture_config: awsEndpointConfigurationDataCaptureConfigPropertyToTerraform(this._dataCaptureConfig.internalValue),
+      production_variants: cdktn.listMapper(awsEndpointConfigurationProductionVariantsPropertyToTerraform, true)(this._productionVariants.internalValue),
+      shadow_production_variants: cdktn.listMapper(awsEndpointConfigurationShadowProductionVariantsPropertyToTerraform, true)(this._shadowProductionVariants.internalValue),
     };
   }
 
@@ -404,28 +404,28 @@ export class TfEndpointConfiguration extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       async_inference_config: {
-        value: tfEndpointConfigurationAsyncInferenceConfigPropertyToHclTerraform(this._asyncInferenceConfig.internalValue),
+        value: awsEndpointConfigurationAsyncInferenceConfigPropertyToHclTerraform(this._asyncInferenceConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEndpointConfiguration.AsyncInferenceConfigPropertyList",
+        storageClassType: "AwsEndpointConfiguration.AsyncInferenceConfigPropertyList",
       },
       data_capture_config: {
-        value: tfEndpointConfigurationDataCaptureConfigPropertyToHclTerraform(this._dataCaptureConfig.internalValue),
+        value: awsEndpointConfigurationDataCaptureConfigPropertyToHclTerraform(this._dataCaptureConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEndpointConfiguration.DataCaptureConfigPropertyList",
+        storageClassType: "AwsEndpointConfiguration.DataCaptureConfigPropertyList",
       },
       production_variants: {
-        value: cdktn.listMapperHcl(tfEndpointConfigurationProductionVariantsPropertyToHclTerraform, true)(this._productionVariants.internalValue),
+        value: cdktn.listMapperHcl(awsEndpointConfigurationProductionVariantsPropertyToHclTerraform, true)(this._productionVariants.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEndpointConfiguration.ProductionVariantsPropertyList",
+        storageClassType: "AwsEndpointConfiguration.ProductionVariantsPropertyList",
       },
       shadow_production_variants: {
-        value: cdktn.listMapperHcl(tfEndpointConfigurationShadowProductionVariantsPropertyToHclTerraform, true)(this._shadowProductionVariants.internalValue),
+        value: cdktn.listMapperHcl(awsEndpointConfigurationShadowProductionVariantsPropertyToHclTerraform, true)(this._shadowProductionVariants.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEndpointConfiguration.ShadowProductionVariantsPropertyList",
+        storageClassType: "AwsEndpointConfiguration.ShadowProductionVariantsPropertyList",
       },
     };
 
@@ -434,7 +434,7 @@ export class TfEndpointConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfEndpointConfigurationClientConfigPropertyToTerraform(struct?: TfEndpointConfiguration.ClientConfigPropertyOutputReference | TfEndpointConfiguration.ClientConfigProperty): any {
+export function awsEndpointConfigurationClientConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.ClientConfigPropertyOutputReference | AwsEndpointConfiguration.ClientConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function tfEndpointConfigurationClientConfigPropertyToTerraform(struct?: 
 }
 
 
-export function tfEndpointConfigurationClientConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.ClientConfigPropertyOutputReference | TfEndpointConfiguration.ClientConfigProperty): any {
+export function awsEndpointConfigurationClientConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ClientConfigPropertyOutputReference | AwsEndpointConfiguration.ClientConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function tfEndpointConfigurationClientConfigPropertyToHclTerraform(struct
 }
 
 
-export function tfEndpointConfigurationNotificationConfigPropertyToTerraform(struct?: TfEndpointConfiguration.NotificationConfigPropertyOutputReference | TfEndpointConfiguration.NotificationConfigProperty): any {
+export function awsEndpointConfigurationNotificationConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.NotificationConfigPropertyOutputReference | AwsEndpointConfiguration.NotificationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,7 +477,7 @@ export function tfEndpointConfigurationNotificationConfigPropertyToTerraform(str
 }
 
 
-export function tfEndpointConfigurationNotificationConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.NotificationConfigPropertyOutputReference | TfEndpointConfiguration.NotificationConfigProperty): any {
+export function awsEndpointConfigurationNotificationConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.NotificationConfigPropertyOutputReference | AwsEndpointConfiguration.NotificationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function tfEndpointConfigurationNotificationConfigPropertyToHclTerraform(
 }
 
 
-export function tfEndpointConfigurationOutputConfigPropertyToTerraform(struct?: TfEndpointConfiguration.OutputConfigPropertyOutputReference | TfEndpointConfiguration.OutputConfigProperty): any {
+export function awsEndpointConfigurationOutputConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.OutputConfigPropertyOutputReference | AwsEndpointConfiguration.OutputConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,12 +517,12 @@ export function tfEndpointConfigurationOutputConfigPropertyToTerraform(struct?: 
     kms_key_id: cdktn.stringToTerraform(struct!.kmsKeyId),
     s3_failure_path: cdktn.stringToTerraform(struct!.s3FailurePath),
     s3_output_path: cdktn.stringToTerraform(struct!.s3OutputPath),
-    notification_config: tfEndpointConfigurationNotificationConfigPropertyToTerraform(struct!.notificationConfig),
+    notification_config: awsEndpointConfigurationNotificationConfigPropertyToTerraform(struct!.notificationConfig),
   }
 }
 
 
-export function tfEndpointConfigurationOutputConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.OutputConfigPropertyOutputReference | TfEndpointConfiguration.OutputConfigProperty): any {
+export function awsEndpointConfigurationOutputConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.OutputConfigPropertyOutputReference | AwsEndpointConfiguration.OutputConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function tfEndpointConfigurationOutputConfigPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     notification_config: {
-      value: tfEndpointConfigurationNotificationConfigPropertyToHclTerraform(struct!.notificationConfig),
+      value: awsEndpointConfigurationNotificationConfigPropertyToHclTerraform(struct!.notificationConfig),
       isBlock: true,
       type: "list",
       storageClassType: "NotificationConfigPropertyList",
@@ -559,32 +559,32 @@ export function tfEndpointConfigurationOutputConfigPropertyToHclTerraform(struct
 }
 
 
-export function tfEndpointConfigurationAsyncInferenceConfigPropertyToTerraform(struct?: TfEndpointConfiguration.AsyncInferenceConfigPropertyOutputReference | TfEndpointConfiguration.AsyncInferenceConfigProperty): any {
+export function awsEndpointConfigurationAsyncInferenceConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.AsyncInferenceConfigPropertyOutputReference | AwsEndpointConfiguration.AsyncInferenceConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    client_config: tfEndpointConfigurationClientConfigPropertyToTerraform(struct!.clientConfig),
-    output_config: tfEndpointConfigurationOutputConfigPropertyToTerraform(struct!.outputConfig),
+    client_config: awsEndpointConfigurationClientConfigPropertyToTerraform(struct!.clientConfig),
+    output_config: awsEndpointConfigurationOutputConfigPropertyToTerraform(struct!.outputConfig),
   }
 }
 
 
-export function tfEndpointConfigurationAsyncInferenceConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.AsyncInferenceConfigPropertyOutputReference | TfEndpointConfiguration.AsyncInferenceConfigProperty): any {
+export function awsEndpointConfigurationAsyncInferenceConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.AsyncInferenceConfigPropertyOutputReference | AwsEndpointConfiguration.AsyncInferenceConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     client_config: {
-      value: tfEndpointConfigurationClientConfigPropertyToHclTerraform(struct!.clientConfig),
+      value: awsEndpointConfigurationClientConfigPropertyToHclTerraform(struct!.clientConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ClientConfigPropertyList",
     },
     output_config: {
-      value: tfEndpointConfigurationOutputConfigPropertyToHclTerraform(struct!.outputConfig),
+      value: awsEndpointConfigurationOutputConfigPropertyToHclTerraform(struct!.outputConfig),
       isBlock: true,
       type: "list",
       storageClassType: "OutputConfigPropertyList",
@@ -596,7 +596,7 @@ export function tfEndpointConfigurationAsyncInferenceConfigPropertyToHclTerrafor
 }
 
 
-export function tfEndpointConfigurationCaptureContentTypeHeaderPropertyToTerraform(struct?: TfEndpointConfiguration.CaptureContentTypeHeaderPropertyOutputReference | TfEndpointConfiguration.CaptureContentTypeHeaderProperty): any {
+export function awsEndpointConfigurationCaptureContentTypeHeaderPropertyToTerraform(struct?: AwsEndpointConfiguration.CaptureContentTypeHeaderPropertyOutputReference | AwsEndpointConfiguration.CaptureContentTypeHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,7 +608,7 @@ export function tfEndpointConfigurationCaptureContentTypeHeaderPropertyToTerrafo
 }
 
 
-export function tfEndpointConfigurationCaptureContentTypeHeaderPropertyToHclTerraform(struct?: TfEndpointConfiguration.CaptureContentTypeHeaderPropertyOutputReference | TfEndpointConfiguration.CaptureContentTypeHeaderProperty): any {
+export function awsEndpointConfigurationCaptureContentTypeHeaderPropertyToHclTerraform(struct?: AwsEndpointConfiguration.CaptureContentTypeHeaderPropertyOutputReference | AwsEndpointConfiguration.CaptureContentTypeHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -633,7 +633,7 @@ export function tfEndpointConfigurationCaptureContentTypeHeaderPropertyToHclTerr
 }
 
 
-export function tfEndpointConfigurationCaptureOptionsPropertyToTerraform(struct?: TfEndpointConfiguration.CaptureOptionsProperty | cdktn.IResolvable): any {
+export function awsEndpointConfigurationCaptureOptionsPropertyToTerraform(struct?: AwsEndpointConfiguration.CaptureOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -644,7 +644,7 @@ export function tfEndpointConfigurationCaptureOptionsPropertyToTerraform(struct?
 }
 
 
-export function tfEndpointConfigurationCaptureOptionsPropertyToHclTerraform(struct?: TfEndpointConfiguration.CaptureOptionsProperty | cdktn.IResolvable): any {
+export function awsEndpointConfigurationCaptureOptionsPropertyToHclTerraform(struct?: AwsEndpointConfiguration.CaptureOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -663,7 +663,7 @@ export function tfEndpointConfigurationCaptureOptionsPropertyToHclTerraform(stru
 }
 
 
-export function tfEndpointConfigurationDataCaptureConfigPropertyToTerraform(struct?: TfEndpointConfiguration.DataCaptureConfigPropertyOutputReference | TfEndpointConfiguration.DataCaptureConfigProperty): any {
+export function awsEndpointConfigurationDataCaptureConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.DataCaptureConfigPropertyOutputReference | AwsEndpointConfiguration.DataCaptureConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -673,13 +673,13 @@ export function tfEndpointConfigurationDataCaptureConfigPropertyToTerraform(stru
     enable_capture: cdktn.booleanToTerraform(struct!.enableCapture),
     initial_sampling_percentage: cdktn.numberToTerraform(struct!.initialSamplingPercentage),
     kms_key_id: cdktn.stringToTerraform(struct!.kmsKeyId),
-    capture_content_type_header: tfEndpointConfigurationCaptureContentTypeHeaderPropertyToTerraform(struct!.captureContentTypeHeader),
-    capture_options: cdktn.listMapper(tfEndpointConfigurationCaptureOptionsPropertyToTerraform, true)(struct!.captureOptions),
+    capture_content_type_header: awsEndpointConfigurationCaptureContentTypeHeaderPropertyToTerraform(struct!.captureContentTypeHeader),
+    capture_options: cdktn.listMapper(awsEndpointConfigurationCaptureOptionsPropertyToTerraform, true)(struct!.captureOptions),
   }
 }
 
 
-export function tfEndpointConfigurationDataCaptureConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.DataCaptureConfigPropertyOutputReference | TfEndpointConfiguration.DataCaptureConfigProperty): any {
+export function awsEndpointConfigurationDataCaptureConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.DataCaptureConfigPropertyOutputReference | AwsEndpointConfiguration.DataCaptureConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -710,13 +710,13 @@ export function tfEndpointConfigurationDataCaptureConfigPropertyToHclTerraform(s
       storageClassType: "string",
     },
     capture_content_type_header: {
-      value: tfEndpointConfigurationCaptureContentTypeHeaderPropertyToHclTerraform(struct!.captureContentTypeHeader),
+      value: awsEndpointConfigurationCaptureContentTypeHeaderPropertyToHclTerraform(struct!.captureContentTypeHeader),
       isBlock: true,
       type: "list",
       storageClassType: "CaptureContentTypeHeaderPropertyList",
     },
     capture_options: {
-      value: cdktn.listMapperHcl(tfEndpointConfigurationCaptureOptionsPropertyToHclTerraform, true)(struct!.captureOptions),
+      value: cdktn.listMapperHcl(awsEndpointConfigurationCaptureOptionsPropertyToHclTerraform, true)(struct!.captureOptions),
       isBlock: true,
       type: "list",
       storageClassType: "CaptureOptionsPropertyList",
@@ -728,7 +728,7 @@ export function tfEndpointConfigurationDataCaptureConfigPropertyToHclTerraform(s
 }
 
 
-export function tfEndpointConfigurationProductionVariantsCapacityReservationConfigPropertyToTerraform(struct?: TfEndpointConfiguration.ProductionVariantsCapacityReservationConfigPropertyOutputReference | TfEndpointConfiguration.ProductionVariantsCapacityReservationConfigProperty): any {
+export function awsEndpointConfigurationProductionVariantsCapacityReservationConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.ProductionVariantsCapacityReservationConfigPropertyOutputReference | AwsEndpointConfiguration.ProductionVariantsCapacityReservationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -740,7 +740,7 @@ export function tfEndpointConfigurationProductionVariantsCapacityReservationConf
 }
 
 
-export function tfEndpointConfigurationProductionVariantsCapacityReservationConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.ProductionVariantsCapacityReservationConfigPropertyOutputReference | TfEndpointConfiguration.ProductionVariantsCapacityReservationConfigProperty): any {
+export function awsEndpointConfigurationProductionVariantsCapacityReservationConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ProductionVariantsCapacityReservationConfigPropertyOutputReference | AwsEndpointConfiguration.ProductionVariantsCapacityReservationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,7 +765,7 @@ export function tfEndpointConfigurationProductionVariantsCapacityReservationConf
 }
 
 
-export function tfEndpointConfigurationProductionVariantsCoreDumpConfigPropertyToTerraform(struct?: TfEndpointConfiguration.ProductionVariantsCoreDumpConfigPropertyOutputReference | TfEndpointConfiguration.ProductionVariantsCoreDumpConfigProperty): any {
+export function awsEndpointConfigurationProductionVariantsCoreDumpConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.ProductionVariantsCoreDumpConfigPropertyOutputReference | AwsEndpointConfiguration.ProductionVariantsCoreDumpConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -777,7 +777,7 @@ export function tfEndpointConfigurationProductionVariantsCoreDumpConfigPropertyT
 }
 
 
-export function tfEndpointConfigurationProductionVariantsCoreDumpConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.ProductionVariantsCoreDumpConfigPropertyOutputReference | TfEndpointConfiguration.ProductionVariantsCoreDumpConfigProperty): any {
+export function awsEndpointConfigurationProductionVariantsCoreDumpConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ProductionVariantsCoreDumpConfigPropertyOutputReference | AwsEndpointConfiguration.ProductionVariantsCoreDumpConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -802,7 +802,7 @@ export function tfEndpointConfigurationProductionVariantsCoreDumpConfigPropertyT
 }
 
 
-export function tfEndpointConfigurationProductionVariantsManagedInstanceScalingPropertyToTerraform(struct?: TfEndpointConfiguration.ProductionVariantsManagedInstanceScalingPropertyOutputReference | TfEndpointConfiguration.ProductionVariantsManagedInstanceScalingProperty): any {
+export function awsEndpointConfigurationProductionVariantsManagedInstanceScalingPropertyToTerraform(struct?: AwsEndpointConfiguration.ProductionVariantsManagedInstanceScalingPropertyOutputReference | AwsEndpointConfiguration.ProductionVariantsManagedInstanceScalingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -815,7 +815,7 @@ export function tfEndpointConfigurationProductionVariantsManagedInstanceScalingP
 }
 
 
-export function tfEndpointConfigurationProductionVariantsManagedInstanceScalingPropertyToHclTerraform(struct?: TfEndpointConfiguration.ProductionVariantsManagedInstanceScalingPropertyOutputReference | TfEndpointConfiguration.ProductionVariantsManagedInstanceScalingProperty): any {
+export function awsEndpointConfigurationProductionVariantsManagedInstanceScalingPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ProductionVariantsManagedInstanceScalingPropertyOutputReference | AwsEndpointConfiguration.ProductionVariantsManagedInstanceScalingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -846,7 +846,7 @@ export function tfEndpointConfigurationProductionVariantsManagedInstanceScalingP
 }
 
 
-export function tfEndpointConfigurationProductionVariantsRoutingConfigPropertyToTerraform(struct?: TfEndpointConfiguration.ProductionVariantsRoutingConfigProperty | cdktn.IResolvable): any {
+export function awsEndpointConfigurationProductionVariantsRoutingConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.ProductionVariantsRoutingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -857,7 +857,7 @@ export function tfEndpointConfigurationProductionVariantsRoutingConfigPropertyTo
 }
 
 
-export function tfEndpointConfigurationProductionVariantsRoutingConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.ProductionVariantsRoutingConfigProperty | cdktn.IResolvable): any {
+export function awsEndpointConfigurationProductionVariantsRoutingConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ProductionVariantsRoutingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -876,7 +876,7 @@ export function tfEndpointConfigurationProductionVariantsRoutingConfigPropertyTo
 }
 
 
-export function tfEndpointConfigurationProductionVariantsServerlessConfigPropertyToTerraform(struct?: TfEndpointConfiguration.ProductionVariantsServerlessConfigPropertyOutputReference | TfEndpointConfiguration.ProductionVariantsServerlessConfigProperty): any {
+export function awsEndpointConfigurationProductionVariantsServerlessConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.ProductionVariantsServerlessConfigPropertyOutputReference | AwsEndpointConfiguration.ProductionVariantsServerlessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -889,7 +889,7 @@ export function tfEndpointConfigurationProductionVariantsServerlessConfigPropert
 }
 
 
-export function tfEndpointConfigurationProductionVariantsServerlessConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.ProductionVariantsServerlessConfigPropertyOutputReference | TfEndpointConfiguration.ProductionVariantsServerlessConfigProperty): any {
+export function awsEndpointConfigurationProductionVariantsServerlessConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ProductionVariantsServerlessConfigPropertyOutputReference | AwsEndpointConfiguration.ProductionVariantsServerlessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -920,7 +920,7 @@ export function tfEndpointConfigurationProductionVariantsServerlessConfigPropert
 }
 
 
-export function tfEndpointConfigurationProductionVariantsPropertyToTerraform(struct?: TfEndpointConfiguration.ProductionVariantsProperty | cdktn.IResolvable): any {
+export function awsEndpointConfigurationProductionVariantsPropertyToTerraform(struct?: AwsEndpointConfiguration.ProductionVariantsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -937,16 +937,16 @@ export function tfEndpointConfigurationProductionVariantsPropertyToTerraform(str
     model_name: cdktn.stringToTerraform(struct!.modelName),
     variant_name: cdktn.stringToTerraform(struct!.variantName),
     volume_size_in_gb: cdktn.numberToTerraform(struct!.volumeSizeInGb),
-    capacity_reservation_config: tfEndpointConfigurationProductionVariantsCapacityReservationConfigPropertyToTerraform(struct!.capacityReservationConfig),
-    core_dump_config: tfEndpointConfigurationProductionVariantsCoreDumpConfigPropertyToTerraform(struct!.coreDumpConfig),
-    managed_instance_scaling: tfEndpointConfigurationProductionVariantsManagedInstanceScalingPropertyToTerraform(struct!.managedInstanceScaling),
-    routing_config: cdktn.listMapper(tfEndpointConfigurationProductionVariantsRoutingConfigPropertyToTerraform, true)(struct!.routingConfig),
-    serverless_config: tfEndpointConfigurationProductionVariantsServerlessConfigPropertyToTerraform(struct!.serverlessConfig),
+    capacity_reservation_config: awsEndpointConfigurationProductionVariantsCapacityReservationConfigPropertyToTerraform(struct!.capacityReservationConfig),
+    core_dump_config: awsEndpointConfigurationProductionVariantsCoreDumpConfigPropertyToTerraform(struct!.coreDumpConfig),
+    managed_instance_scaling: awsEndpointConfigurationProductionVariantsManagedInstanceScalingPropertyToTerraform(struct!.managedInstanceScaling),
+    routing_config: cdktn.listMapper(awsEndpointConfigurationProductionVariantsRoutingConfigPropertyToTerraform, true)(struct!.routingConfig),
+    serverless_config: awsEndpointConfigurationProductionVariantsServerlessConfigPropertyToTerraform(struct!.serverlessConfig),
   }
 }
 
 
-export function tfEndpointConfigurationProductionVariantsPropertyToHclTerraform(struct?: TfEndpointConfiguration.ProductionVariantsProperty | cdktn.IResolvable): any {
+export function awsEndpointConfigurationProductionVariantsPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ProductionVariantsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1019,31 +1019,31 @@ export function tfEndpointConfigurationProductionVariantsPropertyToHclTerraform(
       storageClassType: "number",
     },
     capacity_reservation_config: {
-      value: tfEndpointConfigurationProductionVariantsCapacityReservationConfigPropertyToHclTerraform(struct!.capacityReservationConfig),
+      value: awsEndpointConfigurationProductionVariantsCapacityReservationConfigPropertyToHclTerraform(struct!.capacityReservationConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ProductionVariantsCapacityReservationConfigPropertyList",
     },
     core_dump_config: {
-      value: tfEndpointConfigurationProductionVariantsCoreDumpConfigPropertyToHclTerraform(struct!.coreDumpConfig),
+      value: awsEndpointConfigurationProductionVariantsCoreDumpConfigPropertyToHclTerraform(struct!.coreDumpConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ProductionVariantsCoreDumpConfigPropertyList",
     },
     managed_instance_scaling: {
-      value: tfEndpointConfigurationProductionVariantsManagedInstanceScalingPropertyToHclTerraform(struct!.managedInstanceScaling),
+      value: awsEndpointConfigurationProductionVariantsManagedInstanceScalingPropertyToHclTerraform(struct!.managedInstanceScaling),
       isBlock: true,
       type: "list",
       storageClassType: "ProductionVariantsManagedInstanceScalingPropertyList",
     },
     routing_config: {
-      value: cdktn.listMapperHcl(tfEndpointConfigurationProductionVariantsRoutingConfigPropertyToHclTerraform, true)(struct!.routingConfig),
+      value: cdktn.listMapperHcl(awsEndpointConfigurationProductionVariantsRoutingConfigPropertyToHclTerraform, true)(struct!.routingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ProductionVariantsRoutingConfigPropertyList",
     },
     serverless_config: {
-      value: tfEndpointConfigurationProductionVariantsServerlessConfigPropertyToHclTerraform(struct!.serverlessConfig),
+      value: awsEndpointConfigurationProductionVariantsServerlessConfigPropertyToHclTerraform(struct!.serverlessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ProductionVariantsServerlessConfigPropertyList",
@@ -1055,7 +1055,7 @@ export function tfEndpointConfigurationProductionVariantsPropertyToHclTerraform(
 }
 
 
-export function tfEndpointConfigurationShadowProductionVariantsCapacityReservationConfigPropertyToTerraform(struct?: TfEndpointConfiguration.ShadowProductionVariantsCapacityReservationConfigPropertyOutputReference | TfEndpointConfiguration.ShadowProductionVariantsCapacityReservationConfigProperty): any {
+export function awsEndpointConfigurationShadowProductionVariantsCapacityReservationConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.ShadowProductionVariantsCapacityReservationConfigPropertyOutputReference | AwsEndpointConfiguration.ShadowProductionVariantsCapacityReservationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1067,7 +1067,7 @@ export function tfEndpointConfigurationShadowProductionVariantsCapacityReservati
 }
 
 
-export function tfEndpointConfigurationShadowProductionVariantsCapacityReservationConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.ShadowProductionVariantsCapacityReservationConfigPropertyOutputReference | TfEndpointConfiguration.ShadowProductionVariantsCapacityReservationConfigProperty): any {
+export function awsEndpointConfigurationShadowProductionVariantsCapacityReservationConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ShadowProductionVariantsCapacityReservationConfigPropertyOutputReference | AwsEndpointConfiguration.ShadowProductionVariantsCapacityReservationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1092,7 +1092,7 @@ export function tfEndpointConfigurationShadowProductionVariantsCapacityReservati
 }
 
 
-export function tfEndpointConfigurationShadowProductionVariantsCoreDumpConfigPropertyToTerraform(struct?: TfEndpointConfiguration.ShadowProductionVariantsCoreDumpConfigPropertyOutputReference | TfEndpointConfiguration.ShadowProductionVariantsCoreDumpConfigProperty): any {
+export function awsEndpointConfigurationShadowProductionVariantsCoreDumpConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.ShadowProductionVariantsCoreDumpConfigPropertyOutputReference | AwsEndpointConfiguration.ShadowProductionVariantsCoreDumpConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1104,7 +1104,7 @@ export function tfEndpointConfigurationShadowProductionVariantsCoreDumpConfigPro
 }
 
 
-export function tfEndpointConfigurationShadowProductionVariantsCoreDumpConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.ShadowProductionVariantsCoreDumpConfigPropertyOutputReference | TfEndpointConfiguration.ShadowProductionVariantsCoreDumpConfigProperty): any {
+export function awsEndpointConfigurationShadowProductionVariantsCoreDumpConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ShadowProductionVariantsCoreDumpConfigPropertyOutputReference | AwsEndpointConfiguration.ShadowProductionVariantsCoreDumpConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1129,7 +1129,7 @@ export function tfEndpointConfigurationShadowProductionVariantsCoreDumpConfigPro
 }
 
 
-export function tfEndpointConfigurationShadowProductionVariantsManagedInstanceScalingPropertyToTerraform(struct?: TfEndpointConfiguration.ShadowProductionVariantsManagedInstanceScalingPropertyOutputReference | TfEndpointConfiguration.ShadowProductionVariantsManagedInstanceScalingProperty): any {
+export function awsEndpointConfigurationShadowProductionVariantsManagedInstanceScalingPropertyToTerraform(struct?: AwsEndpointConfiguration.ShadowProductionVariantsManagedInstanceScalingPropertyOutputReference | AwsEndpointConfiguration.ShadowProductionVariantsManagedInstanceScalingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1142,7 +1142,7 @@ export function tfEndpointConfigurationShadowProductionVariantsManagedInstanceSc
 }
 
 
-export function tfEndpointConfigurationShadowProductionVariantsManagedInstanceScalingPropertyToHclTerraform(struct?: TfEndpointConfiguration.ShadowProductionVariantsManagedInstanceScalingPropertyOutputReference | TfEndpointConfiguration.ShadowProductionVariantsManagedInstanceScalingProperty): any {
+export function awsEndpointConfigurationShadowProductionVariantsManagedInstanceScalingPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ShadowProductionVariantsManagedInstanceScalingPropertyOutputReference | AwsEndpointConfiguration.ShadowProductionVariantsManagedInstanceScalingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1173,7 +1173,7 @@ export function tfEndpointConfigurationShadowProductionVariantsManagedInstanceSc
 }
 
 
-export function tfEndpointConfigurationShadowProductionVariantsRoutingConfigPropertyToTerraform(struct?: TfEndpointConfiguration.ShadowProductionVariantsRoutingConfigProperty | cdktn.IResolvable): any {
+export function awsEndpointConfigurationShadowProductionVariantsRoutingConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.ShadowProductionVariantsRoutingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1184,7 +1184,7 @@ export function tfEndpointConfigurationShadowProductionVariantsRoutingConfigProp
 }
 
 
-export function tfEndpointConfigurationShadowProductionVariantsRoutingConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.ShadowProductionVariantsRoutingConfigProperty | cdktn.IResolvable): any {
+export function awsEndpointConfigurationShadowProductionVariantsRoutingConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ShadowProductionVariantsRoutingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1203,7 +1203,7 @@ export function tfEndpointConfigurationShadowProductionVariantsRoutingConfigProp
 }
 
 
-export function tfEndpointConfigurationShadowProductionVariantsServerlessConfigPropertyToTerraform(struct?: TfEndpointConfiguration.ShadowProductionVariantsServerlessConfigPropertyOutputReference | TfEndpointConfiguration.ShadowProductionVariantsServerlessConfigProperty): any {
+export function awsEndpointConfigurationShadowProductionVariantsServerlessConfigPropertyToTerraform(struct?: AwsEndpointConfiguration.ShadowProductionVariantsServerlessConfigPropertyOutputReference | AwsEndpointConfiguration.ShadowProductionVariantsServerlessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1216,7 +1216,7 @@ export function tfEndpointConfigurationShadowProductionVariantsServerlessConfigP
 }
 
 
-export function tfEndpointConfigurationShadowProductionVariantsServerlessConfigPropertyToHclTerraform(struct?: TfEndpointConfiguration.ShadowProductionVariantsServerlessConfigPropertyOutputReference | TfEndpointConfiguration.ShadowProductionVariantsServerlessConfigProperty): any {
+export function awsEndpointConfigurationShadowProductionVariantsServerlessConfigPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ShadowProductionVariantsServerlessConfigPropertyOutputReference | AwsEndpointConfiguration.ShadowProductionVariantsServerlessConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1247,7 +1247,7 @@ export function tfEndpointConfigurationShadowProductionVariantsServerlessConfigP
 }
 
 
-export function tfEndpointConfigurationShadowProductionVariantsPropertyToTerraform(struct?: TfEndpointConfiguration.ShadowProductionVariantsProperty | cdktn.IResolvable): any {
+export function awsEndpointConfigurationShadowProductionVariantsPropertyToTerraform(struct?: AwsEndpointConfiguration.ShadowProductionVariantsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1264,16 +1264,16 @@ export function tfEndpointConfigurationShadowProductionVariantsPropertyToTerrafo
     model_name: cdktn.stringToTerraform(struct!.modelName),
     variant_name: cdktn.stringToTerraform(struct!.variantName),
     volume_size_in_gb: cdktn.numberToTerraform(struct!.volumeSizeInGb),
-    capacity_reservation_config: tfEndpointConfigurationShadowProductionVariantsCapacityReservationConfigPropertyToTerraform(struct!.capacityReservationConfig),
-    core_dump_config: tfEndpointConfigurationShadowProductionVariantsCoreDumpConfigPropertyToTerraform(struct!.coreDumpConfig),
-    managed_instance_scaling: tfEndpointConfigurationShadowProductionVariantsManagedInstanceScalingPropertyToTerraform(struct!.managedInstanceScaling),
-    routing_config: cdktn.listMapper(tfEndpointConfigurationShadowProductionVariantsRoutingConfigPropertyToTerraform, true)(struct!.routingConfig),
-    serverless_config: tfEndpointConfigurationShadowProductionVariantsServerlessConfigPropertyToTerraform(struct!.serverlessConfig),
+    capacity_reservation_config: awsEndpointConfigurationShadowProductionVariantsCapacityReservationConfigPropertyToTerraform(struct!.capacityReservationConfig),
+    core_dump_config: awsEndpointConfigurationShadowProductionVariantsCoreDumpConfigPropertyToTerraform(struct!.coreDumpConfig),
+    managed_instance_scaling: awsEndpointConfigurationShadowProductionVariantsManagedInstanceScalingPropertyToTerraform(struct!.managedInstanceScaling),
+    routing_config: cdktn.listMapper(awsEndpointConfigurationShadowProductionVariantsRoutingConfigPropertyToTerraform, true)(struct!.routingConfig),
+    serverless_config: awsEndpointConfigurationShadowProductionVariantsServerlessConfigPropertyToTerraform(struct!.serverlessConfig),
   }
 }
 
 
-export function tfEndpointConfigurationShadowProductionVariantsPropertyToHclTerraform(struct?: TfEndpointConfiguration.ShadowProductionVariantsProperty | cdktn.IResolvable): any {
+export function awsEndpointConfigurationShadowProductionVariantsPropertyToHclTerraform(struct?: AwsEndpointConfiguration.ShadowProductionVariantsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1346,31 +1346,31 @@ export function tfEndpointConfigurationShadowProductionVariantsPropertyToHclTerr
       storageClassType: "number",
     },
     capacity_reservation_config: {
-      value: tfEndpointConfigurationShadowProductionVariantsCapacityReservationConfigPropertyToHclTerraform(struct!.capacityReservationConfig),
+      value: awsEndpointConfigurationShadowProductionVariantsCapacityReservationConfigPropertyToHclTerraform(struct!.capacityReservationConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ShadowProductionVariantsCapacityReservationConfigPropertyList",
     },
     core_dump_config: {
-      value: tfEndpointConfigurationShadowProductionVariantsCoreDumpConfigPropertyToHclTerraform(struct!.coreDumpConfig),
+      value: awsEndpointConfigurationShadowProductionVariantsCoreDumpConfigPropertyToHclTerraform(struct!.coreDumpConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ShadowProductionVariantsCoreDumpConfigPropertyList",
     },
     managed_instance_scaling: {
-      value: tfEndpointConfigurationShadowProductionVariantsManagedInstanceScalingPropertyToHclTerraform(struct!.managedInstanceScaling),
+      value: awsEndpointConfigurationShadowProductionVariantsManagedInstanceScalingPropertyToHclTerraform(struct!.managedInstanceScaling),
       isBlock: true,
       type: "list",
       storageClassType: "ShadowProductionVariantsManagedInstanceScalingPropertyList",
     },
     routing_config: {
-      value: cdktn.listMapperHcl(tfEndpointConfigurationShadowProductionVariantsRoutingConfigPropertyToHclTerraform, true)(struct!.routingConfig),
+      value: cdktn.listMapperHcl(awsEndpointConfigurationShadowProductionVariantsRoutingConfigPropertyToHclTerraform, true)(struct!.routingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ShadowProductionVariantsRoutingConfigPropertyList",
     },
     serverless_config: {
-      value: tfEndpointConfigurationShadowProductionVariantsServerlessConfigPropertyToHclTerraform(struct!.serverlessConfig),
+      value: awsEndpointConfigurationShadowProductionVariantsServerlessConfigPropertyToHclTerraform(struct!.serverlessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ShadowProductionVariantsServerlessConfigPropertyList",
@@ -1382,10 +1382,10 @@ export function tfEndpointConfigurationShadowProductionVariantsPropertyToHclTerr
 }
 
 
-export namespace TfEndpointConfiguration {
+export namespace AwsEndpointConfiguration {
 export interface ClientConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#max_concurrent_invocations_per_instance TfEndpointConfiguration#max_concurrent_invocations_per_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#max_concurrent_invocations_per_instance AwsEndpointConfiguration#max_concurrent_invocations_per_instance}
   */
   readonly maxConcurrentInvocationsPerInstance?: number;
 }
@@ -1439,15 +1439,15 @@ export class ClientConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NotificationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#error_topic TfEndpointConfiguration#error_topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#error_topic AwsEndpointConfiguration#error_topic}
   */
   readonly errorTopic?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#include_inference_response_in TfEndpointConfiguration#include_inference_response_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#include_inference_response_in AwsEndpointConfiguration#include_inference_response_in}
   */
   readonly includeInferenceResponseIn?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#success_topic TfEndpointConfiguration#success_topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#success_topic AwsEndpointConfiguration#success_topic}
   */
   readonly successTopic?: string;
 }
@@ -1545,21 +1545,21 @@ export class NotificationConfigPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface OutputConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#kms_key_id TfEndpointConfiguration#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#kms_key_id AwsEndpointConfiguration#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#s3_failure_path TfEndpointConfiguration#s3_failure_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#s3_failure_path AwsEndpointConfiguration#s3_failure_path}
   */
   readonly s3FailurePath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#s3_output_path TfEndpointConfiguration#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#s3_output_path AwsEndpointConfiguration#s3_output_path}
   */
   readonly s3OutputPath: string;
   /**
   * notification_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#notification_config TfEndpointConfiguration#notification_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#notification_config AwsEndpointConfiguration#notification_config}
   */
   readonly notificationConfig?: NotificationConfigProperty;
 }
@@ -1678,13 +1678,13 @@ export interface AsyncInferenceConfigProperty {
   /**
   * client_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#client_config TfEndpointConfiguration#client_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#client_config AwsEndpointConfiguration#client_config}
   */
   readonly clientConfig?: ClientConfigProperty;
   /**
   * output_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#output_config TfEndpointConfiguration#output_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#output_config AwsEndpointConfiguration#output_config}
   */
   readonly outputConfig: OutputConfigProperty;
 }
@@ -1757,11 +1757,11 @@ export class AsyncInferenceConfigPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface CaptureContentTypeHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#csv_content_types TfEndpointConfiguration#csv_content_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#csv_content_types AwsEndpointConfiguration#csv_content_types}
   */
   readonly csvContentTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#json_content_types TfEndpointConfiguration#json_content_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#json_content_types AwsEndpointConfiguration#json_content_types}
   */
   readonly jsonContentTypes?: string[];
 }
@@ -1837,7 +1837,7 @@ export class CaptureContentTypeHeaderPropertyOutputReference extends cdktn.Compl
 }
 export interface CaptureOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capture_mode TfEndpointConfiguration#capture_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capture_mode AwsEndpointConfiguration#capture_mode}
   */
   readonly captureMode: string;
 }
@@ -1920,31 +1920,31 @@ export class CaptureOptionsPropertyList extends cdktn.ComplexList {
 }
 export interface DataCaptureConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#destination_s3_uri TfEndpointConfiguration#destination_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#destination_s3_uri AwsEndpointConfiguration#destination_s3_uri}
   */
   readonly destinationS3Uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#enable_capture TfEndpointConfiguration#enable_capture}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#enable_capture AwsEndpointConfiguration#enable_capture}
   */
   readonly enableCapture?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#initial_sampling_percentage TfEndpointConfiguration#initial_sampling_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#initial_sampling_percentage AwsEndpointConfiguration#initial_sampling_percentage}
   */
   readonly initialSamplingPercentage: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#kms_key_id TfEndpointConfiguration#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#kms_key_id AwsEndpointConfiguration#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
   * capture_content_type_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capture_content_type_header TfEndpointConfiguration#capture_content_type_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capture_content_type_header AwsEndpointConfiguration#capture_content_type_header}
   */
   readonly captureContentTypeHeader?: CaptureContentTypeHeaderProperty;
   /**
   * capture_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capture_options TfEndpointConfiguration#capture_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capture_options AwsEndpointConfiguration#capture_options}
   */
   readonly captureOptions: CaptureOptionsProperty[] | cdktn.IResolvable;
 }
@@ -2099,11 +2099,11 @@ export class DataCaptureConfigPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface ProductionVariantsCapacityReservationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capacity_reservation_preference TfEndpointConfiguration#capacity_reservation_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capacity_reservation_preference AwsEndpointConfiguration#capacity_reservation_preference}
   */
   readonly capacityReservationPreference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#ml_reservation_arn TfEndpointConfiguration#ml_reservation_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#ml_reservation_arn AwsEndpointConfiguration#ml_reservation_arn}
   */
   readonly mlReservationArn?: string;
 }
@@ -2179,11 +2179,11 @@ export class ProductionVariantsCapacityReservationConfigPropertyOutputReference 
 }
 export interface ProductionVariantsCoreDumpConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#destination_s3_uri TfEndpointConfiguration#destination_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#destination_s3_uri AwsEndpointConfiguration#destination_s3_uri}
   */
   readonly destinationS3Uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#kms_key_id TfEndpointConfiguration#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#kms_key_id AwsEndpointConfiguration#kms_key_id}
   */
   readonly kmsKeyId?: string;
 }
@@ -2256,15 +2256,15 @@ export class ProductionVariantsCoreDumpConfigPropertyOutputReference extends cdk
 }
 export interface ProductionVariantsManagedInstanceScalingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#max_instance_count TfEndpointConfiguration#max_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#max_instance_count AwsEndpointConfiguration#max_instance_count}
   */
   readonly maxInstanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#min_instance_count TfEndpointConfiguration#min_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#min_instance_count AwsEndpointConfiguration#min_instance_count}
   */
   readonly minInstanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#status TfEndpointConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#status AwsEndpointConfiguration#status}
   */
   readonly status?: string;
 }
@@ -2362,7 +2362,7 @@ export class ProductionVariantsManagedInstanceScalingPropertyOutputReference ext
 }
 export interface ProductionVariantsRoutingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#routing_strategy TfEndpointConfiguration#routing_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#routing_strategy AwsEndpointConfiguration#routing_strategy}
   */
   readonly routingStrategy: string;
 }
@@ -2445,15 +2445,15 @@ export class ProductionVariantsRoutingConfigPropertyList extends cdktn.ComplexLi
 }
 export interface ProductionVariantsServerlessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#max_concurrency TfEndpointConfiguration#max_concurrency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#max_concurrency AwsEndpointConfiguration#max_concurrency}
   */
   readonly maxConcurrency: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#memory_size_in_mb TfEndpointConfiguration#memory_size_in_mb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#memory_size_in_mb AwsEndpointConfiguration#memory_size_in_mb}
   */
   readonly memorySizeInMb: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#provisioned_concurrency TfEndpointConfiguration#provisioned_concurrency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#provisioned_concurrency AwsEndpointConfiguration#provisioned_concurrency}
   */
   readonly provisionedConcurrency?: number;
 }
@@ -2545,77 +2545,77 @@ export class ProductionVariantsServerlessConfigPropertyOutputReference extends c
 }
 export interface ProductionVariantsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#accelerator_type TfEndpointConfiguration#accelerator_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#accelerator_type AwsEndpointConfiguration#accelerator_type}
   */
   readonly acceleratorType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#container_startup_health_check_timeout_in_seconds TfEndpointConfiguration#container_startup_health_check_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#container_startup_health_check_timeout_in_seconds AwsEndpointConfiguration#container_startup_health_check_timeout_in_seconds}
   */
   readonly containerStartupHealthCheckTimeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#enable_ssm_access TfEndpointConfiguration#enable_ssm_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#enable_ssm_access AwsEndpointConfiguration#enable_ssm_access}
   */
   readonly enableSsmAccess?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#inference_ami_version TfEndpointConfiguration#inference_ami_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#inference_ami_version AwsEndpointConfiguration#inference_ami_version}
   */
   readonly inferenceAmiVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#initial_instance_count TfEndpointConfiguration#initial_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#initial_instance_count AwsEndpointConfiguration#initial_instance_count}
   */
   readonly initialInstanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#initial_variant_weight TfEndpointConfiguration#initial_variant_weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#initial_variant_weight AwsEndpointConfiguration#initial_variant_weight}
   */
   readonly initialVariantWeight?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#instance_type TfEndpointConfiguration#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#instance_type AwsEndpointConfiguration#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#model_data_download_timeout_in_seconds TfEndpointConfiguration#model_data_download_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#model_data_download_timeout_in_seconds AwsEndpointConfiguration#model_data_download_timeout_in_seconds}
   */
   readonly modelDataDownloadTimeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#model_name TfEndpointConfiguration#model_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#model_name AwsEndpointConfiguration#model_name}
   */
   readonly modelName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#variant_name TfEndpointConfiguration#variant_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#variant_name AwsEndpointConfiguration#variant_name}
   */
   readonly variantName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#volume_size_in_gb TfEndpointConfiguration#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#volume_size_in_gb AwsEndpointConfiguration#volume_size_in_gb}
   */
   readonly volumeSizeInGb?: number;
   /**
   * capacity_reservation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capacity_reservation_config TfEndpointConfiguration#capacity_reservation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capacity_reservation_config AwsEndpointConfiguration#capacity_reservation_config}
   */
   readonly capacityReservationConfig?: ProductionVariantsCapacityReservationConfigProperty;
   /**
   * core_dump_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#core_dump_config TfEndpointConfiguration#core_dump_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#core_dump_config AwsEndpointConfiguration#core_dump_config}
   */
   readonly coreDumpConfig?: ProductionVariantsCoreDumpConfigProperty;
   /**
   * managed_instance_scaling block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#managed_instance_scaling TfEndpointConfiguration#managed_instance_scaling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#managed_instance_scaling AwsEndpointConfiguration#managed_instance_scaling}
   */
   readonly managedInstanceScaling?: ProductionVariantsManagedInstanceScalingProperty;
   /**
   * routing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#routing_config TfEndpointConfiguration#routing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#routing_config AwsEndpointConfiguration#routing_config}
   */
   readonly routingConfig?: ProductionVariantsRoutingConfigProperty[] | cdktn.IResolvable;
   /**
   * serverless_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#serverless_config TfEndpointConfiguration#serverless_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#serverless_config AwsEndpointConfiguration#serverless_config}
   */
   readonly serverlessConfig?: ProductionVariantsServerlessConfigProperty;
 }
@@ -3031,11 +3031,11 @@ export class ProductionVariantsPropertyList extends cdktn.ComplexList {
 }
 export interface ShadowProductionVariantsCapacityReservationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capacity_reservation_preference TfEndpointConfiguration#capacity_reservation_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capacity_reservation_preference AwsEndpointConfiguration#capacity_reservation_preference}
   */
   readonly capacityReservationPreference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#ml_reservation_arn TfEndpointConfiguration#ml_reservation_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#ml_reservation_arn AwsEndpointConfiguration#ml_reservation_arn}
   */
   readonly mlReservationArn?: string;
 }
@@ -3111,11 +3111,11 @@ export class ShadowProductionVariantsCapacityReservationConfigPropertyOutputRefe
 }
 export interface ShadowProductionVariantsCoreDumpConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#destination_s3_uri TfEndpointConfiguration#destination_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#destination_s3_uri AwsEndpointConfiguration#destination_s3_uri}
   */
   readonly destinationS3Uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#kms_key_id TfEndpointConfiguration#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#kms_key_id AwsEndpointConfiguration#kms_key_id}
   */
   readonly kmsKeyId: string;
 }
@@ -3185,15 +3185,15 @@ export class ShadowProductionVariantsCoreDumpConfigPropertyOutputReference exten
 }
 export interface ShadowProductionVariantsManagedInstanceScalingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#max_instance_count TfEndpointConfiguration#max_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#max_instance_count AwsEndpointConfiguration#max_instance_count}
   */
   readonly maxInstanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#min_instance_count TfEndpointConfiguration#min_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#min_instance_count AwsEndpointConfiguration#min_instance_count}
   */
   readonly minInstanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#status TfEndpointConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#status AwsEndpointConfiguration#status}
   */
   readonly status?: string;
 }
@@ -3291,7 +3291,7 @@ export class ShadowProductionVariantsManagedInstanceScalingPropertyOutputReferen
 }
 export interface ShadowProductionVariantsRoutingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#routing_strategy TfEndpointConfiguration#routing_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#routing_strategy AwsEndpointConfiguration#routing_strategy}
   */
   readonly routingStrategy: string;
 }
@@ -3374,15 +3374,15 @@ export class ShadowProductionVariantsRoutingConfigPropertyList extends cdktn.Com
 }
 export interface ShadowProductionVariantsServerlessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#max_concurrency TfEndpointConfiguration#max_concurrency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#max_concurrency AwsEndpointConfiguration#max_concurrency}
   */
   readonly maxConcurrency: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#memory_size_in_mb TfEndpointConfiguration#memory_size_in_mb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#memory_size_in_mb AwsEndpointConfiguration#memory_size_in_mb}
   */
   readonly memorySizeInMb: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#provisioned_concurrency TfEndpointConfiguration#provisioned_concurrency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#provisioned_concurrency AwsEndpointConfiguration#provisioned_concurrency}
   */
   readonly provisionedConcurrency?: number;
 }
@@ -3474,77 +3474,77 @@ export class ShadowProductionVariantsServerlessConfigPropertyOutputReference ext
 }
 export interface ShadowProductionVariantsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#accelerator_type TfEndpointConfiguration#accelerator_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#accelerator_type AwsEndpointConfiguration#accelerator_type}
   */
   readonly acceleratorType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#container_startup_health_check_timeout_in_seconds TfEndpointConfiguration#container_startup_health_check_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#container_startup_health_check_timeout_in_seconds AwsEndpointConfiguration#container_startup_health_check_timeout_in_seconds}
   */
   readonly containerStartupHealthCheckTimeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#enable_ssm_access TfEndpointConfiguration#enable_ssm_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#enable_ssm_access AwsEndpointConfiguration#enable_ssm_access}
   */
   readonly enableSsmAccess?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#inference_ami_version TfEndpointConfiguration#inference_ami_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#inference_ami_version AwsEndpointConfiguration#inference_ami_version}
   */
   readonly inferenceAmiVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#initial_instance_count TfEndpointConfiguration#initial_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#initial_instance_count AwsEndpointConfiguration#initial_instance_count}
   */
   readonly initialInstanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#initial_variant_weight TfEndpointConfiguration#initial_variant_weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#initial_variant_weight AwsEndpointConfiguration#initial_variant_weight}
   */
   readonly initialVariantWeight?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#instance_type TfEndpointConfiguration#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#instance_type AwsEndpointConfiguration#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#model_data_download_timeout_in_seconds TfEndpointConfiguration#model_data_download_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#model_data_download_timeout_in_seconds AwsEndpointConfiguration#model_data_download_timeout_in_seconds}
   */
   readonly modelDataDownloadTimeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#model_name TfEndpointConfiguration#model_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#model_name AwsEndpointConfiguration#model_name}
   */
   readonly modelName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#variant_name TfEndpointConfiguration#variant_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#variant_name AwsEndpointConfiguration#variant_name}
   */
   readonly variantName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#volume_size_in_gb TfEndpointConfiguration#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#volume_size_in_gb AwsEndpointConfiguration#volume_size_in_gb}
   */
   readonly volumeSizeInGb?: number;
   /**
   * capacity_reservation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capacity_reservation_config TfEndpointConfiguration#capacity_reservation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#capacity_reservation_config AwsEndpointConfiguration#capacity_reservation_config}
   */
   readonly capacityReservationConfig?: ShadowProductionVariantsCapacityReservationConfigProperty;
   /**
   * core_dump_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#core_dump_config TfEndpointConfiguration#core_dump_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#core_dump_config AwsEndpointConfiguration#core_dump_config}
   */
   readonly coreDumpConfig?: ShadowProductionVariantsCoreDumpConfigProperty;
   /**
   * managed_instance_scaling block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#managed_instance_scaling TfEndpointConfiguration#managed_instance_scaling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#managed_instance_scaling AwsEndpointConfiguration#managed_instance_scaling}
   */
   readonly managedInstanceScaling?: ShadowProductionVariantsManagedInstanceScalingProperty;
   /**
   * routing_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#routing_config TfEndpointConfiguration#routing_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#routing_config AwsEndpointConfiguration#routing_config}
   */
   readonly routingConfig?: ShadowProductionVariantsRoutingConfigProperty[] | cdktn.IResolvable;
   /**
   * serverless_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#serverless_config TfEndpointConfiguration#serverless_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_endpoint_configuration#serverless_config AwsEndpointConfiguration#serverless_config}
   */
   readonly serverlessConfig?: ShadowProductionVariantsServerlessConfigProperty;
 }

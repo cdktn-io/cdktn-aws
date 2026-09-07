@@ -5,117 +5,117 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfManagedUserPoolClientConfig extends cdktn.TerraformMetaArguments {
+export interface AwsManagedUserPoolClientConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#access_token_validity TfManagedUserPoolClient#access_token_validity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#access_token_validity AwsManagedUserPoolClient#access_token_validity}
   */
   readonly accessTokenValidity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#allowed_oauth_flows TfManagedUserPoolClient#allowed_oauth_flows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#allowed_oauth_flows AwsManagedUserPoolClient#allowed_oauth_flows}
   */
   readonly allowedOauthFlows?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#allowed_oauth_flows_user_pool_client TfManagedUserPoolClient#allowed_oauth_flows_user_pool_client}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#allowed_oauth_flows_user_pool_client AwsManagedUserPoolClient#allowed_oauth_flows_user_pool_client}
   */
   readonly allowedOauthFlowsUserPoolClient?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#allowed_oauth_scopes TfManagedUserPoolClient#allowed_oauth_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#allowed_oauth_scopes AwsManagedUserPoolClient#allowed_oauth_scopes}
   */
   readonly allowedOauthScopes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#auth_session_validity TfManagedUserPoolClient#auth_session_validity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#auth_session_validity AwsManagedUserPoolClient#auth_session_validity}
   */
   readonly authSessionValidity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#callback_urls TfManagedUserPoolClient#callback_urls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#callback_urls AwsManagedUserPoolClient#callback_urls}
   */
   readonly callbackUrls?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#default_redirect_uri TfManagedUserPoolClient#default_redirect_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#default_redirect_uri AwsManagedUserPoolClient#default_redirect_uri}
   */
   readonly defaultRedirectUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#enable_propagate_additional_user_context_data TfManagedUserPoolClient#enable_propagate_additional_user_context_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#enable_propagate_additional_user_context_data AwsManagedUserPoolClient#enable_propagate_additional_user_context_data}
   */
   readonly enablePropagateAdditionalUserContextData?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#enable_token_revocation TfManagedUserPoolClient#enable_token_revocation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#enable_token_revocation AwsManagedUserPoolClient#enable_token_revocation}
   */
   readonly enableTokenRevocation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#explicit_auth_flows TfManagedUserPoolClient#explicit_auth_flows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#explicit_auth_flows AwsManagedUserPoolClient#explicit_auth_flows}
   */
   readonly explicitAuthFlows?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#id_token_validity TfManagedUserPoolClient#id_token_validity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#id_token_validity AwsManagedUserPoolClient#id_token_validity}
   */
   readonly idTokenValidity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#logout_urls TfManagedUserPoolClient#logout_urls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#logout_urls AwsManagedUserPoolClient#logout_urls}
   */
   readonly logoutUrls?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#name_pattern TfManagedUserPoolClient#name_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#name_pattern AwsManagedUserPoolClient#name_pattern}
   */
   readonly namePattern?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#name_prefix TfManagedUserPoolClient#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#name_prefix AwsManagedUserPoolClient#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#prevent_user_existence_errors TfManagedUserPoolClient#prevent_user_existence_errors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#prevent_user_existence_errors AwsManagedUserPoolClient#prevent_user_existence_errors}
   */
   readonly preventUserExistenceErrors?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#read_attributes TfManagedUserPoolClient#read_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#read_attributes AwsManagedUserPoolClient#read_attributes}
   */
   readonly readAttributes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#refresh_token_validity TfManagedUserPoolClient#refresh_token_validity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#refresh_token_validity AwsManagedUserPoolClient#refresh_token_validity}
   */
   readonly refreshTokenValidity?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#region TfManagedUserPoolClient#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#region AwsManagedUserPoolClient#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#supported_identity_providers TfManagedUserPoolClient#supported_identity_providers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#supported_identity_providers AwsManagedUserPoolClient#supported_identity_providers}
   */
   readonly supportedIdentityProviders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#user_pool_id TfManagedUserPoolClient#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#user_pool_id AwsManagedUserPoolClient#user_pool_id}
   */
   readonly userPoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#write_attributes TfManagedUserPoolClient#write_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#write_attributes AwsManagedUserPoolClient#write_attributes}
   */
   readonly writeAttributes?: string[];
   /**
   * analytics_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#analytics_configuration TfManagedUserPoolClient#analytics_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#analytics_configuration AwsManagedUserPoolClient#analytics_configuration}
   */
-  readonly analyticsConfiguration?: TfManagedUserPoolClient.AnalyticsConfigurationProperty[] | cdktn.IResolvable;
+  readonly analyticsConfiguration?: AwsManagedUserPoolClient.AnalyticsConfigurationProperty[] | cdktn.IResolvable;
   /**
   * refresh_token_rotation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#refresh_token_rotation TfManagedUserPoolClient#refresh_token_rotation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#refresh_token_rotation AwsManagedUserPoolClient#refresh_token_rotation}
   */
-  readonly refreshTokenRotation?: TfManagedUserPoolClient.RefreshTokenRotationProperty[] | cdktn.IResolvable;
+  readonly refreshTokenRotation?: AwsManagedUserPoolClient.RefreshTokenRotationProperty[] | cdktn.IResolvable;
   /**
   * token_validity_units block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#token_validity_units TfManagedUserPoolClient#token_validity_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#token_validity_units AwsManagedUserPoolClient#token_validity_units}
   */
-  readonly tokenValidityUnits?: TfManagedUserPoolClient.TokenValidityUnitsProperty[] | cdktn.IResolvable;
+  readonly tokenValidityUnits?: AwsManagedUserPoolClient.TokenValidityUnitsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client aws_cognito_managed_user_pool_client}
 */
-export class TfManagedUserPoolClient extends cdktn.TerraformResource {
+export class AwsManagedUserPoolClient extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -126,11 +126,11 @@ export class TfManagedUserPoolClient extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfManagedUserPoolClient resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsManagedUserPoolClient resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfManagedUserPoolClient to import
-  * @param importFromId The id of the existing TfManagedUserPoolClient that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfManagedUserPoolClient to import is found
+  * @param importToId The construct id used in the generated config for the AwsManagedUserPoolClient to import
+  * @param importFromId The id of the existing AwsManagedUserPoolClient that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsManagedUserPoolClient to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_managed_user_pool_client", importId: importFromId, provider });
@@ -145,9 +145,9 @@ export class TfManagedUserPoolClient extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfManagedUserPoolClientConfig
+  * @param options AwsManagedUserPoolClientConfig
   */
-  public constructor(scope: Construct, id: string, config: TfManagedUserPoolClientConfig) {
+  public constructor(scope: Construct, id: string, config: AwsManagedUserPoolClientConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_managed_user_pool_client',
       terraformGeneratorMetadata: {
@@ -542,11 +542,11 @@ export class TfManagedUserPoolClient extends cdktn.TerraformResource {
   }
 
   // analytics_configuration - computed: false, optional: true, required: false
-  private _analyticsConfiguration = new TfManagedUserPoolClient.AnalyticsConfigurationPropertyList(this, "analytics_configuration", false);
+  private _analyticsConfiguration = new AwsManagedUserPoolClient.AnalyticsConfigurationPropertyList(this, "analytics_configuration", false);
   public get analyticsConfiguration() {
     return this._analyticsConfiguration;
   }
-  public putAnalyticsConfiguration(value: TfManagedUserPoolClient.AnalyticsConfigurationProperty[] | cdktn.IResolvable) {
+  public putAnalyticsConfiguration(value: AwsManagedUserPoolClient.AnalyticsConfigurationProperty[] | cdktn.IResolvable) {
     this._analyticsConfiguration.internalValue = value;
   }
   public resetAnalyticsConfiguration() {
@@ -558,11 +558,11 @@ export class TfManagedUserPoolClient extends cdktn.TerraformResource {
   }
 
   // refresh_token_rotation - computed: false, optional: true, required: false
-  private _refreshTokenRotation = new TfManagedUserPoolClient.RefreshTokenRotationPropertyList(this, "refresh_token_rotation", false);
+  private _refreshTokenRotation = new AwsManagedUserPoolClient.RefreshTokenRotationPropertyList(this, "refresh_token_rotation", false);
   public get refreshTokenRotation() {
     return this._refreshTokenRotation;
   }
-  public putRefreshTokenRotation(value: TfManagedUserPoolClient.RefreshTokenRotationProperty[] | cdktn.IResolvable) {
+  public putRefreshTokenRotation(value: AwsManagedUserPoolClient.RefreshTokenRotationProperty[] | cdktn.IResolvable) {
     this._refreshTokenRotation.internalValue = value;
   }
   public resetRefreshTokenRotation() {
@@ -574,11 +574,11 @@ export class TfManagedUserPoolClient extends cdktn.TerraformResource {
   }
 
   // token_validity_units - computed: false, optional: true, required: false
-  private _tokenValidityUnits = new TfManagedUserPoolClient.TokenValidityUnitsPropertyList(this, "token_validity_units", false);
+  private _tokenValidityUnits = new AwsManagedUserPoolClient.TokenValidityUnitsPropertyList(this, "token_validity_units", false);
   public get tokenValidityUnits() {
     return this._tokenValidityUnits;
   }
-  public putTokenValidityUnits(value: TfManagedUserPoolClient.TokenValidityUnitsProperty[] | cdktn.IResolvable) {
+  public putTokenValidityUnits(value: AwsManagedUserPoolClient.TokenValidityUnitsProperty[] | cdktn.IResolvable) {
     this._tokenValidityUnits.internalValue = value;
   }
   public resetTokenValidityUnits() {
@@ -616,9 +616,9 @@ export class TfManagedUserPoolClient extends cdktn.TerraformResource {
       supported_identity_providers: cdktn.listMapper(cdktn.stringToTerraform, false)(this._supportedIdentityProviders),
       user_pool_id: cdktn.stringToTerraform(this._userPoolId),
       write_attributes: cdktn.listMapper(cdktn.stringToTerraform, false)(this._writeAttributes),
-      analytics_configuration: cdktn.listMapper(tfManagedUserPoolClientAnalyticsConfigurationPropertyToTerraform, true)(this._analyticsConfiguration.internalValue),
-      refresh_token_rotation: cdktn.listMapper(tfManagedUserPoolClientRefreshTokenRotationPropertyToTerraform, true)(this._refreshTokenRotation.internalValue),
-      token_validity_units: cdktn.listMapper(tfManagedUserPoolClientTokenValidityUnitsPropertyToTerraform, true)(this._tokenValidityUnits.internalValue),
+      analytics_configuration: cdktn.listMapper(awsManagedUserPoolClientAnalyticsConfigurationPropertyToTerraform, true)(this._analyticsConfiguration.internalValue),
+      refresh_token_rotation: cdktn.listMapper(awsManagedUserPoolClientRefreshTokenRotationPropertyToTerraform, true)(this._refreshTokenRotation.internalValue),
+      token_validity_units: cdktn.listMapper(awsManagedUserPoolClientTokenValidityUnitsPropertyToTerraform, true)(this._tokenValidityUnits.internalValue),
     };
   }
 
@@ -751,22 +751,22 @@ export class TfManagedUserPoolClient extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       analytics_configuration: {
-        value: cdktn.listMapperHcl(tfManagedUserPoolClientAnalyticsConfigurationPropertyToHclTerraform, true)(this._analyticsConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsManagedUserPoolClientAnalyticsConfigurationPropertyToHclTerraform, true)(this._analyticsConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfManagedUserPoolClient.AnalyticsConfigurationPropertyList",
+        storageClassType: "AwsManagedUserPoolClient.AnalyticsConfigurationPropertyList",
       },
       refresh_token_rotation: {
-        value: cdktn.listMapperHcl(tfManagedUserPoolClientRefreshTokenRotationPropertyToHclTerraform, true)(this._refreshTokenRotation.internalValue),
+        value: cdktn.listMapperHcl(awsManagedUserPoolClientRefreshTokenRotationPropertyToHclTerraform, true)(this._refreshTokenRotation.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfManagedUserPoolClient.RefreshTokenRotationPropertyList",
+        storageClassType: "AwsManagedUserPoolClient.RefreshTokenRotationPropertyList",
       },
       token_validity_units: {
-        value: cdktn.listMapperHcl(tfManagedUserPoolClientTokenValidityUnitsPropertyToHclTerraform, true)(this._tokenValidityUnits.internalValue),
+        value: cdktn.listMapperHcl(awsManagedUserPoolClientTokenValidityUnitsPropertyToHclTerraform, true)(this._tokenValidityUnits.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfManagedUserPoolClient.TokenValidityUnitsPropertyList",
+        storageClassType: "AwsManagedUserPoolClient.TokenValidityUnitsPropertyList",
       },
     };
 
@@ -775,7 +775,7 @@ export class TfManagedUserPoolClient extends cdktn.TerraformResource {
   }
 }
 
-export function tfManagedUserPoolClientAnalyticsConfigurationPropertyToTerraform(struct?: TfManagedUserPoolClient.AnalyticsConfigurationProperty | cdktn.IResolvable): any {
+export function awsManagedUserPoolClientAnalyticsConfigurationPropertyToTerraform(struct?: AwsManagedUserPoolClient.AnalyticsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -790,7 +790,7 @@ export function tfManagedUserPoolClientAnalyticsConfigurationPropertyToTerraform
 }
 
 
-export function tfManagedUserPoolClientAnalyticsConfigurationPropertyToHclTerraform(struct?: TfManagedUserPoolClient.AnalyticsConfigurationProperty | cdktn.IResolvable): any {
+export function awsManagedUserPoolClientAnalyticsConfigurationPropertyToHclTerraform(struct?: AwsManagedUserPoolClient.AnalyticsConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -833,7 +833,7 @@ export function tfManagedUserPoolClientAnalyticsConfigurationPropertyToHclTerraf
 }
 
 
-export function tfManagedUserPoolClientRefreshTokenRotationPropertyToTerraform(struct?: TfManagedUserPoolClient.RefreshTokenRotationProperty | cdktn.IResolvable): any {
+export function awsManagedUserPoolClientRefreshTokenRotationPropertyToTerraform(struct?: AwsManagedUserPoolClient.RefreshTokenRotationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -845,7 +845,7 @@ export function tfManagedUserPoolClientRefreshTokenRotationPropertyToTerraform(s
 }
 
 
-export function tfManagedUserPoolClientRefreshTokenRotationPropertyToHclTerraform(struct?: TfManagedUserPoolClient.RefreshTokenRotationProperty | cdktn.IResolvable): any {
+export function awsManagedUserPoolClientRefreshTokenRotationPropertyToHclTerraform(struct?: AwsManagedUserPoolClient.RefreshTokenRotationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -870,7 +870,7 @@ export function tfManagedUserPoolClientRefreshTokenRotationPropertyToHclTerrafor
 }
 
 
-export function tfManagedUserPoolClientTokenValidityUnitsPropertyToTerraform(struct?: TfManagedUserPoolClient.TokenValidityUnitsProperty | cdktn.IResolvable): any {
+export function awsManagedUserPoolClientTokenValidityUnitsPropertyToTerraform(struct?: AwsManagedUserPoolClient.TokenValidityUnitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -883,7 +883,7 @@ export function tfManagedUserPoolClientTokenValidityUnitsPropertyToTerraform(str
 }
 
 
-export function tfManagedUserPoolClientTokenValidityUnitsPropertyToHclTerraform(struct?: TfManagedUserPoolClient.TokenValidityUnitsProperty | cdktn.IResolvable): any {
+export function awsManagedUserPoolClientTokenValidityUnitsPropertyToHclTerraform(struct?: AwsManagedUserPoolClient.TokenValidityUnitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -914,26 +914,26 @@ export function tfManagedUserPoolClientTokenValidityUnitsPropertyToHclTerraform(
 }
 
 
-export namespace TfManagedUserPoolClient {
+export namespace AwsManagedUserPoolClient {
 export interface AnalyticsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#application_arn TfManagedUserPoolClient#application_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#application_arn AwsManagedUserPoolClient#application_arn}
   */
   readonly applicationArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#application_id TfManagedUserPoolClient#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#application_id AwsManagedUserPoolClient#application_id}
   */
   readonly applicationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#external_id TfManagedUserPoolClient#external_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#external_id AwsManagedUserPoolClient#external_id}
   */
   readonly externalId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#role_arn TfManagedUserPoolClient#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#role_arn AwsManagedUserPoolClient#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#user_data_shared TfManagedUserPoolClient#user_data_shared}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#user_data_shared AwsManagedUserPoolClient#user_data_shared}
   */
   readonly userDataShared?: boolean | cdktn.IResolvable;
 }
@@ -1107,11 +1107,11 @@ export class AnalyticsConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface RefreshTokenRotationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#feature TfManagedUserPoolClient#feature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#feature AwsManagedUserPoolClient#feature}
   */
   readonly feature: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#retry_grace_period_seconds TfManagedUserPoolClient#retry_grace_period_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#retry_grace_period_seconds AwsManagedUserPoolClient#retry_grace_period_seconds}
   */
   readonly retryGracePeriodSeconds?: number;
 }
@@ -1216,15 +1216,15 @@ export class RefreshTokenRotationPropertyList extends cdktn.ComplexList {
 }
 export interface TokenValidityUnitsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#access_token TfManagedUserPoolClient#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#access_token AwsManagedUserPoolClient#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#id_token TfManagedUserPoolClient#id_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#id_token AwsManagedUserPoolClient#id_token}
   */
   readonly idToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#refresh_token TfManagedUserPoolClient#refresh_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_managed_user_pool_client#refresh_token AwsManagedUserPoolClient#refresh_token}
   */
   readonly refreshToken?: string;
 }

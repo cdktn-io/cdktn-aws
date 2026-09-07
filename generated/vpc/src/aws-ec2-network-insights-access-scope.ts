@@ -5,35 +5,35 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEc2NetworkInsightsAccessScopeConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEc2NetworkInsightsAccessScopeConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#region TfEc2NetworkInsightsAccessScope#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#region AwsEc2NetworkInsightsAccessScope#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#tags TfEc2NetworkInsightsAccessScope#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#tags AwsEc2NetworkInsightsAccessScope#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * exclude_paths block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#exclude_paths TfEc2NetworkInsightsAccessScope#exclude_paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#exclude_paths AwsEc2NetworkInsightsAccessScope#exclude_paths}
   */
-  readonly excludePaths?: TfEc2NetworkInsightsAccessScope.ExcludePathsProperty[] | cdktn.IResolvable;
+  readonly excludePaths?: AwsEc2NetworkInsightsAccessScope.ExcludePathsProperty[] | cdktn.IResolvable;
   /**
   * match_paths block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#match_paths TfEc2NetworkInsightsAccessScope#match_paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#match_paths AwsEc2NetworkInsightsAccessScope#match_paths}
   */
-  readonly matchPaths?: TfEc2NetworkInsightsAccessScope.MatchPathsProperty[] | cdktn.IResolvable;
+  readonly matchPaths?: AwsEc2NetworkInsightsAccessScope.MatchPathsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope aws_ec2_network_insights_access_scope}
 */
-export class TfEc2NetworkInsightsAccessScope extends cdktn.TerraformResource {
+export class AwsEc2NetworkInsightsAccessScope extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfEc2NetworkInsightsAccessScope extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEc2NetworkInsightsAccessScope resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEc2NetworkInsightsAccessScope resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEc2NetworkInsightsAccessScope to import
-  * @param importFromId The id of the existing TfEc2NetworkInsightsAccessScope that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEc2NetworkInsightsAccessScope to import is found
+  * @param importToId The construct id used in the generated config for the AwsEc2NetworkInsightsAccessScope to import
+  * @param importFromId The id of the existing AwsEc2NetworkInsightsAccessScope that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEc2NetworkInsightsAccessScope to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_network_insights_access_scope", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfEc2NetworkInsightsAccessScope extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEc2NetworkInsightsAccessScopeConfig = {}
+  * @param options AwsEc2NetworkInsightsAccessScopeConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfEc2NetworkInsightsAccessScopeConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsEc2NetworkInsightsAccessScopeConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_network_insights_access_scope',
       terraformGeneratorMetadata: {
@@ -140,11 +140,11 @@ export class TfEc2NetworkInsightsAccessScope extends cdktn.TerraformResource {
   }
 
   // exclude_paths - computed: false, optional: true, required: false
-  private _excludePaths = new TfEc2NetworkInsightsAccessScope.ExcludePathsPropertyList(this, "exclude_paths", false);
+  private _excludePaths = new AwsEc2NetworkInsightsAccessScope.ExcludePathsPropertyList(this, "exclude_paths", false);
   public get excludePaths() {
     return this._excludePaths;
   }
-  public putExcludePaths(value: TfEc2NetworkInsightsAccessScope.ExcludePathsProperty[] | cdktn.IResolvable) {
+  public putExcludePaths(value: AwsEc2NetworkInsightsAccessScope.ExcludePathsProperty[] | cdktn.IResolvable) {
     this._excludePaths.internalValue = value;
   }
   public resetExcludePaths() {
@@ -156,11 +156,11 @@ export class TfEc2NetworkInsightsAccessScope extends cdktn.TerraformResource {
   }
 
   // match_paths - computed: false, optional: true, required: false
-  private _matchPaths = new TfEc2NetworkInsightsAccessScope.MatchPathsPropertyList(this, "match_paths", false);
+  private _matchPaths = new AwsEc2NetworkInsightsAccessScope.MatchPathsPropertyList(this, "match_paths", false);
   public get matchPaths() {
     return this._matchPaths;
   }
-  public putMatchPaths(value: TfEc2NetworkInsightsAccessScope.MatchPathsProperty[] | cdktn.IResolvable) {
+  public putMatchPaths(value: AwsEc2NetworkInsightsAccessScope.MatchPathsProperty[] | cdktn.IResolvable) {
     this._matchPaths.internalValue = value;
   }
   public resetMatchPaths() {
@@ -179,8 +179,8 @@ export class TfEc2NetworkInsightsAccessScope extends cdktn.TerraformResource {
     return {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      exclude_paths: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeExcludePathsPropertyToTerraform, true)(this._excludePaths.internalValue),
-      match_paths: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeMatchPathsPropertyToTerraform, true)(this._matchPaths.internalValue),
+      exclude_paths: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeExcludePathsPropertyToTerraform, true)(this._excludePaths.internalValue),
+      match_paths: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeMatchPathsPropertyToTerraform, true)(this._matchPaths.internalValue),
     };
   }
 
@@ -199,16 +199,16 @@ export class TfEc2NetworkInsightsAccessScope extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       exclude_paths: {
-        value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeExcludePathsPropertyToHclTerraform, true)(this._excludePaths.internalValue),
+        value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeExcludePathsPropertyToHclTerraform, true)(this._excludePaths.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEc2NetworkInsightsAccessScope.ExcludePathsPropertyList",
+        storageClassType: "AwsEc2NetworkInsightsAccessScope.ExcludePathsPropertyList",
       },
       match_paths: {
-        value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeMatchPathsPropertyToHclTerraform, true)(this._matchPaths.internalValue),
+        value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeMatchPathsPropertyToHclTerraform, true)(this._matchPaths.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEc2NetworkInsightsAccessScope.MatchPathsPropertyList",
+        storageClassType: "AwsEc2NetworkInsightsAccessScope.MatchPathsPropertyList",
       },
     };
 
@@ -217,7 +217,7 @@ export class TfEc2NetworkInsightsAccessScope extends cdktn.TerraformResource {
   }
 }
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsDestinationPacketHeaderStatementPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsDestinationPacketHeaderStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsDestinationPacketHeaderStatementPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsDestinationPacketHeaderStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -234,7 +234,7 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsDestinationPacketHead
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsDestinationPacketHeaderStatementPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsDestinationPacketHeaderStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsDestinationPacketHeaderStatementPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsDestinationPacketHeaderStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,7 +289,7 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsDestinationPacketHead
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsDestinationResourceStatementPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsDestinationResourceStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsDestinationResourceStatementPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsDestinationResourceStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsDestinationResourceSt
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsDestinationResourceStatementPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsDestinationResourceStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsDestinationResourceStatementPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsDestinationResourceStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,32 +326,32 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsDestinationResourceSt
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsDestinationPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsDestinationProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsDestinationPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    packet_header_statement: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeExcludePathsDestinationPacketHeaderStatementPropertyToTerraform, true)(struct!.packetHeaderStatement),
-    resource_statement: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeExcludePathsDestinationResourceStatementPropertyToTerraform, true)(struct!.resourceStatement),
+    packet_header_statement: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeExcludePathsDestinationPacketHeaderStatementPropertyToTerraform, true)(struct!.packetHeaderStatement),
+    resource_statement: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeExcludePathsDestinationResourceStatementPropertyToTerraform, true)(struct!.resourceStatement),
   }
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsDestinationPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsDestinationProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsDestinationPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     packet_header_statement: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeExcludePathsDestinationPacketHeaderStatementPropertyToHclTerraform, true)(struct!.packetHeaderStatement),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeExcludePathsDestinationPacketHeaderStatementPropertyToHclTerraform, true)(struct!.packetHeaderStatement),
       isBlock: true,
       type: "list",
       storageClassType: "ExcludePathsDestinationPacketHeaderStatementPropertyList",
     },
     resource_statement: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeExcludePathsDestinationResourceStatementPropertyToHclTerraform, true)(struct!.resourceStatement),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeExcludePathsDestinationResourceStatementPropertyToHclTerraform, true)(struct!.resourceStatement),
       isBlock: true,
       type: "list",
       storageClassType: "ExcludePathsDestinationResourceStatementPropertyList",
@@ -363,7 +363,7 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsDestinationPropertyTo
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsSourcePacketHeaderStatementPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsSourcePacketHeaderStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsSourcePacketHeaderStatementPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsSourcePacketHeaderStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsSourcePacketHeaderSta
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsSourcePacketHeaderStatementPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsSourcePacketHeaderStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsSourcePacketHeaderStatementPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsSourcePacketHeaderStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsSourcePacketHeaderSta
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsSourceResourceStatementPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsSourceResourceStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsSourceResourceStatementPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsSourceResourceStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -447,7 +447,7 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsSourceResourceStateme
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsSourceResourceStatementPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsSourceResourceStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsSourceResourceStatementPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsSourceResourceStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,32 +472,32 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsSourceResourceStateme
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsSourcePropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsSourceProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsSourcePropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    packet_header_statement: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeExcludePathsSourcePacketHeaderStatementPropertyToTerraform, true)(struct!.packetHeaderStatement),
-    resource_statement: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeExcludePathsSourceResourceStatementPropertyToTerraform, true)(struct!.resourceStatement),
+    packet_header_statement: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeExcludePathsSourcePacketHeaderStatementPropertyToTerraform, true)(struct!.packetHeaderStatement),
+    resource_statement: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeExcludePathsSourceResourceStatementPropertyToTerraform, true)(struct!.resourceStatement),
   }
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsSourcePropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsSourceProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsSourcePropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     packet_header_statement: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeExcludePathsSourcePacketHeaderStatementPropertyToHclTerraform, true)(struct!.packetHeaderStatement),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeExcludePathsSourcePacketHeaderStatementPropertyToHclTerraform, true)(struct!.packetHeaderStatement),
       isBlock: true,
       type: "list",
       storageClassType: "ExcludePathsSourcePacketHeaderStatementPropertyList",
     },
     resource_statement: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeExcludePathsSourceResourceStatementPropertyToHclTerraform, true)(struct!.resourceStatement),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeExcludePathsSourceResourceStatementPropertyToHclTerraform, true)(struct!.resourceStatement),
       isBlock: true,
       type: "list",
       storageClassType: "ExcludePathsSourceResourceStatementPropertyList",
@@ -509,7 +509,7 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsSourcePropertyToHclTe
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsThroughResourcesResourceStatementPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsThroughResourcesResourceStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsThroughResourcesResourceStatementPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsThroughResourcesResourceStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsThroughResourcesResou
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsThroughResourcesResourceStatementPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsThroughResourcesResourceStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsThroughResourcesResourceStatementPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsThroughResourcesResourceStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,25 +546,25 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsThroughResourcesResou
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeThroughResourcesPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.ThroughResourcesProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeThroughResourcesPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ThroughResourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    resource_statement: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeExcludePathsThroughResourcesResourceStatementPropertyToTerraform, true)(struct!.resourceStatement),
+    resource_statement: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeExcludePathsThroughResourcesResourceStatementPropertyToTerraform, true)(struct!.resourceStatement),
   }
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeThroughResourcesPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.ThroughResourcesProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeThroughResourcesPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ThroughResourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     resource_statement: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeExcludePathsThroughResourcesResourceStatementPropertyToHclTerraform, true)(struct!.resourceStatement),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeExcludePathsThroughResourcesResourceStatementPropertyToHclTerraform, true)(struct!.resourceStatement),
       isBlock: true,
       type: "list",
       storageClassType: "ExcludePathsThroughResourcesResourceStatementPropertyList",
@@ -576,39 +576,39 @@ export function tfEc2NetworkInsightsAccessScopeThroughResourcesPropertyToHclTerr
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    destination: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeExcludePathsDestinationPropertyToTerraform, true)(struct!.destination),
-    source: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeExcludePathsSourcePropertyToTerraform, true)(struct!.source),
-    through_resources: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeThroughResourcesPropertyToTerraform, true)(struct!.throughResources),
+    destination: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeExcludePathsDestinationPropertyToTerraform, true)(struct!.destination),
+    source: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeExcludePathsSourcePropertyToTerraform, true)(struct!.source),
+    through_resources: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeThroughResourcesPropertyToTerraform, true)(struct!.throughResources),
   }
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeExcludePathsPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.ExcludePathsProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeExcludePathsPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.ExcludePathsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     destination: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeExcludePathsDestinationPropertyToHclTerraform, true)(struct!.destination),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeExcludePathsDestinationPropertyToHclTerraform, true)(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "ExcludePathsDestinationPropertyList",
     },
     source: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeExcludePathsSourcePropertyToHclTerraform, true)(struct!.source),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeExcludePathsSourcePropertyToHclTerraform, true)(struct!.source),
       isBlock: true,
       type: "list",
       storageClassType: "ExcludePathsSourcePropertyList",
     },
     through_resources: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeThroughResourcesPropertyToHclTerraform, true)(struct!.throughResources),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeThroughResourcesPropertyToHclTerraform, true)(struct!.throughResources),
       isBlock: true,
       type: "list",
       storageClassType: "ThroughResourcesPropertyList",
@@ -620,7 +620,7 @@ export function tfEc2NetworkInsightsAccessScopeExcludePathsPropertyToHclTerrafor
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsDestinationPacketHeaderStatementPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsDestinationPacketHeaderStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsDestinationPacketHeaderStatementPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsDestinationPacketHeaderStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function tfEc2NetworkInsightsAccessScopeMatchPathsDestinationPacketHeader
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsDestinationPacketHeaderStatementPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsDestinationPacketHeaderStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsDestinationPacketHeaderStatementPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsDestinationPacketHeaderStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -692,7 +692,7 @@ export function tfEc2NetworkInsightsAccessScopeMatchPathsDestinationPacketHeader
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsDestinationResourceStatementPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsDestinationResourceStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsDestinationResourceStatementPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsDestinationResourceStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -704,7 +704,7 @@ export function tfEc2NetworkInsightsAccessScopeMatchPathsDestinationResourceStat
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsDestinationResourceStatementPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsDestinationResourceStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsDestinationResourceStatementPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsDestinationResourceStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -729,32 +729,32 @@ export function tfEc2NetworkInsightsAccessScopeMatchPathsDestinationResourceStat
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsDestinationPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsDestinationProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsDestinationPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    packet_header_statement: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeMatchPathsDestinationPacketHeaderStatementPropertyToTerraform, true)(struct!.packetHeaderStatement),
-    resource_statement: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeMatchPathsDestinationResourceStatementPropertyToTerraform, true)(struct!.resourceStatement),
+    packet_header_statement: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeMatchPathsDestinationPacketHeaderStatementPropertyToTerraform, true)(struct!.packetHeaderStatement),
+    resource_statement: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeMatchPathsDestinationResourceStatementPropertyToTerraform, true)(struct!.resourceStatement),
   }
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsDestinationPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsDestinationProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsDestinationPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     packet_header_statement: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeMatchPathsDestinationPacketHeaderStatementPropertyToHclTerraform, true)(struct!.packetHeaderStatement),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeMatchPathsDestinationPacketHeaderStatementPropertyToHclTerraform, true)(struct!.packetHeaderStatement),
       isBlock: true,
       type: "list",
       storageClassType: "MatchPathsDestinationPacketHeaderStatementPropertyList",
     },
     resource_statement: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeMatchPathsDestinationResourceStatementPropertyToHclTerraform, true)(struct!.resourceStatement),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeMatchPathsDestinationResourceStatementPropertyToHclTerraform, true)(struct!.resourceStatement),
       isBlock: true,
       type: "list",
       storageClassType: "MatchPathsDestinationResourceStatementPropertyList",
@@ -766,7 +766,7 @@ export function tfEc2NetworkInsightsAccessScopeMatchPathsDestinationPropertyToHc
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsSourcePacketHeaderStatementPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsSourcePacketHeaderStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsSourcePacketHeaderStatementPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsSourcePacketHeaderStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -783,7 +783,7 @@ export function tfEc2NetworkInsightsAccessScopeMatchPathsSourcePacketHeaderState
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsSourcePacketHeaderStatementPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsSourcePacketHeaderStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsSourcePacketHeaderStatementPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsSourcePacketHeaderStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -838,7 +838,7 @@ export function tfEc2NetworkInsightsAccessScopeMatchPathsSourcePacketHeaderState
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsSourceResourceStatementPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsSourceResourceStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsSourceResourceStatementPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsSourceResourceStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -850,7 +850,7 @@ export function tfEc2NetworkInsightsAccessScopeMatchPathsSourceResourceStatement
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsSourceResourceStatementPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsSourceResourceStatementProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsSourceResourceStatementPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsSourceResourceStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -875,32 +875,32 @@ export function tfEc2NetworkInsightsAccessScopeMatchPathsSourceResourceStatement
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsSourcePropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsSourceProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsSourcePropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    packet_header_statement: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeMatchPathsSourcePacketHeaderStatementPropertyToTerraform, true)(struct!.packetHeaderStatement),
-    resource_statement: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeMatchPathsSourceResourceStatementPropertyToTerraform, true)(struct!.resourceStatement),
+    packet_header_statement: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeMatchPathsSourcePacketHeaderStatementPropertyToTerraform, true)(struct!.packetHeaderStatement),
+    resource_statement: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeMatchPathsSourceResourceStatementPropertyToTerraform, true)(struct!.resourceStatement),
   }
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsSourcePropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsSourceProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsSourcePropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     packet_header_statement: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeMatchPathsSourcePacketHeaderStatementPropertyToHclTerraform, true)(struct!.packetHeaderStatement),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeMatchPathsSourcePacketHeaderStatementPropertyToHclTerraform, true)(struct!.packetHeaderStatement),
       isBlock: true,
       type: "list",
       storageClassType: "MatchPathsSourcePacketHeaderStatementPropertyList",
     },
     resource_statement: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeMatchPathsSourceResourceStatementPropertyToHclTerraform, true)(struct!.resourceStatement),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeMatchPathsSourceResourceStatementPropertyToHclTerraform, true)(struct!.resourceStatement),
       isBlock: true,
       type: "list",
       storageClassType: "MatchPathsSourceResourceStatementPropertyList",
@@ -912,32 +912,32 @@ export function tfEc2NetworkInsightsAccessScopeMatchPathsSourcePropertyToHclTerr
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsPropertyToTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsPropertyToTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    destination: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeMatchPathsDestinationPropertyToTerraform, true)(struct!.destination),
-    source: cdktn.listMapper(tfEc2NetworkInsightsAccessScopeMatchPathsSourcePropertyToTerraform, true)(struct!.source),
+    destination: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeMatchPathsDestinationPropertyToTerraform, true)(struct!.destination),
+    source: cdktn.listMapper(awsEc2NetworkInsightsAccessScopeMatchPathsSourcePropertyToTerraform, true)(struct!.source),
   }
 }
 
 
-export function tfEc2NetworkInsightsAccessScopeMatchPathsPropertyToHclTerraform(struct?: TfEc2NetworkInsightsAccessScope.MatchPathsProperty | cdktn.IResolvable): any {
+export function awsEc2NetworkInsightsAccessScopeMatchPathsPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsAccessScope.MatchPathsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     destination: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeMatchPathsDestinationPropertyToHclTerraform, true)(struct!.destination),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeMatchPathsDestinationPropertyToHclTerraform, true)(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "MatchPathsDestinationPropertyList",
     },
     source: {
-      value: cdktn.listMapperHcl(tfEc2NetworkInsightsAccessScopeMatchPathsSourcePropertyToHclTerraform, true)(struct!.source),
+      value: cdktn.listMapperHcl(awsEc2NetworkInsightsAccessScopeMatchPathsSourcePropertyToHclTerraform, true)(struct!.source),
       isBlock: true,
       type: "list",
       storageClassType: "MatchPathsSourcePropertyList",
@@ -949,34 +949,34 @@ export function tfEc2NetworkInsightsAccessScopeMatchPathsPropertyToHclTerraform(
 }
 
 
-export namespace TfEc2NetworkInsightsAccessScope {
+export namespace AwsEc2NetworkInsightsAccessScope {
 export interface ExcludePathsDestinationPacketHeaderStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_addresses TfEc2NetworkInsightsAccessScope#destination_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_addresses AwsEc2NetworkInsightsAccessScope#destination_addresses}
   */
   readonly destinationAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_ports TfEc2NetworkInsightsAccessScope#destination_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_ports AwsEc2NetworkInsightsAccessScope#destination_ports}
   */
   readonly destinationPorts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_prefix_lists TfEc2NetworkInsightsAccessScope#destination_prefix_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_prefix_lists AwsEc2NetworkInsightsAccessScope#destination_prefix_lists}
   */
   readonly destinationPrefixLists?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#protocols TfEc2NetworkInsightsAccessScope#protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#protocols AwsEc2NetworkInsightsAccessScope#protocols}
   */
   readonly protocols?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_addresses TfEc2NetworkInsightsAccessScope#source_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_addresses AwsEc2NetworkInsightsAccessScope#source_addresses}
   */
   readonly sourceAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_ports TfEc2NetworkInsightsAccessScope#source_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_ports AwsEc2NetworkInsightsAccessScope#source_ports}
   */
   readonly sourcePorts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_prefix_lists TfEc2NetworkInsightsAccessScope#source_prefix_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_prefix_lists AwsEc2NetworkInsightsAccessScope#source_prefix_lists}
   */
   readonly sourcePrefixLists?: string[];
 }
@@ -1194,11 +1194,11 @@ export class ExcludePathsDestinationPacketHeaderStatementPropertyList extends cd
 }
 export interface ExcludePathsDestinationResourceStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_types TfEc2NetworkInsightsAccessScope#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_types AwsEc2NetworkInsightsAccessScope#resource_types}
   */
   readonly resourceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resources TfEc2NetworkInsightsAccessScope#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resources AwsEc2NetworkInsightsAccessScope#resources}
   */
   readonly resources?: string[];
 }
@@ -1308,13 +1308,13 @@ export interface ExcludePathsDestinationProperty {
   /**
   * packet_header_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#packet_header_statement TfEc2NetworkInsightsAccessScope#packet_header_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#packet_header_statement AwsEc2NetworkInsightsAccessScope#packet_header_statement}
   */
   readonly packetHeaderStatement?: ExcludePathsDestinationPacketHeaderStatementProperty[] | cdktn.IResolvable;
   /**
   * resource_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_statement TfEc2NetworkInsightsAccessScope#resource_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_statement AwsEc2NetworkInsightsAccessScope#resource_statement}
   */
   readonly resourceStatement?: ExcludePathsDestinationResourceStatementProperty[] | cdktn.IResolvable;
 }
@@ -1422,31 +1422,31 @@ export class ExcludePathsDestinationPropertyList extends cdktn.ComplexList {
 }
 export interface ExcludePathsSourcePacketHeaderStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_addresses TfEc2NetworkInsightsAccessScope#destination_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_addresses AwsEc2NetworkInsightsAccessScope#destination_addresses}
   */
   readonly destinationAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_ports TfEc2NetworkInsightsAccessScope#destination_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_ports AwsEc2NetworkInsightsAccessScope#destination_ports}
   */
   readonly destinationPorts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_prefix_lists TfEc2NetworkInsightsAccessScope#destination_prefix_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_prefix_lists AwsEc2NetworkInsightsAccessScope#destination_prefix_lists}
   */
   readonly destinationPrefixLists?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#protocols TfEc2NetworkInsightsAccessScope#protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#protocols AwsEc2NetworkInsightsAccessScope#protocols}
   */
   readonly protocols?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_addresses TfEc2NetworkInsightsAccessScope#source_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_addresses AwsEc2NetworkInsightsAccessScope#source_addresses}
   */
   readonly sourceAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_ports TfEc2NetworkInsightsAccessScope#source_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_ports AwsEc2NetworkInsightsAccessScope#source_ports}
   */
   readonly sourcePorts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_prefix_lists TfEc2NetworkInsightsAccessScope#source_prefix_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_prefix_lists AwsEc2NetworkInsightsAccessScope#source_prefix_lists}
   */
   readonly sourcePrefixLists?: string[];
 }
@@ -1664,11 +1664,11 @@ export class ExcludePathsSourcePacketHeaderStatementPropertyList extends cdktn.C
 }
 export interface ExcludePathsSourceResourceStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_types TfEc2NetworkInsightsAccessScope#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_types AwsEc2NetworkInsightsAccessScope#resource_types}
   */
   readonly resourceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resources TfEc2NetworkInsightsAccessScope#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resources AwsEc2NetworkInsightsAccessScope#resources}
   */
   readonly resources?: string[];
 }
@@ -1778,13 +1778,13 @@ export interface ExcludePathsSourceProperty {
   /**
   * packet_header_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#packet_header_statement TfEc2NetworkInsightsAccessScope#packet_header_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#packet_header_statement AwsEc2NetworkInsightsAccessScope#packet_header_statement}
   */
   readonly packetHeaderStatement?: ExcludePathsSourcePacketHeaderStatementProperty[] | cdktn.IResolvable;
   /**
   * resource_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_statement TfEc2NetworkInsightsAccessScope#resource_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_statement AwsEc2NetworkInsightsAccessScope#resource_statement}
   */
   readonly resourceStatement?: ExcludePathsSourceResourceStatementProperty[] | cdktn.IResolvable;
 }
@@ -1892,11 +1892,11 @@ export class ExcludePathsSourcePropertyList extends cdktn.ComplexList {
 }
 export interface ExcludePathsThroughResourcesResourceStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_types TfEc2NetworkInsightsAccessScope#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_types AwsEc2NetworkInsightsAccessScope#resource_types}
   */
   readonly resourceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resources TfEc2NetworkInsightsAccessScope#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resources AwsEc2NetworkInsightsAccessScope#resources}
   */
   readonly resources?: string[];
 }
@@ -2006,7 +2006,7 @@ export interface ThroughResourcesProperty {
   /**
   * resource_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_statement TfEc2NetworkInsightsAccessScope#resource_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_statement AwsEc2NetworkInsightsAccessScope#resource_statement}
   */
   readonly resourceStatement?: ExcludePathsThroughResourcesResourceStatementProperty[] | cdktn.IResolvable;
 }
@@ -2094,19 +2094,19 @@ export interface ExcludePathsProperty {
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination TfEc2NetworkInsightsAccessScope#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination AwsEc2NetworkInsightsAccessScope#destination}
   */
   readonly destination?: ExcludePathsDestinationProperty[] | cdktn.IResolvable;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source TfEc2NetworkInsightsAccessScope#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source AwsEc2NetworkInsightsAccessScope#source}
   */
   readonly source?: ExcludePathsSourceProperty[] | cdktn.IResolvable;
   /**
   * through_resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#through_resources TfEc2NetworkInsightsAccessScope#through_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#through_resources AwsEc2NetworkInsightsAccessScope#through_resources}
   */
   readonly throughResources?: ThroughResourcesProperty[] | cdktn.IResolvable;
 }
@@ -2236,31 +2236,31 @@ export class ExcludePathsPropertyList extends cdktn.ComplexList {
 }
 export interface MatchPathsDestinationPacketHeaderStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_addresses TfEc2NetworkInsightsAccessScope#destination_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_addresses AwsEc2NetworkInsightsAccessScope#destination_addresses}
   */
   readonly destinationAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_ports TfEc2NetworkInsightsAccessScope#destination_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_ports AwsEc2NetworkInsightsAccessScope#destination_ports}
   */
   readonly destinationPorts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_prefix_lists TfEc2NetworkInsightsAccessScope#destination_prefix_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_prefix_lists AwsEc2NetworkInsightsAccessScope#destination_prefix_lists}
   */
   readonly destinationPrefixLists?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#protocols TfEc2NetworkInsightsAccessScope#protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#protocols AwsEc2NetworkInsightsAccessScope#protocols}
   */
   readonly protocols?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_addresses TfEc2NetworkInsightsAccessScope#source_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_addresses AwsEc2NetworkInsightsAccessScope#source_addresses}
   */
   readonly sourceAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_ports TfEc2NetworkInsightsAccessScope#source_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_ports AwsEc2NetworkInsightsAccessScope#source_ports}
   */
   readonly sourcePorts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_prefix_lists TfEc2NetworkInsightsAccessScope#source_prefix_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_prefix_lists AwsEc2NetworkInsightsAccessScope#source_prefix_lists}
   */
   readonly sourcePrefixLists?: string[];
 }
@@ -2478,11 +2478,11 @@ export class MatchPathsDestinationPacketHeaderStatementPropertyList extends cdkt
 }
 export interface MatchPathsDestinationResourceStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_types TfEc2NetworkInsightsAccessScope#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_types AwsEc2NetworkInsightsAccessScope#resource_types}
   */
   readonly resourceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resources TfEc2NetworkInsightsAccessScope#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resources AwsEc2NetworkInsightsAccessScope#resources}
   */
   readonly resources?: string[];
 }
@@ -2592,13 +2592,13 @@ export interface MatchPathsDestinationProperty {
   /**
   * packet_header_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#packet_header_statement TfEc2NetworkInsightsAccessScope#packet_header_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#packet_header_statement AwsEc2NetworkInsightsAccessScope#packet_header_statement}
   */
   readonly packetHeaderStatement?: MatchPathsDestinationPacketHeaderStatementProperty[] | cdktn.IResolvable;
   /**
   * resource_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_statement TfEc2NetworkInsightsAccessScope#resource_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_statement AwsEc2NetworkInsightsAccessScope#resource_statement}
   */
   readonly resourceStatement?: MatchPathsDestinationResourceStatementProperty[] | cdktn.IResolvable;
 }
@@ -2706,31 +2706,31 @@ export class MatchPathsDestinationPropertyList extends cdktn.ComplexList {
 }
 export interface MatchPathsSourcePacketHeaderStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_addresses TfEc2NetworkInsightsAccessScope#destination_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_addresses AwsEc2NetworkInsightsAccessScope#destination_addresses}
   */
   readonly destinationAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_ports TfEc2NetworkInsightsAccessScope#destination_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_ports AwsEc2NetworkInsightsAccessScope#destination_ports}
   */
   readonly destinationPorts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_prefix_lists TfEc2NetworkInsightsAccessScope#destination_prefix_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination_prefix_lists AwsEc2NetworkInsightsAccessScope#destination_prefix_lists}
   */
   readonly destinationPrefixLists?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#protocols TfEc2NetworkInsightsAccessScope#protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#protocols AwsEc2NetworkInsightsAccessScope#protocols}
   */
   readonly protocols?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_addresses TfEc2NetworkInsightsAccessScope#source_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_addresses AwsEc2NetworkInsightsAccessScope#source_addresses}
   */
   readonly sourceAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_ports TfEc2NetworkInsightsAccessScope#source_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_ports AwsEc2NetworkInsightsAccessScope#source_ports}
   */
   readonly sourcePorts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_prefix_lists TfEc2NetworkInsightsAccessScope#source_prefix_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source_prefix_lists AwsEc2NetworkInsightsAccessScope#source_prefix_lists}
   */
   readonly sourcePrefixLists?: string[];
 }
@@ -2948,11 +2948,11 @@ export class MatchPathsSourcePacketHeaderStatementPropertyList extends cdktn.Com
 }
 export interface MatchPathsSourceResourceStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_types TfEc2NetworkInsightsAccessScope#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_types AwsEc2NetworkInsightsAccessScope#resource_types}
   */
   readonly resourceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resources TfEc2NetworkInsightsAccessScope#resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resources AwsEc2NetworkInsightsAccessScope#resources}
   */
   readonly resources?: string[];
 }
@@ -3062,13 +3062,13 @@ export interface MatchPathsSourceProperty {
   /**
   * packet_header_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#packet_header_statement TfEc2NetworkInsightsAccessScope#packet_header_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#packet_header_statement AwsEc2NetworkInsightsAccessScope#packet_header_statement}
   */
   readonly packetHeaderStatement?: MatchPathsSourcePacketHeaderStatementProperty[] | cdktn.IResolvable;
   /**
   * resource_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_statement TfEc2NetworkInsightsAccessScope#resource_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#resource_statement AwsEc2NetworkInsightsAccessScope#resource_statement}
   */
   readonly resourceStatement?: MatchPathsSourceResourceStatementProperty[] | cdktn.IResolvable;
 }
@@ -3178,13 +3178,13 @@ export interface MatchPathsProperty {
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination TfEc2NetworkInsightsAccessScope#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#destination AwsEc2NetworkInsightsAccessScope#destination}
   */
   readonly destination?: MatchPathsDestinationProperty[] | cdktn.IResolvable;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source TfEc2NetworkInsightsAccessScope#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_access_scope#source AwsEc2NetworkInsightsAccessScope#source}
   */
   readonly source?: MatchPathsSourceProperty[] | cdktn.IResolvable;
 }

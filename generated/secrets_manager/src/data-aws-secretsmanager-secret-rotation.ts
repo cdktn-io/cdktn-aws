@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfSecretRotationConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsSecretRotationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_rotation#id DataTfSecretRotation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_rotation#id DataAwsSecretRotation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface DataTfSecretRotationConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_rotation#region DataTfSecretRotation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_rotation#region DataAwsSecretRotation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_rotation#secret_id DataTfSecretRotation#secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_rotation#secret_id DataAwsSecretRotation#secret_id}
   */
   readonly secretId: string;
 }
@@ -28,7 +28,7 @@ export interface DataTfSecretRotationConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_rotation aws_secretsmanager_secret_rotation}
 */
-export class DataTfSecretRotation extends cdktn.TerraformDataSource {
+export class DataAwsSecretRotation extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataTfSecretRotation extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfSecretRotation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsSecretRotation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfSecretRotation to import
-  * @param importFromId The id of the existing DataTfSecretRotation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_rotation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfSecretRotation to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsSecretRotation to import
+  * @param importFromId The id of the existing DataAwsSecretRotation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/secretsmanager_secret_rotation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsSecretRotation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_secretsmanager_secret_rotation", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataTfSecretRotation extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfSecretRotationConfig
+  * @param options DataAwsSecretRotationConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfSecretRotationConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsSecretRotationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_secretsmanager_secret_rotation',
       terraformGeneratorMetadata: {
@@ -86,7 +86,7 @@ export class DataTfSecretRotation extends cdktn.TerraformDataSource {
   // ==========
 
   // external_secret_rotation_metadata - computed: true, optional: false, required: false
-  private _externalSecretRotationMetadata = new DataTfSecretRotation.ExternalSecretRotationMetadataPropertyList(this, "external_secret_rotation_metadata", false);
+  private _externalSecretRotationMetadata = new DataAwsSecretRotation.ExternalSecretRotationMetadataPropertyList(this, "external_secret_rotation_metadata", false);
   public get externalSecretRotationMetadata() {
     return this._externalSecretRotationMetadata;
   }
@@ -139,7 +139,7 @@ export class DataTfSecretRotation extends cdktn.TerraformDataSource {
   }
 
   // rotation_rules - computed: true, optional: false, required: false
-  private _rotationRules = new DataTfSecretRotation.RotationRulesPropertyList(this, "rotation_rules", false);
+  private _rotationRules = new DataAwsSecretRotation.RotationRulesPropertyList(this, "rotation_rules", false);
   public get rotationRules() {
     return this._rotationRules;
   }
@@ -196,7 +196,7 @@ export class DataTfSecretRotation extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfSecretRotationExternalSecretRotationMetadataPropertyToTerraform(struct?: DataTfSecretRotation.ExternalSecretRotationMetadataProperty): any {
+export function dataAwsSecretRotationExternalSecretRotationMetadataPropertyToTerraform(struct?: DataAwsSecretRotation.ExternalSecretRotationMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -206,7 +206,7 @@ export function dataTfSecretRotationExternalSecretRotationMetadataPropertyToTerr
 }
 
 
-export function dataTfSecretRotationExternalSecretRotationMetadataPropertyToHclTerraform(struct?: DataTfSecretRotation.ExternalSecretRotationMetadataProperty): any {
+export function dataAwsSecretRotationExternalSecretRotationMetadataPropertyToHclTerraform(struct?: DataAwsSecretRotation.ExternalSecretRotationMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -217,7 +217,7 @@ export function dataTfSecretRotationExternalSecretRotationMetadataPropertyToHclT
 }
 
 
-export function dataTfSecretRotationRotationRulesPropertyToTerraform(struct?: DataTfSecretRotation.RotationRulesProperty): any {
+export function dataAwsSecretRotationRotationRulesPropertyToTerraform(struct?: DataAwsSecretRotation.RotationRulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -227,7 +227,7 @@ export function dataTfSecretRotationRotationRulesPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfSecretRotationRotationRulesPropertyToHclTerraform(struct?: DataTfSecretRotation.RotationRulesProperty): any {
+export function dataAwsSecretRotationRotationRulesPropertyToHclTerraform(struct?: DataAwsSecretRotation.RotationRulesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function dataTfSecretRotationRotationRulesPropertyToHclTerraform(struct?:
 }
 
 
-export namespace DataTfSecretRotation {
+export namespace DataAwsSecretRotation {
 export interface ExternalSecretRotationMetadataProperty {
 }
 export class ExternalSecretRotationMetadataPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLoggingOptionsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLoggingOptionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options#default_log_level TfLoggingOptions#default_log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options#default_log_level AwsLoggingOptions#default_log_level}
   */
   readonly defaultLogLevel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options#disable_all_logs TfLoggingOptions#disable_all_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options#disable_all_logs AwsLoggingOptions#disable_all_logs}
   */
   readonly disableAllLogs?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options#id TfLoggingOptions#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options#id AwsLoggingOptions#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface TfLoggingOptionsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options#region TfLoggingOptions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options#region AwsLoggingOptions#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options#role_arn TfLoggingOptions#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options#role_arn AwsLoggingOptions#role_arn}
   */
   readonly roleArn: string;
 }
@@ -36,7 +36,7 @@ export interface TfLoggingOptionsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options aws_iot_logging_options}
 */
-export class TfLoggingOptions extends cdktn.TerraformResource {
+export class AwsLoggingOptions extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfLoggingOptions extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLoggingOptions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLoggingOptions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLoggingOptions to import
-  * @param importFromId The id of the existing TfLoggingOptions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLoggingOptions to import is found
+  * @param importToId The construct id used in the generated config for the AwsLoggingOptions to import
+  * @param importFromId The id of the existing AwsLoggingOptions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_logging_options#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLoggingOptions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_logging_options", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfLoggingOptions extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLoggingOptionsConfig
+  * @param options AwsLoggingOptionsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLoggingOptionsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLoggingOptionsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_logging_options',
       terraformGeneratorMetadata: {

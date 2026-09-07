@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfPatchBaselinesConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsPatchBaselinesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines#default_baselines DataTfPatchBaselines#default_baselines}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines#default_baselines DataAwsPatchBaselines#default_baselines}
   */
   readonly defaultBaselines?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines#region DataTfPatchBaselines#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines#region DataAwsPatchBaselines#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines#filter DataTfPatchBaselines#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines#filter DataAwsPatchBaselines#filter}
   */
-  readonly filter?: DataTfPatchBaselines.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsPatchBaselines.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines aws_ssm_patch_baselines}
 */
-export class DataTfPatchBaselines extends cdktn.TerraformDataSource {
+export class DataAwsPatchBaselines extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class DataTfPatchBaselines extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfPatchBaselines resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsPatchBaselines resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfPatchBaselines to import
-  * @param importFromId The id of the existing DataTfPatchBaselines that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfPatchBaselines to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsPatchBaselines to import
+  * @param importFromId The id of the existing DataAwsPatchBaselines that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsPatchBaselines to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssm_patch_baselines", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class DataTfPatchBaselines extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfPatchBaselinesConfig = {}
+  * @param options DataAwsPatchBaselinesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfPatchBaselinesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsPatchBaselinesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ssm_patch_baselines',
       terraformGeneratorMetadata: {
@@ -85,7 +85,7 @@ export class DataTfPatchBaselines extends cdktn.TerraformDataSource {
   // ==========
 
   // baseline_identities - computed: true, optional: false, required: false
-  private _baselineIdentities = new DataTfPatchBaselines.BaselineIdentitiesPropertyList(this, "baseline_identities", false);
+  private _baselineIdentities = new DataAwsPatchBaselines.BaselineIdentitiesPropertyList(this, "baseline_identities", false);
   public get baselineIdentities() {
     return this._baselineIdentities;
   }
@@ -123,11 +123,11 @@ export class DataTfPatchBaselines extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfPatchBaselines.FilterPropertyList(this, "filter", false);
+  private _filter = new DataAwsPatchBaselines.FilterPropertyList(this, "filter", false);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfPatchBaselines.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsPatchBaselines.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -146,7 +146,7 @@ export class DataTfPatchBaselines extends cdktn.TerraformDataSource {
     return {
       default_baselines: cdktn.booleanToTerraform(this._defaultBaselines),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(dataTfPatchBaselinesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataAwsPatchBaselinesFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -165,10 +165,10 @@ export class DataTfPatchBaselines extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfPatchBaselinesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsPatchBaselinesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfPatchBaselines.FilterPropertyList",
+        storageClassType: "DataAwsPatchBaselines.FilterPropertyList",
       },
     };
 
@@ -177,7 +177,7 @@ export class DataTfPatchBaselines extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfPatchBaselinesBaselineIdentitiesPropertyToTerraform(struct?: DataTfPatchBaselines.BaselineIdentitiesProperty): any {
+export function dataAwsPatchBaselinesBaselineIdentitiesPropertyToTerraform(struct?: DataAwsPatchBaselines.BaselineIdentitiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -187,7 +187,7 @@ export function dataTfPatchBaselinesBaselineIdentitiesPropertyToTerraform(struct
 }
 
 
-export function dataTfPatchBaselinesBaselineIdentitiesPropertyToHclTerraform(struct?: DataTfPatchBaselines.BaselineIdentitiesProperty): any {
+export function dataAwsPatchBaselinesBaselineIdentitiesPropertyToHclTerraform(struct?: DataAwsPatchBaselines.BaselineIdentitiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -198,7 +198,7 @@ export function dataTfPatchBaselinesBaselineIdentitiesPropertyToHclTerraform(str
 }
 
 
-export function dataTfPatchBaselinesFilterPropertyToTerraform(struct?: DataTfPatchBaselines.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsPatchBaselinesFilterPropertyToTerraform(struct?: DataAwsPatchBaselines.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -210,7 +210,7 @@ export function dataTfPatchBaselinesFilterPropertyToTerraform(struct?: DataTfPat
 }
 
 
-export function dataTfPatchBaselinesFilterPropertyToHclTerraform(struct?: DataTfPatchBaselines.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsPatchBaselinesFilterPropertyToHclTerraform(struct?: DataAwsPatchBaselines.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function dataTfPatchBaselinesFilterPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export namespace DataTfPatchBaselines {
+export namespace DataAwsPatchBaselines {
 export interface BaselineIdentitiesProperty {
 }
 export class BaselineIdentitiesPropertyOutputReference extends cdktn.ComplexObject {
@@ -312,11 +312,11 @@ export class BaselineIdentitiesPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines#key DataTfPatchBaselines#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines#key DataAwsPatchBaselines#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines#values DataTfPatchBaselines#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_patch_baselines#values DataAwsPatchBaselines#values}
   */
   readonly values: string[];
 }

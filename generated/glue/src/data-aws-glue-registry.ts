@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRegistryConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRegistryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_registry#name DataTfRegistry#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_registry#name DataAwsRegistry#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_registry#region DataTfRegistry#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_registry#region DataAwsRegistry#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataTfRegistryConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_registry aws_glue_registry}
 */
-export class DataTfRegistry extends cdktn.TerraformDataSource {
+export class DataAwsRegistry extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataTfRegistry extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRegistry resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRegistry resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRegistry to import
-  * @param importFromId The id of the existing DataTfRegistry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_registry#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRegistry to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRegistry to import
+  * @param importFromId The id of the existing DataAwsRegistry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_registry#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRegistry to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_registry", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataTfRegistry extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRegistryConfig
+  * @param options DataAwsRegistryConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfRegistryConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsRegistryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_registry',
       terraformGeneratorMetadata: {

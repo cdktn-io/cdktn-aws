@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAgentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAgentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#activation_key TfAgent#activation_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#activation_key AwsAgent#activation_key}
   */
   readonly activationKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#id TfAgent#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#id AwsAgent#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#ip_address TfAgent#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#ip_address AwsAgent#ip_address}
   */
   readonly ipAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#name TfAgent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#name AwsAgent#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#private_link_endpoint TfAgent#private_link_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#private_link_endpoint AwsAgent#private_link_endpoint}
   */
   readonly privateLinkEndpoint?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#region TfAgent#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#region AwsAgent#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#security_group_arns TfAgent#security_group_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#security_group_arns AwsAgent#security_group_arns}
   */
   readonly securityGroupArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#subnet_arns TfAgent#subnet_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#subnet_arns AwsAgent#subnet_arns}
   */
   readonly subnetArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#tags TfAgent#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#tags AwsAgent#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#tags_all TfAgent#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#tags_all AwsAgent#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#vpc_endpoint_id TfAgent#vpc_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#vpc_endpoint_id AwsAgent#vpc_endpoint_id}
   */
   readonly vpcEndpointId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#timeouts TfAgent#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#timeouts AwsAgent#timeouts}
   */
-  readonly timeouts?: TfAgent.TimeoutsProperty;
+  readonly timeouts?: AwsAgent.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent aws_datasync_agent}
 */
-export class TfAgent extends cdktn.TerraformResource {
+export class AwsAgent extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class TfAgent extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAgent resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAgent resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAgent to import
-  * @param importFromId The id of the existing TfAgent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAgent to import is found
+  * @param importToId The construct id used in the generated config for the AwsAgent to import
+  * @param importFromId The id of the existing AwsAgent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAgent to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datasync_agent", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class TfAgent extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAgentConfig = {}
+  * @param options AwsAgentConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfAgentConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsAgentConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_datasync_agent',
       terraformGeneratorMetadata: {
@@ -314,11 +314,11 @@ export class TfAgent extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfAgent.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsAgent.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfAgent.TimeoutsProperty) {
+  public putTimeouts(value: AwsAgent.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -346,7 +346,7 @@ export class TfAgent extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_endpoint_id: cdktn.stringToTerraform(this._vpcEndpointId),
-      timeouts: tfAgentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsAgentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -419,10 +419,10 @@ export class TfAgent extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfAgentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsAgentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfAgent.TimeoutsProperty",
+        storageClassType: "AwsAgent.TimeoutsProperty",
       },
     };
 
@@ -431,7 +431,7 @@ export class TfAgent extends cdktn.TerraformResource {
   }
 }
 
-export function tfAgentTimeoutsPropertyToTerraform(struct?: TfAgent.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAgentTimeoutsPropertyToTerraform(struct?: AwsAgent.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function tfAgentTimeoutsPropertyToTerraform(struct?: TfAgent.TimeoutsProp
 }
 
 
-export function tfAgentTimeoutsPropertyToHclTerraform(struct?: TfAgent.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAgentTimeoutsPropertyToHclTerraform(struct?: AwsAgent.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,10 +461,10 @@ export function tfAgentTimeoutsPropertyToHclTerraform(struct?: TfAgent.TimeoutsP
 }
 
 
-export namespace TfAgent {
+export namespace AwsAgent {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#create TfAgent#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_agent#create AwsAgent#create}
   */
   readonly create?: string;
 }

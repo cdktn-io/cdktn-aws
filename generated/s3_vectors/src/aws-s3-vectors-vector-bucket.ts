@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVectorBucketConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVectorBucketConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#encryption_configuration TfVectorBucket#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#encryption_configuration AwsVectorBucket#encryption_configuration}
   */
-  readonly encryptionConfiguration?: TfVectorBucket.EncryptionConfigurationProperty[] | cdktn.IResolvable;
+  readonly encryptionConfiguration?: AwsVectorBucket.EncryptionConfigurationProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#force_destroy TfVectorBucket#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#force_destroy AwsVectorBucket#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#region TfVectorBucket#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#region AwsVectorBucket#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#tags TfVectorBucket#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#tags AwsVectorBucket#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#vector_bucket_name TfVectorBucket#vector_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#vector_bucket_name AwsVectorBucket#vector_bucket_name}
   */
   readonly vectorBucketName: string;
 }
@@ -33,7 +33,7 @@ export interface TfVectorBucketConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket aws_s3vectors_vector_bucket}
 */
-export class TfVectorBucket extends cdktn.TerraformResource {
+export class AwsVectorBucket extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfVectorBucket extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVectorBucket resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVectorBucket resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVectorBucket to import
-  * @param importFromId The id of the existing TfVectorBucket that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVectorBucket to import is found
+  * @param importToId The construct id used in the generated config for the AwsVectorBucket to import
+  * @param importFromId The id of the existing AwsVectorBucket that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVectorBucket to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3vectors_vector_bucket", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfVectorBucket extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVectorBucketConfig
+  * @param options AwsVectorBucketConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVectorBucketConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVectorBucketConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3vectors_vector_bucket',
       terraformGeneratorMetadata: {
@@ -98,11 +98,11 @@ export class TfVectorBucket extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: true, optional: true, required: false
-  private _encryptionConfiguration = new TfVectorBucket.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
+  private _encryptionConfiguration = new AwsVectorBucket.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: TfVectorBucket.EncryptionConfigurationProperty[] | cdktn.IResolvable) {
+  public putEncryptionConfiguration(value: AwsVectorBucket.EncryptionConfigurationProperty[] | cdktn.IResolvable) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -191,7 +191,7 @@ export class TfVectorBucket extends cdktn.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      encryption_configuration: cdktn.listMapper(tfVectorBucketEncryptionConfigurationPropertyToTerraform, false)(this._encryptionConfiguration.internalValue),
+      encryption_configuration: cdktn.listMapper(awsVectorBucketEncryptionConfigurationPropertyToTerraform, false)(this._encryptionConfiguration.internalValue),
       force_destroy: cdktn.booleanToTerraform(this._forceDestroy),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
@@ -202,10 +202,10 @@ export class TfVectorBucket extends cdktn.TerraformResource {
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       encryption_configuration: {
-        value: cdktn.listMapperHcl(tfVectorBucketEncryptionConfigurationPropertyToHclTerraform, false)(this._encryptionConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsVectorBucketEncryptionConfigurationPropertyToHclTerraform, false)(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfVectorBucket.EncryptionConfigurationPropertyList",
+        storageClassType: "AwsVectorBucket.EncryptionConfigurationPropertyList",
       },
       force_destroy: {
         value: cdktn.booleanToHclTerraform(this._forceDestroy),
@@ -238,7 +238,7 @@ export class TfVectorBucket extends cdktn.TerraformResource {
   }
 }
 
-export function tfVectorBucketEncryptionConfigurationPropertyToTerraform(struct?: TfVectorBucket.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function awsVectorBucketEncryptionConfigurationPropertyToTerraform(struct?: AwsVectorBucket.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -250,7 +250,7 @@ export function tfVectorBucketEncryptionConfigurationPropertyToTerraform(struct?
 }
 
 
-export function tfVectorBucketEncryptionConfigurationPropertyToHclTerraform(struct?: TfVectorBucket.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function awsVectorBucketEncryptionConfigurationPropertyToHclTerraform(struct?: AwsVectorBucket.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,14 +275,14 @@ export function tfVectorBucketEncryptionConfigurationPropertyToHclTerraform(stru
 }
 
 
-export namespace TfVectorBucket {
+export namespace AwsVectorBucket {
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#kms_key_arn TfVectorBucket#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#kms_key_arn AwsVectorBucket#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#sse_type TfVectorBucket#sse_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_vector_bucket#sse_type AwsVectorBucket#sse_type}
   */
   readonly sseType?: string;
 }

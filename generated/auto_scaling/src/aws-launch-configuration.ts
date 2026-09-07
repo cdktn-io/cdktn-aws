@@ -5,106 +5,106 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLaunchConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLaunchConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#associate_public_ip_address TfLaunchConfiguration#associate_public_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#associate_public_ip_address AwsLaunchConfiguration#associate_public_ip_address}
   */
   readonly associatePublicIpAddress?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#ebs_optimized TfLaunchConfiguration#ebs_optimized}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#ebs_optimized AwsLaunchConfiguration#ebs_optimized}
   */
   readonly ebsOptimized?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#enable_monitoring TfLaunchConfiguration#enable_monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#enable_monitoring AwsLaunchConfiguration#enable_monitoring}
   */
   readonly enableMonitoring?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#iam_instance_profile TfLaunchConfiguration#iam_instance_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#iam_instance_profile AwsLaunchConfiguration#iam_instance_profile}
   */
   readonly iamInstanceProfile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#id TfLaunchConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#id AwsLaunchConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#image_id TfLaunchConfiguration#image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#image_id AwsLaunchConfiguration#image_id}
   */
   readonly imageId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#instance_type TfLaunchConfiguration#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#instance_type AwsLaunchConfiguration#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#key_name TfLaunchConfiguration#key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#key_name AwsLaunchConfiguration#key_name}
   */
   readonly keyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#name TfLaunchConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#name AwsLaunchConfiguration#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#name_prefix TfLaunchConfiguration#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#name_prefix AwsLaunchConfiguration#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#placement_tenancy TfLaunchConfiguration#placement_tenancy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#placement_tenancy AwsLaunchConfiguration#placement_tenancy}
   */
   readonly placementTenancy?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#region TfLaunchConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#region AwsLaunchConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#security_groups TfLaunchConfiguration#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#security_groups AwsLaunchConfiguration#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#spot_price TfLaunchConfiguration#spot_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#spot_price AwsLaunchConfiguration#spot_price}
   */
   readonly spotPrice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#user_data TfLaunchConfiguration#user_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#user_data AwsLaunchConfiguration#user_data}
   */
   readonly userData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#user_data_base64 TfLaunchConfiguration#user_data_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#user_data_base64 AwsLaunchConfiguration#user_data_base64}
   */
   readonly userDataBase64?: string;
   /**
   * ebs_block_device block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#ebs_block_device TfLaunchConfiguration#ebs_block_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#ebs_block_device AwsLaunchConfiguration#ebs_block_device}
   */
-  readonly ebsBlockDevice?: TfLaunchConfiguration.EbsBlockDeviceProperty[] | cdktn.IResolvable;
+  readonly ebsBlockDevice?: AwsLaunchConfiguration.EbsBlockDeviceProperty[] | cdktn.IResolvable;
   /**
   * ephemeral_block_device block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#ephemeral_block_device TfLaunchConfiguration#ephemeral_block_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#ephemeral_block_device AwsLaunchConfiguration#ephemeral_block_device}
   */
-  readonly ephemeralBlockDevice?: TfLaunchConfiguration.EphemeralBlockDeviceProperty[] | cdktn.IResolvable;
+  readonly ephemeralBlockDevice?: AwsLaunchConfiguration.EphemeralBlockDeviceProperty[] | cdktn.IResolvable;
   /**
   * metadata_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#metadata_options TfLaunchConfiguration#metadata_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#metadata_options AwsLaunchConfiguration#metadata_options}
   */
-  readonly metadataOptions?: TfLaunchConfiguration.MetadataOptionsProperty;
+  readonly metadataOptions?: AwsLaunchConfiguration.MetadataOptionsProperty;
   /**
   * root_block_device block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#root_block_device TfLaunchConfiguration#root_block_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#root_block_device AwsLaunchConfiguration#root_block_device}
   */
-  readonly rootBlockDevice?: TfLaunchConfiguration.RootBlockDeviceProperty;
+  readonly rootBlockDevice?: AwsLaunchConfiguration.RootBlockDeviceProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration aws_launch_configuration}
 */
-export class TfLaunchConfiguration extends cdktn.TerraformResource {
+export class AwsLaunchConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -115,11 +115,11 @@ export class TfLaunchConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLaunchConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLaunchConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLaunchConfiguration to import
-  * @param importFromId The id of the existing TfLaunchConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLaunchConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsLaunchConfiguration to import
+  * @param importFromId The id of the existing AwsLaunchConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLaunchConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_launch_configuration", importId: importFromId, provider });
@@ -134,9 +134,9 @@ export class TfLaunchConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLaunchConfigurationConfig
+  * @param options AwsLaunchConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLaunchConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLaunchConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_launch_configuration',
       terraformGeneratorMetadata: {
@@ -434,11 +434,11 @@ export class TfLaunchConfiguration extends cdktn.TerraformResource {
   }
 
   // ebs_block_device - computed: false, optional: true, required: false
-  private _ebsBlockDevice = new TfLaunchConfiguration.EbsBlockDevicePropertyList(this, "ebs_block_device", true);
+  private _ebsBlockDevice = new AwsLaunchConfiguration.EbsBlockDevicePropertyList(this, "ebs_block_device", true);
   public get ebsBlockDevice() {
     return this._ebsBlockDevice;
   }
-  public putEbsBlockDevice(value: TfLaunchConfiguration.EbsBlockDeviceProperty[] | cdktn.IResolvable) {
+  public putEbsBlockDevice(value: AwsLaunchConfiguration.EbsBlockDeviceProperty[] | cdktn.IResolvable) {
     this._ebsBlockDevice.internalValue = value;
   }
   public resetEbsBlockDevice() {
@@ -450,11 +450,11 @@ export class TfLaunchConfiguration extends cdktn.TerraformResource {
   }
 
   // ephemeral_block_device - computed: false, optional: true, required: false
-  private _ephemeralBlockDevice = new TfLaunchConfiguration.EphemeralBlockDevicePropertyList(this, "ephemeral_block_device", true);
+  private _ephemeralBlockDevice = new AwsLaunchConfiguration.EphemeralBlockDevicePropertyList(this, "ephemeral_block_device", true);
   public get ephemeralBlockDevice() {
     return this._ephemeralBlockDevice;
   }
-  public putEphemeralBlockDevice(value: TfLaunchConfiguration.EphemeralBlockDeviceProperty[] | cdktn.IResolvable) {
+  public putEphemeralBlockDevice(value: AwsLaunchConfiguration.EphemeralBlockDeviceProperty[] | cdktn.IResolvable) {
     this._ephemeralBlockDevice.internalValue = value;
   }
   public resetEphemeralBlockDevice() {
@@ -466,11 +466,11 @@ export class TfLaunchConfiguration extends cdktn.TerraformResource {
   }
 
   // metadata_options - computed: false, optional: true, required: false
-  private _metadataOptions = new TfLaunchConfiguration.MetadataOptionsPropertyOutputReference(this, "metadata_options");
+  private _metadataOptions = new AwsLaunchConfiguration.MetadataOptionsPropertyOutputReference(this, "metadata_options");
   public get metadataOptions() {
     return this._metadataOptions;
   }
-  public putMetadataOptions(value: TfLaunchConfiguration.MetadataOptionsProperty) {
+  public putMetadataOptions(value: AwsLaunchConfiguration.MetadataOptionsProperty) {
     this._metadataOptions.internalValue = value;
   }
   public resetMetadataOptions() {
@@ -482,11 +482,11 @@ export class TfLaunchConfiguration extends cdktn.TerraformResource {
   }
 
   // root_block_device - computed: false, optional: true, required: false
-  private _rootBlockDevice = new TfLaunchConfiguration.RootBlockDevicePropertyOutputReference(this, "root_block_device");
+  private _rootBlockDevice = new AwsLaunchConfiguration.RootBlockDevicePropertyOutputReference(this, "root_block_device");
   public get rootBlockDevice() {
     return this._rootBlockDevice;
   }
-  public putRootBlockDevice(value: TfLaunchConfiguration.RootBlockDeviceProperty) {
+  public putRootBlockDevice(value: AwsLaunchConfiguration.RootBlockDeviceProperty) {
     this._rootBlockDevice.internalValue = value;
   }
   public resetRootBlockDevice() {
@@ -519,10 +519,10 @@ export class TfLaunchConfiguration extends cdktn.TerraformResource {
       spot_price: cdktn.stringToTerraform(this._spotPrice),
       user_data: cdktn.stringToTerraform(this._userData),
       user_data_base64: cdktn.stringToTerraform(this._userDataBase64),
-      ebs_block_device: cdktn.listMapper(tfLaunchConfigurationEbsBlockDevicePropertyToTerraform, true)(this._ebsBlockDevice.internalValue),
-      ephemeral_block_device: cdktn.listMapper(tfLaunchConfigurationEphemeralBlockDevicePropertyToTerraform, true)(this._ephemeralBlockDevice.internalValue),
-      metadata_options: tfLaunchConfigurationMetadataOptionsPropertyToTerraform(this._metadataOptions.internalValue),
-      root_block_device: tfLaunchConfigurationRootBlockDevicePropertyToTerraform(this._rootBlockDevice.internalValue),
+      ebs_block_device: cdktn.listMapper(awsLaunchConfigurationEbsBlockDevicePropertyToTerraform, true)(this._ebsBlockDevice.internalValue),
+      ephemeral_block_device: cdktn.listMapper(awsLaunchConfigurationEphemeralBlockDevicePropertyToTerraform, true)(this._ephemeralBlockDevice.internalValue),
+      metadata_options: awsLaunchConfigurationMetadataOptionsPropertyToTerraform(this._metadataOptions.internalValue),
+      root_block_device: awsLaunchConfigurationRootBlockDevicePropertyToTerraform(this._rootBlockDevice.internalValue),
     };
   }
 
@@ -625,28 +625,28 @@ export class TfLaunchConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       ebs_block_device: {
-        value: cdktn.listMapperHcl(tfLaunchConfigurationEbsBlockDevicePropertyToHclTerraform, true)(this._ebsBlockDevice.internalValue),
+        value: cdktn.listMapperHcl(awsLaunchConfigurationEbsBlockDevicePropertyToHclTerraform, true)(this._ebsBlockDevice.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfLaunchConfiguration.EbsBlockDevicePropertyList",
+        storageClassType: "AwsLaunchConfiguration.EbsBlockDevicePropertyList",
       },
       ephemeral_block_device: {
-        value: cdktn.listMapperHcl(tfLaunchConfigurationEphemeralBlockDevicePropertyToHclTerraform, true)(this._ephemeralBlockDevice.internalValue),
+        value: cdktn.listMapperHcl(awsLaunchConfigurationEphemeralBlockDevicePropertyToHclTerraform, true)(this._ephemeralBlockDevice.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfLaunchConfiguration.EphemeralBlockDevicePropertyList",
+        storageClassType: "AwsLaunchConfiguration.EphemeralBlockDevicePropertyList",
       },
       metadata_options: {
-        value: tfLaunchConfigurationMetadataOptionsPropertyToHclTerraform(this._metadataOptions.internalValue),
+        value: awsLaunchConfigurationMetadataOptionsPropertyToHclTerraform(this._metadataOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchConfiguration.MetadataOptionsPropertyList",
+        storageClassType: "AwsLaunchConfiguration.MetadataOptionsPropertyList",
       },
       root_block_device: {
-        value: tfLaunchConfigurationRootBlockDevicePropertyToHclTerraform(this._rootBlockDevice.internalValue),
+        value: awsLaunchConfigurationRootBlockDevicePropertyToHclTerraform(this._rootBlockDevice.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunchConfiguration.RootBlockDevicePropertyList",
+        storageClassType: "AwsLaunchConfiguration.RootBlockDevicePropertyList",
       },
     };
 
@@ -655,7 +655,7 @@ export class TfLaunchConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfLaunchConfigurationEbsBlockDevicePropertyToTerraform(struct?: TfLaunchConfiguration.EbsBlockDeviceProperty | cdktn.IResolvable): any {
+export function awsLaunchConfigurationEbsBlockDevicePropertyToTerraform(struct?: AwsLaunchConfiguration.EbsBlockDeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -674,7 +674,7 @@ export function tfLaunchConfigurationEbsBlockDevicePropertyToTerraform(struct?: 
 }
 
 
-export function tfLaunchConfigurationEbsBlockDevicePropertyToHclTerraform(struct?: TfLaunchConfiguration.EbsBlockDeviceProperty | cdktn.IResolvable): any {
+export function awsLaunchConfigurationEbsBlockDevicePropertyToHclTerraform(struct?: AwsLaunchConfiguration.EbsBlockDeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -741,7 +741,7 @@ export function tfLaunchConfigurationEbsBlockDevicePropertyToHclTerraform(struct
 }
 
 
-export function tfLaunchConfigurationEphemeralBlockDevicePropertyToTerraform(struct?: TfLaunchConfiguration.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
+export function awsLaunchConfigurationEphemeralBlockDevicePropertyToTerraform(struct?: AwsLaunchConfiguration.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -754,7 +754,7 @@ export function tfLaunchConfigurationEphemeralBlockDevicePropertyToTerraform(str
 }
 
 
-export function tfLaunchConfigurationEphemeralBlockDevicePropertyToHclTerraform(struct?: TfLaunchConfiguration.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
+export function awsLaunchConfigurationEphemeralBlockDevicePropertyToHclTerraform(struct?: AwsLaunchConfiguration.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -785,7 +785,7 @@ export function tfLaunchConfigurationEphemeralBlockDevicePropertyToHclTerraform(
 }
 
 
-export function tfLaunchConfigurationMetadataOptionsPropertyToTerraform(struct?: TfLaunchConfiguration.MetadataOptionsPropertyOutputReference | TfLaunchConfiguration.MetadataOptionsProperty): any {
+export function awsLaunchConfigurationMetadataOptionsPropertyToTerraform(struct?: AwsLaunchConfiguration.MetadataOptionsPropertyOutputReference | AwsLaunchConfiguration.MetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -798,7 +798,7 @@ export function tfLaunchConfigurationMetadataOptionsPropertyToTerraform(struct?:
 }
 
 
-export function tfLaunchConfigurationMetadataOptionsPropertyToHclTerraform(struct?: TfLaunchConfiguration.MetadataOptionsPropertyOutputReference | TfLaunchConfiguration.MetadataOptionsProperty): any {
+export function awsLaunchConfigurationMetadataOptionsPropertyToHclTerraform(struct?: AwsLaunchConfiguration.MetadataOptionsPropertyOutputReference | AwsLaunchConfiguration.MetadataOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -829,7 +829,7 @@ export function tfLaunchConfigurationMetadataOptionsPropertyToHclTerraform(struc
 }
 
 
-export function tfLaunchConfigurationRootBlockDevicePropertyToTerraform(struct?: TfLaunchConfiguration.RootBlockDevicePropertyOutputReference | TfLaunchConfiguration.RootBlockDeviceProperty): any {
+export function awsLaunchConfigurationRootBlockDevicePropertyToTerraform(struct?: AwsLaunchConfiguration.RootBlockDevicePropertyOutputReference | AwsLaunchConfiguration.RootBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -845,7 +845,7 @@ export function tfLaunchConfigurationRootBlockDevicePropertyToTerraform(struct?:
 }
 
 
-export function tfLaunchConfigurationRootBlockDevicePropertyToHclTerraform(struct?: TfLaunchConfiguration.RootBlockDevicePropertyOutputReference | TfLaunchConfiguration.RootBlockDeviceProperty): any {
+export function awsLaunchConfigurationRootBlockDevicePropertyToHclTerraform(struct?: AwsLaunchConfiguration.RootBlockDevicePropertyOutputReference | AwsLaunchConfiguration.RootBlockDeviceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -894,42 +894,42 @@ export function tfLaunchConfigurationRootBlockDevicePropertyToHclTerraform(struc
 }
 
 
-export namespace TfLaunchConfiguration {
+export namespace AwsLaunchConfiguration {
 export interface EbsBlockDeviceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#delete_on_termination TfLaunchConfiguration#delete_on_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#delete_on_termination AwsLaunchConfiguration#delete_on_termination}
   */
   readonly deleteOnTermination?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#device_name TfLaunchConfiguration#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#device_name AwsLaunchConfiguration#device_name}
   */
   readonly deviceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#encrypted TfLaunchConfiguration#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#encrypted AwsLaunchConfiguration#encrypted}
   */
   readonly encrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#iops TfLaunchConfiguration#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#iops AwsLaunchConfiguration#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#no_device TfLaunchConfiguration#no_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#no_device AwsLaunchConfiguration#no_device}
   */
   readonly noDevice?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#snapshot_id TfLaunchConfiguration#snapshot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#snapshot_id AwsLaunchConfiguration#snapshot_id}
   */
   readonly snapshotId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#throughput TfLaunchConfiguration#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#throughput AwsLaunchConfiguration#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#volume_size TfLaunchConfiguration#volume_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#volume_size AwsLaunchConfiguration#volume_size}
   */
   readonly volumeSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#volume_type TfLaunchConfiguration#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#volume_type AwsLaunchConfiguration#volume_type}
   */
   readonly volumeType?: string;
 }
@@ -1188,15 +1188,15 @@ export class EbsBlockDevicePropertyList extends cdktn.ComplexList {
 }
 export interface EphemeralBlockDeviceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#device_name TfLaunchConfiguration#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#device_name AwsLaunchConfiguration#device_name}
   */
   readonly deviceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#no_device TfLaunchConfiguration#no_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#no_device AwsLaunchConfiguration#no_device}
   */
   readonly noDevice?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#virtual_name TfLaunchConfiguration#virtual_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#virtual_name AwsLaunchConfiguration#virtual_name}
   */
   readonly virtualName?: string;
 }
@@ -1323,15 +1323,15 @@ export class EphemeralBlockDevicePropertyList extends cdktn.ComplexList {
 }
 export interface MetadataOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#http_endpoint TfLaunchConfiguration#http_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#http_endpoint AwsLaunchConfiguration#http_endpoint}
   */
   readonly httpEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#http_put_response_hop_limit TfLaunchConfiguration#http_put_response_hop_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#http_put_response_hop_limit AwsLaunchConfiguration#http_put_response_hop_limit}
   */
   readonly httpPutResponseHopLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#http_tokens TfLaunchConfiguration#http_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#http_tokens AwsLaunchConfiguration#http_tokens}
   */
   readonly httpTokens?: string;
 }
@@ -1429,27 +1429,27 @@ export class MetadataOptionsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface RootBlockDeviceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#delete_on_termination TfLaunchConfiguration#delete_on_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#delete_on_termination AwsLaunchConfiguration#delete_on_termination}
   */
   readonly deleteOnTermination?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#encrypted TfLaunchConfiguration#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#encrypted AwsLaunchConfiguration#encrypted}
   */
   readonly encrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#iops TfLaunchConfiguration#iops}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#iops AwsLaunchConfiguration#iops}
   */
   readonly iops?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#throughput TfLaunchConfiguration#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#throughput AwsLaunchConfiguration#throughput}
   */
   readonly throughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#volume_size TfLaunchConfiguration#volume_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#volume_size AwsLaunchConfiguration#volume_size}
   */
   readonly volumeSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#volume_type TfLaunchConfiguration#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/launch_configuration#volume_type AwsLaunchConfiguration#volume_type}
   */
   readonly volumeType?: string;
 }

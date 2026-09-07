@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfHsmConfig extends cdktn.TerraformMetaArguments {
+export interface AwsHsmConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#availability_zone TfHsm#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#availability_zone AwsHsm#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#cluster_id TfHsm#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#cluster_id AwsHsm#cluster_id}
   */
   readonly clusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#id TfHsm#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#id AwsHsm#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#ip_address TfHsm#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#ip_address AwsHsm#ip_address}
   */
   readonly ipAddress?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#region TfHsm#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#region AwsHsm#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#subnet_id TfHsm#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#subnet_id AwsHsm#subnet_id}
   */
   readonly subnetId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#timeouts TfHsm#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#timeouts AwsHsm#timeouts}
   */
-  readonly timeouts?: TfHsm.TimeoutsProperty;
+  readonly timeouts?: AwsHsm.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm aws_cloudhsm_v2_hsm}
 */
-export class TfHsm extends cdktn.TerraformResource {
+export class AwsHsm extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfHsm extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfHsm resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsHsm resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfHsm to import
-  * @param importFromId The id of the existing TfHsm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfHsm to import is found
+  * @param importToId The construct id used in the generated config for the AwsHsm to import
+  * @param importFromId The id of the existing AwsHsm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsHsm to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudhsm_v2_hsm", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfHsm extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfHsmConfig
+  * @param options AwsHsmConfig
   */
-  public constructor(scope: Construct, id: string, config: TfHsmConfig) {
+  public constructor(scope: Construct, id: string, config: AwsHsmConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudhsm_v2_hsm',
       terraformGeneratorMetadata: {
@@ -216,11 +216,11 @@ export class TfHsm extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfHsm.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsHsm.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfHsm.TimeoutsProperty) {
+  public putTimeouts(value: AwsHsm.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -243,7 +243,7 @@ export class TfHsm extends cdktn.TerraformResource {
       ip_address: cdktn.stringToTerraform(this._ipAddress),
       region: cdktn.stringToTerraform(this._region),
       subnet_id: cdktn.stringToTerraform(this._subnetId),
-      timeouts: tfHsmTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsHsmTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -286,10 +286,10 @@ export class TfHsm extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfHsmTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsHsmTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfHsm.TimeoutsProperty",
+        storageClassType: "AwsHsm.TimeoutsProperty",
       },
     };
 
@@ -298,7 +298,7 @@ export class TfHsm extends cdktn.TerraformResource {
   }
 }
 
-export function tfHsmTimeoutsPropertyToTerraform(struct?: TfHsm.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsHsmTimeoutsPropertyToTerraform(struct?: AwsHsm.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,7 +310,7 @@ export function tfHsmTimeoutsPropertyToTerraform(struct?: TfHsm.TimeoutsProperty
 }
 
 
-export function tfHsmTimeoutsPropertyToHclTerraform(struct?: TfHsm.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsHsmTimeoutsPropertyToHclTerraform(struct?: AwsHsm.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,14 +335,14 @@ export function tfHsmTimeoutsPropertyToHclTerraform(struct?: TfHsm.TimeoutsPrope
 }
 
 
-export namespace TfHsm {
+export namespace AwsHsm {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#create TfHsm#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#create AwsHsm#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#delete TfHsm#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudhsm_v2_hsm#delete AwsHsm#delete}
   */
   readonly delete?: string;
 }

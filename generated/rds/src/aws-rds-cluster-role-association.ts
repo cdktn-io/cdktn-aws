@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClusterRoleAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsClusterRoleAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#db_cluster_identifier TfClusterRoleAssociation#db_cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#db_cluster_identifier AwsClusterRoleAssociation#db_cluster_identifier}
   */
   readonly dbClusterIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#feature_name TfClusterRoleAssociation#feature_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#feature_name AwsClusterRoleAssociation#feature_name}
   */
   readonly featureName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#id TfClusterRoleAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#id AwsClusterRoleAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,25 +24,25 @@ export interface TfClusterRoleAssociationConfig extends cdktn.TerraformMetaArgum
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#region TfClusterRoleAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#region AwsClusterRoleAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#role_arn TfClusterRoleAssociation#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#role_arn AwsClusterRoleAssociation#role_arn}
   */
   readonly roleArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#timeouts TfClusterRoleAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#timeouts AwsClusterRoleAssociation#timeouts}
   */
-  readonly timeouts?: TfClusterRoleAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsClusterRoleAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association aws_rds_cluster_role_association}
 */
-export class TfClusterRoleAssociation extends cdktn.TerraformResource {
+export class AwsClusterRoleAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfClusterRoleAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfClusterRoleAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsClusterRoleAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfClusterRoleAssociation to import
-  * @param importFromId The id of the existing TfClusterRoleAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfClusterRoleAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsClusterRoleAssociation to import
+  * @param importFromId The id of the existing AwsClusterRoleAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsClusterRoleAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rds_cluster_role_association", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfClusterRoleAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClusterRoleAssociationConfig
+  * @param options AwsClusterRoleAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfClusterRoleAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsClusterRoleAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rds_cluster_role_association',
       terraformGeneratorMetadata: {
@@ -177,11 +177,11 @@ export class TfClusterRoleAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfClusterRoleAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsClusterRoleAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfClusterRoleAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsClusterRoleAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -203,7 +203,7 @@ export class TfClusterRoleAssociation extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       role_arn: cdktn.stringToTerraform(this._roleArn),
-      timeouts: tfClusterRoleAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsClusterRoleAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -240,10 +240,10 @@ export class TfClusterRoleAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfClusterRoleAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsClusterRoleAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfClusterRoleAssociation.TimeoutsProperty",
+        storageClassType: "AwsClusterRoleAssociation.TimeoutsProperty",
       },
     };
 
@@ -252,7 +252,7 @@ export class TfClusterRoleAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfClusterRoleAssociationTimeoutsPropertyToTerraform(struct?: TfClusterRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClusterRoleAssociationTimeoutsPropertyToTerraform(struct?: AwsClusterRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,7 +264,7 @@ export function tfClusterRoleAssociationTimeoutsPropertyToTerraform(struct?: TfC
 }
 
 
-export function tfClusterRoleAssociationTimeoutsPropertyToHclTerraform(struct?: TfClusterRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClusterRoleAssociationTimeoutsPropertyToHclTerraform(struct?: AwsClusterRoleAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,14 +289,14 @@ export function tfClusterRoleAssociationTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfClusterRoleAssociation {
+export namespace AwsClusterRoleAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#create TfClusterRoleAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#create AwsClusterRoleAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#delete TfClusterRoleAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_role_association#delete AwsClusterRoleAssociation#delete}
   */
   readonly delete?: string;
 }

@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfStreamConfig extends cdktn.TerraformMetaArguments {
+export interface AwsStreamConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#exclusive_end_time TfStream#exclusive_end_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#exclusive_end_time AwsStream#exclusive_end_time}
   */
   readonly exclusiveEndTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#id TfStream#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#id AwsStream#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#inclusive_start_time TfStream#inclusive_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#inclusive_start_time AwsStream#inclusive_start_time}
   */
   readonly inclusiveStartTime: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#ledger_name TfStream#ledger_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#ledger_name AwsStream#ledger_name}
   */
   readonly ledgerName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#region TfStream#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#region AwsStream#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#role_arn TfStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#role_arn AwsStream#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#stream_name TfStream#stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#stream_name AwsStream#stream_name}
   */
   readonly streamName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#tags TfStream#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#tags AwsStream#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#tags_all TfStream#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#tags_all AwsStream#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * kinesis_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#kinesis_configuration TfStream#kinesis_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#kinesis_configuration AwsStream#kinesis_configuration}
   */
-  readonly kinesisConfiguration: TfStream.KinesisConfigurationProperty;
+  readonly kinesisConfiguration: AwsStream.KinesisConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#timeouts TfStream#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#timeouts AwsStream#timeouts}
   */
-  readonly timeouts?: TfStream.TimeoutsProperty;
+  readonly timeouts?: AwsStream.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream aws_qldb_stream}
 */
-export class TfStream extends cdktn.TerraformResource {
+export class AwsStream extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class TfStream extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfStream resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsStream resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfStream to import
-  * @param importFromId The id of the existing TfStream that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfStream to import is found
+  * @param importToId The construct id used in the generated config for the AwsStream to import
+  * @param importFromId The id of the existing AwsStream that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStream to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_qldb_stream", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class TfStream extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfStreamConfig
+  * @param options AwsStreamConfig
   */
-  public constructor(scope: Construct, id: string, config: TfStreamConfig) {
+  public constructor(scope: Construct, id: string, config: AwsStreamConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_qldb_stream',
       terraformGeneratorMetadata: {
@@ -267,11 +267,11 @@ export class TfStream extends cdktn.TerraformResource {
   }
 
   // kinesis_configuration - computed: false, optional: false, required: true
-  private _kinesisConfiguration = new TfStream.KinesisConfigurationPropertyOutputReference(this, "kinesis_configuration");
+  private _kinesisConfiguration = new AwsStream.KinesisConfigurationPropertyOutputReference(this, "kinesis_configuration");
   public get kinesisConfiguration() {
     return this._kinesisConfiguration;
   }
-  public putKinesisConfiguration(value: TfStream.KinesisConfigurationProperty) {
+  public putKinesisConfiguration(value: AwsStream.KinesisConfigurationProperty) {
     this._kinesisConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -280,11 +280,11 @@ export class TfStream extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfStream.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsStream.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfStream.TimeoutsProperty) {
+  public putTimeouts(value: AwsStream.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -310,8 +310,8 @@ export class TfStream extends cdktn.TerraformResource {
       stream_name: cdktn.stringToTerraform(this._streamName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      kinesis_configuration: tfStreamKinesisConfigurationPropertyToTerraform(this._kinesisConfiguration.internalValue),
-      timeouts: tfStreamTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      kinesis_configuration: awsStreamKinesisConfigurationPropertyToTerraform(this._kinesisConfiguration.internalValue),
+      timeouts: awsStreamTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -372,16 +372,16 @@ export class TfStream extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       kinesis_configuration: {
-        value: tfStreamKinesisConfigurationPropertyToHclTerraform(this._kinesisConfiguration.internalValue),
+        value: awsStreamKinesisConfigurationPropertyToHclTerraform(this._kinesisConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStream.KinesisConfigurationPropertyList",
+        storageClassType: "AwsStream.KinesisConfigurationPropertyList",
       },
       timeouts: {
-        value: tfStreamTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsStreamTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfStream.TimeoutsProperty",
+        storageClassType: "AwsStream.TimeoutsProperty",
       },
     };
 
@@ -390,7 +390,7 @@ export class TfStream extends cdktn.TerraformResource {
   }
 }
 
-export function tfStreamKinesisConfigurationPropertyToTerraform(struct?: TfStream.KinesisConfigurationPropertyOutputReference | TfStream.KinesisConfigurationProperty): any {
+export function awsStreamKinesisConfigurationPropertyToTerraform(struct?: AwsStream.KinesisConfigurationPropertyOutputReference | AwsStream.KinesisConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,7 +402,7 @@ export function tfStreamKinesisConfigurationPropertyToTerraform(struct?: TfStrea
 }
 
 
-export function tfStreamKinesisConfigurationPropertyToHclTerraform(struct?: TfStream.KinesisConfigurationPropertyOutputReference | TfStream.KinesisConfigurationProperty): any {
+export function awsStreamKinesisConfigurationPropertyToHclTerraform(struct?: AwsStream.KinesisConfigurationPropertyOutputReference | AwsStream.KinesisConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,7 +427,7 @@ export function tfStreamKinesisConfigurationPropertyToHclTerraform(struct?: TfSt
 }
 
 
-export function tfStreamTimeoutsPropertyToTerraform(struct?: TfStream.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsStreamTimeoutsPropertyToTerraform(struct?: AwsStream.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function tfStreamTimeoutsPropertyToTerraform(struct?: TfStream.TimeoutsPr
 }
 
 
-export function tfStreamTimeoutsPropertyToHclTerraform(struct?: TfStream.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsStreamTimeoutsPropertyToHclTerraform(struct?: AwsStream.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,14 +464,14 @@ export function tfStreamTimeoutsPropertyToHclTerraform(struct?: TfStream.Timeout
 }
 
 
-export namespace TfStream {
+export namespace AwsStream {
 export interface KinesisConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#aggregation_enabled TfStream#aggregation_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#aggregation_enabled AwsStream#aggregation_enabled}
   */
   readonly aggregationEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#stream_arn TfStream#stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#stream_arn AwsStream#stream_arn}
   */
   readonly streamArn: string;
 }
@@ -544,11 +544,11 @@ export class KinesisConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#create TfStream#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#create AwsStream#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#delete TfStream#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/qldb_stream#delete AwsStream#delete}
   */
   readonly delete?: string;
 }

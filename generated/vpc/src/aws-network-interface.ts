@@ -5,122 +5,122 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfNetworkInterfaceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsNetworkInterfaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#description TfNetworkInterface#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#description AwsNetworkInterface#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#enable_primary_ipv6 TfNetworkInterface#enable_primary_ipv6}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#enable_primary_ipv6 AwsNetworkInterface#enable_primary_ipv6}
   */
   readonly enablePrimaryIpv6?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#id TfNetworkInterface#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#id AwsNetworkInterface#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#interface_type TfNetworkInterface#interface_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#interface_type AwsNetworkInterface#interface_type}
   */
   readonly interfaceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv4_prefix_count TfNetworkInterface#ipv4_prefix_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv4_prefix_count AwsNetworkInterface#ipv4_prefix_count}
   */
   readonly ipv4PrefixCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv4_prefixes TfNetworkInterface#ipv4_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv4_prefixes AwsNetworkInterface#ipv4_prefixes}
   */
   readonly ipv4Prefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_address_count TfNetworkInterface#ipv6_address_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_address_count AwsNetworkInterface#ipv6_address_count}
   */
   readonly ipv6AddressCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_address_list TfNetworkInterface#ipv6_address_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_address_list AwsNetworkInterface#ipv6_address_list}
   */
   readonly ipv6AddressList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_address_list_enabled TfNetworkInterface#ipv6_address_list_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_address_list_enabled AwsNetworkInterface#ipv6_address_list_enabled}
   */
   readonly ipv6AddressListEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_addresses TfNetworkInterface#ipv6_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_addresses AwsNetworkInterface#ipv6_addresses}
   */
   readonly ipv6Addresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_prefix_count TfNetworkInterface#ipv6_prefix_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_prefix_count AwsNetworkInterface#ipv6_prefix_count}
   */
   readonly ipv6PrefixCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_prefixes TfNetworkInterface#ipv6_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_prefixes AwsNetworkInterface#ipv6_prefixes}
   */
   readonly ipv6Prefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ip TfNetworkInterface#private_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ip AwsNetworkInterface#private_ip}
   */
   readonly privateIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ip_list TfNetworkInterface#private_ip_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ip_list AwsNetworkInterface#private_ip_list}
   */
   readonly privateIpList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ip_list_enabled TfNetworkInterface#private_ip_list_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ip_list_enabled AwsNetworkInterface#private_ip_list_enabled}
   */
   readonly privateIpListEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ips TfNetworkInterface#private_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ips AwsNetworkInterface#private_ips}
   */
   readonly privateIps?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ips_count TfNetworkInterface#private_ips_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ips_count AwsNetworkInterface#private_ips_count}
   */
   readonly privateIpsCount?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#region TfNetworkInterface#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#region AwsNetworkInterface#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#security_groups TfNetworkInterface#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#security_groups AwsNetworkInterface#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#source_dest_check TfNetworkInterface#source_dest_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#source_dest_check AwsNetworkInterface#source_dest_check}
   */
   readonly sourceDestCheck?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#subnet_id TfNetworkInterface#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#subnet_id AwsNetworkInterface#subnet_id}
   */
   readonly subnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#tags TfNetworkInterface#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#tags AwsNetworkInterface#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#tags_all TfNetworkInterface#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#tags_all AwsNetworkInterface#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * attachment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#attachment TfNetworkInterface#attachment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#attachment AwsNetworkInterface#attachment}
   */
-  readonly attachment?: TfNetworkInterface.AttachmentProperty[] | cdktn.IResolvable;
+  readonly attachment?: AwsNetworkInterface.AttachmentProperty[] | cdktn.IResolvable;
   /**
   * ena_srd_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ena_srd_specification TfNetworkInterface#ena_srd_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ena_srd_specification AwsNetworkInterface#ena_srd_specification}
   */
-  readonly enaSrdSpecification?: TfNetworkInterface.EnaSrdSpecificationProperty;
+  readonly enaSrdSpecification?: AwsNetworkInterface.EnaSrdSpecificationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface aws_network_interface}
 */
-export class TfNetworkInterface extends cdktn.TerraformResource {
+export class AwsNetworkInterface extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -131,11 +131,11 @@ export class TfNetworkInterface extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfNetworkInterface resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsNetworkInterface resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfNetworkInterface to import
-  * @param importFromId The id of the existing TfNetworkInterface that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfNetworkInterface to import is found
+  * @param importToId The construct id used in the generated config for the AwsNetworkInterface to import
+  * @param importFromId The id of the existing AwsNetworkInterface that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNetworkInterface to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_network_interface", importId: importFromId, provider });
@@ -150,9 +150,9 @@ export class TfNetworkInterface extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfNetworkInterfaceConfig
+  * @param options AwsNetworkInterfaceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfNetworkInterfaceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsNetworkInterfaceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_network_interface',
       terraformGeneratorMetadata: {
@@ -590,11 +590,11 @@ export class TfNetworkInterface extends cdktn.TerraformResource {
   }
 
   // attachment - computed: false, optional: true, required: false
-  private _attachment = new TfNetworkInterface.AttachmentPropertyList(this, "attachment", true);
+  private _attachment = new AwsNetworkInterface.AttachmentPropertyList(this, "attachment", true);
   public get attachment() {
     return this._attachment;
   }
-  public putAttachment(value: TfNetworkInterface.AttachmentProperty[] | cdktn.IResolvable) {
+  public putAttachment(value: AwsNetworkInterface.AttachmentProperty[] | cdktn.IResolvable) {
     this._attachment.internalValue = value;
   }
   public resetAttachment() {
@@ -606,11 +606,11 @@ export class TfNetworkInterface extends cdktn.TerraformResource {
   }
 
   // ena_srd_specification - computed: false, optional: true, required: false
-  private _enaSrdSpecification = new TfNetworkInterface.EnaSrdSpecificationPropertyOutputReference(this, "ena_srd_specification");
+  private _enaSrdSpecification = new AwsNetworkInterface.EnaSrdSpecificationPropertyOutputReference(this, "ena_srd_specification");
   public get enaSrdSpecification() {
     return this._enaSrdSpecification;
   }
-  public putEnaSrdSpecification(value: TfNetworkInterface.EnaSrdSpecificationProperty) {
+  public putEnaSrdSpecification(value: AwsNetworkInterface.EnaSrdSpecificationProperty) {
     this._enaSrdSpecification.internalValue = value;
   }
   public resetEnaSrdSpecification() {
@@ -650,8 +650,8 @@ export class TfNetworkInterface extends cdktn.TerraformResource {
       subnet_id: cdktn.stringToTerraform(this._subnetId),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      attachment: cdktn.listMapper(tfNetworkInterfaceAttachmentPropertyToTerraform, true)(this._attachment.internalValue),
-      ena_srd_specification: tfNetworkInterfaceEnaSrdSpecificationPropertyToTerraform(this._enaSrdSpecification.internalValue),
+      attachment: cdktn.listMapper(awsNetworkInterfaceAttachmentPropertyToTerraform, true)(this._attachment.internalValue),
+      ena_srd_specification: awsNetworkInterfaceEnaSrdSpecificationPropertyToTerraform(this._enaSrdSpecification.internalValue),
     };
   }
 
@@ -796,16 +796,16 @@ export class TfNetworkInterface extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       attachment: {
-        value: cdktn.listMapperHcl(tfNetworkInterfaceAttachmentPropertyToHclTerraform, true)(this._attachment.internalValue),
+        value: cdktn.listMapperHcl(awsNetworkInterfaceAttachmentPropertyToHclTerraform, true)(this._attachment.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfNetworkInterface.AttachmentPropertyList",
+        storageClassType: "AwsNetworkInterface.AttachmentPropertyList",
       },
       ena_srd_specification: {
-        value: tfNetworkInterfaceEnaSrdSpecificationPropertyToHclTerraform(this._enaSrdSpecification.internalValue),
+        value: awsNetworkInterfaceEnaSrdSpecificationPropertyToHclTerraform(this._enaSrdSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfNetworkInterface.EnaSrdSpecificationPropertyList",
+        storageClassType: "AwsNetworkInterface.EnaSrdSpecificationPropertyList",
       },
     };
 
@@ -814,7 +814,7 @@ export class TfNetworkInterface extends cdktn.TerraformResource {
   }
 }
 
-export function tfNetworkInterfaceAttachmentPropertyToTerraform(struct?: TfNetworkInterface.AttachmentProperty | cdktn.IResolvable): any {
+export function awsNetworkInterfaceAttachmentPropertyToTerraform(struct?: AwsNetworkInterface.AttachmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -827,7 +827,7 @@ export function tfNetworkInterfaceAttachmentPropertyToTerraform(struct?: TfNetwo
 }
 
 
-export function tfNetworkInterfaceAttachmentPropertyToHclTerraform(struct?: TfNetworkInterface.AttachmentProperty | cdktn.IResolvable): any {
+export function awsNetworkInterfaceAttachmentPropertyToHclTerraform(struct?: AwsNetworkInterface.AttachmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -858,7 +858,7 @@ export function tfNetworkInterfaceAttachmentPropertyToHclTerraform(struct?: TfNe
 }
 
 
-export function tfNetworkInterfaceEnaSrdUdpSpecificationPropertyToTerraform(struct?: TfNetworkInterface.EnaSrdUdpSpecificationPropertyOutputReference | TfNetworkInterface.EnaSrdUdpSpecificationProperty): any {
+export function awsNetworkInterfaceEnaSrdUdpSpecificationPropertyToTerraform(struct?: AwsNetworkInterface.EnaSrdUdpSpecificationPropertyOutputReference | AwsNetworkInterface.EnaSrdUdpSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -869,7 +869,7 @@ export function tfNetworkInterfaceEnaSrdUdpSpecificationPropertyToTerraform(stru
 }
 
 
-export function tfNetworkInterfaceEnaSrdUdpSpecificationPropertyToHclTerraform(struct?: TfNetworkInterface.EnaSrdUdpSpecificationPropertyOutputReference | TfNetworkInterface.EnaSrdUdpSpecificationProperty): any {
+export function awsNetworkInterfaceEnaSrdUdpSpecificationPropertyToHclTerraform(struct?: AwsNetworkInterface.EnaSrdUdpSpecificationPropertyOutputReference | AwsNetworkInterface.EnaSrdUdpSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -888,19 +888,19 @@ export function tfNetworkInterfaceEnaSrdUdpSpecificationPropertyToHclTerraform(s
 }
 
 
-export function tfNetworkInterfaceEnaSrdSpecificationPropertyToTerraform(struct?: TfNetworkInterface.EnaSrdSpecificationPropertyOutputReference | TfNetworkInterface.EnaSrdSpecificationProperty): any {
+export function awsNetworkInterfaceEnaSrdSpecificationPropertyToTerraform(struct?: AwsNetworkInterface.EnaSrdSpecificationPropertyOutputReference | AwsNetworkInterface.EnaSrdSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     ena_srd_enabled: cdktn.booleanToTerraform(struct!.enaSrdEnabled),
-    ena_srd_udp_specification: tfNetworkInterfaceEnaSrdUdpSpecificationPropertyToTerraform(struct!.enaSrdUdpSpecification),
+    ena_srd_udp_specification: awsNetworkInterfaceEnaSrdUdpSpecificationPropertyToTerraform(struct!.enaSrdUdpSpecification),
   }
 }
 
 
-export function tfNetworkInterfaceEnaSrdSpecificationPropertyToHclTerraform(struct?: TfNetworkInterface.EnaSrdSpecificationPropertyOutputReference | TfNetworkInterface.EnaSrdSpecificationProperty): any {
+export function awsNetworkInterfaceEnaSrdSpecificationPropertyToHclTerraform(struct?: AwsNetworkInterface.EnaSrdSpecificationPropertyOutputReference | AwsNetworkInterface.EnaSrdSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -913,7 +913,7 @@ export function tfNetworkInterfaceEnaSrdSpecificationPropertyToHclTerraform(stru
       storageClassType: "boolean",
     },
     ena_srd_udp_specification: {
-      value: tfNetworkInterfaceEnaSrdUdpSpecificationPropertyToHclTerraform(struct!.enaSrdUdpSpecification),
+      value: awsNetworkInterfaceEnaSrdUdpSpecificationPropertyToHclTerraform(struct!.enaSrdUdpSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "EnaSrdUdpSpecificationPropertyList",
@@ -925,18 +925,18 @@ export function tfNetworkInterfaceEnaSrdSpecificationPropertyToHclTerraform(stru
 }
 
 
-export namespace TfNetworkInterface {
+export namespace AwsNetworkInterface {
 export interface AttachmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#device_index TfNetworkInterface#device_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#device_index AwsNetworkInterface#device_index}
   */
   readonly deviceIndex: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#instance TfNetworkInterface#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#instance AwsNetworkInterface#instance}
   */
   readonly instance: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#network_card_index TfNetworkInterface#network_card_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#network_card_index AwsNetworkInterface#network_card_index}
   */
   readonly networkCardIndex?: number;
 }
@@ -1065,7 +1065,7 @@ export class AttachmentPropertyList extends cdktn.ComplexList {
 }
 export interface EnaSrdUdpSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ena_srd_udp_enabled TfNetworkInterface#ena_srd_udp_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ena_srd_udp_enabled AwsNetworkInterface#ena_srd_udp_enabled}
   */
   readonly enaSrdUdpEnabled?: boolean | cdktn.IResolvable;
 }
@@ -1119,13 +1119,13 @@ export class EnaSrdUdpSpecificationPropertyOutputReference extends cdktn.Complex
 }
 export interface EnaSrdSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ena_srd_enabled TfNetworkInterface#ena_srd_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ena_srd_enabled AwsNetworkInterface#ena_srd_enabled}
   */
   readonly enaSrdEnabled?: boolean | cdktn.IResolvable;
   /**
   * ena_srd_udp_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ena_srd_udp_specification TfNetworkInterface#ena_srd_udp_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ena_srd_udp_specification AwsNetworkInterface#ena_srd_udp_specification}
   */
   readonly enaSrdUdpSpecification?: EnaSrdUdpSpecificationProperty;
 }

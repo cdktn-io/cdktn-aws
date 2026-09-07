@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSnapshotBlockPublicAccessConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSnapshotBlockPublicAccessConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_block_public_access#id TfSnapshotBlockPublicAccess#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_block_public_access#id AwsSnapshotBlockPublicAccess#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface TfSnapshotBlockPublicAccessConfig extends cdktn.TerraformMetaAr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_block_public_access#region TfSnapshotBlockPublicAccess#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_block_public_access#region AwsSnapshotBlockPublicAccess#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_block_public_access#state TfSnapshotBlockPublicAccess#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_block_public_access#state AwsSnapshotBlockPublicAccess#state}
   */
   readonly state: string;
 }
@@ -28,7 +28,7 @@ export interface TfSnapshotBlockPublicAccessConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_block_public_access aws_ebs_snapshot_block_public_access}
 */
-export class TfSnapshotBlockPublicAccess extends cdktn.TerraformResource {
+export class AwsSnapshotBlockPublicAccess extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfSnapshotBlockPublicAccess extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSnapshotBlockPublicAccess resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSnapshotBlockPublicAccess resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSnapshotBlockPublicAccess to import
-  * @param importFromId The id of the existing TfSnapshotBlockPublicAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_block_public_access#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSnapshotBlockPublicAccess to import is found
+  * @param importToId The construct id used in the generated config for the AwsSnapshotBlockPublicAccess to import
+  * @param importFromId The id of the existing AwsSnapshotBlockPublicAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_snapshot_block_public_access#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSnapshotBlockPublicAccess to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ebs_snapshot_block_public_access", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfSnapshotBlockPublicAccess extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSnapshotBlockPublicAccessConfig
+  * @param options AwsSnapshotBlockPublicAccessConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSnapshotBlockPublicAccessConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSnapshotBlockPublicAccessConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ebs_snapshot_block_public_access',
       terraformGeneratorMetadata: {

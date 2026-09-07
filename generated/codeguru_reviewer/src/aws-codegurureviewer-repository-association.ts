@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRepositoryAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRepositoryAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#id TfRepositoryAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#id AwsRepositoryAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,41 +16,41 @@ export interface TfRepositoryAssociationConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#region TfRepositoryAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#region AwsRepositoryAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#tags TfRepositoryAssociation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#tags AwsRepositoryAssociation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#tags_all TfRepositoryAssociation#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#tags_all AwsRepositoryAssociation#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * kms_key_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#kms_key_details TfRepositoryAssociation#kms_key_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#kms_key_details AwsRepositoryAssociation#kms_key_details}
   */
-  readonly kmsKeyDetails?: TfRepositoryAssociation.KmsKeyDetailsProperty;
+  readonly kmsKeyDetails?: AwsRepositoryAssociation.KmsKeyDetailsProperty;
   /**
   * repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#repository TfRepositoryAssociation#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#repository AwsRepositoryAssociation#repository}
   */
-  readonly repository: TfRepositoryAssociation.RepositoryProperty;
+  readonly repository: AwsRepositoryAssociation.RepositoryProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#timeouts TfRepositoryAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#timeouts AwsRepositoryAssociation#timeouts}
   */
-  readonly timeouts?: TfRepositoryAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsRepositoryAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association aws_codegurureviewer_repository_association}
 */
-export class TfRepositoryAssociation extends cdktn.TerraformResource {
+export class AwsRepositoryAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfRepositoryAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRepositoryAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRepositoryAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRepositoryAssociation to import
-  * @param importFromId The id of the existing TfRepositoryAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRepositoryAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsRepositoryAssociation to import
+  * @param importFromId The id of the existing AwsRepositoryAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRepositoryAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codegurureviewer_repository_association", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfRepositoryAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRepositoryAssociationConfig
+  * @param options AwsRepositoryAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRepositoryAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRepositoryAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codegurureviewer_repository_association',
       terraformGeneratorMetadata: {
@@ -174,7 +174,7 @@ export class TfRepositoryAssociation extends cdktn.TerraformResource {
   }
 
   // s3_repository_details - computed: true, optional: false, required: false
-  private _s3RepositoryDetails = new TfRepositoryAssociation.S3RepositoryDetailsPropertyList(this, "s3_repository_details", false);
+  private _s3RepositoryDetails = new AwsRepositoryAssociation.S3RepositoryDetailsPropertyList(this, "s3_repository_details", false);
   public get s3RepositoryDetails() {
     return this._s3RepositoryDetails;
   }
@@ -222,11 +222,11 @@ export class TfRepositoryAssociation extends cdktn.TerraformResource {
   }
 
   // kms_key_details - computed: false, optional: true, required: false
-  private _kmsKeyDetails = new TfRepositoryAssociation.KmsKeyDetailsPropertyOutputReference(this, "kms_key_details");
+  private _kmsKeyDetails = new AwsRepositoryAssociation.KmsKeyDetailsPropertyOutputReference(this, "kms_key_details");
   public get kmsKeyDetails() {
     return this._kmsKeyDetails;
   }
-  public putKmsKeyDetails(value: TfRepositoryAssociation.KmsKeyDetailsProperty) {
+  public putKmsKeyDetails(value: AwsRepositoryAssociation.KmsKeyDetailsProperty) {
     this._kmsKeyDetails.internalValue = value;
   }
   public resetKmsKeyDetails() {
@@ -238,11 +238,11 @@ export class TfRepositoryAssociation extends cdktn.TerraformResource {
   }
 
   // repository - computed: false, optional: false, required: true
-  private _repository = new TfRepositoryAssociation.RepositoryPropertyOutputReference(this, "repository");
+  private _repository = new AwsRepositoryAssociation.RepositoryPropertyOutputReference(this, "repository");
   public get repository() {
     return this._repository;
   }
-  public putRepository(value: TfRepositoryAssociation.RepositoryProperty) {
+  public putRepository(value: AwsRepositoryAssociation.RepositoryProperty) {
     this._repository.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -251,11 +251,11 @@ export class TfRepositoryAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfRepositoryAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsRepositoryAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfRepositoryAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsRepositoryAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -276,9 +276,9 @@ export class TfRepositoryAssociation extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      kms_key_details: tfRepositoryAssociationKmsKeyDetailsPropertyToTerraform(this._kmsKeyDetails.internalValue),
-      repository: tfRepositoryAssociationRepositoryPropertyToTerraform(this._repository.internalValue),
-      timeouts: tfRepositoryAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      kms_key_details: awsRepositoryAssociationKmsKeyDetailsPropertyToTerraform(this._kmsKeyDetails.internalValue),
+      repository: awsRepositoryAssociationRepositoryPropertyToTerraform(this._repository.internalValue),
+      timeouts: awsRepositoryAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -309,22 +309,22 @@ export class TfRepositoryAssociation extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       kms_key_details: {
-        value: tfRepositoryAssociationKmsKeyDetailsPropertyToHclTerraform(this._kmsKeyDetails.internalValue),
+        value: awsRepositoryAssociationKmsKeyDetailsPropertyToHclTerraform(this._kmsKeyDetails.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRepositoryAssociation.KmsKeyDetailsPropertyList",
+        storageClassType: "AwsRepositoryAssociation.KmsKeyDetailsPropertyList",
       },
       repository: {
-        value: tfRepositoryAssociationRepositoryPropertyToHclTerraform(this._repository.internalValue),
+        value: awsRepositoryAssociationRepositoryPropertyToHclTerraform(this._repository.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRepositoryAssociation.RepositoryPropertyList",
+        storageClassType: "AwsRepositoryAssociation.RepositoryPropertyList",
       },
       timeouts: {
-        value: tfRepositoryAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsRepositoryAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfRepositoryAssociation.TimeoutsProperty",
+        storageClassType: "AwsRepositoryAssociation.TimeoutsProperty",
       },
     };
 
@@ -333,7 +333,7 @@ export class TfRepositoryAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfRepositoryAssociationCodeArtifactsPropertyToTerraform(struct?: TfRepositoryAssociation.CodeArtifactsProperty): any {
+export function awsRepositoryAssociationCodeArtifactsPropertyToTerraform(struct?: AwsRepositoryAssociation.CodeArtifactsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function tfRepositoryAssociationCodeArtifactsPropertyToTerraform(struct?:
 }
 
 
-export function tfRepositoryAssociationCodeArtifactsPropertyToHclTerraform(struct?: TfRepositoryAssociation.CodeArtifactsProperty): any {
+export function awsRepositoryAssociationCodeArtifactsPropertyToHclTerraform(struct?: AwsRepositoryAssociation.CodeArtifactsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function tfRepositoryAssociationCodeArtifactsPropertyToHclTerraform(struc
 }
 
 
-export function tfRepositoryAssociationS3RepositoryDetailsPropertyToTerraform(struct?: TfRepositoryAssociation.S3RepositoryDetailsProperty): any {
+export function awsRepositoryAssociationS3RepositoryDetailsPropertyToTerraform(struct?: AwsRepositoryAssociation.S3RepositoryDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function tfRepositoryAssociationS3RepositoryDetailsPropertyToTerraform(st
 }
 
 
-export function tfRepositoryAssociationS3RepositoryDetailsPropertyToHclTerraform(struct?: TfRepositoryAssociation.S3RepositoryDetailsProperty): any {
+export function awsRepositoryAssociationS3RepositoryDetailsPropertyToHclTerraform(struct?: AwsRepositoryAssociation.S3RepositoryDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,7 +375,7 @@ export function tfRepositoryAssociationS3RepositoryDetailsPropertyToHclTerraform
 }
 
 
-export function tfRepositoryAssociationKmsKeyDetailsPropertyToTerraform(struct?: TfRepositoryAssociation.KmsKeyDetailsPropertyOutputReference | TfRepositoryAssociation.KmsKeyDetailsProperty): any {
+export function awsRepositoryAssociationKmsKeyDetailsPropertyToTerraform(struct?: AwsRepositoryAssociation.KmsKeyDetailsPropertyOutputReference | AwsRepositoryAssociation.KmsKeyDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function tfRepositoryAssociationKmsKeyDetailsPropertyToTerraform(struct?:
 }
 
 
-export function tfRepositoryAssociationKmsKeyDetailsPropertyToHclTerraform(struct?: TfRepositoryAssociation.KmsKeyDetailsPropertyOutputReference | TfRepositoryAssociation.KmsKeyDetailsProperty): any {
+export function awsRepositoryAssociationKmsKeyDetailsPropertyToHclTerraform(struct?: AwsRepositoryAssociation.KmsKeyDetailsPropertyOutputReference | AwsRepositoryAssociation.KmsKeyDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function tfRepositoryAssociationKmsKeyDetailsPropertyToHclTerraform(struc
 }
 
 
-export function tfRepositoryAssociationBitbucketPropertyToTerraform(struct?: TfRepositoryAssociation.BitbucketPropertyOutputReference | TfRepositoryAssociation.BitbucketProperty): any {
+export function awsRepositoryAssociationBitbucketPropertyToTerraform(struct?: AwsRepositoryAssociation.BitbucketPropertyOutputReference | AwsRepositoryAssociation.BitbucketProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -425,7 +425,7 @@ export function tfRepositoryAssociationBitbucketPropertyToTerraform(struct?: TfR
 }
 
 
-export function tfRepositoryAssociationBitbucketPropertyToHclTerraform(struct?: TfRepositoryAssociation.BitbucketPropertyOutputReference | TfRepositoryAssociation.BitbucketProperty): any {
+export function awsRepositoryAssociationBitbucketPropertyToHclTerraform(struct?: AwsRepositoryAssociation.BitbucketPropertyOutputReference | AwsRepositoryAssociation.BitbucketProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,7 +456,7 @@ export function tfRepositoryAssociationBitbucketPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfRepositoryAssociationCodecommitPropertyToTerraform(struct?: TfRepositoryAssociation.CodecommitPropertyOutputReference | TfRepositoryAssociation.CodecommitProperty): any {
+export function awsRepositoryAssociationCodecommitPropertyToTerraform(struct?: AwsRepositoryAssociation.CodecommitPropertyOutputReference | AwsRepositoryAssociation.CodecommitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -467,7 +467,7 @@ export function tfRepositoryAssociationCodecommitPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfRepositoryAssociationCodecommitPropertyToHclTerraform(struct?: TfRepositoryAssociation.CodecommitPropertyOutputReference | TfRepositoryAssociation.CodecommitProperty): any {
+export function awsRepositoryAssociationCodecommitPropertyToHclTerraform(struct?: AwsRepositoryAssociation.CodecommitPropertyOutputReference | AwsRepositoryAssociation.CodecommitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,7 +486,7 @@ export function tfRepositoryAssociationCodecommitPropertyToHclTerraform(struct?:
 }
 
 
-export function tfRepositoryAssociationGithubEnterpriseServerPropertyToTerraform(struct?: TfRepositoryAssociation.GithubEnterpriseServerPropertyOutputReference | TfRepositoryAssociation.GithubEnterpriseServerProperty): any {
+export function awsRepositoryAssociationGithubEnterpriseServerPropertyToTerraform(struct?: AwsRepositoryAssociation.GithubEnterpriseServerPropertyOutputReference | AwsRepositoryAssociation.GithubEnterpriseServerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -499,7 +499,7 @@ export function tfRepositoryAssociationGithubEnterpriseServerPropertyToTerraform
 }
 
 
-export function tfRepositoryAssociationGithubEnterpriseServerPropertyToHclTerraform(struct?: TfRepositoryAssociation.GithubEnterpriseServerPropertyOutputReference | TfRepositoryAssociation.GithubEnterpriseServerProperty): any {
+export function awsRepositoryAssociationGithubEnterpriseServerPropertyToHclTerraform(struct?: AwsRepositoryAssociation.GithubEnterpriseServerPropertyOutputReference | AwsRepositoryAssociation.GithubEnterpriseServerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -530,7 +530,7 @@ export function tfRepositoryAssociationGithubEnterpriseServerPropertyToHclTerraf
 }
 
 
-export function tfRepositoryAssociationS3BucketPropertyToTerraform(struct?: TfRepositoryAssociation.S3BucketPropertyOutputReference | TfRepositoryAssociation.S3BucketProperty): any {
+export function awsRepositoryAssociationS3BucketPropertyToTerraform(struct?: AwsRepositoryAssociation.S3BucketPropertyOutputReference | AwsRepositoryAssociation.S3BucketProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -542,7 +542,7 @@ export function tfRepositoryAssociationS3BucketPropertyToTerraform(struct?: TfRe
 }
 
 
-export function tfRepositoryAssociationS3BucketPropertyToHclTerraform(struct?: TfRepositoryAssociation.S3BucketPropertyOutputReference | TfRepositoryAssociation.S3BucketProperty): any {
+export function awsRepositoryAssociationS3BucketPropertyToHclTerraform(struct?: AwsRepositoryAssociation.S3BucketPropertyOutputReference | AwsRepositoryAssociation.S3BucketProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -567,46 +567,46 @@ export function tfRepositoryAssociationS3BucketPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfRepositoryAssociationRepositoryPropertyToTerraform(struct?: TfRepositoryAssociation.RepositoryPropertyOutputReference | TfRepositoryAssociation.RepositoryProperty): any {
+export function awsRepositoryAssociationRepositoryPropertyToTerraform(struct?: AwsRepositoryAssociation.RepositoryPropertyOutputReference | AwsRepositoryAssociation.RepositoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    bitbucket: tfRepositoryAssociationBitbucketPropertyToTerraform(struct!.bitbucket),
-    codecommit: tfRepositoryAssociationCodecommitPropertyToTerraform(struct!.codecommit),
-    github_enterprise_server: tfRepositoryAssociationGithubEnterpriseServerPropertyToTerraform(struct!.githubEnterpriseServer),
-    s3_bucket: tfRepositoryAssociationS3BucketPropertyToTerraform(struct!.s3Bucket),
+    bitbucket: awsRepositoryAssociationBitbucketPropertyToTerraform(struct!.bitbucket),
+    codecommit: awsRepositoryAssociationCodecommitPropertyToTerraform(struct!.codecommit),
+    github_enterprise_server: awsRepositoryAssociationGithubEnterpriseServerPropertyToTerraform(struct!.githubEnterpriseServer),
+    s3_bucket: awsRepositoryAssociationS3BucketPropertyToTerraform(struct!.s3Bucket),
   }
 }
 
 
-export function tfRepositoryAssociationRepositoryPropertyToHclTerraform(struct?: TfRepositoryAssociation.RepositoryPropertyOutputReference | TfRepositoryAssociation.RepositoryProperty): any {
+export function awsRepositoryAssociationRepositoryPropertyToHclTerraform(struct?: AwsRepositoryAssociation.RepositoryPropertyOutputReference | AwsRepositoryAssociation.RepositoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     bitbucket: {
-      value: tfRepositoryAssociationBitbucketPropertyToHclTerraform(struct!.bitbucket),
+      value: awsRepositoryAssociationBitbucketPropertyToHclTerraform(struct!.bitbucket),
       isBlock: true,
       type: "list",
       storageClassType: "BitbucketPropertyList",
     },
     codecommit: {
-      value: tfRepositoryAssociationCodecommitPropertyToHclTerraform(struct!.codecommit),
+      value: awsRepositoryAssociationCodecommitPropertyToHclTerraform(struct!.codecommit),
       isBlock: true,
       type: "list",
       storageClassType: "CodecommitPropertyList",
     },
     github_enterprise_server: {
-      value: tfRepositoryAssociationGithubEnterpriseServerPropertyToHclTerraform(struct!.githubEnterpriseServer),
+      value: awsRepositoryAssociationGithubEnterpriseServerPropertyToHclTerraform(struct!.githubEnterpriseServer),
       isBlock: true,
       type: "list",
       storageClassType: "GithubEnterpriseServerPropertyList",
     },
     s3_bucket: {
-      value: tfRepositoryAssociationS3BucketPropertyToHclTerraform(struct!.s3Bucket),
+      value: awsRepositoryAssociationS3BucketPropertyToHclTerraform(struct!.s3Bucket),
       isBlock: true,
       type: "list",
       storageClassType: "S3BucketPropertyList",
@@ -618,7 +618,7 @@ export function tfRepositoryAssociationRepositoryPropertyToHclTerraform(struct?:
 }
 
 
-export function tfRepositoryAssociationTimeoutsPropertyToTerraform(struct?: TfRepositoryAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRepositoryAssociationTimeoutsPropertyToTerraform(struct?: AwsRepositoryAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -631,7 +631,7 @@ export function tfRepositoryAssociationTimeoutsPropertyToTerraform(struct?: TfRe
 }
 
 
-export function tfRepositoryAssociationTimeoutsPropertyToHclTerraform(struct?: TfRepositoryAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRepositoryAssociationTimeoutsPropertyToHclTerraform(struct?: AwsRepositoryAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -662,7 +662,7 @@ export function tfRepositoryAssociationTimeoutsPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfRepositoryAssociation {
+export namespace AwsRepositoryAssociation {
 export interface CodeArtifactsProperty {
 }
 export class CodeArtifactsPropertyOutputReference extends cdktn.ComplexObject {
@@ -784,11 +784,11 @@ export class S3RepositoryDetailsPropertyList extends cdktn.ComplexList {
 }
 export interface KmsKeyDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#encryption_option TfRepositoryAssociation#encryption_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#encryption_option AwsRepositoryAssociation#encryption_option}
   */
   readonly encryptionOption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#kms_key_id TfRepositoryAssociation#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#kms_key_id AwsRepositoryAssociation#kms_key_id}
   */
   readonly kmsKeyId?: string;
 }
@@ -864,15 +864,15 @@ export class KmsKeyDetailsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BitbucketProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#connection_arn TfRepositoryAssociation#connection_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#connection_arn AwsRepositoryAssociation#connection_arn}
   */
   readonly connectionArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#name TfRepositoryAssociation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#name AwsRepositoryAssociation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#owner TfRepositoryAssociation#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#owner AwsRepositoryAssociation#owner}
   */
   readonly owner: string;
 }
@@ -961,7 +961,7 @@ export class BitbucketPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CodecommitProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#name TfRepositoryAssociation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#name AwsRepositoryAssociation#name}
   */
   readonly name: string;
 }
@@ -1012,15 +1012,15 @@ export class CodecommitPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface GithubEnterpriseServerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#connection_arn TfRepositoryAssociation#connection_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#connection_arn AwsRepositoryAssociation#connection_arn}
   */
   readonly connectionArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#name TfRepositoryAssociation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#name AwsRepositoryAssociation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#owner TfRepositoryAssociation#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#owner AwsRepositoryAssociation#owner}
   */
   readonly owner: string;
 }
@@ -1109,11 +1109,11 @@ export class GithubEnterpriseServerPropertyOutputReference extends cdktn.Complex
 }
 export interface S3BucketProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#bucket_name TfRepositoryAssociation#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#bucket_name AwsRepositoryAssociation#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#name TfRepositoryAssociation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#name AwsRepositoryAssociation#name}
   */
   readonly name: string;
 }
@@ -1185,25 +1185,25 @@ export interface RepositoryProperty {
   /**
   * bitbucket block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#bitbucket TfRepositoryAssociation#bitbucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#bitbucket AwsRepositoryAssociation#bitbucket}
   */
   readonly bitbucket?: BitbucketProperty;
   /**
   * codecommit block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#codecommit TfRepositoryAssociation#codecommit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#codecommit AwsRepositoryAssociation#codecommit}
   */
   readonly codecommit?: CodecommitProperty;
   /**
   * github_enterprise_server block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#github_enterprise_server TfRepositoryAssociation#github_enterprise_server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#github_enterprise_server AwsRepositoryAssociation#github_enterprise_server}
   */
   readonly githubEnterpriseServer?: GithubEnterpriseServerProperty;
   /**
   * s3_bucket block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#s3_bucket TfRepositoryAssociation#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#s3_bucket AwsRepositoryAssociation#s3_bucket}
   */
   readonly s3Bucket?: S3BucketProperty;
 }
@@ -1323,15 +1323,15 @@ export class RepositoryPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#create TfRepositoryAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#create AwsRepositoryAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#delete TfRepositoryAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#delete AwsRepositoryAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#update TfRepositoryAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codegurureviewer_repository_association#update AwsRepositoryAssociation#update}
   */
   readonly update?: string;
 }

@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfSelectionConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsSelectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_selection#id DataTfSelection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_selection#id DataAwsSelection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_selection#plan_id DataTfSelection#plan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_selection#plan_id DataAwsSelection#plan_id}
   */
   readonly planId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_selection#region DataTfSelection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_selection#region DataAwsSelection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_selection#selection_id DataTfSelection#selection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_selection#selection_id DataAwsSelection#selection_id}
   */
   readonly selectionId: string;
 }
@@ -32,7 +32,7 @@ export interface DataTfSelectionConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_selection aws_backup_selection}
 */
-export class DataTfSelection extends cdktn.TerraformDataSource {
+export class DataAwsSelection extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfSelection extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfSelection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsSelection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfSelection to import
-  * @param importFromId The id of the existing DataTfSelection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_selection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfSelection to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsSelection to import
+  * @param importFromId The id of the existing DataAwsSelection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/backup_selection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsSelection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_selection", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfSelection extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfSelectionConfig
+  * @param options DataAwsSelectionConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfSelectionConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsSelectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_selection',
       terraformGeneratorMetadata: {

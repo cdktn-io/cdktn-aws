@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLoadBalancerPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLoadBalancerPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#id TfLoadBalancerPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#id AwsLoadBalancerPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#load_balancer_name TfLoadBalancerPolicy#load_balancer_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#load_balancer_name AwsLoadBalancerPolicy#load_balancer_name}
   */
   readonly loadBalancerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#policy_name TfLoadBalancerPolicy#policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#policy_name AwsLoadBalancerPolicy#policy_name}
   */
   readonly policyName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#policy_type_name TfLoadBalancerPolicy#policy_type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#policy_type_name AwsLoadBalancerPolicy#policy_type_name}
   */
   readonly policyTypeName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#region TfLoadBalancerPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#region AwsLoadBalancerPolicy#region}
   */
   readonly region?: string;
   /**
   * policy_attribute block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#policy_attribute TfLoadBalancerPolicy#policy_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#policy_attribute AwsLoadBalancerPolicy#policy_attribute}
   */
-  readonly policyAttribute?: TfLoadBalancerPolicy.PolicyAttributeProperty[] | cdktn.IResolvable;
+  readonly policyAttribute?: AwsLoadBalancerPolicy.PolicyAttributeProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy aws_load_balancer_policy}
 */
-export class TfLoadBalancerPolicy extends cdktn.TerraformResource {
+export class AwsLoadBalancerPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfLoadBalancerPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLoadBalancerPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLoadBalancerPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLoadBalancerPolicy to import
-  * @param importFromId The id of the existing TfLoadBalancerPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLoadBalancerPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsLoadBalancerPolicy to import
+  * @param importFromId The id of the existing AwsLoadBalancerPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLoadBalancerPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_load_balancer_policy", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfLoadBalancerPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLoadBalancerPolicyConfig
+  * @param options AwsLoadBalancerPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLoadBalancerPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLoadBalancerPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_load_balancer_policy',
       terraformGeneratorMetadata: {
@@ -174,11 +174,11 @@ export class TfLoadBalancerPolicy extends cdktn.TerraformResource {
   }
 
   // policy_attribute - computed: false, optional: true, required: false
-  private _policyAttribute = new TfLoadBalancerPolicy.PolicyAttributePropertyList(this, "policy_attribute", true);
+  private _policyAttribute = new AwsLoadBalancerPolicy.PolicyAttributePropertyList(this, "policy_attribute", true);
   public get policyAttribute() {
     return this._policyAttribute;
   }
-  public putPolicyAttribute(value: TfLoadBalancerPolicy.PolicyAttributeProperty[] | cdktn.IResolvable) {
+  public putPolicyAttribute(value: AwsLoadBalancerPolicy.PolicyAttributeProperty[] | cdktn.IResolvable) {
     this._policyAttribute.internalValue = value;
   }
   public resetPolicyAttribute() {
@@ -200,7 +200,7 @@ export class TfLoadBalancerPolicy extends cdktn.TerraformResource {
       policy_name: cdktn.stringToTerraform(this._policyName),
       policy_type_name: cdktn.stringToTerraform(this._policyTypeName),
       region: cdktn.stringToTerraform(this._region),
-      policy_attribute: cdktn.listMapper(tfLoadBalancerPolicyPolicyAttributePropertyToTerraform, true)(this._policyAttribute.internalValue),
+      policy_attribute: cdktn.listMapper(awsLoadBalancerPolicyPolicyAttributePropertyToTerraform, true)(this._policyAttribute.internalValue),
     };
   }
 
@@ -237,10 +237,10 @@ export class TfLoadBalancerPolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       policy_attribute: {
-        value: cdktn.listMapperHcl(tfLoadBalancerPolicyPolicyAttributePropertyToHclTerraform, true)(this._policyAttribute.internalValue),
+        value: cdktn.listMapperHcl(awsLoadBalancerPolicyPolicyAttributePropertyToHclTerraform, true)(this._policyAttribute.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfLoadBalancerPolicy.PolicyAttributePropertyList",
+        storageClassType: "AwsLoadBalancerPolicy.PolicyAttributePropertyList",
       },
     };
 
@@ -249,7 +249,7 @@ export class TfLoadBalancerPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfLoadBalancerPolicyPolicyAttributePropertyToTerraform(struct?: TfLoadBalancerPolicy.PolicyAttributeProperty | cdktn.IResolvable): any {
+export function awsLoadBalancerPolicyPolicyAttributePropertyToTerraform(struct?: AwsLoadBalancerPolicy.PolicyAttributeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function tfLoadBalancerPolicyPolicyAttributePropertyToTerraform(struct?: 
 }
 
 
-export function tfLoadBalancerPolicyPolicyAttributePropertyToHclTerraform(struct?: TfLoadBalancerPolicy.PolicyAttributeProperty | cdktn.IResolvable): any {
+export function awsLoadBalancerPolicyPolicyAttributePropertyToHclTerraform(struct?: AwsLoadBalancerPolicy.PolicyAttributeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,14 +286,14 @@ export function tfLoadBalancerPolicyPolicyAttributePropertyToHclTerraform(struct
 }
 
 
-export namespace TfLoadBalancerPolicy {
+export namespace AwsLoadBalancerPolicy {
 export interface PolicyAttributeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#name TfLoadBalancerPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#name AwsLoadBalancerPolicy#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#value TfLoadBalancerPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_policy#value AwsLoadBalancerPolicy#value}
   */
   readonly value?: string;
 }

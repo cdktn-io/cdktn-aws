@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfCertificateConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#domain DataTfCertificate#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#domain DataAwsCertificate#domain}
   */
   readonly domain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#id DataTfCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#id DataAwsCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#key_types DataTfCertificate#key_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#key_types DataAwsCertificate#key_types}
   */
   readonly keyTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#most_recent DataTfCertificate#most_recent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#most_recent DataAwsCertificate#most_recent}
   */
   readonly mostRecent?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#region DataTfCertificate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#region DataAwsCertificate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#statuses DataTfCertificate#statuses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#statuses DataAwsCertificate#statuses}
   */
   readonly statuses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#tags DataTfCertificate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#tags DataAwsCertificate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#types DataTfCertificate#types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#types DataAwsCertificate#types}
   */
   readonly types?: string[];
 }
@@ -48,7 +48,7 @@ export interface DataTfCertificateConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate aws_acm_certificate}
 */
-export class DataTfCertificate extends cdktn.TerraformDataSource {
+export class DataAwsCertificate extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class DataTfCertificate extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfCertificate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsCertificate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfCertificate to import
-  * @param importFromId The id of the existing DataTfCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfCertificate to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsCertificate to import
+  * @param importFromId The id of the existing DataAwsCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/acm_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_acm_certificate", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class DataTfCertificate extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfCertificateConfig = {}
+  * @param options DataAwsCertificateConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfCertificateConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsCertificateConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_acm_certificate',
       terraformGeneratorMetadata: {

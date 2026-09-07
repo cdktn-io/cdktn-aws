@@ -5,76 +5,76 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEipConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEipConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#address TfEip#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#address AwsEip#address}
   */
   readonly address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#associate_with_private_ip TfEip#associate_with_private_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#associate_with_private_ip AwsEip#associate_with_private_ip}
   */
   readonly associateWithPrivateIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#customer_owned_ipv4_pool TfEip#customer_owned_ipv4_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#customer_owned_ipv4_pool AwsEip#customer_owned_ipv4_pool}
   */
   readonly customerOwnedIpv4Pool?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#domain TfEip#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#domain AwsEip#domain}
   */
   readonly domain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#id TfEip#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#id AwsEip#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#instance TfEip#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#instance AwsEip#instance}
   */
   readonly instance?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#ipam_pool_id TfEip#ipam_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#ipam_pool_id AwsEip#ipam_pool_id}
   */
   readonly ipamPoolId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#network_border_group TfEip#network_border_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#network_border_group AwsEip#network_border_group}
   */
   readonly networkBorderGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#network_interface TfEip#network_interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#network_interface AwsEip#network_interface}
   */
   readonly networkInterface?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#public_ipv4_pool TfEip#public_ipv4_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#public_ipv4_pool AwsEip#public_ipv4_pool}
   */
   readonly publicIpv4Pool?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#region TfEip#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#region AwsEip#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#tags TfEip#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#tags AwsEip#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#tags_all TfEip#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#tags_all AwsEip#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#timeouts TfEip#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#timeouts AwsEip#timeouts}
   */
-  readonly timeouts?: TfEip.TimeoutsProperty;
+  readonly timeouts?: AwsEip.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip aws_eip}
 */
-export class TfEip extends cdktn.TerraformResource {
+export class AwsEip extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -85,11 +85,11 @@ export class TfEip extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEip resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEip resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEip to import
-  * @param importFromId The id of the existing TfEip that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEip to import is found
+  * @param importToId The construct id used in the generated config for the AwsEip to import
+  * @param importFromId The id of the existing AwsEip that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEip to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eip", importId: importFromId, provider });
@@ -104,9 +104,9 @@ export class TfEip extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEipConfig = {}
+  * @param options AwsEipConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfEipConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsEipConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_eip',
       terraformGeneratorMetadata: {
@@ -401,11 +401,11 @@ export class TfEip extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfEip.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsEip.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfEip.TimeoutsProperty) {
+  public putTimeouts(value: AwsEip.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -435,7 +435,7 @@ export class TfEip extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfEipTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsEipTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -520,10 +520,10 @@ export class TfEip extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfEipTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsEipTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfEip.TimeoutsProperty",
+        storageClassType: "AwsEip.TimeoutsProperty",
       },
     };
 
@@ -532,7 +532,7 @@ export class TfEip extends cdktn.TerraformResource {
   }
 }
 
-export function tfEipTimeoutsPropertyToTerraform(struct?: TfEip.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsEipTimeoutsPropertyToTerraform(struct?: AwsEip.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -545,7 +545,7 @@ export function tfEipTimeoutsPropertyToTerraform(struct?: TfEip.TimeoutsProperty
 }
 
 
-export function tfEipTimeoutsPropertyToHclTerraform(struct?: TfEip.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsEipTimeoutsPropertyToHclTerraform(struct?: AwsEip.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -576,18 +576,18 @@ export function tfEipTimeoutsPropertyToHclTerraform(struct?: TfEip.TimeoutsPrope
 }
 
 
-export namespace TfEip {
+export namespace AwsEip {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#delete TfEip#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#delete AwsEip#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#read TfEip#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#read AwsEip#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#update TfEip#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip#update AwsEip#update}
   */
   readonly update?: string;
 }

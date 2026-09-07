@@ -5,110 +5,110 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfElbConfig extends cdktn.TerraformMetaArguments {
+export interface AwsElbConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#availability_zones TfElb#availability_zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#availability_zones AwsElb#availability_zones}
   */
   readonly availabilityZones?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#connection_draining TfElb#connection_draining}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#connection_draining AwsElb#connection_draining}
   */
   readonly connectionDraining?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#connection_draining_timeout TfElb#connection_draining_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#connection_draining_timeout AwsElb#connection_draining_timeout}
   */
   readonly connectionDrainingTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#cross_zone_load_balancing TfElb#cross_zone_load_balancing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#cross_zone_load_balancing AwsElb#cross_zone_load_balancing}
   */
   readonly crossZoneLoadBalancing?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#desync_mitigation_mode TfElb#desync_mitigation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#desync_mitigation_mode AwsElb#desync_mitigation_mode}
   */
   readonly desyncMitigationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#id TfElb#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#id AwsElb#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#idle_timeout TfElb#idle_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#idle_timeout AwsElb#idle_timeout}
   */
   readonly idleTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#instances TfElb#instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#instances AwsElb#instances}
   */
   readonly instances?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#internal TfElb#internal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#internal AwsElb#internal}
   */
   readonly internal?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#name TfElb#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#name AwsElb#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#name_prefix TfElb#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#name_prefix AwsElb#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#region TfElb#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#region AwsElb#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#security_groups TfElb#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#security_groups AwsElb#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#source_security_group TfElb#source_security_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#source_security_group AwsElb#source_security_group}
   */
   readonly sourceSecurityGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#subnets TfElb#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#subnets AwsElb#subnets}
   */
   readonly subnets?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#tags TfElb#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#tags AwsElb#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#tags_all TfElb#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#tags_all AwsElb#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * access_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#access_logs TfElb#access_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#access_logs AwsElb#access_logs}
   */
-  readonly accessLogs?: TfElb.AccessLogsProperty;
+  readonly accessLogs?: AwsElb.AccessLogsProperty;
   /**
   * health_check block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#health_check TfElb#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#health_check AwsElb#health_check}
   */
-  readonly healthCheck?: TfElb.HealthCheckProperty;
+  readonly healthCheck?: AwsElb.HealthCheckProperty;
   /**
   * listener block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#listener TfElb#listener}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#listener AwsElb#listener}
   */
-  readonly listener: TfElb.ListenerProperty[] | cdktn.IResolvable;
+  readonly listener: AwsElb.ListenerProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#timeouts TfElb#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#timeouts AwsElb#timeouts}
   */
-  readonly timeouts?: TfElb.TimeoutsProperty;
+  readonly timeouts?: AwsElb.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb aws_elb}
 */
-export class TfElb extends cdktn.TerraformResource {
+export class AwsElb extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -119,11 +119,11 @@ export class TfElb extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfElb resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsElb resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfElb to import
-  * @param importFromId The id of the existing TfElb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfElb to import is found
+  * @param importToId The construct id used in the generated config for the AwsElb to import
+  * @param importFromId The id of the existing AwsElb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsElb to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elb", importId: importFromId, provider });
@@ -138,9 +138,9 @@ export class TfElb extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfElbConfig
+  * @param options AwsElbConfig
   */
-  public constructor(scope: Construct, id: string, config: TfElbConfig) {
+  public constructor(scope: Construct, id: string, config: AwsElbConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elb',
       terraformGeneratorMetadata: {
@@ -476,11 +476,11 @@ export class TfElb extends cdktn.TerraformResource {
   }
 
   // access_logs - computed: false, optional: true, required: false
-  private _accessLogs = new TfElb.AccessLogsPropertyOutputReference(this, "access_logs");
+  private _accessLogs = new AwsElb.AccessLogsPropertyOutputReference(this, "access_logs");
   public get accessLogs() {
     return this._accessLogs;
   }
-  public putAccessLogs(value: TfElb.AccessLogsProperty) {
+  public putAccessLogs(value: AwsElb.AccessLogsProperty) {
     this._accessLogs.internalValue = value;
   }
   public resetAccessLogs() {
@@ -492,11 +492,11 @@ export class TfElb extends cdktn.TerraformResource {
   }
 
   // health_check - computed: false, optional: true, required: false
-  private _healthCheck = new TfElb.HealthCheckPropertyOutputReference(this, "health_check");
+  private _healthCheck = new AwsElb.HealthCheckPropertyOutputReference(this, "health_check");
   public get healthCheck() {
     return this._healthCheck;
   }
-  public putHealthCheck(value: TfElb.HealthCheckProperty) {
+  public putHealthCheck(value: AwsElb.HealthCheckProperty) {
     this._healthCheck.internalValue = value;
   }
   public resetHealthCheck() {
@@ -508,11 +508,11 @@ export class TfElb extends cdktn.TerraformResource {
   }
 
   // listener - computed: false, optional: false, required: true
-  private _listener = new TfElb.ListenerPropertyList(this, "listener", true);
+  private _listener = new AwsElb.ListenerPropertyList(this, "listener", true);
   public get listener() {
     return this._listener;
   }
-  public putListener(value: TfElb.ListenerProperty[] | cdktn.IResolvable) {
+  public putListener(value: AwsElb.ListenerProperty[] | cdktn.IResolvable) {
     this._listener.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -521,11 +521,11 @@ export class TfElb extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfElb.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsElb.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfElb.TimeoutsProperty) {
+  public putTimeouts(value: AwsElb.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -559,10 +559,10 @@ export class TfElb extends cdktn.TerraformResource {
       subnets: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnets),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      access_logs: tfElbAccessLogsPropertyToTerraform(this._accessLogs.internalValue),
-      health_check: tfElbHealthCheckPropertyToTerraform(this._healthCheck.internalValue),
-      listener: cdktn.listMapper(tfElbListenerPropertyToTerraform, true)(this._listener.internalValue),
-      timeouts: tfElbTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      access_logs: awsElbAccessLogsPropertyToTerraform(this._accessLogs.internalValue),
+      health_check: awsElbHealthCheckPropertyToTerraform(this._healthCheck.internalValue),
+      listener: cdktn.listMapper(awsElbListenerPropertyToTerraform, true)(this._listener.internalValue),
+      timeouts: awsElbTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -671,28 +671,28 @@ export class TfElb extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       access_logs: {
-        value: tfElbAccessLogsPropertyToHclTerraform(this._accessLogs.internalValue),
+        value: awsElbAccessLogsPropertyToHclTerraform(this._accessLogs.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfElb.AccessLogsPropertyList",
+        storageClassType: "AwsElb.AccessLogsPropertyList",
       },
       health_check: {
-        value: tfElbHealthCheckPropertyToHclTerraform(this._healthCheck.internalValue),
+        value: awsElbHealthCheckPropertyToHclTerraform(this._healthCheck.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfElb.HealthCheckPropertyList",
+        storageClassType: "AwsElb.HealthCheckPropertyList",
       },
       listener: {
-        value: cdktn.listMapperHcl(tfElbListenerPropertyToHclTerraform, true)(this._listener.internalValue),
+        value: cdktn.listMapperHcl(awsElbListenerPropertyToHclTerraform, true)(this._listener.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfElb.ListenerPropertyList",
+        storageClassType: "AwsElb.ListenerPropertyList",
       },
       timeouts: {
-        value: tfElbTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsElbTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfElb.TimeoutsProperty",
+        storageClassType: "AwsElb.TimeoutsProperty",
       },
     };
 
@@ -701,7 +701,7 @@ export class TfElb extends cdktn.TerraformResource {
   }
 }
 
-export function tfElbAccessLogsPropertyToTerraform(struct?: TfElb.AccessLogsPropertyOutputReference | TfElb.AccessLogsProperty): any {
+export function awsElbAccessLogsPropertyToTerraform(struct?: AwsElb.AccessLogsPropertyOutputReference | AwsElb.AccessLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -715,7 +715,7 @@ export function tfElbAccessLogsPropertyToTerraform(struct?: TfElb.AccessLogsProp
 }
 
 
-export function tfElbAccessLogsPropertyToHclTerraform(struct?: TfElb.AccessLogsPropertyOutputReference | TfElb.AccessLogsProperty): any {
+export function awsElbAccessLogsPropertyToHclTerraform(struct?: AwsElb.AccessLogsPropertyOutputReference | AwsElb.AccessLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,7 +752,7 @@ export function tfElbAccessLogsPropertyToHclTerraform(struct?: TfElb.AccessLogsP
 }
 
 
-export function tfElbHealthCheckPropertyToTerraform(struct?: TfElb.HealthCheckPropertyOutputReference | TfElb.HealthCheckProperty): any {
+export function awsElbHealthCheckPropertyToTerraform(struct?: AwsElb.HealthCheckPropertyOutputReference | AwsElb.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -767,7 +767,7 @@ export function tfElbHealthCheckPropertyToTerraform(struct?: TfElb.HealthCheckPr
 }
 
 
-export function tfElbHealthCheckPropertyToHclTerraform(struct?: TfElb.HealthCheckPropertyOutputReference | TfElb.HealthCheckProperty): any {
+export function awsElbHealthCheckPropertyToHclTerraform(struct?: AwsElb.HealthCheckPropertyOutputReference | AwsElb.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -810,7 +810,7 @@ export function tfElbHealthCheckPropertyToHclTerraform(struct?: TfElb.HealthChec
 }
 
 
-export function tfElbListenerPropertyToTerraform(struct?: TfElb.ListenerProperty | cdktn.IResolvable): any {
+export function awsElbListenerPropertyToTerraform(struct?: AwsElb.ListenerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -825,7 +825,7 @@ export function tfElbListenerPropertyToTerraform(struct?: TfElb.ListenerProperty
 }
 
 
-export function tfElbListenerPropertyToHclTerraform(struct?: TfElb.ListenerProperty | cdktn.IResolvable): any {
+export function awsElbListenerPropertyToHclTerraform(struct?: AwsElb.ListenerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -868,7 +868,7 @@ export function tfElbListenerPropertyToHclTerraform(struct?: TfElb.ListenerPrope
 }
 
 
-export function tfElbTimeoutsPropertyToTerraform(struct?: TfElb.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsElbTimeoutsPropertyToTerraform(struct?: AwsElb.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -880,7 +880,7 @@ export function tfElbTimeoutsPropertyToTerraform(struct?: TfElb.TimeoutsProperty
 }
 
 
-export function tfElbTimeoutsPropertyToHclTerraform(struct?: TfElb.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsElbTimeoutsPropertyToHclTerraform(struct?: AwsElb.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -905,22 +905,22 @@ export function tfElbTimeoutsPropertyToHclTerraform(struct?: TfElb.TimeoutsPrope
 }
 
 
-export namespace TfElb {
+export namespace AwsElb {
 export interface AccessLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#bucket TfElb#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#bucket AwsElb#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#bucket_prefix TfElb#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#bucket_prefix AwsElb#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#enabled TfElb#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#enabled AwsElb#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#interval TfElb#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#interval AwsElb#interval}
   */
   readonly interval?: number;
 }
@@ -1037,23 +1037,23 @@ export class AccessLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HealthCheckProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#healthy_threshold TfElb#healthy_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#healthy_threshold AwsElb#healthy_threshold}
   */
   readonly healthyThreshold: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#interval TfElb#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#interval AwsElb#interval}
   */
   readonly interval: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#target TfElb#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#target AwsElb#target}
   */
   readonly target: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#timeout TfElb#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#timeout AwsElb#timeout}
   */
   readonly timeout: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#unhealthy_threshold TfElb#unhealthy_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#unhealthy_threshold AwsElb#unhealthy_threshold}
   */
   readonly unhealthyThreshold: number;
 }
@@ -1180,23 +1180,23 @@ export class HealthCheckPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ListenerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#instance_port TfElb#instance_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#instance_port AwsElb#instance_port}
   */
   readonly instancePort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#instance_protocol TfElb#instance_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#instance_protocol AwsElb#instance_protocol}
   */
   readonly instanceProtocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#lb_port TfElb#lb_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#lb_port AwsElb#lb_port}
   */
   readonly lbPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#lb_protocol TfElb#lb_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#lb_protocol AwsElb#lb_protocol}
   */
   readonly lbProtocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#ssl_certificate_id TfElb#ssl_certificate_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#ssl_certificate_id AwsElb#ssl_certificate_id}
   */
   readonly sslCertificateId?: string;
 }
@@ -1358,11 +1358,11 @@ export class ListenerPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#create TfElb#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#create AwsElb#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#update TfElb#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elb#update AwsElb#update}
   */
   readonly update?: string;
 }

@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDbClusterSnapshotConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDbClusterSnapshotConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#db_cluster_identifier TfDbClusterSnapshot#db_cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#db_cluster_identifier AwsDbClusterSnapshot#db_cluster_identifier}
   */
   readonly dbClusterIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#db_cluster_snapshot_identifier TfDbClusterSnapshot#db_cluster_snapshot_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#db_cluster_snapshot_identifier AwsDbClusterSnapshot#db_cluster_snapshot_identifier}
   */
   readonly dbClusterSnapshotIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#id TfDbClusterSnapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#id AwsDbClusterSnapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,33 +24,33 @@ export interface TfDbClusterSnapshotConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#region TfDbClusterSnapshot#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#region AwsDbClusterSnapshot#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#shared_accounts TfDbClusterSnapshot#shared_accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#shared_accounts AwsDbClusterSnapshot#shared_accounts}
   */
   readonly sharedAccounts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#tags TfDbClusterSnapshot#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#tags AwsDbClusterSnapshot#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#tags_all TfDbClusterSnapshot#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#tags_all AwsDbClusterSnapshot#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#timeouts TfDbClusterSnapshot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#timeouts AwsDbClusterSnapshot#timeouts}
   */
-  readonly timeouts?: TfDbClusterSnapshot.TimeoutsProperty;
+  readonly timeouts?: AwsDbClusterSnapshot.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot aws_db_cluster_snapshot}
 */
-export class TfDbClusterSnapshot extends cdktn.TerraformResource {
+export class AwsDbClusterSnapshot extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfDbClusterSnapshot extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDbClusterSnapshot resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDbClusterSnapshot resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDbClusterSnapshot to import
-  * @param importFromId The id of the existing TfDbClusterSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDbClusterSnapshot to import is found
+  * @param importToId The construct id used in the generated config for the AwsDbClusterSnapshot to import
+  * @param importFromId The id of the existing AwsDbClusterSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDbClusterSnapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_db_cluster_snapshot", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfDbClusterSnapshot extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDbClusterSnapshotConfig
+  * @param options AwsDbClusterSnapshotConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDbClusterSnapshotConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDbClusterSnapshotConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_db_cluster_snapshot',
       terraformGeneratorMetadata: {
@@ -284,11 +284,11 @@ export class TfDbClusterSnapshot extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDbClusterSnapshot.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDbClusterSnapshot.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDbClusterSnapshot.TimeoutsProperty) {
+  public putTimeouts(value: AwsDbClusterSnapshot.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -312,7 +312,7 @@ export class TfDbClusterSnapshot extends cdktn.TerraformResource {
       shared_accounts: cdktn.listMapper(cdktn.stringToTerraform, false)(this._sharedAccounts),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfDbClusterSnapshotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsDbClusterSnapshotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -361,10 +361,10 @@ export class TfDbClusterSnapshot extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfDbClusterSnapshotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDbClusterSnapshotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDbClusterSnapshot.TimeoutsProperty",
+        storageClassType: "AwsDbClusterSnapshot.TimeoutsProperty",
       },
     };
 
@@ -373,7 +373,7 @@ export class TfDbClusterSnapshot extends cdktn.TerraformResource {
   }
 }
 
-export function tfDbClusterSnapshotTimeoutsPropertyToTerraform(struct?: TfDbClusterSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDbClusterSnapshotTimeoutsPropertyToTerraform(struct?: AwsDbClusterSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function tfDbClusterSnapshotTimeoutsPropertyToTerraform(struct?: TfDbClus
 }
 
 
-export function tfDbClusterSnapshotTimeoutsPropertyToHclTerraform(struct?: TfDbClusterSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDbClusterSnapshotTimeoutsPropertyToHclTerraform(struct?: AwsDbClusterSnapshot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,10 +403,10 @@ export function tfDbClusterSnapshotTimeoutsPropertyToHclTerraform(struct?: TfDbC
 }
 
 
-export namespace TfDbClusterSnapshot {
+export namespace AwsDbClusterSnapshot {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#create TfDbClusterSnapshot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_cluster_snapshot#create AwsDbClusterSnapshot#create}
   */
   readonly create?: string;
 }

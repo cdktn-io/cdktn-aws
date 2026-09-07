@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAgentKnowledgeBaseAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAgentKnowledgeBaseAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#agent_id TfAgentKnowledgeBaseAssociation#agent_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#agent_id AwsAgentKnowledgeBaseAssociation#agent_id}
   */
   readonly agentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#agent_version TfAgentKnowledgeBaseAssociation#agent_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#agent_version AwsAgentKnowledgeBaseAssociation#agent_version}
   */
   readonly agentVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#description TfAgentKnowledgeBaseAssociation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#description AwsAgentKnowledgeBaseAssociation#description}
   */
   readonly description: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#knowledge_base_id TfAgentKnowledgeBaseAssociation#knowledge_base_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#knowledge_base_id AwsAgentKnowledgeBaseAssociation#knowledge_base_id}
   */
   readonly knowledgeBaseId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#knowledge_base_state TfAgentKnowledgeBaseAssociation#knowledge_base_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#knowledge_base_state AwsAgentKnowledgeBaseAssociation#knowledge_base_state}
   */
   readonly knowledgeBaseState: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#region TfAgentKnowledgeBaseAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#region AwsAgentKnowledgeBaseAssociation#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#timeouts TfAgentKnowledgeBaseAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#timeouts AwsAgentKnowledgeBaseAssociation#timeouts}
   */
-  readonly timeouts?: TfAgentKnowledgeBaseAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsAgentKnowledgeBaseAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association aws_bedrockagent_agent_knowledge_base_association}
 */
-export class TfAgentKnowledgeBaseAssociation extends cdktn.TerraformResource {
+export class AwsAgentKnowledgeBaseAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class TfAgentKnowledgeBaseAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAgentKnowledgeBaseAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAgentKnowledgeBaseAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAgentKnowledgeBaseAssociation to import
-  * @param importFromId The id of the existing TfAgentKnowledgeBaseAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAgentKnowledgeBaseAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsAgentKnowledgeBaseAssociation to import
+  * @param importFromId The id of the existing AwsAgentKnowledgeBaseAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAgentKnowledgeBaseAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagent_agent_knowledge_base_association", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class TfAgentKnowledgeBaseAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAgentKnowledgeBaseAssociationConfig
+  * @param options AwsAgentKnowledgeBaseAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAgentKnowledgeBaseAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAgentKnowledgeBaseAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagent_agent_knowledge_base_association',
       terraformGeneratorMetadata: {
@@ -194,11 +194,11 @@ export class TfAgentKnowledgeBaseAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfAgentKnowledgeBaseAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsAgentKnowledgeBaseAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfAgentKnowledgeBaseAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsAgentKnowledgeBaseAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -221,7 +221,7 @@ export class TfAgentKnowledgeBaseAssociation extends cdktn.TerraformResource {
       knowledge_base_id: cdktn.stringToTerraform(this._knowledgeBaseId),
       knowledge_base_state: cdktn.stringToTerraform(this._knowledgeBaseState),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfAgentKnowledgeBaseAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsAgentKnowledgeBaseAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -264,10 +264,10 @@ export class TfAgentKnowledgeBaseAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfAgentKnowledgeBaseAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsAgentKnowledgeBaseAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfAgentKnowledgeBaseAssociation.TimeoutsProperty",
+        storageClassType: "AwsAgentKnowledgeBaseAssociation.TimeoutsProperty",
       },
     };
 
@@ -276,7 +276,7 @@ export class TfAgentKnowledgeBaseAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfAgentKnowledgeBaseAssociationTimeoutsPropertyToTerraform(struct?: TfAgentKnowledgeBaseAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAgentKnowledgeBaseAssociationTimeoutsPropertyToTerraform(struct?: AwsAgentKnowledgeBaseAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,7 +288,7 @@ export function tfAgentKnowledgeBaseAssociationTimeoutsPropertyToTerraform(struc
 }
 
 
-export function tfAgentKnowledgeBaseAssociationTimeoutsPropertyToHclTerraform(struct?: TfAgentKnowledgeBaseAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAgentKnowledgeBaseAssociationTimeoutsPropertyToHclTerraform(struct?: AwsAgentKnowledgeBaseAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,18 +313,18 @@ export function tfAgentKnowledgeBaseAssociationTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace TfAgentKnowledgeBaseAssociation {
+export namespace AwsAgentKnowledgeBaseAssociation {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#create TfAgentKnowledgeBaseAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#create AwsAgentKnowledgeBaseAssociation#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#update TfAgentKnowledgeBaseAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_knowledge_base_association#update AwsAgentKnowledgeBaseAssociation#update}
   */
   readonly update?: string;
 }

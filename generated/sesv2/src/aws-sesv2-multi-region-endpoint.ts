@@ -5,39 +5,39 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMultiRegionEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMultiRegionEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#endpoint_name TfMultiRegionEndpoint#endpoint_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#endpoint_name AwsMultiRegionEndpoint#endpoint_name}
   */
   readonly endpointName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#region TfMultiRegionEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#region AwsMultiRegionEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#tags TfMultiRegionEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#tags AwsMultiRegionEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#details TfMultiRegionEndpoint#details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#details AwsMultiRegionEndpoint#details}
   */
-  readonly details?: TfMultiRegionEndpoint.DetailsProperty[] | cdktn.IResolvable;
+  readonly details?: AwsMultiRegionEndpoint.DetailsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#timeouts TfMultiRegionEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#timeouts AwsMultiRegionEndpoint#timeouts}
   */
-  readonly timeouts?: TfMultiRegionEndpoint.TimeoutsProperty;
+  readonly timeouts?: AwsMultiRegionEndpoint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint aws_sesv2_multi_region_endpoint}
 */
-export class TfMultiRegionEndpoint extends cdktn.TerraformResource {
+export class AwsMultiRegionEndpoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfMultiRegionEndpoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMultiRegionEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMultiRegionEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMultiRegionEndpoint to import
-  * @param importFromId The id of the existing TfMultiRegionEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMultiRegionEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the AwsMultiRegionEndpoint to import
+  * @param importFromId The id of the existing AwsMultiRegionEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMultiRegionEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_multi_region_endpoint", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfMultiRegionEndpoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMultiRegionEndpointConfig
+  * @param options AwsMultiRegionEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMultiRegionEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMultiRegionEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_multi_region_endpoint',
       terraformGeneratorMetadata: {
@@ -136,7 +136,7 @@ export class TfMultiRegionEndpoint extends cdktn.TerraformResource {
   }
 
   // routes - computed: true, optional: false, required: false
-  private _routes = new TfMultiRegionEndpoint.RoutesPropertyList(this, "routes", false);
+  private _routes = new AwsMultiRegionEndpoint.RoutesPropertyList(this, "routes", false);
   public get routes() {
     return this._routes;
   }
@@ -164,11 +164,11 @@ export class TfMultiRegionEndpoint extends cdktn.TerraformResource {
   }
 
   // details - computed: false, optional: true, required: false
-  private _details = new TfMultiRegionEndpoint.DetailsPropertyList(this, "details", false);
+  private _details = new AwsMultiRegionEndpoint.DetailsPropertyList(this, "details", false);
   public get details() {
     return this._details;
   }
-  public putDetails(value: TfMultiRegionEndpoint.DetailsProperty[] | cdktn.IResolvable) {
+  public putDetails(value: AwsMultiRegionEndpoint.DetailsProperty[] | cdktn.IResolvable) {
     this._details.internalValue = value;
   }
   public resetDetails() {
@@ -180,11 +180,11 @@ export class TfMultiRegionEndpoint extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfMultiRegionEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsMultiRegionEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfMultiRegionEndpoint.TimeoutsProperty) {
+  public putTimeouts(value: AwsMultiRegionEndpoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -204,8 +204,8 @@ export class TfMultiRegionEndpoint extends cdktn.TerraformResource {
       endpoint_name: cdktn.stringToTerraform(this._endpointName),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      details: cdktn.listMapper(tfMultiRegionEndpointDetailsPropertyToTerraform, true)(this._details.internalValue),
-      timeouts: tfMultiRegionEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      details: cdktn.listMapper(awsMultiRegionEndpointDetailsPropertyToTerraform, true)(this._details.internalValue),
+      timeouts: awsMultiRegionEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -230,16 +230,16 @@ export class TfMultiRegionEndpoint extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       details: {
-        value: cdktn.listMapperHcl(tfMultiRegionEndpointDetailsPropertyToHclTerraform, true)(this._details.internalValue),
+        value: cdktn.listMapperHcl(awsMultiRegionEndpointDetailsPropertyToHclTerraform, true)(this._details.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMultiRegionEndpoint.DetailsPropertyList",
+        storageClassType: "AwsMultiRegionEndpoint.DetailsPropertyList",
       },
       timeouts: {
-        value: tfMultiRegionEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsMultiRegionEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfMultiRegionEndpoint.TimeoutsProperty",
+        storageClassType: "AwsMultiRegionEndpoint.TimeoutsProperty",
       },
     };
 
@@ -248,7 +248,7 @@ export class TfMultiRegionEndpoint extends cdktn.TerraformResource {
   }
 }
 
-export function tfMultiRegionEndpointRoutesPropertyToTerraform(struct?: TfMultiRegionEndpoint.RoutesProperty): any {
+export function awsMultiRegionEndpointRoutesPropertyToTerraform(struct?: AwsMultiRegionEndpoint.RoutesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -258,7 +258,7 @@ export function tfMultiRegionEndpointRoutesPropertyToTerraform(struct?: TfMultiR
 }
 
 
-export function tfMultiRegionEndpointRoutesPropertyToHclTerraform(struct?: TfMultiRegionEndpoint.RoutesProperty): any {
+export function awsMultiRegionEndpointRoutesPropertyToHclTerraform(struct?: AwsMultiRegionEndpoint.RoutesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,7 +269,7 @@ export function tfMultiRegionEndpointRoutesPropertyToHclTerraform(struct?: TfMul
 }
 
 
-export function tfMultiRegionEndpointRoutesDetailsPropertyToTerraform(struct?: TfMultiRegionEndpoint.RoutesDetailsProperty | cdktn.IResolvable): any {
+export function awsMultiRegionEndpointRoutesDetailsPropertyToTerraform(struct?: AwsMultiRegionEndpoint.RoutesDetailsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function tfMultiRegionEndpointRoutesDetailsPropertyToTerraform(struct?: T
 }
 
 
-export function tfMultiRegionEndpointRoutesDetailsPropertyToHclTerraform(struct?: TfMultiRegionEndpoint.RoutesDetailsProperty | cdktn.IResolvable): any {
+export function awsMultiRegionEndpointRoutesDetailsPropertyToHclTerraform(struct?: AwsMultiRegionEndpoint.RoutesDetailsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,25 +299,25 @@ export function tfMultiRegionEndpointRoutesDetailsPropertyToHclTerraform(struct?
 }
 
 
-export function tfMultiRegionEndpointDetailsPropertyToTerraform(struct?: TfMultiRegionEndpoint.DetailsProperty | cdktn.IResolvable): any {
+export function awsMultiRegionEndpointDetailsPropertyToTerraform(struct?: AwsMultiRegionEndpoint.DetailsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    routes_details: cdktn.listMapper(tfMultiRegionEndpointRoutesDetailsPropertyToTerraform, true)(struct!.routesDetails),
+    routes_details: cdktn.listMapper(awsMultiRegionEndpointRoutesDetailsPropertyToTerraform, true)(struct!.routesDetails),
   }
 }
 
 
-export function tfMultiRegionEndpointDetailsPropertyToHclTerraform(struct?: TfMultiRegionEndpoint.DetailsProperty | cdktn.IResolvable): any {
+export function awsMultiRegionEndpointDetailsPropertyToHclTerraform(struct?: AwsMultiRegionEndpoint.DetailsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     routes_details: {
-      value: cdktn.listMapperHcl(tfMultiRegionEndpointRoutesDetailsPropertyToHclTerraform, true)(struct!.routesDetails),
+      value: cdktn.listMapperHcl(awsMultiRegionEndpointRoutesDetailsPropertyToHclTerraform, true)(struct!.routesDetails),
       isBlock: true,
       type: "list",
       storageClassType: "RoutesDetailsPropertyList",
@@ -329,7 +329,7 @@ export function tfMultiRegionEndpointDetailsPropertyToHclTerraform(struct?: TfMu
 }
 
 
-export function tfMultiRegionEndpointTimeoutsPropertyToTerraform(struct?: TfMultiRegionEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMultiRegionEndpointTimeoutsPropertyToTerraform(struct?: AwsMultiRegionEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function tfMultiRegionEndpointTimeoutsPropertyToTerraform(struct?: TfMult
 }
 
 
-export function tfMultiRegionEndpointTimeoutsPropertyToHclTerraform(struct?: TfMultiRegionEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMultiRegionEndpointTimeoutsPropertyToHclTerraform(struct?: AwsMultiRegionEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function tfMultiRegionEndpointTimeoutsPropertyToHclTerraform(struct?: TfM
 }
 
 
-export namespace TfMultiRegionEndpoint {
+export namespace AwsMultiRegionEndpoint {
 export interface RoutesProperty {
 }
 export class RoutesPropertyOutputReference extends cdktn.ComplexObject {
@@ -423,7 +423,7 @@ export class RoutesPropertyList extends cdktn.ComplexList {
 }
 export interface RoutesDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#region TfMultiRegionEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#region AwsMultiRegionEndpoint#region}
   */
   readonly region: string;
 }
@@ -508,7 +508,7 @@ export interface DetailsProperty {
   /**
   * routes_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#routes_details TfMultiRegionEndpoint#routes_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#routes_details AwsMultiRegionEndpoint#routes_details}
   */
   readonly routesDetails?: RoutesDetailsProperty[] | cdktn.IResolvable;
 }
@@ -596,13 +596,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#create TfMultiRegionEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#create AwsMultiRegionEndpoint#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#delete TfMultiRegionEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_multi_region_endpoint#delete AwsMultiRegionEndpoint#delete}
   */
   readonly delete?: string;
 }

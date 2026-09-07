@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfPolicyStoreConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsPolicyStoreConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/verifiedpermissions_policy_store#id DataTfPolicyStore#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/verifiedpermissions_policy_store#id DataAwsPolicyStore#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,7 +16,7 @@ export interface DataTfPolicyStoreConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/verifiedpermissions_policy_store#region DataTfPolicyStore#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/verifiedpermissions_policy_store#region DataAwsPolicyStore#region}
   */
   readonly region?: string;
 }
@@ -24,7 +24,7 @@ export interface DataTfPolicyStoreConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/verifiedpermissions_policy_store aws_verifiedpermissions_policy_store}
 */
-export class DataTfPolicyStore extends cdktn.TerraformDataSource {
+export class DataAwsPolicyStore extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -35,11 +35,11 @@ export class DataTfPolicyStore extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfPolicyStore resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsPolicyStore resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfPolicyStore to import
-  * @param importFromId The id of the existing DataTfPolicyStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/verifiedpermissions_policy_store#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfPolicyStore to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsPolicyStore to import
+  * @param importFromId The id of the existing DataAwsPolicyStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/verifiedpermissions_policy_store#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsPolicyStore to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_verifiedpermissions_policy_store", importId: importFromId, provider });
@@ -54,9 +54,9 @@ export class DataTfPolicyStore extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfPolicyStoreConfig
+  * @param options DataAwsPolicyStoreConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfPolicyStoreConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsPolicyStoreConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_verifiedpermissions_policy_store',
       terraformGeneratorMetadata: {
@@ -141,7 +141,7 @@ export class DataTfPolicyStore extends cdktn.TerraformDataSource {
   }
 
   // validation_settings - computed: true, optional: false, required: false
-  private _validationSettings = new DataTfPolicyStore.ValidationSettingsPropertyList(this, "validation_settings", false);
+  private _validationSettings = new DataAwsPolicyStore.ValidationSettingsPropertyList(this, "validation_settings", false);
   public get validationSettings() {
     return this._validationSettings;
   }
@@ -178,7 +178,7 @@ export class DataTfPolicyStore extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfPolicyStoreValidationSettingsPropertyToTerraform(struct?: DataTfPolicyStore.ValidationSettingsProperty): any {
+export function dataAwsPolicyStoreValidationSettingsPropertyToTerraform(struct?: DataAwsPolicyStore.ValidationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -188,7 +188,7 @@ export function dataTfPolicyStoreValidationSettingsPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfPolicyStoreValidationSettingsPropertyToHclTerraform(struct?: DataTfPolicyStore.ValidationSettingsProperty): any {
+export function dataAwsPolicyStoreValidationSettingsPropertyToHclTerraform(struct?: DataAwsPolicyStore.ValidationSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -199,7 +199,7 @@ export function dataTfPolicyStoreValidationSettingsPropertyToHclTerraform(struct
 }
 
 
-export namespace DataTfPolicyStore {
+export namespace DataAwsPolicyStore {
 export interface ValidationSettingsProperty {
 }
 export class ValidationSettingsPropertyOutputReference extends cdktn.ComplexObject {

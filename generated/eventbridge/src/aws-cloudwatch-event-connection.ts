@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConnectionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConnectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#authorization_type TfConnection#authorization_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#authorization_type AwsConnection#authorization_type}
   */
   readonly authorizationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#description TfConnection#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#description AwsConnection#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#id TfConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#id AwsConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#kms_key_identifier TfConnection#kms_key_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#kms_key_identifier AwsConnection#kms_key_identifier}
   */
   readonly kmsKeyIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#name TfConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#name AwsConnection#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#region TfConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#region AwsConnection#region}
   */
   readonly region?: string;
   /**
   * auth_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#auth_parameters TfConnection#auth_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#auth_parameters AwsConnection#auth_parameters}
   */
-  readonly authParameters: TfConnection.AuthParametersProperty;
+  readonly authParameters: AwsConnection.AuthParametersProperty;
   /**
   * invocation_connectivity_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#invocation_connectivity_parameters TfConnection#invocation_connectivity_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#invocation_connectivity_parameters AwsConnection#invocation_connectivity_parameters}
   */
-  readonly invocationConnectivityParameters?: TfConnection.InvocationConnectivityParametersProperty;
+  readonly invocationConnectivityParameters?: AwsConnection.InvocationConnectivityParametersProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection aws_cloudwatch_event_connection}
 */
-export class TfConnection extends cdktn.TerraformResource {
+export class AwsConnection extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfConnection extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConnection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConnection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConnection to import
-  * @param importFromId The id of the existing TfConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConnection to import is found
+  * @param importToId The construct id used in the generated config for the AwsConnection to import
+  * @param importFromId The id of the existing AwsConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_event_connection", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfConnection extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConnectionConfig
+  * @param options AwsConnectionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConnectionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_event_connection',
       terraformGeneratorMetadata: {
@@ -215,11 +215,11 @@ export class TfConnection extends cdktn.TerraformResource {
   }
 
   // auth_parameters - computed: false, optional: false, required: true
-  private _authParameters = new TfConnection.AuthParametersPropertyOutputReference(this, "auth_parameters");
+  private _authParameters = new AwsConnection.AuthParametersPropertyOutputReference(this, "auth_parameters");
   public get authParameters() {
     return this._authParameters;
   }
-  public putAuthParameters(value: TfConnection.AuthParametersProperty) {
+  public putAuthParameters(value: AwsConnection.AuthParametersProperty) {
     this._authParameters.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -228,11 +228,11 @@ export class TfConnection extends cdktn.TerraformResource {
   }
 
   // invocation_connectivity_parameters - computed: false, optional: true, required: false
-  private _invocationConnectivityParameters = new TfConnection.InvocationConnectivityParametersPropertyOutputReference(this, "invocation_connectivity_parameters");
+  private _invocationConnectivityParameters = new AwsConnection.InvocationConnectivityParametersPropertyOutputReference(this, "invocation_connectivity_parameters");
   public get invocationConnectivityParameters() {
     return this._invocationConnectivityParameters;
   }
-  public putInvocationConnectivityParameters(value: TfConnection.InvocationConnectivityParametersProperty) {
+  public putInvocationConnectivityParameters(value: AwsConnection.InvocationConnectivityParametersProperty) {
     this._invocationConnectivityParameters.internalValue = value;
   }
   public resetInvocationConnectivityParameters() {
@@ -255,8 +255,8 @@ export class TfConnection extends cdktn.TerraformResource {
       kms_key_identifier: cdktn.stringToTerraform(this._kmsKeyIdentifier),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      auth_parameters: tfConnectionAuthParametersPropertyToTerraform(this._authParameters.internalValue),
-      invocation_connectivity_parameters: tfConnectionInvocationConnectivityParametersPropertyToTerraform(this._invocationConnectivityParameters.internalValue),
+      auth_parameters: awsConnectionAuthParametersPropertyToTerraform(this._authParameters.internalValue),
+      invocation_connectivity_parameters: awsConnectionInvocationConnectivityParametersPropertyToTerraform(this._invocationConnectivityParameters.internalValue),
     };
   }
 
@@ -299,16 +299,16 @@ export class TfConnection extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       auth_parameters: {
-        value: tfConnectionAuthParametersPropertyToHclTerraform(this._authParameters.internalValue),
+        value: awsConnectionAuthParametersPropertyToHclTerraform(this._authParameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConnection.AuthParametersPropertyList",
+        storageClassType: "AwsConnection.AuthParametersPropertyList",
       },
       invocation_connectivity_parameters: {
-        value: tfConnectionInvocationConnectivityParametersPropertyToHclTerraform(this._invocationConnectivityParameters.internalValue),
+        value: awsConnectionInvocationConnectivityParametersPropertyToHclTerraform(this._invocationConnectivityParameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConnection.InvocationConnectivityParametersPropertyList",
+        storageClassType: "AwsConnection.InvocationConnectivityParametersPropertyList",
       },
     };
 
@@ -317,7 +317,7 @@ export class TfConnection extends cdktn.TerraformResource {
   }
 }
 
-export function tfConnectionApiKeyPropertyToTerraform(struct?: TfConnection.ApiKeyPropertyOutputReference | TfConnection.ApiKeyProperty): any {
+export function awsConnectionApiKeyPropertyToTerraform(struct?: AwsConnection.ApiKeyPropertyOutputReference | AwsConnection.ApiKeyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function tfConnectionApiKeyPropertyToTerraform(struct?: TfConnection.ApiK
 }
 
 
-export function tfConnectionApiKeyPropertyToHclTerraform(struct?: TfConnection.ApiKeyPropertyOutputReference | TfConnection.ApiKeyProperty): any {
+export function awsConnectionApiKeyPropertyToHclTerraform(struct?: AwsConnection.ApiKeyPropertyOutputReference | AwsConnection.ApiKeyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function tfConnectionApiKeyPropertyToHclTerraform(struct?: TfConnection.A
 }
 
 
-export function tfConnectionBasicPropertyToTerraform(struct?: TfConnection.BasicPropertyOutputReference | TfConnection.BasicProperty): any {
+export function awsConnectionBasicPropertyToTerraform(struct?: AwsConnection.BasicPropertyOutputReference | AwsConnection.BasicProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function tfConnectionBasicPropertyToTerraform(struct?: TfConnection.Basic
 }
 
 
-export function tfConnectionBasicPropertyToHclTerraform(struct?: TfConnection.BasicPropertyOutputReference | TfConnection.BasicProperty): any {
+export function awsConnectionBasicPropertyToHclTerraform(struct?: AwsConnection.BasicPropertyOutputReference | AwsConnection.BasicProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function tfConnectionBasicPropertyToHclTerraform(struct?: TfConnection.Ba
 }
 
 
-export function tfConnectionAuthParametersConnectivityParametersResourceParametersPropertyToTerraform(struct?: TfConnection.AuthParametersConnectivityParametersResourceParametersPropertyOutputReference | TfConnection.AuthParametersConnectivityParametersResourceParametersProperty): any {
+export function awsConnectionAuthParametersConnectivityParametersResourceParametersPropertyToTerraform(struct?: AwsConnection.AuthParametersConnectivityParametersResourceParametersPropertyOutputReference | AwsConnection.AuthParametersConnectivityParametersResourceParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,7 +402,7 @@ export function tfConnectionAuthParametersConnectivityParametersResourceParamete
 }
 
 
-export function tfConnectionAuthParametersConnectivityParametersResourceParametersPropertyToHclTerraform(struct?: TfConnection.AuthParametersConnectivityParametersResourceParametersPropertyOutputReference | TfConnection.AuthParametersConnectivityParametersResourceParametersProperty): any {
+export function awsConnectionAuthParametersConnectivityParametersResourceParametersPropertyToHclTerraform(struct?: AwsConnection.AuthParametersConnectivityParametersResourceParametersPropertyOutputReference | AwsConnection.AuthParametersConnectivityParametersResourceParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,25 +421,25 @@ export function tfConnectionAuthParametersConnectivityParametersResourceParamete
 }
 
 
-export function tfConnectionConnectivityParametersPropertyToTerraform(struct?: TfConnection.ConnectivityParametersPropertyOutputReference | TfConnection.ConnectivityParametersProperty): any {
+export function awsConnectionConnectivityParametersPropertyToTerraform(struct?: AwsConnection.ConnectivityParametersPropertyOutputReference | AwsConnection.ConnectivityParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    resource_parameters: tfConnectionAuthParametersConnectivityParametersResourceParametersPropertyToTerraform(struct!.resourceParameters),
+    resource_parameters: awsConnectionAuthParametersConnectivityParametersResourceParametersPropertyToTerraform(struct!.resourceParameters),
   }
 }
 
 
-export function tfConnectionConnectivityParametersPropertyToHclTerraform(struct?: TfConnection.ConnectivityParametersPropertyOutputReference | TfConnection.ConnectivityParametersProperty): any {
+export function awsConnectionConnectivityParametersPropertyToHclTerraform(struct?: AwsConnection.ConnectivityParametersPropertyOutputReference | AwsConnection.ConnectivityParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     resource_parameters: {
-      value: tfConnectionAuthParametersConnectivityParametersResourceParametersPropertyToHclTerraform(struct!.resourceParameters),
+      value: awsConnectionAuthParametersConnectivityParametersResourceParametersPropertyToHclTerraform(struct!.resourceParameters),
       isBlock: true,
       type: "list",
       storageClassType: "AuthParametersConnectivityParametersResourceParametersPropertyList",
@@ -451,7 +451,7 @@ export function tfConnectionConnectivityParametersPropertyToHclTerraform(struct?
 }
 
 
-export function tfConnectionAuthParametersInvocationHttpParametersBodyPropertyToTerraform(struct?: TfConnection.AuthParametersInvocationHttpParametersBodyProperty | cdktn.IResolvable): any {
+export function awsConnectionAuthParametersInvocationHttpParametersBodyPropertyToTerraform(struct?: AwsConnection.AuthParametersInvocationHttpParametersBodyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function tfConnectionAuthParametersInvocationHttpParametersBodyPropertyTo
 }
 
 
-export function tfConnectionAuthParametersInvocationHttpParametersBodyPropertyToHclTerraform(struct?: TfConnection.AuthParametersInvocationHttpParametersBodyProperty | cdktn.IResolvable): any {
+export function awsConnectionAuthParametersInvocationHttpParametersBodyPropertyToHclTerraform(struct?: AwsConnection.AuthParametersInvocationHttpParametersBodyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function tfConnectionAuthParametersInvocationHttpParametersBodyPropertyTo
 }
 
 
-export function tfConnectionAuthParametersInvocationHttpParametersHeaderPropertyToTerraform(struct?: TfConnection.AuthParametersInvocationHttpParametersHeaderProperty | cdktn.IResolvable): any {
+export function awsConnectionAuthParametersInvocationHttpParametersHeaderPropertyToTerraform(struct?: AwsConnection.AuthParametersInvocationHttpParametersHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function tfConnectionAuthParametersInvocationHttpParametersHeaderProperty
 }
 
 
-export function tfConnectionAuthParametersInvocationHttpParametersHeaderPropertyToHclTerraform(struct?: TfConnection.AuthParametersInvocationHttpParametersHeaderProperty | cdktn.IResolvable): any {
+export function awsConnectionAuthParametersInvocationHttpParametersHeaderPropertyToHclTerraform(struct?: AwsConnection.AuthParametersInvocationHttpParametersHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -539,7 +539,7 @@ export function tfConnectionAuthParametersInvocationHttpParametersHeaderProperty
 }
 
 
-export function tfConnectionAuthParametersInvocationHttpParametersQueryStringPropertyToTerraform(struct?: TfConnection.AuthParametersInvocationHttpParametersQueryStringProperty | cdktn.IResolvable): any {
+export function awsConnectionAuthParametersInvocationHttpParametersQueryStringPropertyToTerraform(struct?: AwsConnection.AuthParametersInvocationHttpParametersQueryStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -552,7 +552,7 @@ export function tfConnectionAuthParametersInvocationHttpParametersQueryStringPro
 }
 
 
-export function tfConnectionAuthParametersInvocationHttpParametersQueryStringPropertyToHclTerraform(struct?: TfConnection.AuthParametersInvocationHttpParametersQueryStringProperty | cdktn.IResolvable): any {
+export function awsConnectionAuthParametersInvocationHttpParametersQueryStringPropertyToHclTerraform(struct?: AwsConnection.AuthParametersInvocationHttpParametersQueryStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,39 +583,39 @@ export function tfConnectionAuthParametersInvocationHttpParametersQueryStringPro
 }
 
 
-export function tfConnectionInvocationHttpParametersPropertyToTerraform(struct?: TfConnection.InvocationHttpParametersPropertyOutputReference | TfConnection.InvocationHttpParametersProperty): any {
+export function awsConnectionInvocationHttpParametersPropertyToTerraform(struct?: AwsConnection.InvocationHttpParametersPropertyOutputReference | AwsConnection.InvocationHttpParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    body: cdktn.listMapper(tfConnectionAuthParametersInvocationHttpParametersBodyPropertyToTerraform, true)(struct!.body),
-    header: cdktn.listMapper(tfConnectionAuthParametersInvocationHttpParametersHeaderPropertyToTerraform, true)(struct!.header),
-    query_string: cdktn.listMapper(tfConnectionAuthParametersInvocationHttpParametersQueryStringPropertyToTerraform, true)(struct!.queryString),
+    body: cdktn.listMapper(awsConnectionAuthParametersInvocationHttpParametersBodyPropertyToTerraform, true)(struct!.body),
+    header: cdktn.listMapper(awsConnectionAuthParametersInvocationHttpParametersHeaderPropertyToTerraform, true)(struct!.header),
+    query_string: cdktn.listMapper(awsConnectionAuthParametersInvocationHttpParametersQueryStringPropertyToTerraform, true)(struct!.queryString),
   }
 }
 
 
-export function tfConnectionInvocationHttpParametersPropertyToHclTerraform(struct?: TfConnection.InvocationHttpParametersPropertyOutputReference | TfConnection.InvocationHttpParametersProperty): any {
+export function awsConnectionInvocationHttpParametersPropertyToHclTerraform(struct?: AwsConnection.InvocationHttpParametersPropertyOutputReference | AwsConnection.InvocationHttpParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     body: {
-      value: cdktn.listMapperHcl(tfConnectionAuthParametersInvocationHttpParametersBodyPropertyToHclTerraform, true)(struct!.body),
+      value: cdktn.listMapperHcl(awsConnectionAuthParametersInvocationHttpParametersBodyPropertyToHclTerraform, true)(struct!.body),
       isBlock: true,
       type: "list",
       storageClassType: "AuthParametersInvocationHttpParametersBodyPropertyList",
     },
     header: {
-      value: cdktn.listMapperHcl(tfConnectionAuthParametersInvocationHttpParametersHeaderPropertyToHclTerraform, true)(struct!.header),
+      value: cdktn.listMapperHcl(awsConnectionAuthParametersInvocationHttpParametersHeaderPropertyToHclTerraform, true)(struct!.header),
       isBlock: true,
       type: "list",
       storageClassType: "AuthParametersInvocationHttpParametersHeaderPropertyList",
     },
     query_string: {
-      value: cdktn.listMapperHcl(tfConnectionAuthParametersInvocationHttpParametersQueryStringPropertyToHclTerraform, true)(struct!.queryString),
+      value: cdktn.listMapperHcl(awsConnectionAuthParametersInvocationHttpParametersQueryStringPropertyToHclTerraform, true)(struct!.queryString),
       isBlock: true,
       type: "list",
       storageClassType: "AuthParametersInvocationHttpParametersQueryStringPropertyList",
@@ -627,7 +627,7 @@ export function tfConnectionInvocationHttpParametersPropertyToHclTerraform(struc
 }
 
 
-export function tfConnectionClientParametersPropertyToTerraform(struct?: TfConnection.ClientParametersPropertyOutputReference | TfConnection.ClientParametersProperty): any {
+export function awsConnectionClientParametersPropertyToTerraform(struct?: AwsConnection.ClientParametersPropertyOutputReference | AwsConnection.ClientParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -639,7 +639,7 @@ export function tfConnectionClientParametersPropertyToTerraform(struct?: TfConne
 }
 
 
-export function tfConnectionClientParametersPropertyToHclTerraform(struct?: TfConnection.ClientParametersPropertyOutputReference | TfConnection.ClientParametersProperty): any {
+export function awsConnectionClientParametersPropertyToHclTerraform(struct?: AwsConnection.ClientParametersPropertyOutputReference | AwsConnection.ClientParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -664,7 +664,7 @@ export function tfConnectionClientParametersPropertyToHclTerraform(struct?: TfCo
 }
 
 
-export function tfConnectionAuthParametersOauthOauthHttpParametersBodyPropertyToTerraform(struct?: TfConnection.AuthParametersOauthOauthHttpParametersBodyProperty | cdktn.IResolvable): any {
+export function awsConnectionAuthParametersOauthOauthHttpParametersBodyPropertyToTerraform(struct?: AwsConnection.AuthParametersOauthOauthHttpParametersBodyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -677,7 +677,7 @@ export function tfConnectionAuthParametersOauthOauthHttpParametersBodyPropertyTo
 }
 
 
-export function tfConnectionAuthParametersOauthOauthHttpParametersBodyPropertyToHclTerraform(struct?: TfConnection.AuthParametersOauthOauthHttpParametersBodyProperty | cdktn.IResolvable): any {
+export function awsConnectionAuthParametersOauthOauthHttpParametersBodyPropertyToHclTerraform(struct?: AwsConnection.AuthParametersOauthOauthHttpParametersBodyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -708,7 +708,7 @@ export function tfConnectionAuthParametersOauthOauthHttpParametersBodyPropertyTo
 }
 
 
-export function tfConnectionAuthParametersOauthOauthHttpParametersHeaderPropertyToTerraform(struct?: TfConnection.AuthParametersOauthOauthHttpParametersHeaderProperty | cdktn.IResolvable): any {
+export function awsConnectionAuthParametersOauthOauthHttpParametersHeaderPropertyToTerraform(struct?: AwsConnection.AuthParametersOauthOauthHttpParametersHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -721,7 +721,7 @@ export function tfConnectionAuthParametersOauthOauthHttpParametersHeaderProperty
 }
 
 
-export function tfConnectionAuthParametersOauthOauthHttpParametersHeaderPropertyToHclTerraform(struct?: TfConnection.AuthParametersOauthOauthHttpParametersHeaderProperty | cdktn.IResolvable): any {
+export function awsConnectionAuthParametersOauthOauthHttpParametersHeaderPropertyToHclTerraform(struct?: AwsConnection.AuthParametersOauthOauthHttpParametersHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,7 +752,7 @@ export function tfConnectionAuthParametersOauthOauthHttpParametersHeaderProperty
 }
 
 
-export function tfConnectionAuthParametersOauthOauthHttpParametersQueryStringPropertyToTerraform(struct?: TfConnection.AuthParametersOauthOauthHttpParametersQueryStringProperty | cdktn.IResolvable): any {
+export function awsConnectionAuthParametersOauthOauthHttpParametersQueryStringPropertyToTerraform(struct?: AwsConnection.AuthParametersOauthOauthHttpParametersQueryStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,7 +765,7 @@ export function tfConnectionAuthParametersOauthOauthHttpParametersQueryStringPro
 }
 
 
-export function tfConnectionAuthParametersOauthOauthHttpParametersQueryStringPropertyToHclTerraform(struct?: TfConnection.AuthParametersOauthOauthHttpParametersQueryStringProperty | cdktn.IResolvable): any {
+export function awsConnectionAuthParametersOauthOauthHttpParametersQueryStringPropertyToHclTerraform(struct?: AwsConnection.AuthParametersOauthOauthHttpParametersQueryStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -796,39 +796,39 @@ export function tfConnectionAuthParametersOauthOauthHttpParametersQueryStringPro
 }
 
 
-export function tfConnectionOauthHttpParametersPropertyToTerraform(struct?: TfConnection.OauthHttpParametersPropertyOutputReference | TfConnection.OauthHttpParametersProperty): any {
+export function awsConnectionOauthHttpParametersPropertyToTerraform(struct?: AwsConnection.OauthHttpParametersPropertyOutputReference | AwsConnection.OauthHttpParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    body: cdktn.listMapper(tfConnectionAuthParametersOauthOauthHttpParametersBodyPropertyToTerraform, true)(struct!.body),
-    header: cdktn.listMapper(tfConnectionAuthParametersOauthOauthHttpParametersHeaderPropertyToTerraform, true)(struct!.header),
-    query_string: cdktn.listMapper(tfConnectionAuthParametersOauthOauthHttpParametersQueryStringPropertyToTerraform, true)(struct!.queryString),
+    body: cdktn.listMapper(awsConnectionAuthParametersOauthOauthHttpParametersBodyPropertyToTerraform, true)(struct!.body),
+    header: cdktn.listMapper(awsConnectionAuthParametersOauthOauthHttpParametersHeaderPropertyToTerraform, true)(struct!.header),
+    query_string: cdktn.listMapper(awsConnectionAuthParametersOauthOauthHttpParametersQueryStringPropertyToTerraform, true)(struct!.queryString),
   }
 }
 
 
-export function tfConnectionOauthHttpParametersPropertyToHclTerraform(struct?: TfConnection.OauthHttpParametersPropertyOutputReference | TfConnection.OauthHttpParametersProperty): any {
+export function awsConnectionOauthHttpParametersPropertyToHclTerraform(struct?: AwsConnection.OauthHttpParametersPropertyOutputReference | AwsConnection.OauthHttpParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     body: {
-      value: cdktn.listMapperHcl(tfConnectionAuthParametersOauthOauthHttpParametersBodyPropertyToHclTerraform, true)(struct!.body),
+      value: cdktn.listMapperHcl(awsConnectionAuthParametersOauthOauthHttpParametersBodyPropertyToHclTerraform, true)(struct!.body),
       isBlock: true,
       type: "list",
       storageClassType: "AuthParametersOauthOauthHttpParametersBodyPropertyList",
     },
     header: {
-      value: cdktn.listMapperHcl(tfConnectionAuthParametersOauthOauthHttpParametersHeaderPropertyToHclTerraform, true)(struct!.header),
+      value: cdktn.listMapperHcl(awsConnectionAuthParametersOauthOauthHttpParametersHeaderPropertyToHclTerraform, true)(struct!.header),
       isBlock: true,
       type: "list",
       storageClassType: "AuthParametersOauthOauthHttpParametersHeaderPropertyList",
     },
     query_string: {
-      value: cdktn.listMapperHcl(tfConnectionAuthParametersOauthOauthHttpParametersQueryStringPropertyToHclTerraform, true)(struct!.queryString),
+      value: cdktn.listMapperHcl(awsConnectionAuthParametersOauthOauthHttpParametersQueryStringPropertyToHclTerraform, true)(struct!.queryString),
       isBlock: true,
       type: "list",
       storageClassType: "AuthParametersOauthOauthHttpParametersQueryStringPropertyList",
@@ -840,7 +840,7 @@ export function tfConnectionOauthHttpParametersPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfConnectionOauthPropertyToTerraform(struct?: TfConnection.OauthPropertyOutputReference | TfConnection.OauthProperty): any {
+export function awsConnectionOauthPropertyToTerraform(struct?: AwsConnection.OauthPropertyOutputReference | AwsConnection.OauthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -848,13 +848,13 @@ export function tfConnectionOauthPropertyToTerraform(struct?: TfConnection.Oauth
   return {
     authorization_endpoint: cdktn.stringToTerraform(struct!.authorizationEndpoint),
     http_method: cdktn.stringToTerraform(struct!.httpMethod),
-    client_parameters: tfConnectionClientParametersPropertyToTerraform(struct!.clientParameters),
-    oauth_http_parameters: tfConnectionOauthHttpParametersPropertyToTerraform(struct!.oauthHttpParameters),
+    client_parameters: awsConnectionClientParametersPropertyToTerraform(struct!.clientParameters),
+    oauth_http_parameters: awsConnectionOauthHttpParametersPropertyToTerraform(struct!.oauthHttpParameters),
   }
 }
 
 
-export function tfConnectionOauthPropertyToHclTerraform(struct?: TfConnection.OauthPropertyOutputReference | TfConnection.OauthProperty): any {
+export function awsConnectionOauthPropertyToHclTerraform(struct?: AwsConnection.OauthPropertyOutputReference | AwsConnection.OauthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -873,13 +873,13 @@ export function tfConnectionOauthPropertyToHclTerraform(struct?: TfConnection.Oa
       storageClassType: "string",
     },
     client_parameters: {
-      value: tfConnectionClientParametersPropertyToHclTerraform(struct!.clientParameters),
+      value: awsConnectionClientParametersPropertyToHclTerraform(struct!.clientParameters),
       isBlock: true,
       type: "list",
       storageClassType: "ClientParametersPropertyList",
     },
     oauth_http_parameters: {
-      value: tfConnectionOauthHttpParametersPropertyToHclTerraform(struct!.oauthHttpParameters),
+      value: awsConnectionOauthHttpParametersPropertyToHclTerraform(struct!.oauthHttpParameters),
       isBlock: true,
       type: "list",
       storageClassType: "OauthHttpParametersPropertyList",
@@ -891,53 +891,53 @@ export function tfConnectionOauthPropertyToHclTerraform(struct?: TfConnection.Oa
 }
 
 
-export function tfConnectionAuthParametersPropertyToTerraform(struct?: TfConnection.AuthParametersPropertyOutputReference | TfConnection.AuthParametersProperty): any {
+export function awsConnectionAuthParametersPropertyToTerraform(struct?: AwsConnection.AuthParametersPropertyOutputReference | AwsConnection.AuthParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    api_key: tfConnectionApiKeyPropertyToTerraform(struct!.apiKey),
-    basic: tfConnectionBasicPropertyToTerraform(struct!.basic),
-    connectivity_parameters: tfConnectionConnectivityParametersPropertyToTerraform(struct!.connectivityParameters),
-    invocation_http_parameters: tfConnectionInvocationHttpParametersPropertyToTerraform(struct!.invocationHttpParameters),
-    oauth: tfConnectionOauthPropertyToTerraform(struct!.oauth),
+    api_key: awsConnectionApiKeyPropertyToTerraform(struct!.apiKey),
+    basic: awsConnectionBasicPropertyToTerraform(struct!.basic),
+    connectivity_parameters: awsConnectionConnectivityParametersPropertyToTerraform(struct!.connectivityParameters),
+    invocation_http_parameters: awsConnectionInvocationHttpParametersPropertyToTerraform(struct!.invocationHttpParameters),
+    oauth: awsConnectionOauthPropertyToTerraform(struct!.oauth),
   }
 }
 
 
-export function tfConnectionAuthParametersPropertyToHclTerraform(struct?: TfConnection.AuthParametersPropertyOutputReference | TfConnection.AuthParametersProperty): any {
+export function awsConnectionAuthParametersPropertyToHclTerraform(struct?: AwsConnection.AuthParametersPropertyOutputReference | AwsConnection.AuthParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     api_key: {
-      value: tfConnectionApiKeyPropertyToHclTerraform(struct!.apiKey),
+      value: awsConnectionApiKeyPropertyToHclTerraform(struct!.apiKey),
       isBlock: true,
       type: "list",
       storageClassType: "ApiKeyPropertyList",
     },
     basic: {
-      value: tfConnectionBasicPropertyToHclTerraform(struct!.basic),
+      value: awsConnectionBasicPropertyToHclTerraform(struct!.basic),
       isBlock: true,
       type: "list",
       storageClassType: "BasicPropertyList",
     },
     connectivity_parameters: {
-      value: tfConnectionConnectivityParametersPropertyToHclTerraform(struct!.connectivityParameters),
+      value: awsConnectionConnectivityParametersPropertyToHclTerraform(struct!.connectivityParameters),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectivityParametersPropertyList",
     },
     invocation_http_parameters: {
-      value: tfConnectionInvocationHttpParametersPropertyToHclTerraform(struct!.invocationHttpParameters),
+      value: awsConnectionInvocationHttpParametersPropertyToHclTerraform(struct!.invocationHttpParameters),
       isBlock: true,
       type: "list",
       storageClassType: "InvocationHttpParametersPropertyList",
     },
     oauth: {
-      value: tfConnectionOauthPropertyToHclTerraform(struct!.oauth),
+      value: awsConnectionOauthPropertyToHclTerraform(struct!.oauth),
       isBlock: true,
       type: "list",
       storageClassType: "OauthPropertyList",
@@ -949,7 +949,7 @@ export function tfConnectionAuthParametersPropertyToHclTerraform(struct?: TfConn
 }
 
 
-export function tfConnectionInvocationConnectivityParametersResourceParametersPropertyToTerraform(struct?: TfConnection.InvocationConnectivityParametersResourceParametersPropertyOutputReference | TfConnection.InvocationConnectivityParametersResourceParametersProperty): any {
+export function awsConnectionInvocationConnectivityParametersResourceParametersPropertyToTerraform(struct?: AwsConnection.InvocationConnectivityParametersResourceParametersPropertyOutputReference | AwsConnection.InvocationConnectivityParametersResourceParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -960,7 +960,7 @@ export function tfConnectionInvocationConnectivityParametersResourceParametersPr
 }
 
 
-export function tfConnectionInvocationConnectivityParametersResourceParametersPropertyToHclTerraform(struct?: TfConnection.InvocationConnectivityParametersResourceParametersPropertyOutputReference | TfConnection.InvocationConnectivityParametersResourceParametersProperty): any {
+export function awsConnectionInvocationConnectivityParametersResourceParametersPropertyToHclTerraform(struct?: AwsConnection.InvocationConnectivityParametersResourceParametersPropertyOutputReference | AwsConnection.InvocationConnectivityParametersResourceParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -979,25 +979,25 @@ export function tfConnectionInvocationConnectivityParametersResourceParametersPr
 }
 
 
-export function tfConnectionInvocationConnectivityParametersPropertyToTerraform(struct?: TfConnection.InvocationConnectivityParametersPropertyOutputReference | TfConnection.InvocationConnectivityParametersProperty): any {
+export function awsConnectionInvocationConnectivityParametersPropertyToTerraform(struct?: AwsConnection.InvocationConnectivityParametersPropertyOutputReference | AwsConnection.InvocationConnectivityParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    resource_parameters: tfConnectionInvocationConnectivityParametersResourceParametersPropertyToTerraform(struct!.resourceParameters),
+    resource_parameters: awsConnectionInvocationConnectivityParametersResourceParametersPropertyToTerraform(struct!.resourceParameters),
   }
 }
 
 
-export function tfConnectionInvocationConnectivityParametersPropertyToHclTerraform(struct?: TfConnection.InvocationConnectivityParametersPropertyOutputReference | TfConnection.InvocationConnectivityParametersProperty): any {
+export function awsConnectionInvocationConnectivityParametersPropertyToHclTerraform(struct?: AwsConnection.InvocationConnectivityParametersPropertyOutputReference | AwsConnection.InvocationConnectivityParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     resource_parameters: {
-      value: tfConnectionInvocationConnectivityParametersResourceParametersPropertyToHclTerraform(struct!.resourceParameters),
+      value: awsConnectionInvocationConnectivityParametersResourceParametersPropertyToHclTerraform(struct!.resourceParameters),
       isBlock: true,
       type: "list",
       storageClassType: "InvocationConnectivityParametersResourceParametersPropertyList",
@@ -1009,14 +1009,14 @@ export function tfConnectionInvocationConnectivityParametersPropertyToHclTerrafo
 }
 
 
-export namespace TfConnection {
+export namespace AwsConnection {
 export interface ApiKeyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key TfConnection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key AwsConnection#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value TfConnection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value AwsConnection#value}
   */
   readonly value: string;
 }
@@ -1086,11 +1086,11 @@ export class ApiKeyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BasicProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#password TfConnection#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#password AwsConnection#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#username TfConnection#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#username AwsConnection#username}
   */
   readonly username: string;
 }
@@ -1160,7 +1160,7 @@ export class BasicPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AuthParametersConnectivityParametersResourceParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#resource_configuration_arn TfConnection#resource_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#resource_configuration_arn AwsConnection#resource_configuration_arn}
   */
   readonly resourceConfigurationArn: string;
 }
@@ -1218,7 +1218,7 @@ export interface ConnectivityParametersProperty {
   /**
   * resource_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#resource_parameters TfConnection#resource_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#resource_parameters AwsConnection#resource_parameters}
   */
   readonly resourceParameters: AuthParametersConnectivityParametersResourceParametersProperty;
 }
@@ -1269,15 +1269,15 @@ export class ConnectivityParametersPropertyOutputReference extends cdktn.Complex
 }
 export interface AuthParametersInvocationHttpParametersBodyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#is_value_secret TfConnection#is_value_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#is_value_secret AwsConnection#is_value_secret}
   */
   readonly isValueSecret?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key TfConnection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key AwsConnection#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value TfConnection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value AwsConnection#value}
   */
   readonly value?: string;
 }
@@ -1407,15 +1407,15 @@ export class AuthParametersInvocationHttpParametersBodyPropertyList extends cdkt
 }
 export interface AuthParametersInvocationHttpParametersHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#is_value_secret TfConnection#is_value_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#is_value_secret AwsConnection#is_value_secret}
   */
   readonly isValueSecret?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key TfConnection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key AwsConnection#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value TfConnection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value AwsConnection#value}
   */
   readonly value?: string;
 }
@@ -1545,15 +1545,15 @@ export class AuthParametersInvocationHttpParametersHeaderPropertyList extends cd
 }
 export interface AuthParametersInvocationHttpParametersQueryStringProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#is_value_secret TfConnection#is_value_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#is_value_secret AwsConnection#is_value_secret}
   */
   readonly isValueSecret?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key TfConnection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key AwsConnection#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value TfConnection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value AwsConnection#value}
   */
   readonly value?: string;
 }
@@ -1685,19 +1685,19 @@ export interface InvocationHttpParametersProperty {
   /**
   * body block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#body TfConnection#body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#body AwsConnection#body}
   */
   readonly body?: AuthParametersInvocationHttpParametersBodyProperty[] | cdktn.IResolvable;
   /**
   * header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#header TfConnection#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#header AwsConnection#header}
   */
   readonly header?: AuthParametersInvocationHttpParametersHeaderProperty[] | cdktn.IResolvable;
   /**
   * query_string block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#query_string TfConnection#query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#query_string AwsConnection#query_string}
   */
   readonly queryString?: AuthParametersInvocationHttpParametersQueryStringProperty[] | cdktn.IResolvable;
 }
@@ -1795,11 +1795,11 @@ export class InvocationHttpParametersPropertyOutputReference extends cdktn.Compl
 }
 export interface ClientParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#client_id TfConnection#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#client_id AwsConnection#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#client_secret TfConnection#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#client_secret AwsConnection#client_secret}
   */
   readonly clientSecret: string;
 }
@@ -1869,15 +1869,15 @@ export class ClientParametersPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface AuthParametersOauthOauthHttpParametersBodyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#is_value_secret TfConnection#is_value_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#is_value_secret AwsConnection#is_value_secret}
   */
   readonly isValueSecret?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key TfConnection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key AwsConnection#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value TfConnection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value AwsConnection#value}
   */
   readonly value?: string;
 }
@@ -2007,15 +2007,15 @@ export class AuthParametersOauthOauthHttpParametersBodyPropertyList extends cdkt
 }
 export interface AuthParametersOauthOauthHttpParametersHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#is_value_secret TfConnection#is_value_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#is_value_secret AwsConnection#is_value_secret}
   */
   readonly isValueSecret?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key TfConnection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key AwsConnection#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value TfConnection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value AwsConnection#value}
   */
   readonly value?: string;
 }
@@ -2145,15 +2145,15 @@ export class AuthParametersOauthOauthHttpParametersHeaderPropertyList extends cd
 }
 export interface AuthParametersOauthOauthHttpParametersQueryStringProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#is_value_secret TfConnection#is_value_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#is_value_secret AwsConnection#is_value_secret}
   */
   readonly isValueSecret?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key TfConnection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#key AwsConnection#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value TfConnection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#value AwsConnection#value}
   */
   readonly value?: string;
 }
@@ -2285,19 +2285,19 @@ export interface OauthHttpParametersProperty {
   /**
   * body block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#body TfConnection#body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#body AwsConnection#body}
   */
   readonly body?: AuthParametersOauthOauthHttpParametersBodyProperty[] | cdktn.IResolvable;
   /**
   * header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#header TfConnection#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#header AwsConnection#header}
   */
   readonly header?: AuthParametersOauthOauthHttpParametersHeaderProperty[] | cdktn.IResolvable;
   /**
   * query_string block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#query_string TfConnection#query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#query_string AwsConnection#query_string}
   */
   readonly queryString?: AuthParametersOauthOauthHttpParametersQueryStringProperty[] | cdktn.IResolvable;
 }
@@ -2395,23 +2395,23 @@ export class OauthHttpParametersPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface OauthProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#authorization_endpoint TfConnection#authorization_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#authorization_endpoint AwsConnection#authorization_endpoint}
   */
   readonly authorizationEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#http_method TfConnection#http_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#http_method AwsConnection#http_method}
   */
   readonly httpMethod: string;
   /**
   * client_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#client_parameters TfConnection#client_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#client_parameters AwsConnection#client_parameters}
   */
   readonly clientParameters?: ClientParametersProperty;
   /**
   * oauth_http_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#oauth_http_parameters TfConnection#oauth_http_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#oauth_http_parameters AwsConnection#oauth_http_parameters}
   */
   readonly oauthHttpParameters: OauthHttpParametersProperty;
 }
@@ -2524,31 +2524,31 @@ export interface AuthParametersProperty {
   /**
   * api_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#api_key TfConnection#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#api_key AwsConnection#api_key}
   */
   readonly apiKey?: ApiKeyProperty;
   /**
   * basic block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#basic TfConnection#basic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#basic AwsConnection#basic}
   */
   readonly basic?: BasicProperty;
   /**
   * connectivity_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#connectivity_parameters TfConnection#connectivity_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#connectivity_parameters AwsConnection#connectivity_parameters}
   */
   readonly connectivityParameters?: ConnectivityParametersProperty;
   /**
   * invocation_http_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#invocation_http_parameters TfConnection#invocation_http_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#invocation_http_parameters AwsConnection#invocation_http_parameters}
   */
   readonly invocationHttpParameters?: InvocationHttpParametersProperty;
   /**
   * oauth block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#oauth TfConnection#oauth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#oauth AwsConnection#oauth}
   */
   readonly oauth?: OauthProperty;
 }
@@ -2690,7 +2690,7 @@ export class AuthParametersPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface InvocationConnectivityParametersResourceParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#resource_configuration_arn TfConnection#resource_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#resource_configuration_arn AwsConnection#resource_configuration_arn}
   */
   readonly resourceConfigurationArn: string;
 }
@@ -2748,7 +2748,7 @@ export interface InvocationConnectivityParametersProperty {
   /**
   * resource_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#resource_parameters TfConnection#resource_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_connection#resource_parameters AwsConnection#resource_parameters}
   */
   readonly resourceParameters: InvocationConnectivityParametersResourceParametersProperty;
 }

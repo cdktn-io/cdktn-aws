@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClusterPeeringConfig extends cdktn.TerraformMetaArguments {
+export interface AwsClusterPeeringConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#clusters TfClusterPeering#clusters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#clusters AwsClusterPeering#clusters}
   */
   readonly clusters: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#identifier TfClusterPeering#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#identifier AwsClusterPeering#identifier}
   */
   readonly identifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#region TfClusterPeering#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#region AwsClusterPeering#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#witness_region TfClusterPeering#witness_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#witness_region AwsClusterPeering#witness_region}
   */
   readonly witnessRegion: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#timeouts TfClusterPeering#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#timeouts AwsClusterPeering#timeouts}
   */
-  readonly timeouts?: TfClusterPeering.TimeoutsProperty;
+  readonly timeouts?: AwsClusterPeering.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering aws_dsql_cluster_peering}
 */
-export class TfClusterPeering extends cdktn.TerraformResource {
+export class AwsClusterPeering extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class TfClusterPeering extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfClusterPeering resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsClusterPeering resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfClusterPeering to import
-  * @param importFromId The id of the existing TfClusterPeering that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfClusterPeering to import is found
+  * @param importToId The construct id used in the generated config for the AwsClusterPeering to import
+  * @param importFromId The id of the existing AwsClusterPeering that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsClusterPeering to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dsql_cluster_peering", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class TfClusterPeering extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClusterPeeringConfig
+  * @param options AwsClusterPeeringConfig
   */
-  public constructor(scope: Construct, id: string, config: TfClusterPeeringConfig) {
+  public constructor(scope: Construct, id: string, config: AwsClusterPeeringConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dsql_cluster_peering',
       terraformGeneratorMetadata: {
@@ -150,11 +150,11 @@ export class TfClusterPeering extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfClusterPeering.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsClusterPeering.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfClusterPeering.TimeoutsProperty) {
+  public putTimeouts(value: AwsClusterPeering.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -175,7 +175,7 @@ export class TfClusterPeering extends cdktn.TerraformResource {
       identifier: cdktn.stringToTerraform(this._identifier),
       region: cdktn.stringToTerraform(this._region),
       witness_region: cdktn.stringToTerraform(this._witnessRegion),
-      timeouts: tfClusterPeeringTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsClusterPeeringTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -206,10 +206,10 @@ export class TfClusterPeering extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfClusterPeeringTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsClusterPeeringTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfClusterPeering.TimeoutsProperty",
+        storageClassType: "AwsClusterPeering.TimeoutsProperty",
       },
     };
 
@@ -218,7 +218,7 @@ export class TfClusterPeering extends cdktn.TerraformResource {
   }
 }
 
-export function tfClusterPeeringTimeoutsPropertyToTerraform(struct?: TfClusterPeering.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClusterPeeringTimeoutsPropertyToTerraform(struct?: AwsClusterPeering.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -229,7 +229,7 @@ export function tfClusterPeeringTimeoutsPropertyToTerraform(struct?: TfClusterPe
 }
 
 
-export function tfClusterPeeringTimeoutsPropertyToHclTerraform(struct?: TfClusterPeering.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClusterPeeringTimeoutsPropertyToHclTerraform(struct?: AwsClusterPeering.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -248,12 +248,12 @@ export function tfClusterPeeringTimeoutsPropertyToHclTerraform(struct?: TfCluste
 }
 
 
-export namespace TfClusterPeering {
+export namespace AwsClusterPeering {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#create TfClusterPeering#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster_peering#create AwsClusterPeering#create}
   */
   readonly create?: string;
 }

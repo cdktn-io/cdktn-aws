@@ -5,73 +5,73 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFleetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFleetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#base_capacity TfFleet#base_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#base_capacity AwsFleet#base_capacity}
   */
   readonly baseCapacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#compute_type TfFleet#compute_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#compute_type AwsFleet#compute_type}
   */
   readonly computeType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#environment_type TfFleet#environment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#environment_type AwsFleet#environment_type}
   */
   readonly environmentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#fleet_service_role TfFleet#fleet_service_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#fleet_service_role AwsFleet#fleet_service_role}
   */
   readonly fleetServiceRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#image_id TfFleet#image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#image_id AwsFleet#image_id}
   */
   readonly imageId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#name TfFleet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#name AwsFleet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#overflow_behavior TfFleet#overflow_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#overflow_behavior AwsFleet#overflow_behavior}
   */
   readonly overflowBehavior?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#region TfFleet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#region AwsFleet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#tags TfFleet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#tags AwsFleet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#tags_all TfFleet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#tags_all AwsFleet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * compute_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#compute_configuration TfFleet#compute_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#compute_configuration AwsFleet#compute_configuration}
   */
-  readonly computeConfiguration?: TfFleet.ComputeConfigurationProperty;
+  readonly computeConfiguration?: AwsFleet.ComputeConfigurationProperty;
   /**
   * scaling_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#scaling_configuration TfFleet#scaling_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#scaling_configuration AwsFleet#scaling_configuration}
   */
-  readonly scalingConfiguration?: TfFleet.ScalingConfigurationProperty;
+  readonly scalingConfiguration?: AwsFleet.ScalingConfigurationProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#vpc_config TfFleet#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#vpc_config AwsFleet#vpc_config}
   */
-  readonly vpcConfig?: TfFleet.VpcConfigProperty[] | cdktn.IResolvable;
+  readonly vpcConfig?: AwsFleet.VpcConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet aws_codebuild_fleet}
 */
-export class TfFleet extends cdktn.TerraformResource {
+export class AwsFleet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -82,11 +82,11 @@ export class TfFleet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFleet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFleet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFleet to import
-  * @param importFromId The id of the existing TfFleet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFleet to import is found
+  * @param importToId The construct id used in the generated config for the AwsFleet to import
+  * @param importFromId The id of the existing AwsFleet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFleet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codebuild_fleet", importId: importFromId, provider });
@@ -101,9 +101,9 @@ export class TfFleet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFleetConfig
+  * @param options AwsFleetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFleetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFleetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codebuild_fleet',
       terraformGeneratorMetadata: {
@@ -275,7 +275,7 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 
   // status - computed: true, optional: false, required: false
-  private _status = new TfFleet.StatusPropertyList(this, "status", true);
+  private _status = new AwsFleet.StatusPropertyList(this, "status", true);
   public get status() {
     return this._status;
   }
@@ -313,11 +313,11 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 
   // compute_configuration - computed: false, optional: true, required: false
-  private _computeConfiguration = new TfFleet.ComputeConfigurationPropertyOutputReference(this, "compute_configuration");
+  private _computeConfiguration = new AwsFleet.ComputeConfigurationPropertyOutputReference(this, "compute_configuration");
   public get computeConfiguration() {
     return this._computeConfiguration;
   }
-  public putComputeConfiguration(value: TfFleet.ComputeConfigurationProperty) {
+  public putComputeConfiguration(value: AwsFleet.ComputeConfigurationProperty) {
     this._computeConfiguration.internalValue = value;
   }
   public resetComputeConfiguration() {
@@ -329,11 +329,11 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 
   // scaling_configuration - computed: false, optional: true, required: false
-  private _scalingConfiguration = new TfFleet.ScalingConfigurationPropertyOutputReference(this, "scaling_configuration");
+  private _scalingConfiguration = new AwsFleet.ScalingConfigurationPropertyOutputReference(this, "scaling_configuration");
   public get scalingConfiguration() {
     return this._scalingConfiguration;
   }
-  public putScalingConfiguration(value: TfFleet.ScalingConfigurationProperty) {
+  public putScalingConfiguration(value: AwsFleet.ScalingConfigurationProperty) {
     this._scalingConfiguration.internalValue = value;
   }
   public resetScalingConfiguration() {
@@ -345,11 +345,11 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new TfFleet.VpcConfigPropertyList(this, "vpc_config", false);
+  private _vpcConfig = new AwsFleet.VpcConfigPropertyList(this, "vpc_config", false);
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: TfFleet.VpcConfigProperty[] | cdktn.IResolvable) {
+  public putVpcConfig(value: AwsFleet.VpcConfigProperty[] | cdktn.IResolvable) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -376,9 +376,9 @@ export class TfFleet extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      compute_configuration: tfFleetComputeConfigurationPropertyToTerraform(this._computeConfiguration.internalValue),
-      scaling_configuration: tfFleetScalingConfigurationPropertyToTerraform(this._scalingConfiguration.internalValue),
-      vpc_config: cdktn.listMapper(tfFleetVpcConfigPropertyToTerraform, true)(this._vpcConfig.internalValue),
+      compute_configuration: awsFleetComputeConfigurationPropertyToTerraform(this._computeConfiguration.internalValue),
+      scaling_configuration: awsFleetScalingConfigurationPropertyToTerraform(this._scalingConfiguration.internalValue),
+      vpc_config: cdktn.listMapper(awsFleetVpcConfigPropertyToTerraform, true)(this._vpcConfig.internalValue),
     };
   }
 
@@ -445,22 +445,22 @@ export class TfFleet extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       compute_configuration: {
-        value: tfFleetComputeConfigurationPropertyToHclTerraform(this._computeConfiguration.internalValue),
+        value: awsFleetComputeConfigurationPropertyToHclTerraform(this._computeConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFleet.ComputeConfigurationPropertyList",
+        storageClassType: "AwsFleet.ComputeConfigurationPropertyList",
       },
       scaling_configuration: {
-        value: tfFleetScalingConfigurationPropertyToHclTerraform(this._scalingConfiguration.internalValue),
+        value: awsFleetScalingConfigurationPropertyToHclTerraform(this._scalingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFleet.ScalingConfigurationPropertyList",
+        storageClassType: "AwsFleet.ScalingConfigurationPropertyList",
       },
       vpc_config: {
-        value: cdktn.listMapperHcl(tfFleetVpcConfigPropertyToHclTerraform, true)(this._vpcConfig.internalValue),
+        value: cdktn.listMapperHcl(awsFleetVpcConfigPropertyToHclTerraform, true)(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFleet.VpcConfigPropertyList",
+        storageClassType: "AwsFleet.VpcConfigPropertyList",
       },
     };
 
@@ -469,7 +469,7 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 }
 
-export function tfFleetStatusPropertyToTerraform(struct?: TfFleet.StatusProperty): any {
+export function awsFleetStatusPropertyToTerraform(struct?: AwsFleet.StatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -479,7 +479,7 @@ export function tfFleetStatusPropertyToTerraform(struct?: TfFleet.StatusProperty
 }
 
 
-export function tfFleetStatusPropertyToHclTerraform(struct?: TfFleet.StatusProperty): any {
+export function awsFleetStatusPropertyToHclTerraform(struct?: AwsFleet.StatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -490,7 +490,7 @@ export function tfFleetStatusPropertyToHclTerraform(struct?: TfFleet.StatusPrope
 }
 
 
-export function tfFleetComputeConfigurationPropertyToTerraform(struct?: TfFleet.ComputeConfigurationPropertyOutputReference | TfFleet.ComputeConfigurationProperty): any {
+export function awsFleetComputeConfigurationPropertyToTerraform(struct?: AwsFleet.ComputeConfigurationPropertyOutputReference | AwsFleet.ComputeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -505,7 +505,7 @@ export function tfFleetComputeConfigurationPropertyToTerraform(struct?: TfFleet.
 }
 
 
-export function tfFleetComputeConfigurationPropertyToHclTerraform(struct?: TfFleet.ComputeConfigurationPropertyOutputReference | TfFleet.ComputeConfigurationProperty): any {
+export function awsFleetComputeConfigurationPropertyToHclTerraform(struct?: AwsFleet.ComputeConfigurationPropertyOutputReference | AwsFleet.ComputeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -548,7 +548,7 @@ export function tfFleetComputeConfigurationPropertyToHclTerraform(struct?: TfFle
 }
 
 
-export function tfFleetTargetTrackingScalingConfigsPropertyToTerraform(struct?: TfFleet.TargetTrackingScalingConfigsProperty | cdktn.IResolvable): any {
+export function awsFleetTargetTrackingScalingConfigsPropertyToTerraform(struct?: AwsFleet.TargetTrackingScalingConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -560,7 +560,7 @@ export function tfFleetTargetTrackingScalingConfigsPropertyToTerraform(struct?: 
 }
 
 
-export function tfFleetTargetTrackingScalingConfigsPropertyToHclTerraform(struct?: TfFleet.TargetTrackingScalingConfigsProperty | cdktn.IResolvable): any {
+export function awsFleetTargetTrackingScalingConfigsPropertyToHclTerraform(struct?: AwsFleet.TargetTrackingScalingConfigsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -585,7 +585,7 @@ export function tfFleetTargetTrackingScalingConfigsPropertyToHclTerraform(struct
 }
 
 
-export function tfFleetScalingConfigurationPropertyToTerraform(struct?: TfFleet.ScalingConfigurationPropertyOutputReference | TfFleet.ScalingConfigurationProperty): any {
+export function awsFleetScalingConfigurationPropertyToTerraform(struct?: AwsFleet.ScalingConfigurationPropertyOutputReference | AwsFleet.ScalingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -593,12 +593,12 @@ export function tfFleetScalingConfigurationPropertyToTerraform(struct?: TfFleet.
   return {
     max_capacity: cdktn.numberToTerraform(struct!.maxCapacity),
     scaling_type: cdktn.stringToTerraform(struct!.scalingType),
-    target_tracking_scaling_configs: cdktn.listMapper(tfFleetTargetTrackingScalingConfigsPropertyToTerraform, true)(struct!.targetTrackingScalingConfigs),
+    target_tracking_scaling_configs: cdktn.listMapper(awsFleetTargetTrackingScalingConfigsPropertyToTerraform, true)(struct!.targetTrackingScalingConfigs),
   }
 }
 
 
-export function tfFleetScalingConfigurationPropertyToHclTerraform(struct?: TfFleet.ScalingConfigurationPropertyOutputReference | TfFleet.ScalingConfigurationProperty): any {
+export function awsFleetScalingConfigurationPropertyToHclTerraform(struct?: AwsFleet.ScalingConfigurationPropertyOutputReference | AwsFleet.ScalingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -617,7 +617,7 @@ export function tfFleetScalingConfigurationPropertyToHclTerraform(struct?: TfFle
       storageClassType: "string",
     },
     target_tracking_scaling_configs: {
-      value: cdktn.listMapperHcl(tfFleetTargetTrackingScalingConfigsPropertyToHclTerraform, true)(struct!.targetTrackingScalingConfigs),
+      value: cdktn.listMapperHcl(awsFleetTargetTrackingScalingConfigsPropertyToHclTerraform, true)(struct!.targetTrackingScalingConfigs),
       isBlock: true,
       type: "list",
       storageClassType: "TargetTrackingScalingConfigsPropertyList",
@@ -629,7 +629,7 @@ export function tfFleetScalingConfigurationPropertyToHclTerraform(struct?: TfFle
 }
 
 
-export function tfFleetVpcConfigPropertyToTerraform(struct?: TfFleet.VpcConfigProperty | cdktn.IResolvable): any {
+export function awsFleetVpcConfigPropertyToTerraform(struct?: AwsFleet.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -642,7 +642,7 @@ export function tfFleetVpcConfigPropertyToTerraform(struct?: TfFleet.VpcConfigPr
 }
 
 
-export function tfFleetVpcConfigPropertyToHclTerraform(struct?: TfFleet.VpcConfigProperty | cdktn.IResolvable): any {
+export function awsFleetVpcConfigPropertyToHclTerraform(struct?: AwsFleet.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -673,7 +673,7 @@ export function tfFleetVpcConfigPropertyToHclTerraform(struct?: TfFleet.VpcConfi
 }
 
 
-export namespace TfFleet {
+export namespace AwsFleet {
 export interface StatusProperty {
 }
 export class StatusPropertyOutputReference extends cdktn.ComplexObject {
@@ -740,23 +740,23 @@ export class StatusPropertyList extends cdktn.ComplexList {
 }
 export interface ComputeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#disk TfFleet#disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#disk AwsFleet#disk}
   */
   readonly disk?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#instance_type TfFleet#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#instance_type AwsFleet#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#machine_type TfFleet#machine_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#machine_type AwsFleet#machine_type}
   */
   readonly machineType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#memory TfFleet#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#memory AwsFleet#memory}
   */
   readonly memory?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#vcpu TfFleet#vcpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#vcpu AwsFleet#vcpu}
   */
   readonly vcpu?: number;
 }
@@ -898,11 +898,11 @@ export class ComputeConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TargetTrackingScalingConfigsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#metric_type TfFleet#metric_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#metric_type AwsFleet#metric_type}
   */
   readonly metricType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#target_value TfFleet#target_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#target_value AwsFleet#target_value}
   */
   readonly targetValue?: number;
 }
@@ -1010,17 +1010,17 @@ export class TargetTrackingScalingConfigsPropertyList extends cdktn.ComplexList 
 }
 export interface ScalingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#max_capacity TfFleet#max_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#max_capacity AwsFleet#max_capacity}
   */
   readonly maxCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#scaling_type TfFleet#scaling_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#scaling_type AwsFleet#scaling_type}
   */
   readonly scalingType?: string;
   /**
   * target_tracking_scaling_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#target_tracking_scaling_configs TfFleet#target_tracking_scaling_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#target_tracking_scaling_configs AwsFleet#target_tracking_scaling_configs}
   */
   readonly targetTrackingScalingConfigs?: TargetTrackingScalingConfigsProperty[] | cdktn.IResolvable;
 }
@@ -1123,15 +1123,15 @@ export class ScalingConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#security_group_ids TfFleet#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#security_group_ids AwsFleet#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#subnets TfFleet#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#subnets AwsFleet#subnets}
   */
   readonly subnets: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#vpc_id TfFleet#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_fleet#vpc_id AwsFleet#vpc_id}
   */
   readonly vpcId: string;
 }

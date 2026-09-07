@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfMeshConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsMeshConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh#id DataTfMesh#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh#id DataAwsMesh#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh#mesh_owner DataTfMesh#mesh_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh#mesh_owner DataAwsMesh#mesh_owner}
   */
   readonly meshOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh#name DataTfMesh#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh#name DataAwsMesh#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh#region DataTfMesh#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh#region DataAwsMesh#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh#tags DataTfMesh#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh#tags DataAwsMesh#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface DataTfMeshConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh aws_appmesh_mesh}
 */
-export class DataTfMesh extends cdktn.TerraformDataSource {
+export class DataAwsMesh extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfMesh extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfMesh resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsMesh resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfMesh to import
-  * @param importFromId The id of the existing DataTfMesh that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfMesh to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsMesh to import
+  * @param importFromId The id of the existing DataAwsMesh that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_mesh#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsMesh to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appmesh_mesh", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfMesh extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfMeshConfig
+  * @param options DataAwsMeshConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfMeshConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsMeshConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appmesh_mesh',
       terraformGeneratorMetadata: {
@@ -177,7 +177,7 @@ export class DataTfMesh extends cdktn.TerraformDataSource {
   }
 
   // spec - computed: true, optional: false, required: false
-  private _spec = new DataTfMesh.SpecPropertyList(this, "spec", false);
+  private _spec = new DataAwsMesh.SpecPropertyList(this, "spec", false);
   public get spec() {
     return this._spec;
   }
@@ -251,7 +251,7 @@ export class DataTfMesh extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfMeshEgressFilterPropertyToTerraform(struct?: DataTfMesh.EgressFilterProperty): any {
+export function dataAwsMeshEgressFilterPropertyToTerraform(struct?: DataAwsMesh.EgressFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function dataTfMeshEgressFilterPropertyToTerraform(struct?: DataTfMesh.Eg
 }
 
 
-export function dataTfMeshEgressFilterPropertyToHclTerraform(struct?: DataTfMesh.EgressFilterProperty): any {
+export function dataAwsMeshEgressFilterPropertyToHclTerraform(struct?: DataAwsMesh.EgressFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,7 +272,7 @@ export function dataTfMeshEgressFilterPropertyToHclTerraform(struct?: DataTfMesh
 }
 
 
-export function dataTfMeshServiceDiscoveryPropertyToTerraform(struct?: DataTfMesh.ServiceDiscoveryProperty): any {
+export function dataAwsMeshServiceDiscoveryPropertyToTerraform(struct?: DataAwsMesh.ServiceDiscoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,7 +282,7 @@ export function dataTfMeshServiceDiscoveryPropertyToTerraform(struct?: DataTfMes
 }
 
 
-export function dataTfMeshServiceDiscoveryPropertyToHclTerraform(struct?: DataTfMesh.ServiceDiscoveryProperty): any {
+export function dataAwsMeshServiceDiscoveryPropertyToHclTerraform(struct?: DataAwsMesh.ServiceDiscoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function dataTfMeshServiceDiscoveryPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export function dataTfMeshSpecPropertyToTerraform(struct?: DataTfMesh.SpecProperty): any {
+export function dataAwsMeshSpecPropertyToTerraform(struct?: DataAwsMesh.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,7 +303,7 @@ export function dataTfMeshSpecPropertyToTerraform(struct?: DataTfMesh.SpecProper
 }
 
 
-export function dataTfMeshSpecPropertyToHclTerraform(struct?: DataTfMesh.SpecProperty): any {
+export function dataAwsMeshSpecPropertyToHclTerraform(struct?: DataAwsMesh.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,7 +314,7 @@ export function dataTfMeshSpecPropertyToHclTerraform(struct?: DataTfMesh.SpecPro
 }
 
 
-export namespace DataTfMesh {
+export namespace DataAwsMesh {
 export interface EgressFilterProperty {
 }
 export class EgressFilterPropertyOutputReference extends cdktn.ComplexObject {

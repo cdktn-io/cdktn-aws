@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCidrLocationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCidrLocationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_cidr_location#cidr_blocks TfCidrLocation#cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_cidr_location#cidr_blocks AwsCidrLocation#cidr_blocks}
   */
   readonly cidrBlocks: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_cidr_location#cidr_collection_id TfCidrLocation#cidr_collection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_cidr_location#cidr_collection_id AwsCidrLocation#cidr_collection_id}
   */
   readonly cidrCollectionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_cidr_location#name TfCidrLocation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_cidr_location#name AwsCidrLocation#name}
   */
   readonly name: string;
 }
@@ -23,7 +23,7 @@ export interface TfCidrLocationConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_cidr_location aws_route53_cidr_location}
 */
-export class TfCidrLocation extends cdktn.TerraformResource {
+export class AwsCidrLocation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class TfCidrLocation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCidrLocation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCidrLocation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCidrLocation to import
-  * @param importFromId The id of the existing TfCidrLocation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_cidr_location#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCidrLocation to import is found
+  * @param importToId The construct id used in the generated config for the AwsCidrLocation to import
+  * @param importFromId The id of the existing AwsCidrLocation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_cidr_location#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCidrLocation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_cidr_location", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class TfCidrLocation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCidrLocationConfig
+  * @param options AwsCidrLocationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCidrLocationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCidrLocationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_cidr_location',
       terraformGeneratorMetadata: {

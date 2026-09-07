@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDatabaseConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDatabaseConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#bucket TfDatabase#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#bucket AwsDatabase#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#comment TfDatabase#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#comment AwsDatabase#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#expected_bucket_owner TfDatabase#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#expected_bucket_owner AwsDatabase#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#force_destroy TfDatabase#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#force_destroy AwsDatabase#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#id TfDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#id AwsDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#name TfDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#name AwsDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#properties TfDatabase#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#properties AwsDatabase#properties}
   */
   readonly properties?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#region TfDatabase#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#region AwsDatabase#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#workgroup TfDatabase#workgroup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#workgroup AwsDatabase#workgroup}
   */
   readonly workgroup?: string;
   /**
   * acl_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#acl_configuration TfDatabase#acl_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#acl_configuration AwsDatabase#acl_configuration}
   */
-  readonly aclConfiguration?: TfDatabase.AclConfigurationProperty;
+  readonly aclConfiguration?: AwsDatabase.AclConfigurationProperty;
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#encryption_configuration TfDatabase#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#encryption_configuration AwsDatabase#encryption_configuration}
   */
-  readonly encryptionConfiguration?: TfDatabase.EncryptionConfigurationProperty;
+  readonly encryptionConfiguration?: AwsDatabase.EncryptionConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database aws_athena_database}
 */
-export class TfDatabase extends cdktn.TerraformResource {
+export class AwsDatabase extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class TfDatabase extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDatabase resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDatabase resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDatabase to import
-  * @param importFromId The id of the existing TfDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDatabase to import is found
+  * @param importToId The construct id used in the generated config for the AwsDatabase to import
+  * @param importFromId The id of the existing AwsDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDatabase to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_athena_database", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class TfDatabase extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDatabaseConfig
+  * @param options AwsDatabaseConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDatabaseConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_athena_database',
       terraformGeneratorMetadata: {
@@ -271,11 +271,11 @@ export class TfDatabase extends cdktn.TerraformResource {
   }
 
   // acl_configuration - computed: false, optional: true, required: false
-  private _aclConfiguration = new TfDatabase.AclConfigurationPropertyOutputReference(this, "acl_configuration");
+  private _aclConfiguration = new AwsDatabase.AclConfigurationPropertyOutputReference(this, "acl_configuration");
   public get aclConfiguration() {
     return this._aclConfiguration;
   }
-  public putAclConfiguration(value: TfDatabase.AclConfigurationProperty) {
+  public putAclConfiguration(value: AwsDatabase.AclConfigurationProperty) {
     this._aclConfiguration.internalValue = value;
   }
   public resetAclConfiguration() {
@@ -287,11 +287,11 @@ export class TfDatabase extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: true, required: false
-  private _encryptionConfiguration = new TfDatabase.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
+  private _encryptionConfiguration = new AwsDatabase.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: TfDatabase.EncryptionConfigurationProperty) {
+  public putEncryptionConfiguration(value: AwsDatabase.EncryptionConfigurationProperty) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -317,8 +317,8 @@ export class TfDatabase extends cdktn.TerraformResource {
       properties: cdktn.hashMapper(cdktn.stringToTerraform)(this._properties),
       region: cdktn.stringToTerraform(this._region),
       workgroup: cdktn.stringToTerraform(this._workgroup),
-      acl_configuration: tfDatabaseAclConfigurationPropertyToTerraform(this._aclConfiguration.internalValue),
-      encryption_configuration: tfDatabaseEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
+      acl_configuration: awsDatabaseAclConfigurationPropertyToTerraform(this._aclConfiguration.internalValue),
+      encryption_configuration: awsDatabaseEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
     };
   }
 
@@ -379,16 +379,16 @@ export class TfDatabase extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       acl_configuration: {
-        value: tfDatabaseAclConfigurationPropertyToHclTerraform(this._aclConfiguration.internalValue),
+        value: awsDatabaseAclConfigurationPropertyToHclTerraform(this._aclConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDatabase.AclConfigurationPropertyList",
+        storageClassType: "AwsDatabase.AclConfigurationPropertyList",
       },
       encryption_configuration: {
-        value: tfDatabaseEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
+        value: awsDatabaseEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDatabase.EncryptionConfigurationPropertyList",
+        storageClassType: "AwsDatabase.EncryptionConfigurationPropertyList",
       },
     };
 
@@ -397,7 +397,7 @@ export class TfDatabase extends cdktn.TerraformResource {
   }
 }
 
-export function tfDatabaseAclConfigurationPropertyToTerraform(struct?: TfDatabase.AclConfigurationPropertyOutputReference | TfDatabase.AclConfigurationProperty): any {
+export function awsDatabaseAclConfigurationPropertyToTerraform(struct?: AwsDatabase.AclConfigurationPropertyOutputReference | AwsDatabase.AclConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,7 +408,7 @@ export function tfDatabaseAclConfigurationPropertyToTerraform(struct?: TfDatabas
 }
 
 
-export function tfDatabaseAclConfigurationPropertyToHclTerraform(struct?: TfDatabase.AclConfigurationPropertyOutputReference | TfDatabase.AclConfigurationProperty): any {
+export function awsDatabaseAclConfigurationPropertyToHclTerraform(struct?: AwsDatabase.AclConfigurationPropertyOutputReference | AwsDatabase.AclConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,7 +427,7 @@ export function tfDatabaseAclConfigurationPropertyToHclTerraform(struct?: TfData
 }
 
 
-export function tfDatabaseEncryptionConfigurationPropertyToTerraform(struct?: TfDatabase.EncryptionConfigurationPropertyOutputReference | TfDatabase.EncryptionConfigurationProperty): any {
+export function awsDatabaseEncryptionConfigurationPropertyToTerraform(struct?: AwsDatabase.EncryptionConfigurationPropertyOutputReference | AwsDatabase.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function tfDatabaseEncryptionConfigurationPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDatabaseEncryptionConfigurationPropertyToHclTerraform(struct?: TfDatabase.EncryptionConfigurationPropertyOutputReference | TfDatabase.EncryptionConfigurationProperty): any {
+export function awsDatabaseEncryptionConfigurationPropertyToHclTerraform(struct?: AwsDatabase.EncryptionConfigurationPropertyOutputReference | AwsDatabase.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,10 +464,10 @@ export function tfDatabaseEncryptionConfigurationPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfDatabase {
+export namespace AwsDatabase {
 export interface AclConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#s3_acl_option TfDatabase#s3_acl_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#s3_acl_option AwsDatabase#s3_acl_option}
   */
   readonly s3AclOption: string;
 }
@@ -518,11 +518,11 @@ export class AclConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#encryption_option TfDatabase#encryption_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#encryption_option AwsDatabase#encryption_option}
   */
   readonly encryptionOption: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#kms_key TfDatabase#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/athena_database#kms_key AwsDatabase#kms_key}
   */
   readonly kmsKey?: string;
 }

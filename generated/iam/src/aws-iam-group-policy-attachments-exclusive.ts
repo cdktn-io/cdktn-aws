@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGroupPolicyAttachmentsExclusiveConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGroupPolicyAttachmentsExclusiveConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policy_attachments_exclusive#group_name TfGroupPolicyAttachmentsExclusive#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policy_attachments_exclusive#group_name AwsGroupPolicyAttachmentsExclusive#group_name}
   */
   readonly groupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policy_attachments_exclusive#policy_arns TfGroupPolicyAttachmentsExclusive#policy_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policy_attachments_exclusive#policy_arns AwsGroupPolicyAttachmentsExclusive#policy_arns}
   */
   readonly policyArns: string[];
 }
@@ -19,7 +19,7 @@ export interface TfGroupPolicyAttachmentsExclusiveConfig extends cdktn.Terraform
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policy_attachments_exclusive aws_iam_group_policy_attachments_exclusive}
 */
-export class TfGroupPolicyAttachmentsExclusive extends cdktn.TerraformResource {
+export class AwsGroupPolicyAttachmentsExclusive extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class TfGroupPolicyAttachmentsExclusive extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGroupPolicyAttachmentsExclusive resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGroupPolicyAttachmentsExclusive resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGroupPolicyAttachmentsExclusive to import
-  * @param importFromId The id of the existing TfGroupPolicyAttachmentsExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policy_attachments_exclusive#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGroupPolicyAttachmentsExclusive to import is found
+  * @param importToId The construct id used in the generated config for the AwsGroupPolicyAttachmentsExclusive to import
+  * @param importFromId The id of the existing AwsGroupPolicyAttachmentsExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policy_attachments_exclusive#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGroupPolicyAttachmentsExclusive to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_group_policy_attachments_exclusive", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class TfGroupPolicyAttachmentsExclusive extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGroupPolicyAttachmentsExclusiveConfig
+  * @param options AwsGroupPolicyAttachmentsExclusiveConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGroupPolicyAttachmentsExclusiveConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGroupPolicyAttachmentsExclusiveConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_group_policy_attachments_exclusive',
       terraformGeneratorMetadata: {

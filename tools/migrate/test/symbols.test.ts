@@ -18,7 +18,7 @@ describe("nested types", () => {
     ).toBe(
       [
         "import { s3 } from '@cdktn/aws';",
-        "export const rule: s3.TfBucket.CorsRuleProperty = { allowedMethods: ['GET'], allowedOrigins: ['*'] };",
+        "export const rule: s3.AwsBucket.CorsRuleProperty = { allowedMethods: ['GET'], allowedOrigins: ['*'] };",
       ].join("\n"),
     );
   });
@@ -35,8 +35,8 @@ describe("nested types", () => {
     ).toBe(
       [
         "import { s3 } from '@cdktn/aws';",
-        "declare const ref: s3.TfBucket.CorsRulePropertyOutputReference;",
-        "declare const list: s3.TfBucket.CorsRulePropertyList;",
+        "declare const ref: s3.AwsBucket.CorsRulePropertyOutputReference;",
+        "declare const list: s3.AwsBucket.CorsRulePropertyList;",
       ].join("\n"),
     );
   });
@@ -44,7 +44,7 @@ describe("nested types", () => {
   it("moves a mapper function, including the s3/waf `Mapper` disambiguator", () => {
     // Module-level on both sides — jsii ignores functions, so ours cannot live in the namespace —
     // and in `s3` and `waf` the plain `<class><struct>` concatenation is not injective, hence
-    // `tfBucketMapper…`. That is the entry's `mapperPrefix`, not a rule this tool restates.
+    // `awsBucketMapper…`. That is the entry's `mapperPrefix`, not a rule this tool restates.
     expect(
       migrated(
         [
@@ -57,8 +57,8 @@ describe("nested types", () => {
     ).toBe(
       [
         "import { lambda, s3 } from '@cdktn/aws';",
-        "export const a = s3.tfBucketMapperCorsRulePropertyToTerraform;",
-        "export const b = lambda.tfFunctionVpcConfigPropertyToHclTerraform;",
+        "export const a = s3.awsBucketMapperCorsRulePropertyToTerraform;",
+        "export const b = lambda.awsFunctionVpcConfigPropertyToHclTerraform;",
       ].join("\n"),
     );
   });
@@ -105,8 +105,8 @@ describe("nested types", () => {
     );
     // `S3BucketVersioning` is not an export of `s3-bucket-versioning` — it belongs to `s3-bucket`.
     expect(result.unmapped.map((u) => u.symbol)).toEqual(["s3-bucket-versioning.S3BucketVersioning"]);
-    expect(result.after).toContain("declare const a: s3.TfBucketVersioning;");
-    expect(result.after).toContain("declare const block: s3.TfBucket.VersioningProperty;");
+    expect(result.after).toContain("declare const a: s3.AwsBucketVersioning;");
+    expect(result.after).toContain("declare const block: s3.AwsBucket.VersioningProperty;");
     expect(result.after).toContain(
       "import { S3BucketVersioning } from '@cdktn/provider-aws/lib/s3-bucket-versioning';",
     );

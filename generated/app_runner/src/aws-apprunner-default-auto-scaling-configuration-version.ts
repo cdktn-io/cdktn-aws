@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDefaultAutoScalingConfigurationVersionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDefaultAutoScalingConfigurationVersionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_default_auto_scaling_configuration_version#auto_scaling_configuration_arn TfDefaultAutoScalingConfigurationVersion#auto_scaling_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_default_auto_scaling_configuration_version#auto_scaling_configuration_arn AwsDefaultAutoScalingConfigurationVersion#auto_scaling_configuration_arn}
   */
   readonly autoScalingConfigurationArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_default_auto_scaling_configuration_version#region TfDefaultAutoScalingConfigurationVersion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_default_auto_scaling_configuration_version#region AwsDefaultAutoScalingConfigurationVersion#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface TfDefaultAutoScalingConfigurationVersionConfig extends cdktn.Te
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_default_auto_scaling_configuration_version aws_apprunner_default_auto_scaling_configuration_version}
 */
-export class TfDefaultAutoScalingConfigurationVersion extends cdktn.TerraformResource {
+export class AwsDefaultAutoScalingConfigurationVersion extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class TfDefaultAutoScalingConfigurationVersion extends cdktn.TerraformRes
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDefaultAutoScalingConfigurationVersion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDefaultAutoScalingConfigurationVersion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDefaultAutoScalingConfigurationVersion to import
-  * @param importFromId The id of the existing TfDefaultAutoScalingConfigurationVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_default_auto_scaling_configuration_version#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDefaultAutoScalingConfigurationVersion to import is found
+  * @param importToId The construct id used in the generated config for the AwsDefaultAutoScalingConfigurationVersion to import
+  * @param importFromId The id of the existing AwsDefaultAutoScalingConfigurationVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_default_auto_scaling_configuration_version#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDefaultAutoScalingConfigurationVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apprunner_default_auto_scaling_configuration_version", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class TfDefaultAutoScalingConfigurationVersion extends cdktn.TerraformRes
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDefaultAutoScalingConfigurationVersionConfig
+  * @param options AwsDefaultAutoScalingConfigurationVersionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDefaultAutoScalingConfigurationVersionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDefaultAutoScalingConfigurationVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apprunner_default_auto_scaling_configuration_version',
       terraformGeneratorMetadata: {

@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCustomerManagedPolicyAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCustomerManagedPolicyAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#id TfCustomerManagedPolicyAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#id AwsCustomerManagedPolicyAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#instance_arn TfCustomerManagedPolicyAttachment#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#instance_arn AwsCustomerManagedPolicyAttachment#instance_arn}
   */
   readonly instanceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#permission_set_arn TfCustomerManagedPolicyAttachment#permission_set_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#permission_set_arn AwsCustomerManagedPolicyAttachment#permission_set_arn}
   */
   readonly permissionSetArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#region TfCustomerManagedPolicyAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#region AwsCustomerManagedPolicyAttachment#region}
   */
   readonly region?: string;
   /**
   * customer_managed_policy_reference block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#customer_managed_policy_reference TfCustomerManagedPolicyAttachment#customer_managed_policy_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#customer_managed_policy_reference AwsCustomerManagedPolicyAttachment#customer_managed_policy_reference}
   */
-  readonly customerManagedPolicyReference: TfCustomerManagedPolicyAttachment.CustomerManagedPolicyReferenceProperty;
+  readonly customerManagedPolicyReference: AwsCustomerManagedPolicyAttachment.CustomerManagedPolicyReferenceProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#timeouts TfCustomerManagedPolicyAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#timeouts AwsCustomerManagedPolicyAttachment#timeouts}
   */
-  readonly timeouts?: TfCustomerManagedPolicyAttachment.TimeoutsProperty;
+  readonly timeouts?: AwsCustomerManagedPolicyAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment aws_ssoadmin_customer_managed_policy_attachment}
 */
-export class TfCustomerManagedPolicyAttachment extends cdktn.TerraformResource {
+export class AwsCustomerManagedPolicyAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfCustomerManagedPolicyAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCustomerManagedPolicyAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCustomerManagedPolicyAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCustomerManagedPolicyAttachment to import
-  * @param importFromId The id of the existing TfCustomerManagedPolicyAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCustomerManagedPolicyAttachment to import is found
+  * @param importToId The construct id used in the generated config for the AwsCustomerManagedPolicyAttachment to import
+  * @param importFromId The id of the existing AwsCustomerManagedPolicyAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCustomerManagedPolicyAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_customer_managed_policy_attachment", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfCustomerManagedPolicyAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCustomerManagedPolicyAttachmentConfig
+  * @param options AwsCustomerManagedPolicyAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCustomerManagedPolicyAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCustomerManagedPolicyAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_customer_managed_policy_attachment',
       terraformGeneratorMetadata: {
@@ -163,11 +163,11 @@ export class TfCustomerManagedPolicyAttachment extends cdktn.TerraformResource {
   }
 
   // customer_managed_policy_reference - computed: false, optional: false, required: true
-  private _customerManagedPolicyReference = new TfCustomerManagedPolicyAttachment.CustomerManagedPolicyReferencePropertyOutputReference(this, "customer_managed_policy_reference");
+  private _customerManagedPolicyReference = new AwsCustomerManagedPolicyAttachment.CustomerManagedPolicyReferencePropertyOutputReference(this, "customer_managed_policy_reference");
   public get customerManagedPolicyReference() {
     return this._customerManagedPolicyReference;
   }
-  public putCustomerManagedPolicyReference(value: TfCustomerManagedPolicyAttachment.CustomerManagedPolicyReferenceProperty) {
+  public putCustomerManagedPolicyReference(value: AwsCustomerManagedPolicyAttachment.CustomerManagedPolicyReferenceProperty) {
     this._customerManagedPolicyReference.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -176,11 +176,11 @@ export class TfCustomerManagedPolicyAttachment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCustomerManagedPolicyAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCustomerManagedPolicyAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCustomerManagedPolicyAttachment.TimeoutsProperty) {
+  public putTimeouts(value: AwsCustomerManagedPolicyAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -201,8 +201,8 @@ export class TfCustomerManagedPolicyAttachment extends cdktn.TerraformResource {
       instance_arn: cdktn.stringToTerraform(this._instanceArn),
       permission_set_arn: cdktn.stringToTerraform(this._permissionSetArn),
       region: cdktn.stringToTerraform(this._region),
-      customer_managed_policy_reference: tfCustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePropertyToTerraform(this._customerManagedPolicyReference.internalValue),
-      timeouts: tfCustomerManagedPolicyAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      customer_managed_policy_reference: awsCustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePropertyToTerraform(this._customerManagedPolicyReference.internalValue),
+      timeouts: awsCustomerManagedPolicyAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -233,16 +233,16 @@ export class TfCustomerManagedPolicyAttachment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       customer_managed_policy_reference: {
-        value: tfCustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePropertyToHclTerraform(this._customerManagedPolicyReference.internalValue),
+        value: awsCustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePropertyToHclTerraform(this._customerManagedPolicyReference.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCustomerManagedPolicyAttachment.CustomerManagedPolicyReferencePropertyList",
+        storageClassType: "AwsCustomerManagedPolicyAttachment.CustomerManagedPolicyReferencePropertyList",
       },
       timeouts: {
-        value: tfCustomerManagedPolicyAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCustomerManagedPolicyAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCustomerManagedPolicyAttachment.TimeoutsProperty",
+        storageClassType: "AwsCustomerManagedPolicyAttachment.TimeoutsProperty",
       },
     };
 
@@ -251,7 +251,7 @@ export class TfCustomerManagedPolicyAttachment extends cdktn.TerraformResource {
   }
 }
 
-export function tfCustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePropertyToTerraform(struct?: TfCustomerManagedPolicyAttachment.CustomerManagedPolicyReferencePropertyOutputReference | TfCustomerManagedPolicyAttachment.CustomerManagedPolicyReferenceProperty): any {
+export function awsCustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePropertyToTerraform(struct?: AwsCustomerManagedPolicyAttachment.CustomerManagedPolicyReferencePropertyOutputReference | AwsCustomerManagedPolicyAttachment.CustomerManagedPolicyReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function tfCustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceP
 }
 
 
-export function tfCustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePropertyToHclTerraform(struct?: TfCustomerManagedPolicyAttachment.CustomerManagedPolicyReferencePropertyOutputReference | TfCustomerManagedPolicyAttachment.CustomerManagedPolicyReferenceProperty): any {
+export function awsCustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePropertyToHclTerraform(struct?: AwsCustomerManagedPolicyAttachment.CustomerManagedPolicyReferencePropertyOutputReference | AwsCustomerManagedPolicyAttachment.CustomerManagedPolicyReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,7 +288,7 @@ export function tfCustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceP
 }
 
 
-export function tfCustomerManagedPolicyAttachmentTimeoutsPropertyToTerraform(struct?: TfCustomerManagedPolicyAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomerManagedPolicyAttachmentTimeoutsPropertyToTerraform(struct?: AwsCustomerManagedPolicyAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function tfCustomerManagedPolicyAttachmentTimeoutsPropertyToTerraform(str
 }
 
 
-export function tfCustomerManagedPolicyAttachmentTimeoutsPropertyToHclTerraform(struct?: TfCustomerManagedPolicyAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomerManagedPolicyAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsCustomerManagedPolicyAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,14 +325,14 @@ export function tfCustomerManagedPolicyAttachmentTimeoutsPropertyToHclTerraform(
 }
 
 
-export namespace TfCustomerManagedPolicyAttachment {
+export namespace AwsCustomerManagedPolicyAttachment {
 export interface CustomerManagedPolicyReferenceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#name TfCustomerManagedPolicyAttachment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#name AwsCustomerManagedPolicyAttachment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#path TfCustomerManagedPolicyAttachment#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#path AwsCustomerManagedPolicyAttachment#path}
   */
   readonly path?: string;
 }
@@ -405,11 +405,11 @@ export class CustomerManagedPolicyReferencePropertyOutputReference extends cdktn
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#create TfCustomerManagedPolicyAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#create AwsCustomerManagedPolicyAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#delete TfCustomerManagedPolicyAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_customer_managed_policy_attachment#delete AwsCustomerManagedPolicyAttachment#delete}
   */
   readonly delete?: string;
 }

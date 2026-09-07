@@ -5,43 +5,43 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRouteServerPeerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRouteServerPeerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#peer_address TfRouteServerPeer#peer_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#peer_address AwsRouteServerPeer#peer_address}
   */
   readonly peerAddress: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#region TfRouteServerPeer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#region AwsRouteServerPeer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#route_server_endpoint_id TfRouteServerPeer#route_server_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#route_server_endpoint_id AwsRouteServerPeer#route_server_endpoint_id}
   */
   readonly routeServerEndpointId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#tags TfRouteServerPeer#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#tags AwsRouteServerPeer#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * bgp_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#bgp_options TfRouteServerPeer#bgp_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#bgp_options AwsRouteServerPeer#bgp_options}
   */
-  readonly bgpOptions?: TfRouteServerPeer.BgpOptionsProperty[] | cdktn.IResolvable;
+  readonly bgpOptions?: AwsRouteServerPeer.BgpOptionsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#timeouts TfRouteServerPeer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#timeouts AwsRouteServerPeer#timeouts}
   */
-  readonly timeouts?: TfRouteServerPeer.TimeoutsProperty;
+  readonly timeouts?: AwsRouteServerPeer.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer aws_vpc_route_server_peer}
 */
-export class TfRouteServerPeer extends cdktn.TerraformResource {
+export class AwsRouteServerPeer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class TfRouteServerPeer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRouteServerPeer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRouteServerPeer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRouteServerPeer to import
-  * @param importFromId The id of the existing TfRouteServerPeer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRouteServerPeer to import is found
+  * @param importToId The construct id used in the generated config for the AwsRouteServerPeer to import
+  * @param importFromId The id of the existing AwsRouteServerPeer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRouteServerPeer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_route_server_peer", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class TfRouteServerPeer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRouteServerPeerConfig
+  * @param options AwsRouteServerPeerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRouteServerPeerConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRouteServerPeerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_route_server_peer',
       terraformGeneratorMetadata: {
@@ -201,11 +201,11 @@ export class TfRouteServerPeer extends cdktn.TerraformResource {
   }
 
   // bgp_options - computed: false, optional: true, required: false
-  private _bgpOptions = new TfRouteServerPeer.BgpOptionsPropertyList(this, "bgp_options", false);
+  private _bgpOptions = new AwsRouteServerPeer.BgpOptionsPropertyList(this, "bgp_options", false);
   public get bgpOptions() {
     return this._bgpOptions;
   }
-  public putBgpOptions(value: TfRouteServerPeer.BgpOptionsProperty[] | cdktn.IResolvable) {
+  public putBgpOptions(value: AwsRouteServerPeer.BgpOptionsProperty[] | cdktn.IResolvable) {
     this._bgpOptions.internalValue = value;
   }
   public resetBgpOptions() {
@@ -217,11 +217,11 @@ export class TfRouteServerPeer extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfRouteServerPeer.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsRouteServerPeer.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfRouteServerPeer.TimeoutsProperty) {
+  public putTimeouts(value: AwsRouteServerPeer.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -242,8 +242,8 @@ export class TfRouteServerPeer extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       route_server_endpoint_id: cdktn.stringToTerraform(this._routeServerEndpointId),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      bgp_options: cdktn.listMapper(tfRouteServerPeerBgpOptionsPropertyToTerraform, true)(this._bgpOptions.internalValue),
-      timeouts: tfRouteServerPeerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      bgp_options: cdktn.listMapper(awsRouteServerPeerBgpOptionsPropertyToTerraform, true)(this._bgpOptions.internalValue),
+      timeouts: awsRouteServerPeerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -274,16 +274,16 @@ export class TfRouteServerPeer extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       bgp_options: {
-        value: cdktn.listMapperHcl(tfRouteServerPeerBgpOptionsPropertyToHclTerraform, true)(this._bgpOptions.internalValue),
+        value: cdktn.listMapperHcl(awsRouteServerPeerBgpOptionsPropertyToHclTerraform, true)(this._bgpOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRouteServerPeer.BgpOptionsPropertyList",
+        storageClassType: "AwsRouteServerPeer.BgpOptionsPropertyList",
       },
       timeouts: {
-        value: tfRouteServerPeerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsRouteServerPeerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfRouteServerPeer.TimeoutsProperty",
+        storageClassType: "AwsRouteServerPeer.TimeoutsProperty",
       },
     };
 
@@ -292,7 +292,7 @@ export class TfRouteServerPeer extends cdktn.TerraformResource {
   }
 }
 
-export function tfRouteServerPeerBgpOptionsPropertyToTerraform(struct?: TfRouteServerPeer.BgpOptionsProperty | cdktn.IResolvable): any {
+export function awsRouteServerPeerBgpOptionsPropertyToTerraform(struct?: AwsRouteServerPeer.BgpOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function tfRouteServerPeerBgpOptionsPropertyToTerraform(struct?: TfRouteS
 }
 
 
-export function tfRouteServerPeerBgpOptionsPropertyToHclTerraform(struct?: TfRouteServerPeer.BgpOptionsProperty | cdktn.IResolvable): any {
+export function awsRouteServerPeerBgpOptionsPropertyToHclTerraform(struct?: AwsRouteServerPeer.BgpOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function tfRouteServerPeerBgpOptionsPropertyToHclTerraform(struct?: TfRou
 }
 
 
-export function tfRouteServerPeerTimeoutsPropertyToTerraform(struct?: TfRouteServerPeer.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRouteServerPeerTimeoutsPropertyToTerraform(struct?: AwsRouteServerPeer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function tfRouteServerPeerTimeoutsPropertyToTerraform(struct?: TfRouteSer
 }
 
 
-export function tfRouteServerPeerTimeoutsPropertyToHclTerraform(struct?: TfRouteServerPeer.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRouteServerPeerTimeoutsPropertyToHclTerraform(struct?: AwsRouteServerPeer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,14 +366,14 @@ export function tfRouteServerPeerTimeoutsPropertyToHclTerraform(struct?: TfRoute
 }
 
 
-export namespace TfRouteServerPeer {
+export namespace AwsRouteServerPeer {
 export interface BgpOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#peer_asn TfRouteServerPeer#peer_asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#peer_asn AwsRouteServerPeer#peer_asn}
   */
   readonly peerAsn: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#peer_liveness_detection TfRouteServerPeer#peer_liveness_detection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#peer_liveness_detection AwsRouteServerPeer#peer_liveness_detection}
   */
   readonly peerLivenessDetection?: string;
 }
@@ -480,13 +480,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#create TfRouteServerPeer#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#create AwsRouteServerPeer#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#delete TfRouteServerPeer#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_route_server_peer#delete AwsRouteServerPeer#delete}
   */
   readonly delete?: string;
 }

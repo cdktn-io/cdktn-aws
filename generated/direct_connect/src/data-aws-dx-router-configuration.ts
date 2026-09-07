@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRouterConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRouterConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dx_router_configuration#id DataTfRouterConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dx_router_configuration#id DataAwsRouterConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,15 +16,15 @@ export interface DataTfRouterConfigurationConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dx_router_configuration#region DataTfRouterConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dx_router_configuration#region DataAwsRouterConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dx_router_configuration#router_type_identifier DataTfRouterConfiguration#router_type_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dx_router_configuration#router_type_identifier DataAwsRouterConfiguration#router_type_identifier}
   */
   readonly routerTypeIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dx_router_configuration#virtual_interface_id DataTfRouterConfiguration#virtual_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dx_router_configuration#virtual_interface_id DataAwsRouterConfiguration#virtual_interface_id}
   */
   readonly virtualInterfaceId: string;
 }
@@ -32,7 +32,7 @@ export interface DataTfRouterConfigurationConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dx_router_configuration aws_dx_router_configuration}
 */
-export class DataTfRouterConfiguration extends cdktn.TerraformDataSource {
+export class DataAwsRouterConfiguration extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfRouterConfiguration extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRouterConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRouterConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRouterConfiguration to import
-  * @param importFromId The id of the existing DataTfRouterConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dx_router_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRouterConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRouterConfiguration to import
+  * @param importFromId The id of the existing DataAwsRouterConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dx_router_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRouterConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dx_router_configuration", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfRouterConfiguration extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRouterConfigurationConfig
+  * @param options DataAwsRouterConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfRouterConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsRouterConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dx_router_configuration',
       terraformGeneratorMetadata: {
@@ -128,7 +128,7 @@ export class DataTfRouterConfiguration extends cdktn.TerraformDataSource {
   }
 
   // router - computed: true, optional: false, required: false
-  private _router = new DataTfRouterConfiguration.RouterPropertyList(this, "router", false);
+  private _router = new DataAwsRouterConfiguration.RouterPropertyList(this, "router", false);
   public get router() {
     return this._router;
   }
@@ -210,7 +210,7 @@ export class DataTfRouterConfiguration extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfRouterConfigurationRouterPropertyToTerraform(struct?: DataTfRouterConfiguration.RouterProperty): any {
+export function dataAwsRouterConfigurationRouterPropertyToTerraform(struct?: DataAwsRouterConfiguration.RouterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -220,7 +220,7 @@ export function dataTfRouterConfigurationRouterPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfRouterConfigurationRouterPropertyToHclTerraform(struct?: DataTfRouterConfiguration.RouterProperty): any {
+export function dataAwsRouterConfigurationRouterPropertyToHclTerraform(struct?: DataAwsRouterConfiguration.RouterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -231,7 +231,7 @@ export function dataTfRouterConfigurationRouterPropertyToHclTerraform(struct?: D
 }
 
 
-export namespace DataTfRouterConfiguration {
+export namespace DataAwsRouterConfiguration {
 export interface RouterProperty {
 }
 export class RouterPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfAccessPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsAccessPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
   * Name of the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_access_policy#name DataTfAccessPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_access_policy#name DataAwsAccessPolicy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_access_policy#region DataTfAccessPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_access_policy#region DataAwsAccessPolicy#region}
   */
   readonly region?: string;
   /**
   * Type of access policy. Must be `data`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_access_policy#type DataTfAccessPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_access_policy#type DataAwsAccessPolicy#type}
   */
   readonly type: string;
 }
@@ -29,7 +29,7 @@ export interface DataTfAccessPolicyConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_access_policy aws_opensearchserverless_access_policy}
 */
-export class DataTfAccessPolicy extends cdktn.TerraformDataSource {
+export class DataAwsAccessPolicy extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class DataTfAccessPolicy extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfAccessPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsAccessPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfAccessPolicy to import
-  * @param importFromId The id of the existing DataTfAccessPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_access_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfAccessPolicy to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsAccessPolicy to import
+  * @param importFromId The id of the existing DataAwsAccessPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_access_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsAccessPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearchserverless_access_policy", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class DataTfAccessPolicy extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfAccessPolicyConfig
+  * @param options DataAwsAccessPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfAccessPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsAccessPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearchserverless_access_policy',
       terraformGeneratorMetadata: {

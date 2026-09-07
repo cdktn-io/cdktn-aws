@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRouteResponseConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRouteResponseConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#api_id TfRouteResponse#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#api_id AwsRouteResponse#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#id TfRouteResponse#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#id AwsRouteResponse#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#model_selection_expression TfRouteResponse#model_selection_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#model_selection_expression AwsRouteResponse#model_selection_expression}
   */
   readonly modelSelectionExpression?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#region TfRouteResponse#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#region AwsRouteResponse#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#response_models TfRouteResponse#response_models}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#response_models AwsRouteResponse#response_models}
   */
   readonly responseModels?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#route_id TfRouteResponse#route_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#route_id AwsRouteResponse#route_id}
   */
   readonly routeId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#route_response_key TfRouteResponse#route_response_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#route_response_key AwsRouteResponse#route_response_key}
   */
   readonly routeResponseKey: string;
 }
@@ -44,7 +44,7 @@ export interface TfRouteResponseConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response aws_apigatewayv2_route_response}
 */
-export class TfRouteResponse extends cdktn.TerraformResource {
+export class AwsRouteResponse extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfRouteResponse extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRouteResponse resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRouteResponse resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRouteResponse to import
-  * @param importFromId The id of the existing TfRouteResponse that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRouteResponse to import is found
+  * @param importToId The construct id used in the generated config for the AwsRouteResponse to import
+  * @param importFromId The id of the existing AwsRouteResponse that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route_response#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRouteResponse to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apigatewayv2_route_response", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfRouteResponse extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRouteResponseConfig
+  * @param options AwsRouteResponseConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRouteResponseConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRouteResponseConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apigatewayv2_route_response',
       terraformGeneratorMetadata: {

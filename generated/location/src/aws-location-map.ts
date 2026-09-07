@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMapConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMapConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#description TfMap#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#description AwsMap#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#id TfMap#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#id AwsMap#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#map_name TfMap#map_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#map_name AwsMap#map_name}
   */
   readonly mapName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#region TfMap#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#region AwsMap#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#tags TfMap#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#tags AwsMap#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#tags_all TfMap#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#tags_all AwsMap#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#configuration TfMap#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#configuration AwsMap#configuration}
   */
-  readonly configuration: TfMap.ConfigurationProperty;
+  readonly configuration: AwsMap.ConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map aws_location_map}
 */
-export class TfMap extends cdktn.TerraformResource {
+export class AwsMap extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfMap extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMap resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMap resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMap to import
-  * @param importFromId The id of the existing TfMap that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMap to import is found
+  * @param importToId The construct id used in the generated config for the AwsMap to import
+  * @param importFromId The id of the existing AwsMap that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMap to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_location_map", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfMap extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMapConfig
+  * @param options AwsMapConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMapConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMapConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_location_map',
       terraformGeneratorMetadata: {
@@ -216,11 +216,11 @@ export class TfMap extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: false, required: true
-  private _configuration = new TfMap.ConfigurationPropertyOutputReference(this, "configuration");
+  private _configuration = new AwsMap.ConfigurationPropertyOutputReference(this, "configuration");
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: TfMap.ConfigurationProperty) {
+  public putConfiguration(value: AwsMap.ConfigurationProperty) {
     this._configuration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -240,7 +240,7 @@ export class TfMap extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      configuration: tfMapConfigurationPropertyToTerraform(this._configuration.internalValue),
+      configuration: awsMapConfigurationPropertyToTerraform(this._configuration.internalValue),
     };
   }
 
@@ -283,10 +283,10 @@ export class TfMap extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       configuration: {
-        value: tfMapConfigurationPropertyToHclTerraform(this._configuration.internalValue),
+        value: awsMapConfigurationPropertyToHclTerraform(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMap.ConfigurationPropertyList",
+        storageClassType: "AwsMap.ConfigurationPropertyList",
       },
     };
 
@@ -295,7 +295,7 @@ export class TfMap extends cdktn.TerraformResource {
   }
 }
 
-export function tfMapConfigurationPropertyToTerraform(struct?: TfMap.ConfigurationPropertyOutputReference | TfMap.ConfigurationProperty): any {
+export function awsMapConfigurationPropertyToTerraform(struct?: AwsMap.ConfigurationPropertyOutputReference | AwsMap.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function tfMapConfigurationPropertyToTerraform(struct?: TfMap.Configurati
 }
 
 
-export function tfMapConfigurationPropertyToHclTerraform(struct?: TfMap.ConfigurationPropertyOutputReference | TfMap.ConfigurationProperty): any {
+export function awsMapConfigurationPropertyToHclTerraform(struct?: AwsMap.ConfigurationPropertyOutputReference | AwsMap.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,10 +325,10 @@ export function tfMapConfigurationPropertyToHclTerraform(struct?: TfMap.Configur
 }
 
 
-export namespace TfMap {
+export namespace AwsMap {
 export interface ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#style TfMap#style}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/location_map#style AwsMap#style}
   */
   readonly style: string;
 }

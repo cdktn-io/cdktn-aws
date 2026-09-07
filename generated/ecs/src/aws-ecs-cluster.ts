@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClusterConfig extends cdktn.TerraformMetaArguments {
+export interface AwsClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#id TfCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#id AwsCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#name TfCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#name AwsCluster#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#region TfCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#region AwsCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#tags TfCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#tags AwsCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#tags_all TfCluster#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#tags_all AwsCluster#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#configuration TfCluster#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#configuration AwsCluster#configuration}
   */
-  readonly configuration?: TfCluster.ConfigurationProperty;
+  readonly configuration?: AwsCluster.ConfigurationProperty;
   /**
   * service_connect_defaults block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#service_connect_defaults TfCluster#service_connect_defaults}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#service_connect_defaults AwsCluster#service_connect_defaults}
   */
-  readonly serviceConnectDefaults?: TfCluster.ServiceConnectDefaultsProperty;
+  readonly serviceConnectDefaults?: AwsCluster.ServiceConnectDefaultsProperty;
   /**
   * setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#setting TfCluster#setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#setting AwsCluster#setting}
   */
-  readonly setting?: TfCluster.SettingProperty[] | cdktn.IResolvable;
+  readonly setting?: AwsCluster.SettingProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster aws_ecs_cluster}
 */
-export class TfCluster extends cdktn.TerraformResource {
+export class AwsCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCluster to import
-  * @param importFromId The id of the existing TfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCluster to import is found
+  * @param importToId The construct id used in the generated config for the AwsCluster to import
+  * @param importFromId The id of the existing AwsCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_cluster", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClusterConfig
+  * @param options AwsClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfClusterConfig) {
+  public constructor(scope: Construct, id: string, config: AwsClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_cluster',
       terraformGeneratorMetadata: {
@@ -199,11 +199,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new TfCluster.ConfigurationPropertyOutputReference(this, "configuration");
+  private _configuration = new AwsCluster.ConfigurationPropertyOutputReference(this, "configuration");
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: TfCluster.ConfigurationProperty) {
+  public putConfiguration(value: AwsCluster.ConfigurationProperty) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -215,11 +215,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // service_connect_defaults - computed: false, optional: true, required: false
-  private _serviceConnectDefaults = new TfCluster.ServiceConnectDefaultsPropertyOutputReference(this, "service_connect_defaults");
+  private _serviceConnectDefaults = new AwsCluster.ServiceConnectDefaultsPropertyOutputReference(this, "service_connect_defaults");
   public get serviceConnectDefaults() {
     return this._serviceConnectDefaults;
   }
-  public putServiceConnectDefaults(value: TfCluster.ServiceConnectDefaultsProperty) {
+  public putServiceConnectDefaults(value: AwsCluster.ServiceConnectDefaultsProperty) {
     this._serviceConnectDefaults.internalValue = value;
   }
   public resetServiceConnectDefaults() {
@@ -231,11 +231,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // setting - computed: false, optional: true, required: false
-  private _setting = new TfCluster.SettingPropertyList(this, "setting", true);
+  private _setting = new AwsCluster.SettingPropertyList(this, "setting", true);
   public get setting() {
     return this._setting;
   }
-  public putSetting(value: TfCluster.SettingProperty[] | cdktn.IResolvable) {
+  public putSetting(value: AwsCluster.SettingProperty[] | cdktn.IResolvable) {
     this._setting.internalValue = value;
   }
   public resetSetting() {
@@ -257,9 +257,9 @@ export class TfCluster extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      configuration: tfClusterConfigurationPropertyToTerraform(this._configuration.internalValue),
-      service_connect_defaults: tfClusterServiceConnectDefaultsPropertyToTerraform(this._serviceConnectDefaults.internalValue),
-      setting: cdktn.listMapper(tfClusterSettingPropertyToTerraform, true)(this._setting.internalValue),
+      configuration: awsClusterConfigurationPropertyToTerraform(this._configuration.internalValue),
+      service_connect_defaults: awsClusterServiceConnectDefaultsPropertyToTerraform(this._serviceConnectDefaults.internalValue),
+      setting: cdktn.listMapper(awsClusterSettingPropertyToTerraform, true)(this._setting.internalValue),
     };
   }
 
@@ -296,22 +296,22 @@ export class TfCluster extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       configuration: {
-        value: tfClusterConfigurationPropertyToHclTerraform(this._configuration.internalValue),
+        value: awsClusterConfigurationPropertyToHclTerraform(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCluster.ConfigurationPropertyList",
+        storageClassType: "AwsCluster.ConfigurationPropertyList",
       },
       service_connect_defaults: {
-        value: tfClusterServiceConnectDefaultsPropertyToHclTerraform(this._serviceConnectDefaults.internalValue),
+        value: awsClusterServiceConnectDefaultsPropertyToHclTerraform(this._serviceConnectDefaults.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCluster.ServiceConnectDefaultsPropertyList",
+        storageClassType: "AwsCluster.ServiceConnectDefaultsPropertyList",
       },
       setting: {
-        value: cdktn.listMapperHcl(tfClusterSettingPropertyToHclTerraform, true)(this._setting.internalValue),
+        value: cdktn.listMapperHcl(awsClusterSettingPropertyToHclTerraform, true)(this._setting.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfCluster.SettingPropertyList",
+        storageClassType: "AwsCluster.SettingPropertyList",
       },
     };
 
@@ -320,7 +320,7 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 }
 
-export function tfClusterLogConfigurationPropertyToTerraform(struct?: TfCluster.LogConfigurationPropertyOutputReference | TfCluster.LogConfigurationProperty): any {
+export function awsClusterLogConfigurationPropertyToTerraform(struct?: AwsCluster.LogConfigurationPropertyOutputReference | AwsCluster.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,7 +335,7 @@ export function tfClusterLogConfigurationPropertyToTerraform(struct?: TfCluster.
 }
 
 
-export function tfClusterLogConfigurationPropertyToHclTerraform(struct?: TfCluster.LogConfigurationPropertyOutputReference | TfCluster.LogConfigurationProperty): any {
+export function awsClusterLogConfigurationPropertyToHclTerraform(struct?: AwsCluster.LogConfigurationPropertyOutputReference | AwsCluster.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function tfClusterLogConfigurationPropertyToHclTerraform(struct?: TfClust
 }
 
 
-export function tfClusterExecuteCommandConfigurationPropertyToTerraform(struct?: TfCluster.ExecuteCommandConfigurationPropertyOutputReference | TfCluster.ExecuteCommandConfigurationProperty): any {
+export function awsClusterExecuteCommandConfigurationPropertyToTerraform(struct?: AwsCluster.ExecuteCommandConfigurationPropertyOutputReference | AwsCluster.ExecuteCommandConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,12 +386,12 @@ export function tfClusterExecuteCommandConfigurationPropertyToTerraform(struct?:
   return {
     kms_key_id: cdktn.stringToTerraform(struct!.kmsKeyId),
     logging: cdktn.stringToTerraform(struct!.logging),
-    log_configuration: tfClusterLogConfigurationPropertyToTerraform(struct!.logConfiguration),
+    log_configuration: awsClusterLogConfigurationPropertyToTerraform(struct!.logConfiguration),
   }
 }
 
 
-export function tfClusterExecuteCommandConfigurationPropertyToHclTerraform(struct?: TfCluster.ExecuteCommandConfigurationPropertyOutputReference | TfCluster.ExecuteCommandConfigurationProperty): any {
+export function awsClusterExecuteCommandConfigurationPropertyToHclTerraform(struct?: AwsCluster.ExecuteCommandConfigurationPropertyOutputReference | AwsCluster.ExecuteCommandConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,7 +410,7 @@ export function tfClusterExecuteCommandConfigurationPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     log_configuration: {
-      value: tfClusterLogConfigurationPropertyToHclTerraform(struct!.logConfiguration),
+      value: awsClusterLogConfigurationPropertyToHclTerraform(struct!.logConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "LogConfigurationPropertyList",
@@ -422,7 +422,7 @@ export function tfClusterExecuteCommandConfigurationPropertyToHclTerraform(struc
 }
 
 
-export function tfClusterManagedStorageConfigurationPropertyToTerraform(struct?: TfCluster.ManagedStorageConfigurationPropertyOutputReference | TfCluster.ManagedStorageConfigurationProperty): any {
+export function awsClusterManagedStorageConfigurationPropertyToTerraform(struct?: AwsCluster.ManagedStorageConfigurationPropertyOutputReference | AwsCluster.ManagedStorageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -434,7 +434,7 @@ export function tfClusterManagedStorageConfigurationPropertyToTerraform(struct?:
 }
 
 
-export function tfClusterManagedStorageConfigurationPropertyToHclTerraform(struct?: TfCluster.ManagedStorageConfigurationPropertyOutputReference | TfCluster.ManagedStorageConfigurationProperty): any {
+export function awsClusterManagedStorageConfigurationPropertyToHclTerraform(struct?: AwsCluster.ManagedStorageConfigurationPropertyOutputReference | AwsCluster.ManagedStorageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,32 +459,32 @@ export function tfClusterManagedStorageConfigurationPropertyToHclTerraform(struc
 }
 
 
-export function tfClusterConfigurationPropertyToTerraform(struct?: TfCluster.ConfigurationPropertyOutputReference | TfCluster.ConfigurationProperty): any {
+export function awsClusterConfigurationPropertyToTerraform(struct?: AwsCluster.ConfigurationPropertyOutputReference | AwsCluster.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    execute_command_configuration: tfClusterExecuteCommandConfigurationPropertyToTerraform(struct!.executeCommandConfiguration),
-    managed_storage_configuration: tfClusterManagedStorageConfigurationPropertyToTerraform(struct!.managedStorageConfiguration),
+    execute_command_configuration: awsClusterExecuteCommandConfigurationPropertyToTerraform(struct!.executeCommandConfiguration),
+    managed_storage_configuration: awsClusterManagedStorageConfigurationPropertyToTerraform(struct!.managedStorageConfiguration),
   }
 }
 
 
-export function tfClusterConfigurationPropertyToHclTerraform(struct?: TfCluster.ConfigurationPropertyOutputReference | TfCluster.ConfigurationProperty): any {
+export function awsClusterConfigurationPropertyToHclTerraform(struct?: AwsCluster.ConfigurationPropertyOutputReference | AwsCluster.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     execute_command_configuration: {
-      value: tfClusterExecuteCommandConfigurationPropertyToHclTerraform(struct!.executeCommandConfiguration),
+      value: awsClusterExecuteCommandConfigurationPropertyToHclTerraform(struct!.executeCommandConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ExecuteCommandConfigurationPropertyList",
     },
     managed_storage_configuration: {
-      value: tfClusterManagedStorageConfigurationPropertyToHclTerraform(struct!.managedStorageConfiguration),
+      value: awsClusterManagedStorageConfigurationPropertyToHclTerraform(struct!.managedStorageConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ManagedStorageConfigurationPropertyList",
@@ -496,7 +496,7 @@ export function tfClusterConfigurationPropertyToHclTerraform(struct?: TfCluster.
 }
 
 
-export function tfClusterServiceConnectDefaultsPropertyToTerraform(struct?: TfCluster.ServiceConnectDefaultsPropertyOutputReference | TfCluster.ServiceConnectDefaultsProperty): any {
+export function awsClusterServiceConnectDefaultsPropertyToTerraform(struct?: AwsCluster.ServiceConnectDefaultsPropertyOutputReference | AwsCluster.ServiceConnectDefaultsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function tfClusterServiceConnectDefaultsPropertyToTerraform(struct?: TfCl
 }
 
 
-export function tfClusterServiceConnectDefaultsPropertyToHclTerraform(struct?: TfCluster.ServiceConnectDefaultsPropertyOutputReference | TfCluster.ServiceConnectDefaultsProperty): any {
+export function awsClusterServiceConnectDefaultsPropertyToHclTerraform(struct?: AwsCluster.ServiceConnectDefaultsPropertyOutputReference | AwsCluster.ServiceConnectDefaultsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -526,7 +526,7 @@ export function tfClusterServiceConnectDefaultsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfClusterSettingPropertyToTerraform(struct?: TfCluster.SettingProperty | cdktn.IResolvable): any {
+export function awsClusterSettingPropertyToTerraform(struct?: AwsCluster.SettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -538,7 +538,7 @@ export function tfClusterSettingPropertyToTerraform(struct?: TfCluster.SettingPr
 }
 
 
-export function tfClusterSettingPropertyToHclTerraform(struct?: TfCluster.SettingProperty | cdktn.IResolvable): any {
+export function awsClusterSettingPropertyToHclTerraform(struct?: AwsCluster.SettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,26 +563,26 @@ export function tfClusterSettingPropertyToHclTerraform(struct?: TfCluster.Settin
 }
 
 
-export namespace TfCluster {
+export namespace AwsCluster {
 export interface LogConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#cloud_watch_encryption_enabled TfCluster#cloud_watch_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#cloud_watch_encryption_enabled AwsCluster#cloud_watch_encryption_enabled}
   */
   readonly cloudWatchEncryptionEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#cloud_watch_log_group_name TfCluster#cloud_watch_log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#cloud_watch_log_group_name AwsCluster#cloud_watch_log_group_name}
   */
   readonly cloudWatchLogGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#s3_bucket_encryption_enabled TfCluster#s3_bucket_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#s3_bucket_encryption_enabled AwsCluster#s3_bucket_encryption_enabled}
   */
   readonly s3BucketEncryptionEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#s3_bucket_name TfCluster#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#s3_bucket_name AwsCluster#s3_bucket_name}
   */
   readonly s3BucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#s3_key_prefix TfCluster#s3_key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#s3_key_prefix AwsCluster#s3_key_prefix}
   */
   readonly s3KeyPrefix?: string;
 }
@@ -724,17 +724,17 @@ export class LogConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ExecuteCommandConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#kms_key_id TfCluster#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#kms_key_id AwsCluster#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#logging TfCluster#logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#logging AwsCluster#logging}
   */
   readonly logging?: string;
   /**
   * log_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#log_configuration TfCluster#log_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#log_configuration AwsCluster#log_configuration}
   */
   readonly logConfiguration?: LogConfigurationProperty;
 }
@@ -832,11 +832,11 @@ export class ExecuteCommandConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface ManagedStorageConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#fargate_ephemeral_storage_kms_key_id TfCluster#fargate_ephemeral_storage_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#fargate_ephemeral_storage_kms_key_id AwsCluster#fargate_ephemeral_storage_kms_key_id}
   */
   readonly fargateEphemeralStorageKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#kms_key_id TfCluster#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#kms_key_id AwsCluster#kms_key_id}
   */
   readonly kmsKeyId?: string;
 }
@@ -914,13 +914,13 @@ export interface ConfigurationProperty {
   /**
   * execute_command_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#execute_command_configuration TfCluster#execute_command_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#execute_command_configuration AwsCluster#execute_command_configuration}
   */
   readonly executeCommandConfiguration?: ExecuteCommandConfigurationProperty;
   /**
   * managed_storage_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#managed_storage_configuration TfCluster#managed_storage_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#managed_storage_configuration AwsCluster#managed_storage_configuration}
   */
   readonly managedStorageConfiguration?: ManagedStorageConfigurationProperty;
 }
@@ -996,7 +996,7 @@ export class ConfigurationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ServiceConnectDefaultsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#namespace TfCluster#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#namespace AwsCluster#namespace}
   */
   readonly namespace: string;
 }
@@ -1047,11 +1047,11 @@ export class ServiceConnectDefaultsPropertyOutputReference extends cdktn.Complex
 }
 export interface SettingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#name TfCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#name AwsCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#value TfCluster#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_cluster#value AwsCluster#value}
   */
   readonly value: string;
 }

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfNetworkAclsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsNetworkAclsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#id DataTfNetworkAcls#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#id DataAwsNetworkAcls#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,35 +16,35 @@ export interface DataTfNetworkAclsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#region DataTfNetworkAcls#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#region DataAwsNetworkAcls#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#tags DataTfNetworkAcls#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#tags DataAwsNetworkAcls#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#vpc_id DataTfNetworkAcls#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#vpc_id DataAwsNetworkAcls#vpc_id}
   */
   readonly vpcId?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#filter DataTfNetworkAcls#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#filter DataAwsNetworkAcls#filter}
   */
-  readonly filter?: DataTfNetworkAcls.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsNetworkAcls.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#timeouts DataTfNetworkAcls#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#timeouts DataAwsNetworkAcls#timeouts}
   */
-  readonly timeouts?: DataTfNetworkAcls.TimeoutsProperty;
+  readonly timeouts?: DataAwsNetworkAcls.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls aws_network_acls}
 */
-export class DataTfNetworkAcls extends cdktn.TerraformDataSource {
+export class DataAwsNetworkAcls extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class DataTfNetworkAcls extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfNetworkAcls resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsNetworkAcls resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfNetworkAcls to import
-  * @param importFromId The id of the existing DataTfNetworkAcls that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfNetworkAcls to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsNetworkAcls to import
+  * @param importFromId The id of the existing DataAwsNetworkAcls that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsNetworkAcls to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_network_acls", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class DataTfNetworkAcls extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfNetworkAclsConfig = {}
+  * @param options DataAwsNetworkAclsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfNetworkAclsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsNetworkAclsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_network_acls',
       terraformGeneratorMetadata: {
@@ -174,11 +174,11 @@ export class DataTfNetworkAcls extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfNetworkAcls.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsNetworkAcls.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfNetworkAcls.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsNetworkAcls.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -190,11 +190,11 @@ export class DataTfNetworkAcls extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfNetworkAcls.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsNetworkAcls.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfNetworkAcls.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsNetworkAcls.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -215,8 +215,8 @@ export class DataTfNetworkAcls extends cdktn.TerraformDataSource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      filter: cdktn.listMapper(dataTfNetworkAclsFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataTfNetworkAclsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataAwsNetworkAclsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataAwsNetworkAclsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -247,16 +247,16 @@ export class DataTfNetworkAcls extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfNetworkAclsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsNetworkAclsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfNetworkAcls.FilterPropertyList",
+        storageClassType: "DataAwsNetworkAcls.FilterPropertyList",
       },
       timeouts: {
-        value: dataTfNetworkAclsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsNetworkAclsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfNetworkAcls.TimeoutsProperty",
+        storageClassType: "DataAwsNetworkAcls.TimeoutsProperty",
       },
     };
 
@@ -265,7 +265,7 @@ export class DataTfNetworkAcls extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfNetworkAclsFilterPropertyToTerraform(struct?: DataTfNetworkAcls.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsNetworkAclsFilterPropertyToTerraform(struct?: DataAwsNetworkAcls.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,7 +277,7 @@ export function dataTfNetworkAclsFilterPropertyToTerraform(struct?: DataTfNetwor
 }
 
 
-export function dataTfNetworkAclsFilterPropertyToHclTerraform(struct?: DataTfNetworkAcls.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsNetworkAclsFilterPropertyToHclTerraform(struct?: DataAwsNetworkAcls.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function dataTfNetworkAclsFilterPropertyToHclTerraform(struct?: DataTfNet
 }
 
 
-export function dataTfNetworkAclsTimeoutsPropertyToTerraform(struct?: DataTfNetworkAcls.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsNetworkAclsTimeoutsPropertyToTerraform(struct?: DataAwsNetworkAcls.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function dataTfNetworkAclsTimeoutsPropertyToTerraform(struct?: DataTfNetw
 }
 
 
-export function dataTfNetworkAclsTimeoutsPropertyToHclTerraform(struct?: DataTfNetworkAcls.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsNetworkAclsTimeoutsPropertyToHclTerraform(struct?: DataAwsNetworkAcls.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,14 +332,14 @@ export function dataTfNetworkAclsTimeoutsPropertyToHclTerraform(struct?: DataTfN
 }
 
 
-export namespace DataTfNetworkAcls {
+export namespace DataAwsNetworkAcls {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#name DataTfNetworkAcls#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#name DataAwsNetworkAcls#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#values DataTfNetworkAcls#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#values DataAwsNetworkAcls#values}
   */
   readonly values: string[];
 }
@@ -441,7 +441,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#read DataTfNetworkAcls#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/network_acls#read DataAwsNetworkAcls#read}
   */
   readonly read?: string;
 }

@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLocationAzureBlobConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLocationAzureBlobConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#access_tier TfLocationAzureBlob#access_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#access_tier AwsLocationAzureBlob#access_tier}
   */
   readonly accessTier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#agent_arns TfLocationAzureBlob#agent_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#agent_arns AwsLocationAzureBlob#agent_arns}
   */
   readonly agentArns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#authentication_type TfLocationAzureBlob#authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#authentication_type AwsLocationAzureBlob#authentication_type}
   */
   readonly authenticationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#blob_type TfLocationAzureBlob#blob_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#blob_type AwsLocationAzureBlob#blob_type}
   */
   readonly blobType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#container_url TfLocationAzureBlob#container_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#container_url AwsLocationAzureBlob#container_url}
   */
   readonly containerUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#id TfLocationAzureBlob#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#id AwsLocationAzureBlob#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -36,33 +36,33 @@ export interface TfLocationAzureBlobConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#region TfLocationAzureBlob#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#region AwsLocationAzureBlob#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#subdirectory TfLocationAzureBlob#subdirectory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#subdirectory AwsLocationAzureBlob#subdirectory}
   */
   readonly subdirectory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#tags TfLocationAzureBlob#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#tags AwsLocationAzureBlob#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#tags_all TfLocationAzureBlob#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#tags_all AwsLocationAzureBlob#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * sas_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#sas_configuration TfLocationAzureBlob#sas_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#sas_configuration AwsLocationAzureBlob#sas_configuration}
   */
-  readonly sasConfiguration?: TfLocationAzureBlob.SasConfigurationProperty;
+  readonly sasConfiguration?: AwsLocationAzureBlob.SasConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob aws_datasync_location_azure_blob}
 */
-export class TfLocationAzureBlob extends cdktn.TerraformResource {
+export class AwsLocationAzureBlob extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -73,11 +73,11 @@ export class TfLocationAzureBlob extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLocationAzureBlob resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLocationAzureBlob resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLocationAzureBlob to import
-  * @param importFromId The id of the existing TfLocationAzureBlob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLocationAzureBlob to import is found
+  * @param importToId The construct id used in the generated config for the AwsLocationAzureBlob to import
+  * @param importFromId The id of the existing AwsLocationAzureBlob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLocationAzureBlob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datasync_location_azure_blob", importId: importFromId, provider });
@@ -92,9 +92,9 @@ export class TfLocationAzureBlob extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLocationAzureBlobConfig
+  * @param options AwsLocationAzureBlobConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLocationAzureBlobConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLocationAzureBlobConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datasync_location_azure_blob',
       terraformGeneratorMetadata: {
@@ -289,11 +289,11 @@ export class TfLocationAzureBlob extends cdktn.TerraformResource {
   }
 
   // sas_configuration - computed: false, optional: true, required: false
-  private _sasConfiguration = new TfLocationAzureBlob.SasConfigurationPropertyOutputReference(this, "sas_configuration");
+  private _sasConfiguration = new AwsLocationAzureBlob.SasConfigurationPropertyOutputReference(this, "sas_configuration");
   public get sasConfiguration() {
     return this._sasConfiguration;
   }
-  public putSasConfiguration(value: TfLocationAzureBlob.SasConfigurationProperty) {
+  public putSasConfiguration(value: AwsLocationAzureBlob.SasConfigurationProperty) {
     this._sasConfiguration.internalValue = value;
   }
   public resetSasConfiguration() {
@@ -320,7 +320,7 @@ export class TfLocationAzureBlob extends cdktn.TerraformResource {
       subdirectory: cdktn.stringToTerraform(this._subdirectory),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      sas_configuration: tfLocationAzureBlobSasConfigurationPropertyToTerraform(this._sasConfiguration.internalValue),
+      sas_configuration: awsLocationAzureBlobSasConfigurationPropertyToTerraform(this._sasConfiguration.internalValue),
     };
   }
 
@@ -387,10 +387,10 @@ export class TfLocationAzureBlob extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       sas_configuration: {
-        value: tfLocationAzureBlobSasConfigurationPropertyToHclTerraform(this._sasConfiguration.internalValue),
+        value: awsLocationAzureBlobSasConfigurationPropertyToHclTerraform(this._sasConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLocationAzureBlob.SasConfigurationPropertyList",
+        storageClassType: "AwsLocationAzureBlob.SasConfigurationPropertyList",
       },
     };
 
@@ -399,7 +399,7 @@ export class TfLocationAzureBlob extends cdktn.TerraformResource {
   }
 }
 
-export function tfLocationAzureBlobSasConfigurationPropertyToTerraform(struct?: TfLocationAzureBlob.SasConfigurationPropertyOutputReference | TfLocationAzureBlob.SasConfigurationProperty): any {
+export function awsLocationAzureBlobSasConfigurationPropertyToTerraform(struct?: AwsLocationAzureBlob.SasConfigurationPropertyOutputReference | AwsLocationAzureBlob.SasConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,7 +410,7 @@ export function tfLocationAzureBlobSasConfigurationPropertyToTerraform(struct?: 
 }
 
 
-export function tfLocationAzureBlobSasConfigurationPropertyToHclTerraform(struct?: TfLocationAzureBlob.SasConfigurationPropertyOutputReference | TfLocationAzureBlob.SasConfigurationProperty): any {
+export function awsLocationAzureBlobSasConfigurationPropertyToHclTerraform(struct?: AwsLocationAzureBlob.SasConfigurationPropertyOutputReference | AwsLocationAzureBlob.SasConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,10 +429,10 @@ export function tfLocationAzureBlobSasConfigurationPropertyToHclTerraform(struct
 }
 
 
-export namespace TfLocationAzureBlob {
+export namespace AwsLocationAzureBlob {
 export interface SasConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#token TfLocationAzureBlob#token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_azure_blob#token AwsLocationAzureBlob#token}
   */
   readonly token: string;
 }

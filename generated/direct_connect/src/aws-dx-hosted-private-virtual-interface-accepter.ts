@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfHostedPrivateVirtualInterfaceAccepterConfig extends cdktn.TerraformMetaArguments {
+export interface AwsHostedPrivateVirtualInterfaceAccepterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#dx_gateway_id TfHostedPrivateVirtualInterfaceAccepter#dx_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#dx_gateway_id AwsHostedPrivateVirtualInterfaceAccepter#dx_gateway_id}
   */
   readonly dxGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#id TfHostedPrivateVirtualInterfaceAccepter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#id AwsHostedPrivateVirtualInterfaceAccepter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,37 +20,37 @@ export interface TfHostedPrivateVirtualInterfaceAccepterConfig extends cdktn.Ter
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#region TfHostedPrivateVirtualInterfaceAccepter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#region AwsHostedPrivateVirtualInterfaceAccepter#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#tags TfHostedPrivateVirtualInterfaceAccepter#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#tags AwsHostedPrivateVirtualInterfaceAccepter#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#tags_all TfHostedPrivateVirtualInterfaceAccepter#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#tags_all AwsHostedPrivateVirtualInterfaceAccepter#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#virtual_interface_id TfHostedPrivateVirtualInterfaceAccepter#virtual_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#virtual_interface_id AwsHostedPrivateVirtualInterfaceAccepter#virtual_interface_id}
   */
   readonly virtualInterfaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#vpn_gateway_id TfHostedPrivateVirtualInterfaceAccepter#vpn_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#vpn_gateway_id AwsHostedPrivateVirtualInterfaceAccepter#vpn_gateway_id}
   */
   readonly vpnGatewayId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#timeouts TfHostedPrivateVirtualInterfaceAccepter#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#timeouts AwsHostedPrivateVirtualInterfaceAccepter#timeouts}
   */
-  readonly timeouts?: TfHostedPrivateVirtualInterfaceAccepter.TimeoutsProperty;
+  readonly timeouts?: AwsHostedPrivateVirtualInterfaceAccepter.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter aws_dx_hosted_private_virtual_interface_accepter}
 */
-export class TfHostedPrivateVirtualInterfaceAccepter extends cdktn.TerraformResource {
+export class AwsHostedPrivateVirtualInterfaceAccepter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfHostedPrivateVirtualInterfaceAccepter extends cdktn.TerraformReso
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfHostedPrivateVirtualInterfaceAccepter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsHostedPrivateVirtualInterfaceAccepter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfHostedPrivateVirtualInterfaceAccepter to import
-  * @param importFromId The id of the existing TfHostedPrivateVirtualInterfaceAccepter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfHostedPrivateVirtualInterfaceAccepter to import is found
+  * @param importToId The construct id used in the generated config for the AwsHostedPrivateVirtualInterfaceAccepter to import
+  * @param importFromId The id of the existing AwsHostedPrivateVirtualInterfaceAccepter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsHostedPrivateVirtualInterfaceAccepter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dx_hosted_private_virtual_interface_accepter", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfHostedPrivateVirtualInterfaceAccepter extends cdktn.TerraformReso
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfHostedPrivateVirtualInterfaceAccepterConfig
+  * @param options AwsHostedPrivateVirtualInterfaceAccepterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfHostedPrivateVirtualInterfaceAccepterConfig) {
+  public constructor(scope: Construct, id: string, config: AwsHostedPrivateVirtualInterfaceAccepterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dx_hosted_private_virtual_interface_accepter',
       terraformGeneratorMetadata: {
@@ -227,11 +227,11 @@ export class TfHostedPrivateVirtualInterfaceAccepter extends cdktn.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfHostedPrivateVirtualInterfaceAccepter.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsHostedPrivateVirtualInterfaceAccepter.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfHostedPrivateVirtualInterfaceAccepter.TimeoutsProperty) {
+  public putTimeouts(value: AwsHostedPrivateVirtualInterfaceAccepter.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -255,7 +255,7 @@ export class TfHostedPrivateVirtualInterfaceAccepter extends cdktn.TerraformReso
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       virtual_interface_id: cdktn.stringToTerraform(this._virtualInterfaceId),
       vpn_gateway_id: cdktn.stringToTerraform(this._vpnGatewayId),
-      timeouts: tfHostedPrivateVirtualInterfaceAccepterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsHostedPrivateVirtualInterfaceAccepterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -304,10 +304,10 @@ export class TfHostedPrivateVirtualInterfaceAccepter extends cdktn.TerraformReso
         storageClassType: "string",
       },
       timeouts: {
-        value: tfHostedPrivateVirtualInterfaceAccepterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsHostedPrivateVirtualInterfaceAccepterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfHostedPrivateVirtualInterfaceAccepter.TimeoutsProperty",
+        storageClassType: "AwsHostedPrivateVirtualInterfaceAccepter.TimeoutsProperty",
       },
     };
 
@@ -316,7 +316,7 @@ export class TfHostedPrivateVirtualInterfaceAccepter extends cdktn.TerraformReso
   }
 }
 
-export function tfHostedPrivateVirtualInterfaceAccepterTimeoutsPropertyToTerraform(struct?: TfHostedPrivateVirtualInterfaceAccepter.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsHostedPrivateVirtualInterfaceAccepterTimeoutsPropertyToTerraform(struct?: AwsHostedPrivateVirtualInterfaceAccepter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function tfHostedPrivateVirtualInterfaceAccepterTimeoutsPropertyToTerrafo
 }
 
 
-export function tfHostedPrivateVirtualInterfaceAccepterTimeoutsPropertyToHclTerraform(struct?: TfHostedPrivateVirtualInterfaceAccepter.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsHostedPrivateVirtualInterfaceAccepterTimeoutsPropertyToHclTerraform(struct?: AwsHostedPrivateVirtualInterfaceAccepter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,14 +353,14 @@ export function tfHostedPrivateVirtualInterfaceAccepterTimeoutsPropertyToHclTerr
 }
 
 
-export namespace TfHostedPrivateVirtualInterfaceAccepter {
+export namespace AwsHostedPrivateVirtualInterfaceAccepter {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#create TfHostedPrivateVirtualInterfaceAccepter#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#create AwsHostedPrivateVirtualInterfaceAccepter#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#delete TfHostedPrivateVirtualInterfaceAccepter#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_hosted_private_virtual_interface_accepter#delete AwsHostedPrivateVirtualInterfaceAccepter#delete}
   */
   readonly delete?: string;
 }

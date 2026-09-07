@@ -5,39 +5,39 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTelemetryRuleForOrganizationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTelemetryRuleForOrganizationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#region TfTelemetryRuleForOrganization#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#region AwsTelemetryRuleForOrganization#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#rule_name TfTelemetryRuleForOrganization#rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#rule_name AwsTelemetryRuleForOrganization#rule_name}
   */
   readonly ruleName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#tags TfTelemetryRuleForOrganization#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#tags AwsTelemetryRuleForOrganization#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#rule TfTelemetryRuleForOrganization#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#rule AwsTelemetryRuleForOrganization#rule}
   */
-  readonly rule?: TfTelemetryRuleForOrganization.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: AwsTelemetryRuleForOrganization.RuleProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#timeouts TfTelemetryRuleForOrganization#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#timeouts AwsTelemetryRuleForOrganization#timeouts}
   */
-  readonly timeouts?: TfTelemetryRuleForOrganization.TimeoutsProperty;
+  readonly timeouts?: AwsTelemetryRuleForOrganization.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization aws_observabilityadmin_telemetry_rule_for_organization}
 */
-export class TfTelemetryRuleForOrganization extends cdktn.TerraformResource {
+export class AwsTelemetryRuleForOrganization extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfTelemetryRuleForOrganization extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTelemetryRuleForOrganization resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTelemetryRuleForOrganization resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTelemetryRuleForOrganization to import
-  * @param importFromId The id of the existing TfTelemetryRuleForOrganization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTelemetryRuleForOrganization to import is found
+  * @param importToId The construct id used in the generated config for the AwsTelemetryRuleForOrganization to import
+  * @param importFromId The id of the existing AwsTelemetryRuleForOrganization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTelemetryRuleForOrganization to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_observabilityadmin_telemetry_rule_for_organization", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfTelemetryRuleForOrganization extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTelemetryRuleForOrganizationConfig
+  * @param options AwsTelemetryRuleForOrganizationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTelemetryRuleForOrganizationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTelemetryRuleForOrganizationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_observabilityadmin_telemetry_rule_for_organization',
       terraformGeneratorMetadata: {
@@ -153,11 +153,11 @@ export class TfTelemetryRuleForOrganization extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new TfTelemetryRuleForOrganization.RulePropertyList(this, "rule", false);
+  private _rule = new AwsTelemetryRuleForOrganization.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: TfTelemetryRuleForOrganization.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: AwsTelemetryRuleForOrganization.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -169,11 +169,11 @@ export class TfTelemetryRuleForOrganization extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTelemetryRuleForOrganization.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTelemetryRuleForOrganization.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTelemetryRuleForOrganization.TimeoutsProperty) {
+  public putTimeouts(value: AwsTelemetryRuleForOrganization.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -193,8 +193,8 @@ export class TfTelemetryRuleForOrganization extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       rule_name: cdktn.stringToTerraform(this._ruleName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      rule: cdktn.listMapper(tfTelemetryRuleForOrganizationRulePropertyToTerraform, true)(this._rule.internalValue),
-      timeouts: tfTelemetryRuleForOrganizationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      rule: cdktn.listMapper(awsTelemetryRuleForOrganizationRulePropertyToTerraform, true)(this._rule.internalValue),
+      timeouts: awsTelemetryRuleForOrganizationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -219,16 +219,16 @@ export class TfTelemetryRuleForOrganization extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       rule: {
-        value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTelemetryRuleForOrganization.RulePropertyList",
+        storageClassType: "AwsTelemetryRuleForOrganization.RulePropertyList",
       },
       timeouts: {
-        value: tfTelemetryRuleForOrganizationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTelemetryRuleForOrganizationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTelemetryRuleForOrganization.TimeoutsProperty",
+        storageClassType: "AwsTelemetryRuleForOrganization.TimeoutsProperty",
       },
     };
 
@@ -237,7 +237,7 @@ export class TfTelemetryRuleForOrganization extends cdktn.TerraformResource {
   }
 }
 
-export function tfTelemetryRuleForOrganizationFieldSelectorsPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.FieldSelectorsProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationFieldSelectorsPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.FieldSelectorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function tfTelemetryRuleForOrganizationFieldSelectorsPropertyToTerraform(
 }
 
 
-export function tfTelemetryRuleForOrganizationFieldSelectorsPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.FieldSelectorsProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationFieldSelectorsPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.FieldSelectorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,19 +309,19 @@ export function tfTelemetryRuleForOrganizationFieldSelectorsPropertyToHclTerrafo
 }
 
 
-export function tfTelemetryRuleForOrganizationAdvancedEventSelectorsPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.AdvancedEventSelectorsProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationAdvancedEventSelectorsPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.AdvancedEventSelectorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    field_selectors: cdktn.listMapper(tfTelemetryRuleForOrganizationFieldSelectorsPropertyToTerraform, true)(struct!.fieldSelectors),
+    field_selectors: cdktn.listMapper(awsTelemetryRuleForOrganizationFieldSelectorsPropertyToTerraform, true)(struct!.fieldSelectors),
   }
 }
 
 
-export function tfTelemetryRuleForOrganizationAdvancedEventSelectorsPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.AdvancedEventSelectorsProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationAdvancedEventSelectorsPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.AdvancedEventSelectorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function tfTelemetryRuleForOrganizationAdvancedEventSelectorsPropertyToHc
       storageClassType: "string",
     },
     field_selectors: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationFieldSelectorsPropertyToHclTerraform, true)(struct!.fieldSelectors),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationFieldSelectorsPropertyToHclTerraform, true)(struct!.fieldSelectors),
       isBlock: true,
       type: "list",
       storageClassType: "FieldSelectorsPropertyList",
@@ -346,25 +346,25 @@ export function tfTelemetryRuleForOrganizationAdvancedEventSelectorsPropertyToHc
 }
 
 
-export function tfTelemetryRuleForOrganizationCloudtrailParametersPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.CloudtrailParametersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationCloudtrailParametersPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.CloudtrailParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    advanced_event_selectors: cdktn.listMapper(tfTelemetryRuleForOrganizationAdvancedEventSelectorsPropertyToTerraform, true)(struct!.advancedEventSelectors),
+    advanced_event_selectors: cdktn.listMapper(awsTelemetryRuleForOrganizationAdvancedEventSelectorsPropertyToTerraform, true)(struct!.advancedEventSelectors),
   }
 }
 
 
-export function tfTelemetryRuleForOrganizationCloudtrailParametersPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.CloudtrailParametersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationCloudtrailParametersPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.CloudtrailParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     advanced_event_selectors: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationAdvancedEventSelectorsPropertyToHclTerraform, true)(struct!.advancedEventSelectors),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationAdvancedEventSelectorsPropertyToHclTerraform, true)(struct!.advancedEventSelectors),
       isBlock: true,
       type: "list",
       storageClassType: "AdvancedEventSelectorsPropertyList",
@@ -376,7 +376,7 @@ export function tfTelemetryRuleForOrganizationCloudtrailParametersPropertyToHclT
 }
 
 
-export function tfTelemetryRuleForOrganizationElbLoadBalancerLoggingParametersPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.ElbLoadBalancerLoggingParametersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationElbLoadBalancerLoggingParametersPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.ElbLoadBalancerLoggingParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function tfTelemetryRuleForOrganizationElbLoadBalancerLoggingParametersPr
 }
 
 
-export function tfTelemetryRuleForOrganizationElbLoadBalancerLoggingParametersPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.ElbLoadBalancerLoggingParametersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationElbLoadBalancerLoggingParametersPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.ElbLoadBalancerLoggingParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function tfTelemetryRuleForOrganizationElbLoadBalancerLoggingParametersPr
 }
 
 
-export function tfTelemetryRuleForOrganizationLogDeliveryParametersPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.LogDeliveryParametersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationLogDeliveryParametersPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.LogDeliveryParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,7 +424,7 @@ export function tfTelemetryRuleForOrganizationLogDeliveryParametersPropertyToTer
 }
 
 
-export function tfTelemetryRuleForOrganizationLogDeliveryParametersPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.LogDeliveryParametersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationLogDeliveryParametersPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.LogDeliveryParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -443,7 +443,7 @@ export function tfTelemetryRuleForOrganizationLogDeliveryParametersPropertyToHcl
 }
 
 
-export function tfTelemetryRuleForOrganizationMskMonitoringParametersPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.MskMonitoringParametersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationMskMonitoringParametersPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.MskMonitoringParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function tfTelemetryRuleForOrganizationMskMonitoringParametersPropertyToT
 }
 
 
-export function tfTelemetryRuleForOrganizationMskMonitoringParametersPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.MskMonitoringParametersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationMskMonitoringParametersPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.MskMonitoringParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function tfTelemetryRuleForOrganizationMskMonitoringParametersPropertyToH
 }
 
 
-export function tfTelemetryRuleForOrganizationVpcFlowLogParametersPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.VpcFlowLogParametersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationVpcFlowLogParametersPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.VpcFlowLogParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,7 +486,7 @@ export function tfTelemetryRuleForOrganizationVpcFlowLogParametersPropertyToTerr
 }
 
 
-export function tfTelemetryRuleForOrganizationVpcFlowLogParametersPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.VpcFlowLogParametersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationVpcFlowLogParametersPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.VpcFlowLogParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,7 +517,7 @@ export function tfTelemetryRuleForOrganizationVpcFlowLogParametersPropertyToHclT
 }
 
 
-export function tfTelemetryRuleForOrganizationActionConditionPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.ActionConditionProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationActionConditionPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.ActionConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function tfTelemetryRuleForOrganizationActionConditionPropertyToTerraform
 }
 
 
-export function tfTelemetryRuleForOrganizationActionConditionPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.ActionConditionProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationActionConditionPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.ActionConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function tfTelemetryRuleForOrganizationActionConditionPropertyToHclTerraf
 }
 
 
-export function tfTelemetryRuleForOrganizationLabelNameConditionPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.LabelNameConditionProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationLabelNameConditionPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.LabelNameConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -558,7 +558,7 @@ export function tfTelemetryRuleForOrganizationLabelNameConditionPropertyToTerraf
 }
 
 
-export function tfTelemetryRuleForOrganizationLabelNameConditionPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.LabelNameConditionProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationLabelNameConditionPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.LabelNameConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -577,32 +577,32 @@ export function tfTelemetryRuleForOrganizationLabelNameConditionPropertyToHclTer
 }
 
 
-export function tfTelemetryRuleForOrganizationConditionsPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.ConditionsProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationConditionsPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.ConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    action_condition: cdktn.listMapper(tfTelemetryRuleForOrganizationActionConditionPropertyToTerraform, true)(struct!.actionCondition),
-    label_name_condition: cdktn.listMapper(tfTelemetryRuleForOrganizationLabelNameConditionPropertyToTerraform, true)(struct!.labelNameCondition),
+    action_condition: cdktn.listMapper(awsTelemetryRuleForOrganizationActionConditionPropertyToTerraform, true)(struct!.actionCondition),
+    label_name_condition: cdktn.listMapper(awsTelemetryRuleForOrganizationLabelNameConditionPropertyToTerraform, true)(struct!.labelNameCondition),
   }
 }
 
 
-export function tfTelemetryRuleForOrganizationConditionsPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.ConditionsProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationConditionsPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.ConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     action_condition: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationActionConditionPropertyToHclTerraform, true)(struct!.actionCondition),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationActionConditionPropertyToHclTerraform, true)(struct!.actionCondition),
       isBlock: true,
       type: "list",
       storageClassType: "ActionConditionPropertyList",
     },
     label_name_condition: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationLabelNameConditionPropertyToHclTerraform, true)(struct!.labelNameCondition),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationLabelNameConditionPropertyToHclTerraform, true)(struct!.labelNameCondition),
       isBlock: true,
       type: "list",
       storageClassType: "LabelNameConditionPropertyList",
@@ -614,7 +614,7 @@ export function tfTelemetryRuleForOrganizationConditionsPropertyToHclTerraform(s
 }
 
 
-export function tfTelemetryRuleForOrganizationFiltersPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.FiltersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationFiltersPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.FiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -622,12 +622,12 @@ export function tfTelemetryRuleForOrganizationFiltersPropertyToTerraform(struct?
   return {
     behavior: cdktn.stringToTerraform(struct!.behavior),
     requirement: cdktn.stringToTerraform(struct!.requirement),
-    conditions: cdktn.listMapper(tfTelemetryRuleForOrganizationConditionsPropertyToTerraform, true)(struct!.conditions),
+    conditions: cdktn.listMapper(awsTelemetryRuleForOrganizationConditionsPropertyToTerraform, true)(struct!.conditions),
   }
 }
 
 
-export function tfTelemetryRuleForOrganizationFiltersPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.FiltersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationFiltersPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.FiltersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -646,7 +646,7 @@ export function tfTelemetryRuleForOrganizationFiltersPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     conditions: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationConditionsPropertyToHclTerraform, true)(struct!.conditions),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationConditionsPropertyToHclTerraform, true)(struct!.conditions),
       isBlock: true,
       type: "list",
       storageClassType: "ConditionsPropertyList",
@@ -658,19 +658,19 @@ export function tfTelemetryRuleForOrganizationFiltersPropertyToHclTerraform(stru
 }
 
 
-export function tfTelemetryRuleForOrganizationLoggingFilterPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.LoggingFilterProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationLoggingFilterPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.LoggingFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     default_behavior: cdktn.stringToTerraform(struct!.defaultBehavior),
-    filters: cdktn.listMapper(tfTelemetryRuleForOrganizationFiltersPropertyToTerraform, true)(struct!.filters),
+    filters: cdktn.listMapper(awsTelemetryRuleForOrganizationFiltersPropertyToTerraform, true)(struct!.filters),
   }
 }
 
 
-export function tfTelemetryRuleForOrganizationLoggingFilterPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.LoggingFilterProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationLoggingFilterPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.LoggingFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -683,7 +683,7 @@ export function tfTelemetryRuleForOrganizationLoggingFilterPropertyToHclTerrafor
       storageClassType: "string",
     },
     filters: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationFiltersPropertyToHclTerraform, true)(struct!.filters),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationFiltersPropertyToHclTerraform, true)(struct!.filters),
       isBlock: true,
       type: "list",
       storageClassType: "FiltersPropertyList",
@@ -695,7 +695,7 @@ export function tfTelemetryRuleForOrganizationLoggingFilterPropertyToHclTerrafor
 }
 
 
-export function tfTelemetryRuleForOrganizationSingleHeaderPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.SingleHeaderProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationSingleHeaderPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.SingleHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -706,7 +706,7 @@ export function tfTelemetryRuleForOrganizationSingleHeaderPropertyToTerraform(st
 }
 
 
-export function tfTelemetryRuleForOrganizationSingleHeaderPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.SingleHeaderProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationSingleHeaderPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.SingleHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -725,7 +725,7 @@ export function tfTelemetryRuleForOrganizationSingleHeaderPropertyToHclTerraform
 }
 
 
-export function tfTelemetryRuleForOrganizationRedactedFieldsPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.RedactedFieldsProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationRedactedFieldsPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.RedactedFieldsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -734,12 +734,12 @@ export function tfTelemetryRuleForOrganizationRedactedFieldsPropertyToTerraform(
     method: cdktn.stringToTerraform(struct!.method),
     query_string: cdktn.stringToTerraform(struct!.queryString),
     uri_path: cdktn.stringToTerraform(struct!.uriPath),
-    single_header: cdktn.listMapper(tfTelemetryRuleForOrganizationSingleHeaderPropertyToTerraform, true)(struct!.singleHeader),
+    single_header: cdktn.listMapper(awsTelemetryRuleForOrganizationSingleHeaderPropertyToTerraform, true)(struct!.singleHeader),
   }
 }
 
 
-export function tfTelemetryRuleForOrganizationRedactedFieldsPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.RedactedFieldsProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationRedactedFieldsPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.RedactedFieldsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -764,7 +764,7 @@ export function tfTelemetryRuleForOrganizationRedactedFieldsPropertyToHclTerrafo
       storageClassType: "string",
     },
     single_header: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationSingleHeaderPropertyToHclTerraform, true)(struct!.singleHeader),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationSingleHeaderPropertyToHclTerraform, true)(struct!.singleHeader),
       isBlock: true,
       type: "list",
       storageClassType: "SingleHeaderPropertyList",
@@ -776,20 +776,20 @@ export function tfTelemetryRuleForOrganizationRedactedFieldsPropertyToHclTerrafo
 }
 
 
-export function tfTelemetryRuleForOrganizationWafLoggingParametersPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.WafLoggingParametersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationWafLoggingParametersPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.WafLoggingParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     log_type: cdktn.stringToTerraform(struct!.logType),
-    logging_filter: cdktn.listMapper(tfTelemetryRuleForOrganizationLoggingFilterPropertyToTerraform, true)(struct!.loggingFilter),
-    redacted_fields: cdktn.listMapper(tfTelemetryRuleForOrganizationRedactedFieldsPropertyToTerraform, true)(struct!.redactedFields),
+    logging_filter: cdktn.listMapper(awsTelemetryRuleForOrganizationLoggingFilterPropertyToTerraform, true)(struct!.loggingFilter),
+    redacted_fields: cdktn.listMapper(awsTelemetryRuleForOrganizationRedactedFieldsPropertyToTerraform, true)(struct!.redactedFields),
   }
 }
 
 
-export function tfTelemetryRuleForOrganizationWafLoggingParametersPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.WafLoggingParametersProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationWafLoggingParametersPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.WafLoggingParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -802,13 +802,13 @@ export function tfTelemetryRuleForOrganizationWafLoggingParametersPropertyToHclT
       storageClassType: "string",
     },
     logging_filter: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationLoggingFilterPropertyToHclTerraform, true)(struct!.loggingFilter),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationLoggingFilterPropertyToHclTerraform, true)(struct!.loggingFilter),
       isBlock: true,
       type: "list",
       storageClassType: "LoggingFilterPropertyList",
     },
     redacted_fields: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationRedactedFieldsPropertyToHclTerraform, true)(struct!.redactedFields),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationRedactedFieldsPropertyToHclTerraform, true)(struct!.redactedFields),
       isBlock: true,
       type: "list",
       storageClassType: "RedactedFieldsPropertyList",
@@ -820,7 +820,7 @@ export function tfTelemetryRuleForOrganizationWafLoggingParametersPropertyToHclT
 }
 
 
-export function tfTelemetryRuleForOrganizationDestinationConfigurationPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.DestinationConfigurationProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationDestinationConfigurationPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.DestinationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -829,17 +829,17 @@ export function tfTelemetryRuleForOrganizationDestinationConfigurationPropertyTo
     destination_pattern: cdktn.stringToTerraform(struct!.destinationPattern),
     destination_type: cdktn.stringToTerraform(struct!.destinationType),
     retention_in_days: cdktn.numberToTerraform(struct!.retentionInDays),
-    cloudtrail_parameters: cdktn.listMapper(tfTelemetryRuleForOrganizationCloudtrailParametersPropertyToTerraform, true)(struct!.cloudtrailParameters),
-    elb_load_balancer_logging_parameters: cdktn.listMapper(tfTelemetryRuleForOrganizationElbLoadBalancerLoggingParametersPropertyToTerraform, true)(struct!.elbLoadBalancerLoggingParameters),
-    log_delivery_parameters: cdktn.listMapper(tfTelemetryRuleForOrganizationLogDeliveryParametersPropertyToTerraform, true)(struct!.logDeliveryParameters),
-    msk_monitoring_parameters: cdktn.listMapper(tfTelemetryRuleForOrganizationMskMonitoringParametersPropertyToTerraform, true)(struct!.mskMonitoringParameters),
-    vpc_flow_log_parameters: cdktn.listMapper(tfTelemetryRuleForOrganizationVpcFlowLogParametersPropertyToTerraform, true)(struct!.vpcFlowLogParameters),
-    waf_logging_parameters: cdktn.listMapper(tfTelemetryRuleForOrganizationWafLoggingParametersPropertyToTerraform, true)(struct!.wafLoggingParameters),
+    cloudtrail_parameters: cdktn.listMapper(awsTelemetryRuleForOrganizationCloudtrailParametersPropertyToTerraform, true)(struct!.cloudtrailParameters),
+    elb_load_balancer_logging_parameters: cdktn.listMapper(awsTelemetryRuleForOrganizationElbLoadBalancerLoggingParametersPropertyToTerraform, true)(struct!.elbLoadBalancerLoggingParameters),
+    log_delivery_parameters: cdktn.listMapper(awsTelemetryRuleForOrganizationLogDeliveryParametersPropertyToTerraform, true)(struct!.logDeliveryParameters),
+    msk_monitoring_parameters: cdktn.listMapper(awsTelemetryRuleForOrganizationMskMonitoringParametersPropertyToTerraform, true)(struct!.mskMonitoringParameters),
+    vpc_flow_log_parameters: cdktn.listMapper(awsTelemetryRuleForOrganizationVpcFlowLogParametersPropertyToTerraform, true)(struct!.vpcFlowLogParameters),
+    waf_logging_parameters: cdktn.listMapper(awsTelemetryRuleForOrganizationWafLoggingParametersPropertyToTerraform, true)(struct!.wafLoggingParameters),
   }
 }
 
 
-export function tfTelemetryRuleForOrganizationDestinationConfigurationPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.DestinationConfigurationProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationDestinationConfigurationPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.DestinationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -864,37 +864,37 @@ export function tfTelemetryRuleForOrganizationDestinationConfigurationPropertyTo
       storageClassType: "number",
     },
     cloudtrail_parameters: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationCloudtrailParametersPropertyToHclTerraform, true)(struct!.cloudtrailParameters),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationCloudtrailParametersPropertyToHclTerraform, true)(struct!.cloudtrailParameters),
       isBlock: true,
       type: "list",
       storageClassType: "CloudtrailParametersPropertyList",
     },
     elb_load_balancer_logging_parameters: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationElbLoadBalancerLoggingParametersPropertyToHclTerraform, true)(struct!.elbLoadBalancerLoggingParameters),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationElbLoadBalancerLoggingParametersPropertyToHclTerraform, true)(struct!.elbLoadBalancerLoggingParameters),
       isBlock: true,
       type: "list",
       storageClassType: "ElbLoadBalancerLoggingParametersPropertyList",
     },
     log_delivery_parameters: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationLogDeliveryParametersPropertyToHclTerraform, true)(struct!.logDeliveryParameters),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationLogDeliveryParametersPropertyToHclTerraform, true)(struct!.logDeliveryParameters),
       isBlock: true,
       type: "list",
       storageClassType: "LogDeliveryParametersPropertyList",
     },
     msk_monitoring_parameters: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationMskMonitoringParametersPropertyToHclTerraform, true)(struct!.mskMonitoringParameters),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationMskMonitoringParametersPropertyToHclTerraform, true)(struct!.mskMonitoringParameters),
       isBlock: true,
       type: "list",
       storageClassType: "MskMonitoringParametersPropertyList",
     },
     vpc_flow_log_parameters: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationVpcFlowLogParametersPropertyToHclTerraform, true)(struct!.vpcFlowLogParameters),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationVpcFlowLogParametersPropertyToHclTerraform, true)(struct!.vpcFlowLogParameters),
       isBlock: true,
       type: "list",
       storageClassType: "VpcFlowLogParametersPropertyList",
     },
     waf_logging_parameters: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationWafLoggingParametersPropertyToHclTerraform, true)(struct!.wafLoggingParameters),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationWafLoggingParametersPropertyToHclTerraform, true)(struct!.wafLoggingParameters),
       isBlock: true,
       type: "list",
       storageClassType: "WafLoggingParametersPropertyList",
@@ -906,7 +906,7 @@ export function tfTelemetryRuleForOrganizationDestinationConfigurationPropertyTo
 }
 
 
-export function tfTelemetryRuleForOrganizationRulePropertyToTerraform(struct?: TfTelemetryRuleForOrganization.RuleProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationRulePropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -920,12 +920,12 @@ export function tfTelemetryRuleForOrganizationRulePropertyToTerraform(struct?: T
     selection_criteria: cdktn.stringToTerraform(struct!.selectionCriteria),
     telemetry_source_types: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.telemetrySourceTypes),
     telemetry_type: cdktn.stringToTerraform(struct!.telemetryType),
-    destination_configuration: cdktn.listMapper(tfTelemetryRuleForOrganizationDestinationConfigurationPropertyToTerraform, true)(struct!.destinationConfiguration),
+    destination_configuration: cdktn.listMapper(awsTelemetryRuleForOrganizationDestinationConfigurationPropertyToTerraform, true)(struct!.destinationConfiguration),
   }
 }
 
 
-export function tfTelemetryRuleForOrganizationRulePropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.RuleProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationRulePropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -980,7 +980,7 @@ export function tfTelemetryRuleForOrganizationRulePropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     destination_configuration: {
-      value: cdktn.listMapperHcl(tfTelemetryRuleForOrganizationDestinationConfigurationPropertyToHclTerraform, true)(struct!.destinationConfiguration),
+      value: cdktn.listMapperHcl(awsTelemetryRuleForOrganizationDestinationConfigurationPropertyToHclTerraform, true)(struct!.destinationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationConfigurationPropertyList",
@@ -992,7 +992,7 @@ export function tfTelemetryRuleForOrganizationRulePropertyToHclTerraform(struct?
 }
 
 
-export function tfTelemetryRuleForOrganizationTimeoutsPropertyToTerraform(struct?: TfTelemetryRuleForOrganization.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationTimeoutsPropertyToTerraform(struct?: AwsTelemetryRuleForOrganization.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1005,7 +1005,7 @@ export function tfTelemetryRuleForOrganizationTimeoutsPropertyToTerraform(struct
 }
 
 
-export function tfTelemetryRuleForOrganizationTimeoutsPropertyToHclTerraform(struct?: TfTelemetryRuleForOrganization.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTelemetryRuleForOrganizationTimeoutsPropertyToHclTerraform(struct?: AwsTelemetryRuleForOrganization.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1036,34 +1036,34 @@ export function tfTelemetryRuleForOrganizationTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace TfTelemetryRuleForOrganization {
+export namespace AwsTelemetryRuleForOrganization {
 export interface FieldSelectorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#ends_with TfTelemetryRuleForOrganization#ends_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#ends_with AwsTelemetryRuleForOrganization#ends_with}
   */
   readonly endsWith?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#equals TfTelemetryRuleForOrganization#equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#equals AwsTelemetryRuleForOrganization#equals}
   */
   readonly equalTo?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#field TfTelemetryRuleForOrganization#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#field AwsTelemetryRuleForOrganization#field}
   */
   readonly field: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#not_ends_with TfTelemetryRuleForOrganization#not_ends_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#not_ends_with AwsTelemetryRuleForOrganization#not_ends_with}
   */
   readonly notEndsWith?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#not_equals TfTelemetryRuleForOrganization#not_equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#not_equals AwsTelemetryRuleForOrganization#not_equals}
   */
   readonly notEquals?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#not_starts_with TfTelemetryRuleForOrganization#not_starts_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#not_starts_with AwsTelemetryRuleForOrganization#not_starts_with}
   */
   readonly notStartsWith?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#starts_with TfTelemetryRuleForOrganization#starts_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#starts_with AwsTelemetryRuleForOrganization#starts_with}
   */
   readonly startsWith?: string[];
 }
@@ -1278,13 +1278,13 @@ export class FieldSelectorsPropertyList extends cdktn.ComplexList {
 }
 export interface AdvancedEventSelectorsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#name TfTelemetryRuleForOrganization#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#name AwsTelemetryRuleForOrganization#name}
   */
   readonly name?: string;
   /**
   * field_selectors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#field_selectors TfTelemetryRuleForOrganization#field_selectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#field_selectors AwsTelemetryRuleForOrganization#field_selectors}
   */
   readonly fieldSelectors?: FieldSelectorsProperty[] | cdktn.IResolvable;
 }
@@ -1394,7 +1394,7 @@ export interface CloudtrailParametersProperty {
   /**
   * advanced_event_selectors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#advanced_event_selectors TfTelemetryRuleForOrganization#advanced_event_selectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#advanced_event_selectors AwsTelemetryRuleForOrganization#advanced_event_selectors}
   */
   readonly advancedEventSelectors?: AdvancedEventSelectorsProperty[] | cdktn.IResolvable;
 }
@@ -1480,11 +1480,11 @@ export class CloudtrailParametersPropertyList extends cdktn.ComplexList {
 }
 export interface ElbLoadBalancerLoggingParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#field_delimiter TfTelemetryRuleForOrganization#field_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#field_delimiter AwsTelemetryRuleForOrganization#field_delimiter}
   */
   readonly fieldDelimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#output_format TfTelemetryRuleForOrganization#output_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#output_format AwsTelemetryRuleForOrganization#output_format}
   */
   readonly outputFormat?: string;
 }
@@ -1592,7 +1592,7 @@ export class ElbLoadBalancerLoggingParametersPropertyList extends cdktn.ComplexL
 }
 export interface LogDeliveryParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#log_types TfTelemetryRuleForOrganization#log_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#log_types AwsTelemetryRuleForOrganization#log_types}
   */
   readonly logTypes?: string[];
 }
@@ -1678,7 +1678,7 @@ export class LogDeliveryParametersPropertyList extends cdktn.ComplexList {
 }
 export interface MskMonitoringParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#enhanced_monitoring TfTelemetryRuleForOrganization#enhanced_monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#enhanced_monitoring AwsTelemetryRuleForOrganization#enhanced_monitoring}
   */
   readonly enhancedMonitoring?: string;
 }
@@ -1764,15 +1764,15 @@ export class MskMonitoringParametersPropertyList extends cdktn.ComplexList {
 }
 export interface VpcFlowLogParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#log_format TfTelemetryRuleForOrganization#log_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#log_format AwsTelemetryRuleForOrganization#log_format}
   */
   readonly logFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#max_aggregation_interval TfTelemetryRuleForOrganization#max_aggregation_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#max_aggregation_interval AwsTelemetryRuleForOrganization#max_aggregation_interval}
   */
   readonly maxAggregationInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#traffic_type TfTelemetryRuleForOrganization#traffic_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#traffic_type AwsTelemetryRuleForOrganization#traffic_type}
   */
   readonly trafficType?: string;
 }
@@ -1902,7 +1902,7 @@ export class VpcFlowLogParametersPropertyList extends cdktn.ComplexList {
 }
 export interface ActionConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#action TfTelemetryRuleForOrganization#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#action AwsTelemetryRuleForOrganization#action}
   */
   readonly action: string;
 }
@@ -1985,7 +1985,7 @@ export class ActionConditionPropertyList extends cdktn.ComplexList {
 }
 export interface LabelNameConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#label_name TfTelemetryRuleForOrganization#label_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#label_name AwsTelemetryRuleForOrganization#label_name}
   */
   readonly labelName?: string;
 }
@@ -2073,13 +2073,13 @@ export interface ConditionsProperty {
   /**
   * action_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#action_condition TfTelemetryRuleForOrganization#action_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#action_condition AwsTelemetryRuleForOrganization#action_condition}
   */
   readonly actionCondition?: ActionConditionProperty[] | cdktn.IResolvable;
   /**
   * label_name_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#label_name_condition TfTelemetryRuleForOrganization#label_name_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#label_name_condition AwsTelemetryRuleForOrganization#label_name_condition}
   */
   readonly labelNameCondition?: LabelNameConditionProperty[] | cdktn.IResolvable;
 }
@@ -2187,17 +2187,17 @@ export class ConditionsPropertyList extends cdktn.ComplexList {
 }
 export interface FiltersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#behavior TfTelemetryRuleForOrganization#behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#behavior AwsTelemetryRuleForOrganization#behavior}
   */
   readonly behavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#requirement TfTelemetryRuleForOrganization#requirement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#requirement AwsTelemetryRuleForOrganization#requirement}
   */
   readonly requirement?: string;
   /**
   * conditions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#conditions TfTelemetryRuleForOrganization#conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#conditions AwsTelemetryRuleForOrganization#conditions}
   */
   readonly conditions?: ConditionsProperty[] | cdktn.IResolvable;
 }
@@ -2327,13 +2327,13 @@ export class FiltersPropertyList extends cdktn.ComplexList {
 }
 export interface LoggingFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#default_behavior TfTelemetryRuleForOrganization#default_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#default_behavior AwsTelemetryRuleForOrganization#default_behavior}
   */
   readonly defaultBehavior?: string;
   /**
   * filters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#filters TfTelemetryRuleForOrganization#filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#filters AwsTelemetryRuleForOrganization#filters}
   */
   readonly filters?: FiltersProperty[] | cdktn.IResolvable;
 }
@@ -2441,7 +2441,7 @@ export class LoggingFilterPropertyList extends cdktn.ComplexList {
 }
 export interface SingleHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#name TfTelemetryRuleForOrganization#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#name AwsTelemetryRuleForOrganization#name}
   */
   readonly name: string;
 }
@@ -2524,21 +2524,21 @@ export class SingleHeaderPropertyList extends cdktn.ComplexList {
 }
 export interface RedactedFieldsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#method TfTelemetryRuleForOrganization#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#method AwsTelemetryRuleForOrganization#method}
   */
   readonly method?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#query_string TfTelemetryRuleForOrganization#query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#query_string AwsTelemetryRuleForOrganization#query_string}
   */
   readonly queryString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#uri_path TfTelemetryRuleForOrganization#uri_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#uri_path AwsTelemetryRuleForOrganization#uri_path}
   */
   readonly uriPath?: string;
   /**
   * single_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#single_header TfTelemetryRuleForOrganization#single_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#single_header AwsTelemetryRuleForOrganization#single_header}
   */
   readonly singleHeader?: SingleHeaderProperty[] | cdktn.IResolvable;
 }
@@ -2690,19 +2690,19 @@ export class RedactedFieldsPropertyList extends cdktn.ComplexList {
 }
 export interface WafLoggingParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#log_type TfTelemetryRuleForOrganization#log_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#log_type AwsTelemetryRuleForOrganization#log_type}
   */
   readonly logType?: string;
   /**
   * logging_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#logging_filter TfTelemetryRuleForOrganization#logging_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#logging_filter AwsTelemetryRuleForOrganization#logging_filter}
   */
   readonly loggingFilter?: LoggingFilterProperty[] | cdktn.IResolvable;
   /**
   * redacted_fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#redacted_fields TfTelemetryRuleForOrganization#redacted_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#redacted_fields AwsTelemetryRuleForOrganization#redacted_fields}
   */
   readonly redactedFields?: RedactedFieldsProperty[] | cdktn.IResolvable;
 }
@@ -2832,51 +2832,51 @@ export class WafLoggingParametersPropertyList extends cdktn.ComplexList {
 }
 export interface DestinationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#destination_pattern TfTelemetryRuleForOrganization#destination_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#destination_pattern AwsTelemetryRuleForOrganization#destination_pattern}
   */
   readonly destinationPattern?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#destination_type TfTelemetryRuleForOrganization#destination_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#destination_type AwsTelemetryRuleForOrganization#destination_type}
   */
   readonly destinationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#retention_in_days TfTelemetryRuleForOrganization#retention_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#retention_in_days AwsTelemetryRuleForOrganization#retention_in_days}
   */
   readonly retentionInDays?: number;
   /**
   * cloudtrail_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#cloudtrail_parameters TfTelemetryRuleForOrganization#cloudtrail_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#cloudtrail_parameters AwsTelemetryRuleForOrganization#cloudtrail_parameters}
   */
   readonly cloudtrailParameters?: CloudtrailParametersProperty[] | cdktn.IResolvable;
   /**
   * elb_load_balancer_logging_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#elb_load_balancer_logging_parameters TfTelemetryRuleForOrganization#elb_load_balancer_logging_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#elb_load_balancer_logging_parameters AwsTelemetryRuleForOrganization#elb_load_balancer_logging_parameters}
   */
   readonly elbLoadBalancerLoggingParameters?: ElbLoadBalancerLoggingParametersProperty[] | cdktn.IResolvable;
   /**
   * log_delivery_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#log_delivery_parameters TfTelemetryRuleForOrganization#log_delivery_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#log_delivery_parameters AwsTelemetryRuleForOrganization#log_delivery_parameters}
   */
   readonly logDeliveryParameters?: LogDeliveryParametersProperty[] | cdktn.IResolvable;
   /**
   * msk_monitoring_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#msk_monitoring_parameters TfTelemetryRuleForOrganization#msk_monitoring_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#msk_monitoring_parameters AwsTelemetryRuleForOrganization#msk_monitoring_parameters}
   */
   readonly mskMonitoringParameters?: MskMonitoringParametersProperty[] | cdktn.IResolvable;
   /**
   * vpc_flow_log_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#vpc_flow_log_parameters TfTelemetryRuleForOrganization#vpc_flow_log_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#vpc_flow_log_parameters AwsTelemetryRuleForOrganization#vpc_flow_log_parameters}
   */
   readonly vpcFlowLogParameters?: VpcFlowLogParametersProperty[] | cdktn.IResolvable;
   /**
   * waf_logging_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#waf_logging_parameters TfTelemetryRuleForOrganization#waf_logging_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#waf_logging_parameters AwsTelemetryRuleForOrganization#waf_logging_parameters}
   */
   readonly wafLoggingParameters?: WafLoggingParametersProperty[] | cdktn.IResolvable;
 }
@@ -3138,41 +3138,41 @@ export class DestinationConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#all_regions TfTelemetryRuleForOrganization#all_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#all_regions AwsTelemetryRuleForOrganization#all_regions}
   */
   readonly allRegions?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#allow_field_updates TfTelemetryRuleForOrganization#allow_field_updates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#allow_field_updates AwsTelemetryRuleForOrganization#allow_field_updates}
   */
   readonly allowFieldUpdates?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#regions TfTelemetryRuleForOrganization#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#regions AwsTelemetryRuleForOrganization#regions}
   */
   readonly regions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#resource_type TfTelemetryRuleForOrganization#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#resource_type AwsTelemetryRuleForOrganization#resource_type}
   */
   readonly resourceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#scope TfTelemetryRuleForOrganization#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#scope AwsTelemetryRuleForOrganization#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#selection_criteria TfTelemetryRuleForOrganization#selection_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#selection_criteria AwsTelemetryRuleForOrganization#selection_criteria}
   */
   readonly selectionCriteria?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#telemetry_source_types TfTelemetryRuleForOrganization#telemetry_source_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#telemetry_source_types AwsTelemetryRuleForOrganization#telemetry_source_types}
   */
   readonly telemetrySourceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#telemetry_type TfTelemetryRuleForOrganization#telemetry_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#telemetry_type AwsTelemetryRuleForOrganization#telemetry_type}
   */
   readonly telemetryType: string;
   /**
   * destination_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#destination_configuration TfTelemetryRuleForOrganization#destination_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#destination_configuration AwsTelemetryRuleForOrganization#destination_configuration}
   */
   readonly destinationConfiguration?: DestinationConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -3433,19 +3433,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#create TfTelemetryRuleForOrganization#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#create AwsTelemetryRuleForOrganization#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#delete TfTelemetryRuleForOrganization#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#delete AwsTelemetryRuleForOrganization#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#update TfTelemetryRuleForOrganization#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_rule_for_organization#update AwsTelemetryRuleForOrganization#update}
   */
   readonly update?: string;
 }

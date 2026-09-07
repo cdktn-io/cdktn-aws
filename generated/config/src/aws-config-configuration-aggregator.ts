@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConfigurationAggregatorConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConfigurationAggregatorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#id TfConfigurationAggregator#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#id AwsConfigurationAggregator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#name TfConfigurationAggregator#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#name AwsConfigurationAggregator#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#region TfConfigurationAggregator#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#region AwsConfigurationAggregator#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#tags TfConfigurationAggregator#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#tags AwsConfigurationAggregator#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#tags_all TfConfigurationAggregator#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#tags_all AwsConfigurationAggregator#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * account_aggregation_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#account_aggregation_source TfConfigurationAggregator#account_aggregation_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#account_aggregation_source AwsConfigurationAggregator#account_aggregation_source}
   */
-  readonly accountAggregationSource?: TfConfigurationAggregator.AccountAggregationSourceProperty;
+  readonly accountAggregationSource?: AwsConfigurationAggregator.AccountAggregationSourceProperty;
   /**
   * organization_aggregation_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#organization_aggregation_source TfConfigurationAggregator#organization_aggregation_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#organization_aggregation_source AwsConfigurationAggregator#organization_aggregation_source}
   */
-  readonly organizationAggregationSource?: TfConfigurationAggregator.OrganizationAggregationSourceProperty;
+  readonly organizationAggregationSource?: AwsConfigurationAggregator.OrganizationAggregationSourceProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator aws_config_configuration_aggregator}
 */
-export class TfConfigurationAggregator extends cdktn.TerraformResource {
+export class AwsConfigurationAggregator extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfConfigurationAggregator extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConfigurationAggregator resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConfigurationAggregator resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConfigurationAggregator to import
-  * @param importFromId The id of the existing TfConfigurationAggregator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConfigurationAggregator to import is found
+  * @param importToId The construct id used in the generated config for the AwsConfigurationAggregator to import
+  * @param importFromId The id of the existing AwsConfigurationAggregator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConfigurationAggregator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_config_configuration_aggregator", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfConfigurationAggregator extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConfigurationAggregatorConfig
+  * @param options AwsConfigurationAggregatorConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConfigurationAggregatorConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConfigurationAggregatorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_config_configuration_aggregator',
       terraformGeneratorMetadata: {
@@ -192,11 +192,11 @@ export class TfConfigurationAggregator extends cdktn.TerraformResource {
   }
 
   // account_aggregation_source - computed: false, optional: true, required: false
-  private _accountAggregationSource = new TfConfigurationAggregator.AccountAggregationSourcePropertyOutputReference(this, "account_aggregation_source");
+  private _accountAggregationSource = new AwsConfigurationAggregator.AccountAggregationSourcePropertyOutputReference(this, "account_aggregation_source");
   public get accountAggregationSource() {
     return this._accountAggregationSource;
   }
-  public putAccountAggregationSource(value: TfConfigurationAggregator.AccountAggregationSourceProperty) {
+  public putAccountAggregationSource(value: AwsConfigurationAggregator.AccountAggregationSourceProperty) {
     this._accountAggregationSource.internalValue = value;
   }
   public resetAccountAggregationSource() {
@@ -208,11 +208,11 @@ export class TfConfigurationAggregator extends cdktn.TerraformResource {
   }
 
   // organization_aggregation_source - computed: false, optional: true, required: false
-  private _organizationAggregationSource = new TfConfigurationAggregator.OrganizationAggregationSourcePropertyOutputReference(this, "organization_aggregation_source");
+  private _organizationAggregationSource = new AwsConfigurationAggregator.OrganizationAggregationSourcePropertyOutputReference(this, "organization_aggregation_source");
   public get organizationAggregationSource() {
     return this._organizationAggregationSource;
   }
-  public putOrganizationAggregationSource(value: TfConfigurationAggregator.OrganizationAggregationSourceProperty) {
+  public putOrganizationAggregationSource(value: AwsConfigurationAggregator.OrganizationAggregationSourceProperty) {
     this._organizationAggregationSource.internalValue = value;
   }
   public resetOrganizationAggregationSource() {
@@ -234,8 +234,8 @@ export class TfConfigurationAggregator extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      account_aggregation_source: tfConfigurationAggregatorAccountAggregationSourcePropertyToTerraform(this._accountAggregationSource.internalValue),
-      organization_aggregation_source: tfConfigurationAggregatorOrganizationAggregationSourcePropertyToTerraform(this._organizationAggregationSource.internalValue),
+      account_aggregation_source: awsConfigurationAggregatorAccountAggregationSourcePropertyToTerraform(this._accountAggregationSource.internalValue),
+      organization_aggregation_source: awsConfigurationAggregatorOrganizationAggregationSourcePropertyToTerraform(this._organizationAggregationSource.internalValue),
     };
   }
 
@@ -272,16 +272,16 @@ export class TfConfigurationAggregator extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       account_aggregation_source: {
-        value: tfConfigurationAggregatorAccountAggregationSourcePropertyToHclTerraform(this._accountAggregationSource.internalValue),
+        value: awsConfigurationAggregatorAccountAggregationSourcePropertyToHclTerraform(this._accountAggregationSource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConfigurationAggregator.AccountAggregationSourcePropertyList",
+        storageClassType: "AwsConfigurationAggregator.AccountAggregationSourcePropertyList",
       },
       organization_aggregation_source: {
-        value: tfConfigurationAggregatorOrganizationAggregationSourcePropertyToHclTerraform(this._organizationAggregationSource.internalValue),
+        value: awsConfigurationAggregatorOrganizationAggregationSourcePropertyToHclTerraform(this._organizationAggregationSource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConfigurationAggregator.OrganizationAggregationSourcePropertyList",
+        storageClassType: "AwsConfigurationAggregator.OrganizationAggregationSourcePropertyList",
       },
     };
 
@@ -290,7 +290,7 @@ export class TfConfigurationAggregator extends cdktn.TerraformResource {
   }
 }
 
-export function tfConfigurationAggregatorAccountAggregationSourcePropertyToTerraform(struct?: TfConfigurationAggregator.AccountAggregationSourcePropertyOutputReference | TfConfigurationAggregator.AccountAggregationSourceProperty): any {
+export function awsConfigurationAggregatorAccountAggregationSourcePropertyToTerraform(struct?: AwsConfigurationAggregator.AccountAggregationSourcePropertyOutputReference | AwsConfigurationAggregator.AccountAggregationSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,7 +303,7 @@ export function tfConfigurationAggregatorAccountAggregationSourcePropertyToTerra
 }
 
 
-export function tfConfigurationAggregatorAccountAggregationSourcePropertyToHclTerraform(struct?: TfConfigurationAggregator.AccountAggregationSourcePropertyOutputReference | TfConfigurationAggregator.AccountAggregationSourceProperty): any {
+export function awsConfigurationAggregatorAccountAggregationSourcePropertyToHclTerraform(struct?: AwsConfigurationAggregator.AccountAggregationSourcePropertyOutputReference | AwsConfigurationAggregator.AccountAggregationSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function tfConfigurationAggregatorAccountAggregationSourcePropertyToHclTe
 }
 
 
-export function tfConfigurationAggregatorOrganizationAggregationSourcePropertyToTerraform(struct?: TfConfigurationAggregator.OrganizationAggregationSourcePropertyOutputReference | TfConfigurationAggregator.OrganizationAggregationSourceProperty): any {
+export function awsConfigurationAggregatorOrganizationAggregationSourcePropertyToTerraform(struct?: AwsConfigurationAggregator.OrganizationAggregationSourcePropertyOutputReference | AwsConfigurationAggregator.OrganizationAggregationSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfConfigurationAggregatorOrganizationAggregationSourcePropertyTo
 }
 
 
-export function tfConfigurationAggregatorOrganizationAggregationSourcePropertyToHclTerraform(struct?: TfConfigurationAggregator.OrganizationAggregationSourcePropertyOutputReference | TfConfigurationAggregator.OrganizationAggregationSourceProperty): any {
+export function awsConfigurationAggregatorOrganizationAggregationSourcePropertyToHclTerraform(struct?: AwsConfigurationAggregator.OrganizationAggregationSourcePropertyOutputReference | AwsConfigurationAggregator.OrganizationAggregationSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,18 +378,18 @@ export function tfConfigurationAggregatorOrganizationAggregationSourcePropertyTo
 }
 
 
-export namespace TfConfigurationAggregator {
+export namespace AwsConfigurationAggregator {
 export interface AccountAggregationSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#account_ids TfConfigurationAggregator#account_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#account_ids AwsConfigurationAggregator#account_ids}
   */
   readonly accountIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#all_regions TfConfigurationAggregator#all_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#all_regions AwsConfigurationAggregator#all_regions}
   */
   readonly allRegions?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#regions TfConfigurationAggregator#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#regions AwsConfigurationAggregator#regions}
   */
   readonly regions?: string[];
 }
@@ -484,15 +484,15 @@ export class AccountAggregationSourcePropertyOutputReference extends cdktn.Compl
 }
 export interface OrganizationAggregationSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#all_regions TfConfigurationAggregator#all_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#all_regions AwsConfigurationAggregator#all_regions}
   */
   readonly allRegions?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#regions TfConfigurationAggregator#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#regions AwsConfigurationAggregator#regions}
   */
   readonly regions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#role_arn TfConfigurationAggregator#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_configuration_aggregator#role_arn AwsConfigurationAggregator#role_arn}
   */
   readonly roleArn: string;
 }

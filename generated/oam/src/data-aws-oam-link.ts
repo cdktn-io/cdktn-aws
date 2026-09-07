@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfLinkConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsLinkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_link#id DataTfLink#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_link#id DataAwsLink#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_link#link_identifier DataTfLink#link_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_link#link_identifier DataAwsLink#link_identifier}
   */
   readonly linkIdentifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_link#region DataTfLink#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_link#region DataAwsLink#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_link#tags DataTfLink#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_link#tags DataAwsLink#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataTfLinkConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_link aws_oam_link}
 */
-export class DataTfLink extends cdktn.TerraformDataSource {
+export class DataAwsLink extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfLink extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfLink resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsLink resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfLink to import
-  * @param importFromId The id of the existing DataTfLink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_link#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfLink to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsLink to import
+  * @param importFromId The id of the existing DataAwsLink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/oam_link#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsLink to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_oam_link", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfLink extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfLinkConfig
+  * @param options DataAwsLinkConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfLinkConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsLinkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_oam_link',
       terraformGeneratorMetadata: {
@@ -122,7 +122,7 @@ export class DataTfLink extends cdktn.TerraformDataSource {
   }
 
   // link_configuration - computed: true, optional: false, required: false
-  private _linkConfiguration = new DataTfLink.LinkConfigurationPropertyList(this, "link_configuration", false);
+  private _linkConfiguration = new DataAwsLink.LinkConfigurationPropertyList(this, "link_configuration", false);
   public get linkConfiguration() {
     return this._linkConfiguration;
   }
@@ -233,7 +233,7 @@ export class DataTfLink extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfLinkLogGroupConfigurationPropertyToTerraform(struct?: DataTfLink.LogGroupConfigurationProperty): any {
+export function dataAwsLinkLogGroupConfigurationPropertyToTerraform(struct?: DataAwsLink.LogGroupConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -243,7 +243,7 @@ export function dataTfLinkLogGroupConfigurationPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfLinkLogGroupConfigurationPropertyToHclTerraform(struct?: DataTfLink.LogGroupConfigurationProperty): any {
+export function dataAwsLinkLogGroupConfigurationPropertyToHclTerraform(struct?: DataAwsLink.LogGroupConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function dataTfLinkLogGroupConfigurationPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataTfLinkMetricConfigurationPropertyToTerraform(struct?: DataTfLink.MetricConfigurationProperty): any {
+export function dataAwsLinkMetricConfigurationPropertyToTerraform(struct?: DataAwsLink.MetricConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,7 +264,7 @@ export function dataTfLinkMetricConfigurationPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfLinkMetricConfigurationPropertyToHclTerraform(struct?: DataTfLink.MetricConfigurationProperty): any {
+export function dataAwsLinkMetricConfigurationPropertyToHclTerraform(struct?: DataAwsLink.MetricConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function dataTfLinkMetricConfigurationPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfLinkLinkConfigurationPropertyToTerraform(struct?: DataTfLink.LinkConfigurationProperty): any {
+export function dataAwsLinkLinkConfigurationPropertyToTerraform(struct?: DataAwsLink.LinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -285,7 +285,7 @@ export function dataTfLinkLinkConfigurationPropertyToTerraform(struct?: DataTfLi
 }
 
 
-export function dataTfLinkLinkConfigurationPropertyToHclTerraform(struct?: DataTfLink.LinkConfigurationProperty): any {
+export function dataAwsLinkLinkConfigurationPropertyToHclTerraform(struct?: DataAwsLink.LinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,7 +296,7 @@ export function dataTfLinkLinkConfigurationPropertyToHclTerraform(struct?: DataT
 }
 
 
-export namespace DataTfLink {
+export namespace DataAwsLink {
 export interface LogGroupConfigurationProperty {
 }
 export class LogGroupConfigurationPropertyOutputReference extends cdktn.ComplexObject {

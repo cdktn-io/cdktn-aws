@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfImageConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsImageConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#arn DataTfImage#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#arn DataAwsImage#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#most_recent DataTfImage#most_recent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#most_recent DataAwsImage#most_recent}
   */
   readonly mostRecent?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#name DataTfImage#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#name DataAwsImage#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#name_regex DataTfImage#name_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#name_regex DataAwsImage#name_regex}
   */
   readonly nameRegex?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#region DataTfImage#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#region DataAwsImage#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#type DataTfImage#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#type DataAwsImage#type}
   */
   readonly type?: string;
 }
@@ -37,7 +37,7 @@ export interface DataTfImageConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image aws_appstream_image}
 */
-export class DataTfImage extends cdktn.TerraformDataSource {
+export class DataAwsImage extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class DataTfImage extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfImage resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsImage resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfImage to import
-  * @param importFromId The id of the existing DataTfImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfImage to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsImage to import
+  * @param importFromId The id of the existing DataAwsImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appstream_image#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsImage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appstream_image", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class DataTfImage extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfImageConfig = {}
+  * @param options DataAwsImageConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfImageConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsImageConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_appstream_image',
       terraformGeneratorMetadata: {
@@ -98,7 +98,7 @@ export class DataTfImage extends cdktn.TerraformDataSource {
   // ==========
 
   // applications - computed: true, optional: false, required: false
-  private _applications = new DataTfImage.ApplicationsPropertyList(this, "applications", false);
+  private _applications = new DataAwsImage.ApplicationsPropertyList(this, "applications", false);
   public get applications() {
     return this._applications;
   }
@@ -155,7 +155,7 @@ export class DataTfImage extends cdktn.TerraformDataSource {
   }
 
   // image_permissions - computed: true, optional: false, required: false
-  private _imagePermissions = new DataTfImage.ImagePermissionsPropertyList(this, "image_permissions", false);
+  private _imagePermissions = new DataAwsImage.ImagePermissionsPropertyList(this, "image_permissions", false);
   public get imagePermissions() {
     return this._imagePermissions;
   }
@@ -240,7 +240,7 @@ export class DataTfImage extends cdktn.TerraformDataSource {
   }
 
   // state_change_reason - computed: true, optional: false, required: false
-  private _stateChangeReason = new DataTfImage.StateChangeReasonPropertyList(this, "state_change_reason", false);
+  private _stateChangeReason = new DataAwsImage.StateChangeReasonPropertyList(this, "state_change_reason", false);
   public get stateChangeReason() {
     return this._stateChangeReason;
   }
@@ -321,7 +321,7 @@ export class DataTfImage extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfImageIconS3LocationPropertyToTerraform(struct?: DataTfImage.IconS3LocationProperty): any {
+export function dataAwsImageIconS3LocationPropertyToTerraform(struct?: DataAwsImage.IconS3LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,7 +331,7 @@ export function dataTfImageIconS3LocationPropertyToTerraform(struct?: DataTfImag
 }
 
 
-export function dataTfImageIconS3LocationPropertyToHclTerraform(struct?: DataTfImage.IconS3LocationProperty): any {
+export function dataAwsImageIconS3LocationPropertyToHclTerraform(struct?: DataAwsImage.IconS3LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function dataTfImageIconS3LocationPropertyToHclTerraform(struct?: DataTfI
 }
 
 
-export function dataTfImageApplicationsPropertyToTerraform(struct?: DataTfImage.ApplicationsProperty): any {
+export function dataAwsImageApplicationsPropertyToTerraform(struct?: DataAwsImage.ApplicationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -352,7 +352,7 @@ export function dataTfImageApplicationsPropertyToTerraform(struct?: DataTfImage.
 }
 
 
-export function dataTfImageApplicationsPropertyToHclTerraform(struct?: DataTfImage.ApplicationsProperty): any {
+export function dataAwsImageApplicationsPropertyToHclTerraform(struct?: DataAwsImage.ApplicationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -363,7 +363,7 @@ export function dataTfImageApplicationsPropertyToHclTerraform(struct?: DataTfIma
 }
 
 
-export function dataTfImageImagePermissionsPropertyToTerraform(struct?: DataTfImage.ImagePermissionsProperty): any {
+export function dataAwsImageImagePermissionsPropertyToTerraform(struct?: DataAwsImage.ImagePermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,7 +373,7 @@ export function dataTfImageImagePermissionsPropertyToTerraform(struct?: DataTfIm
 }
 
 
-export function dataTfImageImagePermissionsPropertyToHclTerraform(struct?: DataTfImage.ImagePermissionsProperty): any {
+export function dataAwsImageImagePermissionsPropertyToHclTerraform(struct?: DataAwsImage.ImagePermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function dataTfImageImagePermissionsPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfImageStateChangeReasonPropertyToTerraform(struct?: DataTfImage.StateChangeReasonProperty): any {
+export function dataAwsImageStateChangeReasonPropertyToTerraform(struct?: DataAwsImage.StateChangeReasonProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,7 +394,7 @@ export function dataTfImageStateChangeReasonPropertyToTerraform(struct?: DataTfI
 }
 
 
-export function dataTfImageStateChangeReasonPropertyToHclTerraform(struct?: DataTfImage.StateChangeReasonProperty): any {
+export function dataAwsImageStateChangeReasonPropertyToHclTerraform(struct?: DataAwsImage.StateChangeReasonProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -405,7 +405,7 @@ export function dataTfImageStateChangeReasonPropertyToHclTerraform(struct?: Data
 }
 
 
-export namespace DataTfImage {
+export namespace DataAwsImage {
 export interface IconS3LocationProperty {
 }
 export class IconS3LocationPropertyOutputReference extends cdktn.ComplexObject {

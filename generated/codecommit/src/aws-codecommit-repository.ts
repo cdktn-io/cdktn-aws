@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRepositoryConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRepositoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#default_branch TfRepository#default_branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#default_branch AwsRepository#default_branch}
   */
   readonly defaultBranch?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#description TfRepository#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#description AwsRepository#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#id TfRepository#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#id AwsRepository#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#kms_key_id TfRepository#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#kms_key_id AwsRepository#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#region TfRepository#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#region AwsRepository#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#repository_name TfRepository#repository_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#repository_name AwsRepository#repository_name}
   */
   readonly repositoryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#tags TfRepository#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#tags AwsRepository#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#tags_all TfRepository#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#tags_all AwsRepository#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -48,7 +48,7 @@ export interface TfRepositoryConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository aws_codecommit_repository}
 */
-export class TfRepository extends cdktn.TerraformResource {
+export class AwsRepository extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfRepository extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRepository resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRepository resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRepository to import
-  * @param importFromId The id of the existing TfRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRepository to import is found
+  * @param importToId The construct id used in the generated config for the AwsRepository to import
+  * @param importFromId The id of the existing AwsRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_repository#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRepository to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codecommit_repository", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfRepository extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRepositoryConfig
+  * @param options AwsRepositoryConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRepositoryConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRepositoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codecommit_repository',
       terraformGeneratorMetadata: {

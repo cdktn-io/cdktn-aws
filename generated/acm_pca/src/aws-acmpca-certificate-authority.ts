@@ -5,72 +5,72 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCertificateAuthorityConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCertificateAuthorityConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#enabled TfCertificateAuthority#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#enabled AwsCertificateAuthority#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#id TfCertificateAuthority#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#id AwsCertificateAuthority#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#key_storage_security_standard TfCertificateAuthority#key_storage_security_standard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#key_storage_security_standard AwsCertificateAuthority#key_storage_security_standard}
   */
   readonly keyStorageSecurityStandard?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#permanent_deletion_time_in_days TfCertificateAuthority#permanent_deletion_time_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#permanent_deletion_time_in_days AwsCertificateAuthority#permanent_deletion_time_in_days}
   */
   readonly permanentDeletionTimeInDays?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#region TfCertificateAuthority#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#region AwsCertificateAuthority#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#tags TfCertificateAuthority#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#tags AwsCertificateAuthority#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#tags_all TfCertificateAuthority#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#tags_all AwsCertificateAuthority#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#type TfCertificateAuthority#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#type AwsCertificateAuthority#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#usage_mode TfCertificateAuthority#usage_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#usage_mode AwsCertificateAuthority#usage_mode}
   */
   readonly usageMode?: string;
   /**
   * certificate_authority_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#certificate_authority_configuration TfCertificateAuthority#certificate_authority_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#certificate_authority_configuration AwsCertificateAuthority#certificate_authority_configuration}
   */
-  readonly certificateAuthorityConfiguration: TfCertificateAuthority.CertificateAuthorityConfigurationProperty;
+  readonly certificateAuthorityConfiguration: AwsCertificateAuthority.CertificateAuthorityConfigurationProperty;
   /**
   * revocation_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#revocation_configuration TfCertificateAuthority#revocation_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#revocation_configuration AwsCertificateAuthority#revocation_configuration}
   */
-  readonly revocationConfiguration?: TfCertificateAuthority.RevocationConfigurationProperty;
+  readonly revocationConfiguration?: AwsCertificateAuthority.RevocationConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#timeouts TfCertificateAuthority#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#timeouts AwsCertificateAuthority#timeouts}
   */
-  readonly timeouts?: TfCertificateAuthority.TimeoutsProperty;
+  readonly timeouts?: AwsCertificateAuthority.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority aws_acmpca_certificate_authority}
 */
-export class TfCertificateAuthority extends cdktn.TerraformResource {
+export class AwsCertificateAuthority extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -81,11 +81,11 @@ export class TfCertificateAuthority extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCertificateAuthority resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCertificateAuthority resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCertificateAuthority to import
-  * @param importFromId The id of the existing TfCertificateAuthority that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCertificateAuthority to import is found
+  * @param importToId The construct id used in the generated config for the AwsCertificateAuthority to import
+  * @param importFromId The id of the existing AwsCertificateAuthority that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCertificateAuthority to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_acmpca_certificate_authority", importId: importFromId, provider });
@@ -100,9 +100,9 @@ export class TfCertificateAuthority extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCertificateAuthorityConfig
+  * @param options AwsCertificateAuthorityConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCertificateAuthorityConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCertificateAuthorityConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_acmpca_certificate_authority',
       terraformGeneratorMetadata: {
@@ -316,11 +316,11 @@ export class TfCertificateAuthority extends cdktn.TerraformResource {
   }
 
   // certificate_authority_configuration - computed: false, optional: false, required: true
-  private _certificateAuthorityConfiguration = new TfCertificateAuthority.CertificateAuthorityConfigurationPropertyOutputReference(this, "certificate_authority_configuration");
+  private _certificateAuthorityConfiguration = new AwsCertificateAuthority.CertificateAuthorityConfigurationPropertyOutputReference(this, "certificate_authority_configuration");
   public get certificateAuthorityConfiguration() {
     return this._certificateAuthorityConfiguration;
   }
-  public putCertificateAuthorityConfiguration(value: TfCertificateAuthority.CertificateAuthorityConfigurationProperty) {
+  public putCertificateAuthorityConfiguration(value: AwsCertificateAuthority.CertificateAuthorityConfigurationProperty) {
     this._certificateAuthorityConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -329,11 +329,11 @@ export class TfCertificateAuthority extends cdktn.TerraformResource {
   }
 
   // revocation_configuration - computed: false, optional: true, required: false
-  private _revocationConfiguration = new TfCertificateAuthority.RevocationConfigurationPropertyOutputReference(this, "revocation_configuration");
+  private _revocationConfiguration = new AwsCertificateAuthority.RevocationConfigurationPropertyOutputReference(this, "revocation_configuration");
   public get revocationConfiguration() {
     return this._revocationConfiguration;
   }
-  public putRevocationConfiguration(value: TfCertificateAuthority.RevocationConfigurationProperty) {
+  public putRevocationConfiguration(value: AwsCertificateAuthority.RevocationConfigurationProperty) {
     this._revocationConfiguration.internalValue = value;
   }
   public resetRevocationConfiguration() {
@@ -345,11 +345,11 @@ export class TfCertificateAuthority extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCertificateAuthority.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCertificateAuthority.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCertificateAuthority.TimeoutsProperty) {
+  public putTimeouts(value: AwsCertificateAuthority.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -375,9 +375,9 @@ export class TfCertificateAuthority extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
       usage_mode: cdktn.stringToTerraform(this._usageMode),
-      certificate_authority_configuration: tfCertificateAuthorityCertificateAuthorityConfigurationPropertyToTerraform(this._certificateAuthorityConfiguration.internalValue),
-      revocation_configuration: tfCertificateAuthorityRevocationConfigurationPropertyToTerraform(this._revocationConfiguration.internalValue),
-      timeouts: tfCertificateAuthorityTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      certificate_authority_configuration: awsCertificateAuthorityCertificateAuthorityConfigurationPropertyToTerraform(this._certificateAuthorityConfiguration.internalValue),
+      revocation_configuration: awsCertificateAuthorityRevocationConfigurationPropertyToTerraform(this._revocationConfiguration.internalValue),
+      timeouts: awsCertificateAuthorityTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -438,22 +438,22 @@ export class TfCertificateAuthority extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       certificate_authority_configuration: {
-        value: tfCertificateAuthorityCertificateAuthorityConfigurationPropertyToHclTerraform(this._certificateAuthorityConfiguration.internalValue),
+        value: awsCertificateAuthorityCertificateAuthorityConfigurationPropertyToHclTerraform(this._certificateAuthorityConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCertificateAuthority.CertificateAuthorityConfigurationPropertyList",
+        storageClassType: "AwsCertificateAuthority.CertificateAuthorityConfigurationPropertyList",
       },
       revocation_configuration: {
-        value: tfCertificateAuthorityRevocationConfigurationPropertyToHclTerraform(this._revocationConfiguration.internalValue),
+        value: awsCertificateAuthorityRevocationConfigurationPropertyToHclTerraform(this._revocationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCertificateAuthority.RevocationConfigurationPropertyList",
+        storageClassType: "AwsCertificateAuthority.RevocationConfigurationPropertyList",
       },
       timeouts: {
-        value: tfCertificateAuthorityTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCertificateAuthorityTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCertificateAuthority.TimeoutsProperty",
+        storageClassType: "AwsCertificateAuthority.TimeoutsProperty",
       },
     };
 
@@ -462,7 +462,7 @@ export class TfCertificateAuthority extends cdktn.TerraformResource {
   }
 }
 
-export function tfCertificateAuthoritySubjectPropertyToTerraform(struct?: TfCertificateAuthority.SubjectPropertyOutputReference | TfCertificateAuthority.SubjectProperty): any {
+export function awsCertificateAuthoritySubjectPropertyToTerraform(struct?: AwsCertificateAuthority.SubjectPropertyOutputReference | AwsCertificateAuthority.SubjectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -485,7 +485,7 @@ export function tfCertificateAuthoritySubjectPropertyToTerraform(struct?: TfCert
 }
 
 
-export function tfCertificateAuthoritySubjectPropertyToHclTerraform(struct?: TfCertificateAuthority.SubjectPropertyOutputReference | TfCertificateAuthority.SubjectProperty): any {
+export function awsCertificateAuthoritySubjectPropertyToHclTerraform(struct?: AwsCertificateAuthority.SubjectPropertyOutputReference | AwsCertificateAuthority.SubjectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -576,7 +576,7 @@ export function tfCertificateAuthoritySubjectPropertyToHclTerraform(struct?: TfC
 }
 
 
-export function tfCertificateAuthorityCertificateAuthorityConfigurationPropertyToTerraform(struct?: TfCertificateAuthority.CertificateAuthorityConfigurationPropertyOutputReference | TfCertificateAuthority.CertificateAuthorityConfigurationProperty): any {
+export function awsCertificateAuthorityCertificateAuthorityConfigurationPropertyToTerraform(struct?: AwsCertificateAuthority.CertificateAuthorityConfigurationPropertyOutputReference | AwsCertificateAuthority.CertificateAuthorityConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -584,12 +584,12 @@ export function tfCertificateAuthorityCertificateAuthorityConfigurationPropertyT
   return {
     key_algorithm: cdktn.stringToTerraform(struct!.keyAlgorithm),
     signing_algorithm: cdktn.stringToTerraform(struct!.signingAlgorithm),
-    subject: tfCertificateAuthoritySubjectPropertyToTerraform(struct!.subject),
+    subject: awsCertificateAuthoritySubjectPropertyToTerraform(struct!.subject),
   }
 }
 
 
-export function tfCertificateAuthorityCertificateAuthorityConfigurationPropertyToHclTerraform(struct?: TfCertificateAuthority.CertificateAuthorityConfigurationPropertyOutputReference | TfCertificateAuthority.CertificateAuthorityConfigurationProperty): any {
+export function awsCertificateAuthorityCertificateAuthorityConfigurationPropertyToHclTerraform(struct?: AwsCertificateAuthority.CertificateAuthorityConfigurationPropertyOutputReference | AwsCertificateAuthority.CertificateAuthorityConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,7 +608,7 @@ export function tfCertificateAuthorityCertificateAuthorityConfigurationPropertyT
       storageClassType: "string",
     },
     subject: {
-      value: tfCertificateAuthoritySubjectPropertyToHclTerraform(struct!.subject),
+      value: awsCertificateAuthoritySubjectPropertyToHclTerraform(struct!.subject),
       isBlock: true,
       type: "list",
       storageClassType: "SubjectPropertyList",
@@ -620,7 +620,7 @@ export function tfCertificateAuthorityCertificateAuthorityConfigurationPropertyT
 }
 
 
-export function tfCertificateAuthorityCrlConfigurationPropertyToTerraform(struct?: TfCertificateAuthority.CrlConfigurationPropertyOutputReference | TfCertificateAuthority.CrlConfigurationProperty): any {
+export function awsCertificateAuthorityCrlConfigurationPropertyToTerraform(struct?: AwsCertificateAuthority.CrlConfigurationPropertyOutputReference | AwsCertificateAuthority.CrlConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -636,7 +636,7 @@ export function tfCertificateAuthorityCrlConfigurationPropertyToTerraform(struct
 }
 
 
-export function tfCertificateAuthorityCrlConfigurationPropertyToHclTerraform(struct?: TfCertificateAuthority.CrlConfigurationPropertyOutputReference | TfCertificateAuthority.CrlConfigurationProperty): any {
+export function awsCertificateAuthorityCrlConfigurationPropertyToHclTerraform(struct?: AwsCertificateAuthority.CrlConfigurationPropertyOutputReference | AwsCertificateAuthority.CrlConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -685,7 +685,7 @@ export function tfCertificateAuthorityCrlConfigurationPropertyToHclTerraform(str
 }
 
 
-export function tfCertificateAuthorityOcspConfigurationPropertyToTerraform(struct?: TfCertificateAuthority.OcspConfigurationPropertyOutputReference | TfCertificateAuthority.OcspConfigurationProperty): any {
+export function awsCertificateAuthorityOcspConfigurationPropertyToTerraform(struct?: AwsCertificateAuthority.OcspConfigurationPropertyOutputReference | AwsCertificateAuthority.OcspConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -697,7 +697,7 @@ export function tfCertificateAuthorityOcspConfigurationPropertyToTerraform(struc
 }
 
 
-export function tfCertificateAuthorityOcspConfigurationPropertyToHclTerraform(struct?: TfCertificateAuthority.OcspConfigurationPropertyOutputReference | TfCertificateAuthority.OcspConfigurationProperty): any {
+export function awsCertificateAuthorityOcspConfigurationPropertyToHclTerraform(struct?: AwsCertificateAuthority.OcspConfigurationPropertyOutputReference | AwsCertificateAuthority.OcspConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -722,32 +722,32 @@ export function tfCertificateAuthorityOcspConfigurationPropertyToHclTerraform(st
 }
 
 
-export function tfCertificateAuthorityRevocationConfigurationPropertyToTerraform(struct?: TfCertificateAuthority.RevocationConfigurationPropertyOutputReference | TfCertificateAuthority.RevocationConfigurationProperty): any {
+export function awsCertificateAuthorityRevocationConfigurationPropertyToTerraform(struct?: AwsCertificateAuthority.RevocationConfigurationPropertyOutputReference | AwsCertificateAuthority.RevocationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    crl_configuration: tfCertificateAuthorityCrlConfigurationPropertyToTerraform(struct!.crlConfiguration),
-    ocsp_configuration: tfCertificateAuthorityOcspConfigurationPropertyToTerraform(struct!.ocspConfiguration),
+    crl_configuration: awsCertificateAuthorityCrlConfigurationPropertyToTerraform(struct!.crlConfiguration),
+    ocsp_configuration: awsCertificateAuthorityOcspConfigurationPropertyToTerraform(struct!.ocspConfiguration),
   }
 }
 
 
-export function tfCertificateAuthorityRevocationConfigurationPropertyToHclTerraform(struct?: TfCertificateAuthority.RevocationConfigurationPropertyOutputReference | TfCertificateAuthority.RevocationConfigurationProperty): any {
+export function awsCertificateAuthorityRevocationConfigurationPropertyToHclTerraform(struct?: AwsCertificateAuthority.RevocationConfigurationPropertyOutputReference | AwsCertificateAuthority.RevocationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     crl_configuration: {
-      value: tfCertificateAuthorityCrlConfigurationPropertyToHclTerraform(struct!.crlConfiguration),
+      value: awsCertificateAuthorityCrlConfigurationPropertyToHclTerraform(struct!.crlConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CrlConfigurationPropertyList",
     },
     ocsp_configuration: {
-      value: tfCertificateAuthorityOcspConfigurationPropertyToHclTerraform(struct!.ocspConfiguration),
+      value: awsCertificateAuthorityOcspConfigurationPropertyToHclTerraform(struct!.ocspConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "OcspConfigurationPropertyList",
@@ -759,7 +759,7 @@ export function tfCertificateAuthorityRevocationConfigurationPropertyToHclTerraf
 }
 
 
-export function tfCertificateAuthorityTimeoutsPropertyToTerraform(struct?: TfCertificateAuthority.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCertificateAuthorityTimeoutsPropertyToTerraform(struct?: AwsCertificateAuthority.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -770,7 +770,7 @@ export function tfCertificateAuthorityTimeoutsPropertyToTerraform(struct?: TfCer
 }
 
 
-export function tfCertificateAuthorityTimeoutsPropertyToHclTerraform(struct?: TfCertificateAuthority.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCertificateAuthorityTimeoutsPropertyToHclTerraform(struct?: AwsCertificateAuthority.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -789,58 +789,58 @@ export function tfCertificateAuthorityTimeoutsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfCertificateAuthority {
+export namespace AwsCertificateAuthority {
 export interface SubjectProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#common_name TfCertificateAuthority#common_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#common_name AwsCertificateAuthority#common_name}
   */
   readonly commonName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#country TfCertificateAuthority#country}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#country AwsCertificateAuthority#country}
   */
   readonly country?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#distinguished_name_qualifier TfCertificateAuthority#distinguished_name_qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#distinguished_name_qualifier AwsCertificateAuthority#distinguished_name_qualifier}
   */
   readonly distinguishedNameQualifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#generation_qualifier TfCertificateAuthority#generation_qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#generation_qualifier AwsCertificateAuthority#generation_qualifier}
   */
   readonly generationQualifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#given_name TfCertificateAuthority#given_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#given_name AwsCertificateAuthority#given_name}
   */
   readonly givenName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#initials TfCertificateAuthority#initials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#initials AwsCertificateAuthority#initials}
   */
   readonly initials?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#locality TfCertificateAuthority#locality}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#locality AwsCertificateAuthority#locality}
   */
   readonly locality?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#organization TfCertificateAuthority#organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#organization AwsCertificateAuthority#organization}
   */
   readonly organization?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#organizational_unit TfCertificateAuthority#organizational_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#organizational_unit AwsCertificateAuthority#organizational_unit}
   */
   readonly organizationalUnit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#pseudonym TfCertificateAuthority#pseudonym}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#pseudonym AwsCertificateAuthority#pseudonym}
   */
   readonly pseudonym?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#state TfCertificateAuthority#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#state AwsCertificateAuthority#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#surname TfCertificateAuthority#surname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#surname AwsCertificateAuthority#surname}
   */
   readonly surname?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#title TfCertificateAuthority#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#title AwsCertificateAuthority#title}
   */
   readonly title?: string;
 }
@@ -1158,17 +1158,17 @@ export class SubjectPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CertificateAuthorityConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#key_algorithm TfCertificateAuthority#key_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#key_algorithm AwsCertificateAuthority#key_algorithm}
   */
   readonly keyAlgorithm: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#signing_algorithm TfCertificateAuthority#signing_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#signing_algorithm AwsCertificateAuthority#signing_algorithm}
   */
   readonly signingAlgorithm: string;
   /**
   * subject block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#subject TfCertificateAuthority#subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#subject AwsCertificateAuthority#subject}
   */
   readonly subject: SubjectProperty;
 }
@@ -1257,27 +1257,27 @@ export class CertificateAuthorityConfigurationPropertyOutputReference extends cd
 }
 export interface CrlConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#custom_cname TfCertificateAuthority#custom_cname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#custom_cname AwsCertificateAuthority#custom_cname}
   */
   readonly customCname?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#custom_path TfCertificateAuthority#custom_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#custom_path AwsCertificateAuthority#custom_path}
   */
   readonly customPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#enabled TfCertificateAuthority#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#enabled AwsCertificateAuthority#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#expiration_in_days TfCertificateAuthority#expiration_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#expiration_in_days AwsCertificateAuthority#expiration_in_days}
   */
   readonly expirationInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#s3_bucket_name TfCertificateAuthority#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#s3_bucket_name AwsCertificateAuthority#s3_bucket_name}
   */
   readonly s3BucketName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#s3_object_acl TfCertificateAuthority#s3_object_acl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#s3_object_acl AwsCertificateAuthority#s3_object_acl}
   */
   readonly s3ObjectAcl?: string;
 }
@@ -1441,11 +1441,11 @@ export class CrlConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface OcspConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#enabled TfCertificateAuthority#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#enabled AwsCertificateAuthority#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#ocsp_custom_cname TfCertificateAuthority#ocsp_custom_cname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#ocsp_custom_cname AwsCertificateAuthority#ocsp_custom_cname}
   */
   readonly ocspCustomCname?: string;
 }
@@ -1520,13 +1520,13 @@ export interface RevocationConfigurationProperty {
   /**
   * crl_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#crl_configuration TfCertificateAuthority#crl_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#crl_configuration AwsCertificateAuthority#crl_configuration}
   */
   readonly crlConfiguration?: CrlConfigurationProperty;
   /**
   * ocsp_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#ocsp_configuration TfCertificateAuthority#ocsp_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#ocsp_configuration AwsCertificateAuthority#ocsp_configuration}
   */
   readonly ocspConfiguration?: OcspConfigurationProperty;
 }
@@ -1602,7 +1602,7 @@ export class RevocationConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#create TfCertificateAuthority#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#create AwsCertificateAuthority#create}
   */
   readonly create?: string;
 }

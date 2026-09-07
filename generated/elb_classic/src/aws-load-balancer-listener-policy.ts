@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLoadBalancerListenerPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLoadBalancerListenerPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#id TfLoadBalancerListenerPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#id AwsLoadBalancerListenerPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#load_balancer_name TfLoadBalancerListenerPolicy#load_balancer_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#load_balancer_name AwsLoadBalancerListenerPolicy#load_balancer_name}
   */
   readonly loadBalancerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#load_balancer_port TfLoadBalancerListenerPolicy#load_balancer_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#load_balancer_port AwsLoadBalancerListenerPolicy#load_balancer_port}
   */
   readonly loadBalancerPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#policy_names TfLoadBalancerListenerPolicy#policy_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#policy_names AwsLoadBalancerListenerPolicy#policy_names}
   */
   readonly policyNames?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#region TfLoadBalancerListenerPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#region AwsLoadBalancerListenerPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#triggers TfLoadBalancerListenerPolicy#triggers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#triggers AwsLoadBalancerListenerPolicy#triggers}
   */
   readonly triggers?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface TfLoadBalancerListenerPolicyConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy aws_load_balancer_listener_policy}
 */
-export class TfLoadBalancerListenerPolicy extends cdktn.TerraformResource {
+export class AwsLoadBalancerListenerPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfLoadBalancerListenerPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLoadBalancerListenerPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLoadBalancerListenerPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLoadBalancerListenerPolicy to import
-  * @param importFromId The id of the existing TfLoadBalancerListenerPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLoadBalancerListenerPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsLoadBalancerListenerPolicy to import
+  * @param importFromId The id of the existing AwsLoadBalancerListenerPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/load_balancer_listener_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLoadBalancerListenerPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_load_balancer_listener_policy", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfLoadBalancerListenerPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLoadBalancerListenerPolicyConfig
+  * @param options AwsLoadBalancerListenerPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLoadBalancerListenerPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLoadBalancerListenerPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_load_balancer_listener_policy',
       terraformGeneratorMetadata: {

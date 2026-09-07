@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfKeyspaceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsKeyspaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#id TfKeyspace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#id AwsKeyspace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#name TfKeyspace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#name AwsKeyspace#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#region TfKeyspace#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#region AwsKeyspace#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#tags TfKeyspace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#tags AwsKeyspace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#tags_all TfKeyspace#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#tags_all AwsKeyspace#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * replication_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#replication_specification TfKeyspace#replication_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#replication_specification AwsKeyspace#replication_specification}
   */
-  readonly replicationSpecification?: TfKeyspace.ReplicationSpecificationProperty;
+  readonly replicationSpecification?: AwsKeyspace.ReplicationSpecificationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#timeouts TfKeyspace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#timeouts AwsKeyspace#timeouts}
   */
-  readonly timeouts?: TfKeyspace.TimeoutsProperty;
+  readonly timeouts?: AwsKeyspace.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace aws_keyspaces_keyspace}
 */
-export class TfKeyspace extends cdktn.TerraformResource {
+export class AwsKeyspace extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfKeyspace extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfKeyspace resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsKeyspace resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfKeyspace to import
-  * @param importFromId The id of the existing TfKeyspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfKeyspace to import is found
+  * @param importToId The construct id used in the generated config for the AwsKeyspace to import
+  * @param importFromId The id of the existing AwsKeyspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsKeyspace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_keyspaces_keyspace", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfKeyspace extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfKeyspaceConfig
+  * @param options AwsKeyspaceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfKeyspaceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsKeyspaceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_keyspaces_keyspace',
       terraformGeneratorMetadata: {
@@ -192,11 +192,11 @@ export class TfKeyspace extends cdktn.TerraformResource {
   }
 
   // replication_specification - computed: false, optional: true, required: false
-  private _replicationSpecification = new TfKeyspace.ReplicationSpecificationPropertyOutputReference(this, "replication_specification");
+  private _replicationSpecification = new AwsKeyspace.ReplicationSpecificationPropertyOutputReference(this, "replication_specification");
   public get replicationSpecification() {
     return this._replicationSpecification;
   }
-  public putReplicationSpecification(value: TfKeyspace.ReplicationSpecificationProperty) {
+  public putReplicationSpecification(value: AwsKeyspace.ReplicationSpecificationProperty) {
     this._replicationSpecification.internalValue = value;
   }
   public resetReplicationSpecification() {
@@ -208,11 +208,11 @@ export class TfKeyspace extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfKeyspace.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsKeyspace.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfKeyspace.TimeoutsProperty) {
+  public putTimeouts(value: AwsKeyspace.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -234,8 +234,8 @@ export class TfKeyspace extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      replication_specification: tfKeyspaceReplicationSpecificationPropertyToTerraform(this._replicationSpecification.internalValue),
-      timeouts: tfKeyspaceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      replication_specification: awsKeyspaceReplicationSpecificationPropertyToTerraform(this._replicationSpecification.internalValue),
+      timeouts: awsKeyspaceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -272,16 +272,16 @@ export class TfKeyspace extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       replication_specification: {
-        value: tfKeyspaceReplicationSpecificationPropertyToHclTerraform(this._replicationSpecification.internalValue),
+        value: awsKeyspaceReplicationSpecificationPropertyToHclTerraform(this._replicationSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfKeyspace.ReplicationSpecificationPropertyList",
+        storageClassType: "AwsKeyspace.ReplicationSpecificationPropertyList",
       },
       timeouts: {
-        value: tfKeyspaceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsKeyspaceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfKeyspace.TimeoutsProperty",
+        storageClassType: "AwsKeyspace.TimeoutsProperty",
       },
     };
 
@@ -290,7 +290,7 @@ export class TfKeyspace extends cdktn.TerraformResource {
   }
 }
 
-export function tfKeyspaceReplicationSpecificationPropertyToTerraform(struct?: TfKeyspace.ReplicationSpecificationPropertyOutputReference | TfKeyspace.ReplicationSpecificationProperty): any {
+export function awsKeyspaceReplicationSpecificationPropertyToTerraform(struct?: AwsKeyspace.ReplicationSpecificationPropertyOutputReference | AwsKeyspace.ReplicationSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function tfKeyspaceReplicationSpecificationPropertyToTerraform(struct?: T
 }
 
 
-export function tfKeyspaceReplicationSpecificationPropertyToHclTerraform(struct?: TfKeyspace.ReplicationSpecificationPropertyOutputReference | TfKeyspace.ReplicationSpecificationProperty): any {
+export function awsKeyspaceReplicationSpecificationPropertyToHclTerraform(struct?: AwsKeyspace.ReplicationSpecificationPropertyOutputReference | AwsKeyspace.ReplicationSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function tfKeyspaceReplicationSpecificationPropertyToHclTerraform(struct?
 }
 
 
-export function tfKeyspaceTimeoutsPropertyToTerraform(struct?: TfKeyspace.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsKeyspaceTimeoutsPropertyToTerraform(struct?: AwsKeyspace.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function tfKeyspaceTimeoutsPropertyToTerraform(struct?: TfKeyspace.Timeou
 }
 
 
-export function tfKeyspaceTimeoutsPropertyToHclTerraform(struct?: TfKeyspace.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsKeyspaceTimeoutsPropertyToHclTerraform(struct?: AwsKeyspace.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,14 +364,14 @@ export function tfKeyspaceTimeoutsPropertyToHclTerraform(struct?: TfKeyspace.Tim
 }
 
 
-export namespace TfKeyspace {
+export namespace AwsKeyspace {
 export interface ReplicationSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#region_list TfKeyspace#region_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#region_list AwsKeyspace#region_list}
   */
   readonly regionList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#replication_strategy TfKeyspace#replication_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#replication_strategy AwsKeyspace#replication_strategy}
   */
   readonly replicationStrategy?: string;
 }
@@ -447,11 +447,11 @@ export class ReplicationSpecificationPropertyOutputReference extends cdktn.Compl
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#create TfKeyspace#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#create AwsKeyspace#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#delete TfKeyspace#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_keyspace#delete AwsKeyspace#delete}
   */
   readonly delete?: string;
 }

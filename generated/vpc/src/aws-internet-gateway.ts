@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfInternetGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface AwsInternetGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#id TfInternetGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#id AwsInternetGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,33 +16,33 @@ export interface TfInternetGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#region TfInternetGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#region AwsInternetGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#tags TfInternetGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#tags AwsInternetGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#tags_all TfInternetGateway#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#tags_all AwsInternetGateway#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#vpc_id TfInternetGateway#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#vpc_id AwsInternetGateway#vpc_id}
   */
   readonly vpcId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#timeouts TfInternetGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#timeouts AwsInternetGateway#timeouts}
   */
-  readonly timeouts?: TfInternetGateway.TimeoutsProperty;
+  readonly timeouts?: AwsInternetGateway.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway aws_internet_gateway}
 */
-export class TfInternetGateway extends cdktn.TerraformResource {
+export class AwsInternetGateway extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfInternetGateway extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfInternetGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsInternetGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfInternetGateway to import
-  * @param importFromId The id of the existing TfInternetGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfInternetGateway to import is found
+  * @param importToId The construct id used in the generated config for the AwsInternetGateway to import
+  * @param importFromId The id of the existing AwsInternetGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsInternetGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_internet_gateway", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfInternetGateway extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfInternetGatewayConfig = {}
+  * @param options AwsInternetGatewayConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfInternetGatewayConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsInternetGatewayConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_internet_gateway',
       terraformGeneratorMetadata: {
@@ -193,11 +193,11 @@ export class TfInternetGateway extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfInternetGateway.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsInternetGateway.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfInternetGateway.TimeoutsProperty) {
+  public putTimeouts(value: AwsInternetGateway.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -219,7 +219,7 @@ export class TfInternetGateway extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      timeouts: tfInternetGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsInternetGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -256,10 +256,10 @@ export class TfInternetGateway extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfInternetGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsInternetGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfInternetGateway.TimeoutsProperty",
+        storageClassType: "AwsInternetGateway.TimeoutsProperty",
       },
     };
 
@@ -268,7 +268,7 @@ export class TfInternetGateway extends cdktn.TerraformResource {
   }
 }
 
-export function tfInternetGatewayTimeoutsPropertyToTerraform(struct?: TfInternetGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsInternetGatewayTimeoutsPropertyToTerraform(struct?: AwsInternetGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -281,7 +281,7 @@ export function tfInternetGatewayTimeoutsPropertyToTerraform(struct?: TfInternet
 }
 
 
-export function tfInternetGatewayTimeoutsPropertyToHclTerraform(struct?: TfInternetGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsInternetGatewayTimeoutsPropertyToHclTerraform(struct?: AwsInternetGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,18 +312,18 @@ export function tfInternetGatewayTimeoutsPropertyToHclTerraform(struct?: TfInter
 }
 
 
-export namespace TfInternetGateway {
+export namespace AwsInternetGateway {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#create TfInternetGateway#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#create AwsInternetGateway#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#delete TfInternetGateway#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#delete AwsInternetGateway#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#update TfInternetGateway#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/internet_gateway#update AwsInternetGateway#update}
   */
   readonly update?: string;
 }

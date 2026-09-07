@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConnectPeerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConnectPeerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#connect_attachment_id TfConnectPeer#connect_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#connect_attachment_id AwsConnectPeer#connect_attachment_id}
   */
   readonly connectAttachmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#core_network_address TfConnectPeer#core_network_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#core_network_address AwsConnectPeer#core_network_address}
   */
   readonly coreNetworkAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#id TfConnectPeer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#id AwsConnectPeer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#inside_cidr_blocks TfConnectPeer#inside_cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#inside_cidr_blocks AwsConnectPeer#inside_cidr_blocks}
   */
   readonly insideCidrBlocks?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#peer_address TfConnectPeer#peer_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#peer_address AwsConnectPeer#peer_address}
   */
   readonly peerAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#subnet_arn TfConnectPeer#subnet_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#subnet_arn AwsConnectPeer#subnet_arn}
   */
   readonly subnetArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#tags TfConnectPeer#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#tags AwsConnectPeer#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#tags_all TfConnectPeer#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#tags_all AwsConnectPeer#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * bgp_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#bgp_options TfConnectPeer#bgp_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#bgp_options AwsConnectPeer#bgp_options}
   */
-  readonly bgpOptions?: TfConnectPeer.BgpOptionsProperty;
+  readonly bgpOptions?: AwsConnectPeer.BgpOptionsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#timeouts TfConnectPeer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#timeouts AwsConnectPeer#timeouts}
   */
-  readonly timeouts?: TfConnectPeer.TimeoutsProperty;
+  readonly timeouts?: AwsConnectPeer.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer aws_networkmanager_connect_peer}
 */
-export class TfConnectPeer extends cdktn.TerraformResource {
+export class AwsConnectPeer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfConnectPeer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConnectPeer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConnectPeer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConnectPeer to import
-  * @param importFromId The id of the existing TfConnectPeer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConnectPeer to import is found
+  * @param importToId The construct id used in the generated config for the AwsConnectPeer to import
+  * @param importFromId The id of the existing AwsConnectPeer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConnectPeer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_connect_peer", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfConnectPeer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConnectPeerConfig
+  * @param options AwsConnectPeerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConnectPeerConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConnectPeerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_connect_peer',
       terraformGeneratorMetadata: {
@@ -128,7 +128,7 @@ export class TfConnectPeer extends cdktn.TerraformResource {
   }
 
   // configuration - computed: true, optional: false, required: false
-  private _configuration = new TfConnectPeer.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new AwsConnectPeer.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
@@ -281,11 +281,11 @@ export class TfConnectPeer extends cdktn.TerraformResource {
   }
 
   // bgp_options - computed: false, optional: true, required: false
-  private _bgpOptions = new TfConnectPeer.BgpOptionsPropertyOutputReference(this, "bgp_options");
+  private _bgpOptions = new AwsConnectPeer.BgpOptionsPropertyOutputReference(this, "bgp_options");
   public get bgpOptions() {
     return this._bgpOptions;
   }
-  public putBgpOptions(value: TfConnectPeer.BgpOptionsProperty) {
+  public putBgpOptions(value: AwsConnectPeer.BgpOptionsProperty) {
     this._bgpOptions.internalValue = value;
   }
   public resetBgpOptions() {
@@ -297,11 +297,11 @@ export class TfConnectPeer extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfConnectPeer.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsConnectPeer.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfConnectPeer.TimeoutsProperty) {
+  public putTimeouts(value: AwsConnectPeer.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -326,8 +326,8 @@ export class TfConnectPeer extends cdktn.TerraformResource {
       subnet_arn: cdktn.stringToTerraform(this._subnetArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      bgp_options: tfConnectPeerBgpOptionsPropertyToTerraform(this._bgpOptions.internalValue),
-      timeouts: tfConnectPeerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      bgp_options: awsConnectPeerBgpOptionsPropertyToTerraform(this._bgpOptions.internalValue),
+      timeouts: awsConnectPeerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -382,16 +382,16 @@ export class TfConnectPeer extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       bgp_options: {
-        value: tfConnectPeerBgpOptionsPropertyToHclTerraform(this._bgpOptions.internalValue),
+        value: awsConnectPeerBgpOptionsPropertyToHclTerraform(this._bgpOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConnectPeer.BgpOptionsPropertyList",
+        storageClassType: "AwsConnectPeer.BgpOptionsPropertyList",
       },
       timeouts: {
-        value: tfConnectPeerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsConnectPeerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfConnectPeer.TimeoutsProperty",
+        storageClassType: "AwsConnectPeer.TimeoutsProperty",
       },
     };
 
@@ -400,7 +400,7 @@ export class TfConnectPeer extends cdktn.TerraformResource {
   }
 }
 
-export function tfConnectPeerBgpConfigurationsPropertyToTerraform(struct?: TfConnectPeer.BgpConfigurationsProperty): any {
+export function awsConnectPeerBgpConfigurationsPropertyToTerraform(struct?: AwsConnectPeer.BgpConfigurationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,7 +410,7 @@ export function tfConnectPeerBgpConfigurationsPropertyToTerraform(struct?: TfCon
 }
 
 
-export function tfConnectPeerBgpConfigurationsPropertyToHclTerraform(struct?: TfConnectPeer.BgpConfigurationsProperty): any {
+export function awsConnectPeerBgpConfigurationsPropertyToHclTerraform(struct?: AwsConnectPeer.BgpConfigurationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function tfConnectPeerBgpConfigurationsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfConnectPeerConfigurationPropertyToTerraform(struct?: TfConnectPeer.ConfigurationProperty): any {
+export function awsConnectPeerConfigurationPropertyToTerraform(struct?: AwsConnectPeer.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function tfConnectPeerConfigurationPropertyToTerraform(struct?: TfConnect
 }
 
 
-export function tfConnectPeerConfigurationPropertyToHclTerraform(struct?: TfConnectPeer.ConfigurationProperty): any {
+export function awsConnectPeerConfigurationPropertyToHclTerraform(struct?: AwsConnectPeer.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function tfConnectPeerConfigurationPropertyToHclTerraform(struct?: TfConn
 }
 
 
-export function tfConnectPeerBgpOptionsPropertyToTerraform(struct?: TfConnectPeer.BgpOptionsPropertyOutputReference | TfConnectPeer.BgpOptionsProperty): any {
+export function awsConnectPeerBgpOptionsPropertyToTerraform(struct?: AwsConnectPeer.BgpOptionsPropertyOutputReference | AwsConnectPeer.BgpOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -453,7 +453,7 @@ export function tfConnectPeerBgpOptionsPropertyToTerraform(struct?: TfConnectPee
 }
 
 
-export function tfConnectPeerBgpOptionsPropertyToHclTerraform(struct?: TfConnectPeer.BgpOptionsPropertyOutputReference | TfConnectPeer.BgpOptionsProperty): any {
+export function awsConnectPeerBgpOptionsPropertyToHclTerraform(struct?: AwsConnectPeer.BgpOptionsPropertyOutputReference | AwsConnectPeer.BgpOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,7 +472,7 @@ export function tfConnectPeerBgpOptionsPropertyToHclTerraform(struct?: TfConnect
 }
 
 
-export function tfConnectPeerTimeoutsPropertyToTerraform(struct?: TfConnectPeer.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsConnectPeerTimeoutsPropertyToTerraform(struct?: AwsConnectPeer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -484,7 +484,7 @@ export function tfConnectPeerTimeoutsPropertyToTerraform(struct?: TfConnectPeer.
 }
 
 
-export function tfConnectPeerTimeoutsPropertyToHclTerraform(struct?: TfConnectPeer.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsConnectPeerTimeoutsPropertyToHclTerraform(struct?: AwsConnectPeer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -509,7 +509,7 @@ export function tfConnectPeerTimeoutsPropertyToHclTerraform(struct?: TfConnectPe
 }
 
 
-export namespace TfConnectPeer {
+export namespace AwsConnectPeer {
 export interface BgpConfigurationsProperty {
 }
 export class BgpConfigurationsPropertyOutputReference extends cdktn.ComplexObject {
@@ -656,7 +656,7 @@ export class ConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface BgpOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#peer_asn TfConnectPeer#peer_asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#peer_asn AwsConnectPeer#peer_asn}
   */
   readonly peerAsn?: string;
 }
@@ -710,11 +710,11 @@ export class BgpOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#create TfConnectPeer#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#create AwsConnectPeer#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#delete TfConnectPeer#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_peer#delete AwsConnectPeer#delete}
   */
   readonly delete?: string;
 }

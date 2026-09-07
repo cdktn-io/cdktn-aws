@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEipAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEipAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#allocation_id TfEipAssociation#allocation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#allocation_id AwsEipAssociation#allocation_id}
   */
   readonly allocationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#allow_reassociation TfEipAssociation#allow_reassociation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#allow_reassociation AwsEipAssociation#allow_reassociation}
   */
   readonly allowReassociation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#id TfEipAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#id AwsEipAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#instance_id TfEipAssociation#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#instance_id AwsEipAssociation#instance_id}
   */
   readonly instanceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#network_interface_id TfEipAssociation#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#network_interface_id AwsEipAssociation#network_interface_id}
   */
   readonly networkInterfaceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#private_ip_address TfEipAssociation#private_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#private_ip_address AwsEipAssociation#private_ip_address}
   */
   readonly privateIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#public_ip TfEipAssociation#public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#public_ip AwsEipAssociation#public_ip}
   */
   readonly publicIp?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#region TfEipAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#region AwsEipAssociation#region}
   */
   readonly region?: string;
 }
@@ -48,7 +48,7 @@ export interface TfEipAssociationConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association aws_eip_association}
 */
-export class TfEipAssociation extends cdktn.TerraformResource {
+export class AwsEipAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfEipAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEipAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEipAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEipAssociation to import
-  * @param importFromId The id of the existing TfEipAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEipAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsEipAssociation to import
+  * @param importFromId The id of the existing AwsEipAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eip_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEipAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eip_association", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfEipAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEipAssociationConfig = {}
+  * @param options AwsEipAssociationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfEipAssociationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsEipAssociationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_eip_association',
       terraformGeneratorMetadata: {

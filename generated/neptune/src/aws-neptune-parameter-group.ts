@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfParameterGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsParameterGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#description TfParameterGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#description AwsParameterGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#family TfParameterGroup#family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#family AwsParameterGroup#family}
   */
   readonly family: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#id TfParameterGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#id AwsParameterGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#name TfParameterGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#name AwsParameterGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#name_prefix TfParameterGroup#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#name_prefix AwsParameterGroup#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#region TfParameterGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#region AwsParameterGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#tags TfParameterGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#tags AwsParameterGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#tags_all TfParameterGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#tags_all AwsParameterGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#parameter TfParameterGroup#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#parameter AwsParameterGroup#parameter}
   */
-  readonly parameter?: TfParameterGroup.ParameterProperty[] | cdktn.IResolvable;
+  readonly parameter?: AwsParameterGroup.ParameterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group aws_neptune_parameter_group}
 */
-export class TfParameterGroup extends cdktn.TerraformResource {
+export class AwsParameterGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfParameterGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfParameterGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsParameterGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfParameterGroup to import
-  * @param importFromId The id of the existing TfParameterGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfParameterGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsParameterGroup to import
+  * @param importFromId The id of the existing AwsParameterGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsParameterGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_neptune_parameter_group", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfParameterGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfParameterGroupConfig
+  * @param options AwsParameterGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfParameterGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsParameterGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_neptune_parameter_group',
       terraformGeneratorMetadata: {
@@ -248,11 +248,11 @@ export class TfParameterGroup extends cdktn.TerraformResource {
   }
 
   // parameter - computed: false, optional: true, required: false
-  private _parameter = new TfParameterGroup.ParameterPropertyList(this, "parameter", true);
+  private _parameter = new AwsParameterGroup.ParameterPropertyList(this, "parameter", true);
   public get parameter() {
     return this._parameter;
   }
-  public putParameter(value: TfParameterGroup.ParameterProperty[] | cdktn.IResolvable) {
+  public putParameter(value: AwsParameterGroup.ParameterProperty[] | cdktn.IResolvable) {
     this._parameter.internalValue = value;
   }
   public resetParameter() {
@@ -277,7 +277,7 @@ export class TfParameterGroup extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      parameter: cdktn.listMapper(tfParameterGroupParameterPropertyToTerraform, true)(this._parameter.internalValue),
+      parameter: cdktn.listMapper(awsParameterGroupParameterPropertyToTerraform, true)(this._parameter.internalValue),
     };
   }
 
@@ -332,10 +332,10 @@ export class TfParameterGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       parameter: {
-        value: cdktn.listMapperHcl(tfParameterGroupParameterPropertyToHclTerraform, true)(this._parameter.internalValue),
+        value: cdktn.listMapperHcl(awsParameterGroupParameterPropertyToHclTerraform, true)(this._parameter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfParameterGroup.ParameterPropertyList",
+        storageClassType: "AwsParameterGroup.ParameterPropertyList",
       },
     };
 
@@ -344,7 +344,7 @@ export class TfParameterGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfParameterGroupParameterPropertyToTerraform(struct?: TfParameterGroup.ParameterProperty | cdktn.IResolvable): any {
+export function awsParameterGroupParameterPropertyToTerraform(struct?: AwsParameterGroup.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function tfParameterGroupParameterPropertyToTerraform(struct?: TfParamete
 }
 
 
-export function tfParameterGroupParameterPropertyToHclTerraform(struct?: TfParameterGroup.ParameterProperty | cdktn.IResolvable): any {
+export function awsParameterGroupParameterPropertyToHclTerraform(struct?: AwsParameterGroup.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,18 +388,18 @@ export function tfParameterGroupParameterPropertyToHclTerraform(struct?: TfParam
 }
 
 
-export namespace TfParameterGroup {
+export namespace AwsParameterGroup {
 export interface ParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#apply_method TfParameterGroup#apply_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#apply_method AwsParameterGroup#apply_method}
   */
   readonly applyMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#name TfParameterGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#name AwsParameterGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#value TfParameterGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/neptune_parameter_group#value AwsParameterGroup#value}
   */
   readonly value: string;
 }

@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfVirtualRouterConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsVirtualRouterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#id DataTfVirtualRouter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#id DataAwsVirtualRouter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#mesh_name DataTfVirtualRouter#mesh_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#mesh_name DataAwsVirtualRouter#mesh_name}
   */
   readonly meshName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#mesh_owner DataTfVirtualRouter#mesh_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#mesh_owner DataAwsVirtualRouter#mesh_owner}
   */
   readonly meshOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#name DataTfVirtualRouter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#name DataAwsVirtualRouter#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#region DataTfVirtualRouter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#region DataAwsVirtualRouter#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#tags DataTfVirtualRouter#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#tags DataAwsVirtualRouter#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface DataTfVirtualRouterConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router aws_appmesh_virtual_router}
 */
-export class DataTfVirtualRouter extends cdktn.TerraformDataSource {
+export class DataAwsVirtualRouter extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataTfVirtualRouter extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfVirtualRouter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsVirtualRouter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfVirtualRouter to import
-  * @param importFromId The id of the existing DataTfVirtualRouter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfVirtualRouter to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsVirtualRouter to import
+  * @param importFromId The id of the existing DataAwsVirtualRouter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_virtual_router#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsVirtualRouter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appmesh_virtual_router", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataTfVirtualRouter extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfVirtualRouterConfig
+  * @param options DataAwsVirtualRouterConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfVirtualRouterConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsVirtualRouterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appmesh_virtual_router',
       terraformGeneratorMetadata: {
@@ -195,7 +195,7 @@ export class DataTfVirtualRouter extends cdktn.TerraformDataSource {
   }
 
   // spec - computed: true, optional: false, required: false
-  private _spec = new DataTfVirtualRouter.SpecPropertyList(this, "spec", false);
+  private _spec = new DataAwsVirtualRouter.SpecPropertyList(this, "spec", false);
   public get spec() {
     return this._spec;
   }
@@ -276,7 +276,7 @@ export class DataTfVirtualRouter extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfVirtualRouterPortMappingPropertyToTerraform(struct?: DataTfVirtualRouter.PortMappingProperty): any {
+export function dataAwsVirtualRouterPortMappingPropertyToTerraform(struct?: DataAwsVirtualRouter.PortMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function dataTfVirtualRouterPortMappingPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfVirtualRouterPortMappingPropertyToHclTerraform(struct?: DataTfVirtualRouter.PortMappingProperty): any {
+export function dataAwsVirtualRouterPortMappingPropertyToHclTerraform(struct?: DataAwsVirtualRouter.PortMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function dataTfVirtualRouterPortMappingPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfVirtualRouterListenerPropertyToTerraform(struct?: DataTfVirtualRouter.ListenerProperty): any {
+export function dataAwsVirtualRouterListenerPropertyToTerraform(struct?: DataAwsVirtualRouter.ListenerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function dataTfVirtualRouterListenerPropertyToTerraform(struct?: DataTfVi
 }
 
 
-export function dataTfVirtualRouterListenerPropertyToHclTerraform(struct?: DataTfVirtualRouter.ListenerProperty): any {
+export function dataAwsVirtualRouterListenerPropertyToHclTerraform(struct?: DataAwsVirtualRouter.ListenerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function dataTfVirtualRouterListenerPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfVirtualRouterSpecPropertyToTerraform(struct?: DataTfVirtualRouter.SpecProperty): any {
+export function dataAwsVirtualRouterSpecPropertyToTerraform(struct?: DataAwsVirtualRouter.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function dataTfVirtualRouterSpecPropertyToTerraform(struct?: DataTfVirtua
 }
 
 
-export function dataTfVirtualRouterSpecPropertyToHclTerraform(struct?: DataTfVirtualRouter.SpecProperty): any {
+export function dataAwsVirtualRouterSpecPropertyToHclTerraform(struct?: DataAwsVirtualRouter.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function dataTfVirtualRouterSpecPropertyToHclTerraform(struct?: DataTfVir
 }
 
 
-export namespace DataTfVirtualRouter {
+export namespace DataAwsVirtualRouter {
 export interface PortMappingProperty {
 }
 export class PortMappingPropertyOutputReference extends cdktn.ComplexObject {

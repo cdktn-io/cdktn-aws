@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfProducerDataSharesConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsProducerDataSharesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_producer_data_shares#producer_arn DataTfProducerDataShares#producer_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_producer_data_shares#producer_arn DataAwsProducerDataShares#producer_arn}
   */
   readonly producerArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_producer_data_shares#region DataTfProducerDataShares#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_producer_data_shares#region DataAwsProducerDataShares#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_producer_data_shares#status DataTfProducerDataShares#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_producer_data_shares#status DataAwsProducerDataShares#status}
   */
   readonly status?: string;
 }
@@ -25,7 +25,7 @@ export interface DataTfProducerDataSharesConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_producer_data_shares aws_redshift_producer_data_shares}
 */
-export class DataTfProducerDataShares extends cdktn.TerraformDataSource {
+export class DataAwsProducerDataShares extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class DataTfProducerDataShares extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfProducerDataShares resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsProducerDataShares resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfProducerDataShares to import
-  * @param importFromId The id of the existing DataTfProducerDataShares that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_producer_data_shares#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfProducerDataShares to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsProducerDataShares to import
+  * @param importFromId The id of the existing DataAwsProducerDataShares that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshift_producer_data_shares#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsProducerDataShares to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_producer_data_shares", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class DataTfProducerDataShares extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfProducerDataSharesConfig
+  * @param options DataAwsProducerDataSharesConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfProducerDataSharesConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsProducerDataSharesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_producer_data_shares',
       terraformGeneratorMetadata: {
@@ -83,7 +83,7 @@ export class DataTfProducerDataShares extends cdktn.TerraformDataSource {
   // ==========
 
   // data_shares - computed: true, optional: false, required: false
-  private _dataShares = new DataTfProducerDataShares.DataSharesPropertyList(this, "data_shares", false);
+  private _dataShares = new DataAwsProducerDataShares.DataSharesPropertyList(this, "data_shares", false);
   public get dataShares() {
     return this._dataShares;
   }
@@ -177,7 +177,7 @@ export class DataTfProducerDataShares extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfProducerDataSharesDataSharesPropertyToTerraform(struct?: DataTfProducerDataShares.DataSharesProperty): any {
+export function dataAwsProducerDataSharesDataSharesPropertyToTerraform(struct?: DataAwsProducerDataShares.DataSharesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -187,7 +187,7 @@ export function dataTfProducerDataSharesDataSharesPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfProducerDataSharesDataSharesPropertyToHclTerraform(struct?: DataTfProducerDataShares.DataSharesProperty): any {
+export function dataAwsProducerDataSharesDataSharesPropertyToHclTerraform(struct?: DataAwsProducerDataShares.DataSharesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -198,7 +198,7 @@ export function dataTfProducerDataSharesDataSharesPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataTfProducerDataShares {
+export namespace DataAwsProducerDataShares {
 export interface DataSharesProperty {
 }
 export class DataSharesPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFastSnapshotRestoreConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFastSnapshotRestoreConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#availability_zone TfFastSnapshotRestore#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#availability_zone AwsFastSnapshotRestore#availability_zone}
   */
   readonly availabilityZone: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#region TfFastSnapshotRestore#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#region AwsFastSnapshotRestore#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#snapshot_id TfFastSnapshotRestore#snapshot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#snapshot_id AwsFastSnapshotRestore#snapshot_id}
   */
   readonly snapshotId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#timeouts TfFastSnapshotRestore#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#timeouts AwsFastSnapshotRestore#timeouts}
   */
-  readonly timeouts?: TfFastSnapshotRestore.TimeoutsProperty;
+  readonly timeouts?: AwsFastSnapshotRestore.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore aws_ebs_fast_snapshot_restore}
 */
-export class TfFastSnapshotRestore extends cdktn.TerraformResource {
+export class AwsFastSnapshotRestore extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class TfFastSnapshotRestore extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFastSnapshotRestore resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFastSnapshotRestore resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFastSnapshotRestore to import
-  * @param importFromId The id of the existing TfFastSnapshotRestore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFastSnapshotRestore to import is found
+  * @param importToId The construct id used in the generated config for the AwsFastSnapshotRestore to import
+  * @param importFromId The id of the existing AwsFastSnapshotRestore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFastSnapshotRestore to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ebs_fast_snapshot_restore", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class TfFastSnapshotRestore extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFastSnapshotRestoreConfig
+  * @param options AwsFastSnapshotRestoreConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFastSnapshotRestoreConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFastSnapshotRestoreConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ebs_fast_snapshot_restore',
       terraformGeneratorMetadata: {
@@ -142,11 +142,11 @@ export class TfFastSnapshotRestore extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfFastSnapshotRestore.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsFastSnapshotRestore.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfFastSnapshotRestore.TimeoutsProperty) {
+  public putTimeouts(value: AwsFastSnapshotRestore.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -166,7 +166,7 @@ export class TfFastSnapshotRestore extends cdktn.TerraformResource {
       availability_zone: cdktn.stringToTerraform(this._availabilityZone),
       region: cdktn.stringToTerraform(this._region),
       snapshot_id: cdktn.stringToTerraform(this._snapshotId),
-      timeouts: tfFastSnapshotRestoreTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsFastSnapshotRestoreTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -191,10 +191,10 @@ export class TfFastSnapshotRestore extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfFastSnapshotRestoreTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsFastSnapshotRestoreTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfFastSnapshotRestore.TimeoutsProperty",
+        storageClassType: "AwsFastSnapshotRestore.TimeoutsProperty",
       },
     };
 
@@ -203,7 +203,7 @@ export class TfFastSnapshotRestore extends cdktn.TerraformResource {
   }
 }
 
-export function tfFastSnapshotRestoreTimeoutsPropertyToTerraform(struct?: TfFastSnapshotRestore.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFastSnapshotRestoreTimeoutsPropertyToTerraform(struct?: AwsFastSnapshotRestore.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -215,7 +215,7 @@ export function tfFastSnapshotRestoreTimeoutsPropertyToTerraform(struct?: TfFast
 }
 
 
-export function tfFastSnapshotRestoreTimeoutsPropertyToHclTerraform(struct?: TfFastSnapshotRestore.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFastSnapshotRestoreTimeoutsPropertyToHclTerraform(struct?: AwsFastSnapshotRestore.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,18 +240,18 @@ export function tfFastSnapshotRestoreTimeoutsPropertyToHclTerraform(struct?: TfF
 }
 
 
-export namespace TfFastSnapshotRestore {
+export namespace AwsFastSnapshotRestore {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#create TfFastSnapshotRestore#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#create AwsFastSnapshotRestore#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#delete TfFastSnapshotRestore#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_fast_snapshot_restore#delete AwsFastSnapshotRestore#delete}
   */
   readonly delete?: string;
 }

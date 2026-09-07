@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfStudioSessionMappingConfig extends cdktn.TerraformMetaArguments {
+export interface AwsStudioSessionMappingConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#id TfStudioSessionMapping#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#id AwsStudioSessionMapping#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#identity_id TfStudioSessionMapping#identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#identity_id AwsStudioSessionMapping#identity_id}
   */
   readonly identityId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#identity_name TfStudioSessionMapping#identity_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#identity_name AwsStudioSessionMapping#identity_name}
   */
   readonly identityName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#identity_type TfStudioSessionMapping#identity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#identity_type AwsStudioSessionMapping#identity_type}
   */
   readonly identityType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#region TfStudioSessionMapping#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#region AwsStudioSessionMapping#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#session_policy_arn TfStudioSessionMapping#session_policy_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#session_policy_arn AwsStudioSessionMapping#session_policy_arn}
   */
   readonly sessionPolicyArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#studio_id TfStudioSessionMapping#studio_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#studio_id AwsStudioSessionMapping#studio_id}
   */
   readonly studioId: string;
 }
@@ -44,7 +44,7 @@ export interface TfStudioSessionMappingConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping aws_emr_studio_session_mapping}
 */
-export class TfStudioSessionMapping extends cdktn.TerraformResource {
+export class AwsStudioSessionMapping extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfStudioSessionMapping extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfStudioSessionMapping resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsStudioSessionMapping resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfStudioSessionMapping to import
-  * @param importFromId The id of the existing TfStudioSessionMapping that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfStudioSessionMapping to import is found
+  * @param importToId The construct id used in the generated config for the AwsStudioSessionMapping to import
+  * @param importFromId The id of the existing AwsStudioSessionMapping that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/emr_studio_session_mapping#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStudioSessionMapping to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_emr_studio_session_mapping", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfStudioSessionMapping extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfStudioSessionMappingConfig
+  * @param options AwsStudioSessionMappingConfig
   */
-  public constructor(scope: Construct, id: string, config: TfStudioSessionMappingConfig) {
+  public constructor(scope: Construct, id: string, config: AwsStudioSessionMappingConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_emr_studio_session_mapping',
       terraformGeneratorMetadata: {

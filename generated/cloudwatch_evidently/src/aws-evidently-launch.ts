@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLaunchConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLaunchConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#description TfLaunch#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#description AwsLaunch#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#id TfLaunch#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#id AwsLaunch#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#name TfLaunch#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#name AwsLaunch#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#project TfLaunch#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#project AwsLaunch#project}
   */
   readonly project: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#randomization_salt TfLaunch#randomization_salt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#randomization_salt AwsLaunch#randomization_salt}
   */
   readonly randomizationSalt?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#region TfLaunch#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#region AwsLaunch#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#tags TfLaunch#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#tags AwsLaunch#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#tags_all TfLaunch#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#tags_all AwsLaunch#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#groups TfLaunch#groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#groups AwsLaunch#groups}
   */
-  readonly groups: TfLaunch.GroupsProperty[] | cdktn.IResolvable;
+  readonly groups: AwsLaunch.GroupsProperty[] | cdktn.IResolvable;
   /**
   * metric_monitors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#metric_monitors TfLaunch#metric_monitors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#metric_monitors AwsLaunch#metric_monitors}
   */
-  readonly metricMonitors?: TfLaunch.MetricMonitorsProperty[] | cdktn.IResolvable;
+  readonly metricMonitors?: AwsLaunch.MetricMonitorsProperty[] | cdktn.IResolvable;
   /**
   * scheduled_splits_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#scheduled_splits_config TfLaunch#scheduled_splits_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#scheduled_splits_config AwsLaunch#scheduled_splits_config}
   */
-  readonly scheduledSplitsConfig?: TfLaunch.ScheduledSplitsConfigProperty;
+  readonly scheduledSplitsConfig?: AwsLaunch.ScheduledSplitsConfigProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#timeouts TfLaunch#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#timeouts AwsLaunch#timeouts}
   */
-  readonly timeouts?: TfLaunch.TimeoutsProperty;
+  readonly timeouts?: AwsLaunch.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch aws_evidently_launch}
 */
-export class TfLaunch extends cdktn.TerraformResource {
+export class AwsLaunch extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class TfLaunch extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLaunch resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLaunch resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLaunch to import
-  * @param importFromId The id of the existing TfLaunch that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLaunch to import is found
+  * @param importToId The construct id used in the generated config for the AwsLaunch to import
+  * @param importFromId The id of the existing AwsLaunch that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLaunch to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_evidently_launch", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class TfLaunch extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLaunchConfig
+  * @param options AwsLaunchConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLaunchConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLaunchConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_evidently_launch',
       terraformGeneratorMetadata: {
@@ -165,7 +165,7 @@ export class TfLaunch extends cdktn.TerraformResource {
   }
 
   // execution - computed: true, optional: false, required: false
-  private _execution = new TfLaunch.ExecutionPropertyList(this, "execution", false);
+  private _execution = new AwsLaunch.ExecutionPropertyList(this, "execution", false);
   public get execution() {
     return this._execution;
   }
@@ -297,11 +297,11 @@ export class TfLaunch extends cdktn.TerraformResource {
   }
 
   // groups - computed: false, optional: false, required: true
-  private _groups = new TfLaunch.GroupsPropertyList(this, "groups", false);
+  private _groups = new AwsLaunch.GroupsPropertyList(this, "groups", false);
   public get groups() {
     return this._groups;
   }
-  public putGroups(value: TfLaunch.GroupsProperty[] | cdktn.IResolvable) {
+  public putGroups(value: AwsLaunch.GroupsProperty[] | cdktn.IResolvable) {
     this._groups.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -310,11 +310,11 @@ export class TfLaunch extends cdktn.TerraformResource {
   }
 
   // metric_monitors - computed: false, optional: true, required: false
-  private _metricMonitors = new TfLaunch.MetricMonitorsPropertyList(this, "metric_monitors", false);
+  private _metricMonitors = new AwsLaunch.MetricMonitorsPropertyList(this, "metric_monitors", false);
   public get metricMonitors() {
     return this._metricMonitors;
   }
-  public putMetricMonitors(value: TfLaunch.MetricMonitorsProperty[] | cdktn.IResolvable) {
+  public putMetricMonitors(value: AwsLaunch.MetricMonitorsProperty[] | cdktn.IResolvable) {
     this._metricMonitors.internalValue = value;
   }
   public resetMetricMonitors() {
@@ -326,11 +326,11 @@ export class TfLaunch extends cdktn.TerraformResource {
   }
 
   // scheduled_splits_config - computed: false, optional: true, required: false
-  private _scheduledSplitsConfig = new TfLaunch.ScheduledSplitsConfigPropertyOutputReference(this, "scheduled_splits_config");
+  private _scheduledSplitsConfig = new AwsLaunch.ScheduledSplitsConfigPropertyOutputReference(this, "scheduled_splits_config");
   public get scheduledSplitsConfig() {
     return this._scheduledSplitsConfig;
   }
-  public putScheduledSplitsConfig(value: TfLaunch.ScheduledSplitsConfigProperty) {
+  public putScheduledSplitsConfig(value: AwsLaunch.ScheduledSplitsConfigProperty) {
     this._scheduledSplitsConfig.internalValue = value;
   }
   public resetScheduledSplitsConfig() {
@@ -342,11 +342,11 @@ export class TfLaunch extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfLaunch.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsLaunch.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfLaunch.TimeoutsProperty) {
+  public putTimeouts(value: AwsLaunch.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -371,10 +371,10 @@ export class TfLaunch extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      groups: cdktn.listMapper(tfLaunchGroupsPropertyToTerraform, true)(this._groups.internalValue),
-      metric_monitors: cdktn.listMapper(tfLaunchMetricMonitorsPropertyToTerraform, true)(this._metricMonitors.internalValue),
-      scheduled_splits_config: tfLaunchScheduledSplitsConfigPropertyToTerraform(this._scheduledSplitsConfig.internalValue),
-      timeouts: tfLaunchTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      groups: cdktn.listMapper(awsLaunchGroupsPropertyToTerraform, true)(this._groups.internalValue),
+      metric_monitors: cdktn.listMapper(awsLaunchMetricMonitorsPropertyToTerraform, true)(this._metricMonitors.internalValue),
+      scheduled_splits_config: awsLaunchScheduledSplitsConfigPropertyToTerraform(this._scheduledSplitsConfig.internalValue),
+      timeouts: awsLaunchTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -429,28 +429,28 @@ export class TfLaunch extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       groups: {
-        value: cdktn.listMapperHcl(tfLaunchGroupsPropertyToHclTerraform, true)(this._groups.internalValue),
+        value: cdktn.listMapperHcl(awsLaunchGroupsPropertyToHclTerraform, true)(this._groups.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunch.GroupsPropertyList",
+        storageClassType: "AwsLaunch.GroupsPropertyList",
       },
       metric_monitors: {
-        value: cdktn.listMapperHcl(tfLaunchMetricMonitorsPropertyToHclTerraform, true)(this._metricMonitors.internalValue),
+        value: cdktn.listMapperHcl(awsLaunchMetricMonitorsPropertyToHclTerraform, true)(this._metricMonitors.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunch.MetricMonitorsPropertyList",
+        storageClassType: "AwsLaunch.MetricMonitorsPropertyList",
       },
       scheduled_splits_config: {
-        value: tfLaunchScheduledSplitsConfigPropertyToHclTerraform(this._scheduledSplitsConfig.internalValue),
+        value: awsLaunchScheduledSplitsConfigPropertyToHclTerraform(this._scheduledSplitsConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLaunch.ScheduledSplitsConfigPropertyList",
+        storageClassType: "AwsLaunch.ScheduledSplitsConfigPropertyList",
       },
       timeouts: {
-        value: tfLaunchTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsLaunchTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfLaunch.TimeoutsProperty",
+        storageClassType: "AwsLaunch.TimeoutsProperty",
       },
     };
 
@@ -459,7 +459,7 @@ export class TfLaunch extends cdktn.TerraformResource {
   }
 }
 
-export function tfLaunchExecutionPropertyToTerraform(struct?: TfLaunch.ExecutionProperty): any {
+export function awsLaunchExecutionPropertyToTerraform(struct?: AwsLaunch.ExecutionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function tfLaunchExecutionPropertyToTerraform(struct?: TfLaunch.Execution
 }
 
 
-export function tfLaunchExecutionPropertyToHclTerraform(struct?: TfLaunch.ExecutionProperty): any {
+export function awsLaunchExecutionPropertyToHclTerraform(struct?: AwsLaunch.ExecutionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -480,7 +480,7 @@ export function tfLaunchExecutionPropertyToHclTerraform(struct?: TfLaunch.Execut
 }
 
 
-export function tfLaunchGroupsPropertyToTerraform(struct?: TfLaunch.GroupsProperty | cdktn.IResolvable): any {
+export function awsLaunchGroupsPropertyToTerraform(struct?: AwsLaunch.GroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -494,7 +494,7 @@ export function tfLaunchGroupsPropertyToTerraform(struct?: TfLaunch.GroupsProper
 }
 
 
-export function tfLaunchGroupsPropertyToHclTerraform(struct?: TfLaunch.GroupsProperty | cdktn.IResolvable): any {
+export function awsLaunchGroupsPropertyToHclTerraform(struct?: AwsLaunch.GroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -531,7 +531,7 @@ export function tfLaunchGroupsPropertyToHclTerraform(struct?: TfLaunch.GroupsPro
 }
 
 
-export function tfLaunchMetricDefinitionPropertyToTerraform(struct?: TfLaunch.MetricDefinitionPropertyOutputReference | TfLaunch.MetricDefinitionProperty): any {
+export function awsLaunchMetricDefinitionPropertyToTerraform(struct?: AwsLaunch.MetricDefinitionPropertyOutputReference | AwsLaunch.MetricDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,7 +546,7 @@ export function tfLaunchMetricDefinitionPropertyToTerraform(struct?: TfLaunch.Me
 }
 
 
-export function tfLaunchMetricDefinitionPropertyToHclTerraform(struct?: TfLaunch.MetricDefinitionPropertyOutputReference | TfLaunch.MetricDefinitionProperty): any {
+export function awsLaunchMetricDefinitionPropertyToHclTerraform(struct?: AwsLaunch.MetricDefinitionPropertyOutputReference | AwsLaunch.MetricDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -589,25 +589,25 @@ export function tfLaunchMetricDefinitionPropertyToHclTerraform(struct?: TfLaunch
 }
 
 
-export function tfLaunchMetricMonitorsPropertyToTerraform(struct?: TfLaunch.MetricMonitorsProperty | cdktn.IResolvable): any {
+export function awsLaunchMetricMonitorsPropertyToTerraform(struct?: AwsLaunch.MetricMonitorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    metric_definition: tfLaunchMetricDefinitionPropertyToTerraform(struct!.metricDefinition),
+    metric_definition: awsLaunchMetricDefinitionPropertyToTerraform(struct!.metricDefinition),
   }
 }
 
 
-export function tfLaunchMetricMonitorsPropertyToHclTerraform(struct?: TfLaunch.MetricMonitorsProperty | cdktn.IResolvable): any {
+export function awsLaunchMetricMonitorsPropertyToHclTerraform(struct?: AwsLaunch.MetricMonitorsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     metric_definition: {
-      value: tfLaunchMetricDefinitionPropertyToHclTerraform(struct!.metricDefinition),
+      value: awsLaunchMetricDefinitionPropertyToHclTerraform(struct!.metricDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "MetricDefinitionPropertyList",
@@ -619,7 +619,7 @@ export function tfLaunchMetricMonitorsPropertyToHclTerraform(struct?: TfLaunch.M
 }
 
 
-export function tfLaunchSegmentOverridesPropertyToTerraform(struct?: TfLaunch.SegmentOverridesProperty | cdktn.IResolvable): any {
+export function awsLaunchSegmentOverridesPropertyToTerraform(struct?: AwsLaunch.SegmentOverridesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -632,7 +632,7 @@ export function tfLaunchSegmentOverridesPropertyToTerraform(struct?: TfLaunch.Se
 }
 
 
-export function tfLaunchSegmentOverridesPropertyToHclTerraform(struct?: TfLaunch.SegmentOverridesProperty | cdktn.IResolvable): any {
+export function awsLaunchSegmentOverridesPropertyToHclTerraform(struct?: AwsLaunch.SegmentOverridesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -663,7 +663,7 @@ export function tfLaunchSegmentOverridesPropertyToHclTerraform(struct?: TfLaunch
 }
 
 
-export function tfLaunchStepsPropertyToTerraform(struct?: TfLaunch.StepsProperty | cdktn.IResolvable): any {
+export function awsLaunchStepsPropertyToTerraform(struct?: AwsLaunch.StepsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -671,12 +671,12 @@ export function tfLaunchStepsPropertyToTerraform(struct?: TfLaunch.StepsProperty
   return {
     group_weights: cdktn.hashMapper(cdktn.numberToTerraform)(struct!.groupWeights),
     start_time: cdktn.stringToTerraform(struct!.startTime),
-    segment_overrides: cdktn.listMapper(tfLaunchSegmentOverridesPropertyToTerraform, true)(struct!.segmentOverrides),
+    segment_overrides: cdktn.listMapper(awsLaunchSegmentOverridesPropertyToTerraform, true)(struct!.segmentOverrides),
   }
 }
 
 
-export function tfLaunchStepsPropertyToHclTerraform(struct?: TfLaunch.StepsProperty | cdktn.IResolvable): any {
+export function awsLaunchStepsPropertyToHclTerraform(struct?: AwsLaunch.StepsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -695,7 +695,7 @@ export function tfLaunchStepsPropertyToHclTerraform(struct?: TfLaunch.StepsPrope
       storageClassType: "string",
     },
     segment_overrides: {
-      value: cdktn.listMapperHcl(tfLaunchSegmentOverridesPropertyToHclTerraform, true)(struct!.segmentOverrides),
+      value: cdktn.listMapperHcl(awsLaunchSegmentOverridesPropertyToHclTerraform, true)(struct!.segmentOverrides),
       isBlock: true,
       type: "list",
       storageClassType: "SegmentOverridesPropertyList",
@@ -707,25 +707,25 @@ export function tfLaunchStepsPropertyToHclTerraform(struct?: TfLaunch.StepsPrope
 }
 
 
-export function tfLaunchScheduledSplitsConfigPropertyToTerraform(struct?: TfLaunch.ScheduledSplitsConfigPropertyOutputReference | TfLaunch.ScheduledSplitsConfigProperty): any {
+export function awsLaunchScheduledSplitsConfigPropertyToTerraform(struct?: AwsLaunch.ScheduledSplitsConfigPropertyOutputReference | AwsLaunch.ScheduledSplitsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    steps: cdktn.listMapper(tfLaunchStepsPropertyToTerraform, true)(struct!.steps),
+    steps: cdktn.listMapper(awsLaunchStepsPropertyToTerraform, true)(struct!.steps),
   }
 }
 
 
-export function tfLaunchScheduledSplitsConfigPropertyToHclTerraform(struct?: TfLaunch.ScheduledSplitsConfigPropertyOutputReference | TfLaunch.ScheduledSplitsConfigProperty): any {
+export function awsLaunchScheduledSplitsConfigPropertyToHclTerraform(struct?: AwsLaunch.ScheduledSplitsConfigPropertyOutputReference | AwsLaunch.ScheduledSplitsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     steps: {
-      value: cdktn.listMapperHcl(tfLaunchStepsPropertyToHclTerraform, true)(struct!.steps),
+      value: cdktn.listMapperHcl(awsLaunchStepsPropertyToHclTerraform, true)(struct!.steps),
       isBlock: true,
       type: "list",
       storageClassType: "StepsPropertyList",
@@ -737,7 +737,7 @@ export function tfLaunchScheduledSplitsConfigPropertyToHclTerraform(struct?: TfL
 }
 
 
-export function tfLaunchTimeoutsPropertyToTerraform(struct?: TfLaunch.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsLaunchTimeoutsPropertyToTerraform(struct?: AwsLaunch.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -750,7 +750,7 @@ export function tfLaunchTimeoutsPropertyToTerraform(struct?: TfLaunch.TimeoutsPr
 }
 
 
-export function tfLaunchTimeoutsPropertyToHclTerraform(struct?: TfLaunch.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsLaunchTimeoutsPropertyToHclTerraform(struct?: AwsLaunch.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -781,7 +781,7 @@ export function tfLaunchTimeoutsPropertyToHclTerraform(struct?: TfLaunch.Timeout
 }
 
 
-export namespace TfLaunch {
+export namespace AwsLaunch {
 export interface ExecutionProperty {
 }
 export class ExecutionPropertyOutputReference extends cdktn.ComplexObject {
@@ -843,19 +843,19 @@ export class ExecutionPropertyList extends cdktn.ComplexList {
 }
 export interface GroupsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#description TfLaunch#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#description AwsLaunch#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#feature TfLaunch#feature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#feature AwsLaunch#feature}
   */
   readonly feature: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#name TfLaunch#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#name AwsLaunch#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#variation TfLaunch#variation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#variation AwsLaunch#variation}
   */
   readonly variation: string;
 }
@@ -998,23 +998,23 @@ export class GroupsPropertyList extends cdktn.ComplexList {
 }
 export interface MetricDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#entity_id_key TfLaunch#entity_id_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#entity_id_key AwsLaunch#entity_id_key}
   */
   readonly entityIdKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#event_pattern TfLaunch#event_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#event_pattern AwsLaunch#event_pattern}
   */
   readonly eventPattern?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#name TfLaunch#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#name AwsLaunch#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#unit_label TfLaunch#unit_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#unit_label AwsLaunch#unit_label}
   */
   readonly unitLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#value_key TfLaunch#value_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#value_key AwsLaunch#value_key}
   */
   readonly valueKey: string;
 }
@@ -1149,7 +1149,7 @@ export interface MetricMonitorsProperty {
   /**
   * metric_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#metric_definition TfLaunch#metric_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#metric_definition AwsLaunch#metric_definition}
   */
   readonly metricDefinition: MetricDefinitionProperty;
 }
@@ -1232,15 +1232,15 @@ export class MetricMonitorsPropertyList extends cdktn.ComplexList {
 }
 export interface SegmentOverridesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#evaluation_order TfLaunch#evaluation_order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#evaluation_order AwsLaunch#evaluation_order}
   */
   readonly evaluationOrder: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#segment TfLaunch#segment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#segment AwsLaunch#segment}
   */
   readonly segment: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#weights TfLaunch#weights}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#weights AwsLaunch#weights}
   */
   readonly weights: { [key: string]: number };
 }
@@ -1361,17 +1361,17 @@ export class SegmentOverridesPropertyList extends cdktn.ComplexList {
 }
 export interface StepsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#group_weights TfLaunch#group_weights}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#group_weights AwsLaunch#group_weights}
   */
   readonly groupWeights: { [key: string]: number };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#start_time TfLaunch#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#start_time AwsLaunch#start_time}
   */
   readonly startTime: string;
   /**
   * segment_overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#segment_overrides TfLaunch#segment_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#segment_overrides AwsLaunch#segment_overrides}
   */
   readonly segmentOverrides?: SegmentOverridesProperty[] | cdktn.IResolvable;
 }
@@ -1497,7 +1497,7 @@ export interface ScheduledSplitsConfigProperty {
   /**
   * steps block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#steps TfLaunch#steps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#steps AwsLaunch#steps}
   */
   readonly steps: StepsProperty[] | cdktn.IResolvable;
 }
@@ -1548,15 +1548,15 @@ export class ScheduledSplitsConfigPropertyOutputReference extends cdktn.ComplexO
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#create TfLaunch#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#create AwsLaunch#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#delete TfLaunch#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#delete AwsLaunch#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#update TfLaunch#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_launch#update AwsLaunch#update}
   */
   readonly update?: string;
 }

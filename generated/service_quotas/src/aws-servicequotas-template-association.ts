@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTemplateAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTemplateAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template_association#region TfTemplateAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template_association#region AwsTemplateAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template_association#skip_destroy TfTemplateAssociation#skip_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template_association#skip_destroy AwsTemplateAssociation#skip_destroy}
   */
   readonly skipDestroy?: boolean | cdktn.IResolvable;
 }
@@ -21,7 +21,7 @@ export interface TfTemplateAssociationConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template_association aws_servicequotas_template_association}
 */
-export class TfTemplateAssociation extends cdktn.TerraformResource {
+export class AwsTemplateAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class TfTemplateAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTemplateAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTemplateAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTemplateAssociation to import
-  * @param importFromId The id of the existing TfTemplateAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTemplateAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsTemplateAssociation to import
+  * @param importFromId The id of the existing AwsTemplateAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTemplateAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicequotas_template_association", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class TfTemplateAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTemplateAssociationConfig = {}
+  * @param options AwsTemplateAssociationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfTemplateAssociationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsTemplateAssociationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_servicequotas_template_association',
       terraformGeneratorMetadata: {

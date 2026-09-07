@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGlobalSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGlobalSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_global_settings#id TfGlobalSettings#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_global_settings#id AwsGlobalSettings#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,15 +16,15 @@ export interface TfGlobalSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
   * voice_connector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_global_settings#voice_connector TfGlobalSettings#voice_connector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_global_settings#voice_connector AwsGlobalSettings#voice_connector}
   */
-  readonly voiceConnector: TfGlobalSettings.VoiceConnectorProperty;
+  readonly voiceConnector: AwsGlobalSettings.VoiceConnectorProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_global_settings aws_chimesdkvoice_global_settings}
 */
-export class TfGlobalSettings extends cdktn.TerraformResource {
+export class AwsGlobalSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -35,11 +35,11 @@ export class TfGlobalSettings extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGlobalSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGlobalSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGlobalSettings to import
-  * @param importFromId The id of the existing TfGlobalSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_global_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGlobalSettings to import is found
+  * @param importToId The construct id used in the generated config for the AwsGlobalSettings to import
+  * @param importFromId The id of the existing AwsGlobalSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_global_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGlobalSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chimesdkvoice_global_settings", importId: importFromId, provider });
@@ -54,9 +54,9 @@ export class TfGlobalSettings extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGlobalSettingsConfig
+  * @param options AwsGlobalSettingsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGlobalSettingsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGlobalSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_chimesdkvoice_global_settings',
       terraformGeneratorMetadata: {
@@ -97,11 +97,11 @@ export class TfGlobalSettings extends cdktn.TerraformResource {
   }
 
   // voice_connector - computed: false, optional: false, required: true
-  private _voiceConnector = new TfGlobalSettings.VoiceConnectorPropertyOutputReference(this, "voice_connector");
+  private _voiceConnector = new AwsGlobalSettings.VoiceConnectorPropertyOutputReference(this, "voice_connector");
   public get voiceConnector() {
     return this._voiceConnector;
   }
-  public putVoiceConnector(value: TfGlobalSettings.VoiceConnectorProperty) {
+  public putVoiceConnector(value: AwsGlobalSettings.VoiceConnectorProperty) {
     this._voiceConnector.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -116,7 +116,7 @@ export class TfGlobalSettings extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktn.stringToTerraform(this._id),
-      voice_connector: tfGlobalSettingsVoiceConnectorPropertyToTerraform(this._voiceConnector.internalValue),
+      voice_connector: awsGlobalSettingsVoiceConnectorPropertyToTerraform(this._voiceConnector.internalValue),
     };
   }
 
@@ -129,10 +129,10 @@ export class TfGlobalSettings extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       voice_connector: {
-        value: tfGlobalSettingsVoiceConnectorPropertyToHclTerraform(this._voiceConnector.internalValue),
+        value: awsGlobalSettingsVoiceConnectorPropertyToHclTerraform(this._voiceConnector.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGlobalSettings.VoiceConnectorPropertyList",
+        storageClassType: "AwsGlobalSettings.VoiceConnectorPropertyList",
       },
     };
 
@@ -141,7 +141,7 @@ export class TfGlobalSettings extends cdktn.TerraformResource {
   }
 }
 
-export function tfGlobalSettingsVoiceConnectorPropertyToTerraform(struct?: TfGlobalSettings.VoiceConnectorPropertyOutputReference | TfGlobalSettings.VoiceConnectorProperty): any {
+export function awsGlobalSettingsVoiceConnectorPropertyToTerraform(struct?: AwsGlobalSettings.VoiceConnectorPropertyOutputReference | AwsGlobalSettings.VoiceConnectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -152,7 +152,7 @@ export function tfGlobalSettingsVoiceConnectorPropertyToTerraform(struct?: TfGlo
 }
 
 
-export function tfGlobalSettingsVoiceConnectorPropertyToHclTerraform(struct?: TfGlobalSettings.VoiceConnectorPropertyOutputReference | TfGlobalSettings.VoiceConnectorProperty): any {
+export function awsGlobalSettingsVoiceConnectorPropertyToHclTerraform(struct?: AwsGlobalSettings.VoiceConnectorPropertyOutputReference | AwsGlobalSettings.VoiceConnectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -171,10 +171,10 @@ export function tfGlobalSettingsVoiceConnectorPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfGlobalSettings {
+export namespace AwsGlobalSettings {
 export interface VoiceConnectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_global_settings#cdr_bucket TfGlobalSettings#cdr_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_global_settings#cdr_bucket AwsGlobalSettings#cdr_bucket}
   */
   readonly cdrBucket?: string;
 }

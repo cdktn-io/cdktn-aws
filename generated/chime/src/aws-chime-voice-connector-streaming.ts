@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVoiceConnectorStreamingConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVoiceConnectorStreamingConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#data_retention TfVoiceConnectorStreaming#data_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#data_retention AwsVoiceConnectorStreaming#data_retention}
   */
   readonly dataRetention: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#disabled TfVoiceConnectorStreaming#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#disabled AwsVoiceConnectorStreaming#disabled}
   */
   readonly disabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#id TfVoiceConnectorStreaming#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#id AwsVoiceConnectorStreaming#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,29 +24,29 @@ export interface TfVoiceConnectorStreamingConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#region TfVoiceConnectorStreaming#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#region AwsVoiceConnectorStreaming#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#streaming_notification_targets TfVoiceConnectorStreaming#streaming_notification_targets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#streaming_notification_targets AwsVoiceConnectorStreaming#streaming_notification_targets}
   */
   readonly streamingNotificationTargets?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#voice_connector_id TfVoiceConnectorStreaming#voice_connector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#voice_connector_id AwsVoiceConnectorStreaming#voice_connector_id}
   */
   readonly voiceConnectorId: string;
   /**
   * media_insights_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#media_insights_configuration TfVoiceConnectorStreaming#media_insights_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#media_insights_configuration AwsVoiceConnectorStreaming#media_insights_configuration}
   */
-  readonly mediaInsightsConfiguration?: TfVoiceConnectorStreaming.MediaInsightsConfigurationProperty;
+  readonly mediaInsightsConfiguration?: AwsVoiceConnectorStreaming.MediaInsightsConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming aws_chime_voice_connector_streaming}
 */
-export class TfVoiceConnectorStreaming extends cdktn.TerraformResource {
+export class AwsVoiceConnectorStreaming extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfVoiceConnectorStreaming extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVoiceConnectorStreaming resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVoiceConnectorStreaming resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVoiceConnectorStreaming to import
-  * @param importFromId The id of the existing TfVoiceConnectorStreaming that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVoiceConnectorStreaming to import is found
+  * @param importToId The construct id used in the generated config for the AwsVoiceConnectorStreaming to import
+  * @param importFromId The id of the existing AwsVoiceConnectorStreaming that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVoiceConnectorStreaming to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chime_voice_connector_streaming", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfVoiceConnectorStreaming extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVoiceConnectorStreamingConfig
+  * @param options AwsVoiceConnectorStreamingConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVoiceConnectorStreamingConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVoiceConnectorStreamingConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_chime_voice_connector_streaming',
       terraformGeneratorMetadata: {
@@ -198,11 +198,11 @@ export class TfVoiceConnectorStreaming extends cdktn.TerraformResource {
   }
 
   // media_insights_configuration - computed: false, optional: true, required: false
-  private _mediaInsightsConfiguration = new TfVoiceConnectorStreaming.MediaInsightsConfigurationPropertyOutputReference(this, "media_insights_configuration");
+  private _mediaInsightsConfiguration = new AwsVoiceConnectorStreaming.MediaInsightsConfigurationPropertyOutputReference(this, "media_insights_configuration");
   public get mediaInsightsConfiguration() {
     return this._mediaInsightsConfiguration;
   }
-  public putMediaInsightsConfiguration(value: TfVoiceConnectorStreaming.MediaInsightsConfigurationProperty) {
+  public putMediaInsightsConfiguration(value: AwsVoiceConnectorStreaming.MediaInsightsConfigurationProperty) {
     this._mediaInsightsConfiguration.internalValue = value;
   }
   public resetMediaInsightsConfiguration() {
@@ -225,7 +225,7 @@ export class TfVoiceConnectorStreaming extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       streaming_notification_targets: cdktn.listMapper(cdktn.stringToTerraform, false)(this._streamingNotificationTargets),
       voice_connector_id: cdktn.stringToTerraform(this._voiceConnectorId),
-      media_insights_configuration: tfVoiceConnectorStreamingMediaInsightsConfigurationPropertyToTerraform(this._mediaInsightsConfiguration.internalValue),
+      media_insights_configuration: awsVoiceConnectorStreamingMediaInsightsConfigurationPropertyToTerraform(this._mediaInsightsConfiguration.internalValue),
     };
   }
 
@@ -268,10 +268,10 @@ export class TfVoiceConnectorStreaming extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       media_insights_configuration: {
-        value: tfVoiceConnectorStreamingMediaInsightsConfigurationPropertyToHclTerraform(this._mediaInsightsConfiguration.internalValue),
+        value: awsVoiceConnectorStreamingMediaInsightsConfigurationPropertyToHclTerraform(this._mediaInsightsConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfVoiceConnectorStreaming.MediaInsightsConfigurationPropertyList",
+        storageClassType: "AwsVoiceConnectorStreaming.MediaInsightsConfigurationPropertyList",
       },
     };
 
@@ -280,7 +280,7 @@ export class TfVoiceConnectorStreaming extends cdktn.TerraformResource {
   }
 }
 
-export function tfVoiceConnectorStreamingMediaInsightsConfigurationPropertyToTerraform(struct?: TfVoiceConnectorStreaming.MediaInsightsConfigurationPropertyOutputReference | TfVoiceConnectorStreaming.MediaInsightsConfigurationProperty): any {
+export function awsVoiceConnectorStreamingMediaInsightsConfigurationPropertyToTerraform(struct?: AwsVoiceConnectorStreaming.MediaInsightsConfigurationPropertyOutputReference | AwsVoiceConnectorStreaming.MediaInsightsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -292,7 +292,7 @@ export function tfVoiceConnectorStreamingMediaInsightsConfigurationPropertyToTer
 }
 
 
-export function tfVoiceConnectorStreamingMediaInsightsConfigurationPropertyToHclTerraform(struct?: TfVoiceConnectorStreaming.MediaInsightsConfigurationPropertyOutputReference | TfVoiceConnectorStreaming.MediaInsightsConfigurationProperty): any {
+export function awsVoiceConnectorStreamingMediaInsightsConfigurationPropertyToHclTerraform(struct?: AwsVoiceConnectorStreaming.MediaInsightsConfigurationPropertyOutputReference | AwsVoiceConnectorStreaming.MediaInsightsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,14 +317,14 @@ export function tfVoiceConnectorStreamingMediaInsightsConfigurationPropertyToHcl
 }
 
 
-export namespace TfVoiceConnectorStreaming {
+export namespace AwsVoiceConnectorStreaming {
 export interface MediaInsightsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#configuration_arn TfVoiceConnectorStreaming#configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#configuration_arn AwsVoiceConnectorStreaming#configuration_arn}
   */
   readonly configurationArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#disabled TfVoiceConnectorStreaming#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_streaming#disabled AwsVoiceConnectorStreaming#disabled}
   */
   readonly disabled?: boolean | cdktn.IResolvable;
 }

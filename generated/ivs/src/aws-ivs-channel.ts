@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfChannelConfig extends cdktn.TerraformMetaArguments {
+export interface AwsChannelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#authorized TfChannel#authorized}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#authorized AwsChannel#authorized}
   */
   readonly authorized?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#id TfChannel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#id AwsChannel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#latency_mode TfChannel#latency_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#latency_mode AwsChannel#latency_mode}
   */
   readonly latencyMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#name TfChannel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#name AwsChannel#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#recording_configuration_arn TfChannel#recording_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#recording_configuration_arn AwsChannel#recording_configuration_arn}
   */
   readonly recordingConfigurationArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#region TfChannel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#region AwsChannel#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#tags TfChannel#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#tags AwsChannel#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#tags_all TfChannel#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#tags_all AwsChannel#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#type TfChannel#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#type AwsChannel#type}
   */
   readonly type?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#timeouts TfChannel#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#timeouts AwsChannel#timeouts}
   */
-  readonly timeouts?: TfChannel.TimeoutsProperty;
+  readonly timeouts?: AwsChannel.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel aws_ivs_channel}
 */
-export class TfChannel extends cdktn.TerraformResource {
+export class AwsChannel extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfChannel extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfChannel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsChannel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfChannel to import
-  * @param importFromId The id of the existing TfChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfChannel to import is found
+  * @param importToId The construct id used in the generated config for the AwsChannel to import
+  * @param importFromId The id of the existing AwsChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsChannel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ivs_channel", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfChannel extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfChannelConfig = {}
+  * @param options AwsChannelConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfChannelConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsChannelConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ivs_channel',
       terraformGeneratorMetadata: {
@@ -282,11 +282,11 @@ export class TfChannel extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfChannel.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsChannel.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfChannel.TimeoutsProperty) {
+  public putTimeouts(value: AwsChannel.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -312,7 +312,7 @@ export class TfChannel extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      timeouts: tfChannelTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsChannelTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -373,10 +373,10 @@ export class TfChannel extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfChannelTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsChannelTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfChannel.TimeoutsProperty",
+        storageClassType: "AwsChannel.TimeoutsProperty",
       },
     };
 
@@ -385,7 +385,7 @@ export class TfChannel extends cdktn.TerraformResource {
   }
 }
 
-export function tfChannelTimeoutsPropertyToTerraform(struct?: TfChannel.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsChannelTimeoutsPropertyToTerraform(struct?: AwsChannel.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function tfChannelTimeoutsPropertyToTerraform(struct?: TfChannel.Timeouts
 }
 
 
-export function tfChannelTimeoutsPropertyToHclTerraform(struct?: TfChannel.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsChannelTimeoutsPropertyToHclTerraform(struct?: AwsChannel.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,18 +429,18 @@ export function tfChannelTimeoutsPropertyToHclTerraform(struct?: TfChannel.Timeo
 }
 
 
-export namespace TfChannel {
+export namespace AwsChannel {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#create TfChannel#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#create AwsChannel#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#delete TfChannel#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#delete AwsChannel#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#update TfChannel#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_channel#update AwsChannel#update}
   */
   readonly update?: string;
 }

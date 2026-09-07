@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfBusesConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsBusesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_buses#name_prefix DataTfBuses#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_buses#name_prefix DataAwsBuses#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_buses#region DataTfBuses#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_buses#region DataAwsBuses#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataTfBusesConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_buses aws_cloudwatch_event_buses}
 */
-export class DataTfBuses extends cdktn.TerraformDataSource {
+export class DataAwsBuses extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataTfBuses extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfBuses resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsBuses resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfBuses to import
-  * @param importFromId The id of the existing DataTfBuses that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_buses#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfBuses to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsBuses to import
+  * @param importFromId The id of the existing DataAwsBuses that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_event_buses#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsBuses to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_event_buses", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataTfBuses extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfBusesConfig = {}
+  * @param options DataAwsBusesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfBusesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsBusesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_event_buses',
       terraformGeneratorMetadata: {
@@ -78,7 +78,7 @@ export class DataTfBuses extends cdktn.TerraformDataSource {
   // ==========
 
   // event_buses - computed: true, optional: false, required: false
-  private _eventBuses = new DataTfBuses.EventBusesPropertyList(this, "event_buses", false);
+  private _eventBuses = new DataAwsBuses.EventBusesPropertyList(this, "event_buses", false);
   public get eventBuses() {
     return this._eventBuses;
   }
@@ -147,7 +147,7 @@ export class DataTfBuses extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfBusesEventBusesPropertyToTerraform(struct?: DataTfBuses.EventBusesProperty): any {
+export function dataAwsBusesEventBusesPropertyToTerraform(struct?: DataAwsBuses.EventBusesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -157,7 +157,7 @@ export function dataTfBusesEventBusesPropertyToTerraform(struct?: DataTfBuses.Ev
 }
 
 
-export function dataTfBusesEventBusesPropertyToHclTerraform(struct?: DataTfBuses.EventBusesProperty): any {
+export function dataAwsBusesEventBusesPropertyToHclTerraform(struct?: DataAwsBuses.EventBusesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -168,7 +168,7 @@ export function dataTfBusesEventBusesPropertyToHclTerraform(struct?: DataTfBuses
 }
 
 
-export namespace DataTfBuses {
+export namespace DataAwsBuses {
 export interface EventBusesProperty {
 }
 export class EventBusesPropertyOutputReference extends cdktn.ComplexObject {

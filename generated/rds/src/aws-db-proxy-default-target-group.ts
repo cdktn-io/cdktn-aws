@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDbProxyDefaultTargetGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDbProxyDefaultTargetGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#db_proxy_name TfDbProxyDefaultTargetGroup#db_proxy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#db_proxy_name AwsDbProxyDefaultTargetGroup#db_proxy_name}
   */
   readonly dbProxyName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#id TfDbProxyDefaultTargetGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#id AwsDbProxyDefaultTargetGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,27 +20,27 @@ export interface TfDbProxyDefaultTargetGroupConfig extends cdktn.TerraformMetaAr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#region TfDbProxyDefaultTargetGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#region AwsDbProxyDefaultTargetGroup#region}
   */
   readonly region?: string;
   /**
   * connection_pool_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#connection_pool_config TfDbProxyDefaultTargetGroup#connection_pool_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#connection_pool_config AwsDbProxyDefaultTargetGroup#connection_pool_config}
   */
-  readonly connectionPoolConfig?: TfDbProxyDefaultTargetGroup.ConnectionPoolConfigProperty;
+  readonly connectionPoolConfig?: AwsDbProxyDefaultTargetGroup.ConnectionPoolConfigProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#timeouts TfDbProxyDefaultTargetGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#timeouts AwsDbProxyDefaultTargetGroup#timeouts}
   */
-  readonly timeouts?: TfDbProxyDefaultTargetGroup.TimeoutsProperty;
+  readonly timeouts?: AwsDbProxyDefaultTargetGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group aws_db_proxy_default_target_group}
 */
-export class TfDbProxyDefaultTargetGroup extends cdktn.TerraformResource {
+export class AwsDbProxyDefaultTargetGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfDbProxyDefaultTargetGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDbProxyDefaultTargetGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDbProxyDefaultTargetGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDbProxyDefaultTargetGroup to import
-  * @param importFromId The id of the existing TfDbProxyDefaultTargetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDbProxyDefaultTargetGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsDbProxyDefaultTargetGroup to import
+  * @param importFromId The id of the existing AwsDbProxyDefaultTargetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDbProxyDefaultTargetGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_db_proxy_default_target_group", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfDbProxyDefaultTargetGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDbProxyDefaultTargetGroupConfig
+  * @param options AwsDbProxyDefaultTargetGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDbProxyDefaultTargetGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDbProxyDefaultTargetGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_db_proxy_default_target_group',
       terraformGeneratorMetadata: {
@@ -155,11 +155,11 @@ export class TfDbProxyDefaultTargetGroup extends cdktn.TerraformResource {
   }
 
   // connection_pool_config - computed: false, optional: true, required: false
-  private _connectionPoolConfig = new TfDbProxyDefaultTargetGroup.ConnectionPoolConfigPropertyOutputReference(this, "connection_pool_config");
+  private _connectionPoolConfig = new AwsDbProxyDefaultTargetGroup.ConnectionPoolConfigPropertyOutputReference(this, "connection_pool_config");
   public get connectionPoolConfig() {
     return this._connectionPoolConfig;
   }
-  public putConnectionPoolConfig(value: TfDbProxyDefaultTargetGroup.ConnectionPoolConfigProperty) {
+  public putConnectionPoolConfig(value: AwsDbProxyDefaultTargetGroup.ConnectionPoolConfigProperty) {
     this._connectionPoolConfig.internalValue = value;
   }
   public resetConnectionPoolConfig() {
@@ -171,11 +171,11 @@ export class TfDbProxyDefaultTargetGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDbProxyDefaultTargetGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDbProxyDefaultTargetGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDbProxyDefaultTargetGroup.TimeoutsProperty) {
+  public putTimeouts(value: AwsDbProxyDefaultTargetGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -195,8 +195,8 @@ export class TfDbProxyDefaultTargetGroup extends cdktn.TerraformResource {
       db_proxy_name: cdktn.stringToTerraform(this._dbProxyName),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      connection_pool_config: tfDbProxyDefaultTargetGroupConnectionPoolConfigPropertyToTerraform(this._connectionPoolConfig.internalValue),
-      timeouts: tfDbProxyDefaultTargetGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      connection_pool_config: awsDbProxyDefaultTargetGroupConnectionPoolConfigPropertyToTerraform(this._connectionPoolConfig.internalValue),
+      timeouts: awsDbProxyDefaultTargetGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -221,16 +221,16 @@ export class TfDbProxyDefaultTargetGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       connection_pool_config: {
-        value: tfDbProxyDefaultTargetGroupConnectionPoolConfigPropertyToHclTerraform(this._connectionPoolConfig.internalValue),
+        value: awsDbProxyDefaultTargetGroupConnectionPoolConfigPropertyToHclTerraform(this._connectionPoolConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDbProxyDefaultTargetGroup.ConnectionPoolConfigPropertyList",
+        storageClassType: "AwsDbProxyDefaultTargetGroup.ConnectionPoolConfigPropertyList",
       },
       timeouts: {
-        value: tfDbProxyDefaultTargetGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDbProxyDefaultTargetGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDbProxyDefaultTargetGroup.TimeoutsProperty",
+        storageClassType: "AwsDbProxyDefaultTargetGroup.TimeoutsProperty",
       },
     };
 
@@ -239,7 +239,7 @@ export class TfDbProxyDefaultTargetGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfDbProxyDefaultTargetGroupConnectionPoolConfigPropertyToTerraform(struct?: TfDbProxyDefaultTargetGroup.ConnectionPoolConfigPropertyOutputReference | TfDbProxyDefaultTargetGroup.ConnectionPoolConfigProperty): any {
+export function awsDbProxyDefaultTargetGroupConnectionPoolConfigPropertyToTerraform(struct?: AwsDbProxyDefaultTargetGroup.ConnectionPoolConfigPropertyOutputReference | AwsDbProxyDefaultTargetGroup.ConnectionPoolConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function tfDbProxyDefaultTargetGroupConnectionPoolConfigPropertyToTerrafo
 }
 
 
-export function tfDbProxyDefaultTargetGroupConnectionPoolConfigPropertyToHclTerraform(struct?: TfDbProxyDefaultTargetGroup.ConnectionPoolConfigPropertyOutputReference | TfDbProxyDefaultTargetGroup.ConnectionPoolConfigProperty): any {
+export function awsDbProxyDefaultTargetGroupConnectionPoolConfigPropertyToHclTerraform(struct?: AwsDbProxyDefaultTargetGroup.ConnectionPoolConfigPropertyOutputReference | AwsDbProxyDefaultTargetGroup.ConnectionPoolConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function tfDbProxyDefaultTargetGroupConnectionPoolConfigPropertyToHclTerr
 }
 
 
-export function tfDbProxyDefaultTargetGroupTimeoutsPropertyToTerraform(struct?: TfDbProxyDefaultTargetGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDbProxyDefaultTargetGroupTimeoutsPropertyToTerraform(struct?: AwsDbProxyDefaultTargetGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function tfDbProxyDefaultTargetGroupTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDbProxyDefaultTargetGroupTimeoutsPropertyToHclTerraform(struct?: TfDbProxyDefaultTargetGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDbProxyDefaultTargetGroupTimeoutsPropertyToHclTerraform(struct?: AwsDbProxyDefaultTargetGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,26 +334,26 @@ export function tfDbProxyDefaultTargetGroupTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace TfDbProxyDefaultTargetGroup {
+export namespace AwsDbProxyDefaultTargetGroup {
 export interface ConnectionPoolConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#connection_borrow_timeout TfDbProxyDefaultTargetGroup#connection_borrow_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#connection_borrow_timeout AwsDbProxyDefaultTargetGroup#connection_borrow_timeout}
   */
   readonly connectionBorrowTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#init_query TfDbProxyDefaultTargetGroup#init_query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#init_query AwsDbProxyDefaultTargetGroup#init_query}
   */
   readonly initQuery?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#max_connections_percent TfDbProxyDefaultTargetGroup#max_connections_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#max_connections_percent AwsDbProxyDefaultTargetGroup#max_connections_percent}
   */
   readonly maxConnectionsPercent?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#max_idle_connections_percent TfDbProxyDefaultTargetGroup#max_idle_connections_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#max_idle_connections_percent AwsDbProxyDefaultTargetGroup#max_idle_connections_percent}
   */
   readonly maxIdleConnectionsPercent?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#session_pinning_filters TfDbProxyDefaultTargetGroup#session_pinning_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#session_pinning_filters AwsDbProxyDefaultTargetGroup#session_pinning_filters}
   */
   readonly sessionPinningFilters?: string[];
 }
@@ -495,11 +495,11 @@ export class ConnectionPoolConfigPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#create TfDbProxyDefaultTargetGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#create AwsDbProxyDefaultTargetGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#update TfDbProxyDefaultTargetGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy_default_target_group#update AwsDbProxyDefaultTargetGroup#update}
   */
   readonly update?: string;
 }

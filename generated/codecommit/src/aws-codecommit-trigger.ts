@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTriggerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTriggerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#id TfTrigger#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#id AwsTrigger#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface TfTriggerConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#region TfTrigger#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#region AwsTrigger#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#repository_name TfTrigger#repository_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#repository_name AwsTrigger#repository_name}
   */
   readonly repositoryName: string;
   /**
   * trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#trigger TfTrigger#trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#trigger AwsTrigger#trigger}
   */
-  readonly trigger: TfTrigger.TriggerProperty[] | cdktn.IResolvable;
+  readonly trigger: AwsTrigger.TriggerProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger aws_codecommit_trigger}
 */
-export class TfTrigger extends cdktn.TerraformResource {
+export class AwsTrigger extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfTrigger extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTrigger resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTrigger resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTrigger to import
-  * @param importFromId The id of the existing TfTrigger that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTrigger to import is found
+  * @param importToId The construct id used in the generated config for the AwsTrigger to import
+  * @param importFromId The id of the existing AwsTrigger that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTrigger to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codecommit_trigger", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfTrigger extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTriggerConfig
+  * @param options AwsTriggerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTriggerConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTriggerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codecommit_trigger',
       terraformGeneratorMetadata: {
@@ -143,11 +143,11 @@ export class TfTrigger extends cdktn.TerraformResource {
   }
 
   // trigger - computed: false, optional: false, required: true
-  private _trigger = new TfTrigger.TriggerPropertyList(this, "trigger", true);
+  private _trigger = new AwsTrigger.TriggerPropertyList(this, "trigger", true);
   public get trigger() {
     return this._trigger;
   }
-  public putTrigger(value: TfTrigger.TriggerProperty[] | cdktn.IResolvable) {
+  public putTrigger(value: AwsTrigger.TriggerProperty[] | cdktn.IResolvable) {
     this._trigger.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -164,7 +164,7 @@ export class TfTrigger extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       repository_name: cdktn.stringToTerraform(this._repositoryName),
-      trigger: cdktn.listMapper(tfTriggerTriggerPropertyToTerraform, true)(this._trigger.internalValue),
+      trigger: cdktn.listMapper(awsTriggerTriggerPropertyToTerraform, true)(this._trigger.internalValue),
     };
   }
 
@@ -189,10 +189,10 @@ export class TfTrigger extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       trigger: {
-        value: cdktn.listMapperHcl(tfTriggerTriggerPropertyToHclTerraform, true)(this._trigger.internalValue),
+        value: cdktn.listMapperHcl(awsTriggerTriggerPropertyToHclTerraform, true)(this._trigger.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfTrigger.TriggerPropertyList",
+        storageClassType: "AwsTrigger.TriggerPropertyList",
       },
     };
 
@@ -201,7 +201,7 @@ export class TfTrigger extends cdktn.TerraformResource {
   }
 }
 
-export function tfTriggerTriggerPropertyToTerraform(struct?: TfTrigger.TriggerProperty | cdktn.IResolvable): any {
+export function awsTriggerTriggerPropertyToTerraform(struct?: AwsTrigger.TriggerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function tfTriggerTriggerPropertyToTerraform(struct?: TfTrigger.TriggerPr
 }
 
 
-export function tfTriggerTriggerPropertyToHclTerraform(struct?: TfTrigger.TriggerProperty | cdktn.IResolvable): any {
+export function awsTriggerTriggerPropertyToHclTerraform(struct?: AwsTrigger.TriggerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,26 +259,26 @@ export function tfTriggerTriggerPropertyToHclTerraform(struct?: TfTrigger.Trigge
 }
 
 
-export namespace TfTrigger {
+export namespace AwsTrigger {
 export interface TriggerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#branches TfTrigger#branches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#branches AwsTrigger#branches}
   */
   readonly branches?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#custom_data TfTrigger#custom_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#custom_data AwsTrigger#custom_data}
   */
   readonly customData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#destination_arn TfTrigger#destination_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#destination_arn AwsTrigger#destination_arn}
   */
   readonly destinationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#events TfTrigger#events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#events AwsTrigger#events}
   */
   readonly events: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#name TfTrigger#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecommit_trigger#name AwsTrigger#name}
   */
   readonly name: string;
 }

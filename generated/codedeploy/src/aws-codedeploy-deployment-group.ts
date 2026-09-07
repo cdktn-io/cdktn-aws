@@ -5,122 +5,122 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDeploymentGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDeploymentGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#app_name TfDeploymentGroup#app_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#app_name AwsDeploymentGroup#app_name}
   */
   readonly appName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#autoscaling_groups TfDeploymentGroup#autoscaling_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#autoscaling_groups AwsDeploymentGroup#autoscaling_groups}
   */
   readonly autoscalingGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#deployment_config_name TfDeploymentGroup#deployment_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#deployment_config_name AwsDeploymentGroup#deployment_config_name}
   */
   readonly deploymentConfigName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#deployment_group_name TfDeploymentGroup#deployment_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#deployment_group_name AwsDeploymentGroup#deployment_group_name}
   */
   readonly deploymentGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#id TfDeploymentGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#id AwsDeploymentGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#outdated_instances_strategy TfDeploymentGroup#outdated_instances_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#outdated_instances_strategy AwsDeploymentGroup#outdated_instances_strategy}
   */
   readonly outdatedInstancesStrategy?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#region TfDeploymentGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#region AwsDeploymentGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#service_role_arn TfDeploymentGroup#service_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#service_role_arn AwsDeploymentGroup#service_role_arn}
   */
   readonly serviceRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#tags TfDeploymentGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#tags AwsDeploymentGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#tags_all TfDeploymentGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#tags_all AwsDeploymentGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#termination_hook_enabled TfDeploymentGroup#termination_hook_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#termination_hook_enabled AwsDeploymentGroup#termination_hook_enabled}
   */
   readonly terminationHookEnabled?: boolean | cdktn.IResolvable;
   /**
   * alarm_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#alarm_configuration TfDeploymentGroup#alarm_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#alarm_configuration AwsDeploymentGroup#alarm_configuration}
   */
-  readonly alarmConfiguration?: TfDeploymentGroup.AlarmConfigurationProperty;
+  readonly alarmConfiguration?: AwsDeploymentGroup.AlarmConfigurationProperty;
   /**
   * auto_rollback_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#auto_rollback_configuration TfDeploymentGroup#auto_rollback_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#auto_rollback_configuration AwsDeploymentGroup#auto_rollback_configuration}
   */
-  readonly autoRollbackConfiguration?: TfDeploymentGroup.AutoRollbackConfigurationProperty;
+  readonly autoRollbackConfiguration?: AwsDeploymentGroup.AutoRollbackConfigurationProperty;
   /**
   * blue_green_deployment_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#blue_green_deployment_config TfDeploymentGroup#blue_green_deployment_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#blue_green_deployment_config AwsDeploymentGroup#blue_green_deployment_config}
   */
-  readonly blueGreenDeploymentConfig?: TfDeploymentGroup.BlueGreenDeploymentConfigProperty;
+  readonly blueGreenDeploymentConfig?: AwsDeploymentGroup.BlueGreenDeploymentConfigProperty;
   /**
   * deployment_style block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#deployment_style TfDeploymentGroup#deployment_style}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#deployment_style AwsDeploymentGroup#deployment_style}
   */
-  readonly deploymentStyle?: TfDeploymentGroup.DeploymentStyleProperty;
+  readonly deploymentStyle?: AwsDeploymentGroup.DeploymentStyleProperty;
   /**
   * ec2_tag_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#ec2_tag_filter TfDeploymentGroup#ec2_tag_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#ec2_tag_filter AwsDeploymentGroup#ec2_tag_filter}
   */
-  readonly ec2TagFilter?: TfDeploymentGroup.Ec2TagFilterProperty[] | cdktn.IResolvable;
+  readonly ec2TagFilter?: AwsDeploymentGroup.Ec2TagFilterProperty[] | cdktn.IResolvable;
   /**
   * ec2_tag_set block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#ec2_tag_set TfDeploymentGroup#ec2_tag_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#ec2_tag_set AwsDeploymentGroup#ec2_tag_set}
   */
-  readonly ec2TagSet?: TfDeploymentGroup.Ec2TagSetProperty[] | cdktn.IResolvable;
+  readonly ec2TagSet?: AwsDeploymentGroup.Ec2TagSetProperty[] | cdktn.IResolvable;
   /**
   * ecs_service block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#ecs_service TfDeploymentGroup#ecs_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#ecs_service AwsDeploymentGroup#ecs_service}
   */
-  readonly ecsService?: TfDeploymentGroup.EcsServiceProperty;
+  readonly ecsService?: AwsDeploymentGroup.EcsServiceProperty;
   /**
   * load_balancer_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#load_balancer_info TfDeploymentGroup#load_balancer_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#load_balancer_info AwsDeploymentGroup#load_balancer_info}
   */
-  readonly loadBalancerInfo?: TfDeploymentGroup.LoadBalancerInfoProperty;
+  readonly loadBalancerInfo?: AwsDeploymentGroup.LoadBalancerInfoProperty;
   /**
   * on_premises_instance_tag_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#on_premises_instance_tag_filter TfDeploymentGroup#on_premises_instance_tag_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#on_premises_instance_tag_filter AwsDeploymentGroup#on_premises_instance_tag_filter}
   */
-  readonly onPremisesInstanceTagFilter?: TfDeploymentGroup.OnPremisesInstanceTagFilterProperty[] | cdktn.IResolvable;
+  readonly onPremisesInstanceTagFilter?: AwsDeploymentGroup.OnPremisesInstanceTagFilterProperty[] | cdktn.IResolvable;
   /**
   * trigger_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#trigger_configuration TfDeploymentGroup#trigger_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#trigger_configuration AwsDeploymentGroup#trigger_configuration}
   */
-  readonly triggerConfiguration?: TfDeploymentGroup.TriggerConfigurationProperty[] | cdktn.IResolvable;
+  readonly triggerConfiguration?: AwsDeploymentGroup.TriggerConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group aws_codedeploy_deployment_group}
 */
-export class TfDeploymentGroup extends cdktn.TerraformResource {
+export class AwsDeploymentGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -131,11 +131,11 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDeploymentGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDeploymentGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDeploymentGroup to import
-  * @param importFromId The id of the existing TfDeploymentGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDeploymentGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsDeploymentGroup to import
+  * @param importFromId The id of the existing AwsDeploymentGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDeploymentGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codedeploy_deployment_group", importId: importFromId, provider });
@@ -150,9 +150,9 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDeploymentGroupConfig
+  * @param options AwsDeploymentGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDeploymentGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDeploymentGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codedeploy_deployment_group',
       terraformGeneratorMetadata: {
@@ -378,11 +378,11 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   }
 
   // alarm_configuration - computed: false, optional: true, required: false
-  private _alarmConfiguration = new TfDeploymentGroup.AlarmConfigurationPropertyOutputReference(this, "alarm_configuration");
+  private _alarmConfiguration = new AwsDeploymentGroup.AlarmConfigurationPropertyOutputReference(this, "alarm_configuration");
   public get alarmConfiguration() {
     return this._alarmConfiguration;
   }
-  public putAlarmConfiguration(value: TfDeploymentGroup.AlarmConfigurationProperty) {
+  public putAlarmConfiguration(value: AwsDeploymentGroup.AlarmConfigurationProperty) {
     this._alarmConfiguration.internalValue = value;
   }
   public resetAlarmConfiguration() {
@@ -394,11 +394,11 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   }
 
   // auto_rollback_configuration - computed: false, optional: true, required: false
-  private _autoRollbackConfiguration = new TfDeploymentGroup.AutoRollbackConfigurationPropertyOutputReference(this, "auto_rollback_configuration");
+  private _autoRollbackConfiguration = new AwsDeploymentGroup.AutoRollbackConfigurationPropertyOutputReference(this, "auto_rollback_configuration");
   public get autoRollbackConfiguration() {
     return this._autoRollbackConfiguration;
   }
-  public putAutoRollbackConfiguration(value: TfDeploymentGroup.AutoRollbackConfigurationProperty) {
+  public putAutoRollbackConfiguration(value: AwsDeploymentGroup.AutoRollbackConfigurationProperty) {
     this._autoRollbackConfiguration.internalValue = value;
   }
   public resetAutoRollbackConfiguration() {
@@ -410,11 +410,11 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   }
 
   // blue_green_deployment_config - computed: false, optional: true, required: false
-  private _blueGreenDeploymentConfig = new TfDeploymentGroup.BlueGreenDeploymentConfigPropertyOutputReference(this, "blue_green_deployment_config");
+  private _blueGreenDeploymentConfig = new AwsDeploymentGroup.BlueGreenDeploymentConfigPropertyOutputReference(this, "blue_green_deployment_config");
   public get blueGreenDeploymentConfig() {
     return this._blueGreenDeploymentConfig;
   }
-  public putBlueGreenDeploymentConfig(value: TfDeploymentGroup.BlueGreenDeploymentConfigProperty) {
+  public putBlueGreenDeploymentConfig(value: AwsDeploymentGroup.BlueGreenDeploymentConfigProperty) {
     this._blueGreenDeploymentConfig.internalValue = value;
   }
   public resetBlueGreenDeploymentConfig() {
@@ -426,11 +426,11 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   }
 
   // deployment_style - computed: false, optional: true, required: false
-  private _deploymentStyle = new TfDeploymentGroup.DeploymentStylePropertyOutputReference(this, "deployment_style");
+  private _deploymentStyle = new AwsDeploymentGroup.DeploymentStylePropertyOutputReference(this, "deployment_style");
   public get deploymentStyle() {
     return this._deploymentStyle;
   }
-  public putDeploymentStyle(value: TfDeploymentGroup.DeploymentStyleProperty) {
+  public putDeploymentStyle(value: AwsDeploymentGroup.DeploymentStyleProperty) {
     this._deploymentStyle.internalValue = value;
   }
   public resetDeploymentStyle() {
@@ -442,11 +442,11 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   }
 
   // ec2_tag_filter - computed: false, optional: true, required: false
-  private _ec2TagFilter = new TfDeploymentGroup.Ec2TagFilterPropertyList(this, "ec2_tag_filter", true);
+  private _ec2TagFilter = new AwsDeploymentGroup.Ec2TagFilterPropertyList(this, "ec2_tag_filter", true);
   public get ec2TagFilter() {
     return this._ec2TagFilter;
   }
-  public putEc2TagFilter(value: TfDeploymentGroup.Ec2TagFilterProperty[] | cdktn.IResolvable) {
+  public putEc2TagFilter(value: AwsDeploymentGroup.Ec2TagFilterProperty[] | cdktn.IResolvable) {
     this._ec2TagFilter.internalValue = value;
   }
   public resetEc2TagFilter() {
@@ -458,11 +458,11 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   }
 
   // ec2_tag_set - computed: false, optional: true, required: false
-  private _ec2TagSet = new TfDeploymentGroup.Ec2TagSetPropertyList(this, "ec2_tag_set", true);
+  private _ec2TagSet = new AwsDeploymentGroup.Ec2TagSetPropertyList(this, "ec2_tag_set", true);
   public get ec2TagSet() {
     return this._ec2TagSet;
   }
-  public putEc2TagSet(value: TfDeploymentGroup.Ec2TagSetProperty[] | cdktn.IResolvable) {
+  public putEc2TagSet(value: AwsDeploymentGroup.Ec2TagSetProperty[] | cdktn.IResolvable) {
     this._ec2TagSet.internalValue = value;
   }
   public resetEc2TagSet() {
@@ -474,11 +474,11 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   }
 
   // ecs_service - computed: false, optional: true, required: false
-  private _ecsService = new TfDeploymentGroup.EcsServicePropertyOutputReference(this, "ecs_service");
+  private _ecsService = new AwsDeploymentGroup.EcsServicePropertyOutputReference(this, "ecs_service");
   public get ecsService() {
     return this._ecsService;
   }
-  public putEcsService(value: TfDeploymentGroup.EcsServiceProperty) {
+  public putEcsService(value: AwsDeploymentGroup.EcsServiceProperty) {
     this._ecsService.internalValue = value;
   }
   public resetEcsService() {
@@ -490,11 +490,11 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   }
 
   // load_balancer_info - computed: false, optional: true, required: false
-  private _loadBalancerInfo = new TfDeploymentGroup.LoadBalancerInfoPropertyOutputReference(this, "load_balancer_info");
+  private _loadBalancerInfo = new AwsDeploymentGroup.LoadBalancerInfoPropertyOutputReference(this, "load_balancer_info");
   public get loadBalancerInfo() {
     return this._loadBalancerInfo;
   }
-  public putLoadBalancerInfo(value: TfDeploymentGroup.LoadBalancerInfoProperty) {
+  public putLoadBalancerInfo(value: AwsDeploymentGroup.LoadBalancerInfoProperty) {
     this._loadBalancerInfo.internalValue = value;
   }
   public resetLoadBalancerInfo() {
@@ -506,11 +506,11 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   }
 
   // on_premises_instance_tag_filter - computed: false, optional: true, required: false
-  private _onPremisesInstanceTagFilter = new TfDeploymentGroup.OnPremisesInstanceTagFilterPropertyList(this, "on_premises_instance_tag_filter", true);
+  private _onPremisesInstanceTagFilter = new AwsDeploymentGroup.OnPremisesInstanceTagFilterPropertyList(this, "on_premises_instance_tag_filter", true);
   public get onPremisesInstanceTagFilter() {
     return this._onPremisesInstanceTagFilter;
   }
-  public putOnPremisesInstanceTagFilter(value: TfDeploymentGroup.OnPremisesInstanceTagFilterProperty[] | cdktn.IResolvable) {
+  public putOnPremisesInstanceTagFilter(value: AwsDeploymentGroup.OnPremisesInstanceTagFilterProperty[] | cdktn.IResolvable) {
     this._onPremisesInstanceTagFilter.internalValue = value;
   }
   public resetOnPremisesInstanceTagFilter() {
@@ -522,11 +522,11 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   }
 
   // trigger_configuration - computed: false, optional: true, required: false
-  private _triggerConfiguration = new TfDeploymentGroup.TriggerConfigurationPropertyList(this, "trigger_configuration", true);
+  private _triggerConfiguration = new AwsDeploymentGroup.TriggerConfigurationPropertyList(this, "trigger_configuration", true);
   public get triggerConfiguration() {
     return this._triggerConfiguration;
   }
-  public putTriggerConfiguration(value: TfDeploymentGroup.TriggerConfigurationProperty[] | cdktn.IResolvable) {
+  public putTriggerConfiguration(value: AwsDeploymentGroup.TriggerConfigurationProperty[] | cdktn.IResolvable) {
     this._triggerConfiguration.internalValue = value;
   }
   public resetTriggerConfiguration() {
@@ -554,16 +554,16 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       termination_hook_enabled: cdktn.booleanToTerraform(this._terminationHookEnabled),
-      alarm_configuration: tfDeploymentGroupAlarmConfigurationPropertyToTerraform(this._alarmConfiguration.internalValue),
-      auto_rollback_configuration: tfDeploymentGroupAutoRollbackConfigurationPropertyToTerraform(this._autoRollbackConfiguration.internalValue),
-      blue_green_deployment_config: tfDeploymentGroupBlueGreenDeploymentConfigPropertyToTerraform(this._blueGreenDeploymentConfig.internalValue),
-      deployment_style: tfDeploymentGroupDeploymentStylePropertyToTerraform(this._deploymentStyle.internalValue),
-      ec2_tag_filter: cdktn.listMapper(tfDeploymentGroupEc2TagFilterPropertyToTerraform, true)(this._ec2TagFilter.internalValue),
-      ec2_tag_set: cdktn.listMapper(tfDeploymentGroupEc2TagSetPropertyToTerraform, true)(this._ec2TagSet.internalValue),
-      ecs_service: tfDeploymentGroupEcsServicePropertyToTerraform(this._ecsService.internalValue),
-      load_balancer_info: tfDeploymentGroupLoadBalancerInfoPropertyToTerraform(this._loadBalancerInfo.internalValue),
-      on_premises_instance_tag_filter: cdktn.listMapper(tfDeploymentGroupOnPremisesInstanceTagFilterPropertyToTerraform, true)(this._onPremisesInstanceTagFilter.internalValue),
-      trigger_configuration: cdktn.listMapper(tfDeploymentGroupTriggerConfigurationPropertyToTerraform, true)(this._triggerConfiguration.internalValue),
+      alarm_configuration: awsDeploymentGroupAlarmConfigurationPropertyToTerraform(this._alarmConfiguration.internalValue),
+      auto_rollback_configuration: awsDeploymentGroupAutoRollbackConfigurationPropertyToTerraform(this._autoRollbackConfiguration.internalValue),
+      blue_green_deployment_config: awsDeploymentGroupBlueGreenDeploymentConfigPropertyToTerraform(this._blueGreenDeploymentConfig.internalValue),
+      deployment_style: awsDeploymentGroupDeploymentStylePropertyToTerraform(this._deploymentStyle.internalValue),
+      ec2_tag_filter: cdktn.listMapper(awsDeploymentGroupEc2TagFilterPropertyToTerraform, true)(this._ec2TagFilter.internalValue),
+      ec2_tag_set: cdktn.listMapper(awsDeploymentGroupEc2TagSetPropertyToTerraform, true)(this._ec2TagSet.internalValue),
+      ecs_service: awsDeploymentGroupEcsServicePropertyToTerraform(this._ecsService.internalValue),
+      load_balancer_info: awsDeploymentGroupLoadBalancerInfoPropertyToTerraform(this._loadBalancerInfo.internalValue),
+      on_premises_instance_tag_filter: cdktn.listMapper(awsDeploymentGroupOnPremisesInstanceTagFilterPropertyToTerraform, true)(this._onPremisesInstanceTagFilter.internalValue),
+      trigger_configuration: cdktn.listMapper(awsDeploymentGroupTriggerConfigurationPropertyToTerraform, true)(this._triggerConfiguration.internalValue),
     };
   }
 
@@ -636,64 +636,64 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       alarm_configuration: {
-        value: tfDeploymentGroupAlarmConfigurationPropertyToHclTerraform(this._alarmConfiguration.internalValue),
+        value: awsDeploymentGroupAlarmConfigurationPropertyToHclTerraform(this._alarmConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDeploymentGroup.AlarmConfigurationPropertyList",
+        storageClassType: "AwsDeploymentGroup.AlarmConfigurationPropertyList",
       },
       auto_rollback_configuration: {
-        value: tfDeploymentGroupAutoRollbackConfigurationPropertyToHclTerraform(this._autoRollbackConfiguration.internalValue),
+        value: awsDeploymentGroupAutoRollbackConfigurationPropertyToHclTerraform(this._autoRollbackConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDeploymentGroup.AutoRollbackConfigurationPropertyList",
+        storageClassType: "AwsDeploymentGroup.AutoRollbackConfigurationPropertyList",
       },
       blue_green_deployment_config: {
-        value: tfDeploymentGroupBlueGreenDeploymentConfigPropertyToHclTerraform(this._blueGreenDeploymentConfig.internalValue),
+        value: awsDeploymentGroupBlueGreenDeploymentConfigPropertyToHclTerraform(this._blueGreenDeploymentConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDeploymentGroup.BlueGreenDeploymentConfigPropertyList",
+        storageClassType: "AwsDeploymentGroup.BlueGreenDeploymentConfigPropertyList",
       },
       deployment_style: {
-        value: tfDeploymentGroupDeploymentStylePropertyToHclTerraform(this._deploymentStyle.internalValue),
+        value: awsDeploymentGroupDeploymentStylePropertyToHclTerraform(this._deploymentStyle.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDeploymentGroup.DeploymentStylePropertyList",
+        storageClassType: "AwsDeploymentGroup.DeploymentStylePropertyList",
       },
       ec2_tag_filter: {
-        value: cdktn.listMapperHcl(tfDeploymentGroupEc2TagFilterPropertyToHclTerraform, true)(this._ec2TagFilter.internalValue),
+        value: cdktn.listMapperHcl(awsDeploymentGroupEc2TagFilterPropertyToHclTerraform, true)(this._ec2TagFilter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDeploymentGroup.Ec2TagFilterPropertyList",
+        storageClassType: "AwsDeploymentGroup.Ec2TagFilterPropertyList",
       },
       ec2_tag_set: {
-        value: cdktn.listMapperHcl(tfDeploymentGroupEc2TagSetPropertyToHclTerraform, true)(this._ec2TagSet.internalValue),
+        value: cdktn.listMapperHcl(awsDeploymentGroupEc2TagSetPropertyToHclTerraform, true)(this._ec2TagSet.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDeploymentGroup.Ec2TagSetPropertyList",
+        storageClassType: "AwsDeploymentGroup.Ec2TagSetPropertyList",
       },
       ecs_service: {
-        value: tfDeploymentGroupEcsServicePropertyToHclTerraform(this._ecsService.internalValue),
+        value: awsDeploymentGroupEcsServicePropertyToHclTerraform(this._ecsService.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDeploymentGroup.EcsServicePropertyList",
+        storageClassType: "AwsDeploymentGroup.EcsServicePropertyList",
       },
       load_balancer_info: {
-        value: tfDeploymentGroupLoadBalancerInfoPropertyToHclTerraform(this._loadBalancerInfo.internalValue),
+        value: awsDeploymentGroupLoadBalancerInfoPropertyToHclTerraform(this._loadBalancerInfo.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDeploymentGroup.LoadBalancerInfoPropertyList",
+        storageClassType: "AwsDeploymentGroup.LoadBalancerInfoPropertyList",
       },
       on_premises_instance_tag_filter: {
-        value: cdktn.listMapperHcl(tfDeploymentGroupOnPremisesInstanceTagFilterPropertyToHclTerraform, true)(this._onPremisesInstanceTagFilter.internalValue),
+        value: cdktn.listMapperHcl(awsDeploymentGroupOnPremisesInstanceTagFilterPropertyToHclTerraform, true)(this._onPremisesInstanceTagFilter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDeploymentGroup.OnPremisesInstanceTagFilterPropertyList",
+        storageClassType: "AwsDeploymentGroup.OnPremisesInstanceTagFilterPropertyList",
       },
       trigger_configuration: {
-        value: cdktn.listMapperHcl(tfDeploymentGroupTriggerConfigurationPropertyToHclTerraform, true)(this._triggerConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsDeploymentGroupTriggerConfigurationPropertyToHclTerraform, true)(this._triggerConfiguration.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDeploymentGroup.TriggerConfigurationPropertyList",
+        storageClassType: "AwsDeploymentGroup.TriggerConfigurationPropertyList",
       },
     };
 
@@ -702,7 +702,7 @@ export class TfDeploymentGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfDeploymentGroupAlarmConfigurationPropertyToTerraform(struct?: TfDeploymentGroup.AlarmConfigurationPropertyOutputReference | TfDeploymentGroup.AlarmConfigurationProperty): any {
+export function awsDeploymentGroupAlarmConfigurationPropertyToTerraform(struct?: AwsDeploymentGroup.AlarmConfigurationPropertyOutputReference | AwsDeploymentGroup.AlarmConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -715,7 +715,7 @@ export function tfDeploymentGroupAlarmConfigurationPropertyToTerraform(struct?: 
 }
 
 
-export function tfDeploymentGroupAlarmConfigurationPropertyToHclTerraform(struct?: TfDeploymentGroup.AlarmConfigurationPropertyOutputReference | TfDeploymentGroup.AlarmConfigurationProperty): any {
+export function awsDeploymentGroupAlarmConfigurationPropertyToHclTerraform(struct?: AwsDeploymentGroup.AlarmConfigurationPropertyOutputReference | AwsDeploymentGroup.AlarmConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -746,7 +746,7 @@ export function tfDeploymentGroupAlarmConfigurationPropertyToHclTerraform(struct
 }
 
 
-export function tfDeploymentGroupAutoRollbackConfigurationPropertyToTerraform(struct?: TfDeploymentGroup.AutoRollbackConfigurationPropertyOutputReference | TfDeploymentGroup.AutoRollbackConfigurationProperty): any {
+export function awsDeploymentGroupAutoRollbackConfigurationPropertyToTerraform(struct?: AwsDeploymentGroup.AutoRollbackConfigurationPropertyOutputReference | AwsDeploymentGroup.AutoRollbackConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -758,7 +758,7 @@ export function tfDeploymentGroupAutoRollbackConfigurationPropertyToTerraform(st
 }
 
 
-export function tfDeploymentGroupAutoRollbackConfigurationPropertyToHclTerraform(struct?: TfDeploymentGroup.AutoRollbackConfigurationPropertyOutputReference | TfDeploymentGroup.AutoRollbackConfigurationProperty): any {
+export function awsDeploymentGroupAutoRollbackConfigurationPropertyToHclTerraform(struct?: AwsDeploymentGroup.AutoRollbackConfigurationPropertyOutputReference | AwsDeploymentGroup.AutoRollbackConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -783,7 +783,7 @@ export function tfDeploymentGroupAutoRollbackConfigurationPropertyToHclTerraform
 }
 
 
-export function tfDeploymentGroupDeploymentReadyOptionPropertyToTerraform(struct?: TfDeploymentGroup.DeploymentReadyOptionPropertyOutputReference | TfDeploymentGroup.DeploymentReadyOptionProperty): any {
+export function awsDeploymentGroupDeploymentReadyOptionPropertyToTerraform(struct?: AwsDeploymentGroup.DeploymentReadyOptionPropertyOutputReference | AwsDeploymentGroup.DeploymentReadyOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -795,7 +795,7 @@ export function tfDeploymentGroupDeploymentReadyOptionPropertyToTerraform(struct
 }
 
 
-export function tfDeploymentGroupDeploymentReadyOptionPropertyToHclTerraform(struct?: TfDeploymentGroup.DeploymentReadyOptionPropertyOutputReference | TfDeploymentGroup.DeploymentReadyOptionProperty): any {
+export function awsDeploymentGroupDeploymentReadyOptionPropertyToHclTerraform(struct?: AwsDeploymentGroup.DeploymentReadyOptionPropertyOutputReference | AwsDeploymentGroup.DeploymentReadyOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -820,7 +820,7 @@ export function tfDeploymentGroupDeploymentReadyOptionPropertyToHclTerraform(str
 }
 
 
-export function tfDeploymentGroupGreenFleetProvisioningOptionPropertyToTerraform(struct?: TfDeploymentGroup.GreenFleetProvisioningOptionPropertyOutputReference | TfDeploymentGroup.GreenFleetProvisioningOptionProperty): any {
+export function awsDeploymentGroupGreenFleetProvisioningOptionPropertyToTerraform(struct?: AwsDeploymentGroup.GreenFleetProvisioningOptionPropertyOutputReference | AwsDeploymentGroup.GreenFleetProvisioningOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -831,7 +831,7 @@ export function tfDeploymentGroupGreenFleetProvisioningOptionPropertyToTerraform
 }
 
 
-export function tfDeploymentGroupGreenFleetProvisioningOptionPropertyToHclTerraform(struct?: TfDeploymentGroup.GreenFleetProvisioningOptionPropertyOutputReference | TfDeploymentGroup.GreenFleetProvisioningOptionProperty): any {
+export function awsDeploymentGroupGreenFleetProvisioningOptionPropertyToHclTerraform(struct?: AwsDeploymentGroup.GreenFleetProvisioningOptionPropertyOutputReference | AwsDeploymentGroup.GreenFleetProvisioningOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -850,7 +850,7 @@ export function tfDeploymentGroupGreenFleetProvisioningOptionPropertyToHclTerraf
 }
 
 
-export function tfDeploymentGroupTerminateBlueInstancesOnDeploymentSuccessPropertyToTerraform(struct?: TfDeploymentGroup.TerminateBlueInstancesOnDeploymentSuccessPropertyOutputReference | TfDeploymentGroup.TerminateBlueInstancesOnDeploymentSuccessProperty): any {
+export function awsDeploymentGroupTerminateBlueInstancesOnDeploymentSuccessPropertyToTerraform(struct?: AwsDeploymentGroup.TerminateBlueInstancesOnDeploymentSuccessPropertyOutputReference | AwsDeploymentGroup.TerminateBlueInstancesOnDeploymentSuccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -862,7 +862,7 @@ export function tfDeploymentGroupTerminateBlueInstancesOnDeploymentSuccessProper
 }
 
 
-export function tfDeploymentGroupTerminateBlueInstancesOnDeploymentSuccessPropertyToHclTerraform(struct?: TfDeploymentGroup.TerminateBlueInstancesOnDeploymentSuccessPropertyOutputReference | TfDeploymentGroup.TerminateBlueInstancesOnDeploymentSuccessProperty): any {
+export function awsDeploymentGroupTerminateBlueInstancesOnDeploymentSuccessPropertyToHclTerraform(struct?: AwsDeploymentGroup.TerminateBlueInstancesOnDeploymentSuccessPropertyOutputReference | AwsDeploymentGroup.TerminateBlueInstancesOnDeploymentSuccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -887,39 +887,39 @@ export function tfDeploymentGroupTerminateBlueInstancesOnDeploymentSuccessProper
 }
 
 
-export function tfDeploymentGroupBlueGreenDeploymentConfigPropertyToTerraform(struct?: TfDeploymentGroup.BlueGreenDeploymentConfigPropertyOutputReference | TfDeploymentGroup.BlueGreenDeploymentConfigProperty): any {
+export function awsDeploymentGroupBlueGreenDeploymentConfigPropertyToTerraform(struct?: AwsDeploymentGroup.BlueGreenDeploymentConfigPropertyOutputReference | AwsDeploymentGroup.BlueGreenDeploymentConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    deployment_ready_option: tfDeploymentGroupDeploymentReadyOptionPropertyToTerraform(struct!.deploymentReadyOption),
-    green_fleet_provisioning_option: tfDeploymentGroupGreenFleetProvisioningOptionPropertyToTerraform(struct!.greenFleetProvisioningOption),
-    terminate_blue_instances_on_deployment_success: tfDeploymentGroupTerminateBlueInstancesOnDeploymentSuccessPropertyToTerraform(struct!.terminateBlueInstancesOnDeploymentSuccess),
+    deployment_ready_option: awsDeploymentGroupDeploymentReadyOptionPropertyToTerraform(struct!.deploymentReadyOption),
+    green_fleet_provisioning_option: awsDeploymentGroupGreenFleetProvisioningOptionPropertyToTerraform(struct!.greenFleetProvisioningOption),
+    terminate_blue_instances_on_deployment_success: awsDeploymentGroupTerminateBlueInstancesOnDeploymentSuccessPropertyToTerraform(struct!.terminateBlueInstancesOnDeploymentSuccess),
   }
 }
 
 
-export function tfDeploymentGroupBlueGreenDeploymentConfigPropertyToHclTerraform(struct?: TfDeploymentGroup.BlueGreenDeploymentConfigPropertyOutputReference | TfDeploymentGroup.BlueGreenDeploymentConfigProperty): any {
+export function awsDeploymentGroupBlueGreenDeploymentConfigPropertyToHclTerraform(struct?: AwsDeploymentGroup.BlueGreenDeploymentConfigPropertyOutputReference | AwsDeploymentGroup.BlueGreenDeploymentConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     deployment_ready_option: {
-      value: tfDeploymentGroupDeploymentReadyOptionPropertyToHclTerraform(struct!.deploymentReadyOption),
+      value: awsDeploymentGroupDeploymentReadyOptionPropertyToHclTerraform(struct!.deploymentReadyOption),
       isBlock: true,
       type: "list",
       storageClassType: "DeploymentReadyOptionPropertyList",
     },
     green_fleet_provisioning_option: {
-      value: tfDeploymentGroupGreenFleetProvisioningOptionPropertyToHclTerraform(struct!.greenFleetProvisioningOption),
+      value: awsDeploymentGroupGreenFleetProvisioningOptionPropertyToHclTerraform(struct!.greenFleetProvisioningOption),
       isBlock: true,
       type: "list",
       storageClassType: "GreenFleetProvisioningOptionPropertyList",
     },
     terminate_blue_instances_on_deployment_success: {
-      value: tfDeploymentGroupTerminateBlueInstancesOnDeploymentSuccessPropertyToHclTerraform(struct!.terminateBlueInstancesOnDeploymentSuccess),
+      value: awsDeploymentGroupTerminateBlueInstancesOnDeploymentSuccessPropertyToHclTerraform(struct!.terminateBlueInstancesOnDeploymentSuccess),
       isBlock: true,
       type: "list",
       storageClassType: "TerminateBlueInstancesOnDeploymentSuccessPropertyList",
@@ -931,7 +931,7 @@ export function tfDeploymentGroupBlueGreenDeploymentConfigPropertyToHclTerraform
 }
 
 
-export function tfDeploymentGroupDeploymentStylePropertyToTerraform(struct?: TfDeploymentGroup.DeploymentStylePropertyOutputReference | TfDeploymentGroup.DeploymentStyleProperty): any {
+export function awsDeploymentGroupDeploymentStylePropertyToTerraform(struct?: AwsDeploymentGroup.DeploymentStylePropertyOutputReference | AwsDeploymentGroup.DeploymentStyleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -943,7 +943,7 @@ export function tfDeploymentGroupDeploymentStylePropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDeploymentGroupDeploymentStylePropertyToHclTerraform(struct?: TfDeploymentGroup.DeploymentStylePropertyOutputReference | TfDeploymentGroup.DeploymentStyleProperty): any {
+export function awsDeploymentGroupDeploymentStylePropertyToHclTerraform(struct?: AwsDeploymentGroup.DeploymentStylePropertyOutputReference | AwsDeploymentGroup.DeploymentStyleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -968,7 +968,7 @@ export function tfDeploymentGroupDeploymentStylePropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDeploymentGroupEc2TagFilterPropertyToTerraform(struct?: TfDeploymentGroup.Ec2TagFilterProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupEc2TagFilterPropertyToTerraform(struct?: AwsDeploymentGroup.Ec2TagFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -981,7 +981,7 @@ export function tfDeploymentGroupEc2TagFilterPropertyToTerraform(struct?: TfDepl
 }
 
 
-export function tfDeploymentGroupEc2TagFilterPropertyToHclTerraform(struct?: TfDeploymentGroup.Ec2TagFilterProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupEc2TagFilterPropertyToHclTerraform(struct?: AwsDeploymentGroup.Ec2TagFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1012,7 +1012,7 @@ export function tfDeploymentGroupEc2TagFilterPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDeploymentGroupEc2TagSetEc2TagFilterPropertyToTerraform(struct?: TfDeploymentGroup.Ec2TagSetEc2TagFilterProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupEc2TagSetEc2TagFilterPropertyToTerraform(struct?: AwsDeploymentGroup.Ec2TagSetEc2TagFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1025,7 +1025,7 @@ export function tfDeploymentGroupEc2TagSetEc2TagFilterPropertyToTerraform(struct
 }
 
 
-export function tfDeploymentGroupEc2TagSetEc2TagFilterPropertyToHclTerraform(struct?: TfDeploymentGroup.Ec2TagSetEc2TagFilterProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupEc2TagSetEc2TagFilterPropertyToHclTerraform(struct?: AwsDeploymentGroup.Ec2TagSetEc2TagFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1056,25 +1056,25 @@ export function tfDeploymentGroupEc2TagSetEc2TagFilterPropertyToHclTerraform(str
 }
 
 
-export function tfDeploymentGroupEc2TagSetPropertyToTerraform(struct?: TfDeploymentGroup.Ec2TagSetProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupEc2TagSetPropertyToTerraform(struct?: AwsDeploymentGroup.Ec2TagSetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    ec2_tag_filter: cdktn.listMapper(tfDeploymentGroupEc2TagSetEc2TagFilterPropertyToTerraform, true)(struct!.ec2TagFilter),
+    ec2_tag_filter: cdktn.listMapper(awsDeploymentGroupEc2TagSetEc2TagFilterPropertyToTerraform, true)(struct!.ec2TagFilter),
   }
 }
 
 
-export function tfDeploymentGroupEc2TagSetPropertyToHclTerraform(struct?: TfDeploymentGroup.Ec2TagSetProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupEc2TagSetPropertyToHclTerraform(struct?: AwsDeploymentGroup.Ec2TagSetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     ec2_tag_filter: {
-      value: cdktn.listMapperHcl(tfDeploymentGroupEc2TagSetEc2TagFilterPropertyToHclTerraform, true)(struct!.ec2TagFilter),
+      value: cdktn.listMapperHcl(awsDeploymentGroupEc2TagSetEc2TagFilterPropertyToHclTerraform, true)(struct!.ec2TagFilter),
       isBlock: true,
       type: "set",
       storageClassType: "Ec2TagSetEc2TagFilterPropertyList",
@@ -1086,7 +1086,7 @@ export function tfDeploymentGroupEc2TagSetPropertyToHclTerraform(struct?: TfDepl
 }
 
 
-export function tfDeploymentGroupEcsServicePropertyToTerraform(struct?: TfDeploymentGroup.EcsServicePropertyOutputReference | TfDeploymentGroup.EcsServiceProperty): any {
+export function awsDeploymentGroupEcsServicePropertyToTerraform(struct?: AwsDeploymentGroup.EcsServicePropertyOutputReference | AwsDeploymentGroup.EcsServiceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1098,7 +1098,7 @@ export function tfDeploymentGroupEcsServicePropertyToTerraform(struct?: TfDeploy
 }
 
 
-export function tfDeploymentGroupEcsServicePropertyToHclTerraform(struct?: TfDeploymentGroup.EcsServicePropertyOutputReference | TfDeploymentGroup.EcsServiceProperty): any {
+export function awsDeploymentGroupEcsServicePropertyToHclTerraform(struct?: AwsDeploymentGroup.EcsServicePropertyOutputReference | AwsDeploymentGroup.EcsServiceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1123,7 +1123,7 @@ export function tfDeploymentGroupEcsServicePropertyToHclTerraform(struct?: TfDep
 }
 
 
-export function tfDeploymentGroupElbInfoPropertyToTerraform(struct?: TfDeploymentGroup.ElbInfoProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupElbInfoPropertyToTerraform(struct?: AwsDeploymentGroup.ElbInfoProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1134,7 +1134,7 @@ export function tfDeploymentGroupElbInfoPropertyToTerraform(struct?: TfDeploymen
 }
 
 
-export function tfDeploymentGroupElbInfoPropertyToHclTerraform(struct?: TfDeploymentGroup.ElbInfoProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupElbInfoPropertyToHclTerraform(struct?: AwsDeploymentGroup.ElbInfoProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1153,7 +1153,7 @@ export function tfDeploymentGroupElbInfoPropertyToHclTerraform(struct?: TfDeploy
 }
 
 
-export function tfDeploymentGroupTargetGroupInfoPropertyToTerraform(struct?: TfDeploymentGroup.TargetGroupInfoProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupTargetGroupInfoPropertyToTerraform(struct?: AwsDeploymentGroup.TargetGroupInfoProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1164,7 +1164,7 @@ export function tfDeploymentGroupTargetGroupInfoPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDeploymentGroupTargetGroupInfoPropertyToHclTerraform(struct?: TfDeploymentGroup.TargetGroupInfoProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupTargetGroupInfoPropertyToHclTerraform(struct?: AwsDeploymentGroup.TargetGroupInfoProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1183,7 +1183,7 @@ export function tfDeploymentGroupTargetGroupInfoPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDeploymentGroupProdTrafficRoutePropertyToTerraform(struct?: TfDeploymentGroup.ProdTrafficRoutePropertyOutputReference | TfDeploymentGroup.ProdTrafficRouteProperty): any {
+export function awsDeploymentGroupProdTrafficRoutePropertyToTerraform(struct?: AwsDeploymentGroup.ProdTrafficRoutePropertyOutputReference | AwsDeploymentGroup.ProdTrafficRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1194,7 +1194,7 @@ export function tfDeploymentGroupProdTrafficRoutePropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDeploymentGroupProdTrafficRoutePropertyToHclTerraform(struct?: TfDeploymentGroup.ProdTrafficRoutePropertyOutputReference | TfDeploymentGroup.ProdTrafficRouteProperty): any {
+export function awsDeploymentGroupProdTrafficRoutePropertyToHclTerraform(struct?: AwsDeploymentGroup.ProdTrafficRoutePropertyOutputReference | AwsDeploymentGroup.ProdTrafficRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1213,7 +1213,7 @@ export function tfDeploymentGroupProdTrafficRoutePropertyToHclTerraform(struct?:
 }
 
 
-export function tfDeploymentGroupTargetGroupPropertyToTerraform(struct?: TfDeploymentGroup.TargetGroupProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupTargetGroupPropertyToTerraform(struct?: AwsDeploymentGroup.TargetGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1224,7 +1224,7 @@ export function tfDeploymentGroupTargetGroupPropertyToTerraform(struct?: TfDeplo
 }
 
 
-export function tfDeploymentGroupTargetGroupPropertyToHclTerraform(struct?: TfDeploymentGroup.TargetGroupProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupTargetGroupPropertyToHclTerraform(struct?: AwsDeploymentGroup.TargetGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1243,7 +1243,7 @@ export function tfDeploymentGroupTargetGroupPropertyToHclTerraform(struct?: TfDe
 }
 
 
-export function tfDeploymentGroupTestTrafficRoutePropertyToTerraform(struct?: TfDeploymentGroup.TestTrafficRoutePropertyOutputReference | TfDeploymentGroup.TestTrafficRouteProperty): any {
+export function awsDeploymentGroupTestTrafficRoutePropertyToTerraform(struct?: AwsDeploymentGroup.TestTrafficRoutePropertyOutputReference | AwsDeploymentGroup.TestTrafficRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1254,7 +1254,7 @@ export function tfDeploymentGroupTestTrafficRoutePropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDeploymentGroupTestTrafficRoutePropertyToHclTerraform(struct?: TfDeploymentGroup.TestTrafficRoutePropertyOutputReference | TfDeploymentGroup.TestTrafficRouteProperty): any {
+export function awsDeploymentGroupTestTrafficRoutePropertyToHclTerraform(struct?: AwsDeploymentGroup.TestTrafficRoutePropertyOutputReference | AwsDeploymentGroup.TestTrafficRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1273,39 +1273,39 @@ export function tfDeploymentGroupTestTrafficRoutePropertyToHclTerraform(struct?:
 }
 
 
-export function tfDeploymentGroupTargetGroupPairInfoPropertyToTerraform(struct?: TfDeploymentGroup.TargetGroupPairInfoPropertyOutputReference | TfDeploymentGroup.TargetGroupPairInfoProperty): any {
+export function awsDeploymentGroupTargetGroupPairInfoPropertyToTerraform(struct?: AwsDeploymentGroup.TargetGroupPairInfoPropertyOutputReference | AwsDeploymentGroup.TargetGroupPairInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    prod_traffic_route: tfDeploymentGroupProdTrafficRoutePropertyToTerraform(struct!.prodTrafficRoute),
-    target_group: cdktn.listMapper(tfDeploymentGroupTargetGroupPropertyToTerraform, true)(struct!.targetGroup),
-    test_traffic_route: tfDeploymentGroupTestTrafficRoutePropertyToTerraform(struct!.testTrafficRoute),
+    prod_traffic_route: awsDeploymentGroupProdTrafficRoutePropertyToTerraform(struct!.prodTrafficRoute),
+    target_group: cdktn.listMapper(awsDeploymentGroupTargetGroupPropertyToTerraform, true)(struct!.targetGroup),
+    test_traffic_route: awsDeploymentGroupTestTrafficRoutePropertyToTerraform(struct!.testTrafficRoute),
   }
 }
 
 
-export function tfDeploymentGroupTargetGroupPairInfoPropertyToHclTerraform(struct?: TfDeploymentGroup.TargetGroupPairInfoPropertyOutputReference | TfDeploymentGroup.TargetGroupPairInfoProperty): any {
+export function awsDeploymentGroupTargetGroupPairInfoPropertyToHclTerraform(struct?: AwsDeploymentGroup.TargetGroupPairInfoPropertyOutputReference | AwsDeploymentGroup.TargetGroupPairInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     prod_traffic_route: {
-      value: tfDeploymentGroupProdTrafficRoutePropertyToHclTerraform(struct!.prodTrafficRoute),
+      value: awsDeploymentGroupProdTrafficRoutePropertyToHclTerraform(struct!.prodTrafficRoute),
       isBlock: true,
       type: "list",
       storageClassType: "ProdTrafficRoutePropertyList",
     },
     target_group: {
-      value: cdktn.listMapperHcl(tfDeploymentGroupTargetGroupPropertyToHclTerraform, true)(struct!.targetGroup),
+      value: cdktn.listMapperHcl(awsDeploymentGroupTargetGroupPropertyToHclTerraform, true)(struct!.targetGroup),
       isBlock: true,
       type: "list",
       storageClassType: "TargetGroupPropertyList",
     },
     test_traffic_route: {
-      value: tfDeploymentGroupTestTrafficRoutePropertyToHclTerraform(struct!.testTrafficRoute),
+      value: awsDeploymentGroupTestTrafficRoutePropertyToHclTerraform(struct!.testTrafficRoute),
       isBlock: true,
       type: "list",
       storageClassType: "TestTrafficRoutePropertyList",
@@ -1317,39 +1317,39 @@ export function tfDeploymentGroupTargetGroupPairInfoPropertyToHclTerraform(struc
 }
 
 
-export function tfDeploymentGroupLoadBalancerInfoPropertyToTerraform(struct?: TfDeploymentGroup.LoadBalancerInfoPropertyOutputReference | TfDeploymentGroup.LoadBalancerInfoProperty): any {
+export function awsDeploymentGroupLoadBalancerInfoPropertyToTerraform(struct?: AwsDeploymentGroup.LoadBalancerInfoPropertyOutputReference | AwsDeploymentGroup.LoadBalancerInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    elb_info: cdktn.listMapper(tfDeploymentGroupElbInfoPropertyToTerraform, true)(struct!.elbInfo),
-    target_group_info: cdktn.listMapper(tfDeploymentGroupTargetGroupInfoPropertyToTerraform, true)(struct!.targetGroupInfo),
-    target_group_pair_info: tfDeploymentGroupTargetGroupPairInfoPropertyToTerraform(struct!.targetGroupPairInfo),
+    elb_info: cdktn.listMapper(awsDeploymentGroupElbInfoPropertyToTerraform, true)(struct!.elbInfo),
+    target_group_info: cdktn.listMapper(awsDeploymentGroupTargetGroupInfoPropertyToTerraform, true)(struct!.targetGroupInfo),
+    target_group_pair_info: awsDeploymentGroupTargetGroupPairInfoPropertyToTerraform(struct!.targetGroupPairInfo),
   }
 }
 
 
-export function tfDeploymentGroupLoadBalancerInfoPropertyToHclTerraform(struct?: TfDeploymentGroup.LoadBalancerInfoPropertyOutputReference | TfDeploymentGroup.LoadBalancerInfoProperty): any {
+export function awsDeploymentGroupLoadBalancerInfoPropertyToHclTerraform(struct?: AwsDeploymentGroup.LoadBalancerInfoPropertyOutputReference | AwsDeploymentGroup.LoadBalancerInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     elb_info: {
-      value: cdktn.listMapperHcl(tfDeploymentGroupElbInfoPropertyToHclTerraform, true)(struct!.elbInfo),
+      value: cdktn.listMapperHcl(awsDeploymentGroupElbInfoPropertyToHclTerraform, true)(struct!.elbInfo),
       isBlock: true,
       type: "set",
       storageClassType: "ElbInfoPropertyList",
     },
     target_group_info: {
-      value: cdktn.listMapperHcl(tfDeploymentGroupTargetGroupInfoPropertyToHclTerraform, true)(struct!.targetGroupInfo),
+      value: cdktn.listMapperHcl(awsDeploymentGroupTargetGroupInfoPropertyToHclTerraform, true)(struct!.targetGroupInfo),
       isBlock: true,
       type: "set",
       storageClassType: "TargetGroupInfoPropertyList",
     },
     target_group_pair_info: {
-      value: tfDeploymentGroupTargetGroupPairInfoPropertyToHclTerraform(struct!.targetGroupPairInfo),
+      value: awsDeploymentGroupTargetGroupPairInfoPropertyToHclTerraform(struct!.targetGroupPairInfo),
       isBlock: true,
       type: "list",
       storageClassType: "TargetGroupPairInfoPropertyList",
@@ -1361,7 +1361,7 @@ export function tfDeploymentGroupLoadBalancerInfoPropertyToHclTerraform(struct?:
 }
 
 
-export function tfDeploymentGroupOnPremisesInstanceTagFilterPropertyToTerraform(struct?: TfDeploymentGroup.OnPremisesInstanceTagFilterProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupOnPremisesInstanceTagFilterPropertyToTerraform(struct?: AwsDeploymentGroup.OnPremisesInstanceTagFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1374,7 +1374,7 @@ export function tfDeploymentGroupOnPremisesInstanceTagFilterPropertyToTerraform(
 }
 
 
-export function tfDeploymentGroupOnPremisesInstanceTagFilterPropertyToHclTerraform(struct?: TfDeploymentGroup.OnPremisesInstanceTagFilterProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupOnPremisesInstanceTagFilterPropertyToHclTerraform(struct?: AwsDeploymentGroup.OnPremisesInstanceTagFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1405,7 +1405,7 @@ export function tfDeploymentGroupOnPremisesInstanceTagFilterPropertyToHclTerrafo
 }
 
 
-export function tfDeploymentGroupTriggerConfigurationPropertyToTerraform(struct?: TfDeploymentGroup.TriggerConfigurationProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupTriggerConfigurationPropertyToTerraform(struct?: AwsDeploymentGroup.TriggerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1418,7 +1418,7 @@ export function tfDeploymentGroupTriggerConfigurationPropertyToTerraform(struct?
 }
 
 
-export function tfDeploymentGroupTriggerConfigurationPropertyToHclTerraform(struct?: TfDeploymentGroup.TriggerConfigurationProperty | cdktn.IResolvable): any {
+export function awsDeploymentGroupTriggerConfigurationPropertyToHclTerraform(struct?: AwsDeploymentGroup.TriggerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1449,18 +1449,18 @@ export function tfDeploymentGroupTriggerConfigurationPropertyToHclTerraform(stru
 }
 
 
-export namespace TfDeploymentGroup {
+export namespace AwsDeploymentGroup {
 export interface AlarmConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#alarms TfDeploymentGroup#alarms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#alarms AwsDeploymentGroup#alarms}
   */
   readonly alarms?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#enabled TfDeploymentGroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#enabled AwsDeploymentGroup#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#ignore_poll_alarm_failure TfDeploymentGroup#ignore_poll_alarm_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#ignore_poll_alarm_failure AwsDeploymentGroup#ignore_poll_alarm_failure}
   */
   readonly ignorePollAlarmFailure?: boolean | cdktn.IResolvable;
 }
@@ -1558,11 +1558,11 @@ export class AlarmConfigurationPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface AutoRollbackConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#enabled TfDeploymentGroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#enabled AwsDeploymentGroup#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#events TfDeploymentGroup#events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#events AwsDeploymentGroup#events}
   */
   readonly events?: string[];
 }
@@ -1638,11 +1638,11 @@ export class AutoRollbackConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface DeploymentReadyOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#action_on_timeout TfDeploymentGroup#action_on_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#action_on_timeout AwsDeploymentGroup#action_on_timeout}
   */
   readonly actionOnTimeout?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#wait_time_in_minutes TfDeploymentGroup#wait_time_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#wait_time_in_minutes AwsDeploymentGroup#wait_time_in_minutes}
   */
   readonly waitTimeInMinutes?: number;
 }
@@ -1718,7 +1718,7 @@ export class DeploymentReadyOptionPropertyOutputReference extends cdktn.ComplexO
 }
 export interface GreenFleetProvisioningOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#action TfDeploymentGroup#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#action AwsDeploymentGroup#action}
   */
   readonly action?: string;
 }
@@ -1772,11 +1772,11 @@ export class GreenFleetProvisioningOptionPropertyOutputReference extends cdktn.C
 }
 export interface TerminateBlueInstancesOnDeploymentSuccessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#action TfDeploymentGroup#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#action AwsDeploymentGroup#action}
   */
   readonly action?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#termination_wait_time_in_minutes TfDeploymentGroup#termination_wait_time_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#termination_wait_time_in_minutes AwsDeploymentGroup#termination_wait_time_in_minutes}
   */
   readonly terminationWaitTimeInMinutes?: number;
 }
@@ -1854,19 +1854,19 @@ export interface BlueGreenDeploymentConfigProperty {
   /**
   * deployment_ready_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#deployment_ready_option TfDeploymentGroup#deployment_ready_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#deployment_ready_option AwsDeploymentGroup#deployment_ready_option}
   */
   readonly deploymentReadyOption?: DeploymentReadyOptionProperty;
   /**
   * green_fleet_provisioning_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#green_fleet_provisioning_option TfDeploymentGroup#green_fleet_provisioning_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#green_fleet_provisioning_option AwsDeploymentGroup#green_fleet_provisioning_option}
   */
   readonly greenFleetProvisioningOption?: GreenFleetProvisioningOptionProperty;
   /**
   * terminate_blue_instances_on_deployment_success block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#terminate_blue_instances_on_deployment_success TfDeploymentGroup#terminate_blue_instances_on_deployment_success}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#terminate_blue_instances_on_deployment_success AwsDeploymentGroup#terminate_blue_instances_on_deployment_success}
   */
   readonly terminateBlueInstancesOnDeploymentSuccess?: TerminateBlueInstancesOnDeploymentSuccessProperty;
 }
@@ -1964,11 +1964,11 @@ export class BlueGreenDeploymentConfigPropertyOutputReference extends cdktn.Comp
 }
 export interface DeploymentStyleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#deployment_option TfDeploymentGroup#deployment_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#deployment_option AwsDeploymentGroup#deployment_option}
   */
   readonly deploymentOption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#deployment_type TfDeploymentGroup#deployment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#deployment_type AwsDeploymentGroup#deployment_type}
   */
   readonly deploymentType?: string;
 }
@@ -2044,15 +2044,15 @@ export class DeploymentStylePropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface Ec2TagFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#key TfDeploymentGroup#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#key AwsDeploymentGroup#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#type TfDeploymentGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#type AwsDeploymentGroup#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#value TfDeploymentGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#value AwsDeploymentGroup#value}
   */
   readonly value?: string;
 }
@@ -2182,15 +2182,15 @@ export class Ec2TagFilterPropertyList extends cdktn.ComplexList {
 }
 export interface Ec2TagSetEc2TagFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#key TfDeploymentGroup#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#key AwsDeploymentGroup#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#type TfDeploymentGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#type AwsDeploymentGroup#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#value TfDeploymentGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#value AwsDeploymentGroup#value}
   */
   readonly value?: string;
 }
@@ -2322,7 +2322,7 @@ export interface Ec2TagSetProperty {
   /**
   * ec2_tag_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#ec2_tag_filter TfDeploymentGroup#ec2_tag_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#ec2_tag_filter AwsDeploymentGroup#ec2_tag_filter}
   */
   readonly ec2TagFilter?: Ec2TagSetEc2TagFilterProperty[] | cdktn.IResolvable;
 }
@@ -2408,11 +2408,11 @@ export class Ec2TagSetPropertyList extends cdktn.ComplexList {
 }
 export interface EcsServiceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#cluster_name TfDeploymentGroup#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#cluster_name AwsDeploymentGroup#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#service_name TfDeploymentGroup#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#service_name AwsDeploymentGroup#service_name}
   */
   readonly serviceName: string;
 }
@@ -2482,7 +2482,7 @@ export class EcsServicePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ElbInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#name TfDeploymentGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#name AwsDeploymentGroup#name}
   */
   readonly name?: string;
 }
@@ -2568,7 +2568,7 @@ export class ElbInfoPropertyList extends cdktn.ComplexList {
 }
 export interface TargetGroupInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#name TfDeploymentGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#name AwsDeploymentGroup#name}
   */
   readonly name?: string;
 }
@@ -2654,7 +2654,7 @@ export class TargetGroupInfoPropertyList extends cdktn.ComplexList {
 }
 export interface ProdTrafficRouteProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#listener_arns TfDeploymentGroup#listener_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#listener_arns AwsDeploymentGroup#listener_arns}
   */
   readonly listenerArns: string[];
 }
@@ -2705,7 +2705,7 @@ export class ProdTrafficRoutePropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TargetGroupProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#name TfDeploymentGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#name AwsDeploymentGroup#name}
   */
   readonly name: string;
 }
@@ -2788,7 +2788,7 @@ export class TargetGroupPropertyList extends cdktn.ComplexList {
 }
 export interface TestTrafficRouteProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#listener_arns TfDeploymentGroup#listener_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#listener_arns AwsDeploymentGroup#listener_arns}
   */
   readonly listenerArns: string[];
 }
@@ -2841,19 +2841,19 @@ export interface TargetGroupPairInfoProperty {
   /**
   * prod_traffic_route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#prod_traffic_route TfDeploymentGroup#prod_traffic_route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#prod_traffic_route AwsDeploymentGroup#prod_traffic_route}
   */
   readonly prodTrafficRoute: ProdTrafficRouteProperty;
   /**
   * target_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#target_group TfDeploymentGroup#target_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#target_group AwsDeploymentGroup#target_group}
   */
   readonly targetGroup: TargetGroupProperty[] | cdktn.IResolvable;
   /**
   * test_traffic_route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#test_traffic_route TfDeploymentGroup#test_traffic_route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#test_traffic_route AwsDeploymentGroup#test_traffic_route}
   */
   readonly testTrafficRoute?: TestTrafficRouteProperty;
 }
@@ -2947,19 +2947,19 @@ export interface LoadBalancerInfoProperty {
   /**
   * elb_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#elb_info TfDeploymentGroup#elb_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#elb_info AwsDeploymentGroup#elb_info}
   */
   readonly elbInfo?: ElbInfoProperty[] | cdktn.IResolvable;
   /**
   * target_group_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#target_group_info TfDeploymentGroup#target_group_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#target_group_info AwsDeploymentGroup#target_group_info}
   */
   readonly targetGroupInfo?: TargetGroupInfoProperty[] | cdktn.IResolvable;
   /**
   * target_group_pair_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#target_group_pair_info TfDeploymentGroup#target_group_pair_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#target_group_pair_info AwsDeploymentGroup#target_group_pair_info}
   */
   readonly targetGroupPairInfo?: TargetGroupPairInfoProperty;
 }
@@ -3057,15 +3057,15 @@ export class LoadBalancerInfoPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface OnPremisesInstanceTagFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#key TfDeploymentGroup#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#key AwsDeploymentGroup#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#type TfDeploymentGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#type AwsDeploymentGroup#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#value TfDeploymentGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#value AwsDeploymentGroup#value}
   */
   readonly value?: string;
 }
@@ -3195,15 +3195,15 @@ export class OnPremisesInstanceTagFilterPropertyList extends cdktn.ComplexList {
 }
 export interface TriggerConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#trigger_events TfDeploymentGroup#trigger_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#trigger_events AwsDeploymentGroup#trigger_events}
   */
   readonly triggerEvents: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#trigger_name TfDeploymentGroup#trigger_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#trigger_name AwsDeploymentGroup#trigger_name}
   */
   readonly triggerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#trigger_target_arn TfDeploymentGroup#trigger_target_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codedeploy_deployment_group#trigger_target_arn AwsDeploymentGroup#trigger_target_arn}
   */
   readonly triggerTargetArn: string;
 }

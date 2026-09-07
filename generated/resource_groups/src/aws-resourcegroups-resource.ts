@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResourceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResourceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#group_arn TfResource#group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#group_arn AwsResource#group_arn}
   */
   readonly groupArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#id TfResource#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#id AwsResource#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,25 +20,25 @@ export interface TfResourceConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#region TfResource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#region AwsResource#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#resource_arn TfResource#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#resource_arn AwsResource#resource_arn}
   */
   readonly resourceArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#timeouts TfResource#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#timeouts AwsResource#timeouts}
   */
-  readonly timeouts?: TfResource.TimeoutsProperty;
+  readonly timeouts?: AwsResource.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource aws_resourcegroups_resource}
 */
-export class TfResource extends cdktn.TerraformResource {
+export class AwsResource extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfResource extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResource resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResource resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResource to import
-  * @param importFromId The id of the existing TfResource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResource to import is found
+  * @param importToId The construct id used in the generated config for the AwsResource to import
+  * @param importFromId The id of the existing AwsResource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resourcegroups_resource", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfResource extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResourceConfig
+  * @param options AwsResourceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResourceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResourceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resourcegroups_resource',
       terraformGeneratorMetadata: {
@@ -161,11 +161,11 @@ export class TfResource extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfResource.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsResource.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfResource.TimeoutsProperty) {
+  public putTimeouts(value: AwsResource.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -186,7 +186,7 @@ export class TfResource extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       resource_arn: cdktn.stringToTerraform(this._resourceArn),
-      timeouts: tfResourceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsResourceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -217,10 +217,10 @@ export class TfResource extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfResourceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsResourceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfResource.TimeoutsProperty",
+        storageClassType: "AwsResource.TimeoutsProperty",
       },
     };
 
@@ -229,7 +229,7 @@ export class TfResource extends cdktn.TerraformResource {
   }
 }
 
-export function tfResourceTimeoutsPropertyToTerraform(struct?: TfResource.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResourceTimeoutsPropertyToTerraform(struct?: AwsResource.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function tfResourceTimeoutsPropertyToTerraform(struct?: TfResource.Timeou
 }
 
 
-export function tfResourceTimeoutsPropertyToHclTerraform(struct?: TfResource.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResourceTimeoutsPropertyToHclTerraform(struct?: AwsResource.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,14 +266,14 @@ export function tfResourceTimeoutsPropertyToHclTerraform(struct?: TfResource.Tim
 }
 
 
-export namespace TfResource {
+export namespace AwsResource {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#create TfResource#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#create AwsResource#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#delete TfResource#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_resource#delete AwsResource#delete}
   */
   readonly delete?: string;
 }

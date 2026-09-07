@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfOptInConfig extends cdktn.TerraformMetaArguments {
+export interface AwsOptInConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#region TfOptIn#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#region AwsOptIn#region}
   */
   readonly region?: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#condition TfOptIn#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#condition AwsOptIn#condition}
   */
-  readonly condition?: TfOptIn.ConditionProperty[] | cdktn.IResolvable;
+  readonly condition?: AwsOptIn.ConditionProperty[] | cdktn.IResolvable;
   /**
   * principal block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#principal TfOptIn#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#principal AwsOptIn#principal}
   */
-  readonly principal?: TfOptIn.PrincipalProperty[] | cdktn.IResolvable;
+  readonly principal?: AwsOptIn.PrincipalProperty[] | cdktn.IResolvable;
   /**
   * resource_data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#resource_data TfOptIn#resource_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#resource_data AwsOptIn#resource_data}
   */
-  readonly resourceData?: TfOptIn.ResourceDataProperty[] | cdktn.IResolvable;
+  readonly resourceData?: AwsOptIn.ResourceDataProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in aws_lakeformation_opt_in}
 */
-export class TfOptIn extends cdktn.TerraformResource {
+export class AwsOptIn extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class TfOptIn extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfOptIn resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsOptIn resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfOptIn to import
-  * @param importFromId The id of the existing TfOptIn that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfOptIn to import is found
+  * @param importToId The construct id used in the generated config for the AwsOptIn to import
+  * @param importFromId The id of the existing AwsOptIn that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOptIn to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lakeformation_opt_in", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class TfOptIn extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfOptInConfig = {}
+  * @param options AwsOptInConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfOptInConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsOptInConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_lakeformation_opt_in',
       terraformGeneratorMetadata: {
@@ -120,11 +120,11 @@ export class TfOptIn extends cdktn.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new TfOptIn.ConditionPropertyList(this, "condition", false);
+  private _condition = new AwsOptIn.ConditionPropertyList(this, "condition", false);
   public get condition() {
     return this._condition;
   }
-  public putCondition(value: TfOptIn.ConditionProperty[] | cdktn.IResolvable) {
+  public putCondition(value: AwsOptIn.ConditionProperty[] | cdktn.IResolvable) {
     this._condition.internalValue = value;
   }
   public resetCondition() {
@@ -136,11 +136,11 @@ export class TfOptIn extends cdktn.TerraformResource {
   }
 
   // principal - computed: false, optional: true, required: false
-  private _principal = new TfOptIn.PrincipalPropertyList(this, "principal", false);
+  private _principal = new AwsOptIn.PrincipalPropertyList(this, "principal", false);
   public get principal() {
     return this._principal;
   }
-  public putPrincipal(value: TfOptIn.PrincipalProperty[] | cdktn.IResolvable) {
+  public putPrincipal(value: AwsOptIn.PrincipalProperty[] | cdktn.IResolvable) {
     this._principal.internalValue = value;
   }
   public resetPrincipal() {
@@ -152,11 +152,11 @@ export class TfOptIn extends cdktn.TerraformResource {
   }
 
   // resource_data - computed: false, optional: true, required: false
-  private _resourceData = new TfOptIn.ResourceDataPropertyList(this, "resource_data", false);
+  private _resourceData = new AwsOptIn.ResourceDataPropertyList(this, "resource_data", false);
   public get resourceData() {
     return this._resourceData;
   }
-  public putResourceData(value: TfOptIn.ResourceDataProperty[] | cdktn.IResolvable) {
+  public putResourceData(value: AwsOptIn.ResourceDataProperty[] | cdktn.IResolvable) {
     this._resourceData.internalValue = value;
   }
   public resetResourceData() {
@@ -174,9 +174,9 @@ export class TfOptIn extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      condition: cdktn.listMapper(tfOptInConditionPropertyToTerraform, true)(this._condition.internalValue),
-      principal: cdktn.listMapper(tfOptInPrincipalPropertyToTerraform, true)(this._principal.internalValue),
-      resource_data: cdktn.listMapper(tfOptInResourceDataPropertyToTerraform, true)(this._resourceData.internalValue),
+      condition: cdktn.listMapper(awsOptInConditionPropertyToTerraform, true)(this._condition.internalValue),
+      principal: cdktn.listMapper(awsOptInPrincipalPropertyToTerraform, true)(this._principal.internalValue),
+      resource_data: cdktn.listMapper(awsOptInResourceDataPropertyToTerraform, true)(this._resourceData.internalValue),
     };
   }
 
@@ -189,22 +189,22 @@ export class TfOptIn extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       condition: {
-        value: cdktn.listMapperHcl(tfOptInConditionPropertyToHclTerraform, true)(this._condition.internalValue),
+        value: cdktn.listMapperHcl(awsOptInConditionPropertyToHclTerraform, true)(this._condition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfOptIn.ConditionPropertyList",
+        storageClassType: "AwsOptIn.ConditionPropertyList",
       },
       principal: {
-        value: cdktn.listMapperHcl(tfOptInPrincipalPropertyToHclTerraform, true)(this._principal.internalValue),
+        value: cdktn.listMapperHcl(awsOptInPrincipalPropertyToHclTerraform, true)(this._principal.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfOptIn.PrincipalPropertyList",
+        storageClassType: "AwsOptIn.PrincipalPropertyList",
       },
       resource_data: {
-        value: cdktn.listMapperHcl(tfOptInResourceDataPropertyToHclTerraform, true)(this._resourceData.internalValue),
+        value: cdktn.listMapperHcl(awsOptInResourceDataPropertyToHclTerraform, true)(this._resourceData.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfOptIn.ResourceDataPropertyList",
+        storageClassType: "AwsOptIn.ResourceDataPropertyList",
       },
     };
 
@@ -213,7 +213,7 @@ export class TfOptIn extends cdktn.TerraformResource {
   }
 }
 
-export function tfOptInConditionPropertyToTerraform(struct?: TfOptIn.ConditionProperty | cdktn.IResolvable): any {
+export function awsOptInConditionPropertyToTerraform(struct?: AwsOptIn.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -223,7 +223,7 @@ export function tfOptInConditionPropertyToTerraform(struct?: TfOptIn.ConditionPr
 }
 
 
-export function tfOptInConditionPropertyToHclTerraform(struct?: TfOptIn.ConditionProperty | cdktn.IResolvable): any {
+export function awsOptInConditionPropertyToHclTerraform(struct?: AwsOptIn.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -234,7 +234,7 @@ export function tfOptInConditionPropertyToHclTerraform(struct?: TfOptIn.Conditio
 }
 
 
-export function tfOptInPrincipalPropertyToTerraform(struct?: TfOptIn.PrincipalProperty | cdktn.IResolvable): any {
+export function awsOptInPrincipalPropertyToTerraform(struct?: AwsOptIn.PrincipalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -245,7 +245,7 @@ export function tfOptInPrincipalPropertyToTerraform(struct?: TfOptIn.PrincipalPr
 }
 
 
-export function tfOptInPrincipalPropertyToHclTerraform(struct?: TfOptIn.PrincipalProperty | cdktn.IResolvable): any {
+export function awsOptInPrincipalPropertyToHclTerraform(struct?: AwsOptIn.PrincipalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,7 +264,7 @@ export function tfOptInPrincipalPropertyToHclTerraform(struct?: TfOptIn.Principa
 }
 
 
-export function tfOptInCatalogPropertyToTerraform(struct?: TfOptIn.CatalogProperty | cdktn.IResolvable): any {
+export function awsOptInCatalogPropertyToTerraform(struct?: AwsOptIn.CatalogProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function tfOptInCatalogPropertyToTerraform(struct?: TfOptIn.CatalogProper
 }
 
 
-export function tfOptInCatalogPropertyToHclTerraform(struct?: TfOptIn.CatalogProperty | cdktn.IResolvable): any {
+export function awsOptInCatalogPropertyToHclTerraform(struct?: AwsOptIn.CatalogProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function tfOptInCatalogPropertyToHclTerraform(struct?: TfOptIn.CatalogPro
 }
 
 
-export function tfOptInDataCellsFilterPropertyToTerraform(struct?: TfOptIn.DataCellsFilterProperty | cdktn.IResolvable): any {
+export function awsOptInDataCellsFilterPropertyToTerraform(struct?: AwsOptIn.DataCellsFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function tfOptInDataCellsFilterPropertyToTerraform(struct?: TfOptIn.DataC
 }
 
 
-export function tfOptInDataCellsFilterPropertyToHclTerraform(struct?: TfOptIn.DataCellsFilterProperty | cdktn.IResolvable): any {
+export function awsOptInDataCellsFilterPropertyToHclTerraform(struct?: AwsOptIn.DataCellsFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function tfOptInDataCellsFilterPropertyToHclTerraform(struct?: TfOptIn.Da
 }
 
 
-export function tfOptInDataLocationPropertyToTerraform(struct?: TfOptIn.DataLocationProperty | cdktn.IResolvable): any {
+export function awsOptInDataLocationPropertyToTerraform(struct?: AwsOptIn.DataLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function tfOptInDataLocationPropertyToTerraform(struct?: TfOptIn.DataLoca
 }
 
 
-export function tfOptInDataLocationPropertyToHclTerraform(struct?: TfOptIn.DataLocationProperty | cdktn.IResolvable): any {
+export function awsOptInDataLocationPropertyToHclTerraform(struct?: AwsOptIn.DataLocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -382,7 +382,7 @@ export function tfOptInDataLocationPropertyToHclTerraform(struct?: TfOptIn.DataL
 }
 
 
-export function tfOptInDatabasePropertyToTerraform(struct?: TfOptIn.DatabaseProperty | cdktn.IResolvable): any {
+export function awsOptInDatabasePropertyToTerraform(struct?: AwsOptIn.DatabaseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,7 +394,7 @@ export function tfOptInDatabasePropertyToTerraform(struct?: TfOptIn.DatabaseProp
 }
 
 
-export function tfOptInDatabasePropertyToHclTerraform(struct?: TfOptIn.DatabaseProperty | cdktn.IResolvable): any {
+export function awsOptInDatabasePropertyToHclTerraform(struct?: AwsOptIn.DatabaseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -419,7 +419,7 @@ export function tfOptInDatabasePropertyToHclTerraform(struct?: TfOptIn.DatabaseP
 }
 
 
-export function tfOptInLfTagPropertyToTerraform(struct?: TfOptIn.LfTagProperty | cdktn.IResolvable): any {
+export function awsOptInLfTagPropertyToTerraform(struct?: AwsOptIn.LfTagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -432,7 +432,7 @@ export function tfOptInLfTagPropertyToTerraform(struct?: TfOptIn.LfTagProperty |
 }
 
 
-export function tfOptInLfTagPropertyToHclTerraform(struct?: TfOptIn.LfTagProperty | cdktn.IResolvable): any {
+export function awsOptInLfTagPropertyToHclTerraform(struct?: AwsOptIn.LfTagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,7 +463,7 @@ export function tfOptInLfTagPropertyToHclTerraform(struct?: TfOptIn.LfTagPropert
 }
 
 
-export function tfOptInLfTagExpressionPropertyToTerraform(struct?: TfOptIn.LfTagExpressionProperty | cdktn.IResolvable): any {
+export function awsOptInLfTagExpressionPropertyToTerraform(struct?: AwsOptIn.LfTagExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,7 +475,7 @@ export function tfOptInLfTagExpressionPropertyToTerraform(struct?: TfOptIn.LfTag
 }
 
 
-export function tfOptInLfTagExpressionPropertyToHclTerraform(struct?: TfOptIn.LfTagExpressionProperty | cdktn.IResolvable): any {
+export function awsOptInLfTagExpressionPropertyToHclTerraform(struct?: AwsOptIn.LfTagExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,7 +500,7 @@ export function tfOptInLfTagExpressionPropertyToHclTerraform(struct?: TfOptIn.Lf
 }
 
 
-export function tfOptInLfTagPolicyPropertyToTerraform(struct?: TfOptIn.LfTagPolicyProperty | cdktn.IResolvable): any {
+export function awsOptInLfTagPolicyPropertyToTerraform(struct?: AwsOptIn.LfTagPolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -514,7 +514,7 @@ export function tfOptInLfTagPolicyPropertyToTerraform(struct?: TfOptIn.LfTagPoli
 }
 
 
-export function tfOptInLfTagPolicyPropertyToHclTerraform(struct?: TfOptIn.LfTagPolicyProperty | cdktn.IResolvable): any {
+export function awsOptInLfTagPolicyPropertyToHclTerraform(struct?: AwsOptIn.LfTagPolicyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -551,7 +551,7 @@ export function tfOptInLfTagPolicyPropertyToHclTerraform(struct?: TfOptIn.LfTagP
 }
 
 
-export function tfOptInTablePropertyToTerraform(struct?: TfOptIn.TableProperty | cdktn.IResolvable): any {
+export function awsOptInTablePropertyToTerraform(struct?: AwsOptIn.TableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -565,7 +565,7 @@ export function tfOptInTablePropertyToTerraform(struct?: TfOptIn.TableProperty |
 }
 
 
-export function tfOptInTablePropertyToHclTerraform(struct?: TfOptIn.TableProperty | cdktn.IResolvable): any {
+export function awsOptInTablePropertyToHclTerraform(struct?: AwsOptIn.TableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,7 +602,7 @@ export function tfOptInTablePropertyToHclTerraform(struct?: TfOptIn.TablePropert
 }
 
 
-export function tfOptInColumnWildcardPropertyToTerraform(struct?: TfOptIn.ColumnWildcardProperty | cdktn.IResolvable): any {
+export function awsOptInColumnWildcardPropertyToTerraform(struct?: AwsOptIn.ColumnWildcardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -613,7 +613,7 @@ export function tfOptInColumnWildcardPropertyToTerraform(struct?: TfOptIn.Column
 }
 
 
-export function tfOptInColumnWildcardPropertyToHclTerraform(struct?: TfOptIn.ColumnWildcardProperty | cdktn.IResolvable): any {
+export function awsOptInColumnWildcardPropertyToHclTerraform(struct?: AwsOptIn.ColumnWildcardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -632,7 +632,7 @@ export function tfOptInColumnWildcardPropertyToHclTerraform(struct?: TfOptIn.Col
 }
 
 
-export function tfOptInTableWithColumnsPropertyToTerraform(struct?: TfOptIn.TableWithColumnsProperty | cdktn.IResolvable): any {
+export function awsOptInTableWithColumnsPropertyToTerraform(struct?: AwsOptIn.TableWithColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -642,12 +642,12 @@ export function tfOptInTableWithColumnsPropertyToTerraform(struct?: TfOptIn.Tabl
     column_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.columnNames),
     database_name: cdktn.stringToTerraform(struct!.databaseName),
     name: cdktn.stringToTerraform(struct!.name),
-    column_wildcard: cdktn.listMapper(tfOptInColumnWildcardPropertyToTerraform, true)(struct!.columnWildcard),
+    column_wildcard: cdktn.listMapper(awsOptInColumnWildcardPropertyToTerraform, true)(struct!.columnWildcard),
   }
 }
 
 
-export function tfOptInTableWithColumnsPropertyToHclTerraform(struct?: TfOptIn.TableWithColumnsProperty | cdktn.IResolvable): any {
+export function awsOptInTableWithColumnsPropertyToHclTerraform(struct?: AwsOptIn.TableWithColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -678,7 +678,7 @@ export function tfOptInTableWithColumnsPropertyToHclTerraform(struct?: TfOptIn.T
       storageClassType: "string",
     },
     column_wildcard: {
-      value: cdktn.listMapperHcl(tfOptInColumnWildcardPropertyToHclTerraform, true)(struct!.columnWildcard),
+      value: cdktn.listMapperHcl(awsOptInColumnWildcardPropertyToHclTerraform, true)(struct!.columnWildcard),
       isBlock: true,
       type: "list",
       storageClassType: "ColumnWildcardPropertyList",
@@ -690,81 +690,81 @@ export function tfOptInTableWithColumnsPropertyToHclTerraform(struct?: TfOptIn.T
 }
 
 
-export function tfOptInResourceDataPropertyToTerraform(struct?: TfOptIn.ResourceDataProperty | cdktn.IResolvable): any {
+export function awsOptInResourceDataPropertyToTerraform(struct?: AwsOptIn.ResourceDataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    catalog: cdktn.listMapper(tfOptInCatalogPropertyToTerraform, true)(struct!.catalog),
-    data_cells_filter: cdktn.listMapper(tfOptInDataCellsFilterPropertyToTerraform, true)(struct!.dataCellsFilter),
-    data_location: cdktn.listMapper(tfOptInDataLocationPropertyToTerraform, true)(struct!.dataLocation),
-    database: cdktn.listMapper(tfOptInDatabasePropertyToTerraform, true)(struct!.database),
-    lf_tag: cdktn.listMapper(tfOptInLfTagPropertyToTerraform, true)(struct!.lfTag),
-    lf_tag_expression: cdktn.listMapper(tfOptInLfTagExpressionPropertyToTerraform, true)(struct!.lfTagExpression),
-    lf_tag_policy: cdktn.listMapper(tfOptInLfTagPolicyPropertyToTerraform, true)(struct!.lfTagPolicy),
-    table: cdktn.listMapper(tfOptInTablePropertyToTerraform, true)(struct!.table),
-    table_with_columns: cdktn.listMapper(tfOptInTableWithColumnsPropertyToTerraform, true)(struct!.tableWithColumns),
+    catalog: cdktn.listMapper(awsOptInCatalogPropertyToTerraform, true)(struct!.catalog),
+    data_cells_filter: cdktn.listMapper(awsOptInDataCellsFilterPropertyToTerraform, true)(struct!.dataCellsFilter),
+    data_location: cdktn.listMapper(awsOptInDataLocationPropertyToTerraform, true)(struct!.dataLocation),
+    database: cdktn.listMapper(awsOptInDatabasePropertyToTerraform, true)(struct!.database),
+    lf_tag: cdktn.listMapper(awsOptInLfTagPropertyToTerraform, true)(struct!.lfTag),
+    lf_tag_expression: cdktn.listMapper(awsOptInLfTagExpressionPropertyToTerraform, true)(struct!.lfTagExpression),
+    lf_tag_policy: cdktn.listMapper(awsOptInLfTagPolicyPropertyToTerraform, true)(struct!.lfTagPolicy),
+    table: cdktn.listMapper(awsOptInTablePropertyToTerraform, true)(struct!.table),
+    table_with_columns: cdktn.listMapper(awsOptInTableWithColumnsPropertyToTerraform, true)(struct!.tableWithColumns),
   }
 }
 
 
-export function tfOptInResourceDataPropertyToHclTerraform(struct?: TfOptIn.ResourceDataProperty | cdktn.IResolvable): any {
+export function awsOptInResourceDataPropertyToHclTerraform(struct?: AwsOptIn.ResourceDataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     catalog: {
-      value: cdktn.listMapperHcl(tfOptInCatalogPropertyToHclTerraform, true)(struct!.catalog),
+      value: cdktn.listMapperHcl(awsOptInCatalogPropertyToHclTerraform, true)(struct!.catalog),
       isBlock: true,
       type: "list",
       storageClassType: "CatalogPropertyList",
     },
     data_cells_filter: {
-      value: cdktn.listMapperHcl(tfOptInDataCellsFilterPropertyToHclTerraform, true)(struct!.dataCellsFilter),
+      value: cdktn.listMapperHcl(awsOptInDataCellsFilterPropertyToHclTerraform, true)(struct!.dataCellsFilter),
       isBlock: true,
       type: "list",
       storageClassType: "DataCellsFilterPropertyList",
     },
     data_location: {
-      value: cdktn.listMapperHcl(tfOptInDataLocationPropertyToHclTerraform, true)(struct!.dataLocation),
+      value: cdktn.listMapperHcl(awsOptInDataLocationPropertyToHclTerraform, true)(struct!.dataLocation),
       isBlock: true,
       type: "list",
       storageClassType: "DataLocationPropertyList",
     },
     database: {
-      value: cdktn.listMapperHcl(tfOptInDatabasePropertyToHclTerraform, true)(struct!.database),
+      value: cdktn.listMapperHcl(awsOptInDatabasePropertyToHclTerraform, true)(struct!.database),
       isBlock: true,
       type: "list",
       storageClassType: "DatabasePropertyList",
     },
     lf_tag: {
-      value: cdktn.listMapperHcl(tfOptInLfTagPropertyToHclTerraform, true)(struct!.lfTag),
+      value: cdktn.listMapperHcl(awsOptInLfTagPropertyToHclTerraform, true)(struct!.lfTag),
       isBlock: true,
       type: "list",
       storageClassType: "LfTagPropertyList",
     },
     lf_tag_expression: {
-      value: cdktn.listMapperHcl(tfOptInLfTagExpressionPropertyToHclTerraform, true)(struct!.lfTagExpression),
+      value: cdktn.listMapperHcl(awsOptInLfTagExpressionPropertyToHclTerraform, true)(struct!.lfTagExpression),
       isBlock: true,
       type: "list",
       storageClassType: "LfTagExpressionPropertyList",
     },
     lf_tag_policy: {
-      value: cdktn.listMapperHcl(tfOptInLfTagPolicyPropertyToHclTerraform, true)(struct!.lfTagPolicy),
+      value: cdktn.listMapperHcl(awsOptInLfTagPolicyPropertyToHclTerraform, true)(struct!.lfTagPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "LfTagPolicyPropertyList",
     },
     table: {
-      value: cdktn.listMapperHcl(tfOptInTablePropertyToHclTerraform, true)(struct!.table),
+      value: cdktn.listMapperHcl(awsOptInTablePropertyToHclTerraform, true)(struct!.table),
       isBlock: true,
       type: "list",
       storageClassType: "TablePropertyList",
     },
     table_with_columns: {
-      value: cdktn.listMapperHcl(tfOptInTableWithColumnsPropertyToHclTerraform, true)(struct!.tableWithColumns),
+      value: cdktn.listMapperHcl(awsOptInTableWithColumnsPropertyToHclTerraform, true)(struct!.tableWithColumns),
       isBlock: true,
       type: "list",
       storageClassType: "TableWithColumnsPropertyList",
@@ -776,7 +776,7 @@ export function tfOptInResourceDataPropertyToHclTerraform(struct?: TfOptIn.Resou
 }
 
 
-export namespace TfOptIn {
+export namespace AwsOptIn {
 export interface ConditionProperty {
 }
 export class ConditionPropertyOutputReference extends cdktn.ComplexObject {
@@ -844,7 +844,7 @@ export class ConditionPropertyList extends cdktn.ComplexList {
 }
 export interface PrincipalProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#data_lake_principal_identifier TfOptIn#data_lake_principal_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#data_lake_principal_identifier AwsOptIn#data_lake_principal_identifier}
   */
   readonly dataLakePrincipalIdentifier: string;
 }
@@ -927,7 +927,7 @@ export class PrincipalPropertyList extends cdktn.ComplexList {
 }
 export interface CatalogProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#id TfOptIn#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#id AwsOptIn#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1016,19 +1016,19 @@ export class CatalogPropertyList extends cdktn.ComplexList {
 }
 export interface DataCellsFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#database_name TfOptIn#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#database_name AwsOptIn#database_name}
   */
   readonly databaseName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#name TfOptIn#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#name AwsOptIn#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#table_catalog_id TfOptIn#table_catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#table_catalog_id AwsOptIn#table_catalog_id}
   */
   readonly tableCatalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#table_name TfOptIn#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#table_name AwsOptIn#table_name}
   */
   readonly tableName?: string;
 }
@@ -1180,11 +1180,11 @@ export class DataCellsFilterPropertyList extends cdktn.ComplexList {
 }
 export interface DataLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id TfOptIn#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id AwsOptIn#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#resource_arn TfOptIn#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#resource_arn AwsOptIn#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -1289,11 +1289,11 @@ export class DataLocationPropertyList extends cdktn.ComplexList {
 }
 export interface DatabaseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id TfOptIn#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id AwsOptIn#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#name TfOptIn#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#name AwsOptIn#name}
   */
   readonly name: string;
 }
@@ -1398,15 +1398,15 @@ export class DatabasePropertyList extends cdktn.ComplexList {
 }
 export interface LfTagProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id TfOptIn#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id AwsOptIn#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#key TfOptIn#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#key AwsOptIn#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#values TfOptIn#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#values AwsOptIn#values}
   */
   readonly values: string[];
 }
@@ -1530,11 +1530,11 @@ export class LfTagPropertyList extends cdktn.ComplexList {
 }
 export interface LfTagExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id TfOptIn#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id AwsOptIn#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#name TfOptIn#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#name AwsOptIn#name}
   */
   readonly name: string;
 }
@@ -1639,19 +1639,19 @@ export class LfTagExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface LfTagPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id TfOptIn#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id AwsOptIn#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#expression TfOptIn#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#expression AwsOptIn#expression}
   */
   readonly expression?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#expression_name TfOptIn#expression_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#expression_name AwsOptIn#expression_name}
   */
   readonly expressionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#resource_type TfOptIn#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#resource_type AwsOptIn#resource_type}
   */
   readonly resourceType: string;
 }
@@ -1800,19 +1800,19 @@ export class LfTagPolicyPropertyList extends cdktn.ComplexList {
 }
 export interface TableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id TfOptIn#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id AwsOptIn#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#database_name TfOptIn#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#database_name AwsOptIn#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#name TfOptIn#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#name AwsOptIn#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#wildcard TfOptIn#wildcard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#wildcard AwsOptIn#wildcard}
   */
   readonly wildcard?: boolean | cdktn.IResolvable;
 }
@@ -1961,7 +1961,7 @@ export class TablePropertyList extends cdktn.ComplexList {
 }
 export interface ColumnWildcardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#excluded_column_names TfOptIn#excluded_column_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#excluded_column_names AwsOptIn#excluded_column_names}
   */
   readonly excludedColumnNames?: string[];
 }
@@ -2047,25 +2047,25 @@ export class ColumnWildcardPropertyList extends cdktn.ComplexList {
 }
 export interface TableWithColumnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id TfOptIn#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog_id AwsOptIn#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#column_names TfOptIn#column_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#column_names AwsOptIn#column_names}
   */
   readonly columnNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#database_name TfOptIn#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#database_name AwsOptIn#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#name TfOptIn#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#name AwsOptIn#name}
   */
   readonly name: string;
   /**
   * column_wildcard block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#column_wildcard TfOptIn#column_wildcard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#column_wildcard AwsOptIn#column_wildcard}
   */
   readonly columnWildcard?: ColumnWildcardProperty[] | cdktn.IResolvable;
 }
@@ -2235,55 +2235,55 @@ export interface ResourceDataProperty {
   /**
   * catalog block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog TfOptIn#catalog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#catalog AwsOptIn#catalog}
   */
   readonly catalog?: CatalogProperty[] | cdktn.IResolvable;
   /**
   * data_cells_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#data_cells_filter TfOptIn#data_cells_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#data_cells_filter AwsOptIn#data_cells_filter}
   */
   readonly dataCellsFilter?: DataCellsFilterProperty[] | cdktn.IResolvable;
   /**
   * data_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#data_location TfOptIn#data_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#data_location AwsOptIn#data_location}
   */
   readonly dataLocation?: DataLocationProperty[] | cdktn.IResolvable;
   /**
   * database block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#database TfOptIn#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#database AwsOptIn#database}
   */
   readonly database?: DatabaseProperty[] | cdktn.IResolvable;
   /**
   * lf_tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#lf_tag TfOptIn#lf_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#lf_tag AwsOptIn#lf_tag}
   */
   readonly lfTag?: LfTagProperty[] | cdktn.IResolvable;
   /**
   * lf_tag_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#lf_tag_expression TfOptIn#lf_tag_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#lf_tag_expression AwsOptIn#lf_tag_expression}
   */
   readonly lfTagExpression?: LfTagExpressionProperty[] | cdktn.IResolvable;
   /**
   * lf_tag_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#lf_tag_policy TfOptIn#lf_tag_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#lf_tag_policy AwsOptIn#lf_tag_policy}
   */
   readonly lfTagPolicy?: LfTagPolicyProperty[] | cdktn.IResolvable;
   /**
   * table block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#table TfOptIn#table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#table AwsOptIn#table}
   */
   readonly table?: TableProperty[] | cdktn.IResolvable;
   /**
   * table_with_columns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#table_with_columns TfOptIn#table_with_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_opt_in#table_with_columns AwsOptIn#table_with_columns}
   */
   readonly tableWithColumns?: TableWithColumnsProperty[] | cdktn.IResolvable;
 }

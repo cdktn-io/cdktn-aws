@@ -5,64 +5,64 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfReportDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsReportDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#additional_artifacts TfReportDefinition#additional_artifacts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#additional_artifacts AwsReportDefinition#additional_artifacts}
   */
   readonly additionalArtifacts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#additional_schema_elements TfReportDefinition#additional_schema_elements}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#additional_schema_elements AwsReportDefinition#additional_schema_elements}
   */
   readonly additionalSchemaElements: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#compression TfReportDefinition#compression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#compression AwsReportDefinition#compression}
   */
   readonly compression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#format TfReportDefinition#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#format AwsReportDefinition#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#id TfReportDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#id AwsReportDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#refresh_closed_reports TfReportDefinition#refresh_closed_reports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#refresh_closed_reports AwsReportDefinition#refresh_closed_reports}
   */
   readonly refreshClosedReports?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#report_name TfReportDefinition#report_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#report_name AwsReportDefinition#report_name}
   */
   readonly reportName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#report_versioning TfReportDefinition#report_versioning}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#report_versioning AwsReportDefinition#report_versioning}
   */
   readonly reportVersioning?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#s3_bucket TfReportDefinition#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#s3_bucket AwsReportDefinition#s3_bucket}
   */
   readonly s3Bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#s3_prefix TfReportDefinition#s3_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#s3_prefix AwsReportDefinition#s3_prefix}
   */
   readonly s3Prefix: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#s3_region TfReportDefinition#s3_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#s3_region AwsReportDefinition#s3_region}
   */
   readonly s3Region: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#tags TfReportDefinition#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#tags AwsReportDefinition#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#tags_all TfReportDefinition#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#tags_all AwsReportDefinition#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#time_unit TfReportDefinition#time_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#time_unit AwsReportDefinition#time_unit}
   */
   readonly timeUnit: string;
 }
@@ -70,7 +70,7 @@ export interface TfReportDefinitionConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition aws_cur_report_definition}
 */
-export class TfReportDefinition extends cdktn.TerraformResource {
+export class AwsReportDefinition extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -81,11 +81,11 @@ export class TfReportDefinition extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfReportDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsReportDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfReportDefinition to import
-  * @param importFromId The id of the existing TfReportDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfReportDefinition to import is found
+  * @param importToId The construct id used in the generated config for the AwsReportDefinition to import
+  * @param importFromId The id of the existing AwsReportDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cur_report_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsReportDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cur_report_definition", importId: importFromId, provider });
@@ -100,9 +100,9 @@ export class TfReportDefinition extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfReportDefinitionConfig
+  * @param options AwsReportDefinitionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfReportDefinitionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsReportDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cur_report_definition',
       terraformGeneratorMetadata: {

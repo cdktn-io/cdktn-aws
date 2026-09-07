@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEndpointAccessConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEndpointAccessConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#endpoint_name TfEndpointAccess#endpoint_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#endpoint_name AwsEndpointAccess#endpoint_name}
   */
   readonly endpointName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#id TfEndpointAccess#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#id AwsEndpointAccess#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#owner_account TfEndpointAccess#owner_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#owner_account AwsEndpointAccess#owner_account}
   */
   readonly ownerAccount?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#region TfEndpointAccess#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#region AwsEndpointAccess#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#subnet_ids TfEndpointAccess#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#subnet_ids AwsEndpointAccess#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#vpc_security_group_ids TfEndpointAccess#vpc_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#vpc_security_group_ids AwsEndpointAccess#vpc_security_group_ids}
   */
   readonly vpcSecurityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#workgroup_name TfEndpointAccess#workgroup_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#workgroup_name AwsEndpointAccess#workgroup_name}
   */
   readonly workgroupName: string;
 }
@@ -44,7 +44,7 @@ export interface TfEndpointAccessConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access aws_redshiftserverless_endpoint_access}
 */
-export class TfEndpointAccess extends cdktn.TerraformResource {
+export class AwsEndpointAccess extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfEndpointAccess extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEndpointAccess resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEndpointAccess resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEndpointAccess to import
-  * @param importFromId The id of the existing TfEndpointAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEndpointAccess to import is found
+  * @param importToId The construct id used in the generated config for the AwsEndpointAccess to import
+  * @param importFromId The id of the existing AwsEndpointAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_endpoint_access#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEndpointAccess to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshiftserverless_endpoint_access", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfEndpointAccess extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEndpointAccessConfig
+  * @param options AwsEndpointAccessConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEndpointAccessConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEndpointAccessConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshiftserverless_endpoint_access',
       terraformGeneratorMetadata: {
@@ -195,7 +195,7 @@ export class TfEndpointAccess extends cdktn.TerraformResource {
   }
 
   // vpc_endpoint - computed: true, optional: false, required: false
-  private _vpcEndpoint = new TfEndpointAccess.VpcEndpointPropertyList(this, "vpc_endpoint", false);
+  private _vpcEndpoint = new AwsEndpointAccess.VpcEndpointPropertyList(this, "vpc_endpoint", false);
   public get vpcEndpoint() {
     return this._vpcEndpoint;
   }
@@ -296,7 +296,7 @@ export class TfEndpointAccess extends cdktn.TerraformResource {
   }
 }
 
-export function tfEndpointAccessNetworkInterfacePropertyToTerraform(struct?: TfEndpointAccess.NetworkInterfaceProperty): any {
+export function awsEndpointAccessNetworkInterfacePropertyToTerraform(struct?: AwsEndpointAccess.NetworkInterfaceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function tfEndpointAccessNetworkInterfacePropertyToTerraform(struct?: TfE
 }
 
 
-export function tfEndpointAccessNetworkInterfacePropertyToHclTerraform(struct?: TfEndpointAccess.NetworkInterfaceProperty): any {
+export function awsEndpointAccessNetworkInterfacePropertyToHclTerraform(struct?: AwsEndpointAccess.NetworkInterfaceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function tfEndpointAccessNetworkInterfacePropertyToHclTerraform(struct?: 
 }
 
 
-export function tfEndpointAccessVpcEndpointPropertyToTerraform(struct?: TfEndpointAccess.VpcEndpointProperty): any {
+export function awsEndpointAccessVpcEndpointPropertyToTerraform(struct?: AwsEndpointAccess.VpcEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function tfEndpointAccessVpcEndpointPropertyToTerraform(struct?: TfEndpoi
 }
 
 
-export function tfEndpointAccessVpcEndpointPropertyToHclTerraform(struct?: TfEndpointAccess.VpcEndpointProperty): any {
+export function awsEndpointAccessVpcEndpointPropertyToHclTerraform(struct?: AwsEndpointAccess.VpcEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,7 +338,7 @@ export function tfEndpointAccessVpcEndpointPropertyToHclTerraform(struct?: TfEnd
 }
 
 
-export namespace TfEndpointAccess {
+export namespace AwsEndpointAccess {
 export interface NetworkInterfaceProperty {
 }
 export class NetworkInterfacePropertyOutputReference extends cdktn.ComplexObject {

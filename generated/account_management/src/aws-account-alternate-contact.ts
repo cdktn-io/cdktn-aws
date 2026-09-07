@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAlternateContactConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAlternateContactConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#account_id TfAlternateContact#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#account_id AwsAlternateContact#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#alternate_contact_type TfAlternateContact#alternate_contact_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#alternate_contact_type AwsAlternateContact#alternate_contact_type}
   */
   readonly alternateContactType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#email_address TfAlternateContact#email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#email_address AwsAlternateContact#email_address}
   */
   readonly emailAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#id TfAlternateContact#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#id AwsAlternateContact#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#name TfAlternateContact#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#name AwsAlternateContact#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#phone_number TfAlternateContact#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#phone_number AwsAlternateContact#phone_number}
   */
   readonly phoneNumber: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#title TfAlternateContact#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#title AwsAlternateContact#title}
   */
   readonly title: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#timeouts TfAlternateContact#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#timeouts AwsAlternateContact#timeouts}
   */
-  readonly timeouts?: TfAlternateContact.TimeoutsProperty;
+  readonly timeouts?: AwsAlternateContact.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact aws_account_alternate_contact}
 */
-export class TfAlternateContact extends cdktn.TerraformResource {
+export class AwsAlternateContact extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfAlternateContact extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAlternateContact resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAlternateContact resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAlternateContact to import
-  * @param importFromId The id of the existing TfAlternateContact that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAlternateContact to import is found
+  * @param importToId The construct id used in the generated config for the AwsAlternateContact to import
+  * @param importFromId The id of the existing AwsAlternateContact that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAlternateContact to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_account_alternate_contact", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfAlternateContact extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAlternateContactConfig
+  * @param options AwsAlternateContactConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAlternateContactConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAlternateContactConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_account_alternate_contact',
       terraformGeneratorMetadata: {
@@ -208,11 +208,11 @@ export class TfAlternateContact extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfAlternateContact.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsAlternateContact.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfAlternateContact.TimeoutsProperty) {
+  public putTimeouts(value: AwsAlternateContact.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -236,7 +236,7 @@ export class TfAlternateContact extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       phone_number: cdktn.stringToTerraform(this._phoneNumber),
       title: cdktn.stringToTerraform(this._title),
-      timeouts: tfAlternateContactTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsAlternateContactTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -285,10 +285,10 @@ export class TfAlternateContact extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfAlternateContactTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsAlternateContactTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfAlternateContact.TimeoutsProperty",
+        storageClassType: "AwsAlternateContact.TimeoutsProperty",
       },
     };
 
@@ -297,7 +297,7 @@ export class TfAlternateContact extends cdktn.TerraformResource {
   }
 }
 
-export function tfAlternateContactTimeoutsPropertyToTerraform(struct?: TfAlternateContact.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAlternateContactTimeoutsPropertyToTerraform(struct?: AwsAlternateContact.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,7 +310,7 @@ export function tfAlternateContactTimeoutsPropertyToTerraform(struct?: TfAlterna
 }
 
 
-export function tfAlternateContactTimeoutsPropertyToHclTerraform(struct?: TfAlternateContact.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAlternateContactTimeoutsPropertyToHclTerraform(struct?: AwsAlternateContact.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,18 +341,18 @@ export function tfAlternateContactTimeoutsPropertyToHclTerraform(struct?: TfAlte
 }
 
 
-export namespace TfAlternateContact {
+export namespace AwsAlternateContact {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#create TfAlternateContact#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#create AwsAlternateContact#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#delete TfAlternateContact#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#delete AwsAlternateContact#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#update TfAlternateContact#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/account_alternate_contact#update AwsAlternateContact#update}
   */
   readonly update?: string;
 }

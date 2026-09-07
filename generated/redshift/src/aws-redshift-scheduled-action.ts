@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfScheduledActionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsScheduledActionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#description TfScheduledAction#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#description AwsScheduledAction#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#enable TfScheduledAction#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#enable AwsScheduledAction#enable}
   */
   readonly enable?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#end_time TfScheduledAction#end_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#end_time AwsScheduledAction#end_time}
   */
   readonly endTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#iam_role TfScheduledAction#iam_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#iam_role AwsScheduledAction#iam_role}
   */
   readonly iamRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#id TfScheduledAction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#id AwsScheduledAction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#name TfScheduledAction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#name AwsScheduledAction#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#region TfScheduledAction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#region AwsScheduledAction#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#schedule TfScheduledAction#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#schedule AwsScheduledAction#schedule}
   */
   readonly schedule: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#start_time TfScheduledAction#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#start_time AwsScheduledAction#start_time}
   */
   readonly startTime?: string;
   /**
   * target_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#target_action TfScheduledAction#target_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#target_action AwsScheduledAction#target_action}
   */
-  readonly targetAction: TfScheduledAction.TargetActionProperty;
+  readonly targetAction: AwsScheduledAction.TargetActionProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action aws_redshift_scheduled_action}
 */
-export class TfScheduledAction extends cdktn.TerraformResource {
+export class AwsScheduledAction extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfScheduledAction extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfScheduledAction resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsScheduledAction resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfScheduledAction to import
-  * @param importFromId The id of the existing TfScheduledAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfScheduledAction to import is found
+  * @param importToId The construct id used in the generated config for the AwsScheduledAction to import
+  * @param importFromId The id of the existing AwsScheduledAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsScheduledAction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_scheduled_action", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfScheduledAction extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfScheduledActionConfig
+  * @param options AwsScheduledActionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfScheduledActionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsScheduledActionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_scheduled_action',
       terraformGeneratorMetadata: {
@@ -258,11 +258,11 @@ export class TfScheduledAction extends cdktn.TerraformResource {
   }
 
   // target_action - computed: false, optional: false, required: true
-  private _targetAction = new TfScheduledAction.TargetActionPropertyOutputReference(this, "target_action");
+  private _targetAction = new AwsScheduledAction.TargetActionPropertyOutputReference(this, "target_action");
   public get targetAction() {
     return this._targetAction;
   }
-  public putTargetAction(value: TfScheduledAction.TargetActionProperty) {
+  public putTargetAction(value: AwsScheduledAction.TargetActionProperty) {
     this._targetAction.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -285,7 +285,7 @@ export class TfScheduledAction extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       schedule: cdktn.stringToTerraform(this._schedule),
       start_time: cdktn.stringToTerraform(this._startTime),
-      target_action: tfScheduledActionTargetActionPropertyToTerraform(this._targetAction.internalValue),
+      target_action: awsScheduledActionTargetActionPropertyToTerraform(this._targetAction.internalValue),
     };
   }
 
@@ -346,10 +346,10 @@ export class TfScheduledAction extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       target_action: {
-        value: tfScheduledActionTargetActionPropertyToHclTerraform(this._targetAction.internalValue),
+        value: awsScheduledActionTargetActionPropertyToHclTerraform(this._targetAction.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfScheduledAction.TargetActionPropertyList",
+        storageClassType: "AwsScheduledAction.TargetActionPropertyList",
       },
     };
 
@@ -358,7 +358,7 @@ export class TfScheduledAction extends cdktn.TerraformResource {
   }
 }
 
-export function tfScheduledActionPauseClusterPropertyToTerraform(struct?: TfScheduledAction.PauseClusterPropertyOutputReference | TfScheduledAction.PauseClusterProperty): any {
+export function awsScheduledActionPauseClusterPropertyToTerraform(struct?: AwsScheduledAction.PauseClusterPropertyOutputReference | AwsScheduledAction.PauseClusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,7 +369,7 @@ export function tfScheduledActionPauseClusterPropertyToTerraform(struct?: TfSche
 }
 
 
-export function tfScheduledActionPauseClusterPropertyToHclTerraform(struct?: TfScheduledAction.PauseClusterPropertyOutputReference | TfScheduledAction.PauseClusterProperty): any {
+export function awsScheduledActionPauseClusterPropertyToHclTerraform(struct?: AwsScheduledAction.PauseClusterPropertyOutputReference | AwsScheduledAction.PauseClusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function tfScheduledActionPauseClusterPropertyToHclTerraform(struct?: TfS
 }
 
 
-export function tfScheduledActionResizeClusterPropertyToTerraform(struct?: TfScheduledAction.ResizeClusterPropertyOutputReference | TfScheduledAction.ResizeClusterProperty): any {
+export function awsScheduledActionResizeClusterPropertyToTerraform(struct?: AwsScheduledAction.ResizeClusterPropertyOutputReference | AwsScheduledAction.ResizeClusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function tfScheduledActionResizeClusterPropertyToTerraform(struct?: TfSch
 }
 
 
-export function tfScheduledActionResizeClusterPropertyToHclTerraform(struct?: TfScheduledAction.ResizeClusterPropertyOutputReference | TfScheduledAction.ResizeClusterProperty): any {
+export function awsScheduledActionResizeClusterPropertyToHclTerraform(struct?: AwsScheduledAction.ResizeClusterPropertyOutputReference | AwsScheduledAction.ResizeClusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,7 +446,7 @@ export function tfScheduledActionResizeClusterPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfScheduledActionResumeClusterPropertyToTerraform(struct?: TfScheduledAction.ResumeClusterPropertyOutputReference | TfScheduledAction.ResumeClusterProperty): any {
+export function awsScheduledActionResumeClusterPropertyToTerraform(struct?: AwsScheduledAction.ResumeClusterPropertyOutputReference | AwsScheduledAction.ResumeClusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -457,7 +457,7 @@ export function tfScheduledActionResumeClusterPropertyToTerraform(struct?: TfSch
 }
 
 
-export function tfScheduledActionResumeClusterPropertyToHclTerraform(struct?: TfScheduledAction.ResumeClusterPropertyOutputReference | TfScheduledAction.ResumeClusterProperty): any {
+export function awsScheduledActionResumeClusterPropertyToHclTerraform(struct?: AwsScheduledAction.ResumeClusterPropertyOutputReference | AwsScheduledAction.ResumeClusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,39 +476,39 @@ export function tfScheduledActionResumeClusterPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfScheduledActionTargetActionPropertyToTerraform(struct?: TfScheduledAction.TargetActionPropertyOutputReference | TfScheduledAction.TargetActionProperty): any {
+export function awsScheduledActionTargetActionPropertyToTerraform(struct?: AwsScheduledAction.TargetActionPropertyOutputReference | AwsScheduledAction.TargetActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    pause_cluster: tfScheduledActionPauseClusterPropertyToTerraform(struct!.pauseCluster),
-    resize_cluster: tfScheduledActionResizeClusterPropertyToTerraform(struct!.resizeCluster),
-    resume_cluster: tfScheduledActionResumeClusterPropertyToTerraform(struct!.resumeCluster),
+    pause_cluster: awsScheduledActionPauseClusterPropertyToTerraform(struct!.pauseCluster),
+    resize_cluster: awsScheduledActionResizeClusterPropertyToTerraform(struct!.resizeCluster),
+    resume_cluster: awsScheduledActionResumeClusterPropertyToTerraform(struct!.resumeCluster),
   }
 }
 
 
-export function tfScheduledActionTargetActionPropertyToHclTerraform(struct?: TfScheduledAction.TargetActionPropertyOutputReference | TfScheduledAction.TargetActionProperty): any {
+export function awsScheduledActionTargetActionPropertyToHclTerraform(struct?: AwsScheduledAction.TargetActionPropertyOutputReference | AwsScheduledAction.TargetActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     pause_cluster: {
-      value: tfScheduledActionPauseClusterPropertyToHclTerraform(struct!.pauseCluster),
+      value: awsScheduledActionPauseClusterPropertyToHclTerraform(struct!.pauseCluster),
       isBlock: true,
       type: "list",
       storageClassType: "PauseClusterPropertyList",
     },
     resize_cluster: {
-      value: tfScheduledActionResizeClusterPropertyToHclTerraform(struct!.resizeCluster),
+      value: awsScheduledActionResizeClusterPropertyToHclTerraform(struct!.resizeCluster),
       isBlock: true,
       type: "list",
       storageClassType: "ResizeClusterPropertyList",
     },
     resume_cluster: {
-      value: tfScheduledActionResumeClusterPropertyToHclTerraform(struct!.resumeCluster),
+      value: awsScheduledActionResumeClusterPropertyToHclTerraform(struct!.resumeCluster),
       isBlock: true,
       type: "list",
       storageClassType: "ResumeClusterPropertyList",
@@ -520,10 +520,10 @@ export function tfScheduledActionTargetActionPropertyToHclTerraform(struct?: TfS
 }
 
 
-export namespace TfScheduledAction {
+export namespace AwsScheduledAction {
 export interface PauseClusterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#cluster_identifier TfScheduledAction#cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#cluster_identifier AwsScheduledAction#cluster_identifier}
   */
   readonly clusterIdentifier: string;
 }
@@ -574,23 +574,23 @@ export class PauseClusterPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ResizeClusterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#classic TfScheduledAction#classic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#classic AwsScheduledAction#classic}
   */
   readonly classic?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#cluster_identifier TfScheduledAction#cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#cluster_identifier AwsScheduledAction#cluster_identifier}
   */
   readonly clusterIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#cluster_type TfScheduledAction#cluster_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#cluster_type AwsScheduledAction#cluster_type}
   */
   readonly clusterType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#node_type TfScheduledAction#node_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#node_type AwsScheduledAction#node_type}
   */
   readonly nodeType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#number_of_nodes TfScheduledAction#number_of_nodes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#number_of_nodes AwsScheduledAction#number_of_nodes}
   */
   readonly numberOfNodes?: number;
 }
@@ -729,7 +729,7 @@ export class ResizeClusterPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ResumeClusterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#cluster_identifier TfScheduledAction#cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#cluster_identifier AwsScheduledAction#cluster_identifier}
   */
   readonly clusterIdentifier: string;
 }
@@ -782,19 +782,19 @@ export interface TargetActionProperty {
   /**
   * pause_cluster block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#pause_cluster TfScheduledAction#pause_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#pause_cluster AwsScheduledAction#pause_cluster}
   */
   readonly pauseCluster?: PauseClusterProperty;
   /**
   * resize_cluster block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#resize_cluster TfScheduledAction#resize_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#resize_cluster AwsScheduledAction#resize_cluster}
   */
   readonly resizeCluster?: ResizeClusterProperty;
   /**
   * resume_cluster block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#resume_cluster TfScheduledAction#resume_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_scheduled_action#resume_cluster AwsScheduledAction#resume_cluster}
   */
   readonly resumeCluster?: ResumeClusterProperty;
 }

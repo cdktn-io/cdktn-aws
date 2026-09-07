@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTelemetryEvaluationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTelemetryEvaluationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_evaluation#region TfTelemetryEvaluation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_evaluation#region AwsTelemetryEvaluation#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_evaluation#timeouts TfTelemetryEvaluation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_evaluation#timeouts AwsTelemetryEvaluation#timeouts}
   */
-  readonly timeouts?: TfTelemetryEvaluation.TimeoutsProperty;
+  readonly timeouts?: AwsTelemetryEvaluation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_evaluation aws_observabilityadmin_telemetry_evaluation}
 */
-export class TfTelemetryEvaluation extends cdktn.TerraformResource {
+export class AwsTelemetryEvaluation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class TfTelemetryEvaluation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTelemetryEvaluation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTelemetryEvaluation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTelemetryEvaluation to import
-  * @param importFromId The id of the existing TfTelemetryEvaluation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_evaluation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTelemetryEvaluation to import is found
+  * @param importToId The construct id used in the generated config for the AwsTelemetryEvaluation to import
+  * @param importFromId The id of the existing AwsTelemetryEvaluation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_evaluation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTelemetryEvaluation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_observabilityadmin_telemetry_evaluation", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class TfTelemetryEvaluation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTelemetryEvaluationConfig = {}
+  * @param options AwsTelemetryEvaluationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfTelemetryEvaluationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsTelemetryEvaluationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_observabilityadmin_telemetry_evaluation',
       terraformGeneratorMetadata: {
@@ -111,11 +111,11 @@ export class TfTelemetryEvaluation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTelemetryEvaluation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTelemetryEvaluation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTelemetryEvaluation.TimeoutsProperty) {
+  public putTimeouts(value: AwsTelemetryEvaluation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -133,7 +133,7 @@ export class TfTelemetryEvaluation extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfTelemetryEvaluationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsTelemetryEvaluationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -146,10 +146,10 @@ export class TfTelemetryEvaluation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfTelemetryEvaluationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTelemetryEvaluationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTelemetryEvaluation.TimeoutsProperty",
+        storageClassType: "AwsTelemetryEvaluation.TimeoutsProperty",
       },
     };
 
@@ -158,7 +158,7 @@ export class TfTelemetryEvaluation extends cdktn.TerraformResource {
   }
 }
 
-export function tfTelemetryEvaluationTimeoutsPropertyToTerraform(struct?: TfTelemetryEvaluation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTelemetryEvaluationTimeoutsPropertyToTerraform(struct?: AwsTelemetryEvaluation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -170,7 +170,7 @@ export function tfTelemetryEvaluationTimeoutsPropertyToTerraform(struct?: TfTele
 }
 
 
-export function tfTelemetryEvaluationTimeoutsPropertyToHclTerraform(struct?: TfTelemetryEvaluation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTelemetryEvaluationTimeoutsPropertyToHclTerraform(struct?: AwsTelemetryEvaluation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -195,18 +195,18 @@ export function tfTelemetryEvaluationTimeoutsPropertyToHclTerraform(struct?: TfT
 }
 
 
-export namespace TfTelemetryEvaluation {
+export namespace AwsTelemetryEvaluation {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_evaluation#create TfTelemetryEvaluation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_evaluation#create AwsTelemetryEvaluation#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_evaluation#delete TfTelemetryEvaluation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/observabilityadmin_telemetry_evaluation#delete AwsTelemetryEvaluation#delete}
   */
   readonly delete?: string;
 }

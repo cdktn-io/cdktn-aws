@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSipRuleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSipRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#disabled TfSipRule#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#disabled AwsSipRule#disabled}
   */
   readonly disabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#id TfSipRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#id AwsSipRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#name TfSipRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#name AwsSipRule#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#region TfSipRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#region AwsSipRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#trigger_type TfSipRule#trigger_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#trigger_type AwsSipRule#trigger_type}
   */
   readonly triggerType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#trigger_value TfSipRule#trigger_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#trigger_value AwsSipRule#trigger_value}
   */
   readonly triggerValue: string;
   /**
   * target_applications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#target_applications TfSipRule#target_applications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#target_applications AwsSipRule#target_applications}
   */
-  readonly targetApplications: TfSipRule.TargetApplicationsProperty[] | cdktn.IResolvable;
+  readonly targetApplications: AwsSipRule.TargetApplicationsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule aws_chimesdkvoice_sip_rule}
 */
-export class TfSipRule extends cdktn.TerraformResource {
+export class AwsSipRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfSipRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSipRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSipRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSipRule to import
-  * @param importFromId The id of the existing TfSipRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSipRule to import is found
+  * @param importToId The construct id used in the generated config for the AwsSipRule to import
+  * @param importFromId The id of the existing AwsSipRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSipRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chimesdkvoice_sip_rule", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfSipRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSipRuleConfig
+  * @param options AwsSipRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSipRuleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSipRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_chimesdkvoice_sip_rule',
       terraformGeneratorMetadata: {
@@ -195,11 +195,11 @@ export class TfSipRule extends cdktn.TerraformResource {
   }
 
   // target_applications - computed: false, optional: false, required: true
-  private _targetApplications = new TfSipRule.TargetApplicationsPropertyList(this, "target_applications", true);
+  private _targetApplications = new AwsSipRule.TargetApplicationsPropertyList(this, "target_applications", true);
   public get targetApplications() {
     return this._targetApplications;
   }
-  public putTargetApplications(value: TfSipRule.TargetApplicationsProperty[] | cdktn.IResolvable) {
+  public putTargetApplications(value: AwsSipRule.TargetApplicationsProperty[] | cdktn.IResolvable) {
     this._targetApplications.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -219,7 +219,7 @@ export class TfSipRule extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       trigger_type: cdktn.stringToTerraform(this._triggerType),
       trigger_value: cdktn.stringToTerraform(this._triggerValue),
-      target_applications: cdktn.listMapper(tfSipRuleTargetApplicationsPropertyToTerraform, true)(this._targetApplications.internalValue),
+      target_applications: cdktn.listMapper(awsSipRuleTargetApplicationsPropertyToTerraform, true)(this._targetApplications.internalValue),
     };
   }
 
@@ -262,10 +262,10 @@ export class TfSipRule extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       target_applications: {
-        value: cdktn.listMapperHcl(tfSipRuleTargetApplicationsPropertyToHclTerraform, true)(this._targetApplications.internalValue),
+        value: cdktn.listMapperHcl(awsSipRuleTargetApplicationsPropertyToHclTerraform, true)(this._targetApplications.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfSipRule.TargetApplicationsPropertyList",
+        storageClassType: "AwsSipRule.TargetApplicationsPropertyList",
       },
     };
 
@@ -274,7 +274,7 @@ export class TfSipRule extends cdktn.TerraformResource {
   }
 }
 
-export function tfSipRuleTargetApplicationsPropertyToTerraform(struct?: TfSipRule.TargetApplicationsProperty | cdktn.IResolvable): any {
+export function awsSipRuleTargetApplicationsPropertyToTerraform(struct?: AwsSipRule.TargetApplicationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function tfSipRuleTargetApplicationsPropertyToTerraform(struct?: TfSipRul
 }
 
 
-export function tfSipRuleTargetApplicationsPropertyToHclTerraform(struct?: TfSipRule.TargetApplicationsProperty | cdktn.IResolvable): any {
+export function awsSipRuleTargetApplicationsPropertyToHclTerraform(struct?: AwsSipRule.TargetApplicationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,18 +318,18 @@ export function tfSipRuleTargetApplicationsPropertyToHclTerraform(struct?: TfSip
 }
 
 
-export namespace TfSipRule {
+export namespace AwsSipRule {
 export interface TargetApplicationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#aws_region TfSipRule#aws_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#aws_region AwsSipRule#aws_region}
   */
   readonly awsRegion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#priority TfSipRule#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#priority AwsSipRule#priority}
   */
   readonly priority: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#sip_media_application_id TfSipRule#sip_media_application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#sip_media_application_id AwsSipRule#sip_media_application_id}
   */
   readonly sipMediaApplicationId: string;
 }

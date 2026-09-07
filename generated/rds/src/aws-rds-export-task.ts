@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfExportTaskConfig extends cdktn.TerraformMetaArguments {
+export interface AwsExportTaskConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#export_only TfExportTask#export_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#export_only AwsExportTask#export_only}
   */
   readonly exportOnly?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#export_task_identifier TfExportTask#export_task_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#export_task_identifier AwsExportTask#export_task_identifier}
   */
   readonly exportTaskIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#iam_role_arn TfExportTask#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#iam_role_arn AwsExportTask#iam_role_arn}
   */
   readonly iamRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#kms_key_id TfExportTask#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#kms_key_id AwsExportTask#kms_key_id}
   */
   readonly kmsKeyId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#region TfExportTask#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#region AwsExportTask#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#s3_bucket_name TfExportTask#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#s3_bucket_name AwsExportTask#s3_bucket_name}
   */
   readonly s3BucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#s3_prefix TfExportTask#s3_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#s3_prefix AwsExportTask#s3_prefix}
   */
   readonly s3Prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#source_arn TfExportTask#source_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#source_arn AwsExportTask#source_arn}
   */
   readonly sourceArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#timeouts TfExportTask#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#timeouts AwsExportTask#timeouts}
   */
-  readonly timeouts?: TfExportTask.TimeoutsProperty;
+  readonly timeouts?: AwsExportTask.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task aws_rds_export_task}
 */
-export class TfExportTask extends cdktn.TerraformResource {
+export class AwsExportTask extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class TfExportTask extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfExportTask resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsExportTask resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfExportTask to import
-  * @param importFromId The id of the existing TfExportTask that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfExportTask to import is found
+  * @param importToId The construct id used in the generated config for the AwsExportTask to import
+  * @param importFromId The id of the existing AwsExportTask that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsExportTask to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rds_export_task", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class TfExportTask extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfExportTaskConfig
+  * @param options AwsExportTaskConfig
   */
-  public constructor(scope: Construct, id: string, config: TfExportTaskConfig) {
+  public constructor(scope: Construct, id: string, config: AwsExportTaskConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rds_export_task',
       terraformGeneratorMetadata: {
@@ -273,11 +273,11 @@ export class TfExportTask extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfExportTask.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsExportTask.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfExportTask.TimeoutsProperty) {
+  public putTimeouts(value: AwsExportTask.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -302,7 +302,7 @@ export class TfExportTask extends cdktn.TerraformResource {
       s3_bucket_name: cdktn.stringToTerraform(this._s3BucketName),
       s3_prefix: cdktn.stringToTerraform(this._s3Prefix),
       source_arn: cdktn.stringToTerraform(this._sourceArn),
-      timeouts: tfExportTaskTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsExportTaskTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -357,10 +357,10 @@ export class TfExportTask extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfExportTaskTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsExportTaskTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfExportTask.TimeoutsProperty",
+        storageClassType: "AwsExportTask.TimeoutsProperty",
       },
     };
 
@@ -369,7 +369,7 @@ export class TfExportTask extends cdktn.TerraformResource {
   }
 }
 
-export function tfExportTaskTimeoutsPropertyToTerraform(struct?: TfExportTask.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsExportTaskTimeoutsPropertyToTerraform(struct?: AwsExportTask.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function tfExportTaskTimeoutsPropertyToTerraform(struct?: TfExportTask.Ti
 }
 
 
-export function tfExportTaskTimeoutsPropertyToHclTerraform(struct?: TfExportTask.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsExportTaskTimeoutsPropertyToHclTerraform(struct?: AwsExportTask.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -406,18 +406,18 @@ export function tfExportTaskTimeoutsPropertyToHclTerraform(struct?: TfExportTask
 }
 
 
-export namespace TfExportTask {
+export namespace AwsExportTask {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#create TfExportTask#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#create AwsExportTask#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#delete TfExportTask#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_export_task#delete AwsExportTask#delete}
   */
   readonly delete?: string;
 }

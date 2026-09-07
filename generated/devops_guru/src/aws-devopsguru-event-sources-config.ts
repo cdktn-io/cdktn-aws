@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEventSourcesConfigConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEventSourcesConfigConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_event_sources_config#region TfEventSourcesConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_event_sources_config#region AwsEventSourcesConfig#region}
   */
   readonly region?: string;
   /**
   * event_sources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_event_sources_config#event_sources TfEventSourcesConfig#event_sources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_event_sources_config#event_sources AwsEventSourcesConfig#event_sources}
   */
-  readonly eventSources?: TfEventSourcesConfig.EventSourcesProperty[] | cdktn.IResolvable;
+  readonly eventSources?: AwsEventSourcesConfig.EventSourcesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_event_sources_config aws_devopsguru_event_sources_config}
 */
-export class TfEventSourcesConfig extends cdktn.TerraformResource {
+export class AwsEventSourcesConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class TfEventSourcesConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEventSourcesConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEventSourcesConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEventSourcesConfig to import
-  * @param importFromId The id of the existing TfEventSourcesConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_event_sources_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEventSourcesConfig to import is found
+  * @param importToId The construct id used in the generated config for the AwsEventSourcesConfig to import
+  * @param importFromId The id of the existing AwsEventSourcesConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_event_sources_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEventSourcesConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_devopsguru_event_sources_config", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class TfEventSourcesConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEventSourcesConfigConfig = {}
+  * @param options AwsEventSourcesConfigConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfEventSourcesConfigConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsEventSourcesConfigConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_devopsguru_event_sources_config',
       terraformGeneratorMetadata: {
@@ -101,11 +101,11 @@ export class TfEventSourcesConfig extends cdktn.TerraformResource {
   }
 
   // event_sources - computed: false, optional: true, required: false
-  private _eventSources = new TfEventSourcesConfig.EventSourcesPropertyList(this, "event_sources", false);
+  private _eventSources = new AwsEventSourcesConfig.EventSourcesPropertyList(this, "event_sources", false);
   public get eventSources() {
     return this._eventSources;
   }
-  public putEventSources(value: TfEventSourcesConfig.EventSourcesProperty[] | cdktn.IResolvable) {
+  public putEventSources(value: AwsEventSourcesConfig.EventSourcesProperty[] | cdktn.IResolvable) {
     this._eventSources.internalValue = value;
   }
   public resetEventSources() {
@@ -123,7 +123,7 @@ export class TfEventSourcesConfig extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      event_sources: cdktn.listMapper(tfEventSourcesConfigEventSourcesPropertyToTerraform, true)(this._eventSources.internalValue),
+      event_sources: cdktn.listMapper(awsEventSourcesConfigEventSourcesPropertyToTerraform, true)(this._eventSources.internalValue),
     };
   }
 
@@ -136,10 +136,10 @@ export class TfEventSourcesConfig extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       event_sources: {
-        value: cdktn.listMapperHcl(tfEventSourcesConfigEventSourcesPropertyToHclTerraform, true)(this._eventSources.internalValue),
+        value: cdktn.listMapperHcl(awsEventSourcesConfigEventSourcesPropertyToHclTerraform, true)(this._eventSources.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEventSourcesConfig.EventSourcesPropertyList",
+        storageClassType: "AwsEventSourcesConfig.EventSourcesPropertyList",
       },
     };
 
@@ -148,7 +148,7 @@ export class TfEventSourcesConfig extends cdktn.TerraformResource {
   }
 }
 
-export function tfEventSourcesConfigAmazonCodeGuruProfilerPropertyToTerraform(struct?: TfEventSourcesConfig.AmazonCodeGuruProfilerProperty | cdktn.IResolvable): any {
+export function awsEventSourcesConfigAmazonCodeGuruProfilerPropertyToTerraform(struct?: AwsEventSourcesConfig.AmazonCodeGuruProfilerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -159,7 +159,7 @@ export function tfEventSourcesConfigAmazonCodeGuruProfilerPropertyToTerraform(st
 }
 
 
-export function tfEventSourcesConfigAmazonCodeGuruProfilerPropertyToHclTerraform(struct?: TfEventSourcesConfig.AmazonCodeGuruProfilerProperty | cdktn.IResolvable): any {
+export function awsEventSourcesConfigAmazonCodeGuruProfilerPropertyToHclTerraform(struct?: AwsEventSourcesConfig.AmazonCodeGuruProfilerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -178,25 +178,25 @@ export function tfEventSourcesConfigAmazonCodeGuruProfilerPropertyToHclTerraform
 }
 
 
-export function tfEventSourcesConfigEventSourcesPropertyToTerraform(struct?: TfEventSourcesConfig.EventSourcesProperty | cdktn.IResolvable): any {
+export function awsEventSourcesConfigEventSourcesPropertyToTerraform(struct?: AwsEventSourcesConfig.EventSourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    amazon_code_guru_profiler: cdktn.listMapper(tfEventSourcesConfigAmazonCodeGuruProfilerPropertyToTerraform, true)(struct!.amazonCodeGuruProfiler),
+    amazon_code_guru_profiler: cdktn.listMapper(awsEventSourcesConfigAmazonCodeGuruProfilerPropertyToTerraform, true)(struct!.amazonCodeGuruProfiler),
   }
 }
 
 
-export function tfEventSourcesConfigEventSourcesPropertyToHclTerraform(struct?: TfEventSourcesConfig.EventSourcesProperty | cdktn.IResolvable): any {
+export function awsEventSourcesConfigEventSourcesPropertyToHclTerraform(struct?: AwsEventSourcesConfig.EventSourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     amazon_code_guru_profiler: {
-      value: cdktn.listMapperHcl(tfEventSourcesConfigAmazonCodeGuruProfilerPropertyToHclTerraform, true)(struct!.amazonCodeGuruProfiler),
+      value: cdktn.listMapperHcl(awsEventSourcesConfigAmazonCodeGuruProfilerPropertyToHclTerraform, true)(struct!.amazonCodeGuruProfiler),
       isBlock: true,
       type: "list",
       storageClassType: "AmazonCodeGuruProfilerPropertyList",
@@ -208,10 +208,10 @@ export function tfEventSourcesConfigEventSourcesPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfEventSourcesConfig {
+export namespace AwsEventSourcesConfig {
 export interface AmazonCodeGuruProfilerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_event_sources_config#status TfEventSourcesConfig#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_event_sources_config#status AwsEventSourcesConfig#status}
   */
   readonly status: string;
 }
@@ -296,7 +296,7 @@ export interface EventSourcesProperty {
   /**
   * amazon_code_guru_profiler block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_event_sources_config#amazon_code_guru_profiler TfEventSourcesConfig#amazon_code_guru_profiler}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devopsguru_event_sources_config#amazon_code_guru_profiler AwsEventSourcesConfig#amazon_code_guru_profiler}
   */
   readonly amazonCodeGuruProfiler?: AmazonCodeGuruProfilerProperty[] | cdktn.IResolvable;
 }

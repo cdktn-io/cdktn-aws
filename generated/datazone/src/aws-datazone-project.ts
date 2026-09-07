@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfProjectConfig extends cdktn.TerraformMetaArguments {
+export interface AwsProjectConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#description TfProject#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#description AwsProject#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#domain_identifier TfProject#domain_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#domain_identifier AwsProject#domain_identifier}
   */
   readonly domainIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#glossary_terms TfProject#glossary_terms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#glossary_terms AwsProject#glossary_terms}
   */
   readonly glossaryTerms?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#name TfProject#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#name AwsProject#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#region TfProject#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#region AwsProject#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#skip_deletion_check TfProject#skip_deletion_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#skip_deletion_check AwsProject#skip_deletion_check}
   */
   readonly skipDeletionCheck?: boolean | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#timeouts TfProject#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#timeouts AwsProject#timeouts}
   */
-  readonly timeouts?: TfProject.TimeoutsProperty;
+  readonly timeouts?: AwsProject.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project aws_datazone_project}
 */
-export class TfProject extends cdktn.TerraformResource {
+export class AwsProject extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class TfProject extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfProject resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsProject resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfProject to import
-  * @param importFromId The id of the existing TfProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfProject to import is found
+  * @param importToId The construct id used in the generated config for the AwsProject to import
+  * @param importFromId The id of the existing AwsProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsProject to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datazone_project", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class TfProject extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfProjectConfig
+  * @param options AwsProjectConfig
   */
-  public constructor(scope: Construct, id: string, config: TfProjectConfig) {
+  public constructor(scope: Construct, id: string, config: AwsProjectConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datazone_project',
       terraformGeneratorMetadata: {
@@ -144,7 +144,7 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // failure_reasons - computed: true, optional: false, required: false
-  private _failureReasons = new TfProject.FailureReasonsPropertyList(this, "failure_reasons", false);
+  private _failureReasons = new AwsProject.FailureReasonsPropertyList(this, "failure_reasons", false);
   public get failureReasons() {
     return this._failureReasons;
   }
@@ -226,11 +226,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfProject.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsProject.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfProject.TimeoutsProperty) {
+  public putTimeouts(value: AwsProject.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -253,7 +253,7 @@ export class TfProject extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       skip_deletion_check: cdktn.booleanToTerraform(this._skipDeletionCheck),
-      timeouts: tfProjectTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsProjectTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -296,10 +296,10 @@ export class TfProject extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       timeouts: {
-        value: tfProjectTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsProjectTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfProject.TimeoutsProperty",
+        storageClassType: "AwsProject.TimeoutsProperty",
       },
     };
 
@@ -308,7 +308,7 @@ export class TfProject extends cdktn.TerraformResource {
   }
 }
 
-export function tfProjectFailureReasonsPropertyToTerraform(struct?: TfProject.FailureReasonsProperty): any {
+export function awsProjectFailureReasonsPropertyToTerraform(struct?: AwsProject.FailureReasonsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function tfProjectFailureReasonsPropertyToTerraform(struct?: TfProject.Fa
 }
 
 
-export function tfProjectFailureReasonsPropertyToHclTerraform(struct?: TfProject.FailureReasonsProperty): any {
+export function awsProjectFailureReasonsPropertyToHclTerraform(struct?: AwsProject.FailureReasonsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function tfProjectFailureReasonsPropertyToHclTerraform(struct?: TfProject
 }
 
 
-export function tfProjectTimeoutsPropertyToTerraform(struct?: TfProject.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsProjectTimeoutsPropertyToTerraform(struct?: AwsProject.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function tfProjectTimeoutsPropertyToTerraform(struct?: TfProject.Timeouts
 }
 
 
-export function tfProjectTimeoutsPropertyToHclTerraform(struct?: TfProject.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsProjectTimeoutsPropertyToHclTerraform(struct?: AwsProject.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function tfProjectTimeoutsPropertyToHclTerraform(struct?: TfProject.Timeo
 }
 
 
-export namespace TfProject {
+export namespace AwsProject {
 export interface FailureReasonsProperty {
 }
 export class FailureReasonsPropertyOutputReference extends cdktn.ComplexObject {
@@ -430,13 +430,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#create TfProject#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#create AwsProject#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#delete TfProject#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_project#delete AwsProject#delete}
   */
   readonly delete?: string;
 }

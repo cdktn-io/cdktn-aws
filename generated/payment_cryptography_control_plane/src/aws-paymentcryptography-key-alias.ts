@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfKeyAliasConfig extends cdktn.TerraformMetaArguments {
+export interface AwsKeyAliasConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias#alias_name TfKeyAlias#alias_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias#alias_name AwsKeyAlias#alias_name}
   */
   readonly aliasName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias#key_arn TfKeyAlias#key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias#key_arn AwsKeyAlias#key_arn}
   */
   readonly keyArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias#region TfKeyAlias#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias#region AwsKeyAlias#region}
   */
   readonly region?: string;
 }
@@ -25,7 +25,7 @@ export interface TfKeyAliasConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias aws_paymentcryptography_key_alias}
 */
-export class TfKeyAlias extends cdktn.TerraformResource {
+export class AwsKeyAlias extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class TfKeyAlias extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfKeyAlias resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsKeyAlias resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfKeyAlias to import
-  * @param importFromId The id of the existing TfKeyAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfKeyAlias to import is found
+  * @param importToId The construct id used in the generated config for the AwsKeyAlias to import
+  * @param importFromId The id of the existing AwsKeyAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsKeyAlias to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_paymentcryptography_key_alias", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class TfKeyAlias extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfKeyAliasConfig
+  * @param options AwsKeyAliasConfig
   */
-  public constructor(scope: Construct, id: string, config: TfKeyAliasConfig) {
+  public constructor(scope: Construct, id: string, config: AwsKeyAliasConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_paymentcryptography_key_alias',
       terraformGeneratorMetadata: {

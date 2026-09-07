@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResolverQueryLogConfigAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResolverQueryLogConfigAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config_association#id TfResolverQueryLogConfigAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config_association#id AwsResolverQueryLogConfigAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,15 +16,15 @@ export interface TfResolverQueryLogConfigAssociationConfig extends cdktn.Terrafo
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config_association#region TfResolverQueryLogConfigAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config_association#region AwsResolverQueryLogConfigAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config_association#resolver_query_log_config_id TfResolverQueryLogConfigAssociation#resolver_query_log_config_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config_association#resolver_query_log_config_id AwsResolverQueryLogConfigAssociation#resolver_query_log_config_id}
   */
   readonly resolverQueryLogConfigId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config_association#resource_id TfResolverQueryLogConfigAssociation#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config_association#resource_id AwsResolverQueryLogConfigAssociation#resource_id}
   */
   readonly resourceId: string;
 }
@@ -32,7 +32,7 @@ export interface TfResolverQueryLogConfigAssociationConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config_association aws_route53_resolver_query_log_config_association}
 */
-export class TfResolverQueryLogConfigAssociation extends cdktn.TerraformResource {
+export class AwsResolverQueryLogConfigAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfResolverQueryLogConfigAssociation extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResolverQueryLogConfigAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResolverQueryLogConfigAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResolverQueryLogConfigAssociation to import
-  * @param importFromId The id of the existing TfResolverQueryLogConfigAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResolverQueryLogConfigAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsResolverQueryLogConfigAssociation to import
+  * @param importFromId The id of the existing AwsResolverQueryLogConfigAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResolverQueryLogConfigAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_resolver_query_log_config_association", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfResolverQueryLogConfigAssociation extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResolverQueryLogConfigAssociationConfig
+  * @param options AwsResolverQueryLogConfigAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResolverQueryLogConfigAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResolverQueryLogConfigAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_resolver_query_log_config_association',
       terraformGeneratorMetadata: {

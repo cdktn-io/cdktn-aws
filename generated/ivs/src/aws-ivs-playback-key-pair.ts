@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPlaybackKeyPairConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPlaybackKeyPairConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#id TfPlaybackKeyPair#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#id AwsPlaybackKeyPair#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#name TfPlaybackKeyPair#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#name AwsPlaybackKeyPair#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#public_key TfPlaybackKeyPair#public_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#public_key AwsPlaybackKeyPair#public_key}
   */
   readonly publicKey: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#region TfPlaybackKeyPair#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#region AwsPlaybackKeyPair#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#tags TfPlaybackKeyPair#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#tags AwsPlaybackKeyPair#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#tags_all TfPlaybackKeyPair#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#tags_all AwsPlaybackKeyPair#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#timeouts TfPlaybackKeyPair#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#timeouts AwsPlaybackKeyPair#timeouts}
   */
-  readonly timeouts?: TfPlaybackKeyPair.TimeoutsProperty;
+  readonly timeouts?: AwsPlaybackKeyPair.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair aws_ivs_playback_key_pair}
 */
-export class TfPlaybackKeyPair extends cdktn.TerraformResource {
+export class AwsPlaybackKeyPair extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfPlaybackKeyPair extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPlaybackKeyPair resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPlaybackKeyPair resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPlaybackKeyPair to import
-  * @param importFromId The id of the existing TfPlaybackKeyPair that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPlaybackKeyPair to import is found
+  * @param importToId The construct id used in the generated config for the AwsPlaybackKeyPair to import
+  * @param importFromId The id of the existing AwsPlaybackKeyPair that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPlaybackKeyPair to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ivs_playback_key_pair", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfPlaybackKeyPair extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPlaybackKeyPairConfig
+  * @param options AwsPlaybackKeyPairConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPlaybackKeyPairConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPlaybackKeyPairConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ivs_playback_key_pair',
       terraformGeneratorMetadata: {
@@ -211,11 +211,11 @@ export class TfPlaybackKeyPair extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPlaybackKeyPair.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPlaybackKeyPair.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPlaybackKeyPair.TimeoutsProperty) {
+  public putTimeouts(value: AwsPlaybackKeyPair.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -238,7 +238,7 @@ export class TfPlaybackKeyPair extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfPlaybackKeyPairTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsPlaybackKeyPairTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -281,10 +281,10 @@ export class TfPlaybackKeyPair extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfPlaybackKeyPairTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPlaybackKeyPairTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPlaybackKeyPair.TimeoutsProperty",
+        storageClassType: "AwsPlaybackKeyPair.TimeoutsProperty",
       },
     };
 
@@ -293,7 +293,7 @@ export class TfPlaybackKeyPair extends cdktn.TerraformResource {
   }
 }
 
-export function tfPlaybackKeyPairTimeoutsPropertyToTerraform(struct?: TfPlaybackKeyPair.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPlaybackKeyPairTimeoutsPropertyToTerraform(struct?: AwsPlaybackKeyPair.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function tfPlaybackKeyPairTimeoutsPropertyToTerraform(struct?: TfPlayback
 }
 
 
-export function tfPlaybackKeyPairTimeoutsPropertyToHclTerraform(struct?: TfPlaybackKeyPair.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPlaybackKeyPairTimeoutsPropertyToHclTerraform(struct?: AwsPlaybackKeyPair.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,14 +330,14 @@ export function tfPlaybackKeyPairTimeoutsPropertyToHclTerraform(struct?: TfPlayb
 }
 
 
-export namespace TfPlaybackKeyPair {
+export namespace AwsPlaybackKeyPair {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#create TfPlaybackKeyPair#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#create AwsPlaybackKeyPair#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#delete TfPlaybackKeyPair#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_playback_key_pair#delete AwsPlaybackKeyPair#delete}
   */
   readonly delete?: string;
 }

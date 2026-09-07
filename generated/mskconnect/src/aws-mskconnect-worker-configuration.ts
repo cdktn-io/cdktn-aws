@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfWorkerConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsWorkerConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#description TfWorkerConfiguration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#description AwsWorkerConfiguration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#id TfWorkerConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#id AwsWorkerConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#name TfWorkerConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#name AwsWorkerConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#properties_file_content TfWorkerConfiguration#properties_file_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#properties_file_content AwsWorkerConfiguration#properties_file_content}
   */
   readonly propertiesFileContent: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#region TfWorkerConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#region AwsWorkerConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#tags TfWorkerConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#tags AwsWorkerConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#tags_all TfWorkerConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#tags_all AwsWorkerConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#timeouts TfWorkerConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#timeouts AwsWorkerConfiguration#timeouts}
   */
-  readonly timeouts?: TfWorkerConfiguration.TimeoutsProperty;
+  readonly timeouts?: AwsWorkerConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration aws_mskconnect_worker_configuration}
 */
-export class TfWorkerConfiguration extends cdktn.TerraformResource {
+export class AwsWorkerConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfWorkerConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfWorkerConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsWorkerConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfWorkerConfiguration to import
-  * @param importFromId The id of the existing TfWorkerConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfWorkerConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsWorkerConfiguration to import
+  * @param importFromId The id of the existing AwsWorkerConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsWorkerConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mskconnect_worker_configuration", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfWorkerConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfWorkerConfigurationConfig
+  * @param options AwsWorkerConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfWorkerConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsWorkerConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_mskconnect_worker_configuration',
       terraformGeneratorMetadata: {
@@ -229,11 +229,11 @@ export class TfWorkerConfiguration extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfWorkerConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsWorkerConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfWorkerConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: AwsWorkerConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -257,7 +257,7 @@ export class TfWorkerConfiguration extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfWorkerConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsWorkerConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -306,10 +306,10 @@ export class TfWorkerConfiguration extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfWorkerConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsWorkerConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfWorkerConfiguration.TimeoutsProperty",
+        storageClassType: "AwsWorkerConfiguration.TimeoutsProperty",
       },
     };
 
@@ -318,7 +318,7 @@ export class TfWorkerConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfWorkerConfigurationTimeoutsPropertyToTerraform(struct?: TfWorkerConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsWorkerConfigurationTimeoutsPropertyToTerraform(struct?: AwsWorkerConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function tfWorkerConfigurationTimeoutsPropertyToTerraform(struct?: TfWork
 }
 
 
-export function tfWorkerConfigurationTimeoutsPropertyToHclTerraform(struct?: TfWorkerConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsWorkerConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsWorkerConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -348,10 +348,10 @@ export function tfWorkerConfigurationTimeoutsPropertyToHclTerraform(struct?: TfW
 }
 
 
-export namespace TfWorkerConfiguration {
+export namespace AwsWorkerConfiguration {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#delete TfWorkerConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mskconnect_worker_configuration#delete AwsWorkerConfiguration#delete}
   */
   readonly delete?: string;
 }

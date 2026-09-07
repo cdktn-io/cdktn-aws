@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRetentionConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRetentionConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_retention_configuration#region TfRetentionConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_retention_configuration#region AwsRetentionConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_retention_configuration#retention_period_in_days TfRetentionConfiguration#retention_period_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_retention_configuration#retention_period_in_days AwsRetentionConfiguration#retention_period_in_days}
   */
   readonly retentionPeriodInDays: number;
 }
@@ -21,7 +21,7 @@ export interface TfRetentionConfigurationConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_retention_configuration aws_config_retention_configuration}
 */
-export class TfRetentionConfiguration extends cdktn.TerraformResource {
+export class AwsRetentionConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class TfRetentionConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRetentionConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRetentionConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRetentionConfiguration to import
-  * @param importFromId The id of the existing TfRetentionConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_retention_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRetentionConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsRetentionConfiguration to import
+  * @param importFromId The id of the existing AwsRetentionConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_retention_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRetentionConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_config_retention_configuration", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class TfRetentionConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRetentionConfigurationConfig
+  * @param options AwsRetentionConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRetentionConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRetentionConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_config_retention_configuration',
       terraformGeneratorMetadata: {

@@ -5,28 +5,28 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPublicKeyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPublicKeyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key#comment TfPublicKey#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key#comment AwsPublicKey#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key#encoded_key TfPublicKey#encoded_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key#encoded_key AwsPublicKey#encoded_key}
   */
   readonly encodedKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key#id TfPublicKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key#id AwsPublicKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key#name TfPublicKey#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key#name AwsPublicKey#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key#name_prefix TfPublicKey#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key#name_prefix AwsPublicKey#name_prefix}
   */
   readonly namePrefix?: string;
 }
@@ -34,7 +34,7 @@ export interface TfPublicKeyConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key aws_cloudfront_public_key}
 */
-export class TfPublicKey extends cdktn.TerraformResource {
+export class AwsPublicKey extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfPublicKey extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPublicKey resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPublicKey resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPublicKey to import
-  * @param importFromId The id of the existing TfPublicKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPublicKey to import is found
+  * @param importToId The construct id used in the generated config for the AwsPublicKey to import
+  * @param importFromId The id of the existing AwsPublicKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_public_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPublicKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_public_key", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfPublicKey extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPublicKeyConfig
+  * @param options AwsPublicKeyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPublicKeyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPublicKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_public_key',
       terraformGeneratorMetadata: {

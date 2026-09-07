@@ -5,136 +5,136 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBrokerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBrokerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#apply_immediately TfBroker#apply_immediately}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#apply_immediately AwsBroker#apply_immediately}
   */
   readonly applyImmediately?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#authentication_strategy TfBroker#authentication_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#authentication_strategy AwsBroker#authentication_strategy}
   */
   readonly authenticationStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#auto_minor_version_upgrade TfBroker#auto_minor_version_upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#auto_minor_version_upgrade AwsBroker#auto_minor_version_upgrade}
   */
   readonly autoMinorVersionUpgrade?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#broker_name TfBroker#broker_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#broker_name AwsBroker#broker_name}
   */
   readonly brokerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#data_replication_mode TfBroker#data_replication_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#data_replication_mode AwsBroker#data_replication_mode}
   */
   readonly dataReplicationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#data_replication_primary_broker_arn TfBroker#data_replication_primary_broker_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#data_replication_primary_broker_arn AwsBroker#data_replication_primary_broker_arn}
   */
   readonly dataReplicationPrimaryBrokerArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#deployment_mode TfBroker#deployment_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#deployment_mode AwsBroker#deployment_mode}
   */
   readonly deploymentMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#engine_type TfBroker#engine_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#engine_type AwsBroker#engine_type}
   */
   readonly engineType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#engine_version TfBroker#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#engine_version AwsBroker#engine_version}
   */
   readonly engineVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#host_instance_type TfBroker#host_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#host_instance_type AwsBroker#host_instance_type}
   */
   readonly hostInstanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#id TfBroker#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#id AwsBroker#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#publicly_accessible TfBroker#publicly_accessible}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#publicly_accessible AwsBroker#publicly_accessible}
   */
   readonly publiclyAccessible?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#region TfBroker#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#region AwsBroker#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#resource_share_arns TfBroker#resource_share_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#resource_share_arns AwsBroker#resource_share_arns}
   */
   readonly resourceShareArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#security_groups TfBroker#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#security_groups AwsBroker#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#storage_type TfBroker#storage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#storage_type AwsBroker#storage_type}
   */
   readonly storageType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#subnet_ids TfBroker#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#subnet_ids AwsBroker#subnet_ids}
   */
   readonly subnetIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#tags TfBroker#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#tags AwsBroker#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#tags_all TfBroker#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#tags_all AwsBroker#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#configuration TfBroker#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#configuration AwsBroker#configuration}
   */
-  readonly configuration?: TfBroker.ConfigurationProperty;
+  readonly configuration?: AwsBroker.ConfigurationProperty;
   /**
   * encryption_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#encryption_options TfBroker#encryption_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#encryption_options AwsBroker#encryption_options}
   */
-  readonly encryptionOptions?: TfBroker.EncryptionOptionsProperty;
+  readonly encryptionOptions?: AwsBroker.EncryptionOptionsProperty;
   /**
   * ldap_server_metadata block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#ldap_server_metadata TfBroker#ldap_server_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#ldap_server_metadata AwsBroker#ldap_server_metadata}
   */
-  readonly ldapServerMetadata?: TfBroker.LdapServerMetadataProperty;
+  readonly ldapServerMetadata?: AwsBroker.LdapServerMetadataProperty;
   /**
   * logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#logs TfBroker#logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#logs AwsBroker#logs}
   */
-  readonly logs?: TfBroker.LogsProperty;
+  readonly logs?: AwsBroker.LogsProperty;
   /**
   * maintenance_window_start_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#maintenance_window_start_time TfBroker#maintenance_window_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#maintenance_window_start_time AwsBroker#maintenance_window_start_time}
   */
-  readonly maintenanceWindowStartTime?: TfBroker.MaintenanceWindowStartTimeProperty;
+  readonly maintenanceWindowStartTime?: AwsBroker.MaintenanceWindowStartTimeProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#timeouts TfBroker#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#timeouts AwsBroker#timeouts}
   */
-  readonly timeouts?: TfBroker.TimeoutsProperty;
+  readonly timeouts?: AwsBroker.TimeoutsProperty;
   /**
   * user block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#user TfBroker#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#user AwsBroker#user}
   */
-  readonly user?: TfBroker.UserProperty[] | cdktn.IResolvable;
+  readonly user?: AwsBroker.UserProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker aws_mq_broker}
 */
-export class TfBroker extends cdktn.TerraformResource {
+export class AwsBroker extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -145,11 +145,11 @@ export class TfBroker extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBroker resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBroker resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBroker to import
-  * @param importFromId The id of the existing TfBroker that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBroker to import is found
+  * @param importToId The construct id used in the generated config for the AwsBroker to import
+  * @param importFromId The id of the existing AwsBroker that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBroker to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mq_broker", importId: importFromId, provider });
@@ -164,9 +164,9 @@ export class TfBroker extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBrokerConfig
+  * @param options AwsBrokerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBrokerConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBrokerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_mq_broker',
       terraformGeneratorMetadata: {
@@ -384,7 +384,7 @@ export class TfBroker extends cdktn.TerraformResource {
   }
 
   // instances - computed: true, optional: false, required: false
-  private _instances = new TfBroker.InstancesPropertyList(this, "instances", false);
+  private _instances = new AwsBroker.InstancesPropertyList(this, "instances", false);
   public get instances() {
     return this._instances;
   }
@@ -459,7 +459,7 @@ export class TfBroker extends cdktn.TerraformResource {
   }
 
   // shared_resources - computed: true, optional: false, required: false
-  private _sharedResources = new TfBroker.SharedResourcesPropertyList(this, "shared_resources", false);
+  private _sharedResources = new AwsBroker.SharedResourcesPropertyList(this, "shared_resources", false);
   public get sharedResources() {
     return this._sharedResources;
   }
@@ -529,11 +529,11 @@ export class TfBroker extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new TfBroker.ConfigurationPropertyOutputReference(this, "configuration");
+  private _configuration = new AwsBroker.ConfigurationPropertyOutputReference(this, "configuration");
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: TfBroker.ConfigurationProperty) {
+  public putConfiguration(value: AwsBroker.ConfigurationProperty) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -545,11 +545,11 @@ export class TfBroker extends cdktn.TerraformResource {
   }
 
   // encryption_options - computed: false, optional: true, required: false
-  private _encryptionOptions = new TfBroker.EncryptionOptionsPropertyOutputReference(this, "encryption_options");
+  private _encryptionOptions = new AwsBroker.EncryptionOptionsPropertyOutputReference(this, "encryption_options");
   public get encryptionOptions() {
     return this._encryptionOptions;
   }
-  public putEncryptionOptions(value: TfBroker.EncryptionOptionsProperty) {
+  public putEncryptionOptions(value: AwsBroker.EncryptionOptionsProperty) {
     this._encryptionOptions.internalValue = value;
   }
   public resetEncryptionOptions() {
@@ -561,11 +561,11 @@ export class TfBroker extends cdktn.TerraformResource {
   }
 
   // ldap_server_metadata - computed: false, optional: true, required: false
-  private _ldapServerMetadata = new TfBroker.LdapServerMetadataPropertyOutputReference(this, "ldap_server_metadata");
+  private _ldapServerMetadata = new AwsBroker.LdapServerMetadataPropertyOutputReference(this, "ldap_server_metadata");
   public get ldapServerMetadata() {
     return this._ldapServerMetadata;
   }
-  public putLdapServerMetadata(value: TfBroker.LdapServerMetadataProperty) {
+  public putLdapServerMetadata(value: AwsBroker.LdapServerMetadataProperty) {
     this._ldapServerMetadata.internalValue = value;
   }
   public resetLdapServerMetadata() {
@@ -577,11 +577,11 @@ export class TfBroker extends cdktn.TerraformResource {
   }
 
   // logs - computed: false, optional: true, required: false
-  private _logs = new TfBroker.LogsPropertyOutputReference(this, "logs");
+  private _logs = new AwsBroker.LogsPropertyOutputReference(this, "logs");
   public get logs() {
     return this._logs;
   }
-  public putLogs(value: TfBroker.LogsProperty) {
+  public putLogs(value: AwsBroker.LogsProperty) {
     this._logs.internalValue = value;
   }
   public resetLogs() {
@@ -593,11 +593,11 @@ export class TfBroker extends cdktn.TerraformResource {
   }
 
   // maintenance_window_start_time - computed: false, optional: true, required: false
-  private _maintenanceWindowStartTime = new TfBroker.MaintenanceWindowStartTimePropertyOutputReference(this, "maintenance_window_start_time");
+  private _maintenanceWindowStartTime = new AwsBroker.MaintenanceWindowStartTimePropertyOutputReference(this, "maintenance_window_start_time");
   public get maintenanceWindowStartTime() {
     return this._maintenanceWindowStartTime;
   }
-  public putMaintenanceWindowStartTime(value: TfBroker.MaintenanceWindowStartTimeProperty) {
+  public putMaintenanceWindowStartTime(value: AwsBroker.MaintenanceWindowStartTimeProperty) {
     this._maintenanceWindowStartTime.internalValue = value;
   }
   public resetMaintenanceWindowStartTime() {
@@ -609,11 +609,11 @@ export class TfBroker extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfBroker.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsBroker.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfBroker.TimeoutsProperty) {
+  public putTimeouts(value: AwsBroker.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -625,11 +625,11 @@ export class TfBroker extends cdktn.TerraformResource {
   }
 
   // user - computed: false, optional: true, required: false
-  private _user = new TfBroker.UserPropertyList(this, "user", true);
+  private _user = new AwsBroker.UserPropertyList(this, "user", true);
   public get user() {
     return this._user;
   }
-  public putUser(value: TfBroker.UserProperty[] | cdktn.IResolvable) {
+  public putUser(value: AwsBroker.UserProperty[] | cdktn.IResolvable) {
     this._user.internalValue = value;
   }
   public resetUser() {
@@ -665,13 +665,13 @@ export class TfBroker extends cdktn.TerraformResource {
       subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      configuration: tfBrokerConfigurationPropertyToTerraform(this._configuration.internalValue),
-      encryption_options: tfBrokerEncryptionOptionsPropertyToTerraform(this._encryptionOptions.internalValue),
-      ldap_server_metadata: tfBrokerLdapServerMetadataPropertyToTerraform(this._ldapServerMetadata.internalValue),
-      logs: tfBrokerLogsPropertyToTerraform(this._logs.internalValue),
-      maintenance_window_start_time: tfBrokerMaintenanceWindowStartTimePropertyToTerraform(this._maintenanceWindowStartTime.internalValue),
-      timeouts: tfBrokerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      user: cdktn.listMapper(tfBrokerUserPropertyToTerraform, true)(this._user.internalValue),
+      configuration: awsBrokerConfigurationPropertyToTerraform(this._configuration.internalValue),
+      encryption_options: awsBrokerEncryptionOptionsPropertyToTerraform(this._encryptionOptions.internalValue),
+      ldap_server_metadata: awsBrokerLdapServerMetadataPropertyToTerraform(this._ldapServerMetadata.internalValue),
+      logs: awsBrokerLogsPropertyToTerraform(this._logs.internalValue),
+      maintenance_window_start_time: awsBrokerMaintenanceWindowStartTimePropertyToTerraform(this._maintenanceWindowStartTime.internalValue),
+      timeouts: awsBrokerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      user: cdktn.listMapper(awsBrokerUserPropertyToTerraform, true)(this._user.internalValue),
     };
   }
 
@@ -792,46 +792,46 @@ export class TfBroker extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       configuration: {
-        value: tfBrokerConfigurationPropertyToHclTerraform(this._configuration.internalValue),
+        value: awsBrokerConfigurationPropertyToHclTerraform(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBroker.ConfigurationPropertyList",
+        storageClassType: "AwsBroker.ConfigurationPropertyList",
       },
       encryption_options: {
-        value: tfBrokerEncryptionOptionsPropertyToHclTerraform(this._encryptionOptions.internalValue),
+        value: awsBrokerEncryptionOptionsPropertyToHclTerraform(this._encryptionOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBroker.EncryptionOptionsPropertyList",
+        storageClassType: "AwsBroker.EncryptionOptionsPropertyList",
       },
       ldap_server_metadata: {
-        value: tfBrokerLdapServerMetadataPropertyToHclTerraform(this._ldapServerMetadata.internalValue),
+        value: awsBrokerLdapServerMetadataPropertyToHclTerraform(this._ldapServerMetadata.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBroker.LdapServerMetadataPropertyList",
+        storageClassType: "AwsBroker.LdapServerMetadataPropertyList",
       },
       logs: {
-        value: tfBrokerLogsPropertyToHclTerraform(this._logs.internalValue),
+        value: awsBrokerLogsPropertyToHclTerraform(this._logs.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBroker.LogsPropertyList",
+        storageClassType: "AwsBroker.LogsPropertyList",
       },
       maintenance_window_start_time: {
-        value: tfBrokerMaintenanceWindowStartTimePropertyToHclTerraform(this._maintenanceWindowStartTime.internalValue),
+        value: awsBrokerMaintenanceWindowStartTimePropertyToHclTerraform(this._maintenanceWindowStartTime.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBroker.MaintenanceWindowStartTimePropertyList",
+        storageClassType: "AwsBroker.MaintenanceWindowStartTimePropertyList",
       },
       timeouts: {
-        value: tfBrokerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsBrokerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfBroker.TimeoutsProperty",
+        storageClassType: "AwsBroker.TimeoutsProperty",
       },
       user: {
-        value: cdktn.listMapperHcl(tfBrokerUserPropertyToHclTerraform, true)(this._user.internalValue),
+        value: cdktn.listMapperHcl(awsBrokerUserPropertyToHclTerraform, true)(this._user.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfBroker.UserPropertyList",
+        storageClassType: "AwsBroker.UserPropertyList",
       },
     };
 
@@ -840,7 +840,7 @@ export class TfBroker extends cdktn.TerraformResource {
   }
 }
 
-export function tfBrokerInstancesPropertyToTerraform(struct?: TfBroker.InstancesProperty): any {
+export function awsBrokerInstancesPropertyToTerraform(struct?: AwsBroker.InstancesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -850,7 +850,7 @@ export function tfBrokerInstancesPropertyToTerraform(struct?: TfBroker.Instances
 }
 
 
-export function tfBrokerInstancesPropertyToHclTerraform(struct?: TfBroker.InstancesProperty): any {
+export function awsBrokerInstancesPropertyToHclTerraform(struct?: AwsBroker.InstancesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -861,7 +861,7 @@ export function tfBrokerInstancesPropertyToHclTerraform(struct?: TfBroker.Instan
 }
 
 
-export function tfBrokerSharedResourcesPropertyToTerraform(struct?: TfBroker.SharedResourcesProperty): any {
+export function awsBrokerSharedResourcesPropertyToTerraform(struct?: AwsBroker.SharedResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -871,7 +871,7 @@ export function tfBrokerSharedResourcesPropertyToTerraform(struct?: TfBroker.Sha
 }
 
 
-export function tfBrokerSharedResourcesPropertyToHclTerraform(struct?: TfBroker.SharedResourcesProperty): any {
+export function awsBrokerSharedResourcesPropertyToHclTerraform(struct?: AwsBroker.SharedResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -882,7 +882,7 @@ export function tfBrokerSharedResourcesPropertyToHclTerraform(struct?: TfBroker.
 }
 
 
-export function tfBrokerConfigurationPropertyToTerraform(struct?: TfBroker.ConfigurationPropertyOutputReference | TfBroker.ConfigurationProperty): any {
+export function awsBrokerConfigurationPropertyToTerraform(struct?: AwsBroker.ConfigurationPropertyOutputReference | AwsBroker.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -894,7 +894,7 @@ export function tfBrokerConfigurationPropertyToTerraform(struct?: TfBroker.Confi
 }
 
 
-export function tfBrokerConfigurationPropertyToHclTerraform(struct?: TfBroker.ConfigurationPropertyOutputReference | TfBroker.ConfigurationProperty): any {
+export function awsBrokerConfigurationPropertyToHclTerraform(struct?: AwsBroker.ConfigurationPropertyOutputReference | AwsBroker.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -919,7 +919,7 @@ export function tfBrokerConfigurationPropertyToHclTerraform(struct?: TfBroker.Co
 }
 
 
-export function tfBrokerEncryptionOptionsPropertyToTerraform(struct?: TfBroker.EncryptionOptionsPropertyOutputReference | TfBroker.EncryptionOptionsProperty): any {
+export function awsBrokerEncryptionOptionsPropertyToTerraform(struct?: AwsBroker.EncryptionOptionsPropertyOutputReference | AwsBroker.EncryptionOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -931,7 +931,7 @@ export function tfBrokerEncryptionOptionsPropertyToTerraform(struct?: TfBroker.E
 }
 
 
-export function tfBrokerEncryptionOptionsPropertyToHclTerraform(struct?: TfBroker.EncryptionOptionsPropertyOutputReference | TfBroker.EncryptionOptionsProperty): any {
+export function awsBrokerEncryptionOptionsPropertyToHclTerraform(struct?: AwsBroker.EncryptionOptionsPropertyOutputReference | AwsBroker.EncryptionOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -956,7 +956,7 @@ export function tfBrokerEncryptionOptionsPropertyToHclTerraform(struct?: TfBroke
 }
 
 
-export function tfBrokerLdapServerMetadataPropertyToTerraform(struct?: TfBroker.LdapServerMetadataPropertyOutputReference | TfBroker.LdapServerMetadataProperty): any {
+export function awsBrokerLdapServerMetadataPropertyToTerraform(struct?: AwsBroker.LdapServerMetadataPropertyOutputReference | AwsBroker.LdapServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -977,7 +977,7 @@ export function tfBrokerLdapServerMetadataPropertyToTerraform(struct?: TfBroker.
 }
 
 
-export function tfBrokerLdapServerMetadataPropertyToHclTerraform(struct?: TfBroker.LdapServerMetadataPropertyOutputReference | TfBroker.LdapServerMetadataProperty): any {
+export function awsBrokerLdapServerMetadataPropertyToHclTerraform(struct?: AwsBroker.LdapServerMetadataPropertyOutputReference | AwsBroker.LdapServerMetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1056,7 +1056,7 @@ export function tfBrokerLdapServerMetadataPropertyToHclTerraform(struct?: TfBrok
 }
 
 
-export function tfBrokerLogsPropertyToTerraform(struct?: TfBroker.LogsPropertyOutputReference | TfBroker.LogsProperty): any {
+export function awsBrokerLogsPropertyToTerraform(struct?: AwsBroker.LogsPropertyOutputReference | AwsBroker.LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1068,7 +1068,7 @@ export function tfBrokerLogsPropertyToTerraform(struct?: TfBroker.LogsPropertyOu
 }
 
 
-export function tfBrokerLogsPropertyToHclTerraform(struct?: TfBroker.LogsPropertyOutputReference | TfBroker.LogsProperty): any {
+export function awsBrokerLogsPropertyToHclTerraform(struct?: AwsBroker.LogsPropertyOutputReference | AwsBroker.LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1093,7 +1093,7 @@ export function tfBrokerLogsPropertyToHclTerraform(struct?: TfBroker.LogsPropert
 }
 
 
-export function tfBrokerMaintenanceWindowStartTimePropertyToTerraform(struct?: TfBroker.MaintenanceWindowStartTimePropertyOutputReference | TfBroker.MaintenanceWindowStartTimeProperty): any {
+export function awsBrokerMaintenanceWindowStartTimePropertyToTerraform(struct?: AwsBroker.MaintenanceWindowStartTimePropertyOutputReference | AwsBroker.MaintenanceWindowStartTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1106,7 +1106,7 @@ export function tfBrokerMaintenanceWindowStartTimePropertyToTerraform(struct?: T
 }
 
 
-export function tfBrokerMaintenanceWindowStartTimePropertyToHclTerraform(struct?: TfBroker.MaintenanceWindowStartTimePropertyOutputReference | TfBroker.MaintenanceWindowStartTimeProperty): any {
+export function awsBrokerMaintenanceWindowStartTimePropertyToHclTerraform(struct?: AwsBroker.MaintenanceWindowStartTimePropertyOutputReference | AwsBroker.MaintenanceWindowStartTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1137,7 +1137,7 @@ export function tfBrokerMaintenanceWindowStartTimePropertyToHclTerraform(struct?
 }
 
 
-export function tfBrokerTimeoutsPropertyToTerraform(struct?: TfBroker.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBrokerTimeoutsPropertyToTerraform(struct?: AwsBroker.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1150,7 +1150,7 @@ export function tfBrokerTimeoutsPropertyToTerraform(struct?: TfBroker.TimeoutsPr
 }
 
 
-export function tfBrokerTimeoutsPropertyToHclTerraform(struct?: TfBroker.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBrokerTimeoutsPropertyToHclTerraform(struct?: AwsBroker.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1181,7 +1181,7 @@ export function tfBrokerTimeoutsPropertyToHclTerraform(struct?: TfBroker.Timeout
 }
 
 
-export function tfBrokerUserPropertyToTerraform(struct?: TfBroker.UserProperty | cdktn.IResolvable): any {
+export function awsBrokerUserPropertyToTerraform(struct?: AwsBroker.UserProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1196,7 +1196,7 @@ export function tfBrokerUserPropertyToTerraform(struct?: TfBroker.UserProperty |
 }
 
 
-export function tfBrokerUserPropertyToHclTerraform(struct?: TfBroker.UserProperty | cdktn.IResolvable): any {
+export function awsBrokerUserPropertyToHclTerraform(struct?: AwsBroker.UserProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1239,7 +1239,7 @@ export function tfBrokerUserPropertyToHclTerraform(struct?: TfBroker.UserPropert
 }
 
 
-export namespace TfBroker {
+export namespace AwsBroker {
 export interface InstancesProperty {
 }
 export class InstancesPropertyOutputReference extends cdktn.ComplexObject {
@@ -1375,14 +1375,14 @@ export class SharedResourcesPropertyList extends cdktn.ComplexList {
 }
 export interface ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#id TfBroker#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#id AwsBroker#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#revision TfBroker#revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#revision AwsBroker#revision}
   */
   readonly revision?: number;
 }
@@ -1458,11 +1458,11 @@ export class ConfigurationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EncryptionOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#kms_key_id TfBroker#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#kms_key_id AwsBroker#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#use_aws_owned_key TfBroker#use_aws_owned_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#use_aws_owned_key AwsBroker#use_aws_owned_key}
   */
   readonly useAwsOwnedKey?: boolean | cdktn.IResolvable;
 }
@@ -1538,47 +1538,47 @@ export class EncryptionOptionsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface LdapServerMetadataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#hosts TfBroker#hosts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#hosts AwsBroker#hosts}
   */
   readonly hosts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#role_base TfBroker#role_base}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#role_base AwsBroker#role_base}
   */
   readonly roleBase?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#role_name TfBroker#role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#role_name AwsBroker#role_name}
   */
   readonly roleName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#role_search_matching TfBroker#role_search_matching}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#role_search_matching AwsBroker#role_search_matching}
   */
   readonly roleSearchMatching?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#role_search_subtree TfBroker#role_search_subtree}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#role_search_subtree AwsBroker#role_search_subtree}
   */
   readonly roleSearchSubtree?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#service_account_password TfBroker#service_account_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#service_account_password AwsBroker#service_account_password}
   */
   readonly serviceAccountPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#service_account_username TfBroker#service_account_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#service_account_username AwsBroker#service_account_username}
   */
   readonly serviceAccountUsername?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#user_base TfBroker#user_base}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#user_base AwsBroker#user_base}
   */
   readonly userBase?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#user_role_name TfBroker#user_role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#user_role_name AwsBroker#user_role_name}
   */
   readonly userRoleName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#user_search_matching TfBroker#user_search_matching}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#user_search_matching AwsBroker#user_search_matching}
   */
   readonly userSearchMatching?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#user_search_subtree TfBroker#user_search_subtree}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#user_search_subtree AwsBroker#user_search_subtree}
   */
   readonly userSearchSubtree?: boolean | cdktn.IResolvable;
 }
@@ -1852,11 +1852,11 @@ export class LdapServerMetadataPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface LogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#audit TfBroker#audit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#audit AwsBroker#audit}
   */
   readonly audit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#general TfBroker#general}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#general AwsBroker#general}
   */
   readonly general?: boolean | cdktn.IResolvable;
 }
@@ -1932,15 +1932,15 @@ export class LogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MaintenanceWindowStartTimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#day_of_week TfBroker#day_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#day_of_week AwsBroker#day_of_week}
   */
   readonly dayOfWeek: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#time_of_day TfBroker#time_of_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#time_of_day AwsBroker#time_of_day}
   */
   readonly timeOfDay: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#time_zone TfBroker#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#time_zone AwsBroker#time_zone}
   */
   readonly timeZone: string;
 }
@@ -2029,15 +2029,15 @@ export class MaintenanceWindowStartTimePropertyOutputReference extends cdktn.Com
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#create TfBroker#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#create AwsBroker#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#delete TfBroker#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#delete AwsBroker#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#update TfBroker#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#update AwsBroker#update}
   */
   readonly update?: string;
 }
@@ -2145,23 +2145,23 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface UserProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#console_access TfBroker#console_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#console_access AwsBroker#console_access}
   */
   readonly consoleAccess?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#groups TfBroker#groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#groups AwsBroker#groups}
   */
   readonly groups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#password TfBroker#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#password AwsBroker#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#replication_user TfBroker#replication_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#replication_user AwsBroker#replication_user}
   */
   readonly replicationUser?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#username TfBroker#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mq_broker#username AwsBroker#username}
   */
   readonly username: string;
 }

@@ -5,134 +5,134 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfNodeGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsNodeGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#ami_type TfNodeGroup#ami_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#ami_type AwsNodeGroup#ami_type}
   */
   readonly amiType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#capacity_type TfNodeGroup#capacity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#capacity_type AwsNodeGroup#capacity_type}
   */
   readonly capacityType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#cluster_name TfNodeGroup#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#cluster_name AwsNodeGroup#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#disk_size TfNodeGroup#disk_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#disk_size AwsNodeGroup#disk_size}
   */
   readonly diskSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#force_update_version TfNodeGroup#force_update_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#force_update_version AwsNodeGroup#force_update_version}
   */
   readonly forceUpdateVersion?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#id TfNodeGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#id AwsNodeGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#instance_types TfNodeGroup#instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#instance_types AwsNodeGroup#instance_types}
   */
   readonly instanceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#labels TfNodeGroup#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#labels AwsNodeGroup#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_group_name TfNodeGroup#node_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_group_name AwsNodeGroup#node_group_name}
   */
   readonly nodeGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_group_name_prefix TfNodeGroup#node_group_name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_group_name_prefix AwsNodeGroup#node_group_name_prefix}
   */
   readonly nodeGroupNamePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_role_arn TfNodeGroup#node_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_role_arn AwsNodeGroup#node_role_arn}
   */
   readonly nodeRoleArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#region TfNodeGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#region AwsNodeGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#release_version TfNodeGroup#release_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#release_version AwsNodeGroup#release_version}
   */
   readonly releaseVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#subnet_ids TfNodeGroup#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#subnet_ids AwsNodeGroup#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#tags TfNodeGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#tags AwsNodeGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#tags_all TfNodeGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#tags_all AwsNodeGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#version TfNodeGroup#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#version AwsNodeGroup#version}
   */
   readonly version?: string;
   /**
   * launch_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#launch_template TfNodeGroup#launch_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#launch_template AwsNodeGroup#launch_template}
   */
-  readonly launchTemplate?: TfNodeGroup.LaunchTemplateProperty;
+  readonly launchTemplate?: AwsNodeGroup.LaunchTemplateProperty;
   /**
   * node_repair_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_repair_config TfNodeGroup#node_repair_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_repair_config AwsNodeGroup#node_repair_config}
   */
-  readonly nodeRepairConfig?: TfNodeGroup.NodeRepairConfigProperty;
+  readonly nodeRepairConfig?: AwsNodeGroup.NodeRepairConfigProperty;
   /**
   * remote_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#remote_access TfNodeGroup#remote_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#remote_access AwsNodeGroup#remote_access}
   */
-  readonly remoteAccess?: TfNodeGroup.RemoteAccessProperty;
+  readonly remoteAccess?: AwsNodeGroup.RemoteAccessProperty;
   /**
   * scaling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#scaling_config TfNodeGroup#scaling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#scaling_config AwsNodeGroup#scaling_config}
   */
-  readonly scalingConfig: TfNodeGroup.ScalingConfigProperty;
+  readonly scalingConfig: AwsNodeGroup.ScalingConfigProperty;
   /**
   * taint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#taint TfNodeGroup#taint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#taint AwsNodeGroup#taint}
   */
-  readonly taint?: TfNodeGroup.TaintProperty[] | cdktn.IResolvable;
+  readonly taint?: AwsNodeGroup.TaintProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#timeouts TfNodeGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#timeouts AwsNodeGroup#timeouts}
   */
-  readonly timeouts?: TfNodeGroup.TimeoutsProperty;
+  readonly timeouts?: AwsNodeGroup.TimeoutsProperty;
   /**
   * update_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#update_config TfNodeGroup#update_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#update_config AwsNodeGroup#update_config}
   */
-  readonly updateConfig?: TfNodeGroup.UpdateConfigProperty;
+  readonly updateConfig?: AwsNodeGroup.UpdateConfigProperty;
   /**
   * warm_pool_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#warm_pool_config TfNodeGroup#warm_pool_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#warm_pool_config AwsNodeGroup#warm_pool_config}
   */
-  readonly warmPoolConfig?: TfNodeGroup.WarmPoolConfigProperty;
+  readonly warmPoolConfig?: AwsNodeGroup.WarmPoolConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group aws_eks_node_group}
 */
-export class TfNodeGroup extends cdktn.TerraformResource {
+export class AwsNodeGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -143,11 +143,11 @@ export class TfNodeGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfNodeGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsNodeGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfNodeGroup to import
-  * @param importFromId The id of the existing TfNodeGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfNodeGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsNodeGroup to import
+  * @param importFromId The id of the existing AwsNodeGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNodeGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_node_group", importId: importFromId, provider });
@@ -162,9 +162,9 @@ export class TfNodeGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfNodeGroupConfig
+  * @param options AwsNodeGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfNodeGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsNodeGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_node_group',
       terraformGeneratorMetadata: {
@@ -419,7 +419,7 @@ export class TfNodeGroup extends cdktn.TerraformResource {
   }
 
   // resources - computed: true, optional: false, required: false
-  private _resources = new TfNodeGroup.ResourcesPropertyList(this, "resources", false);
+  private _resources = new AwsNodeGroup.ResourcesPropertyList(this, "resources", false);
   public get resources() {
     return this._resources;
   }
@@ -491,11 +491,11 @@ export class TfNodeGroup extends cdktn.TerraformResource {
   }
 
   // launch_template - computed: false, optional: true, required: false
-  private _launchTemplate = new TfNodeGroup.LaunchTemplatePropertyOutputReference(this, "launch_template");
+  private _launchTemplate = new AwsNodeGroup.LaunchTemplatePropertyOutputReference(this, "launch_template");
   public get launchTemplate() {
     return this._launchTemplate;
   }
-  public putLaunchTemplate(value: TfNodeGroup.LaunchTemplateProperty) {
+  public putLaunchTemplate(value: AwsNodeGroup.LaunchTemplateProperty) {
     this._launchTemplate.internalValue = value;
   }
   public resetLaunchTemplate() {
@@ -507,11 +507,11 @@ export class TfNodeGroup extends cdktn.TerraformResource {
   }
 
   // node_repair_config - computed: false, optional: true, required: false
-  private _nodeRepairConfig = new TfNodeGroup.NodeRepairConfigPropertyOutputReference(this, "node_repair_config");
+  private _nodeRepairConfig = new AwsNodeGroup.NodeRepairConfigPropertyOutputReference(this, "node_repair_config");
   public get nodeRepairConfig() {
     return this._nodeRepairConfig;
   }
-  public putNodeRepairConfig(value: TfNodeGroup.NodeRepairConfigProperty) {
+  public putNodeRepairConfig(value: AwsNodeGroup.NodeRepairConfigProperty) {
     this._nodeRepairConfig.internalValue = value;
   }
   public resetNodeRepairConfig() {
@@ -523,11 +523,11 @@ export class TfNodeGroup extends cdktn.TerraformResource {
   }
 
   // remote_access - computed: false, optional: true, required: false
-  private _remoteAccess = new TfNodeGroup.RemoteAccessPropertyOutputReference(this, "remote_access");
+  private _remoteAccess = new AwsNodeGroup.RemoteAccessPropertyOutputReference(this, "remote_access");
   public get remoteAccess() {
     return this._remoteAccess;
   }
-  public putRemoteAccess(value: TfNodeGroup.RemoteAccessProperty) {
+  public putRemoteAccess(value: AwsNodeGroup.RemoteAccessProperty) {
     this._remoteAccess.internalValue = value;
   }
   public resetRemoteAccess() {
@@ -539,11 +539,11 @@ export class TfNodeGroup extends cdktn.TerraformResource {
   }
 
   // scaling_config - computed: false, optional: false, required: true
-  private _scalingConfig = new TfNodeGroup.ScalingConfigPropertyOutputReference(this, "scaling_config");
+  private _scalingConfig = new AwsNodeGroup.ScalingConfigPropertyOutputReference(this, "scaling_config");
   public get scalingConfig() {
     return this._scalingConfig;
   }
-  public putScalingConfig(value: TfNodeGroup.ScalingConfigProperty) {
+  public putScalingConfig(value: AwsNodeGroup.ScalingConfigProperty) {
     this._scalingConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -552,11 +552,11 @@ export class TfNodeGroup extends cdktn.TerraformResource {
   }
 
   // taint - computed: false, optional: true, required: false
-  private _taint = new TfNodeGroup.TaintPropertyList(this, "taint", true);
+  private _taint = new AwsNodeGroup.TaintPropertyList(this, "taint", true);
   public get taint() {
     return this._taint;
   }
-  public putTaint(value: TfNodeGroup.TaintProperty[] | cdktn.IResolvable) {
+  public putTaint(value: AwsNodeGroup.TaintProperty[] | cdktn.IResolvable) {
     this._taint.internalValue = value;
   }
   public resetTaint() {
@@ -568,11 +568,11 @@ export class TfNodeGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfNodeGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsNodeGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfNodeGroup.TimeoutsProperty) {
+  public putTimeouts(value: AwsNodeGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -584,11 +584,11 @@ export class TfNodeGroup extends cdktn.TerraformResource {
   }
 
   // update_config - computed: false, optional: true, required: false
-  private _updateConfig = new TfNodeGroup.UpdateConfigPropertyOutputReference(this, "update_config");
+  private _updateConfig = new AwsNodeGroup.UpdateConfigPropertyOutputReference(this, "update_config");
   public get updateConfig() {
     return this._updateConfig;
   }
-  public putUpdateConfig(value: TfNodeGroup.UpdateConfigProperty) {
+  public putUpdateConfig(value: AwsNodeGroup.UpdateConfigProperty) {
     this._updateConfig.internalValue = value;
   }
   public resetUpdateConfig() {
@@ -600,11 +600,11 @@ export class TfNodeGroup extends cdktn.TerraformResource {
   }
 
   // warm_pool_config - computed: false, optional: true, required: false
-  private _warmPoolConfig = new TfNodeGroup.WarmPoolConfigPropertyOutputReference(this, "warm_pool_config");
+  private _warmPoolConfig = new AwsNodeGroup.WarmPoolConfigPropertyOutputReference(this, "warm_pool_config");
   public get warmPoolConfig() {
     return this._warmPoolConfig;
   }
-  public putWarmPoolConfig(value: TfNodeGroup.WarmPoolConfigProperty) {
+  public putWarmPoolConfig(value: AwsNodeGroup.WarmPoolConfigProperty) {
     this._warmPoolConfig.internalValue = value;
   }
   public resetWarmPoolConfig() {
@@ -638,14 +638,14 @@ export class TfNodeGroup extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       version: cdktn.stringToTerraform(this._version),
-      launch_template: tfNodeGroupLaunchTemplatePropertyToTerraform(this._launchTemplate.internalValue),
-      node_repair_config: tfNodeGroupNodeRepairConfigPropertyToTerraform(this._nodeRepairConfig.internalValue),
-      remote_access: tfNodeGroupRemoteAccessPropertyToTerraform(this._remoteAccess.internalValue),
-      scaling_config: tfNodeGroupScalingConfigPropertyToTerraform(this._scalingConfig.internalValue),
-      taint: cdktn.listMapper(tfNodeGroupTaintPropertyToTerraform, true)(this._taint.internalValue),
-      timeouts: tfNodeGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      update_config: tfNodeGroupUpdateConfigPropertyToTerraform(this._updateConfig.internalValue),
-      warm_pool_config: tfNodeGroupWarmPoolConfigPropertyToTerraform(this._warmPoolConfig.internalValue),
+      launch_template: awsNodeGroupLaunchTemplatePropertyToTerraform(this._launchTemplate.internalValue),
+      node_repair_config: awsNodeGroupNodeRepairConfigPropertyToTerraform(this._nodeRepairConfig.internalValue),
+      remote_access: awsNodeGroupRemoteAccessPropertyToTerraform(this._remoteAccess.internalValue),
+      scaling_config: awsNodeGroupScalingConfigPropertyToTerraform(this._scalingConfig.internalValue),
+      taint: cdktn.listMapper(awsNodeGroupTaintPropertyToTerraform, true)(this._taint.internalValue),
+      timeouts: awsNodeGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      update_config: awsNodeGroupUpdateConfigPropertyToTerraform(this._updateConfig.internalValue),
+      warm_pool_config: awsNodeGroupWarmPoolConfigPropertyToTerraform(this._warmPoolConfig.internalValue),
     };
   }
 
@@ -754,52 +754,52 @@ export class TfNodeGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       launch_template: {
-        value: tfNodeGroupLaunchTemplatePropertyToHclTerraform(this._launchTemplate.internalValue),
+        value: awsNodeGroupLaunchTemplatePropertyToHclTerraform(this._launchTemplate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfNodeGroup.LaunchTemplatePropertyList",
+        storageClassType: "AwsNodeGroup.LaunchTemplatePropertyList",
       },
       node_repair_config: {
-        value: tfNodeGroupNodeRepairConfigPropertyToHclTerraform(this._nodeRepairConfig.internalValue),
+        value: awsNodeGroupNodeRepairConfigPropertyToHclTerraform(this._nodeRepairConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfNodeGroup.NodeRepairConfigPropertyList",
+        storageClassType: "AwsNodeGroup.NodeRepairConfigPropertyList",
       },
       remote_access: {
-        value: tfNodeGroupRemoteAccessPropertyToHclTerraform(this._remoteAccess.internalValue),
+        value: awsNodeGroupRemoteAccessPropertyToHclTerraform(this._remoteAccess.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfNodeGroup.RemoteAccessPropertyList",
+        storageClassType: "AwsNodeGroup.RemoteAccessPropertyList",
       },
       scaling_config: {
-        value: tfNodeGroupScalingConfigPropertyToHclTerraform(this._scalingConfig.internalValue),
+        value: awsNodeGroupScalingConfigPropertyToHclTerraform(this._scalingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfNodeGroup.ScalingConfigPropertyList",
+        storageClassType: "AwsNodeGroup.ScalingConfigPropertyList",
       },
       taint: {
-        value: cdktn.listMapperHcl(tfNodeGroupTaintPropertyToHclTerraform, true)(this._taint.internalValue),
+        value: cdktn.listMapperHcl(awsNodeGroupTaintPropertyToHclTerraform, true)(this._taint.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfNodeGroup.TaintPropertyList",
+        storageClassType: "AwsNodeGroup.TaintPropertyList",
       },
       timeouts: {
-        value: tfNodeGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsNodeGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfNodeGroup.TimeoutsProperty",
+        storageClassType: "AwsNodeGroup.TimeoutsProperty",
       },
       update_config: {
-        value: tfNodeGroupUpdateConfigPropertyToHclTerraform(this._updateConfig.internalValue),
+        value: awsNodeGroupUpdateConfigPropertyToHclTerraform(this._updateConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfNodeGroup.UpdateConfigPropertyList",
+        storageClassType: "AwsNodeGroup.UpdateConfigPropertyList",
       },
       warm_pool_config: {
-        value: tfNodeGroupWarmPoolConfigPropertyToHclTerraform(this._warmPoolConfig.internalValue),
+        value: awsNodeGroupWarmPoolConfigPropertyToHclTerraform(this._warmPoolConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfNodeGroup.WarmPoolConfigPropertyList",
+        storageClassType: "AwsNodeGroup.WarmPoolConfigPropertyList",
       },
     };
 
@@ -808,7 +808,7 @@ export class TfNodeGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfNodeGroupAutoscalingGroupsPropertyToTerraform(struct?: TfNodeGroup.AutoscalingGroupsProperty): any {
+export function awsNodeGroupAutoscalingGroupsPropertyToTerraform(struct?: AwsNodeGroup.AutoscalingGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -818,7 +818,7 @@ export function tfNodeGroupAutoscalingGroupsPropertyToTerraform(struct?: TfNodeG
 }
 
 
-export function tfNodeGroupAutoscalingGroupsPropertyToHclTerraform(struct?: TfNodeGroup.AutoscalingGroupsProperty): any {
+export function awsNodeGroupAutoscalingGroupsPropertyToHclTerraform(struct?: AwsNodeGroup.AutoscalingGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -829,7 +829,7 @@ export function tfNodeGroupAutoscalingGroupsPropertyToHclTerraform(struct?: TfNo
 }
 
 
-export function tfNodeGroupResourcesPropertyToTerraform(struct?: TfNodeGroup.ResourcesProperty): any {
+export function awsNodeGroupResourcesPropertyToTerraform(struct?: AwsNodeGroup.ResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -839,7 +839,7 @@ export function tfNodeGroupResourcesPropertyToTerraform(struct?: TfNodeGroup.Res
 }
 
 
-export function tfNodeGroupResourcesPropertyToHclTerraform(struct?: TfNodeGroup.ResourcesProperty): any {
+export function awsNodeGroupResourcesPropertyToHclTerraform(struct?: AwsNodeGroup.ResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -850,7 +850,7 @@ export function tfNodeGroupResourcesPropertyToHclTerraform(struct?: TfNodeGroup.
 }
 
 
-export function tfNodeGroupLaunchTemplatePropertyToTerraform(struct?: TfNodeGroup.LaunchTemplatePropertyOutputReference | TfNodeGroup.LaunchTemplateProperty): any {
+export function awsNodeGroupLaunchTemplatePropertyToTerraform(struct?: AwsNodeGroup.LaunchTemplatePropertyOutputReference | AwsNodeGroup.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -863,7 +863,7 @@ export function tfNodeGroupLaunchTemplatePropertyToTerraform(struct?: TfNodeGrou
 }
 
 
-export function tfNodeGroupLaunchTemplatePropertyToHclTerraform(struct?: TfNodeGroup.LaunchTemplatePropertyOutputReference | TfNodeGroup.LaunchTemplateProperty): any {
+export function awsNodeGroupLaunchTemplatePropertyToHclTerraform(struct?: AwsNodeGroup.LaunchTemplatePropertyOutputReference | AwsNodeGroup.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -894,7 +894,7 @@ export function tfNodeGroupLaunchTemplatePropertyToHclTerraform(struct?: TfNodeG
 }
 
 
-export function tfNodeGroupNodeRepairConfigOverridesPropertyToTerraform(struct?: TfNodeGroup.NodeRepairConfigOverridesProperty | cdktn.IResolvable): any {
+export function awsNodeGroupNodeRepairConfigOverridesPropertyToTerraform(struct?: AwsNodeGroup.NodeRepairConfigOverridesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -908,7 +908,7 @@ export function tfNodeGroupNodeRepairConfigOverridesPropertyToTerraform(struct?:
 }
 
 
-export function tfNodeGroupNodeRepairConfigOverridesPropertyToHclTerraform(struct?: TfNodeGroup.NodeRepairConfigOverridesProperty | cdktn.IResolvable): any {
+export function awsNodeGroupNodeRepairConfigOverridesPropertyToHclTerraform(struct?: AwsNodeGroup.NodeRepairConfigOverridesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -945,7 +945,7 @@ export function tfNodeGroupNodeRepairConfigOverridesPropertyToHclTerraform(struc
 }
 
 
-export function tfNodeGroupNodeRepairConfigPropertyToTerraform(struct?: TfNodeGroup.NodeRepairConfigPropertyOutputReference | TfNodeGroup.NodeRepairConfigProperty): any {
+export function awsNodeGroupNodeRepairConfigPropertyToTerraform(struct?: AwsNodeGroup.NodeRepairConfigPropertyOutputReference | AwsNodeGroup.NodeRepairConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -956,12 +956,12 @@ export function tfNodeGroupNodeRepairConfigPropertyToTerraform(struct?: TfNodeGr
     max_parallel_nodes_repaired_percentage: cdktn.numberToTerraform(struct!.maxParallelNodesRepairedPercentage),
     max_unhealthy_node_threshold_count: cdktn.numberToTerraform(struct!.maxUnhealthyNodeThresholdCount),
     max_unhealthy_node_threshold_percentage: cdktn.numberToTerraform(struct!.maxUnhealthyNodeThresholdPercentage),
-    node_repair_config_overrides: cdktn.listMapper(tfNodeGroupNodeRepairConfigOverridesPropertyToTerraform, true)(struct!.nodeRepairConfigOverrides),
+    node_repair_config_overrides: cdktn.listMapper(awsNodeGroupNodeRepairConfigOverridesPropertyToTerraform, true)(struct!.nodeRepairConfigOverrides),
   }
 }
 
 
-export function tfNodeGroupNodeRepairConfigPropertyToHclTerraform(struct?: TfNodeGroup.NodeRepairConfigPropertyOutputReference | TfNodeGroup.NodeRepairConfigProperty): any {
+export function awsNodeGroupNodeRepairConfigPropertyToHclTerraform(struct?: AwsNodeGroup.NodeRepairConfigPropertyOutputReference | AwsNodeGroup.NodeRepairConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -998,7 +998,7 @@ export function tfNodeGroupNodeRepairConfigPropertyToHclTerraform(struct?: TfNod
       storageClassType: "number",
     },
     node_repair_config_overrides: {
-      value: cdktn.listMapperHcl(tfNodeGroupNodeRepairConfigOverridesPropertyToHclTerraform, true)(struct!.nodeRepairConfigOverrides),
+      value: cdktn.listMapperHcl(awsNodeGroupNodeRepairConfigOverridesPropertyToHclTerraform, true)(struct!.nodeRepairConfigOverrides),
       isBlock: true,
       type: "list",
       storageClassType: "NodeRepairConfigOverridesPropertyList",
@@ -1010,7 +1010,7 @@ export function tfNodeGroupNodeRepairConfigPropertyToHclTerraform(struct?: TfNod
 }
 
 
-export function tfNodeGroupRemoteAccessPropertyToTerraform(struct?: TfNodeGroup.RemoteAccessPropertyOutputReference | TfNodeGroup.RemoteAccessProperty): any {
+export function awsNodeGroupRemoteAccessPropertyToTerraform(struct?: AwsNodeGroup.RemoteAccessPropertyOutputReference | AwsNodeGroup.RemoteAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1022,7 +1022,7 @@ export function tfNodeGroupRemoteAccessPropertyToTerraform(struct?: TfNodeGroup.
 }
 
 
-export function tfNodeGroupRemoteAccessPropertyToHclTerraform(struct?: TfNodeGroup.RemoteAccessPropertyOutputReference | TfNodeGroup.RemoteAccessProperty): any {
+export function awsNodeGroupRemoteAccessPropertyToHclTerraform(struct?: AwsNodeGroup.RemoteAccessPropertyOutputReference | AwsNodeGroup.RemoteAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1047,7 +1047,7 @@ export function tfNodeGroupRemoteAccessPropertyToHclTerraform(struct?: TfNodeGro
 }
 
 
-export function tfNodeGroupScalingConfigPropertyToTerraform(struct?: TfNodeGroup.ScalingConfigPropertyOutputReference | TfNodeGroup.ScalingConfigProperty): any {
+export function awsNodeGroupScalingConfigPropertyToTerraform(struct?: AwsNodeGroup.ScalingConfigPropertyOutputReference | AwsNodeGroup.ScalingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1060,7 +1060,7 @@ export function tfNodeGroupScalingConfigPropertyToTerraform(struct?: TfNodeGroup
 }
 
 
-export function tfNodeGroupScalingConfigPropertyToHclTerraform(struct?: TfNodeGroup.ScalingConfigPropertyOutputReference | TfNodeGroup.ScalingConfigProperty): any {
+export function awsNodeGroupScalingConfigPropertyToHclTerraform(struct?: AwsNodeGroup.ScalingConfigPropertyOutputReference | AwsNodeGroup.ScalingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1091,7 +1091,7 @@ export function tfNodeGroupScalingConfigPropertyToHclTerraform(struct?: TfNodeGr
 }
 
 
-export function tfNodeGroupTaintPropertyToTerraform(struct?: TfNodeGroup.TaintProperty | cdktn.IResolvable): any {
+export function awsNodeGroupTaintPropertyToTerraform(struct?: AwsNodeGroup.TaintProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1104,7 +1104,7 @@ export function tfNodeGroupTaintPropertyToTerraform(struct?: TfNodeGroup.TaintPr
 }
 
 
-export function tfNodeGroupTaintPropertyToHclTerraform(struct?: TfNodeGroup.TaintProperty | cdktn.IResolvable): any {
+export function awsNodeGroupTaintPropertyToHclTerraform(struct?: AwsNodeGroup.TaintProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1135,7 +1135,7 @@ export function tfNodeGroupTaintPropertyToHclTerraform(struct?: TfNodeGroup.Tain
 }
 
 
-export function tfNodeGroupTimeoutsPropertyToTerraform(struct?: TfNodeGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsNodeGroupTimeoutsPropertyToTerraform(struct?: AwsNodeGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1148,7 +1148,7 @@ export function tfNodeGroupTimeoutsPropertyToTerraform(struct?: TfNodeGroup.Time
 }
 
 
-export function tfNodeGroupTimeoutsPropertyToHclTerraform(struct?: TfNodeGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsNodeGroupTimeoutsPropertyToHclTerraform(struct?: AwsNodeGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1179,7 +1179,7 @@ export function tfNodeGroupTimeoutsPropertyToHclTerraform(struct?: TfNodeGroup.T
 }
 
 
-export function tfNodeGroupUpdateConfigPropertyToTerraform(struct?: TfNodeGroup.UpdateConfigPropertyOutputReference | TfNodeGroup.UpdateConfigProperty): any {
+export function awsNodeGroupUpdateConfigPropertyToTerraform(struct?: AwsNodeGroup.UpdateConfigPropertyOutputReference | AwsNodeGroup.UpdateConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1192,7 +1192,7 @@ export function tfNodeGroupUpdateConfigPropertyToTerraform(struct?: TfNodeGroup.
 }
 
 
-export function tfNodeGroupUpdateConfigPropertyToHclTerraform(struct?: TfNodeGroup.UpdateConfigPropertyOutputReference | TfNodeGroup.UpdateConfigProperty): any {
+export function awsNodeGroupUpdateConfigPropertyToHclTerraform(struct?: AwsNodeGroup.UpdateConfigPropertyOutputReference | AwsNodeGroup.UpdateConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1223,7 +1223,7 @@ export function tfNodeGroupUpdateConfigPropertyToHclTerraform(struct?: TfNodeGro
 }
 
 
-export function tfNodeGroupWarmPoolConfigPropertyToTerraform(struct?: TfNodeGroup.WarmPoolConfigPropertyOutputReference | TfNodeGroup.WarmPoolConfigProperty): any {
+export function awsNodeGroupWarmPoolConfigPropertyToTerraform(struct?: AwsNodeGroup.WarmPoolConfigPropertyOutputReference | AwsNodeGroup.WarmPoolConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1237,7 +1237,7 @@ export function tfNodeGroupWarmPoolConfigPropertyToTerraform(struct?: TfNodeGrou
 }
 
 
-export function tfNodeGroupWarmPoolConfigPropertyToHclTerraform(struct?: TfNodeGroup.WarmPoolConfigPropertyOutputReference | TfNodeGroup.WarmPoolConfigProperty): any {
+export function awsNodeGroupWarmPoolConfigPropertyToHclTerraform(struct?: AwsNodeGroup.WarmPoolConfigPropertyOutputReference | AwsNodeGroup.WarmPoolConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1274,7 +1274,7 @@ export function tfNodeGroupWarmPoolConfigPropertyToHclTerraform(struct?: TfNodeG
 }
 
 
-export namespace TfNodeGroup {
+export namespace AwsNodeGroup {
 export interface AutoscalingGroupsProperty {
 }
 export class AutoscalingGroupsPropertyOutputReference extends cdktn.ComplexObject {
@@ -1391,18 +1391,18 @@ export class ResourcesPropertyList extends cdktn.ComplexList {
 }
 export interface LaunchTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#id TfNodeGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#id AwsNodeGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#name TfNodeGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#name AwsNodeGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#version TfNodeGroup#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#version AwsNodeGroup#version}
   */
   readonly version: string;
 }
@@ -1497,19 +1497,19 @@ export class LaunchTemplatePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NodeRepairConfigOverridesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#min_repair_wait_time_mins TfNodeGroup#min_repair_wait_time_mins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#min_repair_wait_time_mins AwsNodeGroup#min_repair_wait_time_mins}
   */
   readonly minRepairWaitTimeMins: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_monitoring_condition TfNodeGroup#node_monitoring_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_monitoring_condition AwsNodeGroup#node_monitoring_condition}
   */
   readonly nodeMonitoringCondition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_unhealthy_reason TfNodeGroup#node_unhealthy_reason}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_unhealthy_reason AwsNodeGroup#node_unhealthy_reason}
   */
   readonly nodeUnhealthyReason: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#repair_action TfNodeGroup#repair_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#repair_action AwsNodeGroup#repair_action}
   */
   readonly repairAction: string;
 }
@@ -1649,29 +1649,29 @@ export class NodeRepairConfigOverridesPropertyList extends cdktn.ComplexList {
 }
 export interface NodeRepairConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#enabled TfNodeGroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#enabled AwsNodeGroup#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_parallel_nodes_repaired_count TfNodeGroup#max_parallel_nodes_repaired_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_parallel_nodes_repaired_count AwsNodeGroup#max_parallel_nodes_repaired_count}
   */
   readonly maxParallelNodesRepairedCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_parallel_nodes_repaired_percentage TfNodeGroup#max_parallel_nodes_repaired_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_parallel_nodes_repaired_percentage AwsNodeGroup#max_parallel_nodes_repaired_percentage}
   */
   readonly maxParallelNodesRepairedPercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_unhealthy_node_threshold_count TfNodeGroup#max_unhealthy_node_threshold_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_unhealthy_node_threshold_count AwsNodeGroup#max_unhealthy_node_threshold_count}
   */
   readonly maxUnhealthyNodeThresholdCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_unhealthy_node_threshold_percentage TfNodeGroup#max_unhealthy_node_threshold_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_unhealthy_node_threshold_percentage AwsNodeGroup#max_unhealthy_node_threshold_percentage}
   */
   readonly maxUnhealthyNodeThresholdPercentage?: number;
   /**
   * node_repair_config_overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_repair_config_overrides TfNodeGroup#node_repair_config_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_repair_config_overrides AwsNodeGroup#node_repair_config_overrides}
   */
   readonly nodeRepairConfigOverrides?: NodeRepairConfigOverridesProperty[] | cdktn.IResolvable;
 }
@@ -1835,11 +1835,11 @@ export class NodeRepairConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface RemoteAccessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#ec2_ssh_key TfNodeGroup#ec2_ssh_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#ec2_ssh_key AwsNodeGroup#ec2_ssh_key}
   */
   readonly ec2SshKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#source_security_group_ids TfNodeGroup#source_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#source_security_group_ids AwsNodeGroup#source_security_group_ids}
   */
   readonly sourceSecurityGroupIds?: string[];
 }
@@ -1915,15 +1915,15 @@ export class RemoteAccessPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ScalingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#desired_size TfNodeGroup#desired_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#desired_size AwsNodeGroup#desired_size}
   */
   readonly desiredSize: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_size TfNodeGroup#max_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_size AwsNodeGroup#max_size}
   */
   readonly maxSize: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#min_size TfNodeGroup#min_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#min_size AwsNodeGroup#min_size}
   */
   readonly minSize: number;
 }
@@ -2012,15 +2012,15 @@ export class ScalingConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TaintProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#effect TfNodeGroup#effect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#effect AwsNodeGroup#effect}
   */
   readonly effect: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#key TfNodeGroup#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#key AwsNodeGroup#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#value TfNodeGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#value AwsNodeGroup#value}
   */
   readonly value?: string;
 }
@@ -2144,15 +2144,15 @@ export class TaintPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#create TfNodeGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#create AwsNodeGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#delete TfNodeGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#delete AwsNodeGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#update TfNodeGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#update AwsNodeGroup#update}
   */
   readonly update?: string;
 }
@@ -2260,15 +2260,15 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface UpdateConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_unavailable TfNodeGroup#max_unavailable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_unavailable AwsNodeGroup#max_unavailable}
   */
   readonly maxUnavailable?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_unavailable_percentage TfNodeGroup#max_unavailable_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_unavailable_percentage AwsNodeGroup#max_unavailable_percentage}
   */
   readonly maxUnavailablePercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#update_strategy TfNodeGroup#update_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#update_strategy AwsNodeGroup#update_strategy}
   */
   readonly updateStrategy?: string;
 }
@@ -2366,19 +2366,19 @@ export class UpdateConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface WarmPoolConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_group_prepared_capacity TfNodeGroup#max_group_prepared_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_group_prepared_capacity AwsNodeGroup#max_group_prepared_capacity}
   */
   readonly maxGroupPreparedCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#min_size TfNodeGroup#min_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#min_size AwsNodeGroup#min_size}
   */
   readonly minSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#pool_state TfNodeGroup#pool_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#pool_state AwsNodeGroup#pool_state}
   */
   readonly poolState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#reuse_on_scale_in TfNodeGroup#reuse_on_scale_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#reuse_on_scale_in AwsNodeGroup#reuse_on_scale_in}
   */
   readonly reuseOnScaleIn?: boolean | cdktn.IResolvable;
 }

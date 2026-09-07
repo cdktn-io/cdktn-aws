@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSmsPreferencesConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSmsPreferencesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#default_sender_id TfSmsPreferences#default_sender_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#default_sender_id AwsSmsPreferences#default_sender_id}
   */
   readonly defaultSenderId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#default_sms_type TfSmsPreferences#default_sms_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#default_sms_type AwsSmsPreferences#default_sms_type}
   */
   readonly defaultSmsType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#delivery_status_iam_role_arn TfSmsPreferences#delivery_status_iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#delivery_status_iam_role_arn AwsSmsPreferences#delivery_status_iam_role_arn}
   */
   readonly deliveryStatusIamRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#delivery_status_success_sampling_rate TfSmsPreferences#delivery_status_success_sampling_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#delivery_status_success_sampling_rate AwsSmsPreferences#delivery_status_success_sampling_rate}
   */
   readonly deliveryStatusSuccessSamplingRate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#id TfSmsPreferences#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#id AwsSmsPreferences#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#monthly_spend_limit TfSmsPreferences#monthly_spend_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#monthly_spend_limit AwsSmsPreferences#monthly_spend_limit}
   */
   readonly monthlySpendLimit?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#region TfSmsPreferences#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#region AwsSmsPreferences#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#usage_report_s3_bucket TfSmsPreferences#usage_report_s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#usage_report_s3_bucket AwsSmsPreferences#usage_report_s3_bucket}
   */
   readonly usageReportS3Bucket?: string;
 }
@@ -48,7 +48,7 @@ export interface TfSmsPreferencesConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences aws_sns_sms_preferences}
 */
-export class TfSmsPreferences extends cdktn.TerraformResource {
+export class AwsSmsPreferences extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfSmsPreferences extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSmsPreferences resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSmsPreferences resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSmsPreferences to import
-  * @param importFromId The id of the existing TfSmsPreferences that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSmsPreferences to import is found
+  * @param importToId The construct id used in the generated config for the AwsSmsPreferences to import
+  * @param importFromId The id of the existing AwsSmsPreferences that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_sms_preferences#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSmsPreferences to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sns_sms_preferences", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfSmsPreferences extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSmsPreferencesConfig = {}
+  * @param options AwsSmsPreferencesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfSmsPreferencesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsSmsPreferencesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_sns_sms_preferences',
       terraformGeneratorMetadata: {

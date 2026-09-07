@@ -5,176 +5,176 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAlbConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAlbConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#client_keep_alive TfAlb#client_keep_alive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#client_keep_alive AwsAlb#client_keep_alive}
   */
   readonly clientKeepAlive?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#customer_owned_ipv4_pool TfAlb#customer_owned_ipv4_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#customer_owned_ipv4_pool AwsAlb#customer_owned_ipv4_pool}
   */
   readonly customerOwnedIpv4Pool?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#desync_mitigation_mode TfAlb#desync_mitigation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#desync_mitigation_mode AwsAlb#desync_mitigation_mode}
   */
   readonly desyncMitigationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#dns_record_client_routing_policy TfAlb#dns_record_client_routing_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#dns_record_client_routing_policy AwsAlb#dns_record_client_routing_policy}
   */
   readonly dnsRecordClientRoutingPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#drop_invalid_header_fields TfAlb#drop_invalid_header_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#drop_invalid_header_fields AwsAlb#drop_invalid_header_fields}
   */
   readonly dropInvalidHeaderFields?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_cross_zone_load_balancing TfAlb#enable_cross_zone_load_balancing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_cross_zone_load_balancing AwsAlb#enable_cross_zone_load_balancing}
   */
   readonly enableCrossZoneLoadBalancing?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_deletion_protection TfAlb#enable_deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_deletion_protection AwsAlb#enable_deletion_protection}
   */
   readonly enableDeletionProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_http2 TfAlb#enable_http2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_http2 AwsAlb#enable_http2}
   */
   readonly enableHttp2?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_prefix_for_ipv6_source_nat TfAlb#enable_prefix_for_ipv6_source_nat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_prefix_for_ipv6_source_nat AwsAlb#enable_prefix_for_ipv6_source_nat}
   */
   readonly enablePrefixForIpv6SourceNat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_tls_version_and_cipher_suite_headers TfAlb#enable_tls_version_and_cipher_suite_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_tls_version_and_cipher_suite_headers AwsAlb#enable_tls_version_and_cipher_suite_headers}
   */
   readonly enableTlsVersionAndCipherSuiteHeaders?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_waf_fail_open TfAlb#enable_waf_fail_open}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_waf_fail_open AwsAlb#enable_waf_fail_open}
   */
   readonly enableWafFailOpen?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_xff_client_port TfAlb#enable_xff_client_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_xff_client_port AwsAlb#enable_xff_client_port}
   */
   readonly enableXffClientPort?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_zonal_shift TfAlb#enable_zonal_shift}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_zonal_shift AwsAlb#enable_zonal_shift}
   */
   readonly enableZonalShift?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enforce_security_group_inbound_rules_on_private_link_traffic TfAlb#enforce_security_group_inbound_rules_on_private_link_traffic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enforce_security_group_inbound_rules_on_private_link_traffic AwsAlb#enforce_security_group_inbound_rules_on_private_link_traffic}
   */
   readonly enforceSecurityGroupInboundRulesOnPrivateLinkTraffic?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#id TfAlb#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#id AwsAlb#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#idle_timeout TfAlb#idle_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#idle_timeout AwsAlb#idle_timeout}
   */
   readonly idleTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#internal TfAlb#internal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#internal AwsAlb#internal}
   */
   readonly internal?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#ip_address_type TfAlb#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#ip_address_type AwsAlb#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#load_balancer_type TfAlb#load_balancer_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#load_balancer_type AwsAlb#load_balancer_type}
   */
   readonly loadBalancerType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#name TfAlb#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#name AwsAlb#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#name_prefix TfAlb#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#name_prefix AwsAlb#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#preserve_host_header TfAlb#preserve_host_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#preserve_host_header AwsAlb#preserve_host_header}
   */
   readonly preserveHostHeader?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#region TfAlb#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#region AwsAlb#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#secondary_ips_auto_assigned_per_subnet TfAlb#secondary_ips_auto_assigned_per_subnet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#secondary_ips_auto_assigned_per_subnet AwsAlb#secondary_ips_auto_assigned_per_subnet}
   */
   readonly secondaryIpsAutoAssignedPerSubnet?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#security_groups TfAlb#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#security_groups AwsAlb#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#subnets TfAlb#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#subnets AwsAlb#subnets}
   */
   readonly subnets?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#tags TfAlb#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#tags AwsAlb#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#tags_all TfAlb#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#tags_all AwsAlb#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#xff_header_processing_mode TfAlb#xff_header_processing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#xff_header_processing_mode AwsAlb#xff_header_processing_mode}
   */
   readonly xffHeaderProcessingMode?: string;
   /**
   * access_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#access_logs TfAlb#access_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#access_logs AwsAlb#access_logs}
   */
-  readonly accessLogs?: TfAlb.AccessLogsProperty;
+  readonly accessLogs?: AwsAlb.AccessLogsProperty;
   /**
   * connection_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#connection_logs TfAlb#connection_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#connection_logs AwsAlb#connection_logs}
   */
-  readonly connectionLogs?: TfAlb.ConnectionLogsProperty;
+  readonly connectionLogs?: AwsAlb.ConnectionLogsProperty;
   /**
   * health_check_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#health_check_logs TfAlb#health_check_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#health_check_logs AwsAlb#health_check_logs}
   */
-  readonly healthCheckLogs?: TfAlb.HealthCheckLogsProperty;
+  readonly healthCheckLogs?: AwsAlb.HealthCheckLogsProperty;
   /**
   * ipam_pools block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#ipam_pools TfAlb#ipam_pools}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#ipam_pools AwsAlb#ipam_pools}
   */
-  readonly ipamPools?: TfAlb.IpamPoolsProperty;
+  readonly ipamPools?: AwsAlb.IpamPoolsProperty;
   /**
   * minimum_load_balancer_capacity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#minimum_load_balancer_capacity TfAlb#minimum_load_balancer_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#minimum_load_balancer_capacity AwsAlb#minimum_load_balancer_capacity}
   */
-  readonly minimumLoadBalancerCapacity?: TfAlb.MinimumLoadBalancerCapacityProperty;
+  readonly minimumLoadBalancerCapacity?: AwsAlb.MinimumLoadBalancerCapacityProperty;
   /**
   * subnet_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#subnet_mapping TfAlb#subnet_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#subnet_mapping AwsAlb#subnet_mapping}
   */
-  readonly subnetMapping?: TfAlb.SubnetMappingProperty[] | cdktn.IResolvable;
+  readonly subnetMapping?: AwsAlb.SubnetMappingProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#timeouts TfAlb#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#timeouts AwsAlb#timeouts}
   */
-  readonly timeouts?: TfAlb.TimeoutsProperty;
+  readonly timeouts?: AwsAlb.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb aws_alb}
 */
-export class TfAlb extends cdktn.TerraformResource {
+export class AwsAlb extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -185,11 +185,11 @@ export class TfAlb extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAlb resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAlb resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAlb to import
-  * @param importFromId The id of the existing TfAlb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAlb to import is found
+  * @param importToId The construct id used in the generated config for the AwsAlb to import
+  * @param importFromId The id of the existing AwsAlb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAlb to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_alb", importId: importFromId, provider });
@@ -204,9 +204,9 @@ export class TfAlb extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAlbConfig = {}
+  * @param options AwsAlbConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfAlbConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsAlbConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_alb',
       terraformGeneratorMetadata: {
@@ -754,11 +754,11 @@ export class TfAlb extends cdktn.TerraformResource {
   }
 
   // access_logs - computed: false, optional: true, required: false
-  private _accessLogs = new TfAlb.AccessLogsPropertyOutputReference(this, "access_logs");
+  private _accessLogs = new AwsAlb.AccessLogsPropertyOutputReference(this, "access_logs");
   public get accessLogs() {
     return this._accessLogs;
   }
-  public putAccessLogs(value: TfAlb.AccessLogsProperty) {
+  public putAccessLogs(value: AwsAlb.AccessLogsProperty) {
     this._accessLogs.internalValue = value;
   }
   public resetAccessLogs() {
@@ -770,11 +770,11 @@ export class TfAlb extends cdktn.TerraformResource {
   }
 
   // connection_logs - computed: false, optional: true, required: false
-  private _connectionLogs = new TfAlb.ConnectionLogsPropertyOutputReference(this, "connection_logs");
+  private _connectionLogs = new AwsAlb.ConnectionLogsPropertyOutputReference(this, "connection_logs");
   public get connectionLogs() {
     return this._connectionLogs;
   }
-  public putConnectionLogs(value: TfAlb.ConnectionLogsProperty) {
+  public putConnectionLogs(value: AwsAlb.ConnectionLogsProperty) {
     this._connectionLogs.internalValue = value;
   }
   public resetConnectionLogs() {
@@ -786,11 +786,11 @@ export class TfAlb extends cdktn.TerraformResource {
   }
 
   // health_check_logs - computed: false, optional: true, required: false
-  private _healthCheckLogs = new TfAlb.HealthCheckLogsPropertyOutputReference(this, "health_check_logs");
+  private _healthCheckLogs = new AwsAlb.HealthCheckLogsPropertyOutputReference(this, "health_check_logs");
   public get healthCheckLogs() {
     return this._healthCheckLogs;
   }
-  public putHealthCheckLogs(value: TfAlb.HealthCheckLogsProperty) {
+  public putHealthCheckLogs(value: AwsAlb.HealthCheckLogsProperty) {
     this._healthCheckLogs.internalValue = value;
   }
   public resetHealthCheckLogs() {
@@ -802,11 +802,11 @@ export class TfAlb extends cdktn.TerraformResource {
   }
 
   // ipam_pools - computed: false, optional: true, required: false
-  private _ipamPools = new TfAlb.IpamPoolsPropertyOutputReference(this, "ipam_pools");
+  private _ipamPools = new AwsAlb.IpamPoolsPropertyOutputReference(this, "ipam_pools");
   public get ipamPools() {
     return this._ipamPools;
   }
-  public putIpamPools(value: TfAlb.IpamPoolsProperty) {
+  public putIpamPools(value: AwsAlb.IpamPoolsProperty) {
     this._ipamPools.internalValue = value;
   }
   public resetIpamPools() {
@@ -818,11 +818,11 @@ export class TfAlb extends cdktn.TerraformResource {
   }
 
   // minimum_load_balancer_capacity - computed: false, optional: true, required: false
-  private _minimumLoadBalancerCapacity = new TfAlb.MinimumLoadBalancerCapacityPropertyOutputReference(this, "minimum_load_balancer_capacity");
+  private _minimumLoadBalancerCapacity = new AwsAlb.MinimumLoadBalancerCapacityPropertyOutputReference(this, "minimum_load_balancer_capacity");
   public get minimumLoadBalancerCapacity() {
     return this._minimumLoadBalancerCapacity;
   }
-  public putMinimumLoadBalancerCapacity(value: TfAlb.MinimumLoadBalancerCapacityProperty) {
+  public putMinimumLoadBalancerCapacity(value: AwsAlb.MinimumLoadBalancerCapacityProperty) {
     this._minimumLoadBalancerCapacity.internalValue = value;
   }
   public resetMinimumLoadBalancerCapacity() {
@@ -834,11 +834,11 @@ export class TfAlb extends cdktn.TerraformResource {
   }
 
   // subnet_mapping - computed: false, optional: true, required: false
-  private _subnetMapping = new TfAlb.SubnetMappingPropertyList(this, "subnet_mapping", true);
+  private _subnetMapping = new AwsAlb.SubnetMappingPropertyList(this, "subnet_mapping", true);
   public get subnetMapping() {
     return this._subnetMapping;
   }
-  public putSubnetMapping(value: TfAlb.SubnetMappingProperty[] | cdktn.IResolvable) {
+  public putSubnetMapping(value: AwsAlb.SubnetMappingProperty[] | cdktn.IResolvable) {
     this._subnetMapping.internalValue = value;
   }
   public resetSubnetMapping() {
@@ -850,11 +850,11 @@ export class TfAlb extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfAlb.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsAlb.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfAlb.TimeoutsProperty) {
+  public putTimeouts(value: AwsAlb.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -900,13 +900,13 @@ export class TfAlb extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       xff_header_processing_mode: cdktn.stringToTerraform(this._xffHeaderProcessingMode),
-      access_logs: tfAlbAccessLogsPropertyToTerraform(this._accessLogs.internalValue),
-      connection_logs: tfAlbConnectionLogsPropertyToTerraform(this._connectionLogs.internalValue),
-      health_check_logs: tfAlbHealthCheckLogsPropertyToTerraform(this._healthCheckLogs.internalValue),
-      ipam_pools: tfAlbIpamPoolsPropertyToTerraform(this._ipamPools.internalValue),
-      minimum_load_balancer_capacity: tfAlbMinimumLoadBalancerCapacityPropertyToTerraform(this._minimumLoadBalancerCapacity.internalValue),
-      subnet_mapping: cdktn.listMapper(tfAlbSubnetMappingPropertyToTerraform, true)(this._subnetMapping.internalValue),
-      timeouts: tfAlbTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      access_logs: awsAlbAccessLogsPropertyToTerraform(this._accessLogs.internalValue),
+      connection_logs: awsAlbConnectionLogsPropertyToTerraform(this._connectionLogs.internalValue),
+      health_check_logs: awsAlbHealthCheckLogsPropertyToTerraform(this._healthCheckLogs.internalValue),
+      ipam_pools: awsAlbIpamPoolsPropertyToTerraform(this._ipamPools.internalValue),
+      minimum_load_balancer_capacity: awsAlbMinimumLoadBalancerCapacityPropertyToTerraform(this._minimumLoadBalancerCapacity.internalValue),
+      subnet_mapping: cdktn.listMapper(awsAlbSubnetMappingPropertyToTerraform, true)(this._subnetMapping.internalValue),
+      timeouts: awsAlbTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -1087,46 +1087,46 @@ export class TfAlb extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       access_logs: {
-        value: tfAlbAccessLogsPropertyToHclTerraform(this._accessLogs.internalValue),
+        value: awsAlbAccessLogsPropertyToHclTerraform(this._accessLogs.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAlb.AccessLogsPropertyList",
+        storageClassType: "AwsAlb.AccessLogsPropertyList",
       },
       connection_logs: {
-        value: tfAlbConnectionLogsPropertyToHclTerraform(this._connectionLogs.internalValue),
+        value: awsAlbConnectionLogsPropertyToHclTerraform(this._connectionLogs.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAlb.ConnectionLogsPropertyList",
+        storageClassType: "AwsAlb.ConnectionLogsPropertyList",
       },
       health_check_logs: {
-        value: tfAlbHealthCheckLogsPropertyToHclTerraform(this._healthCheckLogs.internalValue),
+        value: awsAlbHealthCheckLogsPropertyToHclTerraform(this._healthCheckLogs.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAlb.HealthCheckLogsPropertyList",
+        storageClassType: "AwsAlb.HealthCheckLogsPropertyList",
       },
       ipam_pools: {
-        value: tfAlbIpamPoolsPropertyToHclTerraform(this._ipamPools.internalValue),
+        value: awsAlbIpamPoolsPropertyToHclTerraform(this._ipamPools.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAlb.IpamPoolsPropertyList",
+        storageClassType: "AwsAlb.IpamPoolsPropertyList",
       },
       minimum_load_balancer_capacity: {
-        value: tfAlbMinimumLoadBalancerCapacityPropertyToHclTerraform(this._minimumLoadBalancerCapacity.internalValue),
+        value: awsAlbMinimumLoadBalancerCapacityPropertyToHclTerraform(this._minimumLoadBalancerCapacity.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAlb.MinimumLoadBalancerCapacityPropertyList",
+        storageClassType: "AwsAlb.MinimumLoadBalancerCapacityPropertyList",
       },
       subnet_mapping: {
-        value: cdktn.listMapperHcl(tfAlbSubnetMappingPropertyToHclTerraform, true)(this._subnetMapping.internalValue),
+        value: cdktn.listMapperHcl(awsAlbSubnetMappingPropertyToHclTerraform, true)(this._subnetMapping.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfAlb.SubnetMappingPropertyList",
+        storageClassType: "AwsAlb.SubnetMappingPropertyList",
       },
       timeouts: {
-        value: tfAlbTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsAlbTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfAlb.TimeoutsProperty",
+        storageClassType: "AwsAlb.TimeoutsProperty",
       },
     };
 
@@ -1135,7 +1135,7 @@ export class TfAlb extends cdktn.TerraformResource {
   }
 }
 
-export function tfAlbAccessLogsPropertyToTerraform(struct?: TfAlb.AccessLogsPropertyOutputReference | TfAlb.AccessLogsProperty): any {
+export function awsAlbAccessLogsPropertyToTerraform(struct?: AwsAlb.AccessLogsPropertyOutputReference | AwsAlb.AccessLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1148,7 +1148,7 @@ export function tfAlbAccessLogsPropertyToTerraform(struct?: TfAlb.AccessLogsProp
 }
 
 
-export function tfAlbAccessLogsPropertyToHclTerraform(struct?: TfAlb.AccessLogsPropertyOutputReference | TfAlb.AccessLogsProperty): any {
+export function awsAlbAccessLogsPropertyToHclTerraform(struct?: AwsAlb.AccessLogsPropertyOutputReference | AwsAlb.AccessLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1179,7 +1179,7 @@ export function tfAlbAccessLogsPropertyToHclTerraform(struct?: TfAlb.AccessLogsP
 }
 
 
-export function tfAlbConnectionLogsPropertyToTerraform(struct?: TfAlb.ConnectionLogsPropertyOutputReference | TfAlb.ConnectionLogsProperty): any {
+export function awsAlbConnectionLogsPropertyToTerraform(struct?: AwsAlb.ConnectionLogsPropertyOutputReference | AwsAlb.ConnectionLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1192,7 +1192,7 @@ export function tfAlbConnectionLogsPropertyToTerraform(struct?: TfAlb.Connection
 }
 
 
-export function tfAlbConnectionLogsPropertyToHclTerraform(struct?: TfAlb.ConnectionLogsPropertyOutputReference | TfAlb.ConnectionLogsProperty): any {
+export function awsAlbConnectionLogsPropertyToHclTerraform(struct?: AwsAlb.ConnectionLogsPropertyOutputReference | AwsAlb.ConnectionLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1223,7 +1223,7 @@ export function tfAlbConnectionLogsPropertyToHclTerraform(struct?: TfAlb.Connect
 }
 
 
-export function tfAlbHealthCheckLogsPropertyToTerraform(struct?: TfAlb.HealthCheckLogsPropertyOutputReference | TfAlb.HealthCheckLogsProperty): any {
+export function awsAlbHealthCheckLogsPropertyToTerraform(struct?: AwsAlb.HealthCheckLogsPropertyOutputReference | AwsAlb.HealthCheckLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1236,7 +1236,7 @@ export function tfAlbHealthCheckLogsPropertyToTerraform(struct?: TfAlb.HealthChe
 }
 
 
-export function tfAlbHealthCheckLogsPropertyToHclTerraform(struct?: TfAlb.HealthCheckLogsPropertyOutputReference | TfAlb.HealthCheckLogsProperty): any {
+export function awsAlbHealthCheckLogsPropertyToHclTerraform(struct?: AwsAlb.HealthCheckLogsPropertyOutputReference | AwsAlb.HealthCheckLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1267,7 +1267,7 @@ export function tfAlbHealthCheckLogsPropertyToHclTerraform(struct?: TfAlb.Health
 }
 
 
-export function tfAlbIpamPoolsPropertyToTerraform(struct?: TfAlb.IpamPoolsPropertyOutputReference | TfAlb.IpamPoolsProperty): any {
+export function awsAlbIpamPoolsPropertyToTerraform(struct?: AwsAlb.IpamPoolsPropertyOutputReference | AwsAlb.IpamPoolsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1278,7 +1278,7 @@ export function tfAlbIpamPoolsPropertyToTerraform(struct?: TfAlb.IpamPoolsProper
 }
 
 
-export function tfAlbIpamPoolsPropertyToHclTerraform(struct?: TfAlb.IpamPoolsPropertyOutputReference | TfAlb.IpamPoolsProperty): any {
+export function awsAlbIpamPoolsPropertyToHclTerraform(struct?: AwsAlb.IpamPoolsPropertyOutputReference | AwsAlb.IpamPoolsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1297,7 +1297,7 @@ export function tfAlbIpamPoolsPropertyToHclTerraform(struct?: TfAlb.IpamPoolsPro
 }
 
 
-export function tfAlbMinimumLoadBalancerCapacityPropertyToTerraform(struct?: TfAlb.MinimumLoadBalancerCapacityPropertyOutputReference | TfAlb.MinimumLoadBalancerCapacityProperty): any {
+export function awsAlbMinimumLoadBalancerCapacityPropertyToTerraform(struct?: AwsAlb.MinimumLoadBalancerCapacityPropertyOutputReference | AwsAlb.MinimumLoadBalancerCapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1308,7 +1308,7 @@ export function tfAlbMinimumLoadBalancerCapacityPropertyToTerraform(struct?: TfA
 }
 
 
-export function tfAlbMinimumLoadBalancerCapacityPropertyToHclTerraform(struct?: TfAlb.MinimumLoadBalancerCapacityPropertyOutputReference | TfAlb.MinimumLoadBalancerCapacityProperty): any {
+export function awsAlbMinimumLoadBalancerCapacityPropertyToHclTerraform(struct?: AwsAlb.MinimumLoadBalancerCapacityPropertyOutputReference | AwsAlb.MinimumLoadBalancerCapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1327,7 +1327,7 @@ export function tfAlbMinimumLoadBalancerCapacityPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfAlbSubnetMappingPropertyToTerraform(struct?: TfAlb.SubnetMappingProperty | cdktn.IResolvable): any {
+export function awsAlbSubnetMappingPropertyToTerraform(struct?: AwsAlb.SubnetMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1341,7 +1341,7 @@ export function tfAlbSubnetMappingPropertyToTerraform(struct?: TfAlb.SubnetMappi
 }
 
 
-export function tfAlbSubnetMappingPropertyToHclTerraform(struct?: TfAlb.SubnetMappingProperty | cdktn.IResolvable): any {
+export function awsAlbSubnetMappingPropertyToHclTerraform(struct?: AwsAlb.SubnetMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1378,7 +1378,7 @@ export function tfAlbSubnetMappingPropertyToHclTerraform(struct?: TfAlb.SubnetMa
 }
 
 
-export function tfAlbTimeoutsPropertyToTerraform(struct?: TfAlb.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAlbTimeoutsPropertyToTerraform(struct?: AwsAlb.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1391,7 +1391,7 @@ export function tfAlbTimeoutsPropertyToTerraform(struct?: TfAlb.TimeoutsProperty
 }
 
 
-export function tfAlbTimeoutsPropertyToHclTerraform(struct?: TfAlb.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAlbTimeoutsPropertyToHclTerraform(struct?: AwsAlb.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1422,18 +1422,18 @@ export function tfAlbTimeoutsPropertyToHclTerraform(struct?: TfAlb.TimeoutsPrope
 }
 
 
-export namespace TfAlb {
+export namespace AwsAlb {
 export interface AccessLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#bucket TfAlb#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#bucket AwsAlb#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enabled TfAlb#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enabled AwsAlb#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#prefix TfAlb#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#prefix AwsAlb#prefix}
   */
   readonly prefix?: string;
 }
@@ -1528,15 +1528,15 @@ export class AccessLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ConnectionLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#bucket TfAlb#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#bucket AwsAlb#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enabled TfAlb#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enabled AwsAlb#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#prefix TfAlb#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#prefix AwsAlb#prefix}
   */
   readonly prefix?: string;
 }
@@ -1631,15 +1631,15 @@ export class ConnectionLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HealthCheckLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#bucket TfAlb#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#bucket AwsAlb#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enabled TfAlb#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enabled AwsAlb#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#prefix TfAlb#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#prefix AwsAlb#prefix}
   */
   readonly prefix?: string;
 }
@@ -1734,7 +1734,7 @@ export class HealthCheckLogsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface IpamPoolsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#ipv4_ipam_pool_id TfAlb#ipv4_ipam_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#ipv4_ipam_pool_id AwsAlb#ipv4_ipam_pool_id}
   */
   readonly ipv4IpamPoolId: string;
 }
@@ -1785,7 +1785,7 @@ export class IpamPoolsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MinimumLoadBalancerCapacityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#capacity_units TfAlb#capacity_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#capacity_units AwsAlb#capacity_units}
   */
   readonly capacityUnits: number;
 }
@@ -1836,19 +1836,19 @@ export class MinimumLoadBalancerCapacityPropertyOutputReference extends cdktn.Co
 }
 export interface SubnetMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#allocation_id TfAlb#allocation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#allocation_id AwsAlb#allocation_id}
   */
   readonly allocationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#ipv6_address TfAlb#ipv6_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#ipv6_address AwsAlb#ipv6_address}
   */
   readonly ipv6Address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#private_ipv4_address TfAlb#private_ipv4_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#private_ipv4_address AwsAlb#private_ipv4_address}
   */
   readonly privateIpv4Address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#subnet_id TfAlb#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#subnet_id AwsAlb#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -2002,15 +2002,15 @@ export class SubnetMappingPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#create TfAlb#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#create AwsAlb#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#delete TfAlb#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#delete AwsAlb#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#update TfAlb#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#update AwsAlb#update}
   */
   readonly update?: string;
 }

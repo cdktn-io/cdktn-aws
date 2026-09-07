@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCustomerGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCustomerGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#bgp_asn TfCustomerGateway#bgp_asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#bgp_asn AwsCustomerGateway#bgp_asn}
   */
   readonly bgpAsn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#bgp_asn_extended TfCustomerGateway#bgp_asn_extended}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#bgp_asn_extended AwsCustomerGateway#bgp_asn_extended}
   */
   readonly bgpAsnExtended?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#certificate_arn TfCustomerGateway#certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#certificate_arn AwsCustomerGateway#certificate_arn}
   */
   readonly certificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#device_name TfCustomerGateway#device_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#device_name AwsCustomerGateway#device_name}
   */
   readonly deviceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#id TfCustomerGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#id AwsCustomerGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#ip_address TfCustomerGateway#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#ip_address AwsCustomerGateway#ip_address}
   */
   readonly ipAddress?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#region TfCustomerGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#region AwsCustomerGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#tags TfCustomerGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#tags AwsCustomerGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#tags_all TfCustomerGateway#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#tags_all AwsCustomerGateway#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#type TfCustomerGateway#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#type AwsCustomerGateway#type}
   */
   readonly type: string;
 }
@@ -56,7 +56,7 @@ export interface TfCustomerGatewayConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway aws_customer_gateway}
 */
-export class TfCustomerGateway extends cdktn.TerraformResource {
+export class AwsCustomerGateway extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class TfCustomerGateway extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCustomerGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCustomerGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCustomerGateway to import
-  * @param importFromId The id of the existing TfCustomerGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCustomerGateway to import is found
+  * @param importToId The construct id used in the generated config for the AwsCustomerGateway to import
+  * @param importFromId The id of the existing AwsCustomerGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customer_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCustomerGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_customer_gateway", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class TfCustomerGateway extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCustomerGatewayConfig
+  * @param options AwsCustomerGatewayConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCustomerGatewayConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCustomerGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_customer_gateway',
       terraformGeneratorMetadata: {

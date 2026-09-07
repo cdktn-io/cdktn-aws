@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDefaultDomainConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDefaultDomainConfig extends cdktn.TerraformMetaArguments {
   /**
   * Mail domain name to set as the default.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_default_domain#domain_name TfDefaultDomain#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_default_domain#domain_name AwsDefaultDomain#domain_name}
   */
   readonly domainName: string;
   /**
   * Identifier of the WorkMail organization.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_default_domain#organization_id TfDefaultDomain#organization_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_default_domain#organization_id AwsDefaultDomain#organization_id}
   */
   readonly organizationId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_default_domain#region TfDefaultDomain#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_default_domain#region AwsDefaultDomain#region}
   */
   readonly region?: string;
 }
@@ -29,7 +29,7 @@ export interface TfDefaultDomainConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_default_domain aws_workmail_default_domain}
 */
-export class TfDefaultDomain extends cdktn.TerraformResource {
+export class AwsDefaultDomain extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class TfDefaultDomain extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDefaultDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDefaultDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDefaultDomain to import
-  * @param importFromId The id of the existing TfDefaultDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_default_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDefaultDomain to import is found
+  * @param importToId The construct id used in the generated config for the AwsDefaultDomain to import
+  * @param importFromId The id of the existing AwsDefaultDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workmail_default_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDefaultDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workmail_default_domain", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class TfDefaultDomain extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDefaultDomainConfig
+  * @param options AwsDefaultDomainConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDefaultDomainConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDefaultDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workmail_default_domain',
       terraformGeneratorMetadata: {

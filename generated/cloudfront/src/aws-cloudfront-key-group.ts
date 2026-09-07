@@ -5,24 +5,24 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfKeyGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsKeyGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_group#comment TfKeyGroup#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_group#comment AwsKeyGroup#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_group#id TfKeyGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_group#id AwsKeyGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_group#items TfKeyGroup#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_group#items AwsKeyGroup#items}
   */
   readonly items: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_group#name TfKeyGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_group#name AwsKeyGroup#name}
   */
   readonly name: string;
 }
@@ -30,7 +30,7 @@ export interface TfKeyGroupConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_group aws_cloudfront_key_group}
 */
-export class TfKeyGroup extends cdktn.TerraformResource {
+export class AwsKeyGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class TfKeyGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfKeyGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsKeyGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfKeyGroup to import
-  * @param importFromId The id of the existing TfKeyGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfKeyGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsKeyGroup to import
+  * @param importFromId The id of the existing AwsKeyGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_key_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsKeyGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_key_group", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class TfKeyGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfKeyGroupConfig
+  * @param options AwsKeyGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfKeyGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsKeyGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_key_group',
       terraformGeneratorMetadata: {

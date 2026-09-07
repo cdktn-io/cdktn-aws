@@ -5,20 +5,20 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDelegatedAdministratorConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDelegatedAdministratorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_delegated_administrator#account_id TfDelegatedAdministrator#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_delegated_administrator#account_id AwsDelegatedAdministrator#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_delegated_administrator#id TfDelegatedAdministrator#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_delegated_administrator#id AwsDelegatedAdministrator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_delegated_administrator#service_principal TfDelegatedAdministrator#service_principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_delegated_administrator#service_principal AwsDelegatedAdministrator#service_principal}
   */
   readonly servicePrincipal: string;
 }
@@ -26,7 +26,7 @@ export interface TfDelegatedAdministratorConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_delegated_administrator aws_organizations_delegated_administrator}
 */
-export class TfDelegatedAdministrator extends cdktn.TerraformResource {
+export class AwsDelegatedAdministrator extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class TfDelegatedAdministrator extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDelegatedAdministrator resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDelegatedAdministrator resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDelegatedAdministrator to import
-  * @param importFromId The id of the existing TfDelegatedAdministrator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_delegated_administrator#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDelegatedAdministrator to import is found
+  * @param importToId The construct id used in the generated config for the AwsDelegatedAdministrator to import
+  * @param importFromId The id of the existing AwsDelegatedAdministrator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/organizations_delegated_administrator#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDelegatedAdministrator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_organizations_delegated_administrator", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class TfDelegatedAdministrator extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDelegatedAdministratorConfig
+  * @param options AwsDelegatedAdministratorConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDelegatedAdministratorConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDelegatedAdministratorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_organizations_delegated_administrator',
       terraformGeneratorMetadata: {

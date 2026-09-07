@@ -5,136 +5,136 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTargetGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTargetGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#connection_termination TfTargetGroup#connection_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#connection_termination AwsTargetGroup#connection_termination}
   */
   readonly connectionTermination?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#deregistration_delay TfTargetGroup#deregistration_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#deregistration_delay AwsTargetGroup#deregistration_delay}
   */
   readonly deregistrationDelay?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#id TfTargetGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#id AwsTargetGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#ip_address_type TfTargetGroup#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#ip_address_type AwsTargetGroup#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#lambda_multi_value_headers_enabled TfTargetGroup#lambda_multi_value_headers_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#lambda_multi_value_headers_enabled AwsTargetGroup#lambda_multi_value_headers_enabled}
   */
   readonly lambdaMultiValueHeadersEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#load_balancing_algorithm_type TfTargetGroup#load_balancing_algorithm_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#load_balancing_algorithm_type AwsTargetGroup#load_balancing_algorithm_type}
   */
   readonly loadBalancingAlgorithmType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#load_balancing_anomaly_mitigation TfTargetGroup#load_balancing_anomaly_mitigation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#load_balancing_anomaly_mitigation AwsTargetGroup#load_balancing_anomaly_mitigation}
   */
   readonly loadBalancingAnomalyMitigation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#load_balancing_cross_zone_enabled TfTargetGroup#load_balancing_cross_zone_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#load_balancing_cross_zone_enabled AwsTargetGroup#load_balancing_cross_zone_enabled}
   */
   readonly loadBalancingCrossZoneEnabled?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#name TfTargetGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#name AwsTargetGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#name_prefix TfTargetGroup#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#name_prefix AwsTargetGroup#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#port TfTargetGroup#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#port AwsTargetGroup#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#preserve_client_ip TfTargetGroup#preserve_client_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#preserve_client_ip AwsTargetGroup#preserve_client_ip}
   */
   readonly preserveClientIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#protocol TfTargetGroup#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#protocol AwsTargetGroup#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#protocol_version TfTargetGroup#protocol_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#protocol_version AwsTargetGroup#protocol_version}
   */
   readonly protocolVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#proxy_protocol_v2 TfTargetGroup#proxy_protocol_v2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#proxy_protocol_v2 AwsTargetGroup#proxy_protocol_v2}
   */
   readonly proxyProtocolV2?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#region TfTargetGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#region AwsTargetGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#slow_start TfTargetGroup#slow_start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#slow_start AwsTargetGroup#slow_start}
   */
   readonly slowStart?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#tags TfTargetGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#tags AwsTargetGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#tags_all TfTargetGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#tags_all AwsTargetGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#target_control_port TfTargetGroup#target_control_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#target_control_port AwsTargetGroup#target_control_port}
   */
   readonly targetControlPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#target_type TfTargetGroup#target_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#target_type AwsTargetGroup#target_type}
   */
   readonly targetType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#vpc_id TfTargetGroup#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#vpc_id AwsTargetGroup#vpc_id}
   */
   readonly vpcId?: string;
   /**
   * health_check block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#health_check TfTargetGroup#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#health_check AwsTargetGroup#health_check}
   */
-  readonly healthCheck?: TfTargetGroup.HealthCheckProperty;
+  readonly healthCheck?: AwsTargetGroup.HealthCheckProperty;
   /**
   * stickiness block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#stickiness TfTargetGroup#stickiness}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#stickiness AwsTargetGroup#stickiness}
   */
-  readonly stickiness?: TfTargetGroup.StickinessProperty;
+  readonly stickiness?: AwsTargetGroup.StickinessProperty;
   /**
   * target_failover block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#target_failover TfTargetGroup#target_failover}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#target_failover AwsTargetGroup#target_failover}
   */
-  readonly targetFailover?: TfTargetGroup.TargetFailoverProperty[] | cdktn.IResolvable;
+  readonly targetFailover?: AwsTargetGroup.TargetFailoverProperty[] | cdktn.IResolvable;
   /**
   * target_group_health block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#target_group_health TfTargetGroup#target_group_health}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#target_group_health AwsTargetGroup#target_group_health}
   */
-  readonly targetGroupHealth?: TfTargetGroup.TargetGroupHealthProperty;
+  readonly targetGroupHealth?: AwsTargetGroup.TargetGroupHealthProperty;
   /**
   * target_health_state block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#target_health_state TfTargetGroup#target_health_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#target_health_state AwsTargetGroup#target_health_state}
   */
-  readonly targetHealthState?: TfTargetGroup.TargetHealthStateProperty[] | cdktn.IResolvable;
+  readonly targetHealthState?: AwsTargetGroup.TargetHealthStateProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group aws_lb_target_group}
 */
-export class TfTargetGroup extends cdktn.TerraformResource {
+export class AwsTargetGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -145,11 +145,11 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTargetGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTargetGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTargetGroup to import
-  * @param importFromId The id of the existing TfTargetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTargetGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsTargetGroup to import
+  * @param importFromId The id of the existing AwsTargetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTargetGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lb_target_group", importId: importFromId, provider });
@@ -164,9 +164,9 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTargetGroupConfig = {}
+  * @param options AwsTargetGroupConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfTargetGroupConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsTargetGroupConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_lb_target_group',
       terraformGeneratorMetadata: {
@@ -583,11 +583,11 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   }
 
   // health_check - computed: false, optional: true, required: false
-  private _healthCheck = new TfTargetGroup.HealthCheckPropertyOutputReference(this, "health_check");
+  private _healthCheck = new AwsTargetGroup.HealthCheckPropertyOutputReference(this, "health_check");
   public get healthCheck() {
     return this._healthCheck;
   }
-  public putHealthCheck(value: TfTargetGroup.HealthCheckProperty) {
+  public putHealthCheck(value: AwsTargetGroup.HealthCheckProperty) {
     this._healthCheck.internalValue = value;
   }
   public resetHealthCheck() {
@@ -599,11 +599,11 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   }
 
   // stickiness - computed: false, optional: true, required: false
-  private _stickiness = new TfTargetGroup.StickinessPropertyOutputReference(this, "stickiness");
+  private _stickiness = new AwsTargetGroup.StickinessPropertyOutputReference(this, "stickiness");
   public get stickiness() {
     return this._stickiness;
   }
-  public putStickiness(value: TfTargetGroup.StickinessProperty) {
+  public putStickiness(value: AwsTargetGroup.StickinessProperty) {
     this._stickiness.internalValue = value;
   }
   public resetStickiness() {
@@ -615,11 +615,11 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   }
 
   // target_failover - computed: false, optional: true, required: false
-  private _targetFailover = new TfTargetGroup.TargetFailoverPropertyList(this, "target_failover", false);
+  private _targetFailover = new AwsTargetGroup.TargetFailoverPropertyList(this, "target_failover", false);
   public get targetFailover() {
     return this._targetFailover;
   }
-  public putTargetFailover(value: TfTargetGroup.TargetFailoverProperty[] | cdktn.IResolvable) {
+  public putTargetFailover(value: AwsTargetGroup.TargetFailoverProperty[] | cdktn.IResolvable) {
     this._targetFailover.internalValue = value;
   }
   public resetTargetFailover() {
@@ -631,11 +631,11 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   }
 
   // target_group_health - computed: false, optional: true, required: false
-  private _targetGroupHealth = new TfTargetGroup.TargetGroupHealthPropertyOutputReference(this, "target_group_health");
+  private _targetGroupHealth = new AwsTargetGroup.TargetGroupHealthPropertyOutputReference(this, "target_group_health");
   public get targetGroupHealth() {
     return this._targetGroupHealth;
   }
-  public putTargetGroupHealth(value: TfTargetGroup.TargetGroupHealthProperty) {
+  public putTargetGroupHealth(value: AwsTargetGroup.TargetGroupHealthProperty) {
     this._targetGroupHealth.internalValue = value;
   }
   public resetTargetGroupHealth() {
@@ -647,11 +647,11 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   }
 
   // target_health_state - computed: false, optional: true, required: false
-  private _targetHealthState = new TfTargetGroup.TargetHealthStatePropertyList(this, "target_health_state", false);
+  private _targetHealthState = new AwsTargetGroup.TargetHealthStatePropertyList(this, "target_health_state", false);
   public get targetHealthState() {
     return this._targetHealthState;
   }
-  public putTargetHealthState(value: TfTargetGroup.TargetHealthStateProperty[] | cdktn.IResolvable) {
+  public putTargetHealthState(value: AwsTargetGroup.TargetHealthStateProperty[] | cdktn.IResolvable) {
     this._targetHealthState.internalValue = value;
   }
   public resetTargetHealthState() {
@@ -690,11 +690,11 @@ export class TfTargetGroup extends cdktn.TerraformResource {
       target_control_port: cdktn.numberToTerraform(this._targetControlPort),
       target_type: cdktn.stringToTerraform(this._targetType),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      health_check: tfTargetGroupHealthCheckPropertyToTerraform(this._healthCheck.internalValue),
-      stickiness: tfTargetGroupStickinessPropertyToTerraform(this._stickiness.internalValue),
-      target_failover: cdktn.listMapper(tfTargetGroupTargetFailoverPropertyToTerraform, true)(this._targetFailover.internalValue),
-      target_group_health: tfTargetGroupTargetGroupHealthPropertyToTerraform(this._targetGroupHealth.internalValue),
-      target_health_state: cdktn.listMapper(tfTargetGroupTargetHealthStatePropertyToTerraform, true)(this._targetHealthState.internalValue),
+      health_check: awsTargetGroupHealthCheckPropertyToTerraform(this._healthCheck.internalValue),
+      stickiness: awsTargetGroupStickinessPropertyToTerraform(this._stickiness.internalValue),
+      target_failover: cdktn.listMapper(awsTargetGroupTargetFailoverPropertyToTerraform, true)(this._targetFailover.internalValue),
+      target_group_health: awsTargetGroupTargetGroupHealthPropertyToTerraform(this._targetGroupHealth.internalValue),
+      target_health_state: cdktn.listMapper(awsTargetGroupTargetHealthStatePropertyToTerraform, true)(this._targetHealthState.internalValue),
     };
   }
 
@@ -833,34 +833,34 @@ export class TfTargetGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       health_check: {
-        value: tfTargetGroupHealthCheckPropertyToHclTerraform(this._healthCheck.internalValue),
+        value: awsTargetGroupHealthCheckPropertyToHclTerraform(this._healthCheck.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTargetGroup.HealthCheckPropertyList",
+        storageClassType: "AwsTargetGroup.HealthCheckPropertyList",
       },
       stickiness: {
-        value: tfTargetGroupStickinessPropertyToHclTerraform(this._stickiness.internalValue),
+        value: awsTargetGroupStickinessPropertyToHclTerraform(this._stickiness.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTargetGroup.StickinessPropertyList",
+        storageClassType: "AwsTargetGroup.StickinessPropertyList",
       },
       target_failover: {
-        value: cdktn.listMapperHcl(tfTargetGroupTargetFailoverPropertyToHclTerraform, true)(this._targetFailover.internalValue),
+        value: cdktn.listMapperHcl(awsTargetGroupTargetFailoverPropertyToHclTerraform, true)(this._targetFailover.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTargetGroup.TargetFailoverPropertyList",
+        storageClassType: "AwsTargetGroup.TargetFailoverPropertyList",
       },
       target_group_health: {
-        value: tfTargetGroupTargetGroupHealthPropertyToHclTerraform(this._targetGroupHealth.internalValue),
+        value: awsTargetGroupTargetGroupHealthPropertyToHclTerraform(this._targetGroupHealth.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTargetGroup.TargetGroupHealthPropertyList",
+        storageClassType: "AwsTargetGroup.TargetGroupHealthPropertyList",
       },
       target_health_state: {
-        value: cdktn.listMapperHcl(tfTargetGroupTargetHealthStatePropertyToHclTerraform, true)(this._targetHealthState.internalValue),
+        value: cdktn.listMapperHcl(awsTargetGroupTargetHealthStatePropertyToHclTerraform, true)(this._targetHealthState.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTargetGroup.TargetHealthStatePropertyList",
+        storageClassType: "AwsTargetGroup.TargetHealthStatePropertyList",
       },
     };
 
@@ -869,7 +869,7 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfTargetGroupHealthCheckPropertyToTerraform(struct?: TfTargetGroup.HealthCheckPropertyOutputReference | TfTargetGroup.HealthCheckProperty): any {
+export function awsTargetGroupHealthCheckPropertyToTerraform(struct?: AwsTargetGroup.HealthCheckPropertyOutputReference | AwsTargetGroup.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -888,7 +888,7 @@ export function tfTargetGroupHealthCheckPropertyToTerraform(struct?: TfTargetGro
 }
 
 
-export function tfTargetGroupHealthCheckPropertyToHclTerraform(struct?: TfTargetGroup.HealthCheckPropertyOutputReference | TfTargetGroup.HealthCheckProperty): any {
+export function awsTargetGroupHealthCheckPropertyToHclTerraform(struct?: AwsTargetGroup.HealthCheckPropertyOutputReference | AwsTargetGroup.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -955,7 +955,7 @@ export function tfTargetGroupHealthCheckPropertyToHclTerraform(struct?: TfTarget
 }
 
 
-export function tfTargetGroupStickinessPropertyToTerraform(struct?: TfTargetGroup.StickinessPropertyOutputReference | TfTargetGroup.StickinessProperty): any {
+export function awsTargetGroupStickinessPropertyToTerraform(struct?: AwsTargetGroup.StickinessPropertyOutputReference | AwsTargetGroup.StickinessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -969,7 +969,7 @@ export function tfTargetGroupStickinessPropertyToTerraform(struct?: TfTargetGrou
 }
 
 
-export function tfTargetGroupStickinessPropertyToHclTerraform(struct?: TfTargetGroup.StickinessPropertyOutputReference | TfTargetGroup.StickinessProperty): any {
+export function awsTargetGroupStickinessPropertyToHclTerraform(struct?: AwsTargetGroup.StickinessPropertyOutputReference | AwsTargetGroup.StickinessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1006,7 +1006,7 @@ export function tfTargetGroupStickinessPropertyToHclTerraform(struct?: TfTargetG
 }
 
 
-export function tfTargetGroupTargetFailoverPropertyToTerraform(struct?: TfTargetGroup.TargetFailoverProperty | cdktn.IResolvable): any {
+export function awsTargetGroupTargetFailoverPropertyToTerraform(struct?: AwsTargetGroup.TargetFailoverProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1018,7 +1018,7 @@ export function tfTargetGroupTargetFailoverPropertyToTerraform(struct?: TfTarget
 }
 
 
-export function tfTargetGroupTargetFailoverPropertyToHclTerraform(struct?: TfTargetGroup.TargetFailoverProperty | cdktn.IResolvable): any {
+export function awsTargetGroupTargetFailoverPropertyToHclTerraform(struct?: AwsTargetGroup.TargetFailoverProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1043,7 +1043,7 @@ export function tfTargetGroupTargetFailoverPropertyToHclTerraform(struct?: TfTar
 }
 
 
-export function tfTargetGroupDnsFailoverPropertyToTerraform(struct?: TfTargetGroup.DnsFailoverPropertyOutputReference | TfTargetGroup.DnsFailoverProperty): any {
+export function awsTargetGroupDnsFailoverPropertyToTerraform(struct?: AwsTargetGroup.DnsFailoverPropertyOutputReference | AwsTargetGroup.DnsFailoverProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1055,7 +1055,7 @@ export function tfTargetGroupDnsFailoverPropertyToTerraform(struct?: TfTargetGro
 }
 
 
-export function tfTargetGroupDnsFailoverPropertyToHclTerraform(struct?: TfTargetGroup.DnsFailoverPropertyOutputReference | TfTargetGroup.DnsFailoverProperty): any {
+export function awsTargetGroupDnsFailoverPropertyToHclTerraform(struct?: AwsTargetGroup.DnsFailoverPropertyOutputReference | AwsTargetGroup.DnsFailoverProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1080,7 +1080,7 @@ export function tfTargetGroupDnsFailoverPropertyToHclTerraform(struct?: TfTarget
 }
 
 
-export function tfTargetGroupUnhealthyStateRoutingPropertyToTerraform(struct?: TfTargetGroup.UnhealthyStateRoutingPropertyOutputReference | TfTargetGroup.UnhealthyStateRoutingProperty): any {
+export function awsTargetGroupUnhealthyStateRoutingPropertyToTerraform(struct?: AwsTargetGroup.UnhealthyStateRoutingPropertyOutputReference | AwsTargetGroup.UnhealthyStateRoutingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1092,7 +1092,7 @@ export function tfTargetGroupUnhealthyStateRoutingPropertyToTerraform(struct?: T
 }
 
 
-export function tfTargetGroupUnhealthyStateRoutingPropertyToHclTerraform(struct?: TfTargetGroup.UnhealthyStateRoutingPropertyOutputReference | TfTargetGroup.UnhealthyStateRoutingProperty): any {
+export function awsTargetGroupUnhealthyStateRoutingPropertyToHclTerraform(struct?: AwsTargetGroup.UnhealthyStateRoutingPropertyOutputReference | AwsTargetGroup.UnhealthyStateRoutingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1117,32 +1117,32 @@ export function tfTargetGroupUnhealthyStateRoutingPropertyToHclTerraform(struct?
 }
 
 
-export function tfTargetGroupTargetGroupHealthPropertyToTerraform(struct?: TfTargetGroup.TargetGroupHealthPropertyOutputReference | TfTargetGroup.TargetGroupHealthProperty): any {
+export function awsTargetGroupTargetGroupHealthPropertyToTerraform(struct?: AwsTargetGroup.TargetGroupHealthPropertyOutputReference | AwsTargetGroup.TargetGroupHealthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    dns_failover: tfTargetGroupDnsFailoverPropertyToTerraform(struct!.dnsFailover),
-    unhealthy_state_routing: tfTargetGroupUnhealthyStateRoutingPropertyToTerraform(struct!.unhealthyStateRouting),
+    dns_failover: awsTargetGroupDnsFailoverPropertyToTerraform(struct!.dnsFailover),
+    unhealthy_state_routing: awsTargetGroupUnhealthyStateRoutingPropertyToTerraform(struct!.unhealthyStateRouting),
   }
 }
 
 
-export function tfTargetGroupTargetGroupHealthPropertyToHclTerraform(struct?: TfTargetGroup.TargetGroupHealthPropertyOutputReference | TfTargetGroup.TargetGroupHealthProperty): any {
+export function awsTargetGroupTargetGroupHealthPropertyToHclTerraform(struct?: AwsTargetGroup.TargetGroupHealthPropertyOutputReference | AwsTargetGroup.TargetGroupHealthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     dns_failover: {
-      value: tfTargetGroupDnsFailoverPropertyToHclTerraform(struct!.dnsFailover),
+      value: awsTargetGroupDnsFailoverPropertyToHclTerraform(struct!.dnsFailover),
       isBlock: true,
       type: "list",
       storageClassType: "DnsFailoverPropertyList",
     },
     unhealthy_state_routing: {
-      value: tfTargetGroupUnhealthyStateRoutingPropertyToHclTerraform(struct!.unhealthyStateRouting),
+      value: awsTargetGroupUnhealthyStateRoutingPropertyToHclTerraform(struct!.unhealthyStateRouting),
       isBlock: true,
       type: "list",
       storageClassType: "UnhealthyStateRoutingPropertyList",
@@ -1154,7 +1154,7 @@ export function tfTargetGroupTargetGroupHealthPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfTargetGroupTargetHealthStatePropertyToTerraform(struct?: TfTargetGroup.TargetHealthStateProperty | cdktn.IResolvable): any {
+export function awsTargetGroupTargetHealthStatePropertyToTerraform(struct?: AwsTargetGroup.TargetHealthStateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1166,7 +1166,7 @@ export function tfTargetGroupTargetHealthStatePropertyToTerraform(struct?: TfTar
 }
 
 
-export function tfTargetGroupTargetHealthStatePropertyToHclTerraform(struct?: TfTargetGroup.TargetHealthStateProperty | cdktn.IResolvable): any {
+export function awsTargetGroupTargetHealthStatePropertyToHclTerraform(struct?: AwsTargetGroup.TargetHealthStateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1191,42 +1191,42 @@ export function tfTargetGroupTargetHealthStatePropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfTargetGroup {
+export namespace AwsTargetGroup {
 export interface HealthCheckProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#enabled TfTargetGroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#enabled AwsTargetGroup#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#healthy_threshold TfTargetGroup#healthy_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#healthy_threshold AwsTargetGroup#healthy_threshold}
   */
   readonly healthyThreshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#interval TfTargetGroup#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#interval AwsTargetGroup#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#matcher TfTargetGroup#matcher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#matcher AwsTargetGroup#matcher}
   */
   readonly matcher?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#path TfTargetGroup#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#path AwsTargetGroup#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#port TfTargetGroup#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#port AwsTargetGroup#port}
   */
   readonly port?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#protocol TfTargetGroup#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#protocol AwsTargetGroup#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#timeout TfTargetGroup#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#timeout AwsTargetGroup#timeout}
   */
   readonly timeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#unhealthy_threshold TfTargetGroup#unhealthy_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#unhealthy_threshold AwsTargetGroup#unhealthy_threshold}
   */
   readonly unhealthyThreshold?: number;
 }
@@ -1456,19 +1456,19 @@ export class HealthCheckPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StickinessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#cookie_duration TfTargetGroup#cookie_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#cookie_duration AwsTargetGroup#cookie_duration}
   */
   readonly cookieDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#cookie_name TfTargetGroup#cookie_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#cookie_name AwsTargetGroup#cookie_name}
   */
   readonly cookieName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#enabled TfTargetGroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#enabled AwsTargetGroup#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#type TfTargetGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#type AwsTargetGroup#type}
   */
   readonly type: string;
 }
@@ -1585,11 +1585,11 @@ export class StickinessPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TargetFailoverProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#on_deregistration TfTargetGroup#on_deregistration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#on_deregistration AwsTargetGroup#on_deregistration}
   */
   readonly onDeregistration: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#on_unhealthy TfTargetGroup#on_unhealthy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#on_unhealthy AwsTargetGroup#on_unhealthy}
   */
   readonly onUnhealthy: string;
 }
@@ -1691,11 +1691,11 @@ export class TargetFailoverPropertyList extends cdktn.ComplexList {
 }
 export interface DnsFailoverProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#minimum_healthy_targets_count TfTargetGroup#minimum_healthy_targets_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#minimum_healthy_targets_count AwsTargetGroup#minimum_healthy_targets_count}
   */
   readonly minimumHealthyTargetsCount?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#minimum_healthy_targets_percentage TfTargetGroup#minimum_healthy_targets_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#minimum_healthy_targets_percentage AwsTargetGroup#minimum_healthy_targets_percentage}
   */
   readonly minimumHealthyTargetsPercentage?: string;
 }
@@ -1771,11 +1771,11 @@ export class DnsFailoverPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface UnhealthyStateRoutingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#minimum_healthy_targets_count TfTargetGroup#minimum_healthy_targets_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#minimum_healthy_targets_count AwsTargetGroup#minimum_healthy_targets_count}
   */
   readonly minimumHealthyTargetsCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#minimum_healthy_targets_percentage TfTargetGroup#minimum_healthy_targets_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#minimum_healthy_targets_percentage AwsTargetGroup#minimum_healthy_targets_percentage}
   */
   readonly minimumHealthyTargetsPercentage?: string;
 }
@@ -1853,13 +1853,13 @@ export interface TargetGroupHealthProperty {
   /**
   * dns_failover block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#dns_failover TfTargetGroup#dns_failover}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#dns_failover AwsTargetGroup#dns_failover}
   */
   readonly dnsFailover?: DnsFailoverProperty;
   /**
   * unhealthy_state_routing block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#unhealthy_state_routing TfTargetGroup#unhealthy_state_routing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#unhealthy_state_routing AwsTargetGroup#unhealthy_state_routing}
   */
   readonly unhealthyStateRouting?: UnhealthyStateRoutingProperty;
 }
@@ -1935,11 +1935,11 @@ export class TargetGroupHealthPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TargetHealthStateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#enable_unhealthy_connection_termination TfTargetGroup#enable_unhealthy_connection_termination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#enable_unhealthy_connection_termination AwsTargetGroup#enable_unhealthy_connection_termination}
   */
   readonly enableUnhealthyConnectionTermination: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#unhealthy_draining_interval TfTargetGroup#unhealthy_draining_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lb_target_group#unhealthy_draining_interval AwsTargetGroup#unhealthy_draining_interval}
   */
   readonly unhealthyDrainingInterval?: number;
 }

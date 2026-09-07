@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVaultLockConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVaultLockConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#backup_vault_name TfVaultLockConfiguration#backup_vault_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#backup_vault_name AwsVaultLockConfiguration#backup_vault_name}
   */
   readonly backupVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#changeable_for_days TfVaultLockConfiguration#changeable_for_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#changeable_for_days AwsVaultLockConfiguration#changeable_for_days}
   */
   readonly changeableForDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#id TfVaultLockConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#id AwsVaultLockConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#max_retention_days TfVaultLockConfiguration#max_retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#max_retention_days AwsVaultLockConfiguration#max_retention_days}
   */
   readonly maxRetentionDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#min_retention_days TfVaultLockConfiguration#min_retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#min_retention_days AwsVaultLockConfiguration#min_retention_days}
   */
   readonly minRetentionDays?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#region TfVaultLockConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#region AwsVaultLockConfiguration#region}
   */
   readonly region?: string;
 }
@@ -40,7 +40,7 @@ export interface TfVaultLockConfigurationConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration aws_backup_vault_lock_configuration}
 */
-export class TfVaultLockConfiguration extends cdktn.TerraformResource {
+export class AwsVaultLockConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfVaultLockConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVaultLockConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVaultLockConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVaultLockConfiguration to import
-  * @param importFromId The id of the existing TfVaultLockConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVaultLockConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsVaultLockConfiguration to import
+  * @param importFromId The id of the existing AwsVaultLockConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_vault_lock_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVaultLockConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_vault_lock_configuration", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfVaultLockConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVaultLockConfigurationConfig
+  * @param options AwsVaultLockConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVaultLockConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVaultLockConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_vault_lock_configuration',
       terraformGeneratorMetadata: {

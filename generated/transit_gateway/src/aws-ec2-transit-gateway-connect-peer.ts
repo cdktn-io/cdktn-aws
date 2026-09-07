@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConnectPeerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConnectPeerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#bgp_asn TfConnectPeer#bgp_asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#bgp_asn AwsConnectPeer#bgp_asn}
   */
   readonly bgpAsn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#id TfConnectPeer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#id AwsConnectPeer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#inside_cidr_blocks TfConnectPeer#inside_cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#inside_cidr_blocks AwsConnectPeer#inside_cidr_blocks}
   */
   readonly insideCidrBlocks: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#peer_address TfConnectPeer#peer_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#peer_address AwsConnectPeer#peer_address}
   */
   readonly peerAddress: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#region TfConnectPeer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#region AwsConnectPeer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#tags TfConnectPeer#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#tags AwsConnectPeer#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#tags_all TfConnectPeer#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#tags_all AwsConnectPeer#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#transit_gateway_address TfConnectPeer#transit_gateway_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#transit_gateway_address AwsConnectPeer#transit_gateway_address}
   */
   readonly transitGatewayAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#transit_gateway_attachment_id TfConnectPeer#transit_gateway_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#transit_gateway_attachment_id AwsConnectPeer#transit_gateway_attachment_id}
   */
   readonly transitGatewayAttachmentId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#timeouts TfConnectPeer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#timeouts AwsConnectPeer#timeouts}
   */
-  readonly timeouts?: TfConnectPeer.TimeoutsProperty;
+  readonly timeouts?: AwsConnectPeer.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer aws_ec2_transit_gateway_connect_peer}
 */
-export class TfConnectPeer extends cdktn.TerraformResource {
+export class AwsConnectPeer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfConnectPeer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConnectPeer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConnectPeer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConnectPeer to import
-  * @param importFromId The id of the existing TfConnectPeer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConnectPeer to import is found
+  * @param importToId The construct id used in the generated config for the AwsConnectPeer to import
+  * @param importFromId The id of the existing AwsConnectPeer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConnectPeer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_connect_peer", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfConnectPeer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConnectPeerConfig
+  * @param options AwsConnectPeerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConnectPeerConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConnectPeerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_connect_peer',
       terraformGeneratorMetadata: {
@@ -273,11 +273,11 @@ export class TfConnectPeer extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfConnectPeer.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsConnectPeer.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfConnectPeer.TimeoutsProperty) {
+  public putTimeouts(value: AwsConnectPeer.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -303,7 +303,7 @@ export class TfConnectPeer extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       transit_gateway_address: cdktn.stringToTerraform(this._transitGatewayAddress),
       transit_gateway_attachment_id: cdktn.stringToTerraform(this._transitGatewayAttachmentId),
-      timeouts: tfConnectPeerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsConnectPeerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -364,10 +364,10 @@ export class TfConnectPeer extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfConnectPeerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsConnectPeerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfConnectPeer.TimeoutsProperty",
+        storageClassType: "AwsConnectPeer.TimeoutsProperty",
       },
     };
 
@@ -376,7 +376,7 @@ export class TfConnectPeer extends cdktn.TerraformResource {
   }
 }
 
-export function tfConnectPeerTimeoutsPropertyToTerraform(struct?: TfConnectPeer.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsConnectPeerTimeoutsPropertyToTerraform(struct?: AwsConnectPeer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function tfConnectPeerTimeoutsPropertyToTerraform(struct?: TfConnectPeer.
 }
 
 
-export function tfConnectPeerTimeoutsPropertyToHclTerraform(struct?: TfConnectPeer.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsConnectPeerTimeoutsPropertyToHclTerraform(struct?: AwsConnectPeer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,14 +413,14 @@ export function tfConnectPeerTimeoutsPropertyToHclTerraform(struct?: TfConnectPe
 }
 
 
-export namespace TfConnectPeer {
+export namespace AwsConnectPeer {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#create TfConnectPeer#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#create AwsConnectPeer#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#delete TfConnectPeer#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_connect_peer#delete AwsConnectPeer#delete}
   */
   readonly delete?: string;
 }

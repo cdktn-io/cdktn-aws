@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfCredentialsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsCredentialsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials#db_name DataTfCredentials#db_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials#db_name DataAwsCredentials#db_name}
   */
   readonly dbName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials#duration_seconds DataTfCredentials#duration_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials#duration_seconds DataAwsCredentials#duration_seconds}
   */
   readonly durationSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials#id DataTfCredentials#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials#id DataAwsCredentials#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface DataTfCredentialsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials#region DataTfCredentials#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials#region DataAwsCredentials#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials#workgroup_name DataTfCredentials#workgroup_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials#workgroup_name DataAwsCredentials#workgroup_name}
   */
   readonly workgroupName: string;
 }
@@ -36,7 +36,7 @@ export interface DataTfCredentialsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials aws_redshiftserverless_credentials}
 */
-export class DataTfCredentials extends cdktn.TerraformDataSource {
+export class DataAwsCredentials extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfCredentials extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfCredentials resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsCredentials resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfCredentials to import
-  * @param importFromId The id of the existing DataTfCredentials that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfCredentials to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsCredentials to import
+  * @param importFromId The id of the existing DataAwsCredentials that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/redshiftserverless_credentials#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsCredentials to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshiftserverless_credentials", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfCredentials extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfCredentialsConfig
+  * @param options DataAwsCredentialsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfCredentialsConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsCredentialsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshiftserverless_credentials',
       terraformGeneratorMetadata: {

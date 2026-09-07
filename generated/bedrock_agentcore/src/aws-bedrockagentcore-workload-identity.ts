@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfWorkloadIdentityConfig extends cdktn.TerraformMetaArguments {
+export interface AwsWorkloadIdentityConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_workload_identity#allowed_resource_oauth2_return_urls TfWorkloadIdentity#allowed_resource_oauth2_return_urls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_workload_identity#allowed_resource_oauth2_return_urls AwsWorkloadIdentity#allowed_resource_oauth2_return_urls}
   */
   readonly allowedResourceOauth2ReturnUrls?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_workload_identity#name TfWorkloadIdentity#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_workload_identity#name AwsWorkloadIdentity#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_workload_identity#region TfWorkloadIdentity#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_workload_identity#region AwsWorkloadIdentity#region}
   */
   readonly region?: string;
 }
@@ -25,7 +25,7 @@ export interface TfWorkloadIdentityConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_workload_identity aws_bedrockagentcore_workload_identity}
 */
-export class TfWorkloadIdentity extends cdktn.TerraformResource {
+export class AwsWorkloadIdentity extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class TfWorkloadIdentity extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfWorkloadIdentity resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsWorkloadIdentity resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfWorkloadIdentity to import
-  * @param importFromId The id of the existing TfWorkloadIdentity that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_workload_identity#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfWorkloadIdentity to import is found
+  * @param importToId The construct id used in the generated config for the AwsWorkloadIdentity to import
+  * @param importFromId The id of the existing AwsWorkloadIdentity that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_workload_identity#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsWorkloadIdentity to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_workload_identity", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class TfWorkloadIdentity extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfWorkloadIdentityConfig
+  * @param options AwsWorkloadIdentityConfig
   */
-  public constructor(scope: Construct, id: string, config: TfWorkloadIdentityConfig) {
+  public constructor(scope: Construct, id: string, config: AwsWorkloadIdentityConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_workload_identity',
       terraformGeneratorMetadata: {

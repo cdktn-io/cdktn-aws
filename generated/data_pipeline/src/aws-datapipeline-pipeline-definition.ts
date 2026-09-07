@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPipelineDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPipelineDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#id TfPipelineDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#id AwsPipelineDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#pipeline_id TfPipelineDefinition#pipeline_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#pipeline_id AwsPipelineDefinition#pipeline_id}
   */
   readonly pipelineId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#region TfPipelineDefinition#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#region AwsPipelineDefinition#region}
   */
   readonly region?: string;
   /**
   * parameter_object block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#parameter_object TfPipelineDefinition#parameter_object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#parameter_object AwsPipelineDefinition#parameter_object}
   */
-  readonly parameterObject?: TfPipelineDefinition.ParameterObjectProperty[] | cdktn.IResolvable;
+  readonly parameterObject?: AwsPipelineDefinition.ParameterObjectProperty[] | cdktn.IResolvable;
   /**
   * parameter_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#parameter_value TfPipelineDefinition#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#parameter_value AwsPipelineDefinition#parameter_value}
   */
-  readonly parameterValue?: TfPipelineDefinition.ParameterValueProperty[] | cdktn.IResolvable;
+  readonly parameterValue?: AwsPipelineDefinition.ParameterValueProperty[] | cdktn.IResolvable;
   /**
   * pipeline_object block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#pipeline_object TfPipelineDefinition#pipeline_object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#pipeline_object AwsPipelineDefinition#pipeline_object}
   */
-  readonly pipelineObject: TfPipelineDefinition.PipelineObjectProperty[] | cdktn.IResolvable;
+  readonly pipelineObject: AwsPipelineDefinition.PipelineObjectProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition aws_datapipeline_pipeline_definition}
 */
-export class TfPipelineDefinition extends cdktn.TerraformResource {
+export class AwsPipelineDefinition extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfPipelineDefinition extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPipelineDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPipelineDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPipelineDefinition to import
-  * @param importFromId The id of the existing TfPipelineDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPipelineDefinition to import is found
+  * @param importToId The construct id used in the generated config for the AwsPipelineDefinition to import
+  * @param importFromId The id of the existing AwsPipelineDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPipelineDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datapipeline_pipeline_definition", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfPipelineDefinition extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPipelineDefinitionConfig
+  * @param options AwsPipelineDefinitionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPipelineDefinitionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPipelineDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datapipeline_pipeline_definition',
       terraformGeneratorMetadata: {
@@ -152,11 +152,11 @@ export class TfPipelineDefinition extends cdktn.TerraformResource {
   }
 
   // parameter_object - computed: false, optional: true, required: false
-  private _parameterObject = new TfPipelineDefinition.ParameterObjectPropertyList(this, "parameter_object", true);
+  private _parameterObject = new AwsPipelineDefinition.ParameterObjectPropertyList(this, "parameter_object", true);
   public get parameterObject() {
     return this._parameterObject;
   }
-  public putParameterObject(value: TfPipelineDefinition.ParameterObjectProperty[] | cdktn.IResolvable) {
+  public putParameterObject(value: AwsPipelineDefinition.ParameterObjectProperty[] | cdktn.IResolvable) {
     this._parameterObject.internalValue = value;
   }
   public resetParameterObject() {
@@ -168,11 +168,11 @@ export class TfPipelineDefinition extends cdktn.TerraformResource {
   }
 
   // parameter_value - computed: false, optional: true, required: false
-  private _parameterValue = new TfPipelineDefinition.ParameterValuePropertyList(this, "parameter_value", true);
+  private _parameterValue = new AwsPipelineDefinition.ParameterValuePropertyList(this, "parameter_value", true);
   public get parameterValue() {
     return this._parameterValue;
   }
-  public putParameterValue(value: TfPipelineDefinition.ParameterValueProperty[] | cdktn.IResolvable) {
+  public putParameterValue(value: AwsPipelineDefinition.ParameterValueProperty[] | cdktn.IResolvable) {
     this._parameterValue.internalValue = value;
   }
   public resetParameterValue() {
@@ -184,11 +184,11 @@ export class TfPipelineDefinition extends cdktn.TerraformResource {
   }
 
   // pipeline_object - computed: false, optional: false, required: true
-  private _pipelineObject = new TfPipelineDefinition.PipelineObjectPropertyList(this, "pipeline_object", true);
+  private _pipelineObject = new AwsPipelineDefinition.PipelineObjectPropertyList(this, "pipeline_object", true);
   public get pipelineObject() {
     return this._pipelineObject;
   }
-  public putPipelineObject(value: TfPipelineDefinition.PipelineObjectProperty[] | cdktn.IResolvable) {
+  public putPipelineObject(value: AwsPipelineDefinition.PipelineObjectProperty[] | cdktn.IResolvable) {
     this._pipelineObject.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -205,9 +205,9 @@ export class TfPipelineDefinition extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       pipeline_id: cdktn.stringToTerraform(this._pipelineId),
       region: cdktn.stringToTerraform(this._region),
-      parameter_object: cdktn.listMapper(tfPipelineDefinitionParameterObjectPropertyToTerraform, true)(this._parameterObject.internalValue),
-      parameter_value: cdktn.listMapper(tfPipelineDefinitionParameterValuePropertyToTerraform, true)(this._parameterValue.internalValue),
-      pipeline_object: cdktn.listMapper(tfPipelineDefinitionPipelineObjectPropertyToTerraform, true)(this._pipelineObject.internalValue),
+      parameter_object: cdktn.listMapper(awsPipelineDefinitionParameterObjectPropertyToTerraform, true)(this._parameterObject.internalValue),
+      parameter_value: cdktn.listMapper(awsPipelineDefinitionParameterValuePropertyToTerraform, true)(this._parameterValue.internalValue),
+      pipeline_object: cdktn.listMapper(awsPipelineDefinitionPipelineObjectPropertyToTerraform, true)(this._pipelineObject.internalValue),
     };
   }
 
@@ -232,22 +232,22 @@ export class TfPipelineDefinition extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       parameter_object: {
-        value: cdktn.listMapperHcl(tfPipelineDefinitionParameterObjectPropertyToHclTerraform, true)(this._parameterObject.internalValue),
+        value: cdktn.listMapperHcl(awsPipelineDefinitionParameterObjectPropertyToHclTerraform, true)(this._parameterObject.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfPipelineDefinition.ParameterObjectPropertyList",
+        storageClassType: "AwsPipelineDefinition.ParameterObjectPropertyList",
       },
       parameter_value: {
-        value: cdktn.listMapperHcl(tfPipelineDefinitionParameterValuePropertyToHclTerraform, true)(this._parameterValue.internalValue),
+        value: cdktn.listMapperHcl(awsPipelineDefinitionParameterValuePropertyToHclTerraform, true)(this._parameterValue.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfPipelineDefinition.ParameterValuePropertyList",
+        storageClassType: "AwsPipelineDefinition.ParameterValuePropertyList",
       },
       pipeline_object: {
-        value: cdktn.listMapperHcl(tfPipelineDefinitionPipelineObjectPropertyToHclTerraform, true)(this._pipelineObject.internalValue),
+        value: cdktn.listMapperHcl(awsPipelineDefinitionPipelineObjectPropertyToHclTerraform, true)(this._pipelineObject.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfPipelineDefinition.PipelineObjectPropertyList",
+        storageClassType: "AwsPipelineDefinition.PipelineObjectPropertyList",
       },
     };
 
@@ -256,7 +256,7 @@ export class TfPipelineDefinition extends cdktn.TerraformResource {
   }
 }
 
-export function tfPipelineDefinitionAttributePropertyToTerraform(struct?: TfPipelineDefinition.AttributeProperty | cdktn.IResolvable): any {
+export function awsPipelineDefinitionAttributePropertyToTerraform(struct?: AwsPipelineDefinition.AttributeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function tfPipelineDefinitionAttributePropertyToTerraform(struct?: TfPipe
 }
 
 
-export function tfPipelineDefinitionAttributePropertyToHclTerraform(struct?: TfPipelineDefinition.AttributeProperty | cdktn.IResolvable): any {
+export function awsPipelineDefinitionAttributePropertyToHclTerraform(struct?: AwsPipelineDefinition.AttributeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,19 +293,19 @@ export function tfPipelineDefinitionAttributePropertyToHclTerraform(struct?: TfP
 }
 
 
-export function tfPipelineDefinitionParameterObjectPropertyToTerraform(struct?: TfPipelineDefinition.ParameterObjectProperty | cdktn.IResolvable): any {
+export function awsPipelineDefinitionParameterObjectPropertyToTerraform(struct?: AwsPipelineDefinition.ParameterObjectProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     id: cdktn.stringToTerraform(struct!.id),
-    attribute: cdktn.listMapper(tfPipelineDefinitionAttributePropertyToTerraform, true)(struct!.attribute),
+    attribute: cdktn.listMapper(awsPipelineDefinitionAttributePropertyToTerraform, true)(struct!.attribute),
   }
 }
 
 
-export function tfPipelineDefinitionParameterObjectPropertyToHclTerraform(struct?: TfPipelineDefinition.ParameterObjectProperty | cdktn.IResolvable): any {
+export function awsPipelineDefinitionParameterObjectPropertyToHclTerraform(struct?: AwsPipelineDefinition.ParameterObjectProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function tfPipelineDefinitionParameterObjectPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     attribute: {
-      value: cdktn.listMapperHcl(tfPipelineDefinitionAttributePropertyToHclTerraform, true)(struct!.attribute),
+      value: cdktn.listMapperHcl(awsPipelineDefinitionAttributePropertyToHclTerraform, true)(struct!.attribute),
       isBlock: true,
       type: "set",
       storageClassType: "AttributePropertyList",
@@ -330,7 +330,7 @@ export function tfPipelineDefinitionParameterObjectPropertyToHclTerraform(struct
 }
 
 
-export function tfPipelineDefinitionParameterValuePropertyToTerraform(struct?: TfPipelineDefinition.ParameterValueProperty | cdktn.IResolvable): any {
+export function awsPipelineDefinitionParameterValuePropertyToTerraform(struct?: AwsPipelineDefinition.ParameterValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function tfPipelineDefinitionParameterValuePropertyToTerraform(struct?: T
 }
 
 
-export function tfPipelineDefinitionParameterValuePropertyToHclTerraform(struct?: TfPipelineDefinition.ParameterValueProperty | cdktn.IResolvable): any {
+export function awsPipelineDefinitionParameterValuePropertyToHclTerraform(struct?: AwsPipelineDefinition.ParameterValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function tfPipelineDefinitionParameterValuePropertyToHclTerraform(struct?
 }
 
 
-export function tfPipelineDefinitionFieldPropertyToTerraform(struct?: TfPipelineDefinition.FieldProperty | cdktn.IResolvable): any {
+export function awsPipelineDefinitionFieldPropertyToTerraform(struct?: AwsPipelineDefinition.FieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function tfPipelineDefinitionFieldPropertyToTerraform(struct?: TfPipeline
 }
 
 
-export function tfPipelineDefinitionFieldPropertyToHclTerraform(struct?: TfPipelineDefinition.FieldProperty | cdktn.IResolvable): any {
+export function awsPipelineDefinitionFieldPropertyToHclTerraform(struct?: AwsPipelineDefinition.FieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,7 +411,7 @@ export function tfPipelineDefinitionFieldPropertyToHclTerraform(struct?: TfPipel
 }
 
 
-export function tfPipelineDefinitionPipelineObjectPropertyToTerraform(struct?: TfPipelineDefinition.PipelineObjectProperty | cdktn.IResolvable): any {
+export function awsPipelineDefinitionPipelineObjectPropertyToTerraform(struct?: AwsPipelineDefinition.PipelineObjectProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -419,12 +419,12 @@ export function tfPipelineDefinitionPipelineObjectPropertyToTerraform(struct?: T
   return {
     id: cdktn.stringToTerraform(struct!.id),
     name: cdktn.stringToTerraform(struct!.name),
-    field: cdktn.listMapper(tfPipelineDefinitionFieldPropertyToTerraform, true)(struct!.field),
+    field: cdktn.listMapper(awsPipelineDefinitionFieldPropertyToTerraform, true)(struct!.field),
   }
 }
 
 
-export function tfPipelineDefinitionPipelineObjectPropertyToHclTerraform(struct?: TfPipelineDefinition.PipelineObjectProperty | cdktn.IResolvable): any {
+export function awsPipelineDefinitionPipelineObjectPropertyToHclTerraform(struct?: AwsPipelineDefinition.PipelineObjectProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -443,7 +443,7 @@ export function tfPipelineDefinitionPipelineObjectPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     field: {
-      value: cdktn.listMapperHcl(tfPipelineDefinitionFieldPropertyToHclTerraform, true)(struct!.field),
+      value: cdktn.listMapperHcl(awsPipelineDefinitionFieldPropertyToHclTerraform, true)(struct!.field),
       isBlock: true,
       type: "set",
       storageClassType: "FieldPropertyList",
@@ -455,14 +455,14 @@ export function tfPipelineDefinitionPipelineObjectPropertyToHclTerraform(struct?
 }
 
 
-export namespace TfPipelineDefinition {
+export namespace AwsPipelineDefinition {
 export interface AttributeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#key TfPipelineDefinition#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#key AwsPipelineDefinition#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#string_value TfPipelineDefinition#string_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#string_value AwsPipelineDefinition#string_value}
   */
   readonly stringValue: string;
 }
@@ -564,7 +564,7 @@ export class AttributePropertyList extends cdktn.ComplexList {
 }
 export interface ParameterObjectProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#id TfPipelineDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#id AwsPipelineDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -573,7 +573,7 @@ export interface ParameterObjectProperty {
   /**
   * attribute block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#attribute TfPipelineDefinition#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#attribute AwsPipelineDefinition#attribute}
   */
   readonly attribute?: AttributeProperty[] | cdktn.IResolvable;
 }
@@ -678,14 +678,14 @@ export class ParameterObjectPropertyList extends cdktn.ComplexList {
 }
 export interface ParameterValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#id TfPipelineDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#id AwsPipelineDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#string_value TfPipelineDefinition#string_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#string_value AwsPipelineDefinition#string_value}
   */
   readonly stringValue: string;
 }
@@ -787,15 +787,15 @@ export class ParameterValuePropertyList extends cdktn.ComplexList {
 }
 export interface FieldProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#key TfPipelineDefinition#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#key AwsPipelineDefinition#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#ref_value TfPipelineDefinition#ref_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#ref_value AwsPipelineDefinition#ref_value}
   */
   readonly refValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#string_value TfPipelineDefinition#string_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#string_value AwsPipelineDefinition#string_value}
   */
   readonly stringValue?: string;
 }
@@ -922,20 +922,20 @@ export class FieldPropertyList extends cdktn.ComplexList {
 }
 export interface PipelineObjectProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#id TfPipelineDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#id AwsPipelineDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#name TfPipelineDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#name AwsPipelineDefinition#name}
   */
   readonly name: string;
   /**
   * field block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#field TfPipelineDefinition#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datapipeline_pipeline_definition#field AwsPipelineDefinition#field}
   */
   readonly field?: FieldProperty[] | cdktn.IResolvable;
 }

@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfStorageLensConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsStorageLensConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#account_id TfStorageLensConfiguration#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#account_id AwsStorageLensConfiguration#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#config_id TfStorageLensConfiguration#config_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#config_id AwsStorageLensConfiguration#config_id}
   */
   readonly configId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#id TfStorageLensConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#id AwsStorageLensConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,29 +24,29 @@ export interface TfStorageLensConfigurationConfig extends cdktn.TerraformMetaArg
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#region TfStorageLensConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#region AwsStorageLensConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#tags TfStorageLensConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#tags AwsStorageLensConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#tags_all TfStorageLensConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#tags_all AwsStorageLensConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * storage_lens_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#storage_lens_configuration TfStorageLensConfiguration#storage_lens_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#storage_lens_configuration AwsStorageLensConfiguration#storage_lens_configuration}
   */
-  readonly storageLensConfiguration: TfStorageLensConfiguration.StorageLensConfigurationProperty;
+  readonly storageLensConfiguration: AwsStorageLensConfiguration.StorageLensConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration aws_s3control_storage_lens_configuration}
 */
-export class TfStorageLensConfiguration extends cdktn.TerraformResource {
+export class AwsStorageLensConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfStorageLensConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfStorageLensConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsStorageLensConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfStorageLensConfiguration to import
-  * @param importFromId The id of the existing TfStorageLensConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfStorageLensConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsStorageLensConfiguration to import
+  * @param importFromId The id of the existing AwsStorageLensConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStorageLensConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3control_storage_lens_configuration", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfStorageLensConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfStorageLensConfigurationConfig
+  * @param options AwsStorageLensConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfStorageLensConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsStorageLensConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3control_storage_lens_configuration',
       terraformGeneratorMetadata: {
@@ -206,11 +206,11 @@ export class TfStorageLensConfiguration extends cdktn.TerraformResource {
   }
 
   // storage_lens_configuration - computed: false, optional: false, required: true
-  private _storageLensConfiguration = new TfStorageLensConfiguration.StorageLensConfigurationPropertyOutputReference(this, "storage_lens_configuration");
+  private _storageLensConfiguration = new AwsStorageLensConfiguration.StorageLensConfigurationPropertyOutputReference(this, "storage_lens_configuration");
   public get storageLensConfiguration() {
     return this._storageLensConfiguration;
   }
-  public putStorageLensConfiguration(value: TfStorageLensConfiguration.StorageLensConfigurationProperty) {
+  public putStorageLensConfiguration(value: AwsStorageLensConfiguration.StorageLensConfigurationProperty) {
     this._storageLensConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -230,7 +230,7 @@ export class TfStorageLensConfiguration extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      storage_lens_configuration: tfStorageLensConfigurationStorageLensConfigurationPropertyToTerraform(this._storageLensConfiguration.internalValue),
+      storage_lens_configuration: awsStorageLensConfigurationStorageLensConfigurationPropertyToTerraform(this._storageLensConfiguration.internalValue),
     };
   }
 
@@ -273,10 +273,10 @@ export class TfStorageLensConfiguration extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       storage_lens_configuration: {
-        value: tfStorageLensConfigurationStorageLensConfigurationPropertyToHclTerraform(this._storageLensConfiguration.internalValue),
+        value: awsStorageLensConfigurationStorageLensConfigurationPropertyToHclTerraform(this._storageLensConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStorageLensConfiguration.StorageLensConfigurationPropertyList",
+        storageClassType: "AwsStorageLensConfiguration.StorageLensConfigurationPropertyList",
       },
     };
 
@@ -285,7 +285,7 @@ export class TfStorageLensConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelActivityMetricsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelActivityMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelActivityMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelActivityMetricsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelActivityMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelActivityMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,7 +296,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAc
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelActivityMetricsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelActivityMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelActivityMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelActivityMetricsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelActivityMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelActivityMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAc
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAd
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAd
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -356,7 +356,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAd
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,7 +375,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAd
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedPerformanceMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedPerformanceMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAd
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedPerformanceMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelAdvancedPerformanceMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -405,7 +405,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelAd
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelActivityMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelActivityMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelActivityMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelActivityMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,7 +446,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -465,7 +465,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,7 +476,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,7 +506,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -525,7 +525,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,7 +536,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -555,7 +555,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelBu
 }
 
 
-export function tfStorageLensConfigurationSelectionCriteriaPropertyToTerraform(struct?: TfStorageLensConfiguration.SelectionCriteriaPropertyOutputReference | TfStorageLensConfiguration.SelectionCriteriaProperty): any {
+export function awsStorageLensConfigurationSelectionCriteriaPropertyToTerraform(struct?: AwsStorageLensConfiguration.SelectionCriteriaPropertyOutputReference | AwsStorageLensConfiguration.SelectionCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -568,7 +568,7 @@ export function tfStorageLensConfigurationSelectionCriteriaPropertyToTerraform(s
 }
 
 
-export function tfStorageLensConfigurationSelectionCriteriaPropertyToHclTerraform(struct?: TfStorageLensConfiguration.SelectionCriteriaPropertyOutputReference | TfStorageLensConfiguration.SelectionCriteriaProperty): any {
+export function awsStorageLensConfigurationSelectionCriteriaPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.SelectionCriteriaPropertyOutputReference | AwsStorageLensConfiguration.SelectionCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -599,19 +599,19 @@ export function tfStorageLensConfigurationSelectionCriteriaPropertyToHclTerrafor
 }
 
 
-export function tfStorageLensConfigurationStorageMetricsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageMetricsProperty): any {
+export function awsStorageLensConfigurationStorageMetricsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    selection_criteria: tfStorageLensConfigurationSelectionCriteriaPropertyToTerraform(struct!.selectionCriteria),
+    selection_criteria: awsStorageLensConfigurationSelectionCriteriaPropertyToTerraform(struct!.selectionCriteria),
   }
 }
 
 
-export function tfStorageLensConfigurationStorageMetricsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageMetricsProperty): any {
+export function awsStorageLensConfigurationStorageMetricsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -624,7 +624,7 @@ export function tfStorageLensConfigurationStorageMetricsPropertyToHclTerraform(s
       storageClassType: "boolean",
     },
     selection_criteria: {
-      value: tfStorageLensConfigurationSelectionCriteriaPropertyToHclTerraform(struct!.selectionCriteria),
+      value: awsStorageLensConfigurationSelectionCriteriaPropertyToHclTerraform(struct!.selectionCriteria),
       isBlock: true,
       type: "list",
       storageClassType: "SelectionCriteriaPropertyList",
@@ -636,25 +636,25 @@ export function tfStorageLensConfigurationStorageMetricsPropertyToHclTerraform(s
 }
 
 
-export function tfStorageLensConfigurationPrefixLevelPropertyToTerraform(struct?: TfStorageLensConfiguration.PrefixLevelPropertyOutputReference | TfStorageLensConfiguration.PrefixLevelProperty): any {
+export function awsStorageLensConfigurationPrefixLevelPropertyToTerraform(struct?: AwsStorageLensConfiguration.PrefixLevelPropertyOutputReference | AwsStorageLensConfiguration.PrefixLevelProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    storage_metrics: tfStorageLensConfigurationStorageMetricsPropertyToTerraform(struct!.storageMetrics),
+    storage_metrics: awsStorageLensConfigurationStorageMetricsPropertyToTerraform(struct!.storageMetrics),
   }
 }
 
 
-export function tfStorageLensConfigurationPrefixLevelPropertyToHclTerraform(struct?: TfStorageLensConfiguration.PrefixLevelPropertyOutputReference | TfStorageLensConfiguration.PrefixLevelProperty): any {
+export function awsStorageLensConfigurationPrefixLevelPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.PrefixLevelPropertyOutputReference | AwsStorageLensConfiguration.PrefixLevelProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     storage_metrics: {
-      value: tfStorageLensConfigurationStorageMetricsPropertyToHclTerraform(struct!.storageMetrics),
+      value: awsStorageLensConfigurationStorageMetricsPropertyToHclTerraform(struct!.storageMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "StorageMetricsPropertyList",
@@ -666,60 +666,60 @@ export function tfStorageLensConfigurationPrefixLevelPropertyToHclTerraform(stru
 }
 
 
-export function tfStorageLensConfigurationBucketLevelPropertyToTerraform(struct?: TfStorageLensConfiguration.BucketLevelPropertyOutputReference | TfStorageLensConfiguration.BucketLevelProperty): any {
+export function awsStorageLensConfigurationBucketLevelPropertyToTerraform(struct?: AwsStorageLensConfiguration.BucketLevelPropertyOutputReference | AwsStorageLensConfiguration.BucketLevelProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    activity_metrics: tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyToTerraform(struct!.activityMetrics),
-    advanced_cost_optimization_metrics: tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyToTerraform(struct!.advancedCostOptimizationMetrics),
-    advanced_data_protection_metrics: tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyToTerraform(struct!.advancedDataProtectionMetrics),
-    advanced_performance_metrics: tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyToTerraform(struct!.advancedPerformanceMetrics),
-    detailed_status_code_metrics: tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyToTerraform(struct!.detailedStatusCodeMetrics),
-    prefix_level: tfStorageLensConfigurationPrefixLevelPropertyToTerraform(struct!.prefixLevel),
+    activity_metrics: awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyToTerraform(struct!.activityMetrics),
+    advanced_cost_optimization_metrics: awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyToTerraform(struct!.advancedCostOptimizationMetrics),
+    advanced_data_protection_metrics: awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyToTerraform(struct!.advancedDataProtectionMetrics),
+    advanced_performance_metrics: awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyToTerraform(struct!.advancedPerformanceMetrics),
+    detailed_status_code_metrics: awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyToTerraform(struct!.detailedStatusCodeMetrics),
+    prefix_level: awsStorageLensConfigurationPrefixLevelPropertyToTerraform(struct!.prefixLevel),
   }
 }
 
 
-export function tfStorageLensConfigurationBucketLevelPropertyToHclTerraform(struct?: TfStorageLensConfiguration.BucketLevelPropertyOutputReference | TfStorageLensConfiguration.BucketLevelProperty): any {
+export function awsStorageLensConfigurationBucketLevelPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.BucketLevelPropertyOutputReference | AwsStorageLensConfiguration.BucketLevelProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     activity_metrics: {
-      value: tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyToHclTerraform(struct!.activityMetrics),
+      value: awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyToHclTerraform(struct!.activityMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationAccountLevelBucketLevelActivityMetricsPropertyList",
     },
     advanced_cost_optimization_metrics: {
-      value: tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyToHclTerraform(struct!.advancedCostOptimizationMetrics),
+      value: awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyToHclTerraform(struct!.advancedCostOptimizationMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsPropertyList",
     },
     advanced_data_protection_metrics: {
-      value: tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyToHclTerraform(struct!.advancedDataProtectionMetrics),
+      value: awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyToHclTerraform(struct!.advancedDataProtectionMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsPropertyList",
     },
     advanced_performance_metrics: {
-      value: tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyToHclTerraform(struct!.advancedPerformanceMetrics),
+      value: awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyToHclTerraform(struct!.advancedPerformanceMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsPropertyList",
     },
     detailed_status_code_metrics: {
-      value: tfStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyToHclTerraform(struct!.detailedStatusCodeMetrics),
+      value: awsStorageLensConfigurationStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyToHclTerraform(struct!.detailedStatusCodeMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsPropertyList",
     },
     prefix_level: {
-      value: tfStorageLensConfigurationPrefixLevelPropertyToHclTerraform(struct!.prefixLevel),
+      value: awsStorageLensConfigurationPrefixLevelPropertyToHclTerraform(struct!.prefixLevel),
       isBlock: true,
       type: "list",
       storageClassType: "PrefixLevelPropertyList",
@@ -731,7 +731,7 @@ export function tfStorageLensConfigurationBucketLevelPropertyToHclTerraform(stru
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelDetailedStatusCodeMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelDetailedStatusCodeMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -742,7 +742,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelDe
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationAccountLevelDetailedStatusCodeMetricsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationAccountLevelDetailedStatusCodeMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -761,60 +761,60 @@ export function tfStorageLensConfigurationStorageLensConfigurationAccountLevelDe
 }
 
 
-export function tfStorageLensConfigurationAccountLevelPropertyToTerraform(struct?: TfStorageLensConfiguration.AccountLevelPropertyOutputReference | TfStorageLensConfiguration.AccountLevelProperty): any {
+export function awsStorageLensConfigurationAccountLevelPropertyToTerraform(struct?: AwsStorageLensConfiguration.AccountLevelPropertyOutputReference | AwsStorageLensConfiguration.AccountLevelProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    activity_metrics: tfStorageLensConfigurationStorageLensConfigurationAccountLevelActivityMetricsPropertyToTerraform(struct!.activityMetrics),
-    advanced_cost_optimization_metrics: tfStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyToTerraform(struct!.advancedCostOptimizationMetrics),
-    advanced_data_protection_metrics: tfStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyToTerraform(struct!.advancedDataProtectionMetrics),
-    advanced_performance_metrics: tfStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyToTerraform(struct!.advancedPerformanceMetrics),
-    bucket_level: tfStorageLensConfigurationBucketLevelPropertyToTerraform(struct!.bucketLevel),
-    detailed_status_code_metrics: tfStorageLensConfigurationStorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyToTerraform(struct!.detailedStatusCodeMetrics),
+    activity_metrics: awsStorageLensConfigurationStorageLensConfigurationAccountLevelActivityMetricsPropertyToTerraform(struct!.activityMetrics),
+    advanced_cost_optimization_metrics: awsStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyToTerraform(struct!.advancedCostOptimizationMetrics),
+    advanced_data_protection_metrics: awsStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyToTerraform(struct!.advancedDataProtectionMetrics),
+    advanced_performance_metrics: awsStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyToTerraform(struct!.advancedPerformanceMetrics),
+    bucket_level: awsStorageLensConfigurationBucketLevelPropertyToTerraform(struct!.bucketLevel),
+    detailed_status_code_metrics: awsStorageLensConfigurationStorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyToTerraform(struct!.detailedStatusCodeMetrics),
   }
 }
 
 
-export function tfStorageLensConfigurationAccountLevelPropertyToHclTerraform(struct?: TfStorageLensConfiguration.AccountLevelPropertyOutputReference | TfStorageLensConfiguration.AccountLevelProperty): any {
+export function awsStorageLensConfigurationAccountLevelPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.AccountLevelPropertyOutputReference | AwsStorageLensConfiguration.AccountLevelProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     activity_metrics: {
-      value: tfStorageLensConfigurationStorageLensConfigurationAccountLevelActivityMetricsPropertyToHclTerraform(struct!.activityMetrics),
+      value: awsStorageLensConfigurationStorageLensConfigurationAccountLevelActivityMetricsPropertyToHclTerraform(struct!.activityMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationAccountLevelActivityMetricsPropertyList",
     },
     advanced_cost_optimization_metrics: {
-      value: tfStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyToHclTerraform(struct!.advancedCostOptimizationMetrics),
+      value: awsStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyToHclTerraform(struct!.advancedCostOptimizationMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsPropertyList",
     },
     advanced_data_protection_metrics: {
-      value: tfStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyToHclTerraform(struct!.advancedDataProtectionMetrics),
+      value: awsStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyToHclTerraform(struct!.advancedDataProtectionMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPropertyList",
     },
     advanced_performance_metrics: {
-      value: tfStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyToHclTerraform(struct!.advancedPerformanceMetrics),
+      value: awsStorageLensConfigurationStorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyToHclTerraform(struct!.advancedPerformanceMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPropertyList",
     },
     bucket_level: {
-      value: tfStorageLensConfigurationBucketLevelPropertyToHclTerraform(struct!.bucketLevel),
+      value: awsStorageLensConfigurationBucketLevelPropertyToHclTerraform(struct!.bucketLevel),
       isBlock: true,
       type: "list",
       storageClassType: "BucketLevelPropertyList",
     },
     detailed_status_code_metrics: {
-      value: tfStorageLensConfigurationStorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyToHclTerraform(struct!.detailedStatusCodeMetrics),
+      value: awsStorageLensConfigurationStorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyToHclTerraform(struct!.detailedStatusCodeMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationAccountLevelDetailedStatusCodeMetricsPropertyList",
@@ -826,7 +826,7 @@ export function tfStorageLensConfigurationAccountLevelPropertyToHclTerraform(str
 }
 
 
-export function tfStorageLensConfigurationAwsOrgPropertyToTerraform(struct?: TfStorageLensConfiguration.AwsOrgPropertyOutputReference | TfStorageLensConfiguration.AwsOrgProperty): any {
+export function awsStorageLensConfigurationAwsOrgPropertyToTerraform(struct?: AwsStorageLensConfiguration.AwsOrgPropertyOutputReference | AwsStorageLensConfiguration.AwsOrgProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -837,7 +837,7 @@ export function tfStorageLensConfigurationAwsOrgPropertyToTerraform(struct?: TfS
 }
 
 
-export function tfStorageLensConfigurationAwsOrgPropertyToHclTerraform(struct?: TfStorageLensConfiguration.AwsOrgPropertyOutputReference | TfStorageLensConfiguration.AwsOrgProperty): any {
+export function awsStorageLensConfigurationAwsOrgPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.AwsOrgPropertyOutputReference | AwsStorageLensConfiguration.AwsOrgProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -856,7 +856,7 @@ export function tfStorageLensConfigurationAwsOrgPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfStorageLensConfigurationCloudWatchMetricsPropertyToTerraform(struct?: TfStorageLensConfiguration.CloudWatchMetricsPropertyOutputReference | TfStorageLensConfiguration.CloudWatchMetricsProperty): any {
+export function awsStorageLensConfigurationCloudWatchMetricsPropertyToTerraform(struct?: AwsStorageLensConfiguration.CloudWatchMetricsPropertyOutputReference | AwsStorageLensConfiguration.CloudWatchMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -867,7 +867,7 @@ export function tfStorageLensConfigurationCloudWatchMetricsPropertyToTerraform(s
 }
 
 
-export function tfStorageLensConfigurationCloudWatchMetricsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.CloudWatchMetricsPropertyOutputReference | TfStorageLensConfiguration.CloudWatchMetricsProperty): any {
+export function awsStorageLensConfigurationCloudWatchMetricsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.CloudWatchMetricsPropertyOutputReference | AwsStorageLensConfiguration.CloudWatchMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -886,7 +886,7 @@ export function tfStorageLensConfigurationCloudWatchMetricsPropertyToHclTerrafor
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -897,7 +897,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3Bu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -916,7 +916,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3Bu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3PropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3PropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -926,7 +926,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3Bu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3PropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3PropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -937,32 +937,32 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3Bu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    sse_kms: tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyToTerraform(struct!.sseKms),
-    sse_s3: cdktn.listMapper(tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3PropertyToTerraform, true)(struct!.sseS3),
+    sse_kms: awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyToTerraform(struct!.sseKms),
+    sse_s3: cdktn.listMapper(awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3PropertyToTerraform, true)(struct!.sseS3),
   }
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     sse_kms: {
-      value: tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyToHclTerraform(struct!.sseKms),
+      value: awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyToHclTerraform(struct!.sseKms),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsPropertyList",
     },
     sse_s3: {
-      value: cdktn.listMapperHcl(tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3PropertyToHclTerraform, true)(struct!.sseS3),
+      value: cdktn.listMapperHcl(awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3PropertyToHclTerraform, true)(struct!.sseS3),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3PropertyList",
@@ -974,7 +974,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3Bu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -985,12 +985,12 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3Bu
     format: cdktn.stringToTerraform(struct!.format),
     output_schema_version: cdktn.stringToTerraform(struct!.outputSchemaVersion),
     prefix: cdktn.stringToTerraform(struct!.prefix),
-    encryption: tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyToTerraform(struct!.encryption),
+    encryption: awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyToTerraform(struct!.encryption),
   }
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationDataExportS3BucketDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1027,7 +1027,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3Bu
       storageClassType: "string",
     },
     encryption: {
-      value: tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyToHclTerraform(struct!.encryption),
+      value: awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyToHclTerraform(struct!.encryption),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationDataExportS3BucketDestinationEncryptionPropertyList",
@@ -1039,7 +1039,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportS3Bu
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1050,7 +1050,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportStor
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1069,7 +1069,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportStor
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3PropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3PropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1079,7 +1079,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportStor
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3PropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3PropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1090,32 +1090,32 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportStor
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    sse_kms: tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToTerraform(struct!.sseKms),
-    sse_s3: cdktn.listMapper(tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3PropertyToTerraform, true)(struct!.sseS3),
+    sse_kms: awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToTerraform(struct!.sseKms),
+    sse_s3: cdktn.listMapper(awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3PropertyToTerraform, true)(struct!.sseS3),
   }
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     sse_kms: {
-      value: tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToHclTerraform(struct!.sseKms),
+      value: awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToHclTerraform(struct!.sseKms),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsPropertyList",
     },
     sse_s3: {
-      value: cdktn.listMapperHcl(tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3PropertyToHclTerraform, true)(struct!.sseS3),
+      value: cdktn.listMapperHcl(awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3PropertyToHclTerraform, true)(struct!.sseS3),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3PropertyList",
@@ -1127,19 +1127,19 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportStor
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    encryption: tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyToTerraform(struct!.encryption),
+    encryption: awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyToTerraform(struct!.encryption),
   }
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationDataExportStorageLensTableDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1152,7 +1152,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportStor
       storageClassType: "boolean",
     },
     encryption: {
-      value: tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyToHclTerraform(struct!.encryption),
+      value: awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyToHclTerraform(struct!.encryption),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionPropertyList",
@@ -1164,39 +1164,39 @@ export function tfStorageLensConfigurationStorageLensConfigurationDataExportStor
 }
 
 
-export function tfStorageLensConfigurationDataExportPropertyToTerraform(struct?: TfStorageLensConfiguration.DataExportPropertyOutputReference | TfStorageLensConfiguration.DataExportProperty): any {
+export function awsStorageLensConfigurationDataExportPropertyToTerraform(struct?: AwsStorageLensConfiguration.DataExportPropertyOutputReference | AwsStorageLensConfiguration.DataExportProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloud_watch_metrics: tfStorageLensConfigurationCloudWatchMetricsPropertyToTerraform(struct!.cloudWatchMetrics),
-    s3_bucket_destination: tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationPropertyToTerraform(struct!.s3BucketDestination),
-    storage_lens_table_destination: tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationPropertyToTerraform(struct!.storageLensTableDestination),
+    cloud_watch_metrics: awsStorageLensConfigurationCloudWatchMetricsPropertyToTerraform(struct!.cloudWatchMetrics),
+    s3_bucket_destination: awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationPropertyToTerraform(struct!.s3BucketDestination),
+    storage_lens_table_destination: awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationPropertyToTerraform(struct!.storageLensTableDestination),
   }
 }
 
 
-export function tfStorageLensConfigurationDataExportPropertyToHclTerraform(struct?: TfStorageLensConfiguration.DataExportPropertyOutputReference | TfStorageLensConfiguration.DataExportProperty): any {
+export function awsStorageLensConfigurationDataExportPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.DataExportPropertyOutputReference | AwsStorageLensConfiguration.DataExportProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloud_watch_metrics: {
-      value: tfStorageLensConfigurationCloudWatchMetricsPropertyToHclTerraform(struct!.cloudWatchMetrics),
+      value: awsStorageLensConfigurationCloudWatchMetricsPropertyToHclTerraform(struct!.cloudWatchMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "CloudWatchMetricsPropertyList",
     },
     s3_bucket_destination: {
-      value: tfStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationPropertyToHclTerraform(struct!.s3BucketDestination),
+      value: awsStorageLensConfigurationStorageLensConfigurationDataExportS3BucketDestinationPropertyToHclTerraform(struct!.s3BucketDestination),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationDataExportS3BucketDestinationPropertyList",
     },
     storage_lens_table_destination: {
-      value: tfStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationPropertyToHclTerraform(struct!.storageLensTableDestination),
+      value: awsStorageLensConfigurationStorageLensConfigurationDataExportStorageLensTableDestinationPropertyToHclTerraform(struct!.storageLensTableDestination),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationDataExportStorageLensTableDestinationPropertyList",
@@ -1208,7 +1208,7 @@ export function tfStorageLensConfigurationDataExportPropertyToHclTerraform(struc
 }
 
 
-export function tfStorageLensConfigurationExcludePropertyToTerraform(struct?: TfStorageLensConfiguration.ExcludePropertyOutputReference | TfStorageLensConfiguration.ExcludeProperty): any {
+export function awsStorageLensConfigurationExcludePropertyToTerraform(struct?: AwsStorageLensConfiguration.ExcludePropertyOutputReference | AwsStorageLensConfiguration.ExcludeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1220,7 +1220,7 @@ export function tfStorageLensConfigurationExcludePropertyToTerraform(struct?: Tf
 }
 
 
-export function tfStorageLensConfigurationExcludePropertyToHclTerraform(struct?: TfStorageLensConfiguration.ExcludePropertyOutputReference | TfStorageLensConfiguration.ExcludeProperty): any {
+export function awsStorageLensConfigurationExcludePropertyToHclTerraform(struct?: AwsStorageLensConfiguration.ExcludePropertyOutputReference | AwsStorageLensConfiguration.ExcludeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1245,7 +1245,7 @@ export function tfStorageLensConfigurationExcludePropertyToHclTerraform(struct?:
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1256,7 +1256,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1275,7 +1275,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3PropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3PropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1285,7 +1285,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3PropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3PropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1296,32 +1296,32 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    sse_kms: tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyToTerraform(struct!.sseKms),
-    sse_s3: cdktn.listMapper(tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3PropertyToTerraform, true)(struct!.sseS3),
+    sse_kms: awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyToTerraform(struct!.sseKms),
+    sse_s3: cdktn.listMapper(awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3PropertyToTerraform, true)(struct!.sseS3),
   }
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     sse_kms: {
-      value: tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyToHclTerraform(struct!.sseKms),
+      value: awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyToHclTerraform(struct!.sseKms),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsPropertyList",
     },
     sse_s3: {
-      value: cdktn.listMapperHcl(tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3PropertyToHclTerraform, true)(struct!.sseS3),
+      value: cdktn.listMapperHcl(awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3PropertyToHclTerraform, true)(struct!.sseS3),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3PropertyList",
@@ -1333,7 +1333,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1344,12 +1344,12 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
     format: cdktn.stringToTerraform(struct!.format),
     output_schema_version: cdktn.stringToTerraform(struct!.outputSchemaVersion),
     prefix: cdktn.stringToTerraform(struct!.prefix),
-    encryption: tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyToTerraform(struct!.encryption),
+    encryption: awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyToTerraform(struct!.encryption),
   }
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1386,7 +1386,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
       storageClassType: "string",
     },
     encryption: {
-      value: tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyToHclTerraform(struct!.encryption),
+      value: awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyToHclTerraform(struct!.encryption),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionPropertyList",
@@ -1398,7 +1398,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1409,7 +1409,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1428,7 +1428,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3PropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3PropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1438,7 +1438,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3PropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3PropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1449,32 +1449,32 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    sse_kms: tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToTerraform(struct!.sseKms),
-    sse_s3: cdktn.listMapper(tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3PropertyToTerraform, true)(struct!.sseS3),
+    sse_kms: awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToTerraform(struct!.sseKms),
+    sse_s3: cdktn.listMapper(awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3PropertyToTerraform, true)(struct!.sseS3),
   }
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     sse_kms: {
-      value: tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToHclTerraform(struct!.sseKms),
+      value: awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyToHclTerraform(struct!.sseKms),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsPropertyList",
     },
     sse_s3: {
-      value: cdktn.listMapperHcl(tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3PropertyToHclTerraform, true)(struct!.sseS3),
+      value: cdktn.listMapperHcl(awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3PropertyToHclTerraform, true)(struct!.sseS3),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3PropertyList",
@@ -1486,19 +1486,19 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
-    encryption: tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyToTerraform(struct!.encryption),
+    encryption: awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyToTerraform(struct!.encryption),
   }
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1511,7 +1511,7 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
       storageClassType: "boolean",
     },
     encryption: {
-      value: tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyToHclTerraform(struct!.encryption),
+      value: awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyToHclTerraform(struct!.encryption),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionPropertyList",
@@ -1523,32 +1523,32 @@ export function tfStorageLensConfigurationStorageLensConfigurationExpandedPrefix
 }
 
 
-export function tfStorageLensConfigurationExpandedPrefixesDataExportPropertyToTerraform(struct?: TfStorageLensConfiguration.ExpandedPrefixesDataExportPropertyOutputReference | TfStorageLensConfiguration.ExpandedPrefixesDataExportProperty): any {
+export function awsStorageLensConfigurationExpandedPrefixesDataExportPropertyToTerraform(struct?: AwsStorageLensConfiguration.ExpandedPrefixesDataExportPropertyOutputReference | AwsStorageLensConfiguration.ExpandedPrefixesDataExportProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_bucket_destination: tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyToTerraform(struct!.s3BucketDestination),
-    storage_lens_table_destination: tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyToTerraform(struct!.storageLensTableDestination),
+    s3_bucket_destination: awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyToTerraform(struct!.s3BucketDestination),
+    storage_lens_table_destination: awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyToTerraform(struct!.storageLensTableDestination),
   }
 }
 
 
-export function tfStorageLensConfigurationExpandedPrefixesDataExportPropertyToHclTerraform(struct?: TfStorageLensConfiguration.ExpandedPrefixesDataExportPropertyOutputReference | TfStorageLensConfiguration.ExpandedPrefixesDataExportProperty): any {
+export function awsStorageLensConfigurationExpandedPrefixesDataExportPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.ExpandedPrefixesDataExportPropertyOutputReference | AwsStorageLensConfiguration.ExpandedPrefixesDataExportProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_bucket_destination: {
-      value: tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyToHclTerraform(struct!.s3BucketDestination),
+      value: awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyToHclTerraform(struct!.s3BucketDestination),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationPropertyList",
     },
     storage_lens_table_destination: {
-      value: tfStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyToHclTerraform(struct!.storageLensTableDestination),
+      value: awsStorageLensConfigurationStorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyToHclTerraform(struct!.storageLensTableDestination),
       isBlock: true,
       type: "list",
       storageClassType: "StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationPropertyList",
@@ -1560,7 +1560,7 @@ export function tfStorageLensConfigurationExpandedPrefixesDataExportPropertyToHc
 }
 
 
-export function tfStorageLensConfigurationIncludePropertyToTerraform(struct?: TfStorageLensConfiguration.IncludePropertyOutputReference | TfStorageLensConfiguration.IncludeProperty): any {
+export function awsStorageLensConfigurationIncludePropertyToTerraform(struct?: AwsStorageLensConfiguration.IncludePropertyOutputReference | AwsStorageLensConfiguration.IncludeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1572,7 +1572,7 @@ export function tfStorageLensConfigurationIncludePropertyToTerraform(struct?: Tf
 }
 
 
-export function tfStorageLensConfigurationIncludePropertyToHclTerraform(struct?: TfStorageLensConfiguration.IncludePropertyOutputReference | TfStorageLensConfiguration.IncludeProperty): any {
+export function awsStorageLensConfigurationIncludePropertyToHclTerraform(struct?: AwsStorageLensConfiguration.IncludePropertyOutputReference | AwsStorageLensConfiguration.IncludeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1597,7 +1597,7 @@ export function tfStorageLensConfigurationIncludePropertyToHclTerraform(struct?:
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationPropertyToTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationPropertyToTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1605,17 +1605,17 @@ export function tfStorageLensConfigurationStorageLensConfigurationPropertyToTerr
   return {
     enabled: cdktn.booleanToTerraform(struct!.enabled),
     prefix_delimiter: cdktn.stringToTerraform(struct!.prefixDelimiter),
-    account_level: tfStorageLensConfigurationAccountLevelPropertyToTerraform(struct!.accountLevel),
-    aws_org: tfStorageLensConfigurationAwsOrgPropertyToTerraform(struct!.awsOrg),
-    data_export: tfStorageLensConfigurationDataExportPropertyToTerraform(struct!.dataExport),
-    exclude: tfStorageLensConfigurationExcludePropertyToTerraform(struct!.exclude),
-    expanded_prefixes_data_export: tfStorageLensConfigurationExpandedPrefixesDataExportPropertyToTerraform(struct!.expandedPrefixesDataExport),
-    include: tfStorageLensConfigurationIncludePropertyToTerraform(struct!.include),
+    account_level: awsStorageLensConfigurationAccountLevelPropertyToTerraform(struct!.accountLevel),
+    aws_org: awsStorageLensConfigurationAwsOrgPropertyToTerraform(struct!.awsOrg),
+    data_export: awsStorageLensConfigurationDataExportPropertyToTerraform(struct!.dataExport),
+    exclude: awsStorageLensConfigurationExcludePropertyToTerraform(struct!.exclude),
+    expanded_prefixes_data_export: awsStorageLensConfigurationExpandedPrefixesDataExportPropertyToTerraform(struct!.expandedPrefixesDataExport),
+    include: awsStorageLensConfigurationIncludePropertyToTerraform(struct!.include),
   }
 }
 
 
-export function tfStorageLensConfigurationStorageLensConfigurationPropertyToHclTerraform(struct?: TfStorageLensConfiguration.StorageLensConfigurationPropertyOutputReference | TfStorageLensConfiguration.StorageLensConfigurationProperty): any {
+export function awsStorageLensConfigurationStorageLensConfigurationPropertyToHclTerraform(struct?: AwsStorageLensConfiguration.StorageLensConfigurationPropertyOutputReference | AwsStorageLensConfiguration.StorageLensConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1634,37 +1634,37 @@ export function tfStorageLensConfigurationStorageLensConfigurationPropertyToHclT
       storageClassType: "string",
     },
     account_level: {
-      value: tfStorageLensConfigurationAccountLevelPropertyToHclTerraform(struct!.accountLevel),
+      value: awsStorageLensConfigurationAccountLevelPropertyToHclTerraform(struct!.accountLevel),
       isBlock: true,
       type: "list",
       storageClassType: "AccountLevelPropertyList",
     },
     aws_org: {
-      value: tfStorageLensConfigurationAwsOrgPropertyToHclTerraform(struct!.awsOrg),
+      value: awsStorageLensConfigurationAwsOrgPropertyToHclTerraform(struct!.awsOrg),
       isBlock: true,
       type: "list",
       storageClassType: "AwsOrgPropertyList",
     },
     data_export: {
-      value: tfStorageLensConfigurationDataExportPropertyToHclTerraform(struct!.dataExport),
+      value: awsStorageLensConfigurationDataExportPropertyToHclTerraform(struct!.dataExport),
       isBlock: true,
       type: "list",
       storageClassType: "DataExportPropertyList",
     },
     exclude: {
-      value: tfStorageLensConfigurationExcludePropertyToHclTerraform(struct!.exclude),
+      value: awsStorageLensConfigurationExcludePropertyToHclTerraform(struct!.exclude),
       isBlock: true,
       type: "list",
       storageClassType: "ExcludePropertyList",
     },
     expanded_prefixes_data_export: {
-      value: tfStorageLensConfigurationExpandedPrefixesDataExportPropertyToHclTerraform(struct!.expandedPrefixesDataExport),
+      value: awsStorageLensConfigurationExpandedPrefixesDataExportPropertyToHclTerraform(struct!.expandedPrefixesDataExport),
       isBlock: true,
       type: "list",
       storageClassType: "ExpandedPrefixesDataExportPropertyList",
     },
     include: {
-      value: tfStorageLensConfigurationIncludePropertyToHclTerraform(struct!.include),
+      value: awsStorageLensConfigurationIncludePropertyToHclTerraform(struct!.include),
       isBlock: true,
       type: "list",
       storageClassType: "IncludePropertyList",
@@ -1676,10 +1676,10 @@ export function tfStorageLensConfigurationStorageLensConfigurationPropertyToHclT
 }
 
 
-export namespace TfStorageLensConfiguration {
+export namespace AwsStorageLensConfiguration {
 export interface StorageLensConfigurationAccountLevelActivityMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -1733,7 +1733,7 @@ export class StorageLensConfigurationAccountLevelActivityMetricsPropertyOutputRe
 }
 export interface StorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -1787,7 +1787,7 @@ export class StorageLensConfigurationAccountLevelAdvancedCostOptimizationMetrics
 }
 export interface StorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -1841,7 +1841,7 @@ export class StorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsPr
 }
 export interface StorageLensConfigurationAccountLevelAdvancedPerformanceMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -1895,7 +1895,7 @@ export class StorageLensConfigurationAccountLevelAdvancedPerformanceMetricsPrope
 }
 export interface StorageLensConfigurationAccountLevelBucketLevelActivityMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -1949,7 +1949,7 @@ export class StorageLensConfigurationAccountLevelBucketLevelActivityMetricsPrope
 }
 export interface StorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -2003,7 +2003,7 @@ export class StorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimiza
 }
 export interface StorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -2057,7 +2057,7 @@ export class StorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtecti
 }
 export interface StorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -2111,7 +2111,7 @@ export class StorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceM
 }
 export interface StorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -2165,15 +2165,15 @@ export class StorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMe
 }
 export interface SelectionCriteriaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#delimiter TfStorageLensConfiguration#delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#delimiter AwsStorageLensConfiguration#delimiter}
   */
   readonly delimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#max_depth TfStorageLensConfiguration#max_depth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#max_depth AwsStorageLensConfiguration#max_depth}
   */
   readonly maxDepth?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#min_storage_bytes_percentage TfStorageLensConfiguration#min_storage_bytes_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#min_storage_bytes_percentage AwsStorageLensConfiguration#min_storage_bytes_percentage}
   */
   readonly minStorageBytesPercentage?: number;
 }
@@ -2271,13 +2271,13 @@ export class SelectionCriteriaPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface StorageMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * selection_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#selection_criteria TfStorageLensConfiguration#selection_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#selection_criteria AwsStorageLensConfiguration#selection_criteria}
   */
   readonly selectionCriteria?: SelectionCriteriaProperty;
 }
@@ -2355,7 +2355,7 @@ export interface PrefixLevelProperty {
   /**
   * storage_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#storage_metrics TfStorageLensConfiguration#storage_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#storage_metrics AwsStorageLensConfiguration#storage_metrics}
   */
   readonly storageMetrics: StorageMetricsProperty;
 }
@@ -2408,37 +2408,37 @@ export interface BucketLevelProperty {
   /**
   * activity_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#activity_metrics TfStorageLensConfiguration#activity_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#activity_metrics AwsStorageLensConfiguration#activity_metrics}
   */
   readonly activityMetrics?: StorageLensConfigurationAccountLevelBucketLevelActivityMetricsProperty;
   /**
   * advanced_cost_optimization_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#advanced_cost_optimization_metrics TfStorageLensConfiguration#advanced_cost_optimization_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#advanced_cost_optimization_metrics AwsStorageLensConfiguration#advanced_cost_optimization_metrics}
   */
   readonly advancedCostOptimizationMetrics?: StorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetricsProperty;
   /**
   * advanced_data_protection_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#advanced_data_protection_metrics TfStorageLensConfiguration#advanced_data_protection_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#advanced_data_protection_metrics AwsStorageLensConfiguration#advanced_data_protection_metrics}
   */
   readonly advancedDataProtectionMetrics?: StorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetricsProperty;
   /**
   * advanced_performance_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#advanced_performance_metrics TfStorageLensConfiguration#advanced_performance_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#advanced_performance_metrics AwsStorageLensConfiguration#advanced_performance_metrics}
   */
   readonly advancedPerformanceMetrics?: StorageLensConfigurationAccountLevelBucketLevelAdvancedPerformanceMetricsProperty;
   /**
   * detailed_status_code_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#detailed_status_code_metrics TfStorageLensConfiguration#detailed_status_code_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#detailed_status_code_metrics AwsStorageLensConfiguration#detailed_status_code_metrics}
   */
   readonly detailedStatusCodeMetrics?: StorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetricsProperty;
   /**
   * prefix_level block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#prefix_level TfStorageLensConfiguration#prefix_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#prefix_level AwsStorageLensConfiguration#prefix_level}
   */
   readonly prefixLevel?: PrefixLevelProperty;
 }
@@ -2602,7 +2602,7 @@ export class BucketLevelPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StorageLensConfigurationAccountLevelDetailedStatusCodeMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -2658,37 +2658,37 @@ export interface AccountLevelProperty {
   /**
   * activity_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#activity_metrics TfStorageLensConfiguration#activity_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#activity_metrics AwsStorageLensConfiguration#activity_metrics}
   */
   readonly activityMetrics?: StorageLensConfigurationAccountLevelActivityMetricsProperty;
   /**
   * advanced_cost_optimization_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#advanced_cost_optimization_metrics TfStorageLensConfiguration#advanced_cost_optimization_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#advanced_cost_optimization_metrics AwsStorageLensConfiguration#advanced_cost_optimization_metrics}
   */
   readonly advancedCostOptimizationMetrics?: StorageLensConfigurationAccountLevelAdvancedCostOptimizationMetricsProperty;
   /**
   * advanced_data_protection_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#advanced_data_protection_metrics TfStorageLensConfiguration#advanced_data_protection_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#advanced_data_protection_metrics AwsStorageLensConfiguration#advanced_data_protection_metrics}
   */
   readonly advancedDataProtectionMetrics?: StorageLensConfigurationAccountLevelAdvancedDataProtectionMetricsProperty;
   /**
   * advanced_performance_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#advanced_performance_metrics TfStorageLensConfiguration#advanced_performance_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#advanced_performance_metrics AwsStorageLensConfiguration#advanced_performance_metrics}
   */
   readonly advancedPerformanceMetrics?: StorageLensConfigurationAccountLevelAdvancedPerformanceMetricsProperty;
   /**
   * bucket_level block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#bucket_level TfStorageLensConfiguration#bucket_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#bucket_level AwsStorageLensConfiguration#bucket_level}
   */
   readonly bucketLevel: BucketLevelProperty;
   /**
   * detailed_status_code_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#detailed_status_code_metrics TfStorageLensConfiguration#detailed_status_code_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#detailed_status_code_metrics AwsStorageLensConfiguration#detailed_status_code_metrics}
   */
   readonly detailedStatusCodeMetrics?: StorageLensConfigurationAccountLevelDetailedStatusCodeMetricsProperty;
 }
@@ -2849,7 +2849,7 @@ export class AccountLevelPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AwsOrgProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#arn TfStorageLensConfiguration#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#arn AwsStorageLensConfiguration#arn}
   */
   readonly arn: string;
 }
@@ -2900,7 +2900,7 @@ export class AwsOrgPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CloudWatchMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
 }
@@ -2951,7 +2951,7 @@ export class CloudWatchMetricsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#key_id TfStorageLensConfiguration#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#key_id AwsStorageLensConfiguration#key_id}
   */
   readonly keyId: string;
 }
@@ -3064,13 +3064,13 @@ export interface StorageLensConfigurationDataExportS3BucketDestinationEncryption
   /**
   * sse_kms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_kms TfStorageLensConfiguration#sse_kms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_kms AwsStorageLensConfiguration#sse_kms}
   */
   readonly sseKms?: StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKmsProperty;
   /**
   * sse_s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_s3 TfStorageLensConfiguration#sse_s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_s3 AwsStorageLensConfiguration#sse_s3}
   */
   readonly sseS3?: StorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3Property[] | cdktn.IResolvable;
 }
@@ -3146,29 +3146,29 @@ export class StorageLensConfigurationDataExportS3BucketDestinationEncryptionProp
 }
 export interface StorageLensConfigurationDataExportS3BucketDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#account_id TfStorageLensConfiguration#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#account_id AwsStorageLensConfiguration#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#arn TfStorageLensConfiguration#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#arn AwsStorageLensConfiguration#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#format TfStorageLensConfiguration#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#format AwsStorageLensConfiguration#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#output_schema_version TfStorageLensConfiguration#output_schema_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#output_schema_version AwsStorageLensConfiguration#output_schema_version}
   */
   readonly outputSchemaVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#prefix TfStorageLensConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#prefix AwsStorageLensConfiguration#prefix}
   */
   readonly prefix?: string;
   /**
   * encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#encryption TfStorageLensConfiguration#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#encryption AwsStorageLensConfiguration#encryption}
   */
   readonly encryption?: StorageLensConfigurationDataExportS3BucketDestinationEncryptionProperty;
 }
@@ -3320,7 +3320,7 @@ export class StorageLensConfigurationDataExportS3BucketDestinationPropertyOutput
 }
 export interface StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#key_id TfStorageLensConfiguration#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#key_id AwsStorageLensConfiguration#key_id}
   */
   readonly keyId: string;
 }
@@ -3433,13 +3433,13 @@ export interface StorageLensConfigurationDataExportStorageLensTableDestinationEn
   /**
   * sse_kms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_kms TfStorageLensConfiguration#sse_kms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_kms AwsStorageLensConfiguration#sse_kms}
   */
   readonly sseKms?: StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseKmsProperty;
   /**
   * sse_s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_s3 TfStorageLensConfiguration#sse_s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_s3 AwsStorageLensConfiguration#sse_s3}
   */
   readonly sseS3?: StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionSseS3Property[] | cdktn.IResolvable;
 }
@@ -3515,13 +3515,13 @@ export class StorageLensConfigurationDataExportStorageLensTableDestinationEncryp
 }
 export interface StorageLensConfigurationDataExportStorageLensTableDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
   * encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#encryption TfStorageLensConfiguration#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#encryption AwsStorageLensConfiguration#encryption}
   */
   readonly encryption?: StorageLensConfigurationDataExportStorageLensTableDestinationEncryptionProperty;
 }
@@ -3596,19 +3596,19 @@ export interface DataExportProperty {
   /**
   * cloud_watch_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#cloud_watch_metrics TfStorageLensConfiguration#cloud_watch_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#cloud_watch_metrics AwsStorageLensConfiguration#cloud_watch_metrics}
   */
   readonly cloudWatchMetrics?: CloudWatchMetricsProperty;
   /**
   * s3_bucket_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#s3_bucket_destination TfStorageLensConfiguration#s3_bucket_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#s3_bucket_destination AwsStorageLensConfiguration#s3_bucket_destination}
   */
   readonly s3BucketDestination?: StorageLensConfigurationDataExportS3BucketDestinationProperty;
   /**
   * storage_lens_table_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#storage_lens_table_destination TfStorageLensConfiguration#storage_lens_table_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#storage_lens_table_destination AwsStorageLensConfiguration#storage_lens_table_destination}
   */
   readonly storageLensTableDestination?: StorageLensConfigurationDataExportStorageLensTableDestinationProperty;
 }
@@ -3706,11 +3706,11 @@ export class DataExportPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ExcludeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#buckets TfStorageLensConfiguration#buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#buckets AwsStorageLensConfiguration#buckets}
   */
   readonly buckets?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#regions TfStorageLensConfiguration#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#regions AwsStorageLensConfiguration#regions}
   */
   readonly regions?: string[];
 }
@@ -3786,7 +3786,7 @@ export class ExcludePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#key_id TfStorageLensConfiguration#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#key_id AwsStorageLensConfiguration#key_id}
   */
   readonly keyId: string;
 }
@@ -3899,13 +3899,13 @@ export interface StorageLensConfigurationExpandedPrefixesDataExportS3BucketDesti
   /**
   * sse_kms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_kms TfStorageLensConfiguration#sse_kms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_kms AwsStorageLensConfiguration#sse_kms}
   */
   readonly sseKms?: StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseKmsProperty;
   /**
   * sse_s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_s3 TfStorageLensConfiguration#sse_s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_s3 AwsStorageLensConfiguration#sse_s3}
   */
   readonly sseS3?: StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionSseS3Property[] | cdktn.IResolvable;
 }
@@ -3981,29 +3981,29 @@ export class StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinati
 }
 export interface StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#account_id TfStorageLensConfiguration#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#account_id AwsStorageLensConfiguration#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#arn TfStorageLensConfiguration#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#arn AwsStorageLensConfiguration#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#format TfStorageLensConfiguration#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#format AwsStorageLensConfiguration#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#output_schema_version TfStorageLensConfiguration#output_schema_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#output_schema_version AwsStorageLensConfiguration#output_schema_version}
   */
   readonly outputSchemaVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#prefix TfStorageLensConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#prefix AwsStorageLensConfiguration#prefix}
   */
   readonly prefix?: string;
   /**
   * encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#encryption TfStorageLensConfiguration#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#encryption AwsStorageLensConfiguration#encryption}
   */
   readonly encryption?: StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationEncryptionProperty;
 }
@@ -4155,7 +4155,7 @@ export class StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinati
 }
 export interface StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#key_id TfStorageLensConfiguration#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#key_id AwsStorageLensConfiguration#key_id}
   */
   readonly keyId: string;
 }
@@ -4268,13 +4268,13 @@ export interface StorageLensConfigurationExpandedPrefixesDataExportStorageLensTa
   /**
   * sse_kms block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_kms TfStorageLensConfiguration#sse_kms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_kms AwsStorageLensConfiguration#sse_kms}
   */
   readonly sseKms?: StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseKmsProperty;
   /**
   * sse_s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_s3 TfStorageLensConfiguration#sse_s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#sse_s3 AwsStorageLensConfiguration#sse_s3}
   */
   readonly sseS3?: StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionSseS3Property[] | cdktn.IResolvable;
 }
@@ -4350,13 +4350,13 @@ export class StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableD
 }
 export interface StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
   * encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#encryption TfStorageLensConfiguration#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#encryption AwsStorageLensConfiguration#encryption}
   */
   readonly encryption?: StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationEncryptionProperty;
 }
@@ -4431,13 +4431,13 @@ export interface ExpandedPrefixesDataExportProperty {
   /**
   * s3_bucket_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#s3_bucket_destination TfStorageLensConfiguration#s3_bucket_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#s3_bucket_destination AwsStorageLensConfiguration#s3_bucket_destination}
   */
   readonly s3BucketDestination?: StorageLensConfigurationExpandedPrefixesDataExportS3BucketDestinationProperty;
   /**
   * storage_lens_table_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#storage_lens_table_destination TfStorageLensConfiguration#storage_lens_table_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#storage_lens_table_destination AwsStorageLensConfiguration#storage_lens_table_destination}
   */
   readonly storageLensTableDestination?: StorageLensConfigurationExpandedPrefixesDataExportStorageLensTableDestinationProperty;
 }
@@ -4513,11 +4513,11 @@ export class ExpandedPrefixesDataExportPropertyOutputReference extends cdktn.Com
 }
 export interface IncludeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#buckets TfStorageLensConfiguration#buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#buckets AwsStorageLensConfiguration#buckets}
   */
   readonly buckets?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#regions TfStorageLensConfiguration#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#regions AwsStorageLensConfiguration#regions}
   */
   readonly regions?: string[];
 }
@@ -4593,47 +4593,47 @@ export class IncludePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StorageLensConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled TfStorageLensConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#enabled AwsStorageLensConfiguration#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#prefix_delimiter TfStorageLensConfiguration#prefix_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#prefix_delimiter AwsStorageLensConfiguration#prefix_delimiter}
   */
   readonly prefixDelimiter?: string;
   /**
   * account_level block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#account_level TfStorageLensConfiguration#account_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#account_level AwsStorageLensConfiguration#account_level}
   */
   readonly accountLevel: AccountLevelProperty;
   /**
   * aws_org block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#aws_org TfStorageLensConfiguration#aws_org}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#aws_org AwsStorageLensConfiguration#aws_org}
   */
   readonly awsOrg?: AwsOrgProperty;
   /**
   * data_export block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#data_export TfStorageLensConfiguration#data_export}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#data_export AwsStorageLensConfiguration#data_export}
   */
   readonly dataExport?: DataExportProperty;
   /**
   * exclude block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#exclude TfStorageLensConfiguration#exclude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#exclude AwsStorageLensConfiguration#exclude}
   */
   readonly exclude?: ExcludeProperty;
   /**
   * expanded_prefixes_data_export block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#expanded_prefixes_data_export TfStorageLensConfiguration#expanded_prefixes_data_export}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#expanded_prefixes_data_export AwsStorageLensConfiguration#expanded_prefixes_data_export}
   */
   readonly expandedPrefixesDataExport?: ExpandedPrefixesDataExportProperty;
   /**
   * include block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#include TfStorageLensConfiguration#include}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_storage_lens_configuration#include AwsStorageLensConfiguration#include}
   */
   readonly include?: IncludeProperty;
 }

@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfListenerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsListenerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#id TfListener#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#id AwsListener#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#name TfListener#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#name AwsListener#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#port TfListener#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#port AwsListener#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#protocol TfListener#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#protocol AwsListener#protocol}
   */
   readonly protocol: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#region TfListener#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#region AwsListener#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#service_arn TfListener#service_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#service_arn AwsListener#service_arn}
   */
   readonly serviceArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#service_identifier TfListener#service_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#service_identifier AwsListener#service_identifier}
   */
   readonly serviceIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#tags TfListener#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#tags AwsListener#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#tags_all TfListener#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#tags_all AwsListener#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * default_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#default_action TfListener#default_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#default_action AwsListener#default_action}
   */
-  readonly defaultAction: TfListener.DefaultActionProperty;
+  readonly defaultAction: AwsListener.DefaultActionProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#timeouts TfListener#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#timeouts AwsListener#timeouts}
   */
-  readonly timeouts?: TfListener.TimeoutsProperty;
+  readonly timeouts?: AwsListener.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener aws_vpclattice_listener}
 */
-export class TfListener extends cdktn.TerraformResource {
+export class AwsListener extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class TfListener extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfListener resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsListener resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfListener to import
-  * @param importFromId The id of the existing TfListener that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfListener to import is found
+  * @param importToId The construct id used in the generated config for the AwsListener to import
+  * @param importFromId The id of the existing AwsListener that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsListener to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_listener", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class TfListener extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfListenerConfig
+  * @param options AwsListenerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfListenerConfig) {
+  public constructor(scope: Construct, id: string, config: AwsListenerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_listener',
       terraformGeneratorMetadata: {
@@ -288,11 +288,11 @@ export class TfListener extends cdktn.TerraformResource {
   }
 
   // default_action - computed: false, optional: false, required: true
-  private _defaultAction = new TfListener.DefaultActionPropertyOutputReference(this, "default_action");
+  private _defaultAction = new AwsListener.DefaultActionPropertyOutputReference(this, "default_action");
   public get defaultAction() {
     return this._defaultAction;
   }
-  public putDefaultAction(value: TfListener.DefaultActionProperty) {
+  public putDefaultAction(value: AwsListener.DefaultActionProperty) {
     this._defaultAction.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -301,11 +301,11 @@ export class TfListener extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfListener.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsListener.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfListener.TimeoutsProperty) {
+  public putTimeouts(value: AwsListener.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -331,8 +331,8 @@ export class TfListener extends cdktn.TerraformResource {
       service_identifier: cdktn.stringToTerraform(this._serviceIdentifier),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      default_action: tfListenerDefaultActionPropertyToTerraform(this._defaultAction.internalValue),
-      timeouts: tfListenerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      default_action: awsListenerDefaultActionPropertyToTerraform(this._defaultAction.internalValue),
+      timeouts: awsListenerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -393,16 +393,16 @@ export class TfListener extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       default_action: {
-        value: tfListenerDefaultActionPropertyToHclTerraform(this._defaultAction.internalValue),
+        value: awsListenerDefaultActionPropertyToHclTerraform(this._defaultAction.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfListener.DefaultActionPropertyList",
+        storageClassType: "AwsListener.DefaultActionPropertyList",
       },
       timeouts: {
-        value: tfListenerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsListenerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfListener.TimeoutsProperty",
+        storageClassType: "AwsListener.TimeoutsProperty",
       },
     };
 
@@ -411,7 +411,7 @@ export class TfListener extends cdktn.TerraformResource {
   }
 }
 
-export function tfListenerFixedResponsePropertyToTerraform(struct?: TfListener.FixedResponsePropertyOutputReference | TfListener.FixedResponseProperty): any {
+export function awsListenerFixedResponsePropertyToTerraform(struct?: AwsListener.FixedResponsePropertyOutputReference | AwsListener.FixedResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,7 +422,7 @@ export function tfListenerFixedResponsePropertyToTerraform(struct?: TfListener.F
 }
 
 
-export function tfListenerFixedResponsePropertyToHclTerraform(struct?: TfListener.FixedResponsePropertyOutputReference | TfListener.FixedResponseProperty): any {
+export function awsListenerFixedResponsePropertyToHclTerraform(struct?: AwsListener.FixedResponsePropertyOutputReference | AwsListener.FixedResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,7 +441,7 @@ export function tfListenerFixedResponsePropertyToHclTerraform(struct?: TfListene
 }
 
 
-export function tfListenerTargetGroupsPropertyToTerraform(struct?: TfListener.TargetGroupsProperty | cdktn.IResolvable): any {
+export function awsListenerTargetGroupsPropertyToTerraform(struct?: AwsListener.TargetGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -453,7 +453,7 @@ export function tfListenerTargetGroupsPropertyToTerraform(struct?: TfListener.Ta
 }
 
 
-export function tfListenerTargetGroupsPropertyToHclTerraform(struct?: TfListener.TargetGroupsProperty | cdktn.IResolvable): any {
+export function awsListenerTargetGroupsPropertyToHclTerraform(struct?: AwsListener.TargetGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -478,25 +478,25 @@ export function tfListenerTargetGroupsPropertyToHclTerraform(struct?: TfListener
 }
 
 
-export function tfListenerForwardPropertyToTerraform(struct?: TfListener.ForwardProperty | cdktn.IResolvable): any {
+export function awsListenerForwardPropertyToTerraform(struct?: AwsListener.ForwardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    target_groups: cdktn.listMapper(tfListenerTargetGroupsPropertyToTerraform, true)(struct!.targetGroups),
+    target_groups: cdktn.listMapper(awsListenerTargetGroupsPropertyToTerraform, true)(struct!.targetGroups),
   }
 }
 
 
-export function tfListenerForwardPropertyToHclTerraform(struct?: TfListener.ForwardProperty | cdktn.IResolvable): any {
+export function awsListenerForwardPropertyToHclTerraform(struct?: AwsListener.ForwardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     target_groups: {
-      value: cdktn.listMapperHcl(tfListenerTargetGroupsPropertyToHclTerraform, true)(struct!.targetGroups),
+      value: cdktn.listMapperHcl(awsListenerTargetGroupsPropertyToHclTerraform, true)(struct!.targetGroups),
       isBlock: true,
       type: "list",
       storageClassType: "TargetGroupsPropertyList",
@@ -508,32 +508,32 @@ export function tfListenerForwardPropertyToHclTerraform(struct?: TfListener.Forw
 }
 
 
-export function tfListenerDefaultActionPropertyToTerraform(struct?: TfListener.DefaultActionPropertyOutputReference | TfListener.DefaultActionProperty): any {
+export function awsListenerDefaultActionPropertyToTerraform(struct?: AwsListener.DefaultActionPropertyOutputReference | AwsListener.DefaultActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    fixed_response: tfListenerFixedResponsePropertyToTerraform(struct!.fixedResponse),
-    forward: cdktn.listMapper(tfListenerForwardPropertyToTerraform, true)(struct!.forward),
+    fixed_response: awsListenerFixedResponsePropertyToTerraform(struct!.fixedResponse),
+    forward: cdktn.listMapper(awsListenerForwardPropertyToTerraform, true)(struct!.forward),
   }
 }
 
 
-export function tfListenerDefaultActionPropertyToHclTerraform(struct?: TfListener.DefaultActionPropertyOutputReference | TfListener.DefaultActionProperty): any {
+export function awsListenerDefaultActionPropertyToHclTerraform(struct?: AwsListener.DefaultActionPropertyOutputReference | AwsListener.DefaultActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     fixed_response: {
-      value: tfListenerFixedResponsePropertyToHclTerraform(struct!.fixedResponse),
+      value: awsListenerFixedResponsePropertyToHclTerraform(struct!.fixedResponse),
       isBlock: true,
       type: "list",
       storageClassType: "FixedResponsePropertyList",
     },
     forward: {
-      value: cdktn.listMapperHcl(tfListenerForwardPropertyToHclTerraform, true)(struct!.forward),
+      value: cdktn.listMapperHcl(awsListenerForwardPropertyToHclTerraform, true)(struct!.forward),
       isBlock: true,
       type: "list",
       storageClassType: "ForwardPropertyList",
@@ -545,7 +545,7 @@ export function tfListenerDefaultActionPropertyToHclTerraform(struct?: TfListene
 }
 
 
-export function tfListenerTimeoutsPropertyToTerraform(struct?: TfListener.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsListenerTimeoutsPropertyToTerraform(struct?: AwsListener.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -558,7 +558,7 @@ export function tfListenerTimeoutsPropertyToTerraform(struct?: TfListener.Timeou
 }
 
 
-export function tfListenerTimeoutsPropertyToHclTerraform(struct?: TfListener.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsListenerTimeoutsPropertyToHclTerraform(struct?: AwsListener.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -589,10 +589,10 @@ export function tfListenerTimeoutsPropertyToHclTerraform(struct?: TfListener.Tim
 }
 
 
-export namespace TfListener {
+export namespace AwsListener {
 export interface FixedResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#status_code TfListener#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#status_code AwsListener#status_code}
   */
   readonly statusCode: number;
 }
@@ -643,11 +643,11 @@ export class FixedResponsePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TargetGroupsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#target_group_identifier TfListener#target_group_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#target_group_identifier AwsListener#target_group_identifier}
   */
   readonly targetGroupIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#weight TfListener#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#weight AwsListener#weight}
   */
   readonly weight?: number;
 }
@@ -757,7 +757,7 @@ export interface ForwardProperty {
   /**
   * target_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#target_groups TfListener#target_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#target_groups AwsListener#target_groups}
   */
   readonly targetGroups?: TargetGroupsProperty[] | cdktn.IResolvable;
 }
@@ -845,13 +845,13 @@ export interface DefaultActionProperty {
   /**
   * fixed_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#fixed_response TfListener#fixed_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#fixed_response AwsListener#fixed_response}
   */
   readonly fixedResponse?: FixedResponseProperty;
   /**
   * forward block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#forward TfListener#forward}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#forward AwsListener#forward}
   */
   readonly forward?: ForwardProperty[] | cdktn.IResolvable;
 }
@@ -927,15 +927,15 @@ export class DefaultActionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#create TfListener#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#create AwsListener#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#delete TfListener#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#delete AwsListener#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#update TfListener#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener#update AwsListener#update}
   */
   readonly update?: string;
 }

@@ -5,84 +5,84 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEnvironmentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEnvironmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#application TfEnvironment#application}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#application AwsEnvironment#application}
   */
   readonly application: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#cname_prefix TfEnvironment#cname_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#cname_prefix AwsEnvironment#cname_prefix}
   */
   readonly cnamePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#description TfEnvironment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#description AwsEnvironment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#id TfEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#id AwsEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#name TfEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#name AwsEnvironment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#platform_arn TfEnvironment#platform_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#platform_arn AwsEnvironment#platform_arn}
   */
   readonly platformArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#poll_interval TfEnvironment#poll_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#poll_interval AwsEnvironment#poll_interval}
   */
   readonly pollInterval?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#region TfEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#region AwsEnvironment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#solution_stack_name TfEnvironment#solution_stack_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#solution_stack_name AwsEnvironment#solution_stack_name}
   */
   readonly solutionStackName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#tags TfEnvironment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#tags AwsEnvironment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#tags_all TfEnvironment#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#tags_all AwsEnvironment#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#template_name TfEnvironment#template_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#template_name AwsEnvironment#template_name}
   */
   readonly templateName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#tier TfEnvironment#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#tier AwsEnvironment#tier}
   */
   readonly tier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#version_label TfEnvironment#version_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#version_label AwsEnvironment#version_label}
   */
   readonly versionLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#wait_for_ready_timeout TfEnvironment#wait_for_ready_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#wait_for_ready_timeout AwsEnvironment#wait_for_ready_timeout}
   */
   readonly waitForReadyTimeout?: string;
   /**
   * setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#setting TfEnvironment#setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#setting AwsEnvironment#setting}
   */
-  readonly setting?: TfEnvironment.SettingProperty[] | cdktn.IResolvable;
+  readonly setting?: AwsEnvironment.SettingProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment aws_elastic_beanstalk_environment}
 */
-export class TfEnvironment extends cdktn.TerraformResource {
+export class AwsEnvironment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -93,11 +93,11 @@ export class TfEnvironment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEnvironment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEnvironment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEnvironment to import
-  * @param importFromId The id of the existing TfEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEnvironment to import is found
+  * @param importToId The construct id used in the generated config for the AwsEnvironment to import
+  * @param importFromId The id of the existing AwsEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elastic_beanstalk_environment", importId: importFromId, provider });
@@ -112,9 +112,9 @@ export class TfEnvironment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEnvironmentConfig
+  * @param options AwsEnvironmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elastic_beanstalk_environment',
       terraformGeneratorMetadata: {
@@ -153,7 +153,7 @@ export class TfEnvironment extends cdktn.TerraformResource {
   // ==========
 
   // all_settings - computed: true, optional: false, required: false
-  private _allSettings = new TfEnvironment.AllSettingsPropertyList(this, "all_settings", true);
+  private _allSettings = new AwsEnvironment.AllSettingsPropertyList(this, "all_settings", true);
   public get allSettings() {
     return this._allSettings;
   }
@@ -438,11 +438,11 @@ export class TfEnvironment extends cdktn.TerraformResource {
   }
 
   // setting - computed: false, optional: true, required: false
-  private _setting = new TfEnvironment.SettingPropertyList(this, "setting", true);
+  private _setting = new AwsEnvironment.SettingPropertyList(this, "setting", true);
   public get setting() {
     return this._setting;
   }
-  public putSetting(value: TfEnvironment.SettingProperty[] | cdktn.IResolvable) {
+  public putSetting(value: AwsEnvironment.SettingProperty[] | cdktn.IResolvable) {
     this._setting.internalValue = value;
   }
   public resetSetting() {
@@ -474,7 +474,7 @@ export class TfEnvironment extends cdktn.TerraformResource {
       tier: cdktn.stringToTerraform(this._tier),
       version_label: cdktn.stringToTerraform(this._versionLabel),
       wait_for_ready_timeout: cdktn.stringToTerraform(this._waitForReadyTimeout),
-      setting: cdktn.listMapper(tfEnvironmentSettingPropertyToTerraform, true)(this._setting.internalValue),
+      setting: cdktn.listMapper(awsEnvironmentSettingPropertyToTerraform, true)(this._setting.internalValue),
     };
   }
 
@@ -571,10 +571,10 @@ export class TfEnvironment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       setting: {
-        value: cdktn.listMapperHcl(tfEnvironmentSettingPropertyToHclTerraform, true)(this._setting.internalValue),
+        value: cdktn.listMapperHcl(awsEnvironmentSettingPropertyToHclTerraform, true)(this._setting.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfEnvironment.SettingPropertyList",
+        storageClassType: "AwsEnvironment.SettingPropertyList",
       },
     };
 
@@ -583,7 +583,7 @@ export class TfEnvironment extends cdktn.TerraformResource {
   }
 }
 
-export function tfEnvironmentAllSettingsPropertyToTerraform(struct?: TfEnvironment.AllSettingsProperty): any {
+export function awsEnvironmentAllSettingsPropertyToTerraform(struct?: AwsEnvironment.AllSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -593,7 +593,7 @@ export function tfEnvironmentAllSettingsPropertyToTerraform(struct?: TfEnvironme
 }
 
 
-export function tfEnvironmentAllSettingsPropertyToHclTerraform(struct?: TfEnvironment.AllSettingsProperty): any {
+export function awsEnvironmentAllSettingsPropertyToHclTerraform(struct?: AwsEnvironment.AllSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -604,7 +604,7 @@ export function tfEnvironmentAllSettingsPropertyToHclTerraform(struct?: TfEnviro
 }
 
 
-export function tfEnvironmentSettingPropertyToTerraform(struct?: TfEnvironment.SettingProperty | cdktn.IResolvable): any {
+export function awsEnvironmentSettingPropertyToTerraform(struct?: AwsEnvironment.SettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -618,7 +618,7 @@ export function tfEnvironmentSettingPropertyToTerraform(struct?: TfEnvironment.S
 }
 
 
-export function tfEnvironmentSettingPropertyToHclTerraform(struct?: TfEnvironment.SettingProperty | cdktn.IResolvable): any {
+export function awsEnvironmentSettingPropertyToHclTerraform(struct?: AwsEnvironment.SettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -655,7 +655,7 @@ export function tfEnvironmentSettingPropertyToHclTerraform(struct?: TfEnvironmen
 }
 
 
-export namespace TfEnvironment {
+export namespace AwsEnvironment {
 export interface AllSettingsProperty {
 }
 export class AllSettingsPropertyOutputReference extends cdktn.ComplexObject {
@@ -727,19 +727,19 @@ export class AllSettingsPropertyList extends cdktn.ComplexList {
 }
 export interface SettingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#name TfEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#name AwsEnvironment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#namespace TfEnvironment#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#namespace AwsEnvironment#namespace}
   */
   readonly namespace: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#resource TfEnvironment#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#resource AwsEnvironment#resource}
   */
   readonly resource?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#value TfEnvironment#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastic_beanstalk_environment#value AwsEnvironment#value}
   */
   readonly value: string;
 }

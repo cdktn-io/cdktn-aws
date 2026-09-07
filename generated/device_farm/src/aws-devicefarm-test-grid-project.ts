@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTestGridProjectConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTestGridProjectConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#description TfTestGridProject#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#description AwsTestGridProject#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#id TfTestGridProject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#id AwsTestGridProject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#name TfTestGridProject#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#name AwsTestGridProject#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#region TfTestGridProject#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#region AwsTestGridProject#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#tags TfTestGridProject#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#tags AwsTestGridProject#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#tags_all TfTestGridProject#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#tags_all AwsTestGridProject#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#vpc_config TfTestGridProject#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#vpc_config AwsTestGridProject#vpc_config}
   */
-  readonly vpcConfig?: TfTestGridProject.VpcConfigProperty;
+  readonly vpcConfig?: AwsTestGridProject.VpcConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project aws_devicefarm_test_grid_project}
 */
-export class TfTestGridProject extends cdktn.TerraformResource {
+export class AwsTestGridProject extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfTestGridProject extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTestGridProject resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTestGridProject resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTestGridProject to import
-  * @param importFromId The id of the existing TfTestGridProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTestGridProject to import is found
+  * @param importToId The construct id used in the generated config for the AwsTestGridProject to import
+  * @param importFromId The id of the existing AwsTestGridProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTestGridProject to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_devicefarm_test_grid_project", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfTestGridProject extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTestGridProjectConfig
+  * @param options AwsTestGridProjectConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTestGridProjectConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTestGridProjectConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_devicefarm_test_grid_project',
       terraformGeneratorMetadata: {
@@ -206,11 +206,11 @@ export class TfTestGridProject extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new TfTestGridProject.VpcConfigPropertyOutputReference(this, "vpc_config");
+  private _vpcConfig = new AwsTestGridProject.VpcConfigPropertyOutputReference(this, "vpc_config");
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: TfTestGridProject.VpcConfigProperty) {
+  public putVpcConfig(value: AwsTestGridProject.VpcConfigProperty) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -233,7 +233,7 @@ export class TfTestGridProject extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      vpc_config: tfTestGridProjectVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
+      vpc_config: awsTestGridProjectVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
     };
   }
 
@@ -276,10 +276,10 @@ export class TfTestGridProject extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       vpc_config: {
-        value: tfTestGridProjectVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
+        value: awsTestGridProjectVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTestGridProject.VpcConfigPropertyList",
+        storageClassType: "AwsTestGridProject.VpcConfigPropertyList",
       },
     };
 
@@ -288,7 +288,7 @@ export class TfTestGridProject extends cdktn.TerraformResource {
   }
 }
 
-export function tfTestGridProjectVpcConfigPropertyToTerraform(struct?: TfTestGridProject.VpcConfigPropertyOutputReference | TfTestGridProject.VpcConfigProperty): any {
+export function awsTestGridProjectVpcConfigPropertyToTerraform(struct?: AwsTestGridProject.VpcConfigPropertyOutputReference | AwsTestGridProject.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function tfTestGridProjectVpcConfigPropertyToTerraform(struct?: TfTestGri
 }
 
 
-export function tfTestGridProjectVpcConfigPropertyToHclTerraform(struct?: TfTestGridProject.VpcConfigPropertyOutputReference | TfTestGridProject.VpcConfigProperty): any {
+export function awsTestGridProjectVpcConfigPropertyToHclTerraform(struct?: AwsTestGridProject.VpcConfigPropertyOutputReference | AwsTestGridProject.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,18 +332,18 @@ export function tfTestGridProjectVpcConfigPropertyToHclTerraform(struct?: TfTest
 }
 
 
-export namespace TfTestGridProject {
+export namespace AwsTestGridProject {
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#security_group_ids TfTestGridProject#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#security_group_ids AwsTestGridProject#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#subnet_ids TfTestGridProject#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#subnet_ids AwsTestGridProject#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#vpc_id TfTestGridProject#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_test_grid_project#vpc_id AwsTestGridProject#vpc_id}
   */
   readonly vpcId: string;
 }

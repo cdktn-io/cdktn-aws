@@ -5,32 +5,32 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfOpenidConnectProviderConfig extends cdktn.TerraformMetaArguments {
+export interface AwsOpenidConnectProviderConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#client_id_list TfOpenidConnectProvider#client_id_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#client_id_list AwsOpenidConnectProvider#client_id_list}
   */
   readonly clientIdList: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#id TfOpenidConnectProvider#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#id AwsOpenidConnectProvider#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#tags TfOpenidConnectProvider#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#tags AwsOpenidConnectProvider#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#tags_all TfOpenidConnectProvider#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#tags_all AwsOpenidConnectProvider#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#thumbprint_list TfOpenidConnectProvider#thumbprint_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#thumbprint_list AwsOpenidConnectProvider#thumbprint_list}
   */
   readonly thumbprintList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#url TfOpenidConnectProvider#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#url AwsOpenidConnectProvider#url}
   */
   readonly url: string;
 }
@@ -38,7 +38,7 @@ export interface TfOpenidConnectProviderConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider aws_iam_openid_connect_provider}
 */
-export class TfOpenidConnectProvider extends cdktn.TerraformResource {
+export class AwsOpenidConnectProvider extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfOpenidConnectProvider extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfOpenidConnectProvider resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsOpenidConnectProvider resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfOpenidConnectProvider to import
-  * @param importFromId The id of the existing TfOpenidConnectProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfOpenidConnectProvider to import is found
+  * @param importToId The construct id used in the generated config for the AwsOpenidConnectProvider to import
+  * @param importFromId The id of the existing AwsOpenidConnectProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_openid_connect_provider#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOpenidConnectProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_openid_connect_provider", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfOpenidConnectProvider extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfOpenidConnectProviderConfig
+  * @param options AwsOpenidConnectProviderConfig
   */
-  public constructor(scope: Construct, id: string, config: TfOpenidConnectProviderConfig) {
+  public constructor(scope: Construct, id: string, config: AwsOpenidConnectProviderConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_openid_connect_provider',
       terraformGeneratorMetadata: {

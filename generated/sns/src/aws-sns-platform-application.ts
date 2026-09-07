@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPlatformApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPlatformApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#apple_platform_bundle_id TfPlatformApplication#apple_platform_bundle_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#apple_platform_bundle_id AwsPlatformApplication#apple_platform_bundle_id}
   */
   readonly applePlatformBundleId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#apple_platform_team_id TfPlatformApplication#apple_platform_team_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#apple_platform_team_id AwsPlatformApplication#apple_platform_team_id}
   */
   readonly applePlatformTeamId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#event_delivery_failure_topic_arn TfPlatformApplication#event_delivery_failure_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#event_delivery_failure_topic_arn AwsPlatformApplication#event_delivery_failure_topic_arn}
   */
   readonly eventDeliveryFailureTopicArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#event_endpoint_created_topic_arn TfPlatformApplication#event_endpoint_created_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#event_endpoint_created_topic_arn AwsPlatformApplication#event_endpoint_created_topic_arn}
   */
   readonly eventEndpointCreatedTopicArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#event_endpoint_deleted_topic_arn TfPlatformApplication#event_endpoint_deleted_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#event_endpoint_deleted_topic_arn AwsPlatformApplication#event_endpoint_deleted_topic_arn}
   */
   readonly eventEndpointDeletedTopicArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#event_endpoint_updated_topic_arn TfPlatformApplication#event_endpoint_updated_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#event_endpoint_updated_topic_arn AwsPlatformApplication#event_endpoint_updated_topic_arn}
   */
   readonly eventEndpointUpdatedTopicArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#failure_feedback_role_arn TfPlatformApplication#failure_feedback_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#failure_feedback_role_arn AwsPlatformApplication#failure_feedback_role_arn}
   */
   readonly failureFeedbackRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#id TfPlatformApplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#id AwsPlatformApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#name TfPlatformApplication#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#name AwsPlatformApplication#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#platform TfPlatformApplication#platform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#platform AwsPlatformApplication#platform}
   */
   readonly platform: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#platform_credential TfPlatformApplication#platform_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#platform_credential AwsPlatformApplication#platform_credential}
   */
   readonly platformCredential: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#platform_principal TfPlatformApplication#platform_principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#platform_principal AwsPlatformApplication#platform_principal}
   */
   readonly platformPrincipal?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#region TfPlatformApplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#region AwsPlatformApplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#success_feedback_role_arn TfPlatformApplication#success_feedback_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#success_feedback_role_arn AwsPlatformApplication#success_feedback_role_arn}
   */
   readonly successFeedbackRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#success_feedback_sample_rate TfPlatformApplication#success_feedback_sample_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#success_feedback_sample_rate AwsPlatformApplication#success_feedback_sample_rate}
   */
   readonly successFeedbackSampleRate?: string;
 }
@@ -76,7 +76,7 @@ export interface TfPlatformApplicationConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application aws_sns_platform_application}
 */
-export class TfPlatformApplication extends cdktn.TerraformResource {
+export class AwsPlatformApplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -87,11 +87,11 @@ export class TfPlatformApplication extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPlatformApplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPlatformApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPlatformApplication to import
-  * @param importFromId The id of the existing TfPlatformApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPlatformApplication to import is found
+  * @param importToId The construct id used in the generated config for the AwsPlatformApplication to import
+  * @param importFromId The id of the existing AwsPlatformApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sns_platform_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPlatformApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sns_platform_application", importId: importFromId, provider });
@@ -106,9 +106,9 @@ export class TfPlatformApplication extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPlatformApplicationConfig
+  * @param options AwsPlatformApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPlatformApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPlatformApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sns_platform_application',
       terraformGeneratorMetadata: {

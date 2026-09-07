@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAttributeGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAttributeGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group#attributes TfAttributeGroup#attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group#attributes AwsAttributeGroup#attributes}
   */
   readonly attributes: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group#description TfAttributeGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group#description AwsAttributeGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group#name TfAttributeGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group#name AwsAttributeGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group#region TfAttributeGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group#region AwsAttributeGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group#tags TfAttributeGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group#tags AwsAttributeGroup#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -33,7 +33,7 @@ export interface TfAttributeGroupConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group aws_servicecatalogappregistry_attribute_group}
 */
-export class TfAttributeGroup extends cdktn.TerraformResource {
+export class AwsAttributeGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfAttributeGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAttributeGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAttributeGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAttributeGroup to import
-  * @param importFromId The id of the existing TfAttributeGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAttributeGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsAttributeGroup to import
+  * @param importFromId The id of the existing AwsAttributeGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalogappregistry_attribute_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAttributeGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalogappregistry_attribute_group", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfAttributeGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAttributeGroupConfig
+  * @param options AwsAttributeGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAttributeGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAttributeGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalogappregistry_attribute_group',
       terraformGeneratorMetadata: {

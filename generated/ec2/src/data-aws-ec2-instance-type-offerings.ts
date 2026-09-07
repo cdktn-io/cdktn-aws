@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfInstanceTypeOfferingsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsInstanceTypeOfferingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#id DataTfInstanceTypeOfferings#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#id DataAwsInstanceTypeOfferings#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#location_type DataTfInstanceTypeOfferings#location_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#location_type DataAwsInstanceTypeOfferings#location_type}
   */
   readonly locationType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#region DataTfInstanceTypeOfferings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#region DataAwsInstanceTypeOfferings#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#filter DataTfInstanceTypeOfferings#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#filter DataAwsInstanceTypeOfferings#filter}
   */
-  readonly filter?: DataTfInstanceTypeOfferings.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsInstanceTypeOfferings.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#timeouts DataTfInstanceTypeOfferings#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#timeouts DataAwsInstanceTypeOfferings#timeouts}
   */
-  readonly timeouts?: DataTfInstanceTypeOfferings.TimeoutsProperty;
+  readonly timeouts?: DataAwsInstanceTypeOfferings.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings aws_ec2_instance_type_offerings}
 */
-export class DataTfInstanceTypeOfferings extends cdktn.TerraformDataSource {
+export class DataAwsInstanceTypeOfferings extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataTfInstanceTypeOfferings extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfInstanceTypeOfferings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsInstanceTypeOfferings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfInstanceTypeOfferings to import
-  * @param importFromId The id of the existing DataTfInstanceTypeOfferings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfInstanceTypeOfferings to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsInstanceTypeOfferings to import
+  * @param importFromId The id of the existing DataAwsInstanceTypeOfferings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsInstanceTypeOfferings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_instance_type_offerings", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataTfInstanceTypeOfferings extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfInstanceTypeOfferingsConfig = {}
+  * @param options DataAwsInstanceTypeOfferingsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfInstanceTypeOfferingsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsInstanceTypeOfferingsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_instance_type_offerings',
       terraformGeneratorMetadata: {
@@ -163,11 +163,11 @@ export class DataTfInstanceTypeOfferings extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfInstanceTypeOfferings.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsInstanceTypeOfferings.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfInstanceTypeOfferings.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsInstanceTypeOfferings.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -179,11 +179,11 @@ export class DataTfInstanceTypeOfferings extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfInstanceTypeOfferings.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsInstanceTypeOfferings.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfInstanceTypeOfferings.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsInstanceTypeOfferings.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -203,8 +203,8 @@ export class DataTfInstanceTypeOfferings extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       location_type: cdktn.stringToTerraform(this._locationType),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(dataTfInstanceTypeOfferingsFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataTfInstanceTypeOfferingsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataAwsInstanceTypeOfferingsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataAwsInstanceTypeOfferingsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -229,16 +229,16 @@ export class DataTfInstanceTypeOfferings extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfInstanceTypeOfferingsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsInstanceTypeOfferingsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfInstanceTypeOfferings.FilterPropertyList",
+        storageClassType: "DataAwsInstanceTypeOfferings.FilterPropertyList",
       },
       timeouts: {
-        value: dataTfInstanceTypeOfferingsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsInstanceTypeOfferingsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfInstanceTypeOfferings.TimeoutsProperty",
+        storageClassType: "DataAwsInstanceTypeOfferings.TimeoutsProperty",
       },
     };
 
@@ -247,7 +247,7 @@ export class DataTfInstanceTypeOfferings extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfInstanceTypeOfferingsFilterPropertyToTerraform(struct?: DataTfInstanceTypeOfferings.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsInstanceTypeOfferingsFilterPropertyToTerraform(struct?: DataAwsInstanceTypeOfferings.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function dataTfInstanceTypeOfferingsFilterPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfInstanceTypeOfferingsFilterPropertyToHclTerraform(struct?: DataTfInstanceTypeOfferings.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsInstanceTypeOfferingsFilterPropertyToHclTerraform(struct?: DataAwsInstanceTypeOfferings.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function dataTfInstanceTypeOfferingsFilterPropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfInstanceTypeOfferingsTimeoutsPropertyToTerraform(struct?: DataTfInstanceTypeOfferings.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsInstanceTypeOfferingsTimeoutsPropertyToTerraform(struct?: DataAwsInstanceTypeOfferings.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function dataTfInstanceTypeOfferingsTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfInstanceTypeOfferingsTimeoutsPropertyToHclTerraform(struct?: DataTfInstanceTypeOfferings.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsInstanceTypeOfferingsTimeoutsPropertyToHclTerraform(struct?: DataAwsInstanceTypeOfferings.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,14 +314,14 @@ export function dataTfInstanceTypeOfferingsTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace DataTfInstanceTypeOfferings {
+export namespace DataAwsInstanceTypeOfferings {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#name DataTfInstanceTypeOfferings#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#name DataAwsInstanceTypeOfferings#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#values DataTfInstanceTypeOfferings#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#values DataAwsInstanceTypeOfferings#values}
   */
   readonly values: string[];
 }
@@ -423,7 +423,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#read DataTfInstanceTypeOfferings#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_instance_type_offerings#read DataAwsInstanceTypeOfferings#read}
   */
   readonly read?: string;
 }

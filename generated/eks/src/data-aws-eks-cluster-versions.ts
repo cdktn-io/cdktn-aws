@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfClusterVersionsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsClusterVersionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#cluster_type DataTfClusterVersions#cluster_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#cluster_type DataAwsClusterVersions#cluster_type}
   */
   readonly clusterType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#cluster_versions_only DataTfClusterVersions#cluster_versions_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#cluster_versions_only DataAwsClusterVersions#cluster_versions_only}
   */
   readonly clusterVersionsOnly?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#default_only DataTfClusterVersions#default_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#default_only DataAwsClusterVersions#default_only}
   */
   readonly defaultOnly?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#include_all DataTfClusterVersions#include_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#include_all DataAwsClusterVersions#include_all}
   */
   readonly includeAll?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#region DataTfClusterVersions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#region DataAwsClusterVersions#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#version_status DataTfClusterVersions#version_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#version_status DataAwsClusterVersions#version_status}
   */
   readonly versionStatus?: string;
 }
@@ -37,7 +37,7 @@ export interface DataTfClusterVersionsConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions aws_eks_cluster_versions}
 */
-export class DataTfClusterVersions extends cdktn.TerraformDataSource {
+export class DataAwsClusterVersions extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class DataTfClusterVersions extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfClusterVersions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsClusterVersions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfClusterVersions to import
-  * @param importFromId The id of the existing DataTfClusterVersions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfClusterVersions to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsClusterVersions to import
+  * @param importFromId The id of the existing DataAwsClusterVersions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_cluster_versions#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsClusterVersions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_cluster_versions", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class DataTfClusterVersions extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfClusterVersionsConfig = {}
+  * @param options DataAwsClusterVersionsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfClusterVersionsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsClusterVersionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_cluster_versions',
       terraformGeneratorMetadata: {
@@ -114,7 +114,7 @@ export class DataTfClusterVersions extends cdktn.TerraformDataSource {
   }
 
   // cluster_versions - computed: true, optional: false, required: false
-  private _clusterVersions = new DataTfClusterVersions.ClusterVersionsPropertyList(this, "cluster_versions", false);
+  private _clusterVersions = new DataAwsClusterVersions.ClusterVersionsPropertyList(this, "cluster_versions", false);
   public get clusterVersions() {
     return this._clusterVersions;
   }
@@ -259,7 +259,7 @@ export class DataTfClusterVersions extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlConstraintsPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlConstraintsPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,7 +269,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlConstraintsPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlConstraintsPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMinPortPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMinPortProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMinPortPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMinPortProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMinPortPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMinPortProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMinPortPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsMinPortProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeDefaultValuePropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeDefaultValueProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeDefaultValuePropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeDefaultValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeDefaultValuePropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeDefaultValueProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeDefaultValuePropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeDefaultValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangePropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangePropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,7 +395,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangePropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangePropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigServiceNodePortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -406,7 +406,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeApiServerConfigPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,7 +427,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -437,7 +437,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,7 +458,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -479,7 +479,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -490,7 +490,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,7 +500,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeControllerManagerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -511,7 +511,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNamePropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNameProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNamePropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNameProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNamePropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNameProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNamePropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNameProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,7 +532,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -542,7 +542,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,7 +553,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -584,7 +584,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -595,7 +595,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,7 +605,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,7 +616,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -626,7 +626,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValuePropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValuePropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -647,7 +647,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValuePropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValuePropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,7 +658,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitScoringStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -679,7 +679,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -689,7 +689,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigNodeResourcesFitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -700,7 +700,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -710,7 +710,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneComponentConfigKubeSchedulerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -721,7 +721,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneComponentConfigK
 }
 
 
-export function dataTfClusterVersionsControlPlaneComponentConfigPropertyToTerraform(struct?: DataTfClusterVersions.ControlPlaneComponentConfigProperty): any {
+export function dataAwsClusterVersionsControlPlaneComponentConfigPropertyToTerraform(struct?: DataAwsClusterVersions.ControlPlaneComponentConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -731,7 +731,7 @@ export function dataTfClusterVersionsControlPlaneComponentConfigPropertyToTerraf
 }
 
 
-export function dataTfClusterVersionsControlPlaneComponentConfigPropertyToHclTerraform(struct?: DataTfClusterVersions.ControlPlaneComponentConfigProperty): any {
+export function dataAwsClusterVersionsControlPlaneComponentConfigPropertyToHclTerraform(struct?: DataAwsClusterVersions.ControlPlaneComponentConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -742,7 +742,7 @@ export function dataTfClusterVersionsControlPlaneComponentConfigPropertyToHclTer
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlConstraintsPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlConstraintsPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,7 +752,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlConstraintsPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlConstraintsPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -763,7 +763,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -773,7 +773,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigEventTtlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -784,7 +784,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -794,7 +794,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMaxPortProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -805,7 +805,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMinPortPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMinPortProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMinPortPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMinPortProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -815,7 +815,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMinPortPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMinPortProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMinPortPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsMinPortProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -826,7 +826,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -836,7 +836,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -847,7 +847,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeDefaultValuePropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeDefaultValueProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeDefaultValuePropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeDefaultValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -857,7 +857,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeDefaultValuePropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeDefaultValueProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeDefaultValuePropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeDefaultValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -868,7 +868,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangePropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangePropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -878,7 +878,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangePropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangePropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigServiceNodePortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -889,7 +889,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -899,7 +899,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeApiServerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -910,7 +910,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -920,7 +920,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -931,7 +931,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -941,7 +941,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigHorizontalPodAutoscalerSyncPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -952,7 +952,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -962,7 +962,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigHorizontalPodAutoscalerControllerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -973,7 +973,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -983,7 +983,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeControllerManagerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -994,7 +994,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNamePropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNameProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNamePropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNameProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1004,7 +1004,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNamePropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNameProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNamePropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesNameProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1015,7 +1015,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1025,7 +1025,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesWeightProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1036,7 +1036,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1046,7 +1046,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1057,7 +1057,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1067,7 +1067,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsScoringStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1078,7 +1078,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1088,7 +1088,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1099,7 +1099,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1109,7 +1109,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1120,7 +1120,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValuePropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValuePropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1130,7 +1130,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValuePropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValuePropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyDefaultValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1141,7 +1141,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1151,7 +1151,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitScoringStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1162,7 +1162,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1172,7 +1172,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigNodeResourcesFitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1183,7 +1183,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1193,7 +1193,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigProperty): any {
+export function dataAwsClusterVersionsClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsControlPlaneScalingTiersControlPlaneComponentConfigOverridesKubeSchedulerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1204,7 +1204,7 @@ export function dataTfClusterVersionsClusterVersionsControlPlaneScalingTiersCont
 }
 
 
-export function dataTfClusterVersionsControlPlaneComponentConfigOverridesPropertyToTerraform(struct?: DataTfClusterVersions.ControlPlaneComponentConfigOverridesProperty): any {
+export function dataAwsClusterVersionsControlPlaneComponentConfigOverridesPropertyToTerraform(struct?: DataAwsClusterVersions.ControlPlaneComponentConfigOverridesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1214,7 +1214,7 @@ export function dataTfClusterVersionsControlPlaneComponentConfigOverridesPropert
 }
 
 
-export function dataTfClusterVersionsControlPlaneComponentConfigOverridesPropertyToHclTerraform(struct?: DataTfClusterVersions.ControlPlaneComponentConfigOverridesProperty): any {
+export function dataAwsClusterVersionsControlPlaneComponentConfigOverridesPropertyToHclTerraform(struct?: DataAwsClusterVersions.ControlPlaneComponentConfigOverridesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1225,7 +1225,7 @@ export function dataTfClusterVersionsControlPlaneComponentConfigOverridesPropert
 }
 
 
-export function dataTfClusterVersionsControlPlaneScalingTiersPropertyToTerraform(struct?: DataTfClusterVersions.ControlPlaneScalingTiersProperty): any {
+export function dataAwsClusterVersionsControlPlaneScalingTiersPropertyToTerraform(struct?: DataAwsClusterVersions.ControlPlaneScalingTiersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1235,7 +1235,7 @@ export function dataTfClusterVersionsControlPlaneScalingTiersPropertyToTerraform
 }
 
 
-export function dataTfClusterVersionsControlPlaneScalingTiersPropertyToHclTerraform(struct?: DataTfClusterVersions.ControlPlaneScalingTiersProperty): any {
+export function dataAwsClusterVersionsControlPlaneScalingTiersPropertyToHclTerraform(struct?: DataAwsClusterVersions.ControlPlaneScalingTiersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1246,7 +1246,7 @@ export function dataTfClusterVersionsControlPlaneScalingTiersPropertyToHclTerraf
 }
 
 
-export function dataTfClusterVersionsClusterVersionsPropertyToTerraform(struct?: DataTfClusterVersions.ClusterVersionsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsPropertyToTerraform(struct?: DataAwsClusterVersions.ClusterVersionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1256,7 +1256,7 @@ export function dataTfClusterVersionsClusterVersionsPropertyToTerraform(struct?:
 }
 
 
-export function dataTfClusterVersionsClusterVersionsPropertyToHclTerraform(struct?: DataTfClusterVersions.ClusterVersionsProperty): any {
+export function dataAwsClusterVersionsClusterVersionsPropertyToHclTerraform(struct?: DataAwsClusterVersions.ClusterVersionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1267,7 +1267,7 @@ export function dataTfClusterVersionsClusterVersionsPropertyToHclTerraform(struc
 }
 
 
-export namespace DataTfClusterVersions {
+export namespace DataAwsClusterVersions {
 export interface ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlConstraintsProperty {
 }
 export class ClusterVersionsControlPlaneComponentConfigKubeApiServerConfigEventTtlConstraintsPropertyOutputReference extends cdktn.ComplexObject {

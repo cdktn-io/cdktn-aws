@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPreferencesConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPreferencesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/costoptimizationhub_preferences#member_account_discount_visibility TfPreferences#member_account_discount_visibility}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/costoptimizationhub_preferences#member_account_discount_visibility AwsPreferences#member_account_discount_visibility}
   */
   readonly memberAccountDiscountVisibility?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/costoptimizationhub_preferences#savings_estimation_mode TfPreferences#savings_estimation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/costoptimizationhub_preferences#savings_estimation_mode AwsPreferences#savings_estimation_mode}
   */
   readonly savingsEstimationMode?: string;
 }
@@ -19,7 +19,7 @@ export interface TfPreferencesConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/costoptimizationhub_preferences aws_costoptimizationhub_preferences}
 */
-export class TfPreferences extends cdktn.TerraformResource {
+export class AwsPreferences extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class TfPreferences extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPreferences resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPreferences resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPreferences to import
-  * @param importFromId The id of the existing TfPreferences that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/costoptimizationhub_preferences#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPreferences to import is found
+  * @param importToId The construct id used in the generated config for the AwsPreferences to import
+  * @param importFromId The id of the existing AwsPreferences that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/costoptimizationhub_preferences#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPreferences to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_costoptimizationhub_preferences", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class TfPreferences extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPreferencesConfig = {}
+  * @param options AwsPreferencesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfPreferencesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsPreferencesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_costoptimizationhub_preferences',
       terraformGeneratorMetadata: {

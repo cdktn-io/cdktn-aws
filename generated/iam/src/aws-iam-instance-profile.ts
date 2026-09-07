@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfInstanceProfileConfig extends cdktn.TerraformMetaArguments {
+export interface AwsInstanceProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#id TfInstanceProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#id AwsInstanceProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#name TfInstanceProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#name AwsInstanceProfile#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#name_prefix TfInstanceProfile#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#name_prefix AwsInstanceProfile#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#path TfInstanceProfile#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#path AwsInstanceProfile#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#role TfInstanceProfile#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#role AwsInstanceProfile#role}
   */
   readonly role?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#tags TfInstanceProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#tags AwsInstanceProfile#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#tags_all TfInstanceProfile#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#tags_all AwsInstanceProfile#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -42,7 +42,7 @@ export interface TfInstanceProfileConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile aws_iam_instance_profile}
 */
-export class TfInstanceProfile extends cdktn.TerraformResource {
+export class AwsInstanceProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfInstanceProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfInstanceProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsInstanceProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfInstanceProfile to import
-  * @param importFromId The id of the existing TfInstanceProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfInstanceProfile to import is found
+  * @param importToId The construct id used in the generated config for the AwsInstanceProfile to import
+  * @param importFromId The id of the existing AwsInstanceProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_instance_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsInstanceProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_instance_profile", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfInstanceProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfInstanceProfileConfig = {}
+  * @param options AwsInstanceProfileConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfInstanceProfileConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsInstanceProfileConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_instance_profile',
       terraformGeneratorMetadata: {

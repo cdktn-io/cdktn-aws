@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfScalingPlanConfig extends cdktn.TerraformMetaArguments {
+export interface AwsScalingPlanConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#id TfScalingPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#id AwsScalingPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#name TfScalingPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#name AwsScalingPlan#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#region TfScalingPlan#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#region AwsScalingPlan#region}
   */
   readonly region?: string;
   /**
   * application_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#application_source TfScalingPlan#application_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#application_source AwsScalingPlan#application_source}
   */
-  readonly applicationSource: TfScalingPlan.ApplicationSourceProperty;
+  readonly applicationSource: AwsScalingPlan.ApplicationSourceProperty;
   /**
   * scaling_instruction block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#scaling_instruction TfScalingPlan#scaling_instruction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#scaling_instruction AwsScalingPlan#scaling_instruction}
   */
-  readonly scalingInstruction: TfScalingPlan.ScalingInstructionProperty[] | cdktn.IResolvable;
+  readonly scalingInstruction: AwsScalingPlan.ScalingInstructionProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan aws_autoscalingplans_scaling_plan}
 */
-export class TfScalingPlan extends cdktn.TerraformResource {
+export class AwsScalingPlan extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfScalingPlan extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfScalingPlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsScalingPlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfScalingPlan to import
-  * @param importFromId The id of the existing TfScalingPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfScalingPlan to import is found
+  * @param importToId The construct id used in the generated config for the AwsScalingPlan to import
+  * @param importFromId The id of the existing AwsScalingPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsScalingPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_autoscalingplans_scaling_plan", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfScalingPlan extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfScalingPlanConfig
+  * @param options AwsScalingPlanConfig
   */
-  public constructor(scope: Construct, id: string, config: TfScalingPlanConfig) {
+  public constructor(scope: Construct, id: string, config: AwsScalingPlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_autoscalingplans_scaling_plan',
       terraformGeneratorMetadata: {
@@ -150,11 +150,11 @@ export class TfScalingPlan extends cdktn.TerraformResource {
   }
 
   // application_source - computed: false, optional: false, required: true
-  private _applicationSource = new TfScalingPlan.ApplicationSourcePropertyOutputReference(this, "application_source");
+  private _applicationSource = new AwsScalingPlan.ApplicationSourcePropertyOutputReference(this, "application_source");
   public get applicationSource() {
     return this._applicationSource;
   }
-  public putApplicationSource(value: TfScalingPlan.ApplicationSourceProperty) {
+  public putApplicationSource(value: AwsScalingPlan.ApplicationSourceProperty) {
     this._applicationSource.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -163,11 +163,11 @@ export class TfScalingPlan extends cdktn.TerraformResource {
   }
 
   // scaling_instruction - computed: false, optional: false, required: true
-  private _scalingInstruction = new TfScalingPlan.ScalingInstructionPropertyList(this, "scaling_instruction", true);
+  private _scalingInstruction = new AwsScalingPlan.ScalingInstructionPropertyList(this, "scaling_instruction", true);
   public get scalingInstruction() {
     return this._scalingInstruction;
   }
-  public putScalingInstruction(value: TfScalingPlan.ScalingInstructionProperty[] | cdktn.IResolvable) {
+  public putScalingInstruction(value: AwsScalingPlan.ScalingInstructionProperty[] | cdktn.IResolvable) {
     this._scalingInstruction.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -184,8 +184,8 @@ export class TfScalingPlan extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      application_source: tfScalingPlanApplicationSourcePropertyToTerraform(this._applicationSource.internalValue),
-      scaling_instruction: cdktn.listMapper(tfScalingPlanScalingInstructionPropertyToTerraform, true)(this._scalingInstruction.internalValue),
+      application_source: awsScalingPlanApplicationSourcePropertyToTerraform(this._applicationSource.internalValue),
+      scaling_instruction: cdktn.listMapper(awsScalingPlanScalingInstructionPropertyToTerraform, true)(this._scalingInstruction.internalValue),
     };
   }
 
@@ -210,16 +210,16 @@ export class TfScalingPlan extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       application_source: {
-        value: tfScalingPlanApplicationSourcePropertyToHclTerraform(this._applicationSource.internalValue),
+        value: awsScalingPlanApplicationSourcePropertyToHclTerraform(this._applicationSource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfScalingPlan.ApplicationSourcePropertyList",
+        storageClassType: "AwsScalingPlan.ApplicationSourcePropertyList",
       },
       scaling_instruction: {
-        value: cdktn.listMapperHcl(tfScalingPlanScalingInstructionPropertyToHclTerraform, true)(this._scalingInstruction.internalValue),
+        value: cdktn.listMapperHcl(awsScalingPlanScalingInstructionPropertyToHclTerraform, true)(this._scalingInstruction.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfScalingPlan.ScalingInstructionPropertyList",
+        storageClassType: "AwsScalingPlan.ScalingInstructionPropertyList",
       },
     };
 
@@ -228,7 +228,7 @@ export class TfScalingPlan extends cdktn.TerraformResource {
   }
 }
 
-export function tfScalingPlanTagFilterPropertyToTerraform(struct?: TfScalingPlan.TagFilterProperty | cdktn.IResolvable): any {
+export function awsScalingPlanTagFilterPropertyToTerraform(struct?: AwsScalingPlan.TagFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,7 +240,7 @@ export function tfScalingPlanTagFilterPropertyToTerraform(struct?: TfScalingPlan
 }
 
 
-export function tfScalingPlanTagFilterPropertyToHclTerraform(struct?: TfScalingPlan.TagFilterProperty | cdktn.IResolvable): any {
+export function awsScalingPlanTagFilterPropertyToHclTerraform(struct?: AwsScalingPlan.TagFilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,19 +265,19 @@ export function tfScalingPlanTagFilterPropertyToHclTerraform(struct?: TfScalingP
 }
 
 
-export function tfScalingPlanApplicationSourcePropertyToTerraform(struct?: TfScalingPlan.ApplicationSourcePropertyOutputReference | TfScalingPlan.ApplicationSourceProperty): any {
+export function awsScalingPlanApplicationSourcePropertyToTerraform(struct?: AwsScalingPlan.ApplicationSourcePropertyOutputReference | AwsScalingPlan.ApplicationSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     cloudformation_stack_arn: cdktn.stringToTerraform(struct!.cloudformationStackArn),
-    tag_filter: cdktn.listMapper(tfScalingPlanTagFilterPropertyToTerraform, true)(struct!.tagFilter),
+    tag_filter: cdktn.listMapper(awsScalingPlanTagFilterPropertyToTerraform, true)(struct!.tagFilter),
   }
 }
 
 
-export function tfScalingPlanApplicationSourcePropertyToHclTerraform(struct?: TfScalingPlan.ApplicationSourcePropertyOutputReference | TfScalingPlan.ApplicationSourceProperty): any {
+export function awsScalingPlanApplicationSourcePropertyToHclTerraform(struct?: AwsScalingPlan.ApplicationSourcePropertyOutputReference | AwsScalingPlan.ApplicationSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function tfScalingPlanApplicationSourcePropertyToHclTerraform(struct?: Tf
       storageClassType: "string",
     },
     tag_filter: {
-      value: cdktn.listMapperHcl(tfScalingPlanTagFilterPropertyToHclTerraform, true)(struct!.tagFilter),
+      value: cdktn.listMapperHcl(awsScalingPlanTagFilterPropertyToHclTerraform, true)(struct!.tagFilter),
       isBlock: true,
       type: "set",
       storageClassType: "TagFilterPropertyList",
@@ -302,7 +302,7 @@ export function tfScalingPlanApplicationSourcePropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfScalingPlanCustomizedLoadMetricSpecificationPropertyToTerraform(struct?: TfScalingPlan.CustomizedLoadMetricSpecificationPropertyOutputReference | TfScalingPlan.CustomizedLoadMetricSpecificationProperty): any {
+export function awsScalingPlanCustomizedLoadMetricSpecificationPropertyToTerraform(struct?: AwsScalingPlan.CustomizedLoadMetricSpecificationPropertyOutputReference | AwsScalingPlan.CustomizedLoadMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function tfScalingPlanCustomizedLoadMetricSpecificationPropertyToTerrafor
 }
 
 
-export function tfScalingPlanCustomizedLoadMetricSpecificationPropertyToHclTerraform(struct?: TfScalingPlan.CustomizedLoadMetricSpecificationPropertyOutputReference | TfScalingPlan.CustomizedLoadMetricSpecificationProperty): any {
+export function awsScalingPlanCustomizedLoadMetricSpecificationPropertyToHclTerraform(struct?: AwsScalingPlan.CustomizedLoadMetricSpecificationPropertyOutputReference | AwsScalingPlan.CustomizedLoadMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function tfScalingPlanCustomizedLoadMetricSpecificationPropertyToHclTerra
 }
 
 
-export function tfScalingPlanPredefinedLoadMetricSpecificationPropertyToTerraform(struct?: TfScalingPlan.PredefinedLoadMetricSpecificationPropertyOutputReference | TfScalingPlan.PredefinedLoadMetricSpecificationProperty): any {
+export function awsScalingPlanPredefinedLoadMetricSpecificationPropertyToTerraform(struct?: AwsScalingPlan.PredefinedLoadMetricSpecificationPropertyOutputReference | AwsScalingPlan.PredefinedLoadMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,7 +372,7 @@ export function tfScalingPlanPredefinedLoadMetricSpecificationPropertyToTerrafor
 }
 
 
-export function tfScalingPlanPredefinedLoadMetricSpecificationPropertyToHclTerraform(struct?: TfScalingPlan.PredefinedLoadMetricSpecificationPropertyOutputReference | TfScalingPlan.PredefinedLoadMetricSpecificationProperty): any {
+export function awsScalingPlanPredefinedLoadMetricSpecificationPropertyToHclTerraform(struct?: AwsScalingPlan.PredefinedLoadMetricSpecificationPropertyOutputReference | AwsScalingPlan.PredefinedLoadMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,7 +397,7 @@ export function tfScalingPlanPredefinedLoadMetricSpecificationPropertyToHclTerra
 }
 
 
-export function tfScalingPlanCustomizedScalingMetricSpecificationPropertyToTerraform(struct?: TfScalingPlan.CustomizedScalingMetricSpecificationPropertyOutputReference | TfScalingPlan.CustomizedScalingMetricSpecificationProperty): any {
+export function awsScalingPlanCustomizedScalingMetricSpecificationPropertyToTerraform(struct?: AwsScalingPlan.CustomizedScalingMetricSpecificationPropertyOutputReference | AwsScalingPlan.CustomizedScalingMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function tfScalingPlanCustomizedScalingMetricSpecificationPropertyToTerra
 }
 
 
-export function tfScalingPlanCustomizedScalingMetricSpecificationPropertyToHclTerraform(struct?: TfScalingPlan.CustomizedScalingMetricSpecificationPropertyOutputReference | TfScalingPlan.CustomizedScalingMetricSpecificationProperty): any {
+export function awsScalingPlanCustomizedScalingMetricSpecificationPropertyToHclTerraform(struct?: AwsScalingPlan.CustomizedScalingMetricSpecificationPropertyOutputReference | AwsScalingPlan.CustomizedScalingMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,7 +455,7 @@ export function tfScalingPlanCustomizedScalingMetricSpecificationPropertyToHclTe
 }
 
 
-export function tfScalingPlanPredefinedScalingMetricSpecificationPropertyToTerraform(struct?: TfScalingPlan.PredefinedScalingMetricSpecificationPropertyOutputReference | TfScalingPlan.PredefinedScalingMetricSpecificationProperty): any {
+export function awsScalingPlanPredefinedScalingMetricSpecificationPropertyToTerraform(struct?: AwsScalingPlan.PredefinedScalingMetricSpecificationPropertyOutputReference | AwsScalingPlan.PredefinedScalingMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -467,7 +467,7 @@ export function tfScalingPlanPredefinedScalingMetricSpecificationPropertyToTerra
 }
 
 
-export function tfScalingPlanPredefinedScalingMetricSpecificationPropertyToHclTerraform(struct?: TfScalingPlan.PredefinedScalingMetricSpecificationPropertyOutputReference | TfScalingPlan.PredefinedScalingMetricSpecificationProperty): any {
+export function awsScalingPlanPredefinedScalingMetricSpecificationPropertyToHclTerraform(struct?: AwsScalingPlan.PredefinedScalingMetricSpecificationPropertyOutputReference | AwsScalingPlan.PredefinedScalingMetricSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -492,7 +492,7 @@ export function tfScalingPlanPredefinedScalingMetricSpecificationPropertyToHclTe
 }
 
 
-export function tfScalingPlanTargetTrackingConfigurationPropertyToTerraform(struct?: TfScalingPlan.TargetTrackingConfigurationProperty | cdktn.IResolvable): any {
+export function awsScalingPlanTargetTrackingConfigurationPropertyToTerraform(struct?: AwsScalingPlan.TargetTrackingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,13 +503,13 @@ export function tfScalingPlanTargetTrackingConfigurationPropertyToTerraform(stru
     scale_in_cooldown: cdktn.numberToTerraform(struct!.scaleInCooldown),
     scale_out_cooldown: cdktn.numberToTerraform(struct!.scaleOutCooldown),
     target_value: cdktn.numberToTerraform(struct!.targetValue),
-    customized_scaling_metric_specification: tfScalingPlanCustomizedScalingMetricSpecificationPropertyToTerraform(struct!.customizedScalingMetricSpecification),
-    predefined_scaling_metric_specification: tfScalingPlanPredefinedScalingMetricSpecificationPropertyToTerraform(struct!.predefinedScalingMetricSpecification),
+    customized_scaling_metric_specification: awsScalingPlanCustomizedScalingMetricSpecificationPropertyToTerraform(struct!.customizedScalingMetricSpecification),
+    predefined_scaling_metric_specification: awsScalingPlanPredefinedScalingMetricSpecificationPropertyToTerraform(struct!.predefinedScalingMetricSpecification),
   }
 }
 
 
-export function tfScalingPlanTargetTrackingConfigurationPropertyToHclTerraform(struct?: TfScalingPlan.TargetTrackingConfigurationProperty | cdktn.IResolvable): any {
+export function awsScalingPlanTargetTrackingConfigurationPropertyToHclTerraform(struct?: AwsScalingPlan.TargetTrackingConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,13 +546,13 @@ export function tfScalingPlanTargetTrackingConfigurationPropertyToHclTerraform(s
       storageClassType: "number",
     },
     customized_scaling_metric_specification: {
-      value: tfScalingPlanCustomizedScalingMetricSpecificationPropertyToHclTerraform(struct!.customizedScalingMetricSpecification),
+      value: awsScalingPlanCustomizedScalingMetricSpecificationPropertyToHclTerraform(struct!.customizedScalingMetricSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "CustomizedScalingMetricSpecificationPropertyList",
     },
     predefined_scaling_metric_specification: {
-      value: tfScalingPlanPredefinedScalingMetricSpecificationPropertyToHclTerraform(struct!.predefinedScalingMetricSpecification),
+      value: awsScalingPlanPredefinedScalingMetricSpecificationPropertyToHclTerraform(struct!.predefinedScalingMetricSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "PredefinedScalingMetricSpecificationPropertyList",
@@ -564,7 +564,7 @@ export function tfScalingPlanTargetTrackingConfigurationPropertyToHclTerraform(s
 }
 
 
-export function tfScalingPlanScalingInstructionPropertyToTerraform(struct?: TfScalingPlan.ScalingInstructionProperty | cdktn.IResolvable): any {
+export function awsScalingPlanScalingInstructionPropertyToTerraform(struct?: AwsScalingPlan.ScalingInstructionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -581,14 +581,14 @@ export function tfScalingPlanScalingInstructionPropertyToTerraform(struct?: TfSc
     scaling_policy_update_behavior: cdktn.stringToTerraform(struct!.scalingPolicyUpdateBehavior),
     scheduled_action_buffer_time: cdktn.numberToTerraform(struct!.scheduledActionBufferTime),
     service_namespace: cdktn.stringToTerraform(struct!.serviceNamespace),
-    customized_load_metric_specification: tfScalingPlanCustomizedLoadMetricSpecificationPropertyToTerraform(struct!.customizedLoadMetricSpecification),
-    predefined_load_metric_specification: tfScalingPlanPredefinedLoadMetricSpecificationPropertyToTerraform(struct!.predefinedLoadMetricSpecification),
-    target_tracking_configuration: cdktn.listMapper(tfScalingPlanTargetTrackingConfigurationPropertyToTerraform, true)(struct!.targetTrackingConfiguration),
+    customized_load_metric_specification: awsScalingPlanCustomizedLoadMetricSpecificationPropertyToTerraform(struct!.customizedLoadMetricSpecification),
+    predefined_load_metric_specification: awsScalingPlanPredefinedLoadMetricSpecificationPropertyToTerraform(struct!.predefinedLoadMetricSpecification),
+    target_tracking_configuration: cdktn.listMapper(awsScalingPlanTargetTrackingConfigurationPropertyToTerraform, true)(struct!.targetTrackingConfiguration),
   }
 }
 
 
-export function tfScalingPlanScalingInstructionPropertyToHclTerraform(struct?: TfScalingPlan.ScalingInstructionProperty | cdktn.IResolvable): any {
+export function awsScalingPlanScalingInstructionPropertyToHclTerraform(struct?: AwsScalingPlan.ScalingInstructionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -661,19 +661,19 @@ export function tfScalingPlanScalingInstructionPropertyToHclTerraform(struct?: T
       storageClassType: "string",
     },
     customized_load_metric_specification: {
-      value: tfScalingPlanCustomizedLoadMetricSpecificationPropertyToHclTerraform(struct!.customizedLoadMetricSpecification),
+      value: awsScalingPlanCustomizedLoadMetricSpecificationPropertyToHclTerraform(struct!.customizedLoadMetricSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "CustomizedLoadMetricSpecificationPropertyList",
     },
     predefined_load_metric_specification: {
-      value: tfScalingPlanPredefinedLoadMetricSpecificationPropertyToHclTerraform(struct!.predefinedLoadMetricSpecification),
+      value: awsScalingPlanPredefinedLoadMetricSpecificationPropertyToHclTerraform(struct!.predefinedLoadMetricSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "PredefinedLoadMetricSpecificationPropertyList",
     },
     target_tracking_configuration: {
-      value: cdktn.listMapperHcl(tfScalingPlanTargetTrackingConfigurationPropertyToHclTerraform, true)(struct!.targetTrackingConfiguration),
+      value: cdktn.listMapperHcl(awsScalingPlanTargetTrackingConfigurationPropertyToHclTerraform, true)(struct!.targetTrackingConfiguration),
       isBlock: true,
       type: "set",
       storageClassType: "TargetTrackingConfigurationPropertyList",
@@ -685,14 +685,14 @@ export function tfScalingPlanScalingInstructionPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfScalingPlan {
+export namespace AwsScalingPlan {
 export interface TagFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#key TfScalingPlan#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#key AwsScalingPlan#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#values TfScalingPlan#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#values AwsScalingPlan#values}
   */
   readonly values?: string[];
 }
@@ -797,13 +797,13 @@ export class TagFilterPropertyList extends cdktn.ComplexList {
 }
 export interface ApplicationSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#cloudformation_stack_arn TfScalingPlan#cloudformation_stack_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#cloudformation_stack_arn AwsScalingPlan#cloudformation_stack_arn}
   */
   readonly cloudformationStackArn?: string;
   /**
   * tag_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#tag_filter TfScalingPlan#tag_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#tag_filter AwsScalingPlan#tag_filter}
   */
   readonly tagFilter?: TagFilterProperty[] | cdktn.IResolvable;
 }
@@ -879,23 +879,23 @@ export class ApplicationSourcePropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface CustomizedLoadMetricSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#dimensions TfScalingPlan#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#dimensions AwsScalingPlan#dimensions}
   */
   readonly dimensions?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#metric_name TfScalingPlan#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#metric_name AwsScalingPlan#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#namespace TfScalingPlan#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#namespace AwsScalingPlan#namespace}
   */
   readonly namespace: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#statistic TfScalingPlan#statistic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#statistic AwsScalingPlan#statistic}
   */
   readonly statistic: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#unit TfScalingPlan#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#unit AwsScalingPlan#unit}
   */
   readonly unit?: string;
 }
@@ -1028,11 +1028,11 @@ export class CustomizedLoadMetricSpecificationPropertyOutputReference extends cd
 }
 export interface PredefinedLoadMetricSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predefined_load_metric_type TfScalingPlan#predefined_load_metric_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predefined_load_metric_type AwsScalingPlan#predefined_load_metric_type}
   */
   readonly predefinedLoadMetricType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#resource_label TfScalingPlan#resource_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#resource_label AwsScalingPlan#resource_label}
   */
   readonly resourceLabel?: string;
 }
@@ -1105,23 +1105,23 @@ export class PredefinedLoadMetricSpecificationPropertyOutputReference extends cd
 }
 export interface CustomizedScalingMetricSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#dimensions TfScalingPlan#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#dimensions AwsScalingPlan#dimensions}
   */
   readonly dimensions?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#metric_name TfScalingPlan#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#metric_name AwsScalingPlan#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#namespace TfScalingPlan#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#namespace AwsScalingPlan#namespace}
   */
   readonly namespace: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#statistic TfScalingPlan#statistic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#statistic AwsScalingPlan#statistic}
   */
   readonly statistic: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#unit TfScalingPlan#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#unit AwsScalingPlan#unit}
   */
   readonly unit?: string;
 }
@@ -1254,11 +1254,11 @@ export class CustomizedScalingMetricSpecificationPropertyOutputReference extends
 }
 export interface PredefinedScalingMetricSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predefined_scaling_metric_type TfScalingPlan#predefined_scaling_metric_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predefined_scaling_metric_type AwsScalingPlan#predefined_scaling_metric_type}
   */
   readonly predefinedScalingMetricType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#resource_label TfScalingPlan#resource_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#resource_label AwsScalingPlan#resource_label}
   */
   readonly resourceLabel?: string;
 }
@@ -1331,35 +1331,35 @@ export class PredefinedScalingMetricSpecificationPropertyOutputReference extends
 }
 export interface TargetTrackingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#disable_scale_in TfScalingPlan#disable_scale_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#disable_scale_in AwsScalingPlan#disable_scale_in}
   */
   readonly disableScaleIn?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#estimated_instance_warmup TfScalingPlan#estimated_instance_warmup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#estimated_instance_warmup AwsScalingPlan#estimated_instance_warmup}
   */
   readonly estimatedInstanceWarmup?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#scale_in_cooldown TfScalingPlan#scale_in_cooldown}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#scale_in_cooldown AwsScalingPlan#scale_in_cooldown}
   */
   readonly scaleInCooldown?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#scale_out_cooldown TfScalingPlan#scale_out_cooldown}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#scale_out_cooldown AwsScalingPlan#scale_out_cooldown}
   */
   readonly scaleOutCooldown?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#target_value TfScalingPlan#target_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#target_value AwsScalingPlan#target_value}
   */
   readonly targetValue: number;
   /**
   * customized_scaling_metric_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#customized_scaling_metric_specification TfScalingPlan#customized_scaling_metric_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#customized_scaling_metric_specification AwsScalingPlan#customized_scaling_metric_specification}
   */
   readonly customizedScalingMetricSpecification?: CustomizedScalingMetricSpecificationProperty;
   /**
   * predefined_scaling_metric_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predefined_scaling_metric_specification TfScalingPlan#predefined_scaling_metric_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predefined_scaling_metric_specification AwsScalingPlan#predefined_scaling_metric_specification}
   */
   readonly predefinedScalingMetricSpecification?: PredefinedScalingMetricSpecificationProperty;
 }
@@ -1574,65 +1574,65 @@ export class TargetTrackingConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ScalingInstructionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#disable_dynamic_scaling TfScalingPlan#disable_dynamic_scaling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#disable_dynamic_scaling AwsScalingPlan#disable_dynamic_scaling}
   */
   readonly disableDynamicScaling?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#max_capacity TfScalingPlan#max_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#max_capacity AwsScalingPlan#max_capacity}
   */
   readonly maxCapacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#min_capacity TfScalingPlan#min_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#min_capacity AwsScalingPlan#min_capacity}
   */
   readonly minCapacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predictive_scaling_max_capacity_behavior TfScalingPlan#predictive_scaling_max_capacity_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predictive_scaling_max_capacity_behavior AwsScalingPlan#predictive_scaling_max_capacity_behavior}
   */
   readonly predictiveScalingMaxCapacityBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predictive_scaling_max_capacity_buffer TfScalingPlan#predictive_scaling_max_capacity_buffer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predictive_scaling_max_capacity_buffer AwsScalingPlan#predictive_scaling_max_capacity_buffer}
   */
   readonly predictiveScalingMaxCapacityBuffer?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predictive_scaling_mode TfScalingPlan#predictive_scaling_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predictive_scaling_mode AwsScalingPlan#predictive_scaling_mode}
   */
   readonly predictiveScalingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#resource_id TfScalingPlan#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#resource_id AwsScalingPlan#resource_id}
   */
   readonly resourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#scalable_dimension TfScalingPlan#scalable_dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#scalable_dimension AwsScalingPlan#scalable_dimension}
   */
   readonly scalableDimension: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#scaling_policy_update_behavior TfScalingPlan#scaling_policy_update_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#scaling_policy_update_behavior AwsScalingPlan#scaling_policy_update_behavior}
   */
   readonly scalingPolicyUpdateBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#scheduled_action_buffer_time TfScalingPlan#scheduled_action_buffer_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#scheduled_action_buffer_time AwsScalingPlan#scheduled_action_buffer_time}
   */
   readonly scheduledActionBufferTime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#service_namespace TfScalingPlan#service_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#service_namespace AwsScalingPlan#service_namespace}
   */
   readonly serviceNamespace: string;
   /**
   * customized_load_metric_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#customized_load_metric_specification TfScalingPlan#customized_load_metric_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#customized_load_metric_specification AwsScalingPlan#customized_load_metric_specification}
   */
   readonly customizedLoadMetricSpecification?: CustomizedLoadMetricSpecificationProperty;
   /**
   * predefined_load_metric_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predefined_load_metric_specification TfScalingPlan#predefined_load_metric_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#predefined_load_metric_specification AwsScalingPlan#predefined_load_metric_specification}
   */
   readonly predefinedLoadMetricSpecification?: PredefinedLoadMetricSpecificationProperty;
   /**
   * target_tracking_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#target_tracking_configuration TfScalingPlan#target_tracking_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/autoscalingplans_scaling_plan#target_tracking_configuration AwsScalingPlan#target_tracking_configuration}
   */
   readonly targetTrackingConfiguration: TargetTrackingConfigurationProperty[] | cdktn.IResolvable;
 }

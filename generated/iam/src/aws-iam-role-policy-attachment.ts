@@ -5,20 +5,20 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRolePolicyAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRolePolicyAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachment#id TfRolePolicyAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachment#id AwsRolePolicyAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachment#policy_arn TfRolePolicyAttachment#policy_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachment#policy_arn AwsRolePolicyAttachment#policy_arn}
   */
   readonly policyArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachment#role TfRolePolicyAttachment#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachment#role AwsRolePolicyAttachment#role}
   */
   readonly role: string;
 }
@@ -26,7 +26,7 @@ export interface TfRolePolicyAttachmentConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachment aws_iam_role_policy_attachment}
 */
-export class TfRolePolicyAttachment extends cdktn.TerraformResource {
+export class AwsRolePolicyAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -37,11 +37,11 @@ export class TfRolePolicyAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRolePolicyAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRolePolicyAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRolePolicyAttachment to import
-  * @param importFromId The id of the existing TfRolePolicyAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRolePolicyAttachment to import is found
+  * @param importToId The construct id used in the generated config for the AwsRolePolicyAttachment to import
+  * @param importFromId The id of the existing AwsRolePolicyAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role_policy_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRolePolicyAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_role_policy_attachment", importId: importFromId, provider });
@@ -56,9 +56,9 @@ export class TfRolePolicyAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRolePolicyAttachmentConfig
+  * @param options AwsRolePolicyAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRolePolicyAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRolePolicyAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_role_policy_attachment',
       terraformGeneratorMetadata: {

@@ -5,35 +5,35 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConnectionFunctionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConnectionFunctionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#connection_function_code TfConnectionFunction#connection_function_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#connection_function_code AwsConnectionFunction#connection_function_code}
   */
   readonly connectionFunctionCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#name TfConnectionFunction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#name AwsConnectionFunction#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#publish TfConnectionFunction#publish}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#publish AwsConnectionFunction#publish}
   */
   readonly publish?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#tags TfConnectionFunction#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#tags AwsConnectionFunction#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * connection_function_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#connection_function_config TfConnectionFunction#connection_function_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#connection_function_config AwsConnectionFunction#connection_function_config}
   */
-  readonly connectionFunctionConfig?: TfConnectionFunction.ConnectionFunctionConfigProperty[] | cdktn.IResolvable;
+  readonly connectionFunctionConfig?: AwsConnectionFunction.ConnectionFunctionConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function aws_cloudfront_connection_function}
 */
-export class TfConnectionFunction extends cdktn.TerraformResource {
+export class AwsConnectionFunction extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfConnectionFunction extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConnectionFunction resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConnectionFunction resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConnectionFunction to import
-  * @param importFromId The id of the existing TfConnectionFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConnectionFunction to import is found
+  * @param importToId The construct id used in the generated config for the AwsConnectionFunction to import
+  * @param importFromId The id of the existing AwsConnectionFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConnectionFunction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_connection_function", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfConnectionFunction extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConnectionFunctionConfig
+  * @param options AwsConnectionFunctionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConnectionFunctionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConnectionFunctionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_connection_function',
       terraformGeneratorMetadata: {
@@ -182,11 +182,11 @@ export class TfConnectionFunction extends cdktn.TerraformResource {
   }
 
   // connection_function_config - computed: false, optional: true, required: false
-  private _connectionFunctionConfig = new TfConnectionFunction.ConnectionFunctionConfigPropertyList(this, "connection_function_config", false);
+  private _connectionFunctionConfig = new AwsConnectionFunction.ConnectionFunctionConfigPropertyList(this, "connection_function_config", false);
   public get connectionFunctionConfig() {
     return this._connectionFunctionConfig;
   }
-  public putConnectionFunctionConfig(value: TfConnectionFunction.ConnectionFunctionConfigProperty[] | cdktn.IResolvable) {
+  public putConnectionFunctionConfig(value: AwsConnectionFunction.ConnectionFunctionConfigProperty[] | cdktn.IResolvable) {
     this._connectionFunctionConfig.internalValue = value;
   }
   public resetConnectionFunctionConfig() {
@@ -207,7 +207,7 @@ export class TfConnectionFunction extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       publish: cdktn.booleanToTerraform(this._publish),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      connection_function_config: cdktn.listMapper(tfConnectionFunctionConnectionFunctionConfigPropertyToTerraform, true)(this._connectionFunctionConfig.internalValue),
+      connection_function_config: cdktn.listMapper(awsConnectionFunctionConnectionFunctionConfigPropertyToTerraform, true)(this._connectionFunctionConfig.internalValue),
     };
   }
 
@@ -238,10 +238,10 @@ export class TfConnectionFunction extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       connection_function_config: {
-        value: cdktn.listMapperHcl(tfConnectionFunctionConnectionFunctionConfigPropertyToHclTerraform, true)(this._connectionFunctionConfig.internalValue),
+        value: cdktn.listMapperHcl(awsConnectionFunctionConnectionFunctionConfigPropertyToHclTerraform, true)(this._connectionFunctionConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConnectionFunction.ConnectionFunctionConfigPropertyList",
+        storageClassType: "AwsConnectionFunction.ConnectionFunctionConfigPropertyList",
       },
     };
 
@@ -250,7 +250,7 @@ export class TfConnectionFunction extends cdktn.TerraformResource {
   }
 }
 
-export function tfConnectionFunctionKeyValueStoreAssociationPropertyToTerraform(struct?: TfConnectionFunction.KeyValueStoreAssociationProperty | cdktn.IResolvable): any {
+export function awsConnectionFunctionKeyValueStoreAssociationPropertyToTerraform(struct?: AwsConnectionFunction.KeyValueStoreAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function tfConnectionFunctionKeyValueStoreAssociationPropertyToTerraform(
 }
 
 
-export function tfConnectionFunctionKeyValueStoreAssociationPropertyToHclTerraform(struct?: TfConnectionFunction.KeyValueStoreAssociationProperty | cdktn.IResolvable): any {
+export function awsConnectionFunctionKeyValueStoreAssociationPropertyToHclTerraform(struct?: AwsConnectionFunction.KeyValueStoreAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function tfConnectionFunctionKeyValueStoreAssociationPropertyToHclTerrafo
 }
 
 
-export function tfConnectionFunctionConnectionFunctionConfigPropertyToTerraform(struct?: TfConnectionFunction.ConnectionFunctionConfigProperty | cdktn.IResolvable): any {
+export function awsConnectionFunctionConnectionFunctionConfigPropertyToTerraform(struct?: AwsConnectionFunction.ConnectionFunctionConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,12 +288,12 @@ export function tfConnectionFunctionConnectionFunctionConfigPropertyToTerraform(
   return {
     comment: cdktn.stringToTerraform(struct!.comment),
     runtime: cdktn.stringToTerraform(struct!.runtime),
-    key_value_store_association: cdktn.listMapper(tfConnectionFunctionKeyValueStoreAssociationPropertyToTerraform, true)(struct!.keyValueStoreAssociation),
+    key_value_store_association: cdktn.listMapper(awsConnectionFunctionKeyValueStoreAssociationPropertyToTerraform, true)(struct!.keyValueStoreAssociation),
   }
 }
 
 
-export function tfConnectionFunctionConnectionFunctionConfigPropertyToHclTerraform(struct?: TfConnectionFunction.ConnectionFunctionConfigProperty | cdktn.IResolvable): any {
+export function awsConnectionFunctionConnectionFunctionConfigPropertyToHclTerraform(struct?: AwsConnectionFunction.ConnectionFunctionConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function tfConnectionFunctionConnectionFunctionConfigPropertyToHclTerrafo
       storageClassType: "string",
     },
     key_value_store_association: {
-      value: cdktn.listMapperHcl(tfConnectionFunctionKeyValueStoreAssociationPropertyToHclTerraform, true)(struct!.keyValueStoreAssociation),
+      value: cdktn.listMapperHcl(awsConnectionFunctionKeyValueStoreAssociationPropertyToHclTerraform, true)(struct!.keyValueStoreAssociation),
       isBlock: true,
       type: "list",
       storageClassType: "KeyValueStoreAssociationPropertyList",
@@ -324,10 +324,10 @@ export function tfConnectionFunctionConnectionFunctionConfigPropertyToHclTerrafo
 }
 
 
-export namespace TfConnectionFunction {
+export namespace AwsConnectionFunction {
 export interface KeyValueStoreAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#key_value_store_arn TfConnectionFunction#key_value_store_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#key_value_store_arn AwsConnectionFunction#key_value_store_arn}
   */
   readonly keyValueStoreArn: string;
 }
@@ -410,17 +410,17 @@ export class KeyValueStoreAssociationPropertyList extends cdktn.ComplexList {
 }
 export interface ConnectionFunctionConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#comment TfConnectionFunction#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#comment AwsConnectionFunction#comment}
   */
   readonly comment: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#runtime TfConnectionFunction#runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#runtime AwsConnectionFunction#runtime}
   */
   readonly runtime: string;
   /**
   * key_value_store_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#key_value_store_association TfConnectionFunction#key_value_store_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_connection_function#key_value_store_association AwsConnectionFunction#key_value_store_association}
   */
   readonly keyValueStoreAssociation?: KeyValueStoreAssociationProperty[] | cdktn.IResolvable;
 }

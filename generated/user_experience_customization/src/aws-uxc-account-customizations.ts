@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAccountCustomizationsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAccountCustomizationsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/uxc_account_customizations#account_color TfAccountCustomizations#account_color}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/uxc_account_customizations#account_color AwsAccountCustomizations#account_color}
   */
   readonly accountColor?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/uxc_account_customizations#visible_regions TfAccountCustomizations#visible_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/uxc_account_customizations#visible_regions AwsAccountCustomizations#visible_regions}
   */
   readonly visibleRegions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/uxc_account_customizations#visible_services TfAccountCustomizations#visible_services}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/uxc_account_customizations#visible_services AwsAccountCustomizations#visible_services}
   */
   readonly visibleServices?: string[];
 }
@@ -23,7 +23,7 @@ export interface TfAccountCustomizationsConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/uxc_account_customizations aws_uxc_account_customizations}
 */
-export class TfAccountCustomizations extends cdktn.TerraformResource {
+export class AwsAccountCustomizations extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class TfAccountCustomizations extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAccountCustomizations resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAccountCustomizations resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAccountCustomizations to import
-  * @param importFromId The id of the existing TfAccountCustomizations that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/uxc_account_customizations#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAccountCustomizations to import is found
+  * @param importToId The construct id used in the generated config for the AwsAccountCustomizations to import
+  * @param importFromId The id of the existing AwsAccountCustomizations that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/uxc_account_customizations#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAccountCustomizations to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_uxc_account_customizations", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class TfAccountCustomizations extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAccountCustomizationsConfig = {}
+  * @param options AwsAccountCustomizationsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfAccountCustomizationsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsAccountCustomizationsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_uxc_account_customizations',
       terraformGeneratorMetadata: {

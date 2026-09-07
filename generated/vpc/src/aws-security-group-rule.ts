@@ -5,76 +5,76 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSecurityGroupRuleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSecurityGroupRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#cidr_blocks TfSecurityGroupRule#cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#cidr_blocks AwsSecurityGroupRule#cidr_blocks}
   */
   readonly cidrBlocks?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#description TfSecurityGroupRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#description AwsSecurityGroupRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#from_port TfSecurityGroupRule#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#from_port AwsSecurityGroupRule#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#id TfSecurityGroupRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#id AwsSecurityGroupRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#ipv6_cidr_blocks TfSecurityGroupRule#ipv6_cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#ipv6_cidr_blocks AwsSecurityGroupRule#ipv6_cidr_blocks}
   */
   readonly ipv6CidrBlocks?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#prefix_list_ids TfSecurityGroupRule#prefix_list_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#prefix_list_ids AwsSecurityGroupRule#prefix_list_ids}
   */
   readonly prefixListIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#protocol TfSecurityGroupRule#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#protocol AwsSecurityGroupRule#protocol}
   */
   readonly protocol: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#region TfSecurityGroupRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#region AwsSecurityGroupRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#security_group_id TfSecurityGroupRule#security_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#security_group_id AwsSecurityGroupRule#security_group_id}
   */
   readonly securityGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#self TfSecurityGroupRule#self}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#self AwsSecurityGroupRule#self}
   */
   readonly selfAttribute?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#source_security_group_id TfSecurityGroupRule#source_security_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#source_security_group_id AwsSecurityGroupRule#source_security_group_id}
   */
   readonly sourceSecurityGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#to_port TfSecurityGroupRule#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#to_port AwsSecurityGroupRule#to_port}
   */
   readonly toPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#type TfSecurityGroupRule#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#type AwsSecurityGroupRule#type}
   */
   readonly type: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#timeouts TfSecurityGroupRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#timeouts AwsSecurityGroupRule#timeouts}
   */
-  readonly timeouts?: TfSecurityGroupRule.TimeoutsProperty;
+  readonly timeouts?: AwsSecurityGroupRule.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule aws_security_group_rule}
 */
-export class TfSecurityGroupRule extends cdktn.TerraformResource {
+export class AwsSecurityGroupRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -85,11 +85,11 @@ export class TfSecurityGroupRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSecurityGroupRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSecurityGroupRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSecurityGroupRule to import
-  * @param importFromId The id of the existing TfSecurityGroupRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSecurityGroupRule to import is found
+  * @param importToId The construct id used in the generated config for the AwsSecurityGroupRule to import
+  * @param importFromId The id of the existing AwsSecurityGroupRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSecurityGroupRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_security_group_rule", importId: importFromId, provider });
@@ -104,9 +104,9 @@ export class TfSecurityGroupRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSecurityGroupRuleConfig
+  * @param options AwsSecurityGroupRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSecurityGroupRuleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSecurityGroupRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_security_group_rule',
       terraformGeneratorMetadata: {
@@ -341,11 +341,11 @@ export class TfSecurityGroupRule extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfSecurityGroupRule.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsSecurityGroupRule.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfSecurityGroupRule.TimeoutsProperty) {
+  public putTimeouts(value: AwsSecurityGroupRule.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -375,7 +375,7 @@ export class TfSecurityGroupRule extends cdktn.TerraformResource {
       source_security_group_id: cdktn.stringToTerraform(this._sourceSecurityGroupId),
       to_port: cdktn.numberToTerraform(this._toPort),
       type: cdktn.stringToTerraform(this._type),
-      timeouts: tfSecurityGroupRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsSecurityGroupRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -460,10 +460,10 @@ export class TfSecurityGroupRule extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfSecurityGroupRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsSecurityGroupRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfSecurityGroupRule.TimeoutsProperty",
+        storageClassType: "AwsSecurityGroupRule.TimeoutsProperty",
       },
     };
 
@@ -472,7 +472,7 @@ export class TfSecurityGroupRule extends cdktn.TerraformResource {
   }
 }
 
-export function tfSecurityGroupRuleTimeoutsPropertyToTerraform(struct?: TfSecurityGroupRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSecurityGroupRuleTimeoutsPropertyToTerraform(struct?: AwsSecurityGroupRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function tfSecurityGroupRuleTimeoutsPropertyToTerraform(struct?: TfSecuri
 }
 
 
-export function tfSecurityGroupRuleTimeoutsPropertyToHclTerraform(struct?: TfSecurityGroupRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSecurityGroupRuleTimeoutsPropertyToHclTerraform(struct?: AwsSecurityGroupRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,10 +502,10 @@ export function tfSecurityGroupRuleTimeoutsPropertyToHclTerraform(struct?: TfSec
 }
 
 
-export namespace TfSecurityGroupRule {
+export namespace AwsSecurityGroupRule {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#create TfSecurityGroupRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group_rule#create AwsSecurityGroupRule#create}
   */
   readonly create?: string;
 }

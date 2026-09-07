@@ -5,67 +5,67 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfOnlineEvaluationConfigConfig extends cdktn.TerraformMetaArguments {
+export interface AwsOnlineEvaluationConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#description TfOnlineEvaluationConfig#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#description AwsOnlineEvaluationConfig#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#enable_on_create TfOnlineEvaluationConfig#enable_on_create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#enable_on_create AwsOnlineEvaluationConfig#enable_on_create}
   */
   readonly enableOnCreate: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#evaluation_execution_role_arn TfOnlineEvaluationConfig#evaluation_execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#evaluation_execution_role_arn AwsOnlineEvaluationConfig#evaluation_execution_role_arn}
   */
   readonly evaluationExecutionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#execution_status TfOnlineEvaluationConfig#execution_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#execution_status AwsOnlineEvaluationConfig#execution_status}
   */
   readonly executionStatus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#online_evaluation_config_name TfOnlineEvaluationConfig#online_evaluation_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#online_evaluation_config_name AwsOnlineEvaluationConfig#online_evaluation_config_name}
   */
   readonly onlineEvaluationConfigName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#region TfOnlineEvaluationConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#region AwsOnlineEvaluationConfig#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#tags TfOnlineEvaluationConfig#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#tags AwsOnlineEvaluationConfig#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * data_source_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#data_source_config TfOnlineEvaluationConfig#data_source_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#data_source_config AwsOnlineEvaluationConfig#data_source_config}
   */
-  readonly dataSourceConfig?: TfOnlineEvaluationConfig.DataSourceConfigProperty[] | cdktn.IResolvable;
+  readonly dataSourceConfig?: AwsOnlineEvaluationConfig.DataSourceConfigProperty[] | cdktn.IResolvable;
   /**
   * evaluator block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#evaluator TfOnlineEvaluationConfig#evaluator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#evaluator AwsOnlineEvaluationConfig#evaluator}
   */
-  readonly evaluator?: TfOnlineEvaluationConfig.EvaluatorProperty[] | cdktn.IResolvable;
+  readonly evaluator?: AwsOnlineEvaluationConfig.EvaluatorProperty[] | cdktn.IResolvable;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#rule TfOnlineEvaluationConfig#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#rule AwsOnlineEvaluationConfig#rule}
   */
-  readonly rule?: TfOnlineEvaluationConfig.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: AwsOnlineEvaluationConfig.RuleProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#timeouts TfOnlineEvaluationConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#timeouts AwsOnlineEvaluationConfig#timeouts}
   */
-  readonly timeouts?: TfOnlineEvaluationConfig.TimeoutsProperty;
+  readonly timeouts?: AwsOnlineEvaluationConfig.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config aws_bedrockagentcore_online_evaluation_config}
 */
-export class TfOnlineEvaluationConfig extends cdktn.TerraformResource {
+export class AwsOnlineEvaluationConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -76,11 +76,11 @@ export class TfOnlineEvaluationConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfOnlineEvaluationConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsOnlineEvaluationConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfOnlineEvaluationConfig to import
-  * @param importFromId The id of the existing TfOnlineEvaluationConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfOnlineEvaluationConfig to import is found
+  * @param importToId The construct id used in the generated config for the AwsOnlineEvaluationConfig to import
+  * @param importFromId The id of the existing AwsOnlineEvaluationConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOnlineEvaluationConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_online_evaluation_config", importId: importFromId, provider });
@@ -95,9 +95,9 @@ export class TfOnlineEvaluationConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfOnlineEvaluationConfigConfig
+  * @param options AwsOnlineEvaluationConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: TfOnlineEvaluationConfigConfig) {
+  public constructor(scope: Construct, id: string, config: AwsOnlineEvaluationConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_online_evaluation_config',
       terraformGeneratorMetadata: {
@@ -212,7 +212,7 @@ export class TfOnlineEvaluationConfig extends cdktn.TerraformResource {
   }
 
   // output_config - computed: true, optional: false, required: false
-  private _outputConfig = new TfOnlineEvaluationConfig.OutputConfigPropertyList(this, "output_config", false);
+  private _outputConfig = new AwsOnlineEvaluationConfig.OutputConfigPropertyList(this, "output_config", false);
   public get outputConfig() {
     return this._outputConfig;
   }
@@ -256,11 +256,11 @@ export class TfOnlineEvaluationConfig extends cdktn.TerraformResource {
   }
 
   // data_source_config - computed: false, optional: true, required: false
-  private _dataSourceConfig = new TfOnlineEvaluationConfig.DataSourceConfigPropertyList(this, "data_source_config", false);
+  private _dataSourceConfig = new AwsOnlineEvaluationConfig.DataSourceConfigPropertyList(this, "data_source_config", false);
   public get dataSourceConfig() {
     return this._dataSourceConfig;
   }
-  public putDataSourceConfig(value: TfOnlineEvaluationConfig.DataSourceConfigProperty[] | cdktn.IResolvable) {
+  public putDataSourceConfig(value: AwsOnlineEvaluationConfig.DataSourceConfigProperty[] | cdktn.IResolvable) {
     this._dataSourceConfig.internalValue = value;
   }
   public resetDataSourceConfig() {
@@ -272,11 +272,11 @@ export class TfOnlineEvaluationConfig extends cdktn.TerraformResource {
   }
 
   // evaluator - computed: false, optional: true, required: false
-  private _evaluator = new TfOnlineEvaluationConfig.EvaluatorPropertyList(this, "evaluator", true);
+  private _evaluator = new AwsOnlineEvaluationConfig.EvaluatorPropertyList(this, "evaluator", true);
   public get evaluator() {
     return this._evaluator;
   }
-  public putEvaluator(value: TfOnlineEvaluationConfig.EvaluatorProperty[] | cdktn.IResolvable) {
+  public putEvaluator(value: AwsOnlineEvaluationConfig.EvaluatorProperty[] | cdktn.IResolvable) {
     this._evaluator.internalValue = value;
   }
   public resetEvaluator() {
@@ -288,11 +288,11 @@ export class TfOnlineEvaluationConfig extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new TfOnlineEvaluationConfig.RulePropertyList(this, "rule", false);
+  private _rule = new AwsOnlineEvaluationConfig.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: TfOnlineEvaluationConfig.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: AwsOnlineEvaluationConfig.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -304,11 +304,11 @@ export class TfOnlineEvaluationConfig extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfOnlineEvaluationConfig.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsOnlineEvaluationConfig.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfOnlineEvaluationConfig.TimeoutsProperty) {
+  public putTimeouts(value: AwsOnlineEvaluationConfig.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -332,10 +332,10 @@ export class TfOnlineEvaluationConfig extends cdktn.TerraformResource {
       online_evaluation_config_name: cdktn.stringToTerraform(this._onlineEvaluationConfigName),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      data_source_config: cdktn.listMapper(tfOnlineEvaluationConfigDataSourceConfigPropertyToTerraform, true)(this._dataSourceConfig.internalValue),
-      evaluator: cdktn.listMapper(tfOnlineEvaluationConfigEvaluatorPropertyToTerraform, true)(this._evaluator.internalValue),
-      rule: cdktn.listMapper(tfOnlineEvaluationConfigRulePropertyToTerraform, true)(this._rule.internalValue),
-      timeouts: tfOnlineEvaluationConfigTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      data_source_config: cdktn.listMapper(awsOnlineEvaluationConfigDataSourceConfigPropertyToTerraform, true)(this._dataSourceConfig.internalValue),
+      evaluator: cdktn.listMapper(awsOnlineEvaluationConfigEvaluatorPropertyToTerraform, true)(this._evaluator.internalValue),
+      rule: cdktn.listMapper(awsOnlineEvaluationConfigRulePropertyToTerraform, true)(this._rule.internalValue),
+      timeouts: awsOnlineEvaluationConfigTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -384,28 +384,28 @@ export class TfOnlineEvaluationConfig extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       data_source_config: {
-        value: cdktn.listMapperHcl(tfOnlineEvaluationConfigDataSourceConfigPropertyToHclTerraform, true)(this._dataSourceConfig.internalValue),
+        value: cdktn.listMapperHcl(awsOnlineEvaluationConfigDataSourceConfigPropertyToHclTerraform, true)(this._dataSourceConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfOnlineEvaluationConfig.DataSourceConfigPropertyList",
+        storageClassType: "AwsOnlineEvaluationConfig.DataSourceConfigPropertyList",
       },
       evaluator: {
-        value: cdktn.listMapperHcl(tfOnlineEvaluationConfigEvaluatorPropertyToHclTerraform, true)(this._evaluator.internalValue),
+        value: cdktn.listMapperHcl(awsOnlineEvaluationConfigEvaluatorPropertyToHclTerraform, true)(this._evaluator.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfOnlineEvaluationConfig.EvaluatorPropertyList",
+        storageClassType: "AwsOnlineEvaluationConfig.EvaluatorPropertyList",
       },
       rule: {
-        value: cdktn.listMapperHcl(tfOnlineEvaluationConfigRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(awsOnlineEvaluationConfigRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfOnlineEvaluationConfig.RulePropertyList",
+        storageClassType: "AwsOnlineEvaluationConfig.RulePropertyList",
       },
       timeouts: {
-        value: tfOnlineEvaluationConfigTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsOnlineEvaluationConfigTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfOnlineEvaluationConfig.TimeoutsProperty",
+        storageClassType: "AwsOnlineEvaluationConfig.TimeoutsProperty",
       },
     };
 
@@ -414,7 +414,7 @@ export class TfOnlineEvaluationConfig extends cdktn.TerraformResource {
   }
 }
 
-export function tfOnlineEvaluationConfigCloudwatchConfigPropertyToTerraform(struct?: TfOnlineEvaluationConfig.CloudwatchConfigProperty): any {
+export function awsOnlineEvaluationConfigCloudwatchConfigPropertyToTerraform(struct?: AwsOnlineEvaluationConfig.CloudwatchConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,7 +424,7 @@ export function tfOnlineEvaluationConfigCloudwatchConfigPropertyToTerraform(stru
 }
 
 
-export function tfOnlineEvaluationConfigCloudwatchConfigPropertyToHclTerraform(struct?: TfOnlineEvaluationConfig.CloudwatchConfigProperty): any {
+export function awsOnlineEvaluationConfigCloudwatchConfigPropertyToHclTerraform(struct?: AwsOnlineEvaluationConfig.CloudwatchConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function tfOnlineEvaluationConfigCloudwatchConfigPropertyToHclTerraform(s
 }
 
 
-export function tfOnlineEvaluationConfigOutputConfigPropertyToTerraform(struct?: TfOnlineEvaluationConfig.OutputConfigProperty): any {
+export function awsOnlineEvaluationConfigOutputConfigPropertyToTerraform(struct?: AwsOnlineEvaluationConfig.OutputConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function tfOnlineEvaluationConfigOutputConfigPropertyToTerraform(struct?:
 }
 
 
-export function tfOnlineEvaluationConfigOutputConfigPropertyToHclTerraform(struct?: TfOnlineEvaluationConfig.OutputConfigProperty): any {
+export function awsOnlineEvaluationConfigOutputConfigPropertyToHclTerraform(struct?: AwsOnlineEvaluationConfig.OutputConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,7 +456,7 @@ export function tfOnlineEvaluationConfigOutputConfigPropertyToHclTerraform(struc
 }
 
 
-export function tfOnlineEvaluationConfigCloudwatchLogsPropertyToTerraform(struct?: TfOnlineEvaluationConfig.CloudwatchLogsProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigCloudwatchLogsPropertyToTerraform(struct?: AwsOnlineEvaluationConfig.CloudwatchLogsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -468,7 +468,7 @@ export function tfOnlineEvaluationConfigCloudwatchLogsPropertyToTerraform(struct
 }
 
 
-export function tfOnlineEvaluationConfigCloudwatchLogsPropertyToHclTerraform(struct?: TfOnlineEvaluationConfig.CloudwatchLogsProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigCloudwatchLogsPropertyToHclTerraform(struct?: AwsOnlineEvaluationConfig.CloudwatchLogsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,25 +493,25 @@ export function tfOnlineEvaluationConfigCloudwatchLogsPropertyToHclTerraform(str
 }
 
 
-export function tfOnlineEvaluationConfigDataSourceConfigPropertyToTerraform(struct?: TfOnlineEvaluationConfig.DataSourceConfigProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigDataSourceConfigPropertyToTerraform(struct?: AwsOnlineEvaluationConfig.DataSourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_logs: cdktn.listMapper(tfOnlineEvaluationConfigCloudwatchLogsPropertyToTerraform, true)(struct!.cloudwatchLogs),
+    cloudwatch_logs: cdktn.listMapper(awsOnlineEvaluationConfigCloudwatchLogsPropertyToTerraform, true)(struct!.cloudwatchLogs),
   }
 }
 
 
-export function tfOnlineEvaluationConfigDataSourceConfigPropertyToHclTerraform(struct?: TfOnlineEvaluationConfig.DataSourceConfigProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigDataSourceConfigPropertyToHclTerraform(struct?: AwsOnlineEvaluationConfig.DataSourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_logs: {
-      value: cdktn.listMapperHcl(tfOnlineEvaluationConfigCloudwatchLogsPropertyToHclTerraform, true)(struct!.cloudwatchLogs),
+      value: cdktn.listMapperHcl(awsOnlineEvaluationConfigCloudwatchLogsPropertyToHclTerraform, true)(struct!.cloudwatchLogs),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsPropertyList",
@@ -523,7 +523,7 @@ export function tfOnlineEvaluationConfigDataSourceConfigPropertyToHclTerraform(s
 }
 
 
-export function tfOnlineEvaluationConfigEvaluatorPropertyToTerraform(struct?: TfOnlineEvaluationConfig.EvaluatorProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigEvaluatorPropertyToTerraform(struct?: AwsOnlineEvaluationConfig.EvaluatorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -534,7 +534,7 @@ export function tfOnlineEvaluationConfigEvaluatorPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfOnlineEvaluationConfigEvaluatorPropertyToHclTerraform(struct?: TfOnlineEvaluationConfig.EvaluatorProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigEvaluatorPropertyToHclTerraform(struct?: AwsOnlineEvaluationConfig.EvaluatorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,7 +553,7 @@ export function tfOnlineEvaluationConfigEvaluatorPropertyToHclTerraform(struct?:
 }
 
 
-export function tfOnlineEvaluationConfigValuePropertyToTerraform(struct?: TfOnlineEvaluationConfig.ValueProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigValuePropertyToTerraform(struct?: AwsOnlineEvaluationConfig.ValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -566,7 +566,7 @@ export function tfOnlineEvaluationConfigValuePropertyToTerraform(struct?: TfOnli
 }
 
 
-export function tfOnlineEvaluationConfigValuePropertyToHclTerraform(struct?: TfOnlineEvaluationConfig.ValueProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigValuePropertyToHclTerraform(struct?: AwsOnlineEvaluationConfig.ValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -597,7 +597,7 @@ export function tfOnlineEvaluationConfigValuePropertyToHclTerraform(struct?: TfO
 }
 
 
-export function tfOnlineEvaluationConfigFilterPropertyToTerraform(struct?: TfOnlineEvaluationConfig.FilterProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigFilterPropertyToTerraform(struct?: AwsOnlineEvaluationConfig.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,12 +605,12 @@ export function tfOnlineEvaluationConfigFilterPropertyToTerraform(struct?: TfOnl
   return {
     key: cdktn.stringToTerraform(struct!.key),
     operator: cdktn.stringToTerraform(struct!.operator),
-    value: cdktn.listMapper(tfOnlineEvaluationConfigValuePropertyToTerraform, true)(struct!.value),
+    value: cdktn.listMapper(awsOnlineEvaluationConfigValuePropertyToTerraform, true)(struct!.value),
   }
 }
 
 
-export function tfOnlineEvaluationConfigFilterPropertyToHclTerraform(struct?: TfOnlineEvaluationConfig.FilterProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigFilterPropertyToHclTerraform(struct?: AwsOnlineEvaluationConfig.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -629,7 +629,7 @@ export function tfOnlineEvaluationConfigFilterPropertyToHclTerraform(struct?: Tf
       storageClassType: "string",
     },
     value: {
-      value: cdktn.listMapperHcl(tfOnlineEvaluationConfigValuePropertyToHclTerraform, true)(struct!.value),
+      value: cdktn.listMapperHcl(awsOnlineEvaluationConfigValuePropertyToHclTerraform, true)(struct!.value),
       isBlock: true,
       type: "list",
       storageClassType: "ValuePropertyList",
@@ -641,7 +641,7 @@ export function tfOnlineEvaluationConfigFilterPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfOnlineEvaluationConfigSamplingConfigPropertyToTerraform(struct?: TfOnlineEvaluationConfig.SamplingConfigProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigSamplingConfigPropertyToTerraform(struct?: AwsOnlineEvaluationConfig.SamplingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -652,7 +652,7 @@ export function tfOnlineEvaluationConfigSamplingConfigPropertyToTerraform(struct
 }
 
 
-export function tfOnlineEvaluationConfigSamplingConfigPropertyToHclTerraform(struct?: TfOnlineEvaluationConfig.SamplingConfigProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigSamplingConfigPropertyToHclTerraform(struct?: AwsOnlineEvaluationConfig.SamplingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -671,7 +671,7 @@ export function tfOnlineEvaluationConfigSamplingConfigPropertyToHclTerraform(str
 }
 
 
-export function tfOnlineEvaluationConfigSessionConfigPropertyToTerraform(struct?: TfOnlineEvaluationConfig.SessionConfigProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigSessionConfigPropertyToTerraform(struct?: AwsOnlineEvaluationConfig.SessionConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -682,7 +682,7 @@ export function tfOnlineEvaluationConfigSessionConfigPropertyToTerraform(struct?
 }
 
 
-export function tfOnlineEvaluationConfigSessionConfigPropertyToHclTerraform(struct?: TfOnlineEvaluationConfig.SessionConfigProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigSessionConfigPropertyToHclTerraform(struct?: AwsOnlineEvaluationConfig.SessionConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -701,39 +701,39 @@ export function tfOnlineEvaluationConfigSessionConfigPropertyToHclTerraform(stru
 }
 
 
-export function tfOnlineEvaluationConfigRulePropertyToTerraform(struct?: TfOnlineEvaluationConfig.RuleProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigRulePropertyToTerraform(struct?: AwsOnlineEvaluationConfig.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    filter: cdktn.listMapper(tfOnlineEvaluationConfigFilterPropertyToTerraform, true)(struct!.filter),
-    sampling_config: cdktn.listMapper(tfOnlineEvaluationConfigSamplingConfigPropertyToTerraform, true)(struct!.samplingConfig),
-    session_config: cdktn.listMapper(tfOnlineEvaluationConfigSessionConfigPropertyToTerraform, true)(struct!.sessionConfig),
+    filter: cdktn.listMapper(awsOnlineEvaluationConfigFilterPropertyToTerraform, true)(struct!.filter),
+    sampling_config: cdktn.listMapper(awsOnlineEvaluationConfigSamplingConfigPropertyToTerraform, true)(struct!.samplingConfig),
+    session_config: cdktn.listMapper(awsOnlineEvaluationConfigSessionConfigPropertyToTerraform, true)(struct!.sessionConfig),
   }
 }
 
 
-export function tfOnlineEvaluationConfigRulePropertyToHclTerraform(struct?: TfOnlineEvaluationConfig.RuleProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigRulePropertyToHclTerraform(struct?: AwsOnlineEvaluationConfig.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     filter: {
-      value: cdktn.listMapperHcl(tfOnlineEvaluationConfigFilterPropertyToHclTerraform, true)(struct!.filter),
+      value: cdktn.listMapperHcl(awsOnlineEvaluationConfigFilterPropertyToHclTerraform, true)(struct!.filter),
       isBlock: true,
       type: "list",
       storageClassType: "FilterPropertyList",
     },
     sampling_config: {
-      value: cdktn.listMapperHcl(tfOnlineEvaluationConfigSamplingConfigPropertyToHclTerraform, true)(struct!.samplingConfig),
+      value: cdktn.listMapperHcl(awsOnlineEvaluationConfigSamplingConfigPropertyToHclTerraform, true)(struct!.samplingConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SamplingConfigPropertyList",
     },
     session_config: {
-      value: cdktn.listMapperHcl(tfOnlineEvaluationConfigSessionConfigPropertyToHclTerraform, true)(struct!.sessionConfig),
+      value: cdktn.listMapperHcl(awsOnlineEvaluationConfigSessionConfigPropertyToHclTerraform, true)(struct!.sessionConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SessionConfigPropertyList",
@@ -745,7 +745,7 @@ export function tfOnlineEvaluationConfigRulePropertyToHclTerraform(struct?: TfOn
 }
 
 
-export function tfOnlineEvaluationConfigTimeoutsPropertyToTerraform(struct?: TfOnlineEvaluationConfig.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigTimeoutsPropertyToTerraform(struct?: AwsOnlineEvaluationConfig.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -758,7 +758,7 @@ export function tfOnlineEvaluationConfigTimeoutsPropertyToTerraform(struct?: TfO
 }
 
 
-export function tfOnlineEvaluationConfigTimeoutsPropertyToHclTerraform(struct?: TfOnlineEvaluationConfig.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsOnlineEvaluationConfigTimeoutsPropertyToHclTerraform(struct?: AwsOnlineEvaluationConfig.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -789,7 +789,7 @@ export function tfOnlineEvaluationConfigTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfOnlineEvaluationConfig {
+export namespace AwsOnlineEvaluationConfig {
 export interface CloudwatchConfigProperty {
 }
 export class CloudwatchConfigPropertyOutputReference extends cdktn.ComplexObject {
@@ -901,11 +901,11 @@ export class OutputConfigPropertyList extends cdktn.ComplexList {
 }
 export interface CloudwatchLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#log_group_names TfOnlineEvaluationConfig#log_group_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#log_group_names AwsOnlineEvaluationConfig#log_group_names}
   */
   readonly logGroupNames: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#service_names TfOnlineEvaluationConfig#service_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#service_names AwsOnlineEvaluationConfig#service_names}
   */
   readonly serviceNames: string[];
 }
@@ -1009,7 +1009,7 @@ export interface DataSourceConfigProperty {
   /**
   * cloudwatch_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#cloudwatch_logs TfOnlineEvaluationConfig#cloudwatch_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#cloudwatch_logs AwsOnlineEvaluationConfig#cloudwatch_logs}
   */
   readonly cloudwatchLogs?: CloudwatchLogsProperty[] | cdktn.IResolvable;
 }
@@ -1095,7 +1095,7 @@ export class DataSourceConfigPropertyList extends cdktn.ComplexList {
 }
 export interface EvaluatorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#evaluator_id TfOnlineEvaluationConfig#evaluator_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#evaluator_id AwsOnlineEvaluationConfig#evaluator_id}
   */
   readonly evaluatorId: string;
 }
@@ -1178,15 +1178,15 @@ export class EvaluatorPropertyList extends cdktn.ComplexList {
 }
 export interface ValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#boolean_value TfOnlineEvaluationConfig#boolean_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#boolean_value AwsOnlineEvaluationConfig#boolean_value}
   */
   readonly booleanValue?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#double_value TfOnlineEvaluationConfig#double_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#double_value AwsOnlineEvaluationConfig#double_value}
   */
   readonly doubleValue?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#string_value TfOnlineEvaluationConfig#string_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#string_value AwsOnlineEvaluationConfig#string_value}
   */
   readonly stringValue?: string;
 }
@@ -1316,17 +1316,17 @@ export class ValuePropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#key TfOnlineEvaluationConfig#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#key AwsOnlineEvaluationConfig#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#operator TfOnlineEvaluationConfig#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#operator AwsOnlineEvaluationConfig#operator}
   */
   readonly operator: string;
   /**
   * value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#value TfOnlineEvaluationConfig#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#value AwsOnlineEvaluationConfig#value}
   */
   readonly value?: ValueProperty[] | cdktn.IResolvable;
 }
@@ -1450,7 +1450,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface SamplingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#sampling_percentage TfOnlineEvaluationConfig#sampling_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#sampling_percentage AwsOnlineEvaluationConfig#sampling_percentage}
   */
   readonly samplingPercentage: number;
 }
@@ -1533,7 +1533,7 @@ export class SamplingConfigPropertyList extends cdktn.ComplexList {
 }
 export interface SessionConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#session_timeout_minutes TfOnlineEvaluationConfig#session_timeout_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#session_timeout_minutes AwsOnlineEvaluationConfig#session_timeout_minutes}
   */
   readonly sessionTimeoutMinutes: number;
 }
@@ -1618,19 +1618,19 @@ export interface RuleProperty {
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#filter TfOnlineEvaluationConfig#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#filter AwsOnlineEvaluationConfig#filter}
   */
   readonly filter?: FilterProperty[] | cdktn.IResolvable;
   /**
   * sampling_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#sampling_config TfOnlineEvaluationConfig#sampling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#sampling_config AwsOnlineEvaluationConfig#sampling_config}
   */
   readonly samplingConfig?: SamplingConfigProperty[] | cdktn.IResolvable;
   /**
   * session_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#session_config TfOnlineEvaluationConfig#session_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#session_config AwsOnlineEvaluationConfig#session_config}
   */
   readonly sessionConfig?: SessionConfigProperty[] | cdktn.IResolvable;
 }
@@ -1762,19 +1762,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#create TfOnlineEvaluationConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#create AwsOnlineEvaluationConfig#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#delete TfOnlineEvaluationConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#delete AwsOnlineEvaluationConfig#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#update TfOnlineEvaluationConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#update AwsOnlineEvaluationConfig#update}
   */
   readonly update?: string;
 }

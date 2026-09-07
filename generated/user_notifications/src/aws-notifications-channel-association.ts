@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfChannelAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsChannelAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_channel_association#arn TfChannelAssociation#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_channel_association#arn AwsChannelAssociation#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_channel_association#notification_configuration_arn TfChannelAssociation#notification_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_channel_association#notification_configuration_arn AwsChannelAssociation#notification_configuration_arn}
   */
   readonly notificationConfigurationArn: string;
 }
@@ -19,7 +19,7 @@ export interface TfChannelAssociationConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_channel_association aws_notifications_channel_association}
 */
-export class TfChannelAssociation extends cdktn.TerraformResource {
+export class AwsChannelAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class TfChannelAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfChannelAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsChannelAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfChannelAssociation to import
-  * @param importFromId The id of the existing TfChannelAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_channel_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfChannelAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsChannelAssociation to import
+  * @param importFromId The id of the existing AwsChannelAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/notifications_channel_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsChannelAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_notifications_channel_association", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class TfChannelAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfChannelAssociationConfig
+  * @param options AwsChannelAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfChannelAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsChannelAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_notifications_channel_association',
       terraformGeneratorMetadata: {

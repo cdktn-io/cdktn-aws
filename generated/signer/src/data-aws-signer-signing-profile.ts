@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfSigningProfileConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsSigningProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_profile#id DataTfSigningProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_profile#id DataAwsSigningProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_profile#name DataTfSigningProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_profile#name DataAwsSigningProfile#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_profile#region DataTfSigningProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_profile#region DataAwsSigningProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_profile#tags DataTfSigningProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_profile#tags DataAwsSigningProfile#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataTfSigningProfileConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_profile aws_signer_signing_profile}
 */
-export class DataTfSigningProfile extends cdktn.TerraformDataSource {
+export class DataAwsSigningProfile extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfSigningProfile extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfSigningProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsSigningProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfSigningProfile to import
-  * @param importFromId The id of the existing DataTfSigningProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfSigningProfile to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsSigningProfile to import
+  * @param importFromId The id of the existing DataAwsSigningProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/signer_signing_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsSigningProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_signer_signing_profile", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfSigningProfile extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfSigningProfileConfig
+  * @param options DataAwsSigningProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfSigningProfileConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsSigningProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_signer_signing_profile',
       terraformGeneratorMetadata: {
@@ -151,19 +151,19 @@ export class DataTfSigningProfile extends cdktn.TerraformDataSource {
   }
 
   // revocation_record - computed: true, optional: false, required: false
-  private _revocationRecord = new DataTfSigningProfile.RevocationRecordPropertyList(this, "revocation_record", false);
+  private _revocationRecord = new DataAwsSigningProfile.RevocationRecordPropertyList(this, "revocation_record", false);
   public get revocationRecord() {
     return this._revocationRecord;
   }
 
   // signature_validity_period - computed: true, optional: false, required: false
-  private _signatureValidityPeriod = new DataTfSigningProfile.SignatureValidityPeriodPropertyList(this, "signature_validity_period", false);
+  private _signatureValidityPeriod = new DataAwsSigningProfile.SignatureValidityPeriodPropertyList(this, "signature_validity_period", false);
   public get signatureValidityPeriod() {
     return this._signatureValidityPeriod;
   }
 
   // signing_material - computed: true, optional: false, required: false
-  private _signingMaterial = new DataTfSigningProfile.SigningMaterialPropertyList(this, "signing_material", false);
+  private _signingMaterial = new DataAwsSigningProfile.SigningMaterialPropertyList(this, "signing_material", false);
   public get signingMaterial() {
     return this._signingMaterial;
   }
@@ -251,7 +251,7 @@ export class DataTfSigningProfile extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfSigningProfileRevocationRecordPropertyToTerraform(struct?: DataTfSigningProfile.RevocationRecordProperty): any {
+export function dataAwsSigningProfileRevocationRecordPropertyToTerraform(struct?: DataAwsSigningProfile.RevocationRecordProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function dataTfSigningProfileRevocationRecordPropertyToTerraform(struct?:
 }
 
 
-export function dataTfSigningProfileRevocationRecordPropertyToHclTerraform(struct?: DataTfSigningProfile.RevocationRecordProperty): any {
+export function dataAwsSigningProfileRevocationRecordPropertyToHclTerraform(struct?: DataAwsSigningProfile.RevocationRecordProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,7 +272,7 @@ export function dataTfSigningProfileRevocationRecordPropertyToHclTerraform(struc
 }
 
 
-export function dataTfSigningProfileSignatureValidityPeriodPropertyToTerraform(struct?: DataTfSigningProfile.SignatureValidityPeriodProperty): any {
+export function dataAwsSigningProfileSignatureValidityPeriodPropertyToTerraform(struct?: DataAwsSigningProfile.SignatureValidityPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,7 +282,7 @@ export function dataTfSigningProfileSignatureValidityPeriodPropertyToTerraform(s
 }
 
 
-export function dataTfSigningProfileSignatureValidityPeriodPropertyToHclTerraform(struct?: DataTfSigningProfile.SignatureValidityPeriodProperty): any {
+export function dataAwsSigningProfileSignatureValidityPeriodPropertyToHclTerraform(struct?: DataAwsSigningProfile.SignatureValidityPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function dataTfSigningProfileSignatureValidityPeriodPropertyToHclTerrafor
 }
 
 
-export function dataTfSigningProfileSigningMaterialPropertyToTerraform(struct?: DataTfSigningProfile.SigningMaterialProperty): any {
+export function dataAwsSigningProfileSigningMaterialPropertyToTerraform(struct?: DataAwsSigningProfile.SigningMaterialProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,7 +303,7 @@ export function dataTfSigningProfileSigningMaterialPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfSigningProfileSigningMaterialPropertyToHclTerraform(struct?: DataTfSigningProfile.SigningMaterialProperty): any {
+export function dataAwsSigningProfileSigningMaterialPropertyToHclTerraform(struct?: DataAwsSigningProfile.SigningMaterialProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,7 +314,7 @@ export function dataTfSigningProfileSigningMaterialPropertyToHclTerraform(struct
 }
 
 
-export namespace DataTfSigningProfile {
+export namespace DataAwsSigningProfile {
 export interface RevocationRecordProperty {
 }
 export class RevocationRecordPropertyOutputReference extends cdktn.ComplexObject {

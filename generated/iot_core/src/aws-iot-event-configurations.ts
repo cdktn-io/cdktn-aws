@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEventConfigurationsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEventConfigurationsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_event_configurations#event_configurations TfEventConfigurations#event_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_event_configurations#event_configurations AwsEventConfigurations#event_configurations}
   */
   readonly eventConfigurations: { [key: string]: (boolean | cdktn.IResolvable) };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_event_configurations#id TfEventConfigurations#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_event_configurations#id AwsEventConfigurations#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface TfEventConfigurationsConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_event_configurations#region TfEventConfigurations#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_event_configurations#region AwsEventConfigurations#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfEventConfigurationsConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_event_configurations aws_iot_event_configurations}
 */
-export class TfEventConfigurations extends cdktn.TerraformResource {
+export class AwsEventConfigurations extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfEventConfigurations extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEventConfigurations resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEventConfigurations resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEventConfigurations to import
-  * @param importFromId The id of the existing TfEventConfigurations that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_event_configurations#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEventConfigurations to import is found
+  * @param importToId The construct id used in the generated config for the AwsEventConfigurations to import
+  * @param importFromId The id of the existing AwsEventConfigurations that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_event_configurations#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEventConfigurations to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_event_configurations", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfEventConfigurations extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEventConfigurationsConfig
+  * @param options AwsEventConfigurationsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEventConfigurationsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEventConfigurationsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_event_configurations',
       terraformGeneratorMetadata: {

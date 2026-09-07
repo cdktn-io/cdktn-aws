@@ -5,57 +5,57 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPortalConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPortalConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#additional_encryption_context TfPortal#additional_encryption_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#additional_encryption_context AwsPortal#additional_encryption_context}
   */
   readonly additionalEncryptionContext?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#authentication_type TfPortal#authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#authentication_type AwsPortal#authentication_type}
   */
   readonly authenticationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#browser_settings_arn TfPortal#browser_settings_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#browser_settings_arn AwsPortal#browser_settings_arn}
   */
   readonly browserSettingsArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#customer_managed_key TfPortal#customer_managed_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#customer_managed_key AwsPortal#customer_managed_key}
   */
   readonly customerManagedKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#display_name TfPortal#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#display_name AwsPortal#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#instance_type TfPortal#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#instance_type AwsPortal#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#max_concurrent_sessions TfPortal#max_concurrent_sessions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#max_concurrent_sessions AwsPortal#max_concurrent_sessions}
   */
   readonly maxConcurrentSessions?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#region TfPortal#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#region AwsPortal#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#tags TfPortal#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#tags AwsPortal#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#timeouts TfPortal#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#timeouts AwsPortal#timeouts}
   */
-  readonly timeouts?: TfPortal.TimeoutsProperty;
+  readonly timeouts?: AwsPortal.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal aws_workspacesweb_portal}
 */
-export class TfPortal extends cdktn.TerraformResource {
+export class AwsPortal extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -66,11 +66,11 @@ export class TfPortal extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPortal resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPortal resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPortal to import
-  * @param importFromId The id of the existing TfPortal that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPortal to import is found
+  * @param importToId The construct id used in the generated config for the AwsPortal to import
+  * @param importFromId The id of the existing AwsPortal that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPortal to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_portal", importId: importFromId, provider });
@@ -85,9 +85,9 @@ export class TfPortal extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPortalConfig = {}
+  * @param options AwsPortalConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfPortalConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsPortalConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_portal',
       terraformGeneratorMetadata: {
@@ -340,11 +340,11 @@ export class TfPortal extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPortal.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPortal.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPortal.TimeoutsProperty) {
+  public putTimeouts(value: AwsPortal.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -370,7 +370,7 @@ export class TfPortal extends cdktn.TerraformResource {
       max_concurrent_sessions: cdktn.numberToTerraform(this._maxConcurrentSessions),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: tfPortalTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsPortalTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -431,10 +431,10 @@ export class TfPortal extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfPortalTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPortalTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPortal.TimeoutsProperty",
+        storageClassType: "AwsPortal.TimeoutsProperty",
       },
     };
 
@@ -443,7 +443,7 @@ export class TfPortal extends cdktn.TerraformResource {
   }
 }
 
-export function tfPortalTimeoutsPropertyToTerraform(struct?: TfPortal.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPortalTimeoutsPropertyToTerraform(struct?: AwsPortal.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,7 +456,7 @@ export function tfPortalTimeoutsPropertyToTerraform(struct?: TfPortal.TimeoutsPr
 }
 
 
-export function tfPortalTimeoutsPropertyToHclTerraform(struct?: TfPortal.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPortalTimeoutsPropertyToHclTerraform(struct?: AwsPortal.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,24 +487,24 @@ export function tfPortalTimeoutsPropertyToHclTerraform(struct?: TfPortal.Timeout
 }
 
 
-export namespace TfPortal {
+export namespace AwsPortal {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#create TfPortal#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#create AwsPortal#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#delete TfPortal#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#delete AwsPortal#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#update TfPortal#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_portal#update AwsPortal#update}
   */
   readonly update?: string;
 }

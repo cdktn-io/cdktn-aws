@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfAvailabilityZonesConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsAvailabilityZonesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#all_availability_zones DataTfAvailabilityZones#all_availability_zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#all_availability_zones DataAwsAvailabilityZones#all_availability_zones}
   */
   readonly allAvailabilityZones?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#exclude_names DataTfAvailabilityZones#exclude_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#exclude_names DataAwsAvailabilityZones#exclude_names}
   */
   readonly excludeNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#exclude_zone_ids DataTfAvailabilityZones#exclude_zone_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#exclude_zone_ids DataAwsAvailabilityZones#exclude_zone_ids}
   */
   readonly excludeZoneIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#id DataTfAvailabilityZones#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#id DataAwsAvailabilityZones#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,31 +28,31 @@ export interface DataTfAvailabilityZonesConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#region DataTfAvailabilityZones#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#region DataAwsAvailabilityZones#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#state DataTfAvailabilityZones#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#state DataAwsAvailabilityZones#state}
   */
   readonly state?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#filter DataTfAvailabilityZones#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#filter DataAwsAvailabilityZones#filter}
   */
-  readonly filter?: DataTfAvailabilityZones.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsAvailabilityZones.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#timeouts DataTfAvailabilityZones#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#timeouts DataAwsAvailabilityZones#timeouts}
   */
-  readonly timeouts?: DataTfAvailabilityZones.TimeoutsProperty;
+  readonly timeouts?: DataAwsAvailabilityZones.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones aws_availability_zones}
 */
-export class DataTfAvailabilityZones extends cdktn.TerraformDataSource {
+export class DataAwsAvailabilityZones extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class DataTfAvailabilityZones extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfAvailabilityZones resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsAvailabilityZones resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfAvailabilityZones to import
-  * @param importFromId The id of the existing DataTfAvailabilityZones that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfAvailabilityZones to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsAvailabilityZones to import
+  * @param importFromId The id of the existing DataAwsAvailabilityZones that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsAvailabilityZones to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_availability_zones", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class DataTfAvailabilityZones extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfAvailabilityZonesConfig = {}
+  * @param options DataAwsAvailabilityZonesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfAvailabilityZonesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsAvailabilityZonesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_availability_zones',
       terraformGeneratorMetadata: {
@@ -226,11 +226,11 @@ export class DataTfAvailabilityZones extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfAvailabilityZones.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsAvailabilityZones.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfAvailabilityZones.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsAvailabilityZones.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -242,11 +242,11 @@ export class DataTfAvailabilityZones extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfAvailabilityZones.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsAvailabilityZones.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfAvailabilityZones.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsAvailabilityZones.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -269,8 +269,8 @@ export class DataTfAvailabilityZones extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       state: cdktn.stringToTerraform(this._state),
-      filter: cdktn.listMapper(dataTfAvailabilityZonesFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataTfAvailabilityZonesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataAwsAvailabilityZonesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataAwsAvailabilityZonesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -313,16 +313,16 @@ export class DataTfAvailabilityZones extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfAvailabilityZonesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsAvailabilityZonesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfAvailabilityZones.FilterPropertyList",
+        storageClassType: "DataAwsAvailabilityZones.FilterPropertyList",
       },
       timeouts: {
-        value: dataTfAvailabilityZonesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsAvailabilityZonesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfAvailabilityZones.TimeoutsProperty",
+        storageClassType: "DataAwsAvailabilityZones.TimeoutsProperty",
       },
     };
 
@@ -331,7 +331,7 @@ export class DataTfAvailabilityZones extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfAvailabilityZonesFilterPropertyToTerraform(struct?: DataTfAvailabilityZones.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsAvailabilityZonesFilterPropertyToTerraform(struct?: DataAwsAvailabilityZones.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function dataTfAvailabilityZonesFilterPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfAvailabilityZonesFilterPropertyToHclTerraform(struct?: DataTfAvailabilityZones.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsAvailabilityZonesFilterPropertyToHclTerraform(struct?: DataAwsAvailabilityZones.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -368,7 +368,7 @@ export function dataTfAvailabilityZonesFilterPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfAvailabilityZonesTimeoutsPropertyToTerraform(struct?: DataTfAvailabilityZones.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsAvailabilityZonesTimeoutsPropertyToTerraform(struct?: DataAwsAvailabilityZones.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function dataTfAvailabilityZonesTimeoutsPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfAvailabilityZonesTimeoutsPropertyToHclTerraform(struct?: DataTfAvailabilityZones.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsAvailabilityZonesTimeoutsPropertyToHclTerraform(struct?: DataAwsAvailabilityZones.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,14 +398,14 @@ export function dataTfAvailabilityZonesTimeoutsPropertyToHclTerraform(struct?: D
 }
 
 
-export namespace DataTfAvailabilityZones {
+export namespace DataAwsAvailabilityZones {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#name DataTfAvailabilityZones#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#name DataAwsAvailabilityZones#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#values DataTfAvailabilityZones#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#values DataAwsAvailabilityZones#values}
   */
   readonly values: string[];
 }
@@ -507,7 +507,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#read DataTfAvailabilityZones#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/availability_zones#read DataAwsAvailabilityZones#read}
   */
   readonly read?: string;
 }

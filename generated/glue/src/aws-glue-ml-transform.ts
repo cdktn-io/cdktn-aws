@@ -5,82 +5,82 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMlTransformConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMlTransformConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#description TfMlTransform#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#description AwsMlTransform#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#glue_version TfMlTransform#glue_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#glue_version AwsMlTransform#glue_version}
   */
   readonly glueVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#id TfMlTransform#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#id AwsMlTransform#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#max_capacity TfMlTransform#max_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#max_capacity AwsMlTransform#max_capacity}
   */
   readonly maxCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#max_retries TfMlTransform#max_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#max_retries AwsMlTransform#max_retries}
   */
   readonly maxRetries?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#name TfMlTransform#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#name AwsMlTransform#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#number_of_workers TfMlTransform#number_of_workers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#number_of_workers AwsMlTransform#number_of_workers}
   */
   readonly numberOfWorkers?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#region TfMlTransform#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#region AwsMlTransform#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#role_arn TfMlTransform#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#role_arn AwsMlTransform#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#tags TfMlTransform#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#tags AwsMlTransform#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#tags_all TfMlTransform#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#tags_all AwsMlTransform#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#timeout TfMlTransform#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#timeout AwsMlTransform#timeout}
   */
   readonly timeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#worker_type TfMlTransform#worker_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#worker_type AwsMlTransform#worker_type}
   */
   readonly workerType?: string;
   /**
   * input_record_tables block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#input_record_tables TfMlTransform#input_record_tables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#input_record_tables AwsMlTransform#input_record_tables}
   */
-  readonly inputRecordTables: TfMlTransform.InputRecordTablesProperty[] | cdktn.IResolvable;
+  readonly inputRecordTables: AwsMlTransform.InputRecordTablesProperty[] | cdktn.IResolvable;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#parameters TfMlTransform#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#parameters AwsMlTransform#parameters}
   */
-  readonly parameters: TfMlTransform.ParametersProperty;
+  readonly parameters: AwsMlTransform.ParametersProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform aws_glue_ml_transform}
 */
-export class TfMlTransform extends cdktn.TerraformResource {
+export class AwsMlTransform extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -91,11 +91,11 @@ export class TfMlTransform extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMlTransform resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMlTransform resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMlTransform to import
-  * @param importFromId The id of the existing TfMlTransform that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMlTransform to import is found
+  * @param importToId The construct id used in the generated config for the AwsMlTransform to import
+  * @param importFromId The id of the existing AwsMlTransform that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMlTransform to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_ml_transform", importId: importFromId, provider });
@@ -110,9 +110,9 @@ export class TfMlTransform extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMlTransformConfig
+  * @param options AwsMlTransformConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMlTransformConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMlTransformConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_ml_transform',
       terraformGeneratorMetadata: {
@@ -298,7 +298,7 @@ export class TfMlTransform extends cdktn.TerraformResource {
   }
 
   // schema - computed: true, optional: false, required: false
-  private _schema = new TfMlTransform.SchemaPropertyList(this, "schema", false);
+  private _schema = new AwsMlTransform.SchemaPropertyList(this, "schema", false);
   public get schema() {
     return this._schema;
   }
@@ -368,11 +368,11 @@ export class TfMlTransform extends cdktn.TerraformResource {
   }
 
   // input_record_tables - computed: false, optional: false, required: true
-  private _inputRecordTables = new TfMlTransform.InputRecordTablesPropertyList(this, "input_record_tables", false);
+  private _inputRecordTables = new AwsMlTransform.InputRecordTablesPropertyList(this, "input_record_tables", false);
   public get inputRecordTables() {
     return this._inputRecordTables;
   }
-  public putInputRecordTables(value: TfMlTransform.InputRecordTablesProperty[] | cdktn.IResolvable) {
+  public putInputRecordTables(value: AwsMlTransform.InputRecordTablesProperty[] | cdktn.IResolvable) {
     this._inputRecordTables.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -381,11 +381,11 @@ export class TfMlTransform extends cdktn.TerraformResource {
   }
 
   // parameters - computed: false, optional: false, required: true
-  private _parameters = new TfMlTransform.ParametersPropertyOutputReference(this, "parameters");
+  private _parameters = new AwsMlTransform.ParametersPropertyOutputReference(this, "parameters");
   public get parameters() {
     return this._parameters;
   }
-  public putParameters(value: TfMlTransform.ParametersProperty) {
+  public putParameters(value: AwsMlTransform.ParametersProperty) {
     this._parameters.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -412,8 +412,8 @@ export class TfMlTransform extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       timeout: cdktn.numberToTerraform(this._timeout),
       worker_type: cdktn.stringToTerraform(this._workerType),
-      input_record_tables: cdktn.listMapper(tfMlTransformInputRecordTablesPropertyToTerraform, true)(this._inputRecordTables.internalValue),
-      parameters: tfMlTransformParametersPropertyToTerraform(this._parameters.internalValue),
+      input_record_tables: cdktn.listMapper(awsMlTransformInputRecordTablesPropertyToTerraform, true)(this._inputRecordTables.internalValue),
+      parameters: awsMlTransformParametersPropertyToTerraform(this._parameters.internalValue),
     };
   }
 
@@ -498,16 +498,16 @@ export class TfMlTransform extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       input_record_tables: {
-        value: cdktn.listMapperHcl(tfMlTransformInputRecordTablesPropertyToHclTerraform, true)(this._inputRecordTables.internalValue),
+        value: cdktn.listMapperHcl(awsMlTransformInputRecordTablesPropertyToHclTerraform, true)(this._inputRecordTables.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMlTransform.InputRecordTablesPropertyList",
+        storageClassType: "AwsMlTransform.InputRecordTablesPropertyList",
       },
       parameters: {
-        value: tfMlTransformParametersPropertyToHclTerraform(this._parameters.internalValue),
+        value: awsMlTransformParametersPropertyToHclTerraform(this._parameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMlTransform.ParametersPropertyList",
+        storageClassType: "AwsMlTransform.ParametersPropertyList",
       },
     };
 
@@ -516,7 +516,7 @@ export class TfMlTransform extends cdktn.TerraformResource {
   }
 }
 
-export function tfMlTransformSchemaPropertyToTerraform(struct?: TfMlTransform.SchemaProperty): any {
+export function awsMlTransformSchemaPropertyToTerraform(struct?: AwsMlTransform.SchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -526,7 +526,7 @@ export function tfMlTransformSchemaPropertyToTerraform(struct?: TfMlTransform.Sc
 }
 
 
-export function tfMlTransformSchemaPropertyToHclTerraform(struct?: TfMlTransform.SchemaProperty): any {
+export function awsMlTransformSchemaPropertyToHclTerraform(struct?: AwsMlTransform.SchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -537,7 +537,7 @@ export function tfMlTransformSchemaPropertyToHclTerraform(struct?: TfMlTransform
 }
 
 
-export function tfMlTransformInputRecordTablesPropertyToTerraform(struct?: TfMlTransform.InputRecordTablesProperty | cdktn.IResolvable): any {
+export function awsMlTransformInputRecordTablesPropertyToTerraform(struct?: AwsMlTransform.InputRecordTablesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -551,7 +551,7 @@ export function tfMlTransformInputRecordTablesPropertyToTerraform(struct?: TfMlT
 }
 
 
-export function tfMlTransformInputRecordTablesPropertyToHclTerraform(struct?: TfMlTransform.InputRecordTablesProperty | cdktn.IResolvable): any {
+export function awsMlTransformInputRecordTablesPropertyToHclTerraform(struct?: AwsMlTransform.InputRecordTablesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -588,7 +588,7 @@ export function tfMlTransformInputRecordTablesPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfMlTransformFindMatchesParametersPropertyToTerraform(struct?: TfMlTransform.FindMatchesParametersPropertyOutputReference | TfMlTransform.FindMatchesParametersProperty): any {
+export function awsMlTransformFindMatchesParametersPropertyToTerraform(struct?: AwsMlTransform.FindMatchesParametersPropertyOutputReference | AwsMlTransform.FindMatchesParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,7 +602,7 @@ export function tfMlTransformFindMatchesParametersPropertyToTerraform(struct?: T
 }
 
 
-export function tfMlTransformFindMatchesParametersPropertyToHclTerraform(struct?: TfMlTransform.FindMatchesParametersPropertyOutputReference | TfMlTransform.FindMatchesParametersProperty): any {
+export function awsMlTransformFindMatchesParametersPropertyToHclTerraform(struct?: AwsMlTransform.FindMatchesParametersPropertyOutputReference | AwsMlTransform.FindMatchesParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -639,19 +639,19 @@ export function tfMlTransformFindMatchesParametersPropertyToHclTerraform(struct?
 }
 
 
-export function tfMlTransformParametersPropertyToTerraform(struct?: TfMlTransform.ParametersPropertyOutputReference | TfMlTransform.ParametersProperty): any {
+export function awsMlTransformParametersPropertyToTerraform(struct?: AwsMlTransform.ParametersPropertyOutputReference | AwsMlTransform.ParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     transform_type: cdktn.stringToTerraform(struct!.transformType),
-    find_matches_parameters: tfMlTransformFindMatchesParametersPropertyToTerraform(struct!.findMatchesParameters),
+    find_matches_parameters: awsMlTransformFindMatchesParametersPropertyToTerraform(struct!.findMatchesParameters),
   }
 }
 
 
-export function tfMlTransformParametersPropertyToHclTerraform(struct?: TfMlTransform.ParametersPropertyOutputReference | TfMlTransform.ParametersProperty): any {
+export function awsMlTransformParametersPropertyToHclTerraform(struct?: AwsMlTransform.ParametersPropertyOutputReference | AwsMlTransform.ParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -664,7 +664,7 @@ export function tfMlTransformParametersPropertyToHclTerraform(struct?: TfMlTrans
       storageClassType: "string",
     },
     find_matches_parameters: {
-      value: tfMlTransformFindMatchesParametersPropertyToHclTerraform(struct!.findMatchesParameters),
+      value: awsMlTransformFindMatchesParametersPropertyToHclTerraform(struct!.findMatchesParameters),
       isBlock: true,
       type: "list",
       storageClassType: "FindMatchesParametersPropertyList",
@@ -676,7 +676,7 @@ export function tfMlTransformParametersPropertyToHclTerraform(struct?: TfMlTrans
 }
 
 
-export namespace TfMlTransform {
+export namespace AwsMlTransform {
 export interface SchemaProperty {
 }
 export class SchemaPropertyOutputReference extends cdktn.ComplexObject {
@@ -738,19 +738,19 @@ export class SchemaPropertyList extends cdktn.ComplexList {
 }
 export interface InputRecordTablesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#catalog_id TfMlTransform#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#catalog_id AwsMlTransform#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#connection_name TfMlTransform#connection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#connection_name AwsMlTransform#connection_name}
   */
   readonly connectionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#database_name TfMlTransform#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#database_name AwsMlTransform#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#table_name TfMlTransform#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#table_name AwsMlTransform#table_name}
   */
   readonly tableName: string;
 }
@@ -896,19 +896,19 @@ export class InputRecordTablesPropertyList extends cdktn.ComplexList {
 }
 export interface FindMatchesParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#accuracy_cost_trade_off TfMlTransform#accuracy_cost_trade_off}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#accuracy_cost_trade_off AwsMlTransform#accuracy_cost_trade_off}
   */
   readonly accuracyCostTradeOff?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#enforce_provided_labels TfMlTransform#enforce_provided_labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#enforce_provided_labels AwsMlTransform#enforce_provided_labels}
   */
   readonly enforceProvidedLabels?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#precision_recall_trade_off TfMlTransform#precision_recall_trade_off}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#precision_recall_trade_off AwsMlTransform#precision_recall_trade_off}
   */
   readonly precisionRecallTradeOff?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#primary_key_column_name TfMlTransform#primary_key_column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#primary_key_column_name AwsMlTransform#primary_key_column_name}
   */
   readonly primaryKeyColumnName?: string;
 }
@@ -1028,13 +1028,13 @@ export class FindMatchesParametersPropertyOutputReference extends cdktn.ComplexO
 }
 export interface ParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#transform_type TfMlTransform#transform_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#transform_type AwsMlTransform#transform_type}
   */
   readonly transformType: string;
   /**
   * find_matches_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#find_matches_parameters TfMlTransform#find_matches_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_ml_transform#find_matches_parameters AwsMlTransform#find_matches_parameters}
   */
   readonly findMatchesParameters: FindMatchesParametersProperty;
 }

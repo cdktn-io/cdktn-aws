@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTargetGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTargetGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#id TfTargetGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#id AwsTargetGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#name TfTargetGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#name AwsTargetGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#region TfTargetGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#region AwsTargetGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#tags TfTargetGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#tags AwsTargetGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#tags_all TfTargetGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#tags_all AwsTargetGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#type TfTargetGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#type AwsTargetGroup#type}
   */
   readonly type: string;
   /**
   * config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#config TfTargetGroup#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#config AwsTargetGroup#config}
   */
-  readonly config?: TfTargetGroup.ConfigProperty;
+  readonly config?: AwsTargetGroup.ConfigProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#timeouts TfTargetGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#timeouts AwsTargetGroup#timeouts}
   */
-  readonly timeouts?: TfTargetGroup.TimeoutsProperty;
+  readonly timeouts?: AwsTargetGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group aws_vpclattice_target_group}
 */
-export class TfTargetGroup extends cdktn.TerraformResource {
+export class AwsTargetGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTargetGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTargetGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTargetGroup to import
-  * @param importFromId The id of the existing TfTargetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTargetGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsTargetGroup to import
+  * @param importFromId The id of the existing AwsTargetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTargetGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_target_group", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTargetGroupConfig
+  * @param options AwsTargetGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTargetGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTargetGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_target_group',
       terraformGeneratorMetadata: {
@@ -215,11 +215,11 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   }
 
   // config - computed: false, optional: true, required: false
-  private _config = new TfTargetGroup.ConfigPropertyOutputReference(this, "config");
+  private _config = new AwsTargetGroup.ConfigPropertyOutputReference(this, "config");
   public get config() {
     return this._config;
   }
-  public putConfig(value: TfTargetGroup.ConfigProperty) {
+  public putConfig(value: AwsTargetGroup.ConfigProperty) {
     this._config.internalValue = value;
   }
   public resetConfig() {
@@ -231,11 +231,11 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTargetGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTargetGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTargetGroup.TimeoutsProperty) {
+  public putTimeouts(value: AwsTargetGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -258,8 +258,8 @@ export class TfTargetGroup extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      config: tfTargetGroupConfigPropertyToTerraform(this._config.internalValue),
-      timeouts: tfTargetGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      config: awsTargetGroupConfigPropertyToTerraform(this._config.internalValue),
+      timeouts: awsTargetGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -302,16 +302,16 @@ export class TfTargetGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       config: {
-        value: tfTargetGroupConfigPropertyToHclTerraform(this._config.internalValue),
+        value: awsTargetGroupConfigPropertyToHclTerraform(this._config.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTargetGroup.ConfigPropertyList",
+        storageClassType: "AwsTargetGroup.ConfigPropertyList",
       },
       timeouts: {
-        value: tfTargetGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTargetGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTargetGroup.TimeoutsProperty",
+        storageClassType: "AwsTargetGroup.TimeoutsProperty",
       },
     };
 
@@ -320,7 +320,7 @@ export class TfTargetGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfTargetGroupMatcherPropertyToTerraform(struct?: TfTargetGroup.MatcherPropertyOutputReference | TfTargetGroup.MatcherProperty): any {
+export function awsTargetGroupMatcherPropertyToTerraform(struct?: AwsTargetGroup.MatcherPropertyOutputReference | AwsTargetGroup.MatcherProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,7 +331,7 @@ export function tfTargetGroupMatcherPropertyToTerraform(struct?: TfTargetGroup.M
 }
 
 
-export function tfTargetGroupMatcherPropertyToHclTerraform(struct?: TfTargetGroup.MatcherPropertyOutputReference | TfTargetGroup.MatcherProperty): any {
+export function awsTargetGroupMatcherPropertyToHclTerraform(struct?: AwsTargetGroup.MatcherPropertyOutputReference | AwsTargetGroup.MatcherProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function tfTargetGroupMatcherPropertyToHclTerraform(struct?: TfTargetGrou
 }
 
 
-export function tfTargetGroupHealthCheckPropertyToTerraform(struct?: TfTargetGroup.HealthCheckPropertyOutputReference | TfTargetGroup.HealthCheckProperty): any {
+export function awsTargetGroupHealthCheckPropertyToTerraform(struct?: AwsTargetGroup.HealthCheckPropertyOutputReference | AwsTargetGroup.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,12 +365,12 @@ export function tfTargetGroupHealthCheckPropertyToTerraform(struct?: TfTargetGro
     protocol: cdktn.stringToTerraform(struct!.protocol),
     protocol_version: cdktn.stringToTerraform(struct!.protocolVersion),
     unhealthy_threshold_count: cdktn.numberToTerraform(struct!.unhealthyThresholdCount),
-    matcher: tfTargetGroupMatcherPropertyToTerraform(struct!.matcher),
+    matcher: awsTargetGroupMatcherPropertyToTerraform(struct!.matcher),
   }
 }
 
 
-export function tfTargetGroupHealthCheckPropertyToHclTerraform(struct?: TfTargetGroup.HealthCheckPropertyOutputReference | TfTargetGroup.HealthCheckProperty): any {
+export function awsTargetGroupHealthCheckPropertyToHclTerraform(struct?: AwsTargetGroup.HealthCheckPropertyOutputReference | AwsTargetGroup.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function tfTargetGroupHealthCheckPropertyToHclTerraform(struct?: TfTarget
       storageClassType: "number",
     },
     matcher: {
-      value: tfTargetGroupMatcherPropertyToHclTerraform(struct!.matcher),
+      value: awsTargetGroupMatcherPropertyToHclTerraform(struct!.matcher),
       isBlock: true,
       type: "list",
       storageClassType: "MatcherPropertyList",
@@ -443,7 +443,7 @@ export function tfTargetGroupHealthCheckPropertyToHclTerraform(struct?: TfTarget
 }
 
 
-export function tfTargetGroupConfigPropertyToTerraform(struct?: TfTargetGroup.ConfigPropertyOutputReference | TfTargetGroup.ConfigProperty): any {
+export function awsTargetGroupConfigPropertyToTerraform(struct?: AwsTargetGroup.ConfigPropertyOutputReference | AwsTargetGroup.ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,12 +455,12 @@ export function tfTargetGroupConfigPropertyToTerraform(struct?: TfTargetGroup.Co
     protocol: cdktn.stringToTerraform(struct!.protocol),
     protocol_version: cdktn.stringToTerraform(struct!.protocolVersion),
     vpc_identifier: cdktn.stringToTerraform(struct!.vpcIdentifier),
-    health_check: tfTargetGroupHealthCheckPropertyToTerraform(struct!.healthCheck),
+    health_check: awsTargetGroupHealthCheckPropertyToTerraform(struct!.healthCheck),
   }
 }
 
 
-export function tfTargetGroupConfigPropertyToHclTerraform(struct?: TfTargetGroup.ConfigPropertyOutputReference | TfTargetGroup.ConfigProperty): any {
+export function awsTargetGroupConfigPropertyToHclTerraform(struct?: AwsTargetGroup.ConfigPropertyOutputReference | AwsTargetGroup.ConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,7 +503,7 @@ export function tfTargetGroupConfigPropertyToHclTerraform(struct?: TfTargetGroup
       storageClassType: "string",
     },
     health_check: {
-      value: tfTargetGroupHealthCheckPropertyToHclTerraform(struct!.healthCheck),
+      value: awsTargetGroupHealthCheckPropertyToHclTerraform(struct!.healthCheck),
       isBlock: true,
       type: "list",
       storageClassType: "HealthCheckPropertyList",
@@ -515,7 +515,7 @@ export function tfTargetGroupConfigPropertyToHclTerraform(struct?: TfTargetGroup
 }
 
 
-export function tfTargetGroupTimeoutsPropertyToTerraform(struct?: TfTargetGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTargetGroupTimeoutsPropertyToTerraform(struct?: AwsTargetGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function tfTargetGroupTimeoutsPropertyToTerraform(struct?: TfTargetGroup.
 }
 
 
-export function tfTargetGroupTimeoutsPropertyToHclTerraform(struct?: TfTargetGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTargetGroupTimeoutsPropertyToHclTerraform(struct?: AwsTargetGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -559,10 +559,10 @@ export function tfTargetGroupTimeoutsPropertyToHclTerraform(struct?: TfTargetGro
 }
 
 
-export namespace TfTargetGroup {
+export namespace AwsTargetGroup {
 export interface MatcherProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#value TfTargetGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#value AwsTargetGroup#value}
   */
   readonly value?: string;
 }
@@ -616,45 +616,45 @@ export class MatcherPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HealthCheckProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#enabled TfTargetGroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#enabled AwsTargetGroup#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#health_check_interval_seconds TfTargetGroup#health_check_interval_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#health_check_interval_seconds AwsTargetGroup#health_check_interval_seconds}
   */
   readonly healthCheckIntervalSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#health_check_timeout_seconds TfTargetGroup#health_check_timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#health_check_timeout_seconds AwsTargetGroup#health_check_timeout_seconds}
   */
   readonly healthCheckTimeoutSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#healthy_threshold_count TfTargetGroup#healthy_threshold_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#healthy_threshold_count AwsTargetGroup#healthy_threshold_count}
   */
   readonly healthyThresholdCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#path TfTargetGroup#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#path AwsTargetGroup#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#port TfTargetGroup#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#port AwsTargetGroup#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#protocol TfTargetGroup#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#protocol AwsTargetGroup#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#protocol_version TfTargetGroup#protocol_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#protocol_version AwsTargetGroup#protocol_version}
   */
   readonly protocolVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#unhealthy_threshold_count TfTargetGroup#unhealthy_threshold_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#unhealthy_threshold_count AwsTargetGroup#unhealthy_threshold_count}
   */
   readonly unhealthyThresholdCount?: number;
   /**
   * matcher block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#matcher TfTargetGroup#matcher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#matcher AwsTargetGroup#matcher}
   */
   readonly matcher?: MatcherProperty;
 }
@@ -906,33 +906,33 @@ export class HealthCheckPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#ip_address_type TfTargetGroup#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#ip_address_type AwsTargetGroup#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#lambda_event_structure_version TfTargetGroup#lambda_event_structure_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#lambda_event_structure_version AwsTargetGroup#lambda_event_structure_version}
   */
   readonly lambdaEventStructureVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#port TfTargetGroup#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#port AwsTargetGroup#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#protocol TfTargetGroup#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#protocol AwsTargetGroup#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#protocol_version TfTargetGroup#protocol_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#protocol_version AwsTargetGroup#protocol_version}
   */
   readonly protocolVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#vpc_identifier TfTargetGroup#vpc_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#vpc_identifier AwsTargetGroup#vpc_identifier}
   */
   readonly vpcIdentifier?: string;
   /**
   * health_check block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#health_check TfTargetGroup#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#health_check AwsTargetGroup#health_check}
   */
   readonly healthCheck?: HealthCheckProperty;
 }
@@ -1118,15 +1118,15 @@ export class ConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#create TfTargetGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#create AwsTargetGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#delete TfTargetGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#delete AwsTargetGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#update TfTargetGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group#update AwsTargetGroup#update}
   */
   readonly update?: string;
 }

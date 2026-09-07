@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPromptConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPromptConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#customer_encryption_key_arn TfPrompt#customer_encryption_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#customer_encryption_key_arn AwsPrompt#customer_encryption_key_arn}
   */
   readonly customerEncryptionKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#default_variant TfPrompt#default_variant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#default_variant AwsPrompt#default_variant}
   */
   readonly defaultVariant?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#description TfPrompt#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#description AwsPrompt#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#name TfPrompt#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#name AwsPrompt#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#region TfPrompt#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#region AwsPrompt#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#tags TfPrompt#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#tags AwsPrompt#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * variant block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#variant TfPrompt#variant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#variant AwsPrompt#variant}
   */
-  readonly variant?: TfPrompt.VariantProperty[] | cdktn.IResolvable;
+  readonly variant?: AwsPrompt.VariantProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt aws_bedrockagent_prompt}
 */
-export class TfPrompt extends cdktn.TerraformResource {
+export class AwsPrompt extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class TfPrompt extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPrompt resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPrompt resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPrompt to import
-  * @param importFromId The id of the existing TfPrompt that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPrompt to import is found
+  * @param importToId The construct id used in the generated config for the AwsPrompt to import
+  * @param importFromId The id of the existing AwsPrompt that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPrompt to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagent_prompt", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class TfPrompt extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPromptConfig
+  * @param options AwsPromptConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPromptConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPromptConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagent_prompt',
       terraformGeneratorMetadata: {
@@ -229,11 +229,11 @@ export class TfPrompt extends cdktn.TerraformResource {
   }
 
   // variant - computed: false, optional: true, required: false
-  private _variant = new TfPrompt.VariantPropertyList(this, "variant", false);
+  private _variant = new AwsPrompt.VariantPropertyList(this, "variant", false);
   public get variant() {
     return this._variant;
   }
-  public putVariant(value: TfPrompt.VariantProperty[] | cdktn.IResolvable) {
+  public putVariant(value: AwsPrompt.VariantProperty[] | cdktn.IResolvable) {
     this._variant.internalValue = value;
   }
   public resetVariant() {
@@ -256,7 +256,7 @@ export class TfPrompt extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      variant: cdktn.listMapper(tfPromptVariantPropertyToTerraform, true)(this._variant.internalValue),
+      variant: cdktn.listMapper(awsPromptVariantPropertyToTerraform, true)(this._variant.internalValue),
     };
   }
 
@@ -299,10 +299,10 @@ export class TfPrompt extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       variant: {
-        value: cdktn.listMapperHcl(tfPromptVariantPropertyToHclTerraform, true)(this._variant.internalValue),
+        value: cdktn.listMapperHcl(awsPromptVariantPropertyToHclTerraform, true)(this._variant.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPrompt.VariantPropertyList",
+        storageClassType: "AwsPrompt.VariantPropertyList",
       },
     };
 
@@ -311,7 +311,7 @@ export class TfPrompt extends cdktn.TerraformResource {
   }
 }
 
-export function tfPromptAgentPropertyToTerraform(struct?: TfPrompt.AgentProperty | cdktn.IResolvable): any {
+export function awsPromptAgentPropertyToTerraform(struct?: AwsPrompt.AgentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function tfPromptAgentPropertyToTerraform(struct?: TfPrompt.AgentProperty
 }
 
 
-export function tfPromptAgentPropertyToHclTerraform(struct?: TfPrompt.AgentProperty | cdktn.IResolvable): any {
+export function awsPromptAgentPropertyToHclTerraform(struct?: AwsPrompt.AgentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,25 +341,25 @@ export function tfPromptAgentPropertyToHclTerraform(struct?: TfPrompt.AgentPrope
 }
 
 
-export function tfPromptGenAiResourcePropertyToTerraform(struct?: TfPrompt.GenAiResourceProperty | cdktn.IResolvable): any {
+export function awsPromptGenAiResourcePropertyToTerraform(struct?: AwsPrompt.GenAiResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    agent: cdktn.listMapper(tfPromptAgentPropertyToTerraform, true)(struct!.agent),
+    agent: cdktn.listMapper(awsPromptAgentPropertyToTerraform, true)(struct!.agent),
   }
 }
 
 
-export function tfPromptGenAiResourcePropertyToHclTerraform(struct?: TfPrompt.GenAiResourceProperty | cdktn.IResolvable): any {
+export function awsPromptGenAiResourcePropertyToHclTerraform(struct?: AwsPrompt.GenAiResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     agent: {
-      value: cdktn.listMapperHcl(tfPromptAgentPropertyToHclTerraform, true)(struct!.agent),
+      value: cdktn.listMapperHcl(awsPromptAgentPropertyToHclTerraform, true)(struct!.agent),
       isBlock: true,
       type: "list",
       storageClassType: "AgentPropertyList",
@@ -371,7 +371,7 @@ export function tfPromptGenAiResourcePropertyToHclTerraform(struct?: TfPrompt.Ge
 }
 
 
-export function tfPromptVariantInferenceConfigurationTextPropertyToTerraform(struct?: TfPrompt.VariantInferenceConfigurationTextProperty | cdktn.IResolvable): any {
+export function awsPromptVariantInferenceConfigurationTextPropertyToTerraform(struct?: AwsPrompt.VariantInferenceConfigurationTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function tfPromptVariantInferenceConfigurationTextPropertyToTerraform(str
 }
 
 
-export function tfPromptVariantInferenceConfigurationTextPropertyToHclTerraform(struct?: TfPrompt.VariantInferenceConfigurationTextProperty | cdktn.IResolvable): any {
+export function awsPromptVariantInferenceConfigurationTextPropertyToHclTerraform(struct?: AwsPrompt.VariantInferenceConfigurationTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,25 +422,25 @@ export function tfPromptVariantInferenceConfigurationTextPropertyToHclTerraform(
 }
 
 
-export function tfPromptInferenceConfigurationPropertyToTerraform(struct?: TfPrompt.InferenceConfigurationProperty | cdktn.IResolvable): any {
+export function awsPromptInferenceConfigurationPropertyToTerraform(struct?: AwsPrompt.InferenceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    text: cdktn.listMapper(tfPromptVariantInferenceConfigurationTextPropertyToTerraform, true)(struct!.text),
+    text: cdktn.listMapper(awsPromptVariantInferenceConfigurationTextPropertyToTerraform, true)(struct!.text),
   }
 }
 
 
-export function tfPromptInferenceConfigurationPropertyToHclTerraform(struct?: TfPrompt.InferenceConfigurationProperty | cdktn.IResolvable): any {
+export function awsPromptInferenceConfigurationPropertyToHclTerraform(struct?: AwsPrompt.InferenceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     text: {
-      value: cdktn.listMapperHcl(tfPromptVariantInferenceConfigurationTextPropertyToHclTerraform, true)(struct!.text),
+      value: cdktn.listMapperHcl(awsPromptVariantInferenceConfigurationTextPropertyToHclTerraform, true)(struct!.text),
       isBlock: true,
       type: "list",
       storageClassType: "VariantInferenceConfigurationTextPropertyList",
@@ -452,7 +452,7 @@ export function tfPromptInferenceConfigurationPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfPromptMetadataPropertyToTerraform(struct?: TfPrompt.MetadataProperty | cdktn.IResolvable): any {
+export function awsPromptMetadataPropertyToTerraform(struct?: AwsPrompt.MetadataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function tfPromptMetadataPropertyToTerraform(struct?: TfPrompt.MetadataPr
 }
 
 
-export function tfPromptMetadataPropertyToHclTerraform(struct?: TfPrompt.MetadataProperty | cdktn.IResolvable): any {
+export function awsPromptMetadataPropertyToHclTerraform(struct?: AwsPrompt.MetadataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -489,7 +489,7 @@ export function tfPromptMetadataPropertyToHclTerraform(struct?: TfPrompt.Metadat
 }
 
 
-export function tfPromptVariantTemplateConfigurationChatInputVariablePropertyToTerraform(struct?: TfPrompt.VariantTemplateConfigurationChatInputVariableProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationChatInputVariablePropertyToTerraform(struct?: AwsPrompt.VariantTemplateConfigurationChatInputVariableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,7 +500,7 @@ export function tfPromptVariantTemplateConfigurationChatInputVariablePropertyToT
 }
 
 
-export function tfPromptVariantTemplateConfigurationChatInputVariablePropertyToHclTerraform(struct?: TfPrompt.VariantTemplateConfigurationChatInputVariableProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationChatInputVariablePropertyToHclTerraform(struct?: AwsPrompt.VariantTemplateConfigurationChatInputVariableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -519,7 +519,7 @@ export function tfPromptVariantTemplateConfigurationChatInputVariablePropertyToH
 }
 
 
-export function tfPromptVariantTemplateConfigurationChatMessageContentCachePointPropertyToTerraform(struct?: TfPrompt.VariantTemplateConfigurationChatMessageContentCachePointProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationChatMessageContentCachePointPropertyToTerraform(struct?: AwsPrompt.VariantTemplateConfigurationChatMessageContentCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -530,7 +530,7 @@ export function tfPromptVariantTemplateConfigurationChatMessageContentCachePoint
 }
 
 
-export function tfPromptVariantTemplateConfigurationChatMessageContentCachePointPropertyToHclTerraform(struct?: TfPrompt.VariantTemplateConfigurationChatMessageContentCachePointProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationChatMessageContentCachePointPropertyToHclTerraform(struct?: AwsPrompt.VariantTemplateConfigurationChatMessageContentCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -549,19 +549,19 @@ export function tfPromptVariantTemplateConfigurationChatMessageContentCachePoint
 }
 
 
-export function tfPromptContentPropertyToTerraform(struct?: TfPrompt.ContentProperty | cdktn.IResolvable): any {
+export function awsPromptContentPropertyToTerraform(struct?: AwsPrompt.ContentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     text: cdktn.stringToTerraform(struct!.text),
-    cache_point: cdktn.listMapper(tfPromptVariantTemplateConfigurationChatMessageContentCachePointPropertyToTerraform, true)(struct!.cachePoint),
+    cache_point: cdktn.listMapper(awsPromptVariantTemplateConfigurationChatMessageContentCachePointPropertyToTerraform, true)(struct!.cachePoint),
   }
 }
 
 
-export function tfPromptContentPropertyToHclTerraform(struct?: TfPrompt.ContentProperty | cdktn.IResolvable): any {
+export function awsPromptContentPropertyToHclTerraform(struct?: AwsPrompt.ContentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function tfPromptContentPropertyToHclTerraform(struct?: TfPrompt.ContentP
       storageClassType: "string",
     },
     cache_point: {
-      value: cdktn.listMapperHcl(tfPromptVariantTemplateConfigurationChatMessageContentCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
+      value: cdktn.listMapperHcl(awsPromptVariantTemplateConfigurationChatMessageContentCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
       isBlock: true,
       type: "list",
       storageClassType: "VariantTemplateConfigurationChatMessageContentCachePointPropertyList",
@@ -586,19 +586,19 @@ export function tfPromptContentPropertyToHclTerraform(struct?: TfPrompt.ContentP
 }
 
 
-export function tfPromptMessagePropertyToTerraform(struct?: TfPrompt.MessageProperty | cdktn.IResolvable): any {
+export function awsPromptMessagePropertyToTerraform(struct?: AwsPrompt.MessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     role: cdktn.stringToTerraform(struct!.role),
-    content: cdktn.listMapper(tfPromptContentPropertyToTerraform, true)(struct!.content),
+    content: cdktn.listMapper(awsPromptContentPropertyToTerraform, true)(struct!.content),
   }
 }
 
 
-export function tfPromptMessagePropertyToHclTerraform(struct?: TfPrompt.MessageProperty | cdktn.IResolvable): any {
+export function awsPromptMessagePropertyToHclTerraform(struct?: AwsPrompt.MessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,7 +611,7 @@ export function tfPromptMessagePropertyToHclTerraform(struct?: TfPrompt.MessageP
       storageClassType: "string",
     },
     content: {
-      value: cdktn.listMapperHcl(tfPromptContentPropertyToHclTerraform, true)(struct!.content),
+      value: cdktn.listMapperHcl(awsPromptContentPropertyToHclTerraform, true)(struct!.content),
       isBlock: true,
       type: "list",
       storageClassType: "ContentPropertyList",
@@ -623,7 +623,7 @@ export function tfPromptMessagePropertyToHclTerraform(struct?: TfPrompt.MessageP
 }
 
 
-export function tfPromptVariantTemplateConfigurationChatSystemCachePointPropertyToTerraform(struct?: TfPrompt.VariantTemplateConfigurationChatSystemCachePointProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationChatSystemCachePointPropertyToTerraform(struct?: AwsPrompt.VariantTemplateConfigurationChatSystemCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -634,7 +634,7 @@ export function tfPromptVariantTemplateConfigurationChatSystemCachePointProperty
 }
 
 
-export function tfPromptVariantTemplateConfigurationChatSystemCachePointPropertyToHclTerraform(struct?: TfPrompt.VariantTemplateConfigurationChatSystemCachePointProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationChatSystemCachePointPropertyToHclTerraform(struct?: AwsPrompt.VariantTemplateConfigurationChatSystemCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -653,19 +653,19 @@ export function tfPromptVariantTemplateConfigurationChatSystemCachePointProperty
 }
 
 
-export function tfPromptSystemPropertyToTerraform(struct?: TfPrompt.SystemProperty | cdktn.IResolvable): any {
+export function awsPromptSystemPropertyToTerraform(struct?: AwsPrompt.SystemProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     text: cdktn.stringToTerraform(struct!.text),
-    cache_point: cdktn.listMapper(tfPromptVariantTemplateConfigurationChatSystemCachePointPropertyToTerraform, true)(struct!.cachePoint),
+    cache_point: cdktn.listMapper(awsPromptVariantTemplateConfigurationChatSystemCachePointPropertyToTerraform, true)(struct!.cachePoint),
   }
 }
 
 
-export function tfPromptSystemPropertyToHclTerraform(struct?: TfPrompt.SystemProperty | cdktn.IResolvable): any {
+export function awsPromptSystemPropertyToHclTerraform(struct?: AwsPrompt.SystemProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -678,7 +678,7 @@ export function tfPromptSystemPropertyToHclTerraform(struct?: TfPrompt.SystemPro
       storageClassType: "string",
     },
     cache_point: {
-      value: cdktn.listMapperHcl(tfPromptVariantTemplateConfigurationChatSystemCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
+      value: cdktn.listMapperHcl(awsPromptVariantTemplateConfigurationChatSystemCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
       isBlock: true,
       type: "list",
       storageClassType: "VariantTemplateConfigurationChatSystemCachePointPropertyList",
@@ -690,7 +690,7 @@ export function tfPromptSystemPropertyToHclTerraform(struct?: TfPrompt.SystemPro
 }
 
 
-export function tfPromptVariantTemplateConfigurationChatToolConfigurationToolCachePointPropertyToTerraform(struct?: TfPrompt.VariantTemplateConfigurationChatToolConfigurationToolCachePointProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationChatToolConfigurationToolCachePointPropertyToTerraform(struct?: AwsPrompt.VariantTemplateConfigurationChatToolConfigurationToolCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -701,7 +701,7 @@ export function tfPromptVariantTemplateConfigurationChatToolConfigurationToolCac
 }
 
 
-export function tfPromptVariantTemplateConfigurationChatToolConfigurationToolCachePointPropertyToHclTerraform(struct?: TfPrompt.VariantTemplateConfigurationChatToolConfigurationToolCachePointProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationChatToolConfigurationToolCachePointPropertyToHclTerraform(struct?: AwsPrompt.VariantTemplateConfigurationChatToolConfigurationToolCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -720,7 +720,7 @@ export function tfPromptVariantTemplateConfigurationChatToolConfigurationToolCac
 }
 
 
-export function tfPromptInputSchemaPropertyToTerraform(struct?: TfPrompt.InputSchemaProperty | cdktn.IResolvable): any {
+export function awsPromptInputSchemaPropertyToTerraform(struct?: AwsPrompt.InputSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -731,7 +731,7 @@ export function tfPromptInputSchemaPropertyToTerraform(struct?: TfPrompt.InputSc
 }
 
 
-export function tfPromptInputSchemaPropertyToHclTerraform(struct?: TfPrompt.InputSchemaProperty | cdktn.IResolvable): any {
+export function awsPromptInputSchemaPropertyToHclTerraform(struct?: AwsPrompt.InputSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -750,7 +750,7 @@ export function tfPromptInputSchemaPropertyToHclTerraform(struct?: TfPrompt.Inpu
 }
 
 
-export function tfPromptToolSpecPropertyToTerraform(struct?: TfPrompt.ToolSpecProperty | cdktn.IResolvable): any {
+export function awsPromptToolSpecPropertyToTerraform(struct?: AwsPrompt.ToolSpecProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -758,12 +758,12 @@ export function tfPromptToolSpecPropertyToTerraform(struct?: TfPrompt.ToolSpecPr
   return {
     description: cdktn.stringToTerraform(struct!.description),
     name: cdktn.stringToTerraform(struct!.name),
-    input_schema: cdktn.listMapper(tfPromptInputSchemaPropertyToTerraform, true)(struct!.inputSchema),
+    input_schema: cdktn.listMapper(awsPromptInputSchemaPropertyToTerraform, true)(struct!.inputSchema),
   }
 }
 
 
-export function tfPromptToolSpecPropertyToHclTerraform(struct?: TfPrompt.ToolSpecProperty | cdktn.IResolvable): any {
+export function awsPromptToolSpecPropertyToHclTerraform(struct?: AwsPrompt.ToolSpecProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -782,7 +782,7 @@ export function tfPromptToolSpecPropertyToHclTerraform(struct?: TfPrompt.ToolSpe
       storageClassType: "string",
     },
     input_schema: {
-      value: cdktn.listMapperHcl(tfPromptInputSchemaPropertyToHclTerraform, true)(struct!.inputSchema),
+      value: cdktn.listMapperHcl(awsPromptInputSchemaPropertyToHclTerraform, true)(struct!.inputSchema),
       isBlock: true,
       type: "list",
       storageClassType: "InputSchemaPropertyList",
@@ -794,32 +794,32 @@ export function tfPromptToolSpecPropertyToHclTerraform(struct?: TfPrompt.ToolSpe
 }
 
 
-export function tfPromptVariantTemplateConfigurationChatToolConfigurationToolPropertyToTerraform(struct?: TfPrompt.VariantTemplateConfigurationChatToolConfigurationToolProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationChatToolConfigurationToolPropertyToTerraform(struct?: AwsPrompt.VariantTemplateConfigurationChatToolConfigurationToolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cache_point: cdktn.listMapper(tfPromptVariantTemplateConfigurationChatToolConfigurationToolCachePointPropertyToTerraform, true)(struct!.cachePoint),
-    tool_spec: cdktn.listMapper(tfPromptToolSpecPropertyToTerraform, true)(struct!.toolSpec),
+    cache_point: cdktn.listMapper(awsPromptVariantTemplateConfigurationChatToolConfigurationToolCachePointPropertyToTerraform, true)(struct!.cachePoint),
+    tool_spec: cdktn.listMapper(awsPromptToolSpecPropertyToTerraform, true)(struct!.toolSpec),
   }
 }
 
 
-export function tfPromptVariantTemplateConfigurationChatToolConfigurationToolPropertyToHclTerraform(struct?: TfPrompt.VariantTemplateConfigurationChatToolConfigurationToolProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationChatToolConfigurationToolPropertyToHclTerraform(struct?: AwsPrompt.VariantTemplateConfigurationChatToolConfigurationToolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cache_point: {
-      value: cdktn.listMapperHcl(tfPromptVariantTemplateConfigurationChatToolConfigurationToolCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
+      value: cdktn.listMapperHcl(awsPromptVariantTemplateConfigurationChatToolConfigurationToolCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
       isBlock: true,
       type: "list",
       storageClassType: "VariantTemplateConfigurationChatToolConfigurationToolCachePointPropertyList",
     },
     tool_spec: {
-      value: cdktn.listMapperHcl(tfPromptToolSpecPropertyToHclTerraform, true)(struct!.toolSpec),
+      value: cdktn.listMapperHcl(awsPromptToolSpecPropertyToHclTerraform, true)(struct!.toolSpec),
       isBlock: true,
       type: "list",
       storageClassType: "ToolSpecPropertyList",
@@ -831,7 +831,7 @@ export function tfPromptVariantTemplateConfigurationChatToolConfigurationToolPro
 }
 
 
-export function tfPromptAnyPropertyToTerraform(struct?: TfPrompt.AnyProperty | cdktn.IResolvable): any {
+export function awsPromptAnyPropertyToTerraform(struct?: AwsPrompt.AnyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -841,7 +841,7 @@ export function tfPromptAnyPropertyToTerraform(struct?: TfPrompt.AnyProperty | c
 }
 
 
-export function tfPromptAnyPropertyToHclTerraform(struct?: TfPrompt.AnyProperty | cdktn.IResolvable): any {
+export function awsPromptAnyPropertyToHclTerraform(struct?: AwsPrompt.AnyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -852,7 +852,7 @@ export function tfPromptAnyPropertyToHclTerraform(struct?: TfPrompt.AnyProperty 
 }
 
 
-export function tfPromptAutoPropertyToTerraform(struct?: TfPrompt.AutoProperty | cdktn.IResolvable): any {
+export function awsPromptAutoPropertyToTerraform(struct?: AwsPrompt.AutoProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -862,7 +862,7 @@ export function tfPromptAutoPropertyToTerraform(struct?: TfPrompt.AutoProperty |
 }
 
 
-export function tfPromptAutoPropertyToHclTerraform(struct?: TfPrompt.AutoProperty | cdktn.IResolvable): any {
+export function awsPromptAutoPropertyToHclTerraform(struct?: AwsPrompt.AutoProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -873,7 +873,7 @@ export function tfPromptAutoPropertyToHclTerraform(struct?: TfPrompt.AutoPropert
 }
 
 
-export function tfPromptVariantTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToTerraform(struct?: TfPrompt.VariantTemplateConfigurationChatToolConfigurationToolChoiceToolProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToTerraform(struct?: AwsPrompt.VariantTemplateConfigurationChatToolConfigurationToolChoiceToolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -884,7 +884,7 @@ export function tfPromptVariantTemplateConfigurationChatToolConfigurationToolCho
 }
 
 
-export function tfPromptVariantTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToHclTerraform(struct?: TfPrompt.VariantTemplateConfigurationChatToolConfigurationToolChoiceToolProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToHclTerraform(struct?: AwsPrompt.VariantTemplateConfigurationChatToolConfigurationToolChoiceToolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -903,39 +903,39 @@ export function tfPromptVariantTemplateConfigurationChatToolConfigurationToolCho
 }
 
 
-export function tfPromptToolChoicePropertyToTerraform(struct?: TfPrompt.ToolChoiceProperty | cdktn.IResolvable): any {
+export function awsPromptToolChoicePropertyToTerraform(struct?: AwsPrompt.ToolChoiceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    any: cdktn.listMapper(tfPromptAnyPropertyToTerraform, true)(struct!.any),
-    auto: cdktn.listMapper(tfPromptAutoPropertyToTerraform, true)(struct!.auto),
-    tool: cdktn.listMapper(tfPromptVariantTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToTerraform, true)(struct!.tool),
+    any: cdktn.listMapper(awsPromptAnyPropertyToTerraform, true)(struct!.any),
+    auto: cdktn.listMapper(awsPromptAutoPropertyToTerraform, true)(struct!.auto),
+    tool: cdktn.listMapper(awsPromptVariantTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToTerraform, true)(struct!.tool),
   }
 }
 
 
-export function tfPromptToolChoicePropertyToHclTerraform(struct?: TfPrompt.ToolChoiceProperty | cdktn.IResolvable): any {
+export function awsPromptToolChoicePropertyToHclTerraform(struct?: AwsPrompt.ToolChoiceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     any: {
-      value: cdktn.listMapperHcl(tfPromptAnyPropertyToHclTerraform, true)(struct!.any),
+      value: cdktn.listMapperHcl(awsPromptAnyPropertyToHclTerraform, true)(struct!.any),
       isBlock: true,
       type: "list",
       storageClassType: "AnyPropertyList",
     },
     auto: {
-      value: cdktn.listMapperHcl(tfPromptAutoPropertyToHclTerraform, true)(struct!.auto),
+      value: cdktn.listMapperHcl(awsPromptAutoPropertyToHclTerraform, true)(struct!.auto),
       isBlock: true,
       type: "list",
       storageClassType: "AutoPropertyList",
     },
     tool: {
-      value: cdktn.listMapperHcl(tfPromptVariantTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToHclTerraform, true)(struct!.tool),
+      value: cdktn.listMapperHcl(awsPromptVariantTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyToHclTerraform, true)(struct!.tool),
       isBlock: true,
       type: "list",
       storageClassType: "VariantTemplateConfigurationChatToolConfigurationToolChoiceToolPropertyList",
@@ -947,32 +947,32 @@ export function tfPromptToolChoicePropertyToHclTerraform(struct?: TfPrompt.ToolC
 }
 
 
-export function tfPromptToolConfigurationPropertyToTerraform(struct?: TfPrompt.ToolConfigurationProperty | cdktn.IResolvable): any {
+export function awsPromptToolConfigurationPropertyToTerraform(struct?: AwsPrompt.ToolConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    tool: cdktn.listMapper(tfPromptVariantTemplateConfigurationChatToolConfigurationToolPropertyToTerraform, true)(struct!.tool),
-    tool_choice: cdktn.listMapper(tfPromptToolChoicePropertyToTerraform, true)(struct!.toolChoice),
+    tool: cdktn.listMapper(awsPromptVariantTemplateConfigurationChatToolConfigurationToolPropertyToTerraform, true)(struct!.tool),
+    tool_choice: cdktn.listMapper(awsPromptToolChoicePropertyToTerraform, true)(struct!.toolChoice),
   }
 }
 
 
-export function tfPromptToolConfigurationPropertyToHclTerraform(struct?: TfPrompt.ToolConfigurationProperty | cdktn.IResolvable): any {
+export function awsPromptToolConfigurationPropertyToHclTerraform(struct?: AwsPrompt.ToolConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     tool: {
-      value: cdktn.listMapperHcl(tfPromptVariantTemplateConfigurationChatToolConfigurationToolPropertyToHclTerraform, true)(struct!.tool),
+      value: cdktn.listMapperHcl(awsPromptVariantTemplateConfigurationChatToolConfigurationToolPropertyToHclTerraform, true)(struct!.tool),
       isBlock: true,
       type: "list",
       storageClassType: "VariantTemplateConfigurationChatToolConfigurationToolPropertyList",
     },
     tool_choice: {
-      value: cdktn.listMapperHcl(tfPromptToolChoicePropertyToHclTerraform, true)(struct!.toolChoice),
+      value: cdktn.listMapperHcl(awsPromptToolChoicePropertyToHclTerraform, true)(struct!.toolChoice),
       isBlock: true,
       type: "list",
       storageClassType: "ToolChoicePropertyList",
@@ -984,46 +984,46 @@ export function tfPromptToolConfigurationPropertyToHclTerraform(struct?: TfPromp
 }
 
 
-export function tfPromptChatPropertyToTerraform(struct?: TfPrompt.ChatProperty | cdktn.IResolvable): any {
+export function awsPromptChatPropertyToTerraform(struct?: AwsPrompt.ChatProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    input_variable: cdktn.listMapper(tfPromptVariantTemplateConfigurationChatInputVariablePropertyToTerraform, true)(struct!.inputVariable),
-    message: cdktn.listMapper(tfPromptMessagePropertyToTerraform, true)(struct!.message),
-    system: cdktn.listMapper(tfPromptSystemPropertyToTerraform, true)(struct!.systemAttribute),
-    tool_configuration: cdktn.listMapper(tfPromptToolConfigurationPropertyToTerraform, true)(struct!.toolConfiguration),
+    input_variable: cdktn.listMapper(awsPromptVariantTemplateConfigurationChatInputVariablePropertyToTerraform, true)(struct!.inputVariable),
+    message: cdktn.listMapper(awsPromptMessagePropertyToTerraform, true)(struct!.message),
+    system: cdktn.listMapper(awsPromptSystemPropertyToTerraform, true)(struct!.systemAttribute),
+    tool_configuration: cdktn.listMapper(awsPromptToolConfigurationPropertyToTerraform, true)(struct!.toolConfiguration),
   }
 }
 
 
-export function tfPromptChatPropertyToHclTerraform(struct?: TfPrompt.ChatProperty | cdktn.IResolvable): any {
+export function awsPromptChatPropertyToHclTerraform(struct?: AwsPrompt.ChatProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     input_variable: {
-      value: cdktn.listMapperHcl(tfPromptVariantTemplateConfigurationChatInputVariablePropertyToHclTerraform, true)(struct!.inputVariable),
+      value: cdktn.listMapperHcl(awsPromptVariantTemplateConfigurationChatInputVariablePropertyToHclTerraform, true)(struct!.inputVariable),
       isBlock: true,
       type: "list",
       storageClassType: "VariantTemplateConfigurationChatInputVariablePropertyList",
     },
     message: {
-      value: cdktn.listMapperHcl(tfPromptMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsPromptMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "list",
       storageClassType: "MessagePropertyList",
     },
     system: {
-      value: cdktn.listMapperHcl(tfPromptSystemPropertyToHclTerraform, true)(struct!.systemAttribute),
+      value: cdktn.listMapperHcl(awsPromptSystemPropertyToHclTerraform, true)(struct!.systemAttribute),
       isBlock: true,
       type: "list",
       storageClassType: "SystemPropertyList",
     },
     tool_configuration: {
-      value: cdktn.listMapperHcl(tfPromptToolConfigurationPropertyToHclTerraform, true)(struct!.toolConfiguration),
+      value: cdktn.listMapperHcl(awsPromptToolConfigurationPropertyToHclTerraform, true)(struct!.toolConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ToolConfigurationPropertyList",
@@ -1035,7 +1035,7 @@ export function tfPromptChatPropertyToHclTerraform(struct?: TfPrompt.ChatPropert
 }
 
 
-export function tfPromptVariantTemplateConfigurationTextCachePointPropertyToTerraform(struct?: TfPrompt.VariantTemplateConfigurationTextCachePointProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationTextCachePointPropertyToTerraform(struct?: AwsPrompt.VariantTemplateConfigurationTextCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1046,7 +1046,7 @@ export function tfPromptVariantTemplateConfigurationTextCachePointPropertyToTerr
 }
 
 
-export function tfPromptVariantTemplateConfigurationTextCachePointPropertyToHclTerraform(struct?: TfPrompt.VariantTemplateConfigurationTextCachePointProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationTextCachePointPropertyToHclTerraform(struct?: AwsPrompt.VariantTemplateConfigurationTextCachePointProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1065,7 +1065,7 @@ export function tfPromptVariantTemplateConfigurationTextCachePointPropertyToHclT
 }
 
 
-export function tfPromptVariantTemplateConfigurationTextInputVariablePropertyToTerraform(struct?: TfPrompt.VariantTemplateConfigurationTextInputVariableProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationTextInputVariablePropertyToTerraform(struct?: AwsPrompt.VariantTemplateConfigurationTextInputVariableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1076,7 +1076,7 @@ export function tfPromptVariantTemplateConfigurationTextInputVariablePropertyToT
 }
 
 
-export function tfPromptVariantTemplateConfigurationTextInputVariablePropertyToHclTerraform(struct?: TfPrompt.VariantTemplateConfigurationTextInputVariableProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationTextInputVariablePropertyToHclTerraform(struct?: AwsPrompt.VariantTemplateConfigurationTextInputVariableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1095,20 +1095,20 @@ export function tfPromptVariantTemplateConfigurationTextInputVariablePropertyToH
 }
 
 
-export function tfPromptVariantTemplateConfigurationTextPropertyToTerraform(struct?: TfPrompt.VariantTemplateConfigurationTextProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationTextPropertyToTerraform(struct?: AwsPrompt.VariantTemplateConfigurationTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     text: cdktn.stringToTerraform(struct!.text),
-    cache_point: cdktn.listMapper(tfPromptVariantTemplateConfigurationTextCachePointPropertyToTerraform, true)(struct!.cachePoint),
-    input_variable: cdktn.listMapper(tfPromptVariantTemplateConfigurationTextInputVariablePropertyToTerraform, true)(struct!.inputVariable),
+    cache_point: cdktn.listMapper(awsPromptVariantTemplateConfigurationTextCachePointPropertyToTerraform, true)(struct!.cachePoint),
+    input_variable: cdktn.listMapper(awsPromptVariantTemplateConfigurationTextInputVariablePropertyToTerraform, true)(struct!.inputVariable),
   }
 }
 
 
-export function tfPromptVariantTemplateConfigurationTextPropertyToHclTerraform(struct?: TfPrompt.VariantTemplateConfigurationTextProperty | cdktn.IResolvable): any {
+export function awsPromptVariantTemplateConfigurationTextPropertyToHclTerraform(struct?: AwsPrompt.VariantTemplateConfigurationTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1121,13 +1121,13 @@ export function tfPromptVariantTemplateConfigurationTextPropertyToHclTerraform(s
       storageClassType: "string",
     },
     cache_point: {
-      value: cdktn.listMapperHcl(tfPromptVariantTemplateConfigurationTextCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
+      value: cdktn.listMapperHcl(awsPromptVariantTemplateConfigurationTextCachePointPropertyToHclTerraform, true)(struct!.cachePoint),
       isBlock: true,
       type: "list",
       storageClassType: "VariantTemplateConfigurationTextCachePointPropertyList",
     },
     input_variable: {
-      value: cdktn.listMapperHcl(tfPromptVariantTemplateConfigurationTextInputVariablePropertyToHclTerraform, true)(struct!.inputVariable),
+      value: cdktn.listMapperHcl(awsPromptVariantTemplateConfigurationTextInputVariablePropertyToHclTerraform, true)(struct!.inputVariable),
       isBlock: true,
       type: "list",
       storageClassType: "VariantTemplateConfigurationTextInputVariablePropertyList",
@@ -1139,32 +1139,32 @@ export function tfPromptVariantTemplateConfigurationTextPropertyToHclTerraform(s
 }
 
 
-export function tfPromptTemplateConfigurationPropertyToTerraform(struct?: TfPrompt.TemplateConfigurationProperty | cdktn.IResolvable): any {
+export function awsPromptTemplateConfigurationPropertyToTerraform(struct?: AwsPrompt.TemplateConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    chat: cdktn.listMapper(tfPromptChatPropertyToTerraform, true)(struct!.chat),
-    text: cdktn.listMapper(tfPromptVariantTemplateConfigurationTextPropertyToTerraform, true)(struct!.text),
+    chat: cdktn.listMapper(awsPromptChatPropertyToTerraform, true)(struct!.chat),
+    text: cdktn.listMapper(awsPromptVariantTemplateConfigurationTextPropertyToTerraform, true)(struct!.text),
   }
 }
 
 
-export function tfPromptTemplateConfigurationPropertyToHclTerraform(struct?: TfPrompt.TemplateConfigurationProperty | cdktn.IResolvable): any {
+export function awsPromptTemplateConfigurationPropertyToHclTerraform(struct?: AwsPrompt.TemplateConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     chat: {
-      value: cdktn.listMapperHcl(tfPromptChatPropertyToHclTerraform, true)(struct!.chat),
+      value: cdktn.listMapperHcl(awsPromptChatPropertyToHclTerraform, true)(struct!.chat),
       isBlock: true,
       type: "list",
       storageClassType: "ChatPropertyList",
     },
     text: {
-      value: cdktn.listMapperHcl(tfPromptVariantTemplateConfigurationTextPropertyToHclTerraform, true)(struct!.text),
+      value: cdktn.listMapperHcl(awsPromptVariantTemplateConfigurationTextPropertyToHclTerraform, true)(struct!.text),
       isBlock: true,
       type: "list",
       storageClassType: "VariantTemplateConfigurationTextPropertyList",
@@ -1176,7 +1176,7 @@ export function tfPromptTemplateConfigurationPropertyToHclTerraform(struct?: TfP
 }
 
 
-export function tfPromptVariantPropertyToTerraform(struct?: TfPrompt.VariantProperty | cdktn.IResolvable): any {
+export function awsPromptVariantPropertyToTerraform(struct?: AwsPrompt.VariantProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1186,15 +1186,15 @@ export function tfPromptVariantPropertyToTerraform(struct?: TfPrompt.VariantProp
     model_id: cdktn.stringToTerraform(struct!.modelId),
     name: cdktn.stringToTerraform(struct!.name),
     template_type: cdktn.stringToTerraform(struct!.templateType),
-    gen_ai_resource: cdktn.listMapper(tfPromptGenAiResourcePropertyToTerraform, true)(struct!.genAiResource),
-    inference_configuration: cdktn.listMapper(tfPromptInferenceConfigurationPropertyToTerraform, true)(struct!.inferenceConfiguration),
-    metadata: cdktn.listMapper(tfPromptMetadataPropertyToTerraform, true)(struct!.metadata),
-    template_configuration: cdktn.listMapper(tfPromptTemplateConfigurationPropertyToTerraform, true)(struct!.templateConfiguration),
+    gen_ai_resource: cdktn.listMapper(awsPromptGenAiResourcePropertyToTerraform, true)(struct!.genAiResource),
+    inference_configuration: cdktn.listMapper(awsPromptInferenceConfigurationPropertyToTerraform, true)(struct!.inferenceConfiguration),
+    metadata: cdktn.listMapper(awsPromptMetadataPropertyToTerraform, true)(struct!.metadata),
+    template_configuration: cdktn.listMapper(awsPromptTemplateConfigurationPropertyToTerraform, true)(struct!.templateConfiguration),
   }
 }
 
 
-export function tfPromptVariantPropertyToHclTerraform(struct?: TfPrompt.VariantProperty | cdktn.IResolvable): any {
+export function awsPromptVariantPropertyToHclTerraform(struct?: AwsPrompt.VariantProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1225,25 +1225,25 @@ export function tfPromptVariantPropertyToHclTerraform(struct?: TfPrompt.VariantP
       storageClassType: "string",
     },
     gen_ai_resource: {
-      value: cdktn.listMapperHcl(tfPromptGenAiResourcePropertyToHclTerraform, true)(struct!.genAiResource),
+      value: cdktn.listMapperHcl(awsPromptGenAiResourcePropertyToHclTerraform, true)(struct!.genAiResource),
       isBlock: true,
       type: "list",
       storageClassType: "GenAiResourcePropertyList",
     },
     inference_configuration: {
-      value: cdktn.listMapperHcl(tfPromptInferenceConfigurationPropertyToHclTerraform, true)(struct!.inferenceConfiguration),
+      value: cdktn.listMapperHcl(awsPromptInferenceConfigurationPropertyToHclTerraform, true)(struct!.inferenceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "InferenceConfigurationPropertyList",
     },
     metadata: {
-      value: cdktn.listMapperHcl(tfPromptMetadataPropertyToHclTerraform, true)(struct!.metadata),
+      value: cdktn.listMapperHcl(awsPromptMetadataPropertyToHclTerraform, true)(struct!.metadata),
       isBlock: true,
       type: "list",
       storageClassType: "MetadataPropertyList",
     },
     template_configuration: {
-      value: cdktn.listMapperHcl(tfPromptTemplateConfigurationPropertyToHclTerraform, true)(struct!.templateConfiguration),
+      value: cdktn.listMapperHcl(awsPromptTemplateConfigurationPropertyToHclTerraform, true)(struct!.templateConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "TemplateConfigurationPropertyList",
@@ -1255,10 +1255,10 @@ export function tfPromptVariantPropertyToHclTerraform(struct?: TfPrompt.VariantP
 }
 
 
-export namespace TfPrompt {
+export namespace AwsPrompt {
 export interface AgentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#agent_identifier TfPrompt#agent_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#agent_identifier AwsPrompt#agent_identifier}
   */
   readonly agentIdentifier: string;
 }
@@ -1343,7 +1343,7 @@ export interface GenAiResourceProperty {
   /**
   * agent block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#agent TfPrompt#agent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#agent AwsPrompt#agent}
   */
   readonly agent?: AgentProperty[] | cdktn.IResolvable;
 }
@@ -1429,19 +1429,19 @@ export class GenAiResourcePropertyList extends cdktn.ComplexList {
 }
 export interface VariantInferenceConfigurationTextProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#max_tokens TfPrompt#max_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#max_tokens AwsPrompt#max_tokens}
   */
   readonly maxTokens?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#stop_sequences TfPrompt#stop_sequences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#stop_sequences AwsPrompt#stop_sequences}
   */
   readonly stopSequences?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#temperature TfPrompt#temperature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#temperature AwsPrompt#temperature}
   */
   readonly temperature?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#top_p TfPrompt#top_p}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#top_p AwsPrompt#top_p}
   */
   readonly topP?: number;
 }
@@ -1595,7 +1595,7 @@ export interface InferenceConfigurationProperty {
   /**
   * text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#text TfPrompt#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#text AwsPrompt#text}
   */
   readonly text?: VariantInferenceConfigurationTextProperty[] | cdktn.IResolvable;
 }
@@ -1681,11 +1681,11 @@ export class InferenceConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface MetadataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#key TfPrompt#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#key AwsPrompt#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#value TfPrompt#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#value AwsPrompt#value}
   */
   readonly value: string;
 }
@@ -1787,7 +1787,7 @@ export class MetadataPropertyList extends cdktn.ComplexList {
 }
 export interface VariantTemplateConfigurationChatInputVariableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#name TfPrompt#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#name AwsPrompt#name}
   */
   readonly name: string;
 }
@@ -1870,7 +1870,7 @@ export class VariantTemplateConfigurationChatInputVariablePropertyList extends c
 }
 export interface VariantTemplateConfigurationChatMessageContentCachePointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#type TfPrompt#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#type AwsPrompt#type}
   */
   readonly type: string;
 }
@@ -1953,13 +1953,13 @@ export class VariantTemplateConfigurationChatMessageContentCachePointPropertyLis
 }
 export interface ContentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#text TfPrompt#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#text AwsPrompt#text}
   */
   readonly text?: string;
   /**
   * cache_point block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#cache_point TfPrompt#cache_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#cache_point AwsPrompt#cache_point}
   */
   readonly cachePoint?: VariantTemplateConfigurationChatMessageContentCachePointProperty[] | cdktn.IResolvable;
 }
@@ -2067,13 +2067,13 @@ export class ContentPropertyList extends cdktn.ComplexList {
 }
 export interface MessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#role TfPrompt#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#role AwsPrompt#role}
   */
   readonly role: string;
   /**
   * content block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#content TfPrompt#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#content AwsPrompt#content}
   */
   readonly content?: ContentProperty[] | cdktn.IResolvable;
 }
@@ -2178,7 +2178,7 @@ export class MessagePropertyList extends cdktn.ComplexList {
 }
 export interface VariantTemplateConfigurationChatSystemCachePointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#type TfPrompt#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#type AwsPrompt#type}
   */
   readonly type: string;
 }
@@ -2261,13 +2261,13 @@ export class VariantTemplateConfigurationChatSystemCachePointPropertyList extend
 }
 export interface SystemProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#text TfPrompt#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#text AwsPrompt#text}
   */
   readonly text?: string;
   /**
   * cache_point block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#cache_point TfPrompt#cache_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#cache_point AwsPrompt#cache_point}
   */
   readonly cachePoint?: VariantTemplateConfigurationChatSystemCachePointProperty[] | cdktn.IResolvable;
 }
@@ -2375,7 +2375,7 @@ export class SystemPropertyList extends cdktn.ComplexList {
 }
 export interface VariantTemplateConfigurationChatToolConfigurationToolCachePointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#type TfPrompt#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#type AwsPrompt#type}
   */
   readonly type: string;
 }
@@ -2458,7 +2458,7 @@ export class VariantTemplateConfigurationChatToolConfigurationToolCachePointProp
 }
 export interface InputSchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#json TfPrompt#json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#json AwsPrompt#json}
   */
   readonly json?: string;
 }
@@ -2544,17 +2544,17 @@ export class InputSchemaPropertyList extends cdktn.ComplexList {
 }
 export interface ToolSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#description TfPrompt#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#description AwsPrompt#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#name TfPrompt#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#name AwsPrompt#name}
   */
   readonly name: string;
   /**
   * input_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#input_schema TfPrompt#input_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#input_schema AwsPrompt#input_schema}
   */
   readonly inputSchema?: InputSchemaProperty[] | cdktn.IResolvable;
 }
@@ -2683,13 +2683,13 @@ export interface VariantTemplateConfigurationChatToolConfigurationToolProperty {
   /**
   * cache_point block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#cache_point TfPrompt#cache_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#cache_point AwsPrompt#cache_point}
   */
   readonly cachePoint?: VariantTemplateConfigurationChatToolConfigurationToolCachePointProperty[] | cdktn.IResolvable;
   /**
   * tool_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#tool_spec TfPrompt#tool_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#tool_spec AwsPrompt#tool_spec}
   */
   readonly toolSpec?: ToolSpecProperty[] | cdktn.IResolvable;
 }
@@ -2917,7 +2917,7 @@ export class AutoPropertyList extends cdktn.ComplexList {
 }
 export interface VariantTemplateConfigurationChatToolConfigurationToolChoiceToolProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#name TfPrompt#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#name AwsPrompt#name}
   */
   readonly name: string;
 }
@@ -3002,19 +3002,19 @@ export interface ToolChoiceProperty {
   /**
   * any block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#any TfPrompt#any}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#any AwsPrompt#any}
   */
   readonly any?: AnyProperty[] | cdktn.IResolvable;
   /**
   * auto block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#auto TfPrompt#auto}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#auto AwsPrompt#auto}
   */
   readonly auto?: AutoProperty[] | cdktn.IResolvable;
   /**
   * tool block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#tool TfPrompt#tool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#tool AwsPrompt#tool}
   */
   readonly tool?: VariantTemplateConfigurationChatToolConfigurationToolChoiceToolProperty[] | cdktn.IResolvable;
 }
@@ -3146,13 +3146,13 @@ export interface ToolConfigurationProperty {
   /**
   * tool block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#tool TfPrompt#tool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#tool AwsPrompt#tool}
   */
   readonly tool?: VariantTemplateConfigurationChatToolConfigurationToolProperty[] | cdktn.IResolvable;
   /**
   * tool_choice block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#tool_choice TfPrompt#tool_choice}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#tool_choice AwsPrompt#tool_choice}
   */
   readonly toolChoice?: ToolChoiceProperty[] | cdktn.IResolvable;
 }
@@ -3262,25 +3262,25 @@ export interface ChatProperty {
   /**
   * input_variable block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#input_variable TfPrompt#input_variable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#input_variable AwsPrompt#input_variable}
   */
   readonly inputVariable?: VariantTemplateConfigurationChatInputVariableProperty[] | cdktn.IResolvable;
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#message TfPrompt#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#message AwsPrompt#message}
   */
   readonly message?: MessageProperty[] | cdktn.IResolvable;
   /**
   * system block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#system TfPrompt#system}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#system AwsPrompt#system}
   */
   readonly systemAttribute?: SystemProperty[] | cdktn.IResolvable;
   /**
   * tool_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#tool_configuration TfPrompt#tool_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#tool_configuration AwsPrompt#tool_configuration}
   */
   readonly toolConfiguration?: ToolConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -3432,7 +3432,7 @@ export class ChatPropertyList extends cdktn.ComplexList {
 }
 export interface VariantTemplateConfigurationTextCachePointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#type TfPrompt#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#type AwsPrompt#type}
   */
   readonly type: string;
 }
@@ -3515,7 +3515,7 @@ export class VariantTemplateConfigurationTextCachePointPropertyList extends cdkt
 }
 export interface VariantTemplateConfigurationTextInputVariableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#name TfPrompt#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#name AwsPrompt#name}
   */
   readonly name: string;
 }
@@ -3598,19 +3598,19 @@ export class VariantTemplateConfigurationTextInputVariablePropertyList extends c
 }
 export interface VariantTemplateConfigurationTextProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#text TfPrompt#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#text AwsPrompt#text}
   */
   readonly text: string;
   /**
   * cache_point block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#cache_point TfPrompt#cache_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#cache_point AwsPrompt#cache_point}
   */
   readonly cachePoint?: VariantTemplateConfigurationTextCachePointProperty[] | cdktn.IResolvable;
   /**
   * input_variable block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#input_variable TfPrompt#input_variable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#input_variable AwsPrompt#input_variable}
   */
   readonly inputVariable?: VariantTemplateConfigurationTextInputVariableProperty[] | cdktn.IResolvable;
 }
@@ -3739,13 +3739,13 @@ export interface TemplateConfigurationProperty {
   /**
   * chat block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#chat TfPrompt#chat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#chat AwsPrompt#chat}
   */
   readonly chat?: ChatProperty[] | cdktn.IResolvable;
   /**
   * text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#text TfPrompt#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#text AwsPrompt#text}
   */
   readonly text?: VariantTemplateConfigurationTextProperty[] | cdktn.IResolvable;
 }
@@ -3853,43 +3853,43 @@ export class TemplateConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface VariantProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#additional_model_request_fields TfPrompt#additional_model_request_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#additional_model_request_fields AwsPrompt#additional_model_request_fields}
   */
   readonly additionalModelRequestFields?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#model_id TfPrompt#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#model_id AwsPrompt#model_id}
   */
   readonly modelId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#name TfPrompt#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#name AwsPrompt#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#template_type TfPrompt#template_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#template_type AwsPrompt#template_type}
   */
   readonly templateType: string;
   /**
   * gen_ai_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#gen_ai_resource TfPrompt#gen_ai_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#gen_ai_resource AwsPrompt#gen_ai_resource}
   */
   readonly genAiResource?: GenAiResourceProperty[] | cdktn.IResolvable;
   /**
   * inference_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#inference_configuration TfPrompt#inference_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#inference_configuration AwsPrompt#inference_configuration}
   */
   readonly inferenceConfiguration?: InferenceConfigurationProperty[] | cdktn.IResolvable;
   /**
   * metadata block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#metadata TfPrompt#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#metadata AwsPrompt#metadata}
   */
   readonly metadata?: MetadataProperty[] | cdktn.IResolvable;
   /**
   * template_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#template_configuration TfPrompt#template_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_prompt#template_configuration AwsPrompt#template_configuration}
   */
   readonly templateConfiguration?: TemplateConfigurationProperty[] | cdktn.IResolvable;
 }

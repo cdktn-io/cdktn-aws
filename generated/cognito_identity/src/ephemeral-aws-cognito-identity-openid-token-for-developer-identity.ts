@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface EphemeralTfOpenidTokenForDeveloperIdentityConfig extends cdktn.TerraformEphemeralMetaArguments {
+export interface EphemeralAwsOpenidTokenForDeveloperIdentityConfig extends cdktn.TerraformEphemeralMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity#identity_id EphemeralTfOpenidTokenForDeveloperIdentity#identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity#identity_id EphemeralAwsOpenidTokenForDeveloperIdentity#identity_id}
   */
   readonly identityId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity#identity_pool_id EphemeralTfOpenidTokenForDeveloperIdentity#identity_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity#identity_pool_id EphemeralAwsOpenidTokenForDeveloperIdentity#identity_pool_id}
   */
   readonly identityPoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity#logins EphemeralTfOpenidTokenForDeveloperIdentity#logins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity#logins EphemeralAwsOpenidTokenForDeveloperIdentity#logins}
   */
   readonly logins: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity#principal_tags EphemeralTfOpenidTokenForDeveloperIdentity#principal_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity#principal_tags EphemeralAwsOpenidTokenForDeveloperIdentity#principal_tags}
   */
   readonly principalTags?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity#region EphemeralTfOpenidTokenForDeveloperIdentity#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity#region EphemeralAwsOpenidTokenForDeveloperIdentity#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity#token_duration EphemeralTfOpenidTokenForDeveloperIdentity#token_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity#token_duration EphemeralAwsOpenidTokenForDeveloperIdentity#token_duration}
   */
   readonly tokenDuration?: number;
 }
@@ -37,7 +37,7 @@ export interface EphemeralTfOpenidTokenForDeveloperIdentityConfig extends cdktn.
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/cognito_identity_openid_token_for_developer_identity aws_cognito_identity_openid_token_for_developer_identity}
 */
-export class EphemeralTfOpenidTokenForDeveloperIdentity extends cdktn.TerraformEphemeralResource {
+export class EphemeralAwsOpenidTokenForDeveloperIdentity extends cdktn.TerraformEphemeralResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,9 +53,9 @@ export class EphemeralTfOpenidTokenForDeveloperIdentity extends cdktn.TerraformE
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options EphemeralTfOpenidTokenForDeveloperIdentityConfig
+  * @param options EphemeralAwsOpenidTokenForDeveloperIdentityConfig
   */
-  public constructor(scope: Construct, id: string, config: EphemeralTfOpenidTokenForDeveloperIdentityConfig) {
+  public constructor(scope: Construct, id: string, config: EphemeralAwsOpenidTokenForDeveloperIdentityConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_identity_openid_token_for_developer_identity',
       terraformGeneratorMetadata: {

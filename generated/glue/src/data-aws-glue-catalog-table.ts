@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfCatalogTableConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsCatalogTableConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#catalog_id DataTfCatalogTable#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#catalog_id DataAwsCatalogTable#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#database_name DataTfCatalogTable#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#database_name DataAwsCatalogTable#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#id DataTfCatalogTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#id DataAwsCatalogTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#name DataTfCatalogTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#name DataAwsCatalogTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#query_as_of_time DataTfCatalogTable#query_as_of_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#query_as_of_time DataAwsCatalogTable#query_as_of_time}
   */
   readonly queryAsOfTime?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#region DataTfCatalogTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#region DataAwsCatalogTable#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#transaction_id DataTfCatalogTable#transaction_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#transaction_id DataAwsCatalogTable#transaction_id}
   */
   readonly transactionId?: number;
 }
@@ -44,7 +44,7 @@ export interface DataTfCatalogTableConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table aws_glue_catalog_table}
 */
-export class DataTfCatalogTable extends cdktn.TerraformDataSource {
+export class DataAwsCatalogTable extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class DataTfCatalogTable extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfCatalogTable resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsCatalogTable resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfCatalogTable to import
-  * @param importFromId The id of the existing DataTfCatalogTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfCatalogTable to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsCatalogTable to import
+  * @param importFromId The id of the existing DataAwsCatalogTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsCatalogTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_catalog_table", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class DataTfCatalogTable extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfCatalogTableConfig
+  * @param options DataAwsCatalogTableConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfCatalogTableConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsCatalogTableConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_catalog_table',
       terraformGeneratorMetadata: {
@@ -185,13 +185,13 @@ export class DataTfCatalogTable extends cdktn.TerraformDataSource {
   }
 
   // partition_index - computed: true, optional: false, required: false
-  private _partitionIndex = new DataTfCatalogTable.PartitionIndexPropertyList(this, "partition_index", false);
+  private _partitionIndex = new DataAwsCatalogTable.PartitionIndexPropertyList(this, "partition_index", false);
   public get partitionIndex() {
     return this._partitionIndex;
   }
 
   // partition_keys - computed: true, optional: false, required: false
-  private _partitionKeys = new DataTfCatalogTable.PartitionKeysPropertyList(this, "partition_keys", false);
+  private _partitionKeys = new DataAwsCatalogTable.PartitionKeysPropertyList(this, "partition_keys", false);
   public get partitionKeys() {
     return this._partitionKeys;
   }
@@ -234,7 +234,7 @@ export class DataTfCatalogTable extends cdktn.TerraformDataSource {
   }
 
   // storage_descriptor - computed: true, optional: false, required: false
-  private _storageDescriptor = new DataTfCatalogTable.StorageDescriptorPropertyList(this, "storage_descriptor", false);
+  private _storageDescriptor = new DataAwsCatalogTable.StorageDescriptorPropertyList(this, "storage_descriptor", false);
   public get storageDescriptor() {
     return this._storageDescriptor;
   }
@@ -245,7 +245,7 @@ export class DataTfCatalogTable extends cdktn.TerraformDataSource {
   }
 
   // target_table - computed: true, optional: false, required: false
-  private _targetTable = new DataTfCatalogTable.TargetTablePropertyList(this, "target_table", false);
+  private _targetTable = new DataAwsCatalogTable.TargetTablePropertyList(this, "target_table", false);
   public get targetTable() {
     return this._targetTable;
   }
@@ -343,7 +343,7 @@ export class DataTfCatalogTable extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfCatalogTablePartitionIndexPropertyToTerraform(struct?: DataTfCatalogTable.PartitionIndexProperty): any {
+export function dataAwsCatalogTablePartitionIndexPropertyToTerraform(struct?: DataAwsCatalogTable.PartitionIndexProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function dataTfCatalogTablePartitionIndexPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfCatalogTablePartitionIndexPropertyToHclTerraform(struct?: DataTfCatalogTable.PartitionIndexProperty): any {
+export function dataAwsCatalogTablePartitionIndexPropertyToHclTerraform(struct?: DataAwsCatalogTable.PartitionIndexProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function dataTfCatalogTablePartitionIndexPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataTfCatalogTablePartitionKeysPropertyToTerraform(struct?: DataTfCatalogTable.PartitionKeysProperty): any {
+export function dataAwsCatalogTablePartitionKeysPropertyToTerraform(struct?: DataAwsCatalogTable.PartitionKeysProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function dataTfCatalogTablePartitionKeysPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfCatalogTablePartitionKeysPropertyToHclTerraform(struct?: DataTfCatalogTable.PartitionKeysProperty): any {
+export function dataAwsCatalogTablePartitionKeysPropertyToHclTerraform(struct?: DataAwsCatalogTable.PartitionKeysProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function dataTfCatalogTablePartitionKeysPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataTfCatalogTableColumnsPropertyToTerraform(struct?: DataTfCatalogTable.ColumnsProperty): any {
+export function dataAwsCatalogTableColumnsPropertyToTerraform(struct?: DataAwsCatalogTable.ColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,7 +395,7 @@ export function dataTfCatalogTableColumnsPropertyToTerraform(struct?: DataTfCata
 }
 
 
-export function dataTfCatalogTableColumnsPropertyToHclTerraform(struct?: DataTfCatalogTable.ColumnsProperty): any {
+export function dataAwsCatalogTableColumnsPropertyToHclTerraform(struct?: DataAwsCatalogTable.ColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -406,7 +406,7 @@ export function dataTfCatalogTableColumnsPropertyToHclTerraform(struct?: DataTfC
 }
 
 
-export function dataTfCatalogTableSchemaIdPropertyToTerraform(struct?: DataTfCatalogTable.SchemaIdProperty): any {
+export function dataAwsCatalogTableSchemaIdPropertyToTerraform(struct?: DataAwsCatalogTable.SchemaIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function dataTfCatalogTableSchemaIdPropertyToTerraform(struct?: DataTfCat
 }
 
 
-export function dataTfCatalogTableSchemaIdPropertyToHclTerraform(struct?: DataTfCatalogTable.SchemaIdProperty): any {
+export function dataAwsCatalogTableSchemaIdPropertyToHclTerraform(struct?: DataAwsCatalogTable.SchemaIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,7 +427,7 @@ export function dataTfCatalogTableSchemaIdPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export function dataTfCatalogTableSchemaReferencePropertyToTerraform(struct?: DataTfCatalogTable.SchemaReferenceProperty): any {
+export function dataAwsCatalogTableSchemaReferencePropertyToTerraform(struct?: DataAwsCatalogTable.SchemaReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -437,7 +437,7 @@ export function dataTfCatalogTableSchemaReferencePropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfCatalogTableSchemaReferencePropertyToHclTerraform(struct?: DataTfCatalogTable.SchemaReferenceProperty): any {
+export function dataAwsCatalogTableSchemaReferencePropertyToHclTerraform(struct?: DataAwsCatalogTable.SchemaReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function dataTfCatalogTableSchemaReferencePropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfCatalogTableSerDeInfoPropertyToTerraform(struct?: DataTfCatalogTable.SerDeInfoProperty): any {
+export function dataAwsCatalogTableSerDeInfoPropertyToTerraform(struct?: DataAwsCatalogTable.SerDeInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,7 +458,7 @@ export function dataTfCatalogTableSerDeInfoPropertyToTerraform(struct?: DataTfCa
 }
 
 
-export function dataTfCatalogTableSerDeInfoPropertyToHclTerraform(struct?: DataTfCatalogTable.SerDeInfoProperty): any {
+export function dataAwsCatalogTableSerDeInfoPropertyToHclTerraform(struct?: DataAwsCatalogTable.SerDeInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function dataTfCatalogTableSerDeInfoPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfCatalogTableSkewedInfoPropertyToTerraform(struct?: DataTfCatalogTable.SkewedInfoProperty): any {
+export function dataAwsCatalogTableSkewedInfoPropertyToTerraform(struct?: DataAwsCatalogTable.SkewedInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -479,7 +479,7 @@ export function dataTfCatalogTableSkewedInfoPropertyToTerraform(struct?: DataTfC
 }
 
 
-export function dataTfCatalogTableSkewedInfoPropertyToHclTerraform(struct?: DataTfCatalogTable.SkewedInfoProperty): any {
+export function dataAwsCatalogTableSkewedInfoPropertyToHclTerraform(struct?: DataAwsCatalogTable.SkewedInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -490,7 +490,7 @@ export function dataTfCatalogTableSkewedInfoPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataTfCatalogTableSortColumnsPropertyToTerraform(struct?: DataTfCatalogTable.SortColumnsProperty): any {
+export function dataAwsCatalogTableSortColumnsPropertyToTerraform(struct?: DataAwsCatalogTable.SortColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,7 +500,7 @@ export function dataTfCatalogTableSortColumnsPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfCatalogTableSortColumnsPropertyToHclTerraform(struct?: DataTfCatalogTable.SortColumnsProperty): any {
+export function dataAwsCatalogTableSortColumnsPropertyToHclTerraform(struct?: DataAwsCatalogTable.SortColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -511,7 +511,7 @@ export function dataTfCatalogTableSortColumnsPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfCatalogTableStorageDescriptorPropertyToTerraform(struct?: DataTfCatalogTable.StorageDescriptorProperty): any {
+export function dataAwsCatalogTableStorageDescriptorPropertyToTerraform(struct?: DataAwsCatalogTable.StorageDescriptorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function dataTfCatalogTableStorageDescriptorPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfCatalogTableStorageDescriptorPropertyToHclTerraform(struct?: DataTfCatalogTable.StorageDescriptorProperty): any {
+export function dataAwsCatalogTableStorageDescriptorPropertyToHclTerraform(struct?: DataAwsCatalogTable.StorageDescriptorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,7 +532,7 @@ export function dataTfCatalogTableStorageDescriptorPropertyToHclTerraform(struct
 }
 
 
-export function dataTfCatalogTableTargetTablePropertyToTerraform(struct?: DataTfCatalogTable.TargetTableProperty): any {
+export function dataAwsCatalogTableTargetTablePropertyToTerraform(struct?: DataAwsCatalogTable.TargetTableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -542,7 +542,7 @@ export function dataTfCatalogTableTargetTablePropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfCatalogTableTargetTablePropertyToHclTerraform(struct?: DataTfCatalogTable.TargetTableProperty): any {
+export function dataAwsCatalogTableTargetTablePropertyToHclTerraform(struct?: DataAwsCatalogTable.TargetTableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,7 +553,7 @@ export function dataTfCatalogTableTargetTablePropertyToHclTerraform(struct?: Dat
 }
 
 
-export namespace DataTfCatalogTable {
+export namespace DataAwsCatalogTable {
 export interface PartitionIndexProperty {
 }
 export class PartitionIndexPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSecurityGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSecurityGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#description TfSecurityGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#description AwsSecurityGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#egress TfSecurityGroup#egress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#egress AwsSecurityGroup#egress}
   */
-  readonly egress?: TfSecurityGroup.EgressProperty[] | cdktn.IResolvable;
+  readonly egress?: AwsSecurityGroup.EgressProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#id TfSecurityGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#id AwsSecurityGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#ingress TfSecurityGroup#ingress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#ingress AwsSecurityGroup#ingress}
   */
-  readonly ingress?: TfSecurityGroup.IngressProperty[] | cdktn.IResolvable;
+  readonly ingress?: AwsSecurityGroup.IngressProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#name TfSecurityGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#name AwsSecurityGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#name_prefix TfSecurityGroup#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#name_prefix AwsSecurityGroup#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#region TfSecurityGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#region AwsSecurityGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#revoke_rules_on_delete TfSecurityGroup#revoke_rules_on_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#revoke_rules_on_delete AwsSecurityGroup#revoke_rules_on_delete}
   */
   readonly revokeRulesOnDelete?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#tags TfSecurityGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#tags AwsSecurityGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#tags_all TfSecurityGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#tags_all AwsSecurityGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#vpc_id TfSecurityGroup#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#vpc_id AwsSecurityGroup#vpc_id}
   */
   readonly vpcId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#timeouts TfSecurityGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#timeouts AwsSecurityGroup#timeouts}
   */
-  readonly timeouts?: TfSecurityGroup.TimeoutsProperty;
+  readonly timeouts?: AwsSecurityGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group aws_security_group}
 */
-export class TfSecurityGroup extends cdktn.TerraformResource {
+export class AwsSecurityGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class TfSecurityGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSecurityGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSecurityGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSecurityGroup to import
-  * @param importFromId The id of the existing TfSecurityGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSecurityGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsSecurityGroup to import
+  * @param importFromId The id of the existing AwsSecurityGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSecurityGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_security_group", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class TfSecurityGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSecurityGroupConfig = {}
+  * @param options AwsSecurityGroupConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfSecurityGroupConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsSecurityGroupConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_security_group',
       terraformGeneratorMetadata: {
@@ -154,11 +154,11 @@ export class TfSecurityGroup extends cdktn.TerraformResource {
   }
 
   // egress - computed: true, optional: true, required: false
-  private _egress = new TfSecurityGroup.EgressPropertyList(this, "egress", true);
+  private _egress = new AwsSecurityGroup.EgressPropertyList(this, "egress", true);
   public get egress() {
     return this._egress;
   }
-  public putEgress(value: TfSecurityGroup.EgressProperty[] | cdktn.IResolvable) {
+  public putEgress(value: AwsSecurityGroup.EgressProperty[] | cdktn.IResolvable) {
     this._egress.internalValue = value;
   }
   public resetEgress() {
@@ -186,11 +186,11 @@ export class TfSecurityGroup extends cdktn.TerraformResource {
   }
 
   // ingress - computed: true, optional: true, required: false
-  private _ingress = new TfSecurityGroup.IngressPropertyList(this, "ingress", true);
+  private _ingress = new AwsSecurityGroup.IngressPropertyList(this, "ingress", true);
   public get ingress() {
     return this._ingress;
   }
-  public putIngress(value: TfSecurityGroup.IngressProperty[] | cdktn.IResolvable) {
+  public putIngress(value: AwsSecurityGroup.IngressProperty[] | cdktn.IResolvable) {
     this._ingress.internalValue = value;
   }
   public resetIngress() {
@@ -319,11 +319,11 @@ export class TfSecurityGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfSecurityGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsSecurityGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfSecurityGroup.TimeoutsProperty) {
+  public putTimeouts(value: AwsSecurityGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -341,9 +341,9 @@ export class TfSecurityGroup extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktn.stringToTerraform(this._description),
-      egress: cdktn.listMapper(tfSecurityGroupEgressPropertyToTerraform, false)(this._egress.internalValue),
+      egress: cdktn.listMapper(awsSecurityGroupEgressPropertyToTerraform, false)(this._egress.internalValue),
       id: cdktn.stringToTerraform(this._id),
-      ingress: cdktn.listMapper(tfSecurityGroupIngressPropertyToTerraform, false)(this._ingress.internalValue),
+      ingress: cdktn.listMapper(awsSecurityGroupIngressPropertyToTerraform, false)(this._ingress.internalValue),
       name: cdktn.stringToTerraform(this._name),
       name_prefix: cdktn.stringToTerraform(this._namePrefix),
       region: cdktn.stringToTerraform(this._region),
@@ -351,7 +351,7 @@ export class TfSecurityGroup extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      timeouts: tfSecurityGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsSecurityGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -364,10 +364,10 @@ export class TfSecurityGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       egress: {
-        value: cdktn.listMapperHcl(tfSecurityGroupEgressPropertyToHclTerraform, false)(this._egress.internalValue),
+        value: cdktn.listMapperHcl(awsSecurityGroupEgressPropertyToHclTerraform, false)(this._egress.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfSecurityGroup.EgressPropertyList",
+        storageClassType: "AwsSecurityGroup.EgressPropertyList",
       },
       id: {
         value: cdktn.stringToHclTerraform(this._id),
@@ -376,10 +376,10 @@ export class TfSecurityGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       ingress: {
-        value: cdktn.listMapperHcl(tfSecurityGroupIngressPropertyToHclTerraform, false)(this._ingress.internalValue),
+        value: cdktn.listMapperHcl(awsSecurityGroupIngressPropertyToHclTerraform, false)(this._ingress.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfSecurityGroup.IngressPropertyList",
+        storageClassType: "AwsSecurityGroup.IngressPropertyList",
       },
       name: {
         value: cdktn.stringToHclTerraform(this._name),
@@ -424,10 +424,10 @@ export class TfSecurityGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfSecurityGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsSecurityGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfSecurityGroup.TimeoutsProperty",
+        storageClassType: "AwsSecurityGroup.TimeoutsProperty",
       },
     };
 
@@ -436,7 +436,7 @@ export class TfSecurityGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfSecurityGroupEgressPropertyToTerraform(struct?: TfSecurityGroup.EgressProperty | cdktn.IResolvable): any {
+export function awsSecurityGroupEgressPropertyToTerraform(struct?: AwsSecurityGroup.EgressProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,7 +455,7 @@ export function tfSecurityGroupEgressPropertyToTerraform(struct?: TfSecurityGrou
 }
 
 
-export function tfSecurityGroupEgressPropertyToHclTerraform(struct?: TfSecurityGroup.EgressProperty | cdktn.IResolvable): any {
+export function awsSecurityGroupEgressPropertyToHclTerraform(struct?: AwsSecurityGroup.EgressProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -522,7 +522,7 @@ export function tfSecurityGroupEgressPropertyToHclTerraform(struct?: TfSecurityG
 }
 
 
-export function tfSecurityGroupIngressPropertyToTerraform(struct?: TfSecurityGroup.IngressProperty | cdktn.IResolvable): any {
+export function awsSecurityGroupIngressPropertyToTerraform(struct?: AwsSecurityGroup.IngressProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -541,7 +541,7 @@ export function tfSecurityGroupIngressPropertyToTerraform(struct?: TfSecurityGro
 }
 
 
-export function tfSecurityGroupIngressPropertyToHclTerraform(struct?: TfSecurityGroup.IngressProperty | cdktn.IResolvable): any {
+export function awsSecurityGroupIngressPropertyToHclTerraform(struct?: AwsSecurityGroup.IngressProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,7 +608,7 @@ export function tfSecurityGroupIngressPropertyToHclTerraform(struct?: TfSecurity
 }
 
 
-export function tfSecurityGroupTimeoutsPropertyToTerraform(struct?: TfSecurityGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSecurityGroupTimeoutsPropertyToTerraform(struct?: AwsSecurityGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -620,7 +620,7 @@ export function tfSecurityGroupTimeoutsPropertyToTerraform(struct?: TfSecurityGr
 }
 
 
-export function tfSecurityGroupTimeoutsPropertyToHclTerraform(struct?: TfSecurityGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSecurityGroupTimeoutsPropertyToHclTerraform(struct?: AwsSecurityGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -645,42 +645,42 @@ export function tfSecurityGroupTimeoutsPropertyToHclTerraform(struct?: TfSecurit
 }
 
 
-export namespace TfSecurityGroup {
+export namespace AwsSecurityGroup {
 export interface EgressProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#cidr_blocks TfSecurityGroup#cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#cidr_blocks AwsSecurityGroup#cidr_blocks}
   */
   readonly cidrBlocks?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#description TfSecurityGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#description AwsSecurityGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#from_port TfSecurityGroup#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#from_port AwsSecurityGroup#from_port}
   */
   readonly fromPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#ipv6_cidr_blocks TfSecurityGroup#ipv6_cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#ipv6_cidr_blocks AwsSecurityGroup#ipv6_cidr_blocks}
   */
   readonly ipv6CidrBlocks?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#prefix_list_ids TfSecurityGroup#prefix_list_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#prefix_list_ids AwsSecurityGroup#prefix_list_ids}
   */
   readonly prefixListIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#protocol TfSecurityGroup#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#protocol AwsSecurityGroup#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#security_groups TfSecurityGroup#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#security_groups AwsSecurityGroup#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#self TfSecurityGroup#self}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#self AwsSecurityGroup#self}
   */
   readonly selfAttribute?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#to_port TfSecurityGroup#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#to_port AwsSecurityGroup#to_port}
   */
   readonly toPort?: number;
 }
@@ -942,39 +942,39 @@ export class EgressPropertyList extends cdktn.ComplexList {
 }
 export interface IngressProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#cidr_blocks TfSecurityGroup#cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#cidr_blocks AwsSecurityGroup#cidr_blocks}
   */
   readonly cidrBlocks?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#description TfSecurityGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#description AwsSecurityGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#from_port TfSecurityGroup#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#from_port AwsSecurityGroup#from_port}
   */
   readonly fromPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#ipv6_cidr_blocks TfSecurityGroup#ipv6_cidr_blocks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#ipv6_cidr_blocks AwsSecurityGroup#ipv6_cidr_blocks}
   */
   readonly ipv6CidrBlocks?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#prefix_list_ids TfSecurityGroup#prefix_list_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#prefix_list_ids AwsSecurityGroup#prefix_list_ids}
   */
   readonly prefixListIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#protocol TfSecurityGroup#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#protocol AwsSecurityGroup#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#security_groups TfSecurityGroup#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#security_groups AwsSecurityGroup#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#self TfSecurityGroup#self}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#self AwsSecurityGroup#self}
   */
   readonly selfAttribute?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#to_port TfSecurityGroup#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#to_port AwsSecurityGroup#to_port}
   */
   readonly toPort?: number;
 }
@@ -1236,11 +1236,11 @@ export class IngressPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#create TfSecurityGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#create AwsSecurityGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#delete TfSecurityGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/security_group#delete AwsSecurityGroup#delete}
   */
   readonly delete?: string;
 }

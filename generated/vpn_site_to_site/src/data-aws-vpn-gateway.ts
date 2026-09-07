@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#amazon_side_asn DataTfGateway#amazon_side_asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#amazon_side_asn DataAwsGateway#amazon_side_asn}
   */
   readonly amazonSideAsn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#attached_vpc_id DataTfGateway#attached_vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#attached_vpc_id DataAwsGateway#attached_vpc_id}
   */
   readonly attachedVpcId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#availability_zone DataTfGateway#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#availability_zone DataAwsGateway#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#id DataTfGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#id DataAwsGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,35 +28,35 @@ export interface DataTfGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#region DataTfGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#region DataAwsGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#state DataTfGateway#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#state DataAwsGateway#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#tags DataTfGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#tags DataAwsGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#filter DataTfGateway#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#filter DataAwsGateway#filter}
   */
-  readonly filter?: DataTfGateway.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsGateway.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#timeouts DataTfGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#timeouts DataAwsGateway#timeouts}
   */
-  readonly timeouts?: DataTfGateway.TimeoutsProperty;
+  readonly timeouts?: DataAwsGateway.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway aws_vpn_gateway}
 */
-export class DataTfGateway extends cdktn.TerraformDataSource {
+export class DataAwsGateway extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class DataTfGateway extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfGateway to import
-  * @param importFromId The id of the existing DataTfGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfGateway to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsGateway to import
+  * @param importFromId The id of the existing DataAwsGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpn_gateway", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class DataTfGateway extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfGatewayConfig = {}
+  * @param options DataAwsGatewayConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfGatewayConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsGatewayConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_vpn_gateway',
       terraformGeneratorMetadata: {
@@ -237,11 +237,11 @@ export class DataTfGateway extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfGateway.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsGateway.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfGateway.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsGateway.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -253,11 +253,11 @@ export class DataTfGateway extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfGateway.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsGateway.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfGateway.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsGateway.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -281,8 +281,8 @@ export class DataTfGateway extends cdktn.TerraformDataSource {
       region: cdktn.stringToTerraform(this._region),
       state: cdktn.stringToTerraform(this._state),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataTfGatewayFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataTfGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataAwsGatewayFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataAwsGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -331,16 +331,16 @@ export class DataTfGateway extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfGatewayFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsGatewayFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfGateway.FilterPropertyList",
+        storageClassType: "DataAwsGateway.FilterPropertyList",
       },
       timeouts: {
-        value: dataTfGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfGateway.TimeoutsProperty",
+        storageClassType: "DataAwsGateway.TimeoutsProperty",
       },
     };
 
@@ -349,7 +349,7 @@ export class DataTfGateway extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfGatewayFilterPropertyToTerraform(struct?: DataTfGateway.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsGatewayFilterPropertyToTerraform(struct?: DataAwsGateway.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function dataTfGatewayFilterPropertyToTerraform(struct?: DataTfGateway.Fi
 }
 
 
-export function dataTfGatewayFilterPropertyToHclTerraform(struct?: DataTfGateway.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsGatewayFilterPropertyToHclTerraform(struct?: DataAwsGateway.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function dataTfGatewayFilterPropertyToHclTerraform(struct?: DataTfGateway
 }
 
 
-export function dataTfGatewayTimeoutsPropertyToTerraform(struct?: DataTfGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsGatewayTimeoutsPropertyToTerraform(struct?: DataAwsGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,7 +397,7 @@ export function dataTfGatewayTimeoutsPropertyToTerraform(struct?: DataTfGateway.
 }
 
 
-export function dataTfGatewayTimeoutsPropertyToHclTerraform(struct?: DataTfGateway.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsGatewayTimeoutsPropertyToHclTerraform(struct?: DataAwsGateway.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,14 +416,14 @@ export function dataTfGatewayTimeoutsPropertyToHclTerraform(struct?: DataTfGatew
 }
 
 
-export namespace DataTfGateway {
+export namespace DataAwsGateway {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#name DataTfGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#name DataAwsGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#values DataTfGateway#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#values DataAwsGateway#values}
   */
   readonly values: string[];
 }
@@ -525,7 +525,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#read DataTfGateway#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_gateway#read DataAwsGateway#read}
   */
   readonly read?: string;
 }

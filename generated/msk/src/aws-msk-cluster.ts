@@ -5,102 +5,102 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClusterConfig extends cdktn.TerraformMetaArguments {
+export interface AwsClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#cluster_name TfCluster#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#cluster_name AwsCluster#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enhanced_monitoring TfCluster#enhanced_monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enhanced_monitoring AwsCluster#enhanced_monitoring}
   */
   readonly enhancedMonitoring?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#id TfCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#id AwsCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#kafka_version TfCluster#kafka_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#kafka_version AwsCluster#kafka_version}
   */
   readonly kafkaVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#number_of_broker_nodes TfCluster#number_of_broker_nodes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#number_of_broker_nodes AwsCluster#number_of_broker_nodes}
   */
   readonly numberOfBrokerNodes: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#region TfCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#region AwsCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#storage_mode TfCluster#storage_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#storage_mode AwsCluster#storage_mode}
   */
   readonly storageMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#tags TfCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#tags AwsCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#tags_all TfCluster#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#tags_all AwsCluster#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * broker_node_group_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#broker_node_group_info TfCluster#broker_node_group_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#broker_node_group_info AwsCluster#broker_node_group_info}
   */
-  readonly brokerNodeGroupInfo: TfCluster.BrokerNodeGroupInfoProperty;
+  readonly brokerNodeGroupInfo: AwsCluster.BrokerNodeGroupInfoProperty;
   /**
   * client_authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#client_authentication TfCluster#client_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#client_authentication AwsCluster#client_authentication}
   */
-  readonly clientAuthentication?: TfCluster.ClientAuthenticationProperty;
+  readonly clientAuthentication?: AwsCluster.ClientAuthenticationProperty;
   /**
   * configuration_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#configuration_info TfCluster#configuration_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#configuration_info AwsCluster#configuration_info}
   */
-  readonly configurationInfo?: TfCluster.ConfigurationInfoProperty;
+  readonly configurationInfo?: AwsCluster.ConfigurationInfoProperty;
   /**
   * encryption_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#encryption_info TfCluster#encryption_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#encryption_info AwsCluster#encryption_info}
   */
-  readonly encryptionInfo?: TfCluster.EncryptionInfoProperty;
+  readonly encryptionInfo?: AwsCluster.EncryptionInfoProperty;
   /**
   * logging_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#logging_info TfCluster#logging_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#logging_info AwsCluster#logging_info}
   */
-  readonly loggingInfo?: TfCluster.LoggingInfoProperty;
+  readonly loggingInfo?: AwsCluster.LoggingInfoProperty;
   /**
   * open_monitoring block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#open_monitoring TfCluster#open_monitoring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#open_monitoring AwsCluster#open_monitoring}
   */
-  readonly openMonitoring?: TfCluster.OpenMonitoringProperty;
+  readonly openMonitoring?: AwsCluster.OpenMonitoringProperty;
   /**
   * rebalancing block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#rebalancing TfCluster#rebalancing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#rebalancing AwsCluster#rebalancing}
   */
-  readonly rebalancing?: TfCluster.RebalancingProperty;
+  readonly rebalancing?: AwsCluster.RebalancingProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#timeouts TfCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#timeouts AwsCluster#timeouts}
   */
-  readonly timeouts?: TfCluster.TimeoutsProperty;
+  readonly timeouts?: AwsCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster aws_msk_cluster}
 */
-export class TfCluster extends cdktn.TerraformResource {
+export class AwsCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -111,11 +111,11 @@ export class TfCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCluster to import
-  * @param importFromId The id of the existing TfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCluster to import is found
+  * @param importToId The construct id used in the generated config for the AwsCluster to import
+  * @param importFromId The id of the existing AwsCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_msk_cluster", importId: importFromId, provider });
@@ -130,9 +130,9 @@ export class TfCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClusterConfig
+  * @param options AwsClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfClusterConfig) {
+  public constructor(scope: Construct, id: string, config: AwsClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_msk_cluster',
       terraformGeneratorMetadata: {
@@ -407,11 +407,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // broker_node_group_info - computed: false, optional: false, required: true
-  private _brokerNodeGroupInfo = new TfCluster.BrokerNodeGroupInfoPropertyOutputReference(this, "broker_node_group_info");
+  private _brokerNodeGroupInfo = new AwsCluster.BrokerNodeGroupInfoPropertyOutputReference(this, "broker_node_group_info");
   public get brokerNodeGroupInfo() {
     return this._brokerNodeGroupInfo;
   }
-  public putBrokerNodeGroupInfo(value: TfCluster.BrokerNodeGroupInfoProperty) {
+  public putBrokerNodeGroupInfo(value: AwsCluster.BrokerNodeGroupInfoProperty) {
     this._brokerNodeGroupInfo.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -420,11 +420,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // client_authentication - computed: false, optional: true, required: false
-  private _clientAuthentication = new TfCluster.ClientAuthenticationPropertyOutputReference(this, "client_authentication");
+  private _clientAuthentication = new AwsCluster.ClientAuthenticationPropertyOutputReference(this, "client_authentication");
   public get clientAuthentication() {
     return this._clientAuthentication;
   }
-  public putClientAuthentication(value: TfCluster.ClientAuthenticationProperty) {
+  public putClientAuthentication(value: AwsCluster.ClientAuthenticationProperty) {
     this._clientAuthentication.internalValue = value;
   }
   public resetClientAuthentication() {
@@ -436,11 +436,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // configuration_info - computed: false, optional: true, required: false
-  private _configurationInfo = new TfCluster.ConfigurationInfoPropertyOutputReference(this, "configuration_info");
+  private _configurationInfo = new AwsCluster.ConfigurationInfoPropertyOutputReference(this, "configuration_info");
   public get configurationInfo() {
     return this._configurationInfo;
   }
-  public putConfigurationInfo(value: TfCluster.ConfigurationInfoProperty) {
+  public putConfigurationInfo(value: AwsCluster.ConfigurationInfoProperty) {
     this._configurationInfo.internalValue = value;
   }
   public resetConfigurationInfo() {
@@ -452,11 +452,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // encryption_info - computed: false, optional: true, required: false
-  private _encryptionInfo = new TfCluster.EncryptionInfoPropertyOutputReference(this, "encryption_info");
+  private _encryptionInfo = new AwsCluster.EncryptionInfoPropertyOutputReference(this, "encryption_info");
   public get encryptionInfo() {
     return this._encryptionInfo;
   }
-  public putEncryptionInfo(value: TfCluster.EncryptionInfoProperty) {
+  public putEncryptionInfo(value: AwsCluster.EncryptionInfoProperty) {
     this._encryptionInfo.internalValue = value;
   }
   public resetEncryptionInfo() {
@@ -468,11 +468,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // logging_info - computed: false, optional: true, required: false
-  private _loggingInfo = new TfCluster.LoggingInfoPropertyOutputReference(this, "logging_info");
+  private _loggingInfo = new AwsCluster.LoggingInfoPropertyOutputReference(this, "logging_info");
   public get loggingInfo() {
     return this._loggingInfo;
   }
-  public putLoggingInfo(value: TfCluster.LoggingInfoProperty) {
+  public putLoggingInfo(value: AwsCluster.LoggingInfoProperty) {
     this._loggingInfo.internalValue = value;
   }
   public resetLoggingInfo() {
@@ -484,11 +484,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // open_monitoring - computed: false, optional: true, required: false
-  private _openMonitoring = new TfCluster.OpenMonitoringPropertyOutputReference(this, "open_monitoring");
+  private _openMonitoring = new AwsCluster.OpenMonitoringPropertyOutputReference(this, "open_monitoring");
   public get openMonitoring() {
     return this._openMonitoring;
   }
-  public putOpenMonitoring(value: TfCluster.OpenMonitoringProperty) {
+  public putOpenMonitoring(value: AwsCluster.OpenMonitoringProperty) {
     this._openMonitoring.internalValue = value;
   }
   public resetOpenMonitoring() {
@@ -500,11 +500,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // rebalancing - computed: false, optional: true, required: false
-  private _rebalancing = new TfCluster.RebalancingPropertyOutputReference(this, "rebalancing");
+  private _rebalancing = new AwsCluster.RebalancingPropertyOutputReference(this, "rebalancing");
   public get rebalancing() {
     return this._rebalancing;
   }
-  public putRebalancing(value: TfCluster.RebalancingProperty) {
+  public putRebalancing(value: AwsCluster.RebalancingProperty) {
     this._rebalancing.internalValue = value;
   }
   public resetRebalancing() {
@@ -516,11 +516,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCluster.TimeoutsProperty) {
+  public putTimeouts(value: AwsCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -546,14 +546,14 @@ export class TfCluster extends cdktn.TerraformResource {
       storage_mode: cdktn.stringToTerraform(this._storageMode),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      broker_node_group_info: tfClusterBrokerNodeGroupInfoPropertyToTerraform(this._brokerNodeGroupInfo.internalValue),
-      client_authentication: tfClusterClientAuthenticationPropertyToTerraform(this._clientAuthentication.internalValue),
-      configuration_info: tfClusterConfigurationInfoPropertyToTerraform(this._configurationInfo.internalValue),
-      encryption_info: tfClusterEncryptionInfoPropertyToTerraform(this._encryptionInfo.internalValue),
-      logging_info: tfClusterLoggingInfoPropertyToTerraform(this._loggingInfo.internalValue),
-      open_monitoring: tfClusterOpenMonitoringPropertyToTerraform(this._openMonitoring.internalValue),
-      rebalancing: tfClusterRebalancingPropertyToTerraform(this._rebalancing.internalValue),
-      timeouts: tfClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      broker_node_group_info: awsClusterBrokerNodeGroupInfoPropertyToTerraform(this._brokerNodeGroupInfo.internalValue),
+      client_authentication: awsClusterClientAuthenticationPropertyToTerraform(this._clientAuthentication.internalValue),
+      configuration_info: awsClusterConfigurationInfoPropertyToTerraform(this._configurationInfo.internalValue),
+      encryption_info: awsClusterEncryptionInfoPropertyToTerraform(this._encryptionInfo.internalValue),
+      logging_info: awsClusterLoggingInfoPropertyToTerraform(this._loggingInfo.internalValue),
+      open_monitoring: awsClusterOpenMonitoringPropertyToTerraform(this._openMonitoring.internalValue),
+      rebalancing: awsClusterRebalancingPropertyToTerraform(this._rebalancing.internalValue),
+      timeouts: awsClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -614,52 +614,52 @@ export class TfCluster extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       broker_node_group_info: {
-        value: tfClusterBrokerNodeGroupInfoPropertyToHclTerraform(this._brokerNodeGroupInfo.internalValue),
+        value: awsClusterBrokerNodeGroupInfoPropertyToHclTerraform(this._brokerNodeGroupInfo.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCluster.BrokerNodeGroupInfoPropertyList",
+        storageClassType: "AwsCluster.BrokerNodeGroupInfoPropertyList",
       },
       client_authentication: {
-        value: tfClusterClientAuthenticationPropertyToHclTerraform(this._clientAuthentication.internalValue),
+        value: awsClusterClientAuthenticationPropertyToHclTerraform(this._clientAuthentication.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCluster.ClientAuthenticationPropertyList",
+        storageClassType: "AwsCluster.ClientAuthenticationPropertyList",
       },
       configuration_info: {
-        value: tfClusterConfigurationInfoPropertyToHclTerraform(this._configurationInfo.internalValue),
+        value: awsClusterConfigurationInfoPropertyToHclTerraform(this._configurationInfo.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCluster.ConfigurationInfoPropertyList",
+        storageClassType: "AwsCluster.ConfigurationInfoPropertyList",
       },
       encryption_info: {
-        value: tfClusterEncryptionInfoPropertyToHclTerraform(this._encryptionInfo.internalValue),
+        value: awsClusterEncryptionInfoPropertyToHclTerraform(this._encryptionInfo.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCluster.EncryptionInfoPropertyList",
+        storageClassType: "AwsCluster.EncryptionInfoPropertyList",
       },
       logging_info: {
-        value: tfClusterLoggingInfoPropertyToHclTerraform(this._loggingInfo.internalValue),
+        value: awsClusterLoggingInfoPropertyToHclTerraform(this._loggingInfo.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCluster.LoggingInfoPropertyList",
+        storageClassType: "AwsCluster.LoggingInfoPropertyList",
       },
       open_monitoring: {
-        value: tfClusterOpenMonitoringPropertyToHclTerraform(this._openMonitoring.internalValue),
+        value: awsClusterOpenMonitoringPropertyToHclTerraform(this._openMonitoring.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCluster.OpenMonitoringPropertyList",
+        storageClassType: "AwsCluster.OpenMonitoringPropertyList",
       },
       rebalancing: {
-        value: tfClusterRebalancingPropertyToHclTerraform(this._rebalancing.internalValue),
+        value: awsClusterRebalancingPropertyToHclTerraform(this._rebalancing.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCluster.RebalancingPropertyList",
+        storageClassType: "AwsCluster.RebalancingPropertyList",
       },
       timeouts: {
-        value: tfClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCluster.TimeoutsProperty",
+        storageClassType: "AwsCluster.TimeoutsProperty",
       },
     };
 
@@ -668,7 +668,7 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 }
 
-export function tfClusterPublicAccessPropertyToTerraform(struct?: TfCluster.PublicAccessPropertyOutputReference | TfCluster.PublicAccessProperty): any {
+export function awsClusterPublicAccessPropertyToTerraform(struct?: AwsCluster.PublicAccessPropertyOutputReference | AwsCluster.PublicAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -679,7 +679,7 @@ export function tfClusterPublicAccessPropertyToTerraform(struct?: TfCluster.Publ
 }
 
 
-export function tfClusterPublicAccessPropertyToHclTerraform(struct?: TfCluster.PublicAccessPropertyOutputReference | TfCluster.PublicAccessProperty): any {
+export function awsClusterPublicAccessPropertyToHclTerraform(struct?: AwsCluster.PublicAccessPropertyOutputReference | AwsCluster.PublicAccessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -698,7 +698,7 @@ export function tfClusterPublicAccessPropertyToHclTerraform(struct?: TfCluster.P
 }
 
 
-export function tfClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyToTerraform(struct?: TfCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyOutputReference | TfCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslProperty): any {
+export function awsClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyToTerraform(struct?: AwsCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyOutputReference | AwsCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -710,7 +710,7 @@ export function tfClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClien
 }
 
 
-export function tfClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyToHclTerraform(struct?: TfCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyOutputReference | TfCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslProperty): any {
+export function awsClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyToHclTerraform(struct?: AwsCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyOutputReference | AwsCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -735,19 +735,19 @@ export function tfClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClien
 }
 
 
-export function tfClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyToTerraform(struct?: TfCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyOutputReference | TfCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationProperty): any {
+export function awsClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyToTerraform(struct?: AwsCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyOutputReference | AwsCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     tls: cdktn.booleanToTerraform(struct!.tls),
-    sasl: tfClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyToTerraform(struct!.sasl),
+    sasl: awsClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyToTerraform(struct!.sasl),
   }
 }
 
 
-export function tfClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyToHclTerraform(struct?: TfCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyOutputReference | TfCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationProperty): any {
+export function awsClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyToHclTerraform(struct?: AwsCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyOutputReference | AwsCluster.BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -760,7 +760,7 @@ export function tfClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClien
       storageClassType: "boolean",
     },
     sasl: {
-      value: tfClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyToHclTerraform(struct!.sasl),
+      value: awsClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyToHclTerraform(struct!.sasl),
       isBlock: true,
       type: "list",
       storageClassType: "BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslPropertyList",
@@ -772,25 +772,25 @@ export function tfClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClien
 }
 
 
-export function tfClusterVpcConnectivityPropertyToTerraform(struct?: TfCluster.VpcConnectivityPropertyOutputReference | TfCluster.VpcConnectivityProperty): any {
+export function awsClusterVpcConnectivityPropertyToTerraform(struct?: AwsCluster.VpcConnectivityPropertyOutputReference | AwsCluster.VpcConnectivityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    client_authentication: tfClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyToTerraform(struct!.clientAuthentication),
+    client_authentication: awsClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyToTerraform(struct!.clientAuthentication),
   }
 }
 
 
-export function tfClusterVpcConnectivityPropertyToHclTerraform(struct?: TfCluster.VpcConnectivityPropertyOutputReference | TfCluster.VpcConnectivityProperty): any {
+export function awsClusterVpcConnectivityPropertyToHclTerraform(struct?: AwsCluster.VpcConnectivityPropertyOutputReference | AwsCluster.VpcConnectivityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     client_authentication: {
-      value: tfClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyToHclTerraform(struct!.clientAuthentication),
+      value: awsClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyToHclTerraform(struct!.clientAuthentication),
       isBlock: true,
       type: "list",
       storageClassType: "BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationPropertyList",
@@ -802,20 +802,20 @@ export function tfClusterVpcConnectivityPropertyToHclTerraform(struct?: TfCluste
 }
 
 
-export function tfClusterConnectivityInfoPropertyToTerraform(struct?: TfCluster.ConnectivityInfoPropertyOutputReference | TfCluster.ConnectivityInfoProperty): any {
+export function awsClusterConnectivityInfoPropertyToTerraform(struct?: AwsCluster.ConnectivityInfoPropertyOutputReference | AwsCluster.ConnectivityInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     network_type: cdktn.stringToTerraform(struct!.networkType),
-    public_access: tfClusterPublicAccessPropertyToTerraform(struct!.publicAccess),
-    vpc_connectivity: tfClusterVpcConnectivityPropertyToTerraform(struct!.vpcConnectivity),
+    public_access: awsClusterPublicAccessPropertyToTerraform(struct!.publicAccess),
+    vpc_connectivity: awsClusterVpcConnectivityPropertyToTerraform(struct!.vpcConnectivity),
   }
 }
 
 
-export function tfClusterConnectivityInfoPropertyToHclTerraform(struct?: TfCluster.ConnectivityInfoPropertyOutputReference | TfCluster.ConnectivityInfoProperty): any {
+export function awsClusterConnectivityInfoPropertyToHclTerraform(struct?: AwsCluster.ConnectivityInfoPropertyOutputReference | AwsCluster.ConnectivityInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -828,13 +828,13 @@ export function tfClusterConnectivityInfoPropertyToHclTerraform(struct?: TfClust
       storageClassType: "string",
     },
     public_access: {
-      value: tfClusterPublicAccessPropertyToHclTerraform(struct!.publicAccess),
+      value: awsClusterPublicAccessPropertyToHclTerraform(struct!.publicAccess),
       isBlock: true,
       type: "list",
       storageClassType: "PublicAccessPropertyList",
     },
     vpc_connectivity: {
-      value: tfClusterVpcConnectivityPropertyToHclTerraform(struct!.vpcConnectivity),
+      value: awsClusterVpcConnectivityPropertyToHclTerraform(struct!.vpcConnectivity),
       isBlock: true,
       type: "list",
       storageClassType: "VpcConnectivityPropertyList",
@@ -846,7 +846,7 @@ export function tfClusterConnectivityInfoPropertyToHclTerraform(struct?: TfClust
 }
 
 
-export function tfClusterProvisionedThroughputPropertyToTerraform(struct?: TfCluster.ProvisionedThroughputPropertyOutputReference | TfCluster.ProvisionedThroughputProperty): any {
+export function awsClusterProvisionedThroughputPropertyToTerraform(struct?: AwsCluster.ProvisionedThroughputPropertyOutputReference | AwsCluster.ProvisionedThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -858,7 +858,7 @@ export function tfClusterProvisionedThroughputPropertyToTerraform(struct?: TfClu
 }
 
 
-export function tfClusterProvisionedThroughputPropertyToHclTerraform(struct?: TfCluster.ProvisionedThroughputPropertyOutputReference | TfCluster.ProvisionedThroughputProperty): any {
+export function awsClusterProvisionedThroughputPropertyToHclTerraform(struct?: AwsCluster.ProvisionedThroughputPropertyOutputReference | AwsCluster.ProvisionedThroughputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -883,19 +883,19 @@ export function tfClusterProvisionedThroughputPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfClusterEbsStorageInfoPropertyToTerraform(struct?: TfCluster.EbsStorageInfoPropertyOutputReference | TfCluster.EbsStorageInfoProperty): any {
+export function awsClusterEbsStorageInfoPropertyToTerraform(struct?: AwsCluster.EbsStorageInfoPropertyOutputReference | AwsCluster.EbsStorageInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     volume_size: cdktn.numberToTerraform(struct!.volumeSize),
-    provisioned_throughput: tfClusterProvisionedThroughputPropertyToTerraform(struct!.provisionedThroughput),
+    provisioned_throughput: awsClusterProvisionedThroughputPropertyToTerraform(struct!.provisionedThroughput),
   }
 }
 
 
-export function tfClusterEbsStorageInfoPropertyToHclTerraform(struct?: TfCluster.EbsStorageInfoPropertyOutputReference | TfCluster.EbsStorageInfoProperty): any {
+export function awsClusterEbsStorageInfoPropertyToHclTerraform(struct?: AwsCluster.EbsStorageInfoPropertyOutputReference | AwsCluster.EbsStorageInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -908,7 +908,7 @@ export function tfClusterEbsStorageInfoPropertyToHclTerraform(struct?: TfCluster
       storageClassType: "number",
     },
     provisioned_throughput: {
-      value: tfClusterProvisionedThroughputPropertyToHclTerraform(struct!.provisionedThroughput),
+      value: awsClusterProvisionedThroughputPropertyToHclTerraform(struct!.provisionedThroughput),
       isBlock: true,
       type: "list",
       storageClassType: "ProvisionedThroughputPropertyList",
@@ -920,25 +920,25 @@ export function tfClusterEbsStorageInfoPropertyToHclTerraform(struct?: TfCluster
 }
 
 
-export function tfClusterStorageInfoPropertyToTerraform(struct?: TfCluster.StorageInfoPropertyOutputReference | TfCluster.StorageInfoProperty): any {
+export function awsClusterStorageInfoPropertyToTerraform(struct?: AwsCluster.StorageInfoPropertyOutputReference | AwsCluster.StorageInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    ebs_storage_info: tfClusterEbsStorageInfoPropertyToTerraform(struct!.ebsStorageInfo),
+    ebs_storage_info: awsClusterEbsStorageInfoPropertyToTerraform(struct!.ebsStorageInfo),
   }
 }
 
 
-export function tfClusterStorageInfoPropertyToHclTerraform(struct?: TfCluster.StorageInfoPropertyOutputReference | TfCluster.StorageInfoProperty): any {
+export function awsClusterStorageInfoPropertyToHclTerraform(struct?: AwsCluster.StorageInfoPropertyOutputReference | AwsCluster.StorageInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     ebs_storage_info: {
-      value: tfClusterEbsStorageInfoPropertyToHclTerraform(struct!.ebsStorageInfo),
+      value: awsClusterEbsStorageInfoPropertyToHclTerraform(struct!.ebsStorageInfo),
       isBlock: true,
       type: "list",
       storageClassType: "EbsStorageInfoPropertyList",
@@ -950,7 +950,7 @@ export function tfClusterStorageInfoPropertyToHclTerraform(struct?: TfCluster.St
 }
 
 
-export function tfClusterBrokerNodeGroupInfoPropertyToTerraform(struct?: TfCluster.BrokerNodeGroupInfoPropertyOutputReference | TfCluster.BrokerNodeGroupInfoProperty): any {
+export function awsClusterBrokerNodeGroupInfoPropertyToTerraform(struct?: AwsCluster.BrokerNodeGroupInfoPropertyOutputReference | AwsCluster.BrokerNodeGroupInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -960,13 +960,13 @@ export function tfClusterBrokerNodeGroupInfoPropertyToTerraform(struct?: TfClust
     client_subnets: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.clientSubnets),
     instance_type: cdktn.stringToTerraform(struct!.instanceType),
     security_groups: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.securityGroups),
-    connectivity_info: tfClusterConnectivityInfoPropertyToTerraform(struct!.connectivityInfo),
-    storage_info: tfClusterStorageInfoPropertyToTerraform(struct!.storageInfo),
+    connectivity_info: awsClusterConnectivityInfoPropertyToTerraform(struct!.connectivityInfo),
+    storage_info: awsClusterStorageInfoPropertyToTerraform(struct!.storageInfo),
   }
 }
 
 
-export function tfClusterBrokerNodeGroupInfoPropertyToHclTerraform(struct?: TfCluster.BrokerNodeGroupInfoPropertyOutputReference | TfCluster.BrokerNodeGroupInfoProperty): any {
+export function awsClusterBrokerNodeGroupInfoPropertyToHclTerraform(struct?: AwsCluster.BrokerNodeGroupInfoPropertyOutputReference | AwsCluster.BrokerNodeGroupInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -997,13 +997,13 @@ export function tfClusterBrokerNodeGroupInfoPropertyToHclTerraform(struct?: TfCl
       storageClassType: "stringList",
     },
     connectivity_info: {
-      value: tfClusterConnectivityInfoPropertyToHclTerraform(struct!.connectivityInfo),
+      value: awsClusterConnectivityInfoPropertyToHclTerraform(struct!.connectivityInfo),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectivityInfoPropertyList",
     },
     storage_info: {
-      value: tfClusterStorageInfoPropertyToHclTerraform(struct!.storageInfo),
+      value: awsClusterStorageInfoPropertyToHclTerraform(struct!.storageInfo),
       isBlock: true,
       type: "list",
       storageClassType: "StorageInfoPropertyList",
@@ -1015,7 +1015,7 @@ export function tfClusterBrokerNodeGroupInfoPropertyToHclTerraform(struct?: TfCl
 }
 
 
-export function tfClusterClientAuthenticationSaslPropertyToTerraform(struct?: TfCluster.ClientAuthenticationSaslPropertyOutputReference | TfCluster.ClientAuthenticationSaslProperty): any {
+export function awsClusterClientAuthenticationSaslPropertyToTerraform(struct?: AwsCluster.ClientAuthenticationSaslPropertyOutputReference | AwsCluster.ClientAuthenticationSaslProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1027,7 +1027,7 @@ export function tfClusterClientAuthenticationSaslPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfClusterClientAuthenticationSaslPropertyToHclTerraform(struct?: TfCluster.ClientAuthenticationSaslPropertyOutputReference | TfCluster.ClientAuthenticationSaslProperty): any {
+export function awsClusterClientAuthenticationSaslPropertyToHclTerraform(struct?: AwsCluster.ClientAuthenticationSaslPropertyOutputReference | AwsCluster.ClientAuthenticationSaslProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1052,7 +1052,7 @@ export function tfClusterClientAuthenticationSaslPropertyToHclTerraform(struct?:
 }
 
 
-export function tfClusterTlsPropertyToTerraform(struct?: TfCluster.TlsPropertyOutputReference | TfCluster.TlsProperty): any {
+export function awsClusterTlsPropertyToTerraform(struct?: AwsCluster.TlsPropertyOutputReference | AwsCluster.TlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1063,7 +1063,7 @@ export function tfClusterTlsPropertyToTerraform(struct?: TfCluster.TlsPropertyOu
 }
 
 
-export function tfClusterTlsPropertyToHclTerraform(struct?: TfCluster.TlsPropertyOutputReference | TfCluster.TlsProperty): any {
+export function awsClusterTlsPropertyToHclTerraform(struct?: AwsCluster.TlsPropertyOutputReference | AwsCluster.TlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1082,20 +1082,20 @@ export function tfClusterTlsPropertyToHclTerraform(struct?: TfCluster.TlsPropert
 }
 
 
-export function tfClusterClientAuthenticationPropertyToTerraform(struct?: TfCluster.ClientAuthenticationPropertyOutputReference | TfCluster.ClientAuthenticationProperty): any {
+export function awsClusterClientAuthenticationPropertyToTerraform(struct?: AwsCluster.ClientAuthenticationPropertyOutputReference | AwsCluster.ClientAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     unauthenticated: cdktn.booleanToTerraform(struct!.unauthenticated),
-    sasl: tfClusterClientAuthenticationSaslPropertyToTerraform(struct!.sasl),
-    tls: tfClusterTlsPropertyToTerraform(struct!.tls),
+    sasl: awsClusterClientAuthenticationSaslPropertyToTerraform(struct!.sasl),
+    tls: awsClusterTlsPropertyToTerraform(struct!.tls),
   }
 }
 
 
-export function tfClusterClientAuthenticationPropertyToHclTerraform(struct?: TfCluster.ClientAuthenticationPropertyOutputReference | TfCluster.ClientAuthenticationProperty): any {
+export function awsClusterClientAuthenticationPropertyToHclTerraform(struct?: AwsCluster.ClientAuthenticationPropertyOutputReference | AwsCluster.ClientAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1108,13 +1108,13 @@ export function tfClusterClientAuthenticationPropertyToHclTerraform(struct?: TfC
       storageClassType: "boolean",
     },
     sasl: {
-      value: tfClusterClientAuthenticationSaslPropertyToHclTerraform(struct!.sasl),
+      value: awsClusterClientAuthenticationSaslPropertyToHclTerraform(struct!.sasl),
       isBlock: true,
       type: "list",
       storageClassType: "ClientAuthenticationSaslPropertyList",
     },
     tls: {
-      value: tfClusterTlsPropertyToHclTerraform(struct!.tls),
+      value: awsClusterTlsPropertyToHclTerraform(struct!.tls),
       isBlock: true,
       type: "list",
       storageClassType: "TlsPropertyList",
@@ -1126,7 +1126,7 @@ export function tfClusterClientAuthenticationPropertyToHclTerraform(struct?: TfC
 }
 
 
-export function tfClusterConfigurationInfoPropertyToTerraform(struct?: TfCluster.ConfigurationInfoPropertyOutputReference | TfCluster.ConfigurationInfoProperty): any {
+export function awsClusterConfigurationInfoPropertyToTerraform(struct?: AwsCluster.ConfigurationInfoPropertyOutputReference | AwsCluster.ConfigurationInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1138,7 +1138,7 @@ export function tfClusterConfigurationInfoPropertyToTerraform(struct?: TfCluster
 }
 
 
-export function tfClusterConfigurationInfoPropertyToHclTerraform(struct?: TfCluster.ConfigurationInfoPropertyOutputReference | TfCluster.ConfigurationInfoProperty): any {
+export function awsClusterConfigurationInfoPropertyToHclTerraform(struct?: AwsCluster.ConfigurationInfoPropertyOutputReference | AwsCluster.ConfigurationInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1163,7 +1163,7 @@ export function tfClusterConfigurationInfoPropertyToHclTerraform(struct?: TfClus
 }
 
 
-export function tfClusterEncryptionInTransitPropertyToTerraform(struct?: TfCluster.EncryptionInTransitPropertyOutputReference | TfCluster.EncryptionInTransitProperty): any {
+export function awsClusterEncryptionInTransitPropertyToTerraform(struct?: AwsCluster.EncryptionInTransitPropertyOutputReference | AwsCluster.EncryptionInTransitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1175,7 +1175,7 @@ export function tfClusterEncryptionInTransitPropertyToTerraform(struct?: TfClust
 }
 
 
-export function tfClusterEncryptionInTransitPropertyToHclTerraform(struct?: TfCluster.EncryptionInTransitPropertyOutputReference | TfCluster.EncryptionInTransitProperty): any {
+export function awsClusterEncryptionInTransitPropertyToHclTerraform(struct?: AwsCluster.EncryptionInTransitPropertyOutputReference | AwsCluster.EncryptionInTransitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1200,19 +1200,19 @@ export function tfClusterEncryptionInTransitPropertyToHclTerraform(struct?: TfCl
 }
 
 
-export function tfClusterEncryptionInfoPropertyToTerraform(struct?: TfCluster.EncryptionInfoPropertyOutputReference | TfCluster.EncryptionInfoProperty): any {
+export function awsClusterEncryptionInfoPropertyToTerraform(struct?: AwsCluster.EncryptionInfoPropertyOutputReference | AwsCluster.EncryptionInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     encryption_at_rest_kms_key_arn: cdktn.stringToTerraform(struct!.encryptionAtRestKmsKeyArn),
-    encryption_in_transit: tfClusterEncryptionInTransitPropertyToTerraform(struct!.encryptionInTransit),
+    encryption_in_transit: awsClusterEncryptionInTransitPropertyToTerraform(struct!.encryptionInTransit),
   }
 }
 
 
-export function tfClusterEncryptionInfoPropertyToHclTerraform(struct?: TfCluster.EncryptionInfoPropertyOutputReference | TfCluster.EncryptionInfoProperty): any {
+export function awsClusterEncryptionInfoPropertyToHclTerraform(struct?: AwsCluster.EncryptionInfoPropertyOutputReference | AwsCluster.EncryptionInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1225,7 +1225,7 @@ export function tfClusterEncryptionInfoPropertyToHclTerraform(struct?: TfCluster
       storageClassType: "string",
     },
     encryption_in_transit: {
-      value: tfClusterEncryptionInTransitPropertyToHclTerraform(struct!.encryptionInTransit),
+      value: awsClusterEncryptionInTransitPropertyToHclTerraform(struct!.encryptionInTransit),
       isBlock: true,
       type: "list",
       storageClassType: "EncryptionInTransitPropertyList",
@@ -1237,7 +1237,7 @@ export function tfClusterEncryptionInfoPropertyToHclTerraform(struct?: TfCluster
 }
 
 
-export function tfClusterCloudwatchLogsPropertyToTerraform(struct?: TfCluster.CloudwatchLogsPropertyOutputReference | TfCluster.CloudwatchLogsProperty): any {
+export function awsClusterCloudwatchLogsPropertyToTerraform(struct?: AwsCluster.CloudwatchLogsPropertyOutputReference | AwsCluster.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1249,7 +1249,7 @@ export function tfClusterCloudwatchLogsPropertyToTerraform(struct?: TfCluster.Cl
 }
 
 
-export function tfClusterCloudwatchLogsPropertyToHclTerraform(struct?: TfCluster.CloudwatchLogsPropertyOutputReference | TfCluster.CloudwatchLogsProperty): any {
+export function awsClusterCloudwatchLogsPropertyToHclTerraform(struct?: AwsCluster.CloudwatchLogsPropertyOutputReference | AwsCluster.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1274,7 +1274,7 @@ export function tfClusterCloudwatchLogsPropertyToHclTerraform(struct?: TfCluster
 }
 
 
-export function tfClusterFirehosePropertyToTerraform(struct?: TfCluster.FirehosePropertyOutputReference | TfCluster.FirehoseProperty): any {
+export function awsClusterFirehosePropertyToTerraform(struct?: AwsCluster.FirehosePropertyOutputReference | AwsCluster.FirehoseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1286,7 +1286,7 @@ export function tfClusterFirehosePropertyToTerraform(struct?: TfCluster.Firehose
 }
 
 
-export function tfClusterFirehosePropertyToHclTerraform(struct?: TfCluster.FirehosePropertyOutputReference | TfCluster.FirehoseProperty): any {
+export function awsClusterFirehosePropertyToHclTerraform(struct?: AwsCluster.FirehosePropertyOutputReference | AwsCluster.FirehoseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1311,7 +1311,7 @@ export function tfClusterFirehosePropertyToHclTerraform(struct?: TfCluster.Fireh
 }
 
 
-export function tfClusterS3PropertyToTerraform(struct?: TfCluster.S3PropertyOutputReference | TfCluster.S3Property): any {
+export function awsClusterS3PropertyToTerraform(struct?: AwsCluster.S3PropertyOutputReference | AwsCluster.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1324,7 +1324,7 @@ export function tfClusterS3PropertyToTerraform(struct?: TfCluster.S3PropertyOutp
 }
 
 
-export function tfClusterS3PropertyToHclTerraform(struct?: TfCluster.S3PropertyOutputReference | TfCluster.S3Property): any {
+export function awsClusterS3PropertyToHclTerraform(struct?: AwsCluster.S3PropertyOutputReference | AwsCluster.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1355,39 +1355,39 @@ export function tfClusterS3PropertyToHclTerraform(struct?: TfCluster.S3PropertyO
 }
 
 
-export function tfClusterBrokerLogsPropertyToTerraform(struct?: TfCluster.BrokerLogsPropertyOutputReference | TfCluster.BrokerLogsProperty): any {
+export function awsClusterBrokerLogsPropertyToTerraform(struct?: AwsCluster.BrokerLogsPropertyOutputReference | AwsCluster.BrokerLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_logs: tfClusterCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
-    firehose: tfClusterFirehosePropertyToTerraform(struct!.firehose),
-    s3: tfClusterS3PropertyToTerraform(struct!.s3),
+    cloudwatch_logs: awsClusterCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
+    firehose: awsClusterFirehosePropertyToTerraform(struct!.firehose),
+    s3: awsClusterS3PropertyToTerraform(struct!.s3),
   }
 }
 
 
-export function tfClusterBrokerLogsPropertyToHclTerraform(struct?: TfCluster.BrokerLogsPropertyOutputReference | TfCluster.BrokerLogsProperty): any {
+export function awsClusterBrokerLogsPropertyToHclTerraform(struct?: AwsCluster.BrokerLogsPropertyOutputReference | AwsCluster.BrokerLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_logs: {
-      value: tfClusterCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
+      value: awsClusterCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsPropertyList",
     },
     firehose: {
-      value: tfClusterFirehosePropertyToHclTerraform(struct!.firehose),
+      value: awsClusterFirehosePropertyToHclTerraform(struct!.firehose),
       isBlock: true,
       type: "list",
       storageClassType: "FirehosePropertyList",
     },
     s3: {
-      value: tfClusterS3PropertyToHclTerraform(struct!.s3),
+      value: awsClusterS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
@@ -1399,25 +1399,25 @@ export function tfClusterBrokerLogsPropertyToHclTerraform(struct?: TfCluster.Bro
 }
 
 
-export function tfClusterLoggingInfoPropertyToTerraform(struct?: TfCluster.LoggingInfoPropertyOutputReference | TfCluster.LoggingInfoProperty): any {
+export function awsClusterLoggingInfoPropertyToTerraform(struct?: AwsCluster.LoggingInfoPropertyOutputReference | AwsCluster.LoggingInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    broker_logs: tfClusterBrokerLogsPropertyToTerraform(struct!.brokerLogs),
+    broker_logs: awsClusterBrokerLogsPropertyToTerraform(struct!.brokerLogs),
   }
 }
 
 
-export function tfClusterLoggingInfoPropertyToHclTerraform(struct?: TfCluster.LoggingInfoPropertyOutputReference | TfCluster.LoggingInfoProperty): any {
+export function awsClusterLoggingInfoPropertyToHclTerraform(struct?: AwsCluster.LoggingInfoPropertyOutputReference | AwsCluster.LoggingInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     broker_logs: {
-      value: tfClusterBrokerLogsPropertyToHclTerraform(struct!.brokerLogs),
+      value: awsClusterBrokerLogsPropertyToHclTerraform(struct!.brokerLogs),
       isBlock: true,
       type: "list",
       storageClassType: "BrokerLogsPropertyList",
@@ -1429,7 +1429,7 @@ export function tfClusterLoggingInfoPropertyToHclTerraform(struct?: TfCluster.Lo
 }
 
 
-export function tfClusterJmxExporterPropertyToTerraform(struct?: TfCluster.JmxExporterPropertyOutputReference | TfCluster.JmxExporterProperty): any {
+export function awsClusterJmxExporterPropertyToTerraform(struct?: AwsCluster.JmxExporterPropertyOutputReference | AwsCluster.JmxExporterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1440,7 +1440,7 @@ export function tfClusterJmxExporterPropertyToTerraform(struct?: TfCluster.JmxEx
 }
 
 
-export function tfClusterJmxExporterPropertyToHclTerraform(struct?: TfCluster.JmxExporterPropertyOutputReference | TfCluster.JmxExporterProperty): any {
+export function awsClusterJmxExporterPropertyToHclTerraform(struct?: AwsCluster.JmxExporterPropertyOutputReference | AwsCluster.JmxExporterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1459,7 +1459,7 @@ export function tfClusterJmxExporterPropertyToHclTerraform(struct?: TfCluster.Jm
 }
 
 
-export function tfClusterNodeExporterPropertyToTerraform(struct?: TfCluster.NodeExporterPropertyOutputReference | TfCluster.NodeExporterProperty): any {
+export function awsClusterNodeExporterPropertyToTerraform(struct?: AwsCluster.NodeExporterPropertyOutputReference | AwsCluster.NodeExporterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1470,7 +1470,7 @@ export function tfClusterNodeExporterPropertyToTerraform(struct?: TfCluster.Node
 }
 
 
-export function tfClusterNodeExporterPropertyToHclTerraform(struct?: TfCluster.NodeExporterPropertyOutputReference | TfCluster.NodeExporterProperty): any {
+export function awsClusterNodeExporterPropertyToHclTerraform(struct?: AwsCluster.NodeExporterPropertyOutputReference | AwsCluster.NodeExporterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1489,32 +1489,32 @@ export function tfClusterNodeExporterPropertyToHclTerraform(struct?: TfCluster.N
 }
 
 
-export function tfClusterPrometheusPropertyToTerraform(struct?: TfCluster.PrometheusPropertyOutputReference | TfCluster.PrometheusProperty): any {
+export function awsClusterPrometheusPropertyToTerraform(struct?: AwsCluster.PrometheusPropertyOutputReference | AwsCluster.PrometheusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    jmx_exporter: tfClusterJmxExporterPropertyToTerraform(struct!.jmxExporter),
-    node_exporter: tfClusterNodeExporterPropertyToTerraform(struct!.nodeExporter),
+    jmx_exporter: awsClusterJmxExporterPropertyToTerraform(struct!.jmxExporter),
+    node_exporter: awsClusterNodeExporterPropertyToTerraform(struct!.nodeExporter),
   }
 }
 
 
-export function tfClusterPrometheusPropertyToHclTerraform(struct?: TfCluster.PrometheusPropertyOutputReference | TfCluster.PrometheusProperty): any {
+export function awsClusterPrometheusPropertyToHclTerraform(struct?: AwsCluster.PrometheusPropertyOutputReference | AwsCluster.PrometheusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     jmx_exporter: {
-      value: tfClusterJmxExporterPropertyToHclTerraform(struct!.jmxExporter),
+      value: awsClusterJmxExporterPropertyToHclTerraform(struct!.jmxExporter),
       isBlock: true,
       type: "list",
       storageClassType: "JmxExporterPropertyList",
     },
     node_exporter: {
-      value: tfClusterNodeExporterPropertyToHclTerraform(struct!.nodeExporter),
+      value: awsClusterNodeExporterPropertyToHclTerraform(struct!.nodeExporter),
       isBlock: true,
       type: "list",
       storageClassType: "NodeExporterPropertyList",
@@ -1526,25 +1526,25 @@ export function tfClusterPrometheusPropertyToHclTerraform(struct?: TfCluster.Pro
 }
 
 
-export function tfClusterOpenMonitoringPropertyToTerraform(struct?: TfCluster.OpenMonitoringPropertyOutputReference | TfCluster.OpenMonitoringProperty): any {
+export function awsClusterOpenMonitoringPropertyToTerraform(struct?: AwsCluster.OpenMonitoringPropertyOutputReference | AwsCluster.OpenMonitoringProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    prometheus: tfClusterPrometheusPropertyToTerraform(struct!.prometheus),
+    prometheus: awsClusterPrometheusPropertyToTerraform(struct!.prometheus),
   }
 }
 
 
-export function tfClusterOpenMonitoringPropertyToHclTerraform(struct?: TfCluster.OpenMonitoringPropertyOutputReference | TfCluster.OpenMonitoringProperty): any {
+export function awsClusterOpenMonitoringPropertyToHclTerraform(struct?: AwsCluster.OpenMonitoringPropertyOutputReference | AwsCluster.OpenMonitoringProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     prometheus: {
-      value: tfClusterPrometheusPropertyToHclTerraform(struct!.prometheus),
+      value: awsClusterPrometheusPropertyToHclTerraform(struct!.prometheus),
       isBlock: true,
       type: "list",
       storageClassType: "PrometheusPropertyList",
@@ -1556,7 +1556,7 @@ export function tfClusterOpenMonitoringPropertyToHclTerraform(struct?: TfCluster
 }
 
 
-export function tfClusterRebalancingPropertyToTerraform(struct?: TfCluster.RebalancingPropertyOutputReference | TfCluster.RebalancingProperty): any {
+export function awsClusterRebalancingPropertyToTerraform(struct?: AwsCluster.RebalancingPropertyOutputReference | AwsCluster.RebalancingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1567,7 +1567,7 @@ export function tfClusterRebalancingPropertyToTerraform(struct?: TfCluster.Rebal
 }
 
 
-export function tfClusterRebalancingPropertyToHclTerraform(struct?: TfCluster.RebalancingPropertyOutputReference | TfCluster.RebalancingProperty): any {
+export function awsClusterRebalancingPropertyToHclTerraform(struct?: AwsCluster.RebalancingPropertyOutputReference | AwsCluster.RebalancingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1586,7 +1586,7 @@ export function tfClusterRebalancingPropertyToHclTerraform(struct?: TfCluster.Re
 }
 
 
-export function tfClusterTimeoutsPropertyToTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClusterTimeoutsPropertyToTerraform(struct?: AwsCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1599,7 +1599,7 @@ export function tfClusterTimeoutsPropertyToTerraform(struct?: TfCluster.Timeouts
 }
 
 
-export function tfClusterTimeoutsPropertyToHclTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClusterTimeoutsPropertyToHclTerraform(struct?: AwsCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1630,10 +1630,10 @@ export function tfClusterTimeoutsPropertyToHclTerraform(struct?: TfCluster.Timeo
 }
 
 
-export namespace TfCluster {
+export namespace AwsCluster {
 export interface PublicAccessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#type TfCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#type AwsCluster#type}
   */
   readonly type?: string;
 }
@@ -1687,11 +1687,11 @@ export class PublicAccessPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#iam TfCluster#iam}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#iam AwsCluster#iam}
   */
   readonly iam?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#scram TfCluster#scram}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#scram AwsCluster#scram}
   */
   readonly scram?: boolean | cdktn.IResolvable;
 }
@@ -1767,13 +1767,13 @@ export class BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticat
 }
 export interface BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#tls TfCluster#tls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#tls AwsCluster#tls}
   */
   readonly tls?: boolean | cdktn.IResolvable;
   /**
   * sasl block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#sasl TfCluster#sasl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#sasl AwsCluster#sasl}
   */
   readonly sasl?: BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslProperty;
 }
@@ -1851,7 +1851,7 @@ export interface VpcConnectivityProperty {
   /**
   * client_authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#client_authentication TfCluster#client_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#client_authentication AwsCluster#client_authentication}
   */
   readonly clientAuthentication?: BrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationProperty;
 }
@@ -1905,19 +1905,19 @@ export class VpcConnectivityPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface ConnectivityInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#network_type TfCluster#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#network_type AwsCluster#network_type}
   */
   readonly networkType?: string;
   /**
   * public_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#public_access TfCluster#public_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#public_access AwsCluster#public_access}
   */
   readonly publicAccess?: PublicAccessProperty;
   /**
   * vpc_connectivity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#vpc_connectivity TfCluster#vpc_connectivity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#vpc_connectivity AwsCluster#vpc_connectivity}
   */
   readonly vpcConnectivity?: VpcConnectivityProperty;
 }
@@ -2015,11 +2015,11 @@ export class ConnectivityInfoPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ProvisionedThroughputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enabled TfCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enabled AwsCluster#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#volume_throughput TfCluster#volume_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#volume_throughput AwsCluster#volume_throughput}
   */
   readonly volumeThroughput?: number;
 }
@@ -2095,13 +2095,13 @@ export class ProvisionedThroughputPropertyOutputReference extends cdktn.ComplexO
 }
 export interface EbsStorageInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#volume_size TfCluster#volume_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#volume_size AwsCluster#volume_size}
   */
   readonly volumeSize?: number;
   /**
   * provisioned_throughput block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#provisioned_throughput TfCluster#provisioned_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#provisioned_throughput AwsCluster#provisioned_throughput}
   */
   readonly provisionedThroughput?: ProvisionedThroughputProperty;
 }
@@ -2179,7 +2179,7 @@ export interface StorageInfoProperty {
   /**
   * ebs_storage_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#ebs_storage_info TfCluster#ebs_storage_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#ebs_storage_info AwsCluster#ebs_storage_info}
   */
   readonly ebsStorageInfo?: EbsStorageInfoProperty;
 }
@@ -2233,31 +2233,31 @@ export class StorageInfoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BrokerNodeGroupInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#az_distribution TfCluster#az_distribution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#az_distribution AwsCluster#az_distribution}
   */
   readonly azDistribution?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#client_subnets TfCluster#client_subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#client_subnets AwsCluster#client_subnets}
   */
   readonly clientSubnets: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#instance_type TfCluster#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#instance_type AwsCluster#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#security_groups TfCluster#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#security_groups AwsCluster#security_groups}
   */
   readonly securityGroups: string[];
   /**
   * connectivity_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#connectivity_info TfCluster#connectivity_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#connectivity_info AwsCluster#connectivity_info}
   */
   readonly connectivityInfo?: ConnectivityInfoProperty;
   /**
   * storage_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#storage_info TfCluster#storage_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#storage_info AwsCluster#storage_info}
   */
   readonly storageInfo?: StorageInfoProperty;
 }
@@ -2412,11 +2412,11 @@ export class BrokerNodeGroupInfoPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface ClientAuthenticationSaslProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#iam TfCluster#iam}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#iam AwsCluster#iam}
   */
   readonly iam?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#scram TfCluster#scram}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#scram AwsCluster#scram}
   */
   readonly scram?: boolean | cdktn.IResolvable;
 }
@@ -2492,7 +2492,7 @@ export class ClientAuthenticationSaslPropertyOutputReference extends cdktn.Compl
 }
 export interface TlsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#certificate_authority_arns TfCluster#certificate_authority_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#certificate_authority_arns AwsCluster#certificate_authority_arns}
   */
   readonly certificateAuthorityArns?: string[];
 }
@@ -2546,19 +2546,19 @@ export class TlsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ClientAuthenticationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#unauthenticated TfCluster#unauthenticated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#unauthenticated AwsCluster#unauthenticated}
   */
   readonly unauthenticated?: boolean | cdktn.IResolvable;
   /**
   * sasl block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#sasl TfCluster#sasl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#sasl AwsCluster#sasl}
   */
   readonly sasl?: ClientAuthenticationSaslProperty;
   /**
   * tls block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#tls TfCluster#tls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#tls AwsCluster#tls}
   */
   readonly tls?: TlsProperty;
 }
@@ -2656,11 +2656,11 @@ export class ClientAuthenticationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface ConfigurationInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#arn TfCluster#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#arn AwsCluster#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#revision TfCluster#revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#revision AwsCluster#revision}
   */
   readonly revision: number;
 }
@@ -2730,11 +2730,11 @@ export class ConfigurationInfoPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface EncryptionInTransitProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#client_broker TfCluster#client_broker}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#client_broker AwsCluster#client_broker}
   */
   readonly clientBroker?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#in_cluster TfCluster#in_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#in_cluster AwsCluster#in_cluster}
   */
   readonly inCluster?: boolean | cdktn.IResolvable;
 }
@@ -2810,13 +2810,13 @@ export class EncryptionInTransitPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface EncryptionInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#encryption_at_rest_kms_key_arn TfCluster#encryption_at_rest_kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#encryption_at_rest_kms_key_arn AwsCluster#encryption_at_rest_kms_key_arn}
   */
   readonly encryptionAtRestKmsKeyArn?: string;
   /**
   * encryption_in_transit block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#encryption_in_transit TfCluster#encryption_in_transit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#encryption_in_transit AwsCluster#encryption_in_transit}
   */
   readonly encryptionInTransit?: EncryptionInTransitProperty;
 }
@@ -2892,11 +2892,11 @@ export class EncryptionInfoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CloudwatchLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enabled TfCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enabled AwsCluster#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#log_group TfCluster#log_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#log_group AwsCluster#log_group}
   */
   readonly logGroup?: string;
 }
@@ -2969,11 +2969,11 @@ export class CloudwatchLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FirehoseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#delivery_stream TfCluster#delivery_stream}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#delivery_stream AwsCluster#delivery_stream}
   */
   readonly deliveryStream?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enabled TfCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enabled AwsCluster#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
 }
@@ -3046,15 +3046,15 @@ export class FirehosePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#bucket TfCluster#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#bucket AwsCluster#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enabled TfCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enabled AwsCluster#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#prefix TfCluster#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#prefix AwsCluster#prefix}
   */
   readonly prefix?: string;
 }
@@ -3151,19 +3151,19 @@ export interface BrokerLogsProperty {
   /**
   * cloudwatch_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#cloudwatch_logs TfCluster#cloudwatch_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#cloudwatch_logs AwsCluster#cloudwatch_logs}
   */
   readonly cloudwatchLogs?: CloudwatchLogsProperty;
   /**
   * firehose block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#firehose TfCluster#firehose}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#firehose AwsCluster#firehose}
   */
   readonly firehose?: FirehoseProperty;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#s3 TfCluster#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#s3 AwsCluster#s3}
   */
   readonly s3?: S3Property;
 }
@@ -3263,7 +3263,7 @@ export interface LoggingInfoProperty {
   /**
   * broker_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#broker_logs TfCluster#broker_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#broker_logs AwsCluster#broker_logs}
   */
   readonly brokerLogs: BrokerLogsProperty;
 }
@@ -3314,7 +3314,7 @@ export class LoggingInfoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface JmxExporterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enabled_in_broker TfCluster#enabled_in_broker}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enabled_in_broker AwsCluster#enabled_in_broker}
   */
   readonly enabledInBroker: boolean | cdktn.IResolvable;
 }
@@ -3365,7 +3365,7 @@ export class JmxExporterPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NodeExporterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enabled_in_broker TfCluster#enabled_in_broker}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#enabled_in_broker AwsCluster#enabled_in_broker}
   */
   readonly enabledInBroker: boolean | cdktn.IResolvable;
 }
@@ -3418,13 +3418,13 @@ export interface PrometheusProperty {
   /**
   * jmx_exporter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#jmx_exporter TfCluster#jmx_exporter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#jmx_exporter AwsCluster#jmx_exporter}
   */
   readonly jmxExporter?: JmxExporterProperty;
   /**
   * node_exporter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#node_exporter TfCluster#node_exporter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#node_exporter AwsCluster#node_exporter}
   */
   readonly nodeExporter?: NodeExporterProperty;
 }
@@ -3502,7 +3502,7 @@ export interface OpenMonitoringProperty {
   /**
   * prometheus block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#prometheus TfCluster#prometheus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#prometheus AwsCluster#prometheus}
   */
   readonly prometheus: PrometheusProperty;
 }
@@ -3553,7 +3553,7 @@ export class OpenMonitoringPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RebalancingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#status TfCluster#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#status AwsCluster#status}
   */
   readonly status: string;
 }
@@ -3604,15 +3604,15 @@ export class RebalancingPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#create TfCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#create AwsCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#delete TfCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#delete AwsCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#update TfCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_cluster#update AwsCluster#update}
   */
   readonly update?: string;
 }

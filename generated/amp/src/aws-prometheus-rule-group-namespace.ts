@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRuleGroupNamespaceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRuleGroupNamespaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#data TfRuleGroupNamespace#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#data AwsRuleGroupNamespace#data}
   */
   readonly data: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#id TfRuleGroupNamespace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#id AwsRuleGroupNamespace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#name TfRuleGroupNamespace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#name AwsRuleGroupNamespace#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#region TfRuleGroupNamespace#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#region AwsRuleGroupNamespace#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#tags TfRuleGroupNamespace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#tags AwsRuleGroupNamespace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#tags_all TfRuleGroupNamespace#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#tags_all AwsRuleGroupNamespace#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#workspace_id TfRuleGroupNamespace#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#workspace_id AwsRuleGroupNamespace#workspace_id}
   */
   readonly workspaceId: string;
 }
@@ -44,7 +44,7 @@ export interface TfRuleGroupNamespaceConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace aws_prometheus_rule_group_namespace}
 */
-export class TfRuleGroupNamespace extends cdktn.TerraformResource {
+export class AwsRuleGroupNamespace extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfRuleGroupNamespace extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRuleGroupNamespace resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRuleGroupNamespace resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRuleGroupNamespace to import
-  * @param importFromId The id of the existing TfRuleGroupNamespace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRuleGroupNamespace to import is found
+  * @param importToId The construct id used in the generated config for the AwsRuleGroupNamespace to import
+  * @param importFromId The id of the existing AwsRuleGroupNamespace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/prometheus_rule_group_namespace#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRuleGroupNamespace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_prometheus_rule_group_namespace", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfRuleGroupNamespace extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRuleGroupNamespaceConfig
+  * @param options AwsRuleGroupNamespaceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRuleGroupNamespaceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRuleGroupNamespaceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_prometheus_rule_group_namespace',
       terraformGeneratorMetadata: {

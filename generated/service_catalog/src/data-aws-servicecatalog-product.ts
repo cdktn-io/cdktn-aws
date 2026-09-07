@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfProductConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsProductConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#accept_language DataTfProduct#accept_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#accept_language DataAwsProduct#accept_language}
   */
   readonly acceptLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#id DataTfProduct#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#id DataAwsProduct#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,25 +20,25 @@ export interface DataTfProductConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#region DataTfProduct#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#region DataAwsProduct#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#tags DataTfProduct#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#tags DataAwsProduct#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#timeouts DataTfProduct#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#timeouts DataAwsProduct#timeouts}
   */
-  readonly timeouts?: DataTfProduct.TimeoutsProperty;
+  readonly timeouts?: DataAwsProduct.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product aws_servicecatalog_product}
 */
-export class DataTfProduct extends cdktn.TerraformDataSource {
+export class DataAwsProduct extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class DataTfProduct extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfProduct resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsProduct resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfProduct to import
-  * @param importFromId The id of the existing DataTfProduct that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfProduct to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsProduct to import
+  * @param importFromId The id of the existing DataAwsProduct that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsProduct to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_product", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class DataTfProduct extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfProductConfig
+  * @param options DataAwsProductConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfProductConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsProductConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_product',
       terraformGeneratorMetadata: {
@@ -219,11 +219,11 @@ export class DataTfProduct extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfProduct.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsProduct.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfProduct.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsProduct.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -244,7 +244,7 @@ export class DataTfProduct extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: dataTfProductTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: dataAwsProductTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -275,10 +275,10 @@ export class DataTfProduct extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: dataTfProductTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsProductTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfProduct.TimeoutsProperty",
+        storageClassType: "DataAwsProduct.TimeoutsProperty",
       },
     };
 
@@ -287,7 +287,7 @@ export class DataTfProduct extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfProductTimeoutsPropertyToTerraform(struct?: DataTfProduct.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsProductTimeoutsPropertyToTerraform(struct?: DataAwsProduct.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function dataTfProductTimeoutsPropertyToTerraform(struct?: DataTfProduct.
 }
 
 
-export function dataTfProductTimeoutsPropertyToHclTerraform(struct?: DataTfProduct.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsProductTimeoutsPropertyToHclTerraform(struct?: DataAwsProduct.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,10 +317,10 @@ export function dataTfProductTimeoutsPropertyToHclTerraform(struct?: DataTfProdu
 }
 
 
-export namespace DataTfProduct {
+export namespace DataAwsProduct {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#read DataTfProduct#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicecatalog_product#read DataAwsProduct#read}
   */
   readonly read?: string;
 }

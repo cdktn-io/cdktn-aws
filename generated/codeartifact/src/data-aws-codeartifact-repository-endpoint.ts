@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRepositoryEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRepositoryEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#domain DataTfRepositoryEndpoint#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#domain DataAwsRepositoryEndpoint#domain}
   */
   readonly domain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#domain_owner DataTfRepositoryEndpoint#domain_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#domain_owner DataAwsRepositoryEndpoint#domain_owner}
   */
   readonly domainOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#format DataTfRepositoryEndpoint#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#format DataAwsRepositoryEndpoint#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#id DataTfRepositoryEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#id DataAwsRepositoryEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,11 +28,11 @@ export interface DataTfRepositoryEndpointConfig extends cdktn.TerraformMetaArgum
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#region DataTfRepositoryEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#region DataAwsRepositoryEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#repository DataTfRepositoryEndpoint#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#repository DataAwsRepositoryEndpoint#repository}
   */
   readonly repository: string;
 }
@@ -40,7 +40,7 @@ export interface DataTfRepositoryEndpointConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint aws_codeartifact_repository_endpoint}
 */
-export class DataTfRepositoryEndpoint extends cdktn.TerraformDataSource {
+export class DataAwsRepositoryEndpoint extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataTfRepositoryEndpoint extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRepositoryEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRepositoryEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRepositoryEndpoint to import
-  * @param importFromId The id of the existing DataTfRepositoryEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRepositoryEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRepositoryEndpoint to import
+  * @param importFromId The id of the existing DataAwsRepositoryEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codeartifact_repository_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRepositoryEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codeartifact_repository_endpoint", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataTfRepositoryEndpoint extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRepositoryEndpointConfig
+  * @param options DataAwsRepositoryEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfRepositoryEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsRepositoryEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codeartifact_repository_endpoint',
       terraformGeneratorMetadata: {

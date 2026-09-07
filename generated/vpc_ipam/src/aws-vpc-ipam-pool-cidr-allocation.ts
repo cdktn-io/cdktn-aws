@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPoolCidrAllocationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPoolCidrAllocationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#cidr TfPoolCidrAllocation#cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#cidr AwsPoolCidrAllocation#cidr}
   */
   readonly cidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#description TfPoolCidrAllocation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#description AwsPoolCidrAllocation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#disallowed_cidrs TfPoolCidrAllocation#disallowed_cidrs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#disallowed_cidrs AwsPoolCidrAllocation#disallowed_cidrs}
   */
   readonly disallowedCidrs?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#id TfPoolCidrAllocation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#id AwsPoolCidrAllocation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#ipam_pool_id TfPoolCidrAllocation#ipam_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#ipam_pool_id AwsPoolCidrAllocation#ipam_pool_id}
   */
   readonly ipamPoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#netmask_length TfPoolCidrAllocation#netmask_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#netmask_length AwsPoolCidrAllocation#netmask_length}
   */
   readonly netmaskLength?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#region TfPoolCidrAllocation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#region AwsPoolCidrAllocation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#tags TfPoolCidrAllocation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#tags AwsPoolCidrAllocation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#tags_all TfPoolCidrAllocation#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#tags_all AwsPoolCidrAllocation#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -52,7 +52,7 @@ export interface TfPoolCidrAllocationConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation aws_vpc_ipam_pool_cidr_allocation}
 */
-export class TfPoolCidrAllocation extends cdktn.TerraformResource {
+export class AwsPoolCidrAllocation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfPoolCidrAllocation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPoolCidrAllocation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPoolCidrAllocation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPoolCidrAllocation to import
-  * @param importFromId The id of the existing TfPoolCidrAllocation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPoolCidrAllocation to import is found
+  * @param importToId The construct id used in the generated config for the AwsPoolCidrAllocation to import
+  * @param importFromId The id of the existing AwsPoolCidrAllocation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_pool_cidr_allocation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPoolCidrAllocation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_ipam_pool_cidr_allocation", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfPoolCidrAllocation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPoolCidrAllocationConfig
+  * @param options AwsPoolCidrAllocationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPoolCidrAllocationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPoolCidrAllocationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_ipam_pool_cidr_allocation',
       terraformGeneratorMetadata: {

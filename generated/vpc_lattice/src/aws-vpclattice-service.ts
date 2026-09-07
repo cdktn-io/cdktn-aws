@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfServiceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#auth_type TfService#auth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#auth_type AwsService#auth_type}
   */
   readonly authType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#certificate_arn TfService#certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#certificate_arn AwsService#certificate_arn}
   */
   readonly certificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#custom_domain_name TfService#custom_domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#custom_domain_name AwsService#custom_domain_name}
   */
   readonly customDomainName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#id TfService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#id AwsService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#idle_timeout_seconds TfService#idle_timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#idle_timeout_seconds AwsService#idle_timeout_seconds}
   */
   readonly idleTimeoutSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#name TfService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#name AwsService#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#region TfService#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#region AwsService#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#tags TfService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#tags AwsService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#tags_all TfService#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#tags_all AwsService#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#timeouts TfService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#timeouts AwsService#timeouts}
   */
-  readonly timeouts?: TfService.TimeoutsProperty;
+  readonly timeouts?: AwsService.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service aws_vpclattice_service}
 */
-export class TfService extends cdktn.TerraformResource {
+export class AwsService extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfService extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfService resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfService to import
-  * @param importFromId The id of the existing TfService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfService to import is found
+  * @param importToId The construct id used in the generated config for the AwsService to import
+  * @param importFromId The id of the existing AwsService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_service", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfService extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfServiceConfig
+  * @param options AwsServiceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfServiceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_service',
       terraformGeneratorMetadata: {
@@ -176,7 +176,7 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // dns_entry - computed: true, optional: false, required: false
-  private _dnsEntry = new TfService.DnsEntryPropertyList(this, "dns_entry", false);
+  private _dnsEntry = new AwsService.DnsEntryPropertyList(this, "dns_entry", false);
   public get dnsEntry() {
     return this._dnsEntry;
   }
@@ -280,11 +280,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfService.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsService.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfService.TimeoutsProperty) {
+  public putTimeouts(value: AwsService.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -310,7 +310,7 @@ export class TfService extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfServiceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsServiceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -371,10 +371,10 @@ export class TfService extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfServiceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsServiceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfService.TimeoutsProperty",
+        storageClassType: "AwsService.TimeoutsProperty",
       },
     };
 
@@ -383,7 +383,7 @@ export class TfService extends cdktn.TerraformResource {
   }
 }
 
-export function tfServiceDnsEntryPropertyToTerraform(struct?: TfService.DnsEntryProperty): any {
+export function awsServiceDnsEntryPropertyToTerraform(struct?: AwsService.DnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function tfServiceDnsEntryPropertyToTerraform(struct?: TfService.DnsEntry
 }
 
 
-export function tfServiceDnsEntryPropertyToHclTerraform(struct?: TfService.DnsEntryProperty): any {
+export function awsServiceDnsEntryPropertyToHclTerraform(struct?: AwsService.DnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function tfServiceDnsEntryPropertyToHclTerraform(struct?: TfService.DnsEn
 }
 
 
-export function tfServiceTimeoutsPropertyToTerraform(struct?: TfService.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsServiceTimeoutsPropertyToTerraform(struct?: AwsService.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function tfServiceTimeoutsPropertyToTerraform(struct?: TfService.Timeouts
 }
 
 
-export function tfServiceTimeoutsPropertyToHclTerraform(struct?: TfService.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsServiceTimeoutsPropertyToHclTerraform(struct?: AwsService.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function tfServiceTimeoutsPropertyToHclTerraform(struct?: TfService.Timeo
 }
 
 
-export namespace TfService {
+export namespace AwsService {
 export interface DnsEntryProperty {
 }
 export class DnsEntryPropertyOutputReference extends cdktn.ComplexObject {
@@ -510,15 +510,15 @@ export class DnsEntryPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#create TfService#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#create AwsService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#delete TfService#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#delete AwsService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#update TfService#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service#update AwsService#update}
   */
   readonly update?: string;
 }

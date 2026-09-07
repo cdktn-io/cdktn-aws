@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMulticastDomainAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMulticastDomainAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#id TfMulticastDomainAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#id AwsMulticastDomainAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,33 +16,33 @@ export interface TfMulticastDomainAssociationConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#region TfMulticastDomainAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#region AwsMulticastDomainAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#subnet_id TfMulticastDomainAssociation#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#subnet_id AwsMulticastDomainAssociation#subnet_id}
   */
   readonly subnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#transit_gateway_attachment_id TfMulticastDomainAssociation#transit_gateway_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#transit_gateway_attachment_id AwsMulticastDomainAssociation#transit_gateway_attachment_id}
   */
   readonly transitGatewayAttachmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#transit_gateway_multicast_domain_id TfMulticastDomainAssociation#transit_gateway_multicast_domain_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#transit_gateway_multicast_domain_id AwsMulticastDomainAssociation#transit_gateway_multicast_domain_id}
   */
   readonly transitGatewayMulticastDomainId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#timeouts TfMulticastDomainAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#timeouts AwsMulticastDomainAssociation#timeouts}
   */
-  readonly timeouts?: TfMulticastDomainAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsMulticastDomainAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association aws_ec2_transit_gateway_multicast_domain_association}
 */
-export class TfMulticastDomainAssociation extends cdktn.TerraformResource {
+export class AwsMulticastDomainAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfMulticastDomainAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMulticastDomainAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMulticastDomainAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMulticastDomainAssociation to import
-  * @param importFromId The id of the existing TfMulticastDomainAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMulticastDomainAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsMulticastDomainAssociation to import
+  * @param importFromId The id of the existing AwsMulticastDomainAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMulticastDomainAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_multicast_domain_association", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfMulticastDomainAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMulticastDomainAssociationConfig
+  * @param options AwsMulticastDomainAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMulticastDomainAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMulticastDomainAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_transit_gateway_multicast_domain_association',
       terraformGeneratorMetadata: {
@@ -174,11 +174,11 @@ export class TfMulticastDomainAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfMulticastDomainAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsMulticastDomainAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfMulticastDomainAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsMulticastDomainAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -200,7 +200,7 @@ export class TfMulticastDomainAssociation extends cdktn.TerraformResource {
       subnet_id: cdktn.stringToTerraform(this._subnetId),
       transit_gateway_attachment_id: cdktn.stringToTerraform(this._transitGatewayAttachmentId),
       transit_gateway_multicast_domain_id: cdktn.stringToTerraform(this._transitGatewayMulticastDomainId),
-      timeouts: tfMulticastDomainAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsMulticastDomainAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -237,10 +237,10 @@ export class TfMulticastDomainAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfMulticastDomainAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsMulticastDomainAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfMulticastDomainAssociation.TimeoutsProperty",
+        storageClassType: "AwsMulticastDomainAssociation.TimeoutsProperty",
       },
     };
 
@@ -249,7 +249,7 @@ export class TfMulticastDomainAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfMulticastDomainAssociationTimeoutsPropertyToTerraform(struct?: TfMulticastDomainAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMulticastDomainAssociationTimeoutsPropertyToTerraform(struct?: AwsMulticastDomainAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function tfMulticastDomainAssociationTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function tfMulticastDomainAssociationTimeoutsPropertyToHclTerraform(struct?: TfMulticastDomainAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMulticastDomainAssociationTimeoutsPropertyToHclTerraform(struct?: AwsMulticastDomainAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,14 +286,14 @@ export function tfMulticastDomainAssociationTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace TfMulticastDomainAssociation {
+export namespace AwsMulticastDomainAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#create TfMulticastDomainAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#create AwsMulticastDomainAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#delete TfMulticastDomainAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_multicast_domain_association#delete AwsMulticastDomainAssociation#delete}
   */
   readonly delete?: string;
 }

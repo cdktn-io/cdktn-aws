@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfStandardsSubscriptionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsStandardsSubscriptionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#id TfStandardsSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#id AwsStandardsSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface TfStandardsSubscriptionConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#region TfStandardsSubscription#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#region AwsStandardsSubscription#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#standards_arn TfStandardsSubscription#standards_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#standards_arn AwsStandardsSubscription#standards_arn}
   */
   readonly standardsArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#timeouts TfStandardsSubscription#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#timeouts AwsStandardsSubscription#timeouts}
   */
-  readonly timeouts?: TfStandardsSubscription.TimeoutsProperty;
+  readonly timeouts?: AwsStandardsSubscription.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription aws_securityhub_standards_subscription}
 */
-export class TfStandardsSubscription extends cdktn.TerraformResource {
+export class AwsStandardsSubscription extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfStandardsSubscription extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfStandardsSubscription resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsStandardsSubscription resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfStandardsSubscription to import
-  * @param importFromId The id of the existing TfStandardsSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfStandardsSubscription to import is found
+  * @param importToId The construct id used in the generated config for the AwsStandardsSubscription to import
+  * @param importFromId The id of the existing AwsStandardsSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStandardsSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_standards_subscription", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfStandardsSubscription extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfStandardsSubscriptionConfig
+  * @param options AwsStandardsSubscriptionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfStandardsSubscriptionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsStandardsSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_standards_subscription',
       terraformGeneratorMetadata: {
@@ -143,11 +143,11 @@ export class TfStandardsSubscription extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfStandardsSubscription.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsStandardsSubscription.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfStandardsSubscription.TimeoutsProperty) {
+  public putTimeouts(value: AwsStandardsSubscription.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -167,7 +167,7 @@ export class TfStandardsSubscription extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       standards_arn: cdktn.stringToTerraform(this._standardsArn),
-      timeouts: tfStandardsSubscriptionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsStandardsSubscriptionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -192,10 +192,10 @@ export class TfStandardsSubscription extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfStandardsSubscriptionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsStandardsSubscriptionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfStandardsSubscription.TimeoutsProperty",
+        storageClassType: "AwsStandardsSubscription.TimeoutsProperty",
       },
     };
 
@@ -204,7 +204,7 @@ export class TfStandardsSubscription extends cdktn.TerraformResource {
   }
 }
 
-export function tfStandardsSubscriptionTimeoutsPropertyToTerraform(struct?: TfStandardsSubscription.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsStandardsSubscriptionTimeoutsPropertyToTerraform(struct?: AwsStandardsSubscription.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function tfStandardsSubscriptionTimeoutsPropertyToTerraform(struct?: TfSt
 }
 
 
-export function tfStandardsSubscriptionTimeoutsPropertyToHclTerraform(struct?: TfStandardsSubscription.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsStandardsSubscriptionTimeoutsPropertyToHclTerraform(struct?: AwsStandardsSubscription.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,14 +241,14 @@ export function tfStandardsSubscriptionTimeoutsPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfStandardsSubscription {
+export namespace AwsStandardsSubscription {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#create TfStandardsSubscription#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#create AwsStandardsSubscription#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#delete TfStandardsSubscription#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_subscription#delete AwsStandardsSubscription#delete}
   */
   readonly delete?: string;
 }

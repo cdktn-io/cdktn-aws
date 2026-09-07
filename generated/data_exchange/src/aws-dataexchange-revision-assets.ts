@@ -5,51 +5,51 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRevisionAssetsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRevisionAssetsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#comment TfRevisionAssets#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#comment AwsRevisionAssets#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#data_set_id TfRevisionAssets#data_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#data_set_id AwsRevisionAssets#data_set_id}
   */
   readonly dataSetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#finalized TfRevisionAssets#finalized}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#finalized AwsRevisionAssets#finalized}
   */
   readonly finalized?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#force_destroy TfRevisionAssets#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#force_destroy AwsRevisionAssets#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#region TfRevisionAssets#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#region AwsRevisionAssets#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#tags TfRevisionAssets#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#tags AwsRevisionAssets#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * asset block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#asset TfRevisionAssets#asset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#asset AwsRevisionAssets#asset}
   */
-  readonly asset?: TfRevisionAssets.AssetProperty[] | cdktn.IResolvable;
+  readonly asset?: AwsRevisionAssets.AssetProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#timeouts TfRevisionAssets#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#timeouts AwsRevisionAssets#timeouts}
   */
-  readonly timeouts?: TfRevisionAssets.TimeoutsProperty;
+  readonly timeouts?: AwsRevisionAssets.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets aws_dataexchange_revision_assets}
 */
-export class TfRevisionAssets extends cdktn.TerraformResource {
+export class AwsRevisionAssets extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -60,11 +60,11 @@ export class TfRevisionAssets extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRevisionAssets resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRevisionAssets resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRevisionAssets to import
-  * @param importFromId The id of the existing TfRevisionAssets that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRevisionAssets to import is found
+  * @param importToId The construct id used in the generated config for the AwsRevisionAssets to import
+  * @param importFromId The id of the existing AwsRevisionAssets that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRevisionAssets to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dataexchange_revision_assets", importId: importFromId, provider });
@@ -79,9 +79,9 @@ export class TfRevisionAssets extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRevisionAssetsConfig
+  * @param options AwsRevisionAssetsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRevisionAssetsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRevisionAssetsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dataexchange_revision_assets',
       terraformGeneratorMetadata: {
@@ -231,11 +231,11 @@ export class TfRevisionAssets extends cdktn.TerraformResource {
   }
 
   // asset - computed: false, optional: true, required: false
-  private _asset = new TfRevisionAssets.AssetPropertyList(this, "asset", true);
+  private _asset = new AwsRevisionAssets.AssetPropertyList(this, "asset", true);
   public get asset() {
     return this._asset;
   }
-  public putAsset(value: TfRevisionAssets.AssetProperty[] | cdktn.IResolvable) {
+  public putAsset(value: AwsRevisionAssets.AssetProperty[] | cdktn.IResolvable) {
     this._asset.internalValue = value;
   }
   public resetAsset() {
@@ -247,11 +247,11 @@ export class TfRevisionAssets extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfRevisionAssets.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsRevisionAssets.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfRevisionAssets.TimeoutsProperty) {
+  public putTimeouts(value: AwsRevisionAssets.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -274,8 +274,8 @@ export class TfRevisionAssets extends cdktn.TerraformResource {
       force_destroy: cdktn.booleanToTerraform(this._forceDestroy),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      asset: cdktn.listMapper(tfRevisionAssetsAssetPropertyToTerraform, true)(this._asset.internalValue),
-      timeouts: tfRevisionAssetsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      asset: cdktn.listMapper(awsRevisionAssetsAssetPropertyToTerraform, true)(this._asset.internalValue),
+      timeouts: awsRevisionAssetsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -318,16 +318,16 @@ export class TfRevisionAssets extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       asset: {
-        value: cdktn.listMapperHcl(tfRevisionAssetsAssetPropertyToHclTerraform, true)(this._asset.internalValue),
+        value: cdktn.listMapperHcl(awsRevisionAssetsAssetPropertyToHclTerraform, true)(this._asset.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfRevisionAssets.AssetPropertyList",
+        storageClassType: "AwsRevisionAssets.AssetPropertyList",
       },
       timeouts: {
-        value: tfRevisionAssetsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsRevisionAssetsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfRevisionAssets.TimeoutsProperty",
+        storageClassType: "AwsRevisionAssets.TimeoutsProperty",
       },
     };
 
@@ -336,7 +336,7 @@ export class TfRevisionAssets extends cdktn.TerraformResource {
   }
 }
 
-export function tfRevisionAssetsKmsKeysToGrantPropertyToTerraform(struct?: TfRevisionAssets.KmsKeysToGrantProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsKmsKeysToGrantPropertyToTerraform(struct?: AwsRevisionAssets.KmsKeysToGrantProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfRevisionAssetsKmsKeysToGrantPropertyToTerraform(struct?: TfRev
 }
 
 
-export function tfRevisionAssetsKmsKeysToGrantPropertyToHclTerraform(struct?: TfRevisionAssets.KmsKeysToGrantProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsKmsKeysToGrantPropertyToHclTerraform(struct?: AwsRevisionAssets.KmsKeysToGrantProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function tfRevisionAssetsKmsKeysToGrantPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfRevisionAssetsAssetCreateS3DataAccessFromS3BucketAssetSourcePropertyToTerraform(struct?: TfRevisionAssets.AssetCreateS3DataAccessFromS3BucketAssetSourceProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsAssetCreateS3DataAccessFromS3BucketAssetSourcePropertyToTerraform(struct?: AwsRevisionAssets.AssetCreateS3DataAccessFromS3BucketAssetSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,12 +375,12 @@ export function tfRevisionAssetsAssetCreateS3DataAccessFromS3BucketAssetSourcePr
     bucket: cdktn.stringToTerraform(struct!.bucket),
     key_prefixes: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.keyPrefixes),
     keys: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.keys),
-    kms_keys_to_grant: cdktn.listMapper(tfRevisionAssetsKmsKeysToGrantPropertyToTerraform, true)(struct!.kmsKeysToGrant),
+    kms_keys_to_grant: cdktn.listMapper(awsRevisionAssetsKmsKeysToGrantPropertyToTerraform, true)(struct!.kmsKeysToGrant),
   }
 }
 
 
-export function tfRevisionAssetsAssetCreateS3DataAccessFromS3BucketAssetSourcePropertyToHclTerraform(struct?: TfRevisionAssets.AssetCreateS3DataAccessFromS3BucketAssetSourceProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsAssetCreateS3DataAccessFromS3BucketAssetSourcePropertyToHclTerraform(struct?: AwsRevisionAssets.AssetCreateS3DataAccessFromS3BucketAssetSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -405,7 +405,7 @@ export function tfRevisionAssetsAssetCreateS3DataAccessFromS3BucketAssetSourcePr
       storageClassType: "stringList",
     },
     kms_keys_to_grant: {
-      value: cdktn.listMapperHcl(tfRevisionAssetsKmsKeysToGrantPropertyToHclTerraform, true)(struct!.kmsKeysToGrant),
+      value: cdktn.listMapperHcl(awsRevisionAssetsKmsKeysToGrantPropertyToHclTerraform, true)(struct!.kmsKeysToGrant),
       isBlock: true,
       type: "list",
       storageClassType: "KmsKeysToGrantPropertyList",
@@ -417,25 +417,25 @@ export function tfRevisionAssetsAssetCreateS3DataAccessFromS3BucketAssetSourcePr
 }
 
 
-export function tfRevisionAssetsCreateS3DataAccessFromS3BucketPropertyToTerraform(struct?: TfRevisionAssets.CreateS3DataAccessFromS3BucketProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsCreateS3DataAccessFromS3BucketPropertyToTerraform(struct?: AwsRevisionAssets.CreateS3DataAccessFromS3BucketProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    asset_source: cdktn.listMapper(tfRevisionAssetsAssetCreateS3DataAccessFromS3BucketAssetSourcePropertyToTerraform, true)(struct!.assetSource),
+    asset_source: cdktn.listMapper(awsRevisionAssetsAssetCreateS3DataAccessFromS3BucketAssetSourcePropertyToTerraform, true)(struct!.assetSource),
   }
 }
 
 
-export function tfRevisionAssetsCreateS3DataAccessFromS3BucketPropertyToHclTerraform(struct?: TfRevisionAssets.CreateS3DataAccessFromS3BucketProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsCreateS3DataAccessFromS3BucketPropertyToHclTerraform(struct?: AwsRevisionAssets.CreateS3DataAccessFromS3BucketProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     asset_source: {
-      value: cdktn.listMapperHcl(tfRevisionAssetsAssetCreateS3DataAccessFromS3BucketAssetSourcePropertyToHclTerraform, true)(struct!.assetSource),
+      value: cdktn.listMapperHcl(awsRevisionAssetsAssetCreateS3DataAccessFromS3BucketAssetSourcePropertyToHclTerraform, true)(struct!.assetSource),
       isBlock: true,
       type: "list",
       storageClassType: "AssetCreateS3DataAccessFromS3BucketAssetSourcePropertyList",
@@ -447,7 +447,7 @@ export function tfRevisionAssetsCreateS3DataAccessFromS3BucketPropertyToHclTerra
 }
 
 
-export function tfRevisionAssetsAssetImportAssetsFromS3AssetSourcePropertyToTerraform(struct?: TfRevisionAssets.AssetImportAssetsFromS3AssetSourceProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsAssetImportAssetsFromS3AssetSourcePropertyToTerraform(struct?: AwsRevisionAssets.AssetImportAssetsFromS3AssetSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,7 +459,7 @@ export function tfRevisionAssetsAssetImportAssetsFromS3AssetSourcePropertyToTerr
 }
 
 
-export function tfRevisionAssetsAssetImportAssetsFromS3AssetSourcePropertyToHclTerraform(struct?: TfRevisionAssets.AssetImportAssetsFromS3AssetSourceProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsAssetImportAssetsFromS3AssetSourcePropertyToHclTerraform(struct?: AwsRevisionAssets.AssetImportAssetsFromS3AssetSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -484,25 +484,25 @@ export function tfRevisionAssetsAssetImportAssetsFromS3AssetSourcePropertyToHclT
 }
 
 
-export function tfRevisionAssetsImportAssetsFromS3PropertyToTerraform(struct?: TfRevisionAssets.ImportAssetsFromS3Property | cdktn.IResolvable): any {
+export function awsRevisionAssetsImportAssetsFromS3PropertyToTerraform(struct?: AwsRevisionAssets.ImportAssetsFromS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    asset_source: cdktn.listMapper(tfRevisionAssetsAssetImportAssetsFromS3AssetSourcePropertyToTerraform, true)(struct!.assetSource),
+    asset_source: cdktn.listMapper(awsRevisionAssetsAssetImportAssetsFromS3AssetSourcePropertyToTerraform, true)(struct!.assetSource),
   }
 }
 
 
-export function tfRevisionAssetsImportAssetsFromS3PropertyToHclTerraform(struct?: TfRevisionAssets.ImportAssetsFromS3Property | cdktn.IResolvable): any {
+export function awsRevisionAssetsImportAssetsFromS3PropertyToHclTerraform(struct?: AwsRevisionAssets.ImportAssetsFromS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     asset_source: {
-      value: cdktn.listMapperHcl(tfRevisionAssetsAssetImportAssetsFromS3AssetSourcePropertyToHclTerraform, true)(struct!.assetSource),
+      value: cdktn.listMapperHcl(awsRevisionAssetsAssetImportAssetsFromS3AssetSourcePropertyToHclTerraform, true)(struct!.assetSource),
       isBlock: true,
       type: "list",
       storageClassType: "AssetImportAssetsFromS3AssetSourcePropertyList",
@@ -514,7 +514,7 @@ export function tfRevisionAssetsImportAssetsFromS3PropertyToHclTerraform(struct?
 }
 
 
-export function tfRevisionAssetsImportAssetsFromSignedUrlPropertyToTerraform(struct?: TfRevisionAssets.ImportAssetsFromSignedUrlProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsImportAssetsFromSignedUrlPropertyToTerraform(struct?: AwsRevisionAssets.ImportAssetsFromSignedUrlProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -525,7 +525,7 @@ export function tfRevisionAssetsImportAssetsFromSignedUrlPropertyToTerraform(str
 }
 
 
-export function tfRevisionAssetsImportAssetsFromSignedUrlPropertyToHclTerraform(struct?: TfRevisionAssets.ImportAssetsFromSignedUrlProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsImportAssetsFromSignedUrlPropertyToHclTerraform(struct?: AwsRevisionAssets.ImportAssetsFromSignedUrlProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -544,39 +544,39 @@ export function tfRevisionAssetsImportAssetsFromSignedUrlPropertyToHclTerraform(
 }
 
 
-export function tfRevisionAssetsAssetPropertyToTerraform(struct?: TfRevisionAssets.AssetProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsAssetPropertyToTerraform(struct?: AwsRevisionAssets.AssetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    create_s3_data_access_from_s3_bucket: cdktn.listMapper(tfRevisionAssetsCreateS3DataAccessFromS3BucketPropertyToTerraform, true)(struct!.createS3DataAccessFromS3Bucket),
-    import_assets_from_s3: cdktn.listMapper(tfRevisionAssetsImportAssetsFromS3PropertyToTerraform, true)(struct!.importAssetsFromS3),
-    import_assets_from_signed_url: cdktn.listMapper(tfRevisionAssetsImportAssetsFromSignedUrlPropertyToTerraform, true)(struct!.importAssetsFromSignedUrl),
+    create_s3_data_access_from_s3_bucket: cdktn.listMapper(awsRevisionAssetsCreateS3DataAccessFromS3BucketPropertyToTerraform, true)(struct!.createS3DataAccessFromS3Bucket),
+    import_assets_from_s3: cdktn.listMapper(awsRevisionAssetsImportAssetsFromS3PropertyToTerraform, true)(struct!.importAssetsFromS3),
+    import_assets_from_signed_url: cdktn.listMapper(awsRevisionAssetsImportAssetsFromSignedUrlPropertyToTerraform, true)(struct!.importAssetsFromSignedUrl),
   }
 }
 
 
-export function tfRevisionAssetsAssetPropertyToHclTerraform(struct?: TfRevisionAssets.AssetProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsAssetPropertyToHclTerraform(struct?: AwsRevisionAssets.AssetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     create_s3_data_access_from_s3_bucket: {
-      value: cdktn.listMapperHcl(tfRevisionAssetsCreateS3DataAccessFromS3BucketPropertyToHclTerraform, true)(struct!.createS3DataAccessFromS3Bucket),
+      value: cdktn.listMapperHcl(awsRevisionAssetsCreateS3DataAccessFromS3BucketPropertyToHclTerraform, true)(struct!.createS3DataAccessFromS3Bucket),
       isBlock: true,
       type: "list",
       storageClassType: "CreateS3DataAccessFromS3BucketPropertyList",
     },
     import_assets_from_s3: {
-      value: cdktn.listMapperHcl(tfRevisionAssetsImportAssetsFromS3PropertyToHclTerraform, true)(struct!.importAssetsFromS3),
+      value: cdktn.listMapperHcl(awsRevisionAssetsImportAssetsFromS3PropertyToHclTerraform, true)(struct!.importAssetsFromS3),
       isBlock: true,
       type: "list",
       storageClassType: "ImportAssetsFromS3PropertyList",
     },
     import_assets_from_signed_url: {
-      value: cdktn.listMapperHcl(tfRevisionAssetsImportAssetsFromSignedUrlPropertyToHclTerraform, true)(struct!.importAssetsFromSignedUrl),
+      value: cdktn.listMapperHcl(awsRevisionAssetsImportAssetsFromSignedUrlPropertyToHclTerraform, true)(struct!.importAssetsFromSignedUrl),
       isBlock: true,
       type: "list",
       storageClassType: "ImportAssetsFromSignedUrlPropertyList",
@@ -588,7 +588,7 @@ export function tfRevisionAssetsAssetPropertyToHclTerraform(struct?: TfRevisionA
 }
 
 
-export function tfRevisionAssetsTimeoutsPropertyToTerraform(struct?: TfRevisionAssets.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsTimeoutsPropertyToTerraform(struct?: AwsRevisionAssets.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -599,7 +599,7 @@ export function tfRevisionAssetsTimeoutsPropertyToTerraform(struct?: TfRevisionA
 }
 
 
-export function tfRevisionAssetsTimeoutsPropertyToHclTerraform(struct?: TfRevisionAssets.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRevisionAssetsTimeoutsPropertyToHclTerraform(struct?: AwsRevisionAssets.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -618,10 +618,10 @@ export function tfRevisionAssetsTimeoutsPropertyToHclTerraform(struct?: TfRevisi
 }
 
 
-export namespace TfRevisionAssets {
+export namespace AwsRevisionAssets {
 export interface KmsKeysToGrantProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#kms_key_arn TfRevisionAssets#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#kms_key_arn AwsRevisionAssets#kms_key_arn}
   */
   readonly kmsKeyArn: string;
 }
@@ -704,21 +704,21 @@ export class KmsKeysToGrantPropertyList extends cdktn.ComplexList {
 }
 export interface AssetCreateS3DataAccessFromS3BucketAssetSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#bucket TfRevisionAssets#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#bucket AwsRevisionAssets#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#key_prefixes TfRevisionAssets#key_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#key_prefixes AwsRevisionAssets#key_prefixes}
   */
   readonly keyPrefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#keys TfRevisionAssets#keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#keys AwsRevisionAssets#keys}
   */
   readonly keys?: string[];
   /**
   * kms_keys_to_grant block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#kms_keys_to_grant TfRevisionAssets#kms_keys_to_grant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#kms_keys_to_grant AwsRevisionAssets#kms_keys_to_grant}
   */
   readonly kmsKeysToGrant?: KmsKeysToGrantProperty[] | cdktn.IResolvable;
 }
@@ -869,7 +869,7 @@ export interface CreateS3DataAccessFromS3BucketProperty {
   /**
   * asset_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#asset_source TfRevisionAssets#asset_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#asset_source AwsRevisionAssets#asset_source}
   */
   readonly assetSource?: AssetCreateS3DataAccessFromS3BucketAssetSourceProperty[] | cdktn.IResolvable;
 }
@@ -965,11 +965,11 @@ export class CreateS3DataAccessFromS3BucketPropertyList extends cdktn.ComplexLis
 }
 export interface AssetImportAssetsFromS3AssetSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#bucket TfRevisionAssets#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#bucket AwsRevisionAssets#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#key TfRevisionAssets#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#key AwsRevisionAssets#key}
   */
   readonly key: string;
 }
@@ -1073,7 +1073,7 @@ export interface ImportAssetsFromS3Property {
   /**
   * asset_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#asset_source TfRevisionAssets#asset_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#asset_source AwsRevisionAssets#asset_source}
   */
   readonly assetSource?: AssetImportAssetsFromS3AssetSourceProperty[] | cdktn.IResolvable;
 }
@@ -1159,7 +1159,7 @@ export class ImportAssetsFromS3PropertyList extends cdktn.ComplexList {
 }
 export interface ImportAssetsFromSignedUrlProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#filename TfRevisionAssets#filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#filename AwsRevisionAssets#filename}
   */
   readonly filename: string;
 }
@@ -1244,19 +1244,19 @@ export interface AssetProperty {
   /**
   * create_s3_data_access_from_s3_bucket block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#create_s3_data_access_from_s3_bucket TfRevisionAssets#create_s3_data_access_from_s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#create_s3_data_access_from_s3_bucket AwsRevisionAssets#create_s3_data_access_from_s3_bucket}
   */
   readonly createS3DataAccessFromS3Bucket?: CreateS3DataAccessFromS3BucketProperty[] | cdktn.IResolvable;
   /**
   * import_assets_from_s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#import_assets_from_s3 TfRevisionAssets#import_assets_from_s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#import_assets_from_s3 AwsRevisionAssets#import_assets_from_s3}
   */
   readonly importAssetsFromS3?: ImportAssetsFromS3Property[] | cdktn.IResolvable;
   /**
   * import_assets_from_signed_url block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#import_assets_from_signed_url TfRevisionAssets#import_assets_from_signed_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#import_assets_from_signed_url AwsRevisionAssets#import_assets_from_signed_url}
   */
   readonly importAssetsFromSignedUrl?: ImportAssetsFromSignedUrlProperty[] | cdktn.IResolvable;
 }
@@ -1413,7 +1413,7 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#create TfRevisionAssets#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_revision_assets#create AwsRevisionAssets#create}
   */
   readonly create?: string;
 }

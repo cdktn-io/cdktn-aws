@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfSecurityPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsSecurityPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_policy#id DataTfSecurityPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_policy#id DataAwsSecurityPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,19 +16,19 @@ export interface DataTfSecurityPolicyConfig extends cdktn.TerraformMetaArguments
   /**
   * Name of the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_policy#name DataTfSecurityPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_policy#name DataAwsSecurityPolicy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_policy#region DataTfSecurityPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_policy#region DataAwsSecurityPolicy#region}
   */
   readonly region?: string;
   /**
   * Type of security policy. One of `encryption` or `network`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_policy#type DataTfSecurityPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_policy#type DataAwsSecurityPolicy#type}
   */
   readonly type: string;
 }
@@ -36,7 +36,7 @@ export interface DataTfSecurityPolicyConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_policy aws_opensearchserverless_security_policy}
 */
-export class DataTfSecurityPolicy extends cdktn.TerraformDataSource {
+export class DataAwsSecurityPolicy extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfSecurityPolicy extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfSecurityPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsSecurityPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfSecurityPolicy to import
-  * @param importFromId The id of the existing DataTfSecurityPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfSecurityPolicy to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsSecurityPolicy to import
+  * @param importFromId The id of the existing DataAwsSecurityPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/opensearchserverless_security_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsSecurityPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearchserverless_security_policy", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfSecurityPolicy extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfSecurityPolicyConfig
+  * @param options DataAwsSecurityPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfSecurityPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsSecurityPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearchserverless_security_policy',
       terraformGeneratorMetadata: {

@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfInstanceMetadataDefaultsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsInstanceMetadataDefaultsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#http_endpoint TfInstanceMetadataDefaults#http_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#http_endpoint AwsInstanceMetadataDefaults#http_endpoint}
   */
   readonly httpEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#http_put_response_hop_limit TfInstanceMetadataDefaults#http_put_response_hop_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#http_put_response_hop_limit AwsInstanceMetadataDefaults#http_put_response_hop_limit}
   */
   readonly httpPutResponseHopLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#http_tokens TfInstanceMetadataDefaults#http_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#http_tokens AwsInstanceMetadataDefaults#http_tokens}
   */
   readonly httpTokens?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#instance_metadata_tags TfInstanceMetadataDefaults#instance_metadata_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#instance_metadata_tags AwsInstanceMetadataDefaults#instance_metadata_tags}
   */
   readonly instanceMetadataTags?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#region TfInstanceMetadataDefaults#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#region AwsInstanceMetadataDefaults#region}
   */
   readonly region?: string;
 }
@@ -33,7 +33,7 @@ export interface TfInstanceMetadataDefaultsConfig extends cdktn.TerraformMetaArg
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults aws_ec2_instance_metadata_defaults}
 */
-export class TfInstanceMetadataDefaults extends cdktn.TerraformResource {
+export class AwsInstanceMetadataDefaults extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfInstanceMetadataDefaults extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfInstanceMetadataDefaults resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsInstanceMetadataDefaults resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfInstanceMetadataDefaults to import
-  * @param importFromId The id of the existing TfInstanceMetadataDefaults that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfInstanceMetadataDefaults to import is found
+  * @param importToId The construct id used in the generated config for the AwsInstanceMetadataDefaults to import
+  * @param importFromId The id of the existing AwsInstanceMetadataDefaults that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsInstanceMetadataDefaults to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_instance_metadata_defaults", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfInstanceMetadataDefaults extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfInstanceMetadataDefaultsConfig = {}
+  * @param options AwsInstanceMetadataDefaultsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfInstanceMetadataDefaultsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsInstanceMetadataDefaultsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_instance_metadata_defaults',
       terraformGeneratorMetadata: {

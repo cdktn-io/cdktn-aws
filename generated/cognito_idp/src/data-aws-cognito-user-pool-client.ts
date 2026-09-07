@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfUserPoolClientConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsUserPoolClientConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_client#client_id DataTfUserPoolClient#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_client#client_id DataAwsUserPoolClient#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_client#id DataTfUserPoolClient#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_client#id DataAwsUserPoolClient#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface DataTfUserPoolClientConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_client#region DataTfUserPoolClient#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_client#region DataAwsUserPoolClient#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_client#user_pool_id DataTfUserPoolClient#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_client#user_pool_id DataAwsUserPoolClient#user_pool_id}
   */
   readonly userPoolId: string;
 }
@@ -32,7 +32,7 @@ export interface DataTfUserPoolClientConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_client aws_cognito_user_pool_client}
 */
-export class DataTfUserPoolClient extends cdktn.TerraformDataSource {
+export class DataAwsUserPoolClient extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfUserPoolClient extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfUserPoolClient resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsUserPoolClient resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfUserPoolClient to import
-  * @param importFromId The id of the existing DataTfUserPoolClient that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_client#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfUserPoolClient to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsUserPoolClient to import
+  * @param importFromId The id of the existing DataAwsUserPoolClient that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_pool_client#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsUserPoolClient to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_user_pool_client", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfUserPoolClient extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfUserPoolClientConfig
+  * @param options DataAwsUserPoolClientConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfUserPoolClientConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsUserPoolClientConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_user_pool_client',
       terraformGeneratorMetadata: {
@@ -111,7 +111,7 @@ export class DataTfUserPoolClient extends cdktn.TerraformDataSource {
   }
 
   // analytics_configuration - computed: true, optional: false, required: false
-  private _analyticsConfiguration = new DataTfUserPoolClient.AnalyticsConfigurationPropertyList(this, "analytics_configuration", false);
+  private _analyticsConfiguration = new DataAwsUserPoolClient.AnalyticsConfigurationPropertyList(this, "analytics_configuration", false);
   public get analyticsConfiguration() {
     return this._analyticsConfiguration;
   }
@@ -206,7 +206,7 @@ export class DataTfUserPoolClient extends cdktn.TerraformDataSource {
   }
 
   // refresh_token_rotation - computed: true, optional: false, required: false
-  private _refreshTokenRotation = new DataTfUserPoolClient.RefreshTokenRotationPropertyList(this, "refresh_token_rotation", false);
+  private _refreshTokenRotation = new DataAwsUserPoolClient.RefreshTokenRotationPropertyList(this, "refresh_token_rotation", false);
   public get refreshTokenRotation() {
     return this._refreshTokenRotation;
   }
@@ -238,7 +238,7 @@ export class DataTfUserPoolClient extends cdktn.TerraformDataSource {
   }
 
   // token_validity_units - computed: true, optional: false, required: false
-  private _tokenValidityUnits = new DataTfUserPoolClient.TokenValidityUnitsPropertyList(this, "token_validity_units", false);
+  private _tokenValidityUnits = new DataAwsUserPoolClient.TokenValidityUnitsPropertyList(this, "token_validity_units", false);
   public get tokenValidityUnits() {
     return this._tokenValidityUnits;
   }
@@ -307,7 +307,7 @@ export class DataTfUserPoolClient extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfUserPoolClientAnalyticsConfigurationPropertyToTerraform(struct?: DataTfUserPoolClient.AnalyticsConfigurationProperty): any {
+export function dataAwsUserPoolClientAnalyticsConfigurationPropertyToTerraform(struct?: DataAwsUserPoolClient.AnalyticsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function dataTfUserPoolClientAnalyticsConfigurationPropertyToTerraform(st
 }
 
 
-export function dataTfUserPoolClientAnalyticsConfigurationPropertyToHclTerraform(struct?: DataTfUserPoolClient.AnalyticsConfigurationProperty): any {
+export function dataAwsUserPoolClientAnalyticsConfigurationPropertyToHclTerraform(struct?: DataAwsUserPoolClient.AnalyticsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function dataTfUserPoolClientAnalyticsConfigurationPropertyToHclTerraform
 }
 
 
-export function dataTfUserPoolClientRefreshTokenRotationPropertyToTerraform(struct?: DataTfUserPoolClient.RefreshTokenRotationProperty): any {
+export function dataAwsUserPoolClientRefreshTokenRotationPropertyToTerraform(struct?: DataAwsUserPoolClient.RefreshTokenRotationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,7 +338,7 @@ export function dataTfUserPoolClientRefreshTokenRotationPropertyToTerraform(stru
 }
 
 
-export function dataTfUserPoolClientRefreshTokenRotationPropertyToHclTerraform(struct?: DataTfUserPoolClient.RefreshTokenRotationProperty): any {
+export function dataAwsUserPoolClientRefreshTokenRotationPropertyToHclTerraform(struct?: DataAwsUserPoolClient.RefreshTokenRotationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function dataTfUserPoolClientRefreshTokenRotationPropertyToHclTerraform(s
 }
 
 
-export function dataTfUserPoolClientTokenValidityUnitsPropertyToTerraform(struct?: DataTfUserPoolClient.TokenValidityUnitsProperty): any {
+export function dataAwsUserPoolClientTokenValidityUnitsPropertyToTerraform(struct?: DataAwsUserPoolClient.TokenValidityUnitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function dataTfUserPoolClientTokenValidityUnitsPropertyToTerraform(struct
 }
 
 
-export function dataTfUserPoolClientTokenValidityUnitsPropertyToHclTerraform(struct?: DataTfUserPoolClient.TokenValidityUnitsProperty): any {
+export function dataAwsUserPoolClientTokenValidityUnitsPropertyToHclTerraform(struct?: DataAwsUserPoolClient.TokenValidityUnitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function dataTfUserPoolClientTokenValidityUnitsPropertyToHclTerraform(str
 }
 
 
-export namespace DataTfUserPoolClient {
+export namespace DataAwsUserPoolClient {
 export interface AnalyticsConfigurationProperty {
 }
 export class AnalyticsConfigurationPropertyOutputReference extends cdktn.ComplexObject {

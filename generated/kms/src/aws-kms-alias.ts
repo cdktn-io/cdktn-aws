@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAliasConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAliasConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias#id TfAlias#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias#id AwsAlias#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias#name TfAlias#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias#name AwsAlias#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias#name_prefix TfAlias#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias#name_prefix AwsAlias#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias#region TfAlias#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias#region AwsAlias#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias#target_key_id TfAlias#target_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias#target_key_id AwsAlias#target_key_id}
   */
   readonly targetKeyId: string;
 }
@@ -36,7 +36,7 @@ export interface TfAliasConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias aws_kms_alias}
 */
-export class TfAlias extends cdktn.TerraformResource {
+export class AwsAlias extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfAlias extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAlias resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAlias resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAlias to import
-  * @param importFromId The id of the existing TfAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAlias to import is found
+  * @param importToId The construct id used in the generated config for the AwsAlias to import
+  * @param importFromId The id of the existing AwsAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_alias#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAlias to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kms_alias", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfAlias extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAliasConfig
+  * @param options AwsAliasConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAliasConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAliasConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kms_alias',
       terraformGeneratorMetadata: {

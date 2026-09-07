@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfUserGroupAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsUserGroupAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#id TfUserGroupAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#id AwsUserGroupAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,29 +16,29 @@ export interface TfUserGroupAssociationConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#region TfUserGroupAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#region AwsUserGroupAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#user_group_id TfUserGroupAssociation#user_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#user_group_id AwsUserGroupAssociation#user_group_id}
   */
   readonly userGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#user_id TfUserGroupAssociation#user_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#user_id AwsUserGroupAssociation#user_id}
   */
   readonly userId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#timeouts TfUserGroupAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#timeouts AwsUserGroupAssociation#timeouts}
   */
-  readonly timeouts?: TfUserGroupAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsUserGroupAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association aws_elasticache_user_group_association}
 */
-export class TfUserGroupAssociation extends cdktn.TerraformResource {
+export class AwsUserGroupAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfUserGroupAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfUserGroupAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsUserGroupAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfUserGroupAssociation to import
-  * @param importFromId The id of the existing TfUserGroupAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfUserGroupAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsUserGroupAssociation to import
+  * @param importFromId The id of the existing AwsUserGroupAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsUserGroupAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_user_group_association", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfUserGroupAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfUserGroupAssociationConfig
+  * @param options AwsUserGroupAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfUserGroupAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsUserGroupAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticache_user_group_association',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class TfUserGroupAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfUserGroupAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsUserGroupAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfUserGroupAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsUserGroupAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -181,7 +181,7 @@ export class TfUserGroupAssociation extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       user_group_id: cdktn.stringToTerraform(this._userGroupId),
       user_id: cdktn.stringToTerraform(this._userId),
-      timeouts: tfUserGroupAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsUserGroupAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class TfUserGroupAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfUserGroupAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsUserGroupAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfUserGroupAssociation.TimeoutsProperty",
+        storageClassType: "AwsUserGroupAssociation.TimeoutsProperty",
       },
     };
 
@@ -224,7 +224,7 @@ export class TfUserGroupAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfUserGroupAssociationTimeoutsPropertyToTerraform(struct?: TfUserGroupAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsUserGroupAssociationTimeoutsPropertyToTerraform(struct?: AwsUserGroupAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function tfUserGroupAssociationTimeoutsPropertyToTerraform(struct?: TfUse
 }
 
 
-export function tfUserGroupAssociationTimeoutsPropertyToHclTerraform(struct?: TfUserGroupAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsUserGroupAssociationTimeoutsPropertyToHclTerraform(struct?: AwsUserGroupAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,14 +261,14 @@ export function tfUserGroupAssociationTimeoutsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfUserGroupAssociation {
+export namespace AwsUserGroupAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#create TfUserGroupAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#create AwsUserGroupAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#delete TfUserGroupAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_user_group_association#delete AwsUserGroupAssociation#delete}
   */
   readonly delete?: string;
 }

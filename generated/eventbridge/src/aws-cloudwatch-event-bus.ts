@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBusConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBusConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#description TfBus#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#description AwsBus#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#event_source_name TfBus#event_source_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#event_source_name AwsBus#event_source_name}
   */
   readonly eventSourceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#id TfBus#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#id AwsBus#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#kms_key_identifier TfBus#kms_key_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#kms_key_identifier AwsBus#kms_key_identifier}
   */
   readonly kmsKeyIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#name TfBus#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#name AwsBus#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#region TfBus#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#region AwsBus#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#tags TfBus#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#tags AwsBus#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#tags_all TfBus#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#tags_all AwsBus#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * dead_letter_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#dead_letter_config TfBus#dead_letter_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#dead_letter_config AwsBus#dead_letter_config}
   */
-  readonly deadLetterConfig?: TfBus.DeadLetterConfigProperty;
+  readonly deadLetterConfig?: AwsBus.DeadLetterConfigProperty;
   /**
   * log_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#log_config TfBus#log_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#log_config AwsBus#log_config}
   */
-  readonly logConfig?: TfBus.LogConfigProperty;
+  readonly logConfig?: AwsBus.LogConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus aws_cloudwatch_event_bus}
 */
-export class TfBus extends cdktn.TerraformResource {
+export class AwsBus extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfBus extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBus resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBus resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBus to import
-  * @param importFromId The id of the existing TfBus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBus to import is found
+  * @param importToId The construct id used in the generated config for the AwsBus to import
+  * @param importFromId The id of the existing AwsBus that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBus to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_event_bus", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfBus extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBusConfig
+  * @param options AwsBusConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBusConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBusConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_event_bus',
       terraformGeneratorMetadata: {
@@ -255,11 +255,11 @@ export class TfBus extends cdktn.TerraformResource {
   }
 
   // dead_letter_config - computed: false, optional: true, required: false
-  private _deadLetterConfig = new TfBus.DeadLetterConfigPropertyOutputReference(this, "dead_letter_config");
+  private _deadLetterConfig = new AwsBus.DeadLetterConfigPropertyOutputReference(this, "dead_letter_config");
   public get deadLetterConfig() {
     return this._deadLetterConfig;
   }
-  public putDeadLetterConfig(value: TfBus.DeadLetterConfigProperty) {
+  public putDeadLetterConfig(value: AwsBus.DeadLetterConfigProperty) {
     this._deadLetterConfig.internalValue = value;
   }
   public resetDeadLetterConfig() {
@@ -271,11 +271,11 @@ export class TfBus extends cdktn.TerraformResource {
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig = new TfBus.LogConfigPropertyOutputReference(this, "log_config");
+  private _logConfig = new AwsBus.LogConfigPropertyOutputReference(this, "log_config");
   public get logConfig() {
     return this._logConfig;
   }
-  public putLogConfig(value: TfBus.LogConfigProperty) {
+  public putLogConfig(value: AwsBus.LogConfigProperty) {
     this._logConfig.internalValue = value;
   }
   public resetLogConfig() {
@@ -300,8 +300,8 @@ export class TfBus extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      dead_letter_config: tfBusDeadLetterConfigPropertyToTerraform(this._deadLetterConfig.internalValue),
-      log_config: tfBusLogConfigPropertyToTerraform(this._logConfig.internalValue),
+      dead_letter_config: awsBusDeadLetterConfigPropertyToTerraform(this._deadLetterConfig.internalValue),
+      log_config: awsBusLogConfigPropertyToTerraform(this._logConfig.internalValue),
     };
   }
 
@@ -356,16 +356,16 @@ export class TfBus extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       dead_letter_config: {
-        value: tfBusDeadLetterConfigPropertyToHclTerraform(this._deadLetterConfig.internalValue),
+        value: awsBusDeadLetterConfigPropertyToHclTerraform(this._deadLetterConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBus.DeadLetterConfigPropertyList",
+        storageClassType: "AwsBus.DeadLetterConfigPropertyList",
       },
       log_config: {
-        value: tfBusLogConfigPropertyToHclTerraform(this._logConfig.internalValue),
+        value: awsBusLogConfigPropertyToHclTerraform(this._logConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBus.LogConfigPropertyList",
+        storageClassType: "AwsBus.LogConfigPropertyList",
       },
     };
 
@@ -374,7 +374,7 @@ export class TfBus extends cdktn.TerraformResource {
   }
 }
 
-export function tfBusDeadLetterConfigPropertyToTerraform(struct?: TfBus.DeadLetterConfigPropertyOutputReference | TfBus.DeadLetterConfigProperty): any {
+export function awsBusDeadLetterConfigPropertyToTerraform(struct?: AwsBus.DeadLetterConfigPropertyOutputReference | AwsBus.DeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function tfBusDeadLetterConfigPropertyToTerraform(struct?: TfBus.DeadLett
 }
 
 
-export function tfBusDeadLetterConfigPropertyToHclTerraform(struct?: TfBus.DeadLetterConfigPropertyOutputReference | TfBus.DeadLetterConfigProperty): any {
+export function awsBusDeadLetterConfigPropertyToHclTerraform(struct?: AwsBus.DeadLetterConfigPropertyOutputReference | AwsBus.DeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function tfBusDeadLetterConfigPropertyToHclTerraform(struct?: TfBus.DeadL
 }
 
 
-export function tfBusLogConfigPropertyToTerraform(struct?: TfBus.LogConfigPropertyOutputReference | TfBus.LogConfigProperty): any {
+export function awsBusLogConfigPropertyToTerraform(struct?: AwsBus.LogConfigPropertyOutputReference | AwsBus.LogConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function tfBusLogConfigPropertyToTerraform(struct?: TfBus.LogConfigProper
 }
 
 
-export function tfBusLogConfigPropertyToHclTerraform(struct?: TfBus.LogConfigPropertyOutputReference | TfBus.LogConfigProperty): any {
+export function awsBusLogConfigPropertyToHclTerraform(struct?: AwsBus.LogConfigPropertyOutputReference | AwsBus.LogConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,10 +441,10 @@ export function tfBusLogConfigPropertyToHclTerraform(struct?: TfBus.LogConfigPro
 }
 
 
-export namespace TfBus {
+export namespace AwsBus {
 export interface DeadLetterConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#arn TfBus#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#arn AwsBus#arn}
   */
   readonly arn?: string;
 }
@@ -498,11 +498,11 @@ export class DeadLetterConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface LogConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#include_detail TfBus#include_detail}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#include_detail AwsBus#include_detail}
   */
   readonly includeDetail?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#level TfBus#level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_event_bus#level AwsBus#level}
   */
   readonly level?: string;
 }

@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGrantConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGrantConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#grant_creation_tokens TfGrant#grant_creation_tokens}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#grant_creation_tokens AwsGrant#grant_creation_tokens}
   */
   readonly grantCreationTokens?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#grantee_principal TfGrant#grantee_principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#grantee_principal AwsGrant#grantee_principal}
   */
   readonly granteePrincipal: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#id TfGrant#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#id AwsGrant#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#key_id TfGrant#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#key_id AwsGrant#key_id}
   */
   readonly keyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#name TfGrant#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#name AwsGrant#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#operations TfGrant#operations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#operations AwsGrant#operations}
   */
   readonly operations: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#region TfGrant#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#region AwsGrant#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#retire_on_delete TfGrant#retire_on_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#retire_on_delete AwsGrant#retire_on_delete}
   */
   readonly retireOnDelete?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#retiring_principal TfGrant#retiring_principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#retiring_principal AwsGrant#retiring_principal}
   */
   readonly retiringPrincipal?: string;
   /**
   * constraints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#constraints TfGrant#constraints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#constraints AwsGrant#constraints}
   */
-  readonly constraints?: TfGrant.ConstraintsProperty[] | cdktn.IResolvable;
+  readonly constraints?: AwsGrant.ConstraintsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant aws_kms_grant}
 */
-export class TfGrant extends cdktn.TerraformResource {
+export class AwsGrant extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfGrant extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGrant resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGrant resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGrant to import
-  * @param importFromId The id of the existing TfGrant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGrant to import is found
+  * @param importToId The construct id used in the generated config for the AwsGrant to import
+  * @param importFromId The id of the existing AwsGrant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGrant to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kms_grant", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfGrant extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGrantConfig
+  * @param options AwsGrantConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGrantConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGrantConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kms_grant',
       terraformGeneratorMetadata: {
@@ -268,11 +268,11 @@ export class TfGrant extends cdktn.TerraformResource {
   }
 
   // constraints - computed: false, optional: true, required: false
-  private _constraints = new TfGrant.ConstraintsPropertyList(this, "constraints", true);
+  private _constraints = new AwsGrant.ConstraintsPropertyList(this, "constraints", true);
   public get constraints() {
     return this._constraints;
   }
-  public putConstraints(value: TfGrant.ConstraintsProperty[] | cdktn.IResolvable) {
+  public putConstraints(value: AwsGrant.ConstraintsProperty[] | cdktn.IResolvable) {
     this._constraints.internalValue = value;
   }
   public resetConstraints() {
@@ -298,7 +298,7 @@ export class TfGrant extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       retire_on_delete: cdktn.booleanToTerraform(this._retireOnDelete),
       retiring_principal: cdktn.stringToTerraform(this._retiringPrincipal),
-      constraints: cdktn.listMapper(tfGrantConstraintsPropertyToTerraform, true)(this._constraints.internalValue),
+      constraints: cdktn.listMapper(awsGrantConstraintsPropertyToTerraform, true)(this._constraints.internalValue),
     };
   }
 
@@ -359,10 +359,10 @@ export class TfGrant extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       constraints: {
-        value: cdktn.listMapperHcl(tfGrantConstraintsPropertyToHclTerraform, true)(this._constraints.internalValue),
+        value: cdktn.listMapperHcl(awsGrantConstraintsPropertyToHclTerraform, true)(this._constraints.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfGrant.ConstraintsPropertyList",
+        storageClassType: "AwsGrant.ConstraintsPropertyList",
       },
     };
 
@@ -371,7 +371,7 @@ export class TfGrant extends cdktn.TerraformResource {
   }
 }
 
-export function tfGrantConstraintsPropertyToTerraform(struct?: TfGrant.ConstraintsProperty | cdktn.IResolvable): any {
+export function awsGrantConstraintsPropertyToTerraform(struct?: AwsGrant.ConstraintsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -383,7 +383,7 @@ export function tfGrantConstraintsPropertyToTerraform(struct?: TfGrant.Constrain
 }
 
 
-export function tfGrantConstraintsPropertyToHclTerraform(struct?: TfGrant.ConstraintsProperty | cdktn.IResolvable): any {
+export function awsGrantConstraintsPropertyToHclTerraform(struct?: AwsGrant.ConstraintsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,14 +408,14 @@ export function tfGrantConstraintsPropertyToHclTerraform(struct?: TfGrant.Constr
 }
 
 
-export namespace TfGrant {
+export namespace AwsGrant {
 export interface ConstraintsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#encryption_context_equals TfGrant#encryption_context_equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#encryption_context_equals AwsGrant#encryption_context_equals}
   */
   readonly encryptionContextEquals?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#encryption_context_subset TfGrant#encryption_context_subset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_grant#encryption_context_subset AwsGrant#encryption_context_subset}
   */
   readonly encryptionContextSubset?: { [key: string]: string };
 }

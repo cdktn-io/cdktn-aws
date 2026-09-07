@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDevicePoolConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDevicePoolConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#description TfDevicePool#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#description AwsDevicePool#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#id TfDevicePool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#id AwsDevicePool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#max_devices TfDevicePool#max_devices}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#max_devices AwsDevicePool#max_devices}
   */
   readonly maxDevices?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#name TfDevicePool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#name AwsDevicePool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#project_arn TfDevicePool#project_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#project_arn AwsDevicePool#project_arn}
   */
   readonly projectArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#region TfDevicePool#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#region AwsDevicePool#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#tags TfDevicePool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#tags AwsDevicePool#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#tags_all TfDevicePool#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#tags_all AwsDevicePool#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#rule TfDevicePool#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#rule AwsDevicePool#rule}
   */
-  readonly rule: TfDevicePool.RuleProperty[] | cdktn.IResolvable;
+  readonly rule: AwsDevicePool.RuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool aws_devicefarm_device_pool}
 */
-export class TfDevicePool extends cdktn.TerraformResource {
+export class AwsDevicePool extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfDevicePool extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDevicePool resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDevicePool resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDevicePool to import
-  * @param importFromId The id of the existing TfDevicePool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDevicePool to import is found
+  * @param importToId The construct id used in the generated config for the AwsDevicePool to import
+  * @param importFromId The id of the existing AwsDevicePool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDevicePool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_devicefarm_device_pool", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfDevicePool extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDevicePoolConfig
+  * @param options AwsDevicePoolConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDevicePoolConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDevicePoolConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_devicefarm_device_pool',
       terraformGeneratorMetadata: {
@@ -250,11 +250,11 @@ export class TfDevicePool extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule = new TfDevicePool.RulePropertyList(this, "rule", true);
+  private _rule = new AwsDevicePool.RulePropertyList(this, "rule", true);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: TfDevicePool.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: AwsDevicePool.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -276,7 +276,7 @@ export class TfDevicePool extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      rule: cdktn.listMapper(tfDevicePoolRulePropertyToTerraform, true)(this._rule.internalValue),
+      rule: cdktn.listMapper(awsDevicePoolRulePropertyToTerraform, true)(this._rule.internalValue),
     };
   }
 
@@ -331,10 +331,10 @@ export class TfDevicePool extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       rule: {
-        value: cdktn.listMapperHcl(tfDevicePoolRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(awsDevicePoolRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDevicePool.RulePropertyList",
+        storageClassType: "AwsDevicePool.RulePropertyList",
       },
     };
 
@@ -343,7 +343,7 @@ export class TfDevicePool extends cdktn.TerraformResource {
   }
 }
 
-export function tfDevicePoolRulePropertyToTerraform(struct?: TfDevicePool.RuleProperty | cdktn.IResolvable): any {
+export function awsDevicePoolRulePropertyToTerraform(struct?: AwsDevicePool.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -356,7 +356,7 @@ export function tfDevicePoolRulePropertyToTerraform(struct?: TfDevicePool.RulePr
 }
 
 
-export function tfDevicePoolRulePropertyToHclTerraform(struct?: TfDevicePool.RuleProperty | cdktn.IResolvable): any {
+export function awsDevicePoolRulePropertyToHclTerraform(struct?: AwsDevicePool.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,18 +387,18 @@ export function tfDevicePoolRulePropertyToHclTerraform(struct?: TfDevicePool.Rul
 }
 
 
-export namespace TfDevicePool {
+export namespace AwsDevicePool {
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#attribute TfDevicePool#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#attribute AwsDevicePool#attribute}
   */
   readonly attribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#operator TfDevicePool#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#operator AwsDevicePool#operator}
   */
   readonly operator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#value TfDevicePool#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/devicefarm_device_pool#value AwsDevicePool#value}
   */
   readonly value?: string;
 }

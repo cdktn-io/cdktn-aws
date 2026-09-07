@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEncryptionByDefaultConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEncryptionByDefaultConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_encryption_by_default#enabled TfEncryptionByDefault#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_encryption_by_default#enabled AwsEncryptionByDefault#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_encryption_by_default#id TfEncryptionByDefault#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_encryption_by_default#id AwsEncryptionByDefault#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface TfEncryptionByDefaultConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_encryption_by_default#region TfEncryptionByDefault#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_encryption_by_default#region AwsEncryptionByDefault#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfEncryptionByDefaultConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_encryption_by_default aws_ebs_encryption_by_default}
 */
-export class TfEncryptionByDefault extends cdktn.TerraformResource {
+export class AwsEncryptionByDefault extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfEncryptionByDefault extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEncryptionByDefault resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEncryptionByDefault resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEncryptionByDefault to import
-  * @param importFromId The id of the existing TfEncryptionByDefault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_encryption_by_default#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEncryptionByDefault to import is found
+  * @param importToId The construct id used in the generated config for the AwsEncryptionByDefault to import
+  * @param importFromId The id of the existing AwsEncryptionByDefault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ebs_encryption_by_default#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEncryptionByDefault to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ebs_encryption_by_default", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfEncryptionByDefault extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEncryptionByDefaultConfig = {}
+  * @param options AwsEncryptionByDefaultConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfEncryptionByDefaultConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsEncryptionByDefaultConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ebs_encryption_by_default',
       terraformGeneratorMetadata: {

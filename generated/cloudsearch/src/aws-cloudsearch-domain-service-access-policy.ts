@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDomainServiceAccessPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDomainServiceAccessPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#access_policy TfDomainServiceAccessPolicy#access_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#access_policy AwsDomainServiceAccessPolicy#access_policy}
   */
   readonly accessPolicy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#domain_name TfDomainServiceAccessPolicy#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#domain_name AwsDomainServiceAccessPolicy#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#id TfDomainServiceAccessPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#id AwsDomainServiceAccessPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,21 +24,21 @@ export interface TfDomainServiceAccessPolicyConfig extends cdktn.TerraformMetaAr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#region TfDomainServiceAccessPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#region AwsDomainServiceAccessPolicy#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#timeouts TfDomainServiceAccessPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#timeouts AwsDomainServiceAccessPolicy#timeouts}
   */
-  readonly timeouts?: TfDomainServiceAccessPolicy.TimeoutsProperty;
+  readonly timeouts?: AwsDomainServiceAccessPolicy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy aws_cloudsearch_domain_service_access_policy}
 */
-export class TfDomainServiceAccessPolicy extends cdktn.TerraformResource {
+export class AwsDomainServiceAccessPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfDomainServiceAccessPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDomainServiceAccessPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDomainServiceAccessPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDomainServiceAccessPolicy to import
-  * @param importFromId The id of the existing TfDomainServiceAccessPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDomainServiceAccessPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsDomainServiceAccessPolicy to import
+  * @param importFromId The id of the existing AwsDomainServiceAccessPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDomainServiceAccessPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudsearch_domain_service_access_policy", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfDomainServiceAccessPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDomainServiceAccessPolicyConfig
+  * @param options AwsDomainServiceAccessPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDomainServiceAccessPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDomainServiceAccessPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudsearch_domain_service_access_policy',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class TfDomainServiceAccessPolicy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDomainServiceAccessPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDomainServiceAccessPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDomainServiceAccessPolicy.TimeoutsProperty) {
+  public putTimeouts(value: AwsDomainServiceAccessPolicy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -181,7 +181,7 @@ export class TfDomainServiceAccessPolicy extends cdktn.TerraformResource {
       domain_name: cdktn.stringToTerraform(this._domainName),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfDomainServiceAccessPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsDomainServiceAccessPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class TfDomainServiceAccessPolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfDomainServiceAccessPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDomainServiceAccessPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDomainServiceAccessPolicy.TimeoutsProperty",
+        storageClassType: "AwsDomainServiceAccessPolicy.TimeoutsProperty",
       },
     };
 
@@ -224,7 +224,7 @@ export class TfDomainServiceAccessPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfDomainServiceAccessPolicyTimeoutsPropertyToTerraform(struct?: TfDomainServiceAccessPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDomainServiceAccessPolicyTimeoutsPropertyToTerraform(struct?: AwsDomainServiceAccessPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function tfDomainServiceAccessPolicyTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDomainServiceAccessPolicyTimeoutsPropertyToHclTerraform(struct?: TfDomainServiceAccessPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDomainServiceAccessPolicyTimeoutsPropertyToHclTerraform(struct?: AwsDomainServiceAccessPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,14 +261,14 @@ export function tfDomainServiceAccessPolicyTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace TfDomainServiceAccessPolicy {
+export namespace AwsDomainServiceAccessPolicy {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#delete TfDomainServiceAccessPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#delete AwsDomainServiceAccessPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#update TfDomainServiceAccessPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain_service_access_policy#update AwsDomainServiceAccessPolicy#update}
   */
   readonly update?: string;
 }

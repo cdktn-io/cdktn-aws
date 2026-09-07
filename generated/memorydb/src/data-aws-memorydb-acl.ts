@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfAclConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsAclConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_acl#id DataTfAcl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_acl#id DataAwsAcl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_acl#name DataTfAcl#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_acl#name DataAwsAcl#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_acl#region DataTfAcl#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_acl#region DataAwsAcl#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_acl#tags DataTfAcl#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_acl#tags DataAwsAcl#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataTfAclConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_acl aws_memorydb_acl}
 */
-export class DataTfAcl extends cdktn.TerraformDataSource {
+export class DataAwsAcl extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfAcl extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfAcl resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsAcl resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfAcl to import
-  * @param importFromId The id of the existing DataTfAcl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_acl#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfAcl to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsAcl to import
+  * @param importFromId The id of the existing DataAwsAcl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_acl#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsAcl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_memorydb_acl", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfAcl extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfAclConfig
+  * @param options DataAwsAclConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfAclConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsAclConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_memorydb_acl',
       terraformGeneratorMetadata: {
