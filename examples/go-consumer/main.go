@@ -13,10 +13,9 @@
 // names the real terraform types.
 //
 // Run it with `node scripts/go-consumer.mjs` from the repository root, which writes the `go.work`
-// that points this at the local fleet checkout. Workspace mode is what makes that possible, and it
-// is also what makes this file honest today: the names below are 0.3.0's, and 0.3.0 is not
-// published yet. The published fleet is v0.2.0, at the old `awss3.NewTfBucket` spelling. Once
-// 0.3.0 ships, a follow-up says so here. See README.md.
+// that points this at the local fleet checkout. Workspace mode is what makes it measure *this*
+// tree rather than the last release. The names below are 0.3.0's, and 0.3.0 is published:
+// `go get github.com/cdktn-io/cdktn-aws-go/s3@v0.3.0` resolves them. See README.md.
 package main
 
 import (

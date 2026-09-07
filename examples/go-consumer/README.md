@@ -30,14 +30,12 @@ is *for* here, and it is why the script writes a `go.work` of `replace` directiv
 copy commands are printed by `node scripts/release.mjs --from <ref>`) before pointing `--root` at
 it, so that the run measures *this* tree.
 
-**This example is ahead of the published fleet.** It calls 0.3.0's names — the `s3` / `sts` /
-`provider` directories and the `s3.NewAwsBucket` / `sts.NewDataAwsCallerIdentity` spelling — and
-0.3.0 is not released yet. What `proxy.golang.org` serves today is **v0.2.0**, under the old
-`awss3` / `awssts` / `awsprovider` directories at the old `awss3.NewTfBucket` spelling: 258
-`aws<group>/v0.2.0` tags. Workspace mode is why that skew costs this example nothing — it never
-resolves a fleet module through the proxy. Once 0.3.0 ships, a follow-up commit truths this
-paragraph up; until then, a consumer outside this repository writes
-`go get github.com/cdktn-io/cdktn-aws-go/awss3@v0.2.0` and the 0.2.0 names.
+**0.3.0 is published.** The names this example calls — the `s3` / `sts` / `provider` directories and
+the `s3.NewAwsBucket` / `sts.NewDataAwsCallerIdentity` spelling — are what `proxy.golang.org` serves:
+258 `<pkg>/v0.3.0` tags at the new import paths. Outside this repository that is a plain
+`go get github.com/cdktn-io/cdktn-aws-go/s3@v0.3.0` and no workspace at all. Workspace mode stays
+here by design: it is what makes the run measure and prove *this* tree rather than the last release,
+so the example never resolves a fleet module through the proxy.
 
 ## Why `go.work` is generated and not committed
 
@@ -53,7 +51,7 @@ release*, not against the checkout this example is here to measure.
 
 `go.mod` therefore requires each fleet module at `v0.0.0`. That version is a placeholder and is
 never resolved: the `replace` directives answer every one of those requires from disk. A consumer
-outside this repository writes a published version instead — **v0.2.0** today, at the 0.2.0 import
+outside this repository writes a published version instead — **v0.3.0** today, at these same import
 paths — and has no `go.work` at all.
 
 ## What it asserts
