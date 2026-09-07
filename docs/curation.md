@@ -266,7 +266,7 @@ live in [`m1-generator.md`](./m1-generator.md), so this file stays the M0 record
 
 Every group carries a `stripPrefixes` list: the service-name tokens the group title already conveys,
 removed from a member's terraform type before it becomes a class name (`aws_s3_bucket` in `s3` →
-`TfBucket`). The rule, the algorithm and the empty-stem back-off are in
+`AwsBucket`). The rule, the algorithm and the empty-stem back-off are in
 [`m6-tf-naming.md`](./m6-tf-naming.md); this section is the curation record.
 
 `tools/mine-groups` proposes one list per group — the slug when it actually prefixes a member,
@@ -283,25 +283,25 @@ token that names the resource itself.** Twelve of the 257 proposals broke it.
 
 | slug | proposed | curated | why |
 | --- | --- | --- | --- |
-| `cloud_map` | `service` | `service_discovery` | the service is "service discovery"; the proposal split it and left `aws_service_discovery_http_namespace` as `TfDiscoveryHttpNamespace` |
-| `cloudhsm` | `cloudhsm` | `cloudhsm_v2` | `v2` is part of the service's terraform prefix, not of the resource: `TfV2Cluster` → `TfCluster`; every member is `aws_cloudhsm_v2_*`, so a bare `cloudhsm` entry would never win |
-| `cloudwatch_logs` | `cloudwatch` | `cloudwatch`, `cloudwatch_log` | the group is CloudWatch **Logs**: `aws_cloudwatch_log_group` → `TfGroup`, while the one non-`log` member (`aws_cloudwatch_query_definition`) still sheds `cloudwatch` |
-| `elemental_mediaconvert` | `media` | `media_convert` | `convert` names the service, not the queue: `TfConvertQueue` → `TfQueue` |
+| `cloud_map` | `service` | `service_discovery` | the service is "service discovery"; the proposal split it and left `aws_service_discovery_http_namespace` as `AwsDiscoveryHttpNamespace` |
+| `cloudhsm` | `cloudhsm` | `cloudhsm_v2` | `v2` is part of the service's terraform prefix, not of the resource: `AwsV2Cluster` → `AwsCluster`; every member is `aws_cloudhsm_v2_*`, so a bare `cloudhsm` entry would never win |
+| `cloudwatch_logs` | `cloudwatch` | `cloudwatch`, `cloudwatch_log` | the group is CloudWatch **Logs**: `aws_cloudwatch_log_group` → `AwsGroup`, while the one non-`log` member (`aws_cloudwatch_query_definition`) still sheds `cloudwatch` |
+| `elemental_mediaconvert` | `media` | `media_convert` | `convert` names the service, not the queue: `AwsConvertQueue` → `AwsQueue` |
 | `elemental_mediapackage` | `media` | `media_package` | same, for MediaPackage |
 | `elemental_mediapackage_version_2` | `media` | `media_packagev2` | same, for MediaPackage v2 — the version token travels with the service name |
 | `elemental_mediastore` | `media` | `media_store` | same, for MediaStore |
-| `eventbridge` | `cloudwatch` | `cloudwatch_event` | EventBridge's types are still spelled `aws_cloudwatch_event_*`: `TfEventApiDestination` → `TfApiDestination` |
-| `meta_data_sources` | `service` | *(empty)* | this group is the provider's own meta data sources (`aws_arn`, `aws_partition`, `aws_region`…) and shares no service name at all, so there is nothing to strip — where the proposed `service` would have turned `aws_service_principal` into `DataTfPrincipal` |
-| `s3_control` | `s3control` | `s3`, `s3control` | two of the 19 members are spelled `aws_s3_*` (`aws_s3_access_point`, `aws_s3_account_public_access_block`) and kept an `S3` the other 17 shed; both are S3 Control APIs, so both tokens are the group's own name → `TfAccessPoint`, `TfAccountPublicAccessBlock` |
-| `transit_gateway` | `ec2` | `ec2`, `ec2_transit_gateway` | the group **is** transit gateway, so repeating it in every class says it twice: `TfTransitGatewayRoute` → `TfRoute`, `…_vpc_attachment` → `TfVpcAttachment`. `ec2` is kept alongside it so `aws_ec2_transit_gateway` — an exact match on the longer prefix, which leaves no stem — falls through to `ec2` and is `TfTransitGateway` |
-| `vpn_client` | `ec2` | `ec2_client_vpn` | same: the group is AWS Client VPN, and `client_vpn` names it, not the resource → `TfEndpoint`, `TfRoute`, `TfAuthorizationRule`, `TfNetworkAssociation`, `DataTfEndpoint` |
+| `eventbridge` | `cloudwatch` | `cloudwatch_event` | EventBridge's types are still spelled `aws_cloudwatch_event_*`: `AwsEventApiDestination` → `AwsApiDestination` |
+| `meta_data_sources` | `service` | *(empty)* | this group is the provider's own meta data sources (`aws_arn`, `aws_partition`, `aws_region`…) and shares no service name at all, so there is nothing to strip — where the proposed `service` would have turned `aws_service_principal` into `DataAwsPrincipal` |
+| `s3_control` | `s3control` | `s3`, `s3control` | two of the 19 members are spelled `aws_s3_*` (`aws_s3_access_point`, `aws_s3_account_public_access_block`) and kept an `S3` the other 17 shed; both are S3 Control APIs, so both tokens are the group's own name → `AwsAccessPoint`, `AwsAccountPublicAccessBlock` |
+| `transit_gateway` | `ec2` | `ec2`, `ec2_transit_gateway` | the group **is** transit gateway, so repeating it in every class says it twice: `AwsTransitGatewayRoute` → `AwsRoute`, `…_vpc_attachment` → `AwsVpcAttachment`. `ec2` is kept alongside it so `aws_ec2_transit_gateway` — an exact match on the longer prefix, which leaves no stem — falls through to `ec2` and is `AwsTransitGateway` |
+| `vpn_client` | `ec2` | `ec2_client_vpn` | same: the group is AWS Client VPN, and `client_vpn` names it, not the resource → `AwsEndpoint`, `AwsRoute`, `AwsAuthorizationRule`, `AwsNetworkAssociation`, `DataAwsEndpoint` |
 
 ### Considered, kept
 
 | slug | tighter list considered | why kept |
 | --- | --- | --- |
-| `route_53_resolver` | `route53_resolver` | it would name two resources after nothing: `aws_route53_resolver_config` → `TfConfig` and `aws_route53_resolver_firewall_config` → `TfConfigConfig`-shaped noise. `resolver` is doing real work in those names, so only `route53` is stripped |
-| `wavelength` | `ec2_carrier_gateway` | the group's single member is `aws_ec2_carrier_gateway`, and "carrier gateway" *is* the resource — stripping it would leave the empty-stem back-off holding the whole type anyway. `[ec2]` gives `TfCarrierGateway` |
+| `route_53_resolver` | `route53_resolver` | it would name two resources after nothing: `aws_route53_resolver_config` → `AwsConfig` and `aws_route53_resolver_firewall_config` → `AwsConfigConfig`-shaped noise. `resolver` is doing real work in those names, so only `route53` is stripped |
+| `wavelength` | `ec2_carrier_gateway` | the group's single member is `aws_ec2_carrier_gateway`, and "carrier gateway" *is* the resource — stripping it would leave the empty-stem back-off holding the whole type anyway. `[ec2]` gives `AwsCarrierGateway` |
 
 Eight groups the M6 brief expected to need an override did not, because the mechanical proposal
 already produces the curated value: `auto_scaling_plans`, `chime_sdk_media_pipelines`,
@@ -312,4 +312,4 @@ proposal is dead configuration, so none was written.
 One deviation from the brief: `elb` is `[lb]`, not `[elb, lb]`. The `elb` group holds only
 `aws_lb_*` (the `aws_elb*` types are in `elb_classic`), so listing `elb` would fail gate C's
 "every prefix matches a member" check. The class names the brief specifies are unaffected —
-`aws_lb` → `TfLb`, `aws_lb_listener` → `TfListener`, `aws_alb` → `TfAlb`.
+`aws_lb` → `AwsLb`, `aws_lb_listener` → `AwsListener`, `aws_alb` → `AwsAlb`.

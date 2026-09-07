@@ -76,10 +76,12 @@ a breaking change for us because the slug becomes the submodule name.
   upstreaming list and the open risks are in [`REPORT.md`](./REPORT.md). Still nothing published:
   neither GitHub repository exists, no workflow has ever run, and `scripts/release.mjs` has no mode
   that tags.
-* **M6 — `Tf` naming. Done.** The L1 classes become `Tf<Stem>` with the group's own service prefix
-  stripped (`awss3.TfBucket`), the curated `stripPrefixes` list that decides the stem lands in
-  `groups.json`, and `naming-map.json` records every rename for the migration tool —
-  [`docs/m6-tf-naming.md`](./docs/m6-tf-naming.md).
+* **M6 — L1 naming. Done.** The L1 classes become `<Prefix><Stem>` with the group's own service
+  prefix stripped, the curated `stripPrefixes` list that decides the stem lands in `groups.json`,
+  and `naming-map.json` records every rename for the migration tool —
+  [`docs/m6-tf-naming.md`](./docs/m6-tf-naming.md). 0.2.0 shipped it as `Tf`; on community feedback
+  0.3.0 respells the marker `Aws` and drops the `aws` prefix from the Go package names —
+  [`docs/v030-naming.md`](./docs/v030-naming.md).
 * **M8 — migration, TypeScript. Done.** `naming-map.json` grows a nested-type section (9,856 rows),
   `tools/migrate` becomes `@cdktn/aws-migrate`, and `examples/migrate/typescript/` is a project
   migrated by the tool whose synth is compared to the classic library's on every pull request —
@@ -118,7 +120,7 @@ that only broke at scale are in [`docs/m2-scale.md`](./docs/m2-scale.md).
 ## M2 — the monolithic build (stage 2, done)
 
 The published shape is **one** jsii assembly, `@cdktn/aws`, whose barrel re-exports each group as a
-submodule (`import { lambda } from '@cdktn/aws'; new lambda.TfFunction(...)`). It compiles in
+submodule (`import { lambda } from '@cdktn/aws'; new lambda.AwsFunction(...)`). It compiles in
 **39.5 s** with a 16 GB heap and 7.2 GB peak RSS, with **zero JSII3/JSII6**, into a 150 MB assembly
 carrying **exactly the same 30,714 types** as `@cdktn/provider-aws` 25.3.0 — reachable through 258
 doors instead of 2,402.
@@ -144,19 +146,23 @@ Headline, measured not argued (full method and every caveat in
   11.5 % of the cap. M3's split is now the only shape a Go distribution can take, not a size
   hypothesis.
 
-## M6 — the `Tf` naming (done)
+## M6 — the L1 naming (done, respelled in 0.3.0)
 
-An L1 class is `Tf` + the terraform type with its group's own service prefix removed, behind a
+An L1 class is `Aws` + the terraform type with its group's own service prefix removed, behind a
 `Data`/`Ephemeral` marker on the two non-resource surfaces:
-`aws_s3_bucket_versioning` in group `s3` is `awss3.TfBucketVersioning`, `data aws_s3_bucket` is
-`DataTfBucket`, `ephemeral aws_lambda_invocation` is `EphemeralTfInvocation`. `Tf` is the
-source-layer marker — the analogue of `aws-cdk-lib`'s `Cfn` — so the bare name (`s3.Bucket`) stays
-free for a future L2, and the group already says "s3" so the class does not repeat it. Which tokens
-count as the group's own is curated per group in `groups.json#stripPrefixes`, never inferred; an
-exact match backs off (`aws_vpc` → `TfVpc`). `AwsProvider` is unchanged — it is not an L1 resource.
+`aws_s3_bucket_versioning` in group `s3` is `s3.AwsBucketVersioning`, `data aws_s3_bucket` is
+`s3.DataAwsBucket`, `ephemeral aws_lambda_invocation` is `lambda.EphemeralAwsInvocation`. `Aws` is
+the source-layer marker — the analogue of `aws-cdk-lib`'s `Cfn` — so the bare name (`s3.Bucket`)
+stays free for a future L2, and the group already says "s3" so the class does not repeat it. Which
+tokens count as the group's own is curated per group in `groups.json#stripPrefixes`, never
+inferred; an exact match backs off (`aws_vpc` → `AwsVpc`). `AwsProvider` is unchanged — it is not
+an L1 resource. In Go the same class is `s3.NewAwsBucketVersioning`, the package being the service
+name with no `aws` prefix.
 `naming-map.json` at the repo root is the rename table from `@cdktn/provider-aws`: every terraform
-type against both its classic identity and its new one. The decision, the
-algorithm and the curated overrides are in [`docs/m6-tf-naming.md`](./docs/m6-tf-naming.md).
+type against both its classic identity and its new one. M6 chose the algorithm and shipped the
+marker as `Tf` ([`docs/m6-tf-naming.md`](./docs/m6-tf-naming.md)); 0.3.0 respells the marker and the
+Go package names on community feedback, changing nothing else
+([`docs/v030-naming.md`](./docs/v030-naming.md)).
 
 ## Migrating from `@cdktn/provider-aws`
 
@@ -172,7 +178,7 @@ pnpm migrate ts --project ../my-app/tsconfig.json
 
 It rewrites every import form (deep, barrel, `* as`, and the `require()` spelling of each), every
 reference in value and type positions, nested block types onto their class
-(`S3BucketCorsRule` → `s3.TfBucket.CorsRuleProperty`) and the `package.json` dependency — driven
+(`S3BucketCorsRule` → `s3.AwsBucket.CorsRuleProperty`) and the `package.json` dependency — driven
 only by [`naming-map.json`](./naming-map.json), never by a guess. Anything the map does not cover
 is reported and left alone, and the exit code says so.
 
