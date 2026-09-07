@@ -90,8 +90,26 @@ All 258 hashes change, so the 0.3.0 release tags all 258 modules, at the new nam
 repository; `cdktn-aws-go` has none (that is asserted by `manifests.test.ts`), so it takes the
 other branch and `git rm -r`s **every top-level directory that contains a `go.mod`** before
 `fs.copySync`ing `dist/go` in. All 258 `aws<group>/` directories carry one, so they are removed by
-the publish itself, in the same commit that adds `s3/`, `ec2/`, … No manual cleanup commit is
-needed, and none should be made ahead of the release.
+the publish itself, in the same commit that adds `s3/`, `ec2/`, … No manual cleanup commit for the
+directories is needed, and none should be made ahead of the release.
+
+What that sweep does **not** reach is a top-level *file*: it only ever `git rm`s a top-level entry
+that contains a `go.mod`. `cdktn-aws-go`'s tree is 258 module directories, `.git`, and one tracked
+`README.md` — and `dist/go` has no root `README.md` to overwrite it with, so it survives the
+publish verbatim. It is 0.2.0's landing page and it is wrong on every 0.3.0 name: the layout block
+lists `awsdetective/`, `awslexv2models/`, `awsprovider/`; it states the directory rule as `aws`
+followed by the slug; its `go get`, its import block and its `AwsProvider` sentence all say
+`awsprovider`; its tags read `awsdetective/v0.1.0`; its major-version section says
+`awsdetective/v2/`. That needs a **one-time hand edit in `cdktn-aws-go` after the 0.3.0 push** —
+after, because until then the published tree really is the 0.2.0 one the README describes. It is a
+checkbox in [`m4-publishing.md`](./m4-publishing.md) § "Still open"; nothing in this repository can
+do it, and nothing here should.
+
+Until that push, `../cdktn-aws-go` holds the 0.2.0 directory names, so a plain `pnpm test` reports
+259 failed inventory assertions in `manifests.test.ts` against a checkout that is one release
+behind — not a defect in either tree. Run the suite with `CDKTN_AWS_GO_ROOT=none` (what `ci.yml`
+does, skipping those 259 in writing) or point it at a scratch fleet assembled from this branch:
+`node scripts/assemble-go-dist.mjs --out <dir>` then `CDKTN_AWS_GO_ROOT=<dir> pnpm test`.
 
 What that does **not** do is unpublish anything. The `aws<group>/v0.2.0` tags point at commits that
 remain in history, so `go get github.com/cdktn-io/cdktn-aws-go/awss3@v0.2.0` keeps resolving

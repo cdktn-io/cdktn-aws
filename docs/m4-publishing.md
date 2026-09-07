@@ -268,6 +268,11 @@ holding publishing credentials.
 - [ ] Wire the changed-groups-only release path (`scripts/release.mjs`) into `release.yml` for the
       second release onward. It is implemented and unit-tested; it is unwired because the first
       release has nothing to diff against.
+- [ ] **After** the 0.3.0 push: hand-edit `cdktn-aws-go`'s top-level `README.md`. `publib-golang`'s
+      sweep only `git rm`s top-level entries that contain a `go.mod`, so that file — the landing
+      page, naming `awsdetective`/`awsprovider`, the `aws` + slug rule and `awsdetective/v0.1.0`
+      tags — survives the publish verbatim and then contradicts every directory beside it. See the
+      0.3.0 addendum at the end of this file and [`v030-naming.md`](./v030-naming.md).
 
 **The three decisions that were the user's, not the implementer's** — all three are permanent, all
 three were needed *before the first tag*, and all three are now settled:
@@ -445,3 +450,18 @@ compile shape and belongs in its own PR, not in a packaging fix.
 0.1.0's tarball included the TypeScript sources"`. The version cannot be unpublished after 72 hours
 and should not be; a deprecation notice is what tells an installer to move. The equivalent is worth
 doing on PyPI (yank) once 0.1.1 is up.
+
+## Addendum (0.3.0, 2026-09-07) — decision 1 was revisited, and the Go directories moved
+
+§3 above records the `aws` + slug Go convention (`awslexv2models`, `awsprovider`) as a permanent
+user decision. Community feedback on the 0.2.0 release reopened it: `awss3` in Go against `s3` in
+TypeScript and Python is an inconsistency that doubles the stutter at every call site. The
+convention is now **the bare slug with underscores removed** — `s3`, `acmpca`, `lexv2models`,
+`provider` — and the 0.2.0 `aws<group>` paths are *abandoned, not renamed*, exactly as the
+"can never be changed, only abandoned" sentence anticipated: their `v0.2.0` tags keep resolving
+from history through `proxy.golang.org`, and no consumer already on them is broken.
+
+Read every `aws<slug>` in this document as `<slug>` — §2's `awslexv2models`/`awsmsk` examples and
+§4's `awsmsk/v2/` major-version paths included (`msk/v2/`, tags `msk/v2/v2.0.0`). Decisions 2 and 3
+are untouched. The decision, the before/after table and what `publib-golang` does and does not
+clean up: [`v030-naming.md`](./v030-naming.md).
